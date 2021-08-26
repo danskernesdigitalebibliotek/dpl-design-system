@@ -1,17 +1,14 @@
 import React from 'react';
 import './button.css';
 
-interface ButtonProps {
+type ButtonProps = {
   primary?: boolean;
   backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
   label: string;
   onClick?: () => void;
-}
+};
 
-/**
- * Primary UI component for user interaction
- */
 export const Button = (props: ButtonProps) => {
   const {
     primary = false,
