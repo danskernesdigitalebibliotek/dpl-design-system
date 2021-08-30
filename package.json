@@ -60,6 +60,7 @@
     "@storybook/node-logger": "^6.3.7",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.7",
-    "@whitespace/storybook-addon-html": "^5.0.0"
+    "@whitespace/storybook-addon-html": "^5.0.0",
+    "storybook-addon-designs": "^6.1.0"
   }
 }
