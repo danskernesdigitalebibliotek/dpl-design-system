@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@reloaddk/drupal": "^0.1.0-beta.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -24,28 +23,16 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
+    "js:eslint": "eslint 'src/**/*.{js,ts}'",
+    "js:prettier": "prettier 'src/**/*.{js,ts}'",
+    "js:lint": "concurrently 'npm:js:eslint' 'npm:js:prettier -- --check' --raw",
+    "js:format": "concurrently 'npm:js:eslint -- --fix' 'npm:js:prettier -- --write' --max-processes 1 --raw",
     "css:stylelint": "stylelint 'src/styles/**/*.scss'",
     "css:prettier": "prettier 'src/styles/**/*.scss'",
     "css:lint": "concurrently 'npm:css:stylelint' 'npm:css:prettier -- --check' --raw",
     "css:format": "concurrently 'npm:css:stylelint -- --fix' 'npm:css:prettier -- --write' --max-processes 1 --raw",
     "css:build": "sass src/styles/scss/base.scss:src/styles/css/base.css",
     "css:watch": "npm run css:build -- --watch"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
   },
   "browserslist": {
     "production": [
@@ -60,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@reloaddk/drupal": "^0.1.0-beta.4",
     "@storybook/addon-actions": "^6.3.7",
     "@storybook/addon-essentials": "^6.3.7",
     "@storybook/addon-links": "^6.3.7",
