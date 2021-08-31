@@ -1,0 +1,11 @@
+{
+  "extends": ["@reloaddk/stylelint-recommended-scss"],
+  "rules": {
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute", "class", "id"]
+      }
+    ]
+  }
+}

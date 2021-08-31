@@ -1,0 +1,7 @@
+{
+    "extends": ["plugin:reload/typescript"],
+    "env": {
+      "browser": true
+    }
+  }
+  
