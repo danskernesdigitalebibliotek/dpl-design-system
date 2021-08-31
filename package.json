@@ -1,8 +1,9 @@
 {
-  "name": "temp",
+  "name": "dpl-design-system",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reloaddk/drupal": "^0.1.0-beta.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -17,13 +18,18 @@
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
+  "engines": {
+    "npm": ">=7"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "css:stylelint": "stylelint 'src/styles/**/*.scss'",
+    "css:prettier": "prettier 'src/styles/**/*.scss'",
+    "css:lint": "concurrently 'npm:css:stylelint' 'npm:css:prettier -- --check' --raw",
+    "css:format": "concurrently 'npm:css:stylelint -- --fix' 'npm:css:prettier -- --write' --max-processes 1 --raw",
+    "css:build": "sass src/styles/scss/base.scss:src/styles/css/base.css",
+    "css:watch": "npm run css:build -- --watch"
   },
   "eslintConfig": {
     "extends": [
