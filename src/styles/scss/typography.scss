@@ -1,157 +1,243 @@
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora&family=Noto+Sans+JP:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora&family=Noto+Sans+JP:wght@400;500&display=swap");
 
 // styleName: Desktop/H1;
-.text__header-h1 {
-    font-family: Lora;
-    font-size: 52px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 62px;
-    letter-spacing: 0em;
-    text-align: left;
+.text-header-h1 {
+  font-family: "Lora", serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: left;
 
-    @include breakpoint-s {
-        font-size: 42px;
-    }
+  @include breakpoint-m {
+    font-size: 48px;
+    line-height: 58px;
+  }
 
-    @include breakpoint-m {
-        font-size: 30px;
-    }
-
-    @include breakpoint-l {
-        font-size: 10px;
-    }
+  @include breakpoint-xl {
+    font-size: 58px;
+    line-height: 70px;
+  }
 }
 
 //styleName: Desktop/H2;
-.text__header-h2 {
-    font-family: Lora;
+.text-header-h2 {
+  font-family: "Lora", serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: left;
+
+  @include breakpoint-m {
     font-size: 42px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 50px;
-    letter-spacing: 0em;
-    text-align: left;
+  }
+
+  @include breakpoint-xl {
+    font-size: 44px;
+    line-height: 53px;
+  }
 }
 
 //styleName: Desktop/H3;
-.text__header-h3 {
-    font-family: Lora;
+.text-header-h3 {
+  font-family: "Lora", serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+
+  @include breakpoint-m {
     font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 38px;
-    letter-spacing: 0em;
-    text-align: left;
+  }
+
+  @include breakpoint-xl {
+    font-size: 34px;
+    line-height: 41px;
+  }
 }
 
 //styleName: Desktop/H4;
-.text__header-h4 {
-    font-family: Lora;
+.text-header-h4 {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+
+  @include breakpoint-m {
     font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
+    line-height: 29px;
+  }
+
+  @include breakpoint-xl {
+    font-size: 26px;
     line-height: 31px;
-    letter-spacing: 0em;
-    text-align: left;
+  }
 }
 
 //styleName: Desktop/Subtitle;
-.text__subtitle {
-    font-family: Noto Sans JP;
+.text-subtitle {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+
+  @include breakpoint-m {
     font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 38px;
-    letter-spacing: 0em;
-    text-align: left;
+    line-height: 29px;
+  }
+
+  @include breakpoint-xl {
+    font-size: 26px;
+    line-height: 31px;
+  }
 }
 
 //styleName: Desktop/Accent;
-.text__accent {
-    font-family: Gochi Hand;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: left;
+.text-accent {
+  font-family: "Gochi Hand", cursive;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+
+  @include breakpoint-xl {
+    font-size: 26px;
+    line-height: 31px;
+  }
 }
 
 // styleName: Desktop/Body Copy - L
-.text__body-large {
-    font-family: Noto Sans JP;
+.text-body-large {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+
+  @include breakpoint-m {
     font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: left;
+    line-height: 22px;
+  }
+
+  @include breakpoint-xl {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 //styleName: Desktop/Body Copy - M - regular;
-.text__body-medium-regular {
-    font-family: Noto Sans JP;
+.text-body-medium-regular {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+
+  @include breakpoint-m {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0em;
-    text-align: left;
+    line-height: 19px;
+  }
+
+  @include breakpoint-xl {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 //styleName: Desktop/Body Copy - M - medium;
-.text__body-medium-medium {
-    font-family: Noto Sans JP;
+.text-body-medium-medium {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+
+  @include breakpoint-m {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
     line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
+  }
+
+  @include breakpoint-xl {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 //styleName: Desktop/Button text;
-.text__button {
-    font-family: Noto Sans JP;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0.02em;
-    text-align: left; 
+.text-button {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+  @include breakpoint-xl {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 //styleName: Desktop/Links;
-.text__links {
-    font-family: Noto Sans JP;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 17px;
-    letter-spacing: 0em;
-    text-align: left;
+.text-links {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+
+  @include breakpoint-xl {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 //styleName: Desktop/Tags;
-.text__tags {
-    font-family: Noto Sans JP;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: 0.02em;
-    text-align: left;
+.text-tags {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+  @include breakpoint-xl {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 //styleName: Desktop/Small Text - Caption;
-.text__small-caption {
-    font-family: Noto Sans JP;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0em;
-    text-align: left;
-}
+.text-small-caption {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: left;
 
+  @include breakpoint-m {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @include breakpoint-xl {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

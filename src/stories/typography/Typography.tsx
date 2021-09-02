@@ -4,6 +4,7 @@ import "../../styles/css/base.css";
 export const Typography = () => {
   return (
     <div style={{ display: "grid", gridGap: "40px" }}>
+      <code>@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora&family=Noto+Sans+JP:wght@400;500&display=swap');</code>
       {typographyClasses.map((typography) => (
         <div key={typography.className} className={typography.className}>
           {typography.title}
@@ -15,55 +16,55 @@ export const Typography = () => {
 
 const typographyClasses = [
   {
-    className: "text__header-h1",
+    className: "text-header-h1",
     title: "Title/Header 1",
   },
   {
-    className: "text__header-h2",
+    className: "text-header-h2",
     title: "Header 2",
   },
   {
-    className: "text__header-h3",
+    className: "text-header-h3",
     title: "Header 3",
   },
   {
-    className: "text__header-h4",
+    className: "text-header-h4",
     title: "Header 4",
   },
   {
-    className: "text__subtitle",
+    className: "text-subtitle",
     title: "Subtitle",
   },
   {
-    className: "text__accent",
+    className: "text-accent",
     title: "ACCENT",
   },
   {
-    className: "text__body-large",
+    className: "text-body-large",
     title: "Body - L",
   },
   {
-    className: "text__body-medium-regular",
+    className: "text-body-medium-regular",
     title: "Body - M",
   },
   {
-    className: "text__body-medium-medium",
+    className: "text-body-medium-medium",
     title: "Body  - M / Medium",
   },
   {
-    className: "text__button",
+    className: "text-button",
     title: "BUTTON TEXT",
   },
   {
-    className: "text__links",
+    className: "text-links",
     title: "Links",
   },
   {
-    className: "text__tags",
+    className: "text-tags",
     title: "TAGS",
   },
   {
-    className: "text__small-caption",
+    className: "text-small-caption",
     title: "Small Text / Caption",
   },
 ];
