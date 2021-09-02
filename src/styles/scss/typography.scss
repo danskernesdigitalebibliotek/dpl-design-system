@@ -1,0 +1,150 @@
+
+// Lora: https://fonts.google.com/specimen/Lora#standard-styles
+// Noto Sans JP: https://fonts.google.com/specimen/Noto+Sans+JP
+// Gochi Hand: https://fonts.google.com/specimen/Gochi+Hand
+
+// Line-height 120% ???
+
+// styleName: Desktop/H1;
+.text__header-h1 {
+    font-family: Lora;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 62px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+//styleName: Desktop/H2;
+.text__header-h2 {
+    font-family: Lora;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+//styleName: Desktop/H3;
+.text__header-h3 {
+    font-family: Lora;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+//styleName: Desktop/H4;
+.text__header-h4 {
+    font-family: Lora;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+//styleName: Desktop/Subtitle;
+.text__subtitle {
+    font-family: Noto Sans JP;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+//styleName: Desktop/Accent;
+.text__accent {
+    font-family: Gochi Hand;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+// styleName: Desktop/Body Copy - L
+.text__body-large {
+    font-family: Noto Sans JP;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+//styleName: Desktop/Body Copy - M - regular;
+.text__body-medium-regular {
+    font-family: Noto Sans JP;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+//styleName: Desktop/Body Copy - M - medium;
+.text__body-medium-bold {
+    font-family: Noto Sans JP;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+//styleName: Desktop/Button text;
+.text__button {
+    font-family: Noto Sans JP;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-align: left; 
+}
+
+//styleName: Desktop/Links;
+.text__links {
+    font-family: Noto Sans JP;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+//styleName: Desktop/Tags;
+.text__tags {
+    font-family: Noto Sans JP;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+//styleName: Desktop/Small Text - Caption;
+.text__small-caption {
+    font-family: Noto Sans JP;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
