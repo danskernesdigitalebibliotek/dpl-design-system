@@ -1,9 +1,4 @@
-
-// Lora: https://fonts.google.com/specimen/Lora#standard-styles
-// Noto Sans JP: https://fonts.google.com/specimen/Noto+Sans+JP
-// Gochi Hand: https://fonts.google.com/specimen/Gochi+Hand
-
-// Line-height 120% ???
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora&family=Noto+Sans+JP:wght@400;500&display=swap');
 
 // styleName: Desktop/H1;
 .text__header-h1 {
@@ -14,6 +9,18 @@
     line-height: 62px;
     letter-spacing: 0em;
     text-align: left;
+
+    @include breakpoint-s {
+        font-size: 42px;
+    }
+
+    @include breakpoint-m {
+        font-size: 30px;
+    }
+
+    @include breakpoint-l {
+        font-size: 10px;
+    }
 }
 
 //styleName: Desktop/H2;
@@ -94,7 +101,7 @@
 }
 
 //styleName: Desktop/Body Copy - M - medium;
-.text__body-medium-bold {
+.text__body-medium-medium {
     font-family: Noto Sans JP;
     font-size: 16px;
     font-style: normal;

@@ -1,0 +1,38 @@
+// Breakpoints
+$screen-xs: 0px;
+$screen-s: 768px;
+$screen-m: 1024px;
+$screen-l: 1440px;
+$screen-xl: 1920px;
+$screen-xxl: 22000px;
+
+
+@mixin breakpoint-s {
+    @media (min-width: $screen-s) {
+        @content;
+    }
+ }
+ 
+ @mixin breakpoint-m {
+    @media (min-width: $screen-m) {
+        @content;
+    }
+ }
+ 
+ @mixin breakpoint-l {
+    @media (min-width: $screen-l) {
+        @content;
+    }
+ }
+ 
+ @mixin breakpoint-xl {
+    @media (min-width: $screen-xl) {
+        @content;
+    }
+ }
+
+  @mixin breakpoint-xl {
+    @media (min-width: $screen-xxl) {
+        @content;
+    }
+ }
