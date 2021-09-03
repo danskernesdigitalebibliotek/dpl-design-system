@@ -1,0 +1,363 @@
+@import url(https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora&family=Noto+Sans+JP:wght@400;500&display=swap);
+.storybook-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-button--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding and list styles */
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.text-header-h1 {
+  font-family: "Lora", serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .text-header-h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+@media (min-width: 1920px) {
+  .text-header-h1 {
+    font-size: 58px;
+    line-height: 70px;
+  }
+}
+
+.text-header-h2 {
+  font-family: "Lora", serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .text-header-h2 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+@media (min-width: 1920px) {
+  .text-header-h2 {
+    font-size: 44px;
+    line-height: 53px;
+  }
+}
+
+.text-header-h3 {
+  font-family: "Lora", serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .text-header-h3 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+@media (min-width: 1920px) {
+  .text-header-h3 {
+    font-size: 34px;
+    line-height: 41px;
+  }
+}
+
+.text-header-h4 {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .text-header-h4 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+@media (min-width: 1920px) {
+  .text-header-h4 {
+    font-size: 26px;
+    line-height: 31px;
+  }
+}
+
+.text-subtitle {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .text-subtitle {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+@media (min-width: 1920px) {
+  .text-subtitle {
+    font-size: 26px;
+    line-height: 31px;
+  }
+}
+
+.text-accent {
+  font-family: "Gochi Hand", cursive;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: left;
+}
+@media (min-width: 1920px) {
+  .text-accent {
+    font-size: 26px;
+    line-height: 31px;
+  }
+}
+
+.text-body-large {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .text-body-large {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 1920px) {
+  .text-body-large {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.text-body-medium-regular {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .text-body-medium-regular {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+@media (min-width: 1920px) {
+  .text-body-medium-regular {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.text-body-medium-medium {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .text-body-medium-medium {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+@media (min-width: 1920px) {
+  .text-body-medium-medium {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.text-button {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+@media (min-width: 1920px) {
+  .text-button {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.text-links {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+}
+@media (min-width: 1920px) {
+  .text-links {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.text-tags {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+@media (min-width: 1920px) {
+  .text-tags {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.text-small-caption {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .text-small-caption {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media (min-width: 1920px) {
+  .text-small-caption {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+/*# sourceMappingURL=base.css.map */
+
+
+/*# sourceMappingURL=main.b8405229.chunk.css.map*/
