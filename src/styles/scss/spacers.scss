@@ -1,0 +1,39 @@
+$spacer-8: 8px;
+$spacer-16: 16px;
+$spacer-24: 24px;
+$spacer-32: 32px;
+$spacer-48: 48px;
+$spacer-64: 64px;
+$spacer-80: 80px;
+$spacer-96: 96px;
+$spacer-112: 112px;
+
+// m, margin
+// mt, marginTop
+// mr, marginRight
+// mb, marginBottom
+// ml, marginLeft
+// mx, marginX
+// my, marginY
+// p, padding
+// pt, paddingTop
+// pr, paddingRight
+// pb, paddingBottom
+// pl, paddingLeft
+// px, paddingX
+// py, paddingY
+
+@mixin createSpacer($spacer) {
+  .m-#{$spacer} {
+    margin: $spacer;
+    width: 30px;
+    height: 30px;
+    border: 2px solid red;
+  }
+}
+
+@include createSpacer($spacer-8);
+@include createSpacer($spacer-16);
+@include createSpacer($spacer-24);
+@include createSpacer($spacer-32);
+@include createSpacer($spacer-48);
