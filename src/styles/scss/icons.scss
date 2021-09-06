@@ -1,0 +1,36 @@
+@mixin createArrowAnimated($direction, $size, $scaleX, $translatePx, $origin) {
+  .arrow-hover-#{$direction}-#{$size} {
+    cursor: pointer;
+
+    svg {
+      overflow: visible;
+    }
+
+    &:hover {
+      .arrow-head {
+        transition: 0.3s;
+        transform: translateX($translatePx);
+      }
+      .arrow-body {
+        transition: 0.3s;
+        transform: scaleX($scaleX);
+      }
+    }
+
+    .arrow-body {
+      transition: 0.6s;
+      transform: scaleX(1);
+      transform-origin: $origin;
+    }
+
+    .arrow-head {
+      transition: 0.6s;
+      transform: translateX(0px);
+    }
+  }
+}
+
+@include createArrowAnimated("right", "large", 1.333, 50px, left);
+@include createArrowAnimated("right", "small", 2, 60px, left);
+@include createArrowAnimated("left", "large", 1.333, -50px, right);
+@include createArrowAnimated("left", "small", 2, -60px, right);
