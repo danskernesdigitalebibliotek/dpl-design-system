@@ -12,6 +12,25 @@ $c-signal-success: #3aaa36;
 $c-signal-aware: #f7bf42;
 $c-signal-alert: #d5364a;
 
+// *** CSS variables for identity color tints ***
+:root {
+  --tint-color-h: 145;
+  --tint-color-s: 22%;
+  --tint-color-l: 35%;
+  --tint-color-hsl: var(--tint-color-h), var(--tint-color-s),
+    var(--tint-color-l);
+  --tint-color: hsl(var(--tint-color-hsl));
+  --tint-color-20: hsl(var(--tint-color-hsl), 0.2);
+  --tint-color-40: hsl(var(--tint-color-hsl), 0.4);
+  --tint-color-60: hsl(var(--tint-color-hsl), 0.6);
+  --tint-color-80: hsl(var(--tint-color-hsl), 0.8);
+  --tint-color-120: hsl(
+    var(--tint-color-h),
+    calc(var(--tint-color-s) - 1%),
+    calc(var(--tint-color-l) - 8%)
+  );
+}
+
 // *** Global colors ***
 // Background
 .bg-global-primary {
@@ -40,7 +59,6 @@ $c-signal-alert: #d5364a;
 }
 
 // *** Identity colors ***
-// Default skal være 100%
 // Background
 .bg-identity-primary {
   background-color: $c-identity-primary;
@@ -56,12 +74,27 @@ $c-signal-alert: #d5364a;
   border-color: $c-identity-primary;
 }
 
-// *** Tones of identity colors ***
-// 120%
-// 80%
-// 60%
-// 40%
-// 20%
+// *** Identity color tints ***
+// Background
+.bg-identity-tint-20 {
+  background-color: var(--tint-color-20);
+}
+
+.bg-identity-tint-40 {
+  background-color: var(--tint-color-40);
+}
+
+.bg-identity-tint-60 {
+  background-color: var(--tint-color-60);
+}
+
+.bg-identity-tint-80 {
+  background-color: var(--tint-color-80);
+}
+
+.bg-identity-tint-120 {
+  background-color: var(--tint-color-120);
+}
 
 // *** Text colors ***
 // Color
