@@ -1,6 +1,6 @@
 import React from "react";
 import { withDesign } from "storybook-addon-designs";
-import { StoryBaseType } from "../../types/StorybookHelpers";
+import { StoryBaseType } from "../../../types/StorybookHelpers";
 
 import { IconArrow as ArrowComp, IconArrowProps } from "./ArrowUI";
 
@@ -30,4 +30,4 @@ const StoryBase: StoryBaseType<IconArrowProps> = {
 
 export default StoryBase;
 
-export const Arrow = (props: IconArrowProps) => <ArrowComp {...props} />;
+export const ArrowUI = (props: IconArrowProps) => <ArrowComp {...props} />;
