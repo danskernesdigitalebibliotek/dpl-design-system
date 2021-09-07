@@ -1,0 +1,161 @@
+$c-global-primary: #f6f5f0;
+$c-global-secondary: #eee9e5;
+$c-global-tertiary: #dbdbdb;
+
+$c-identity-primary: #476e57;
+
+$c-text-primary-white: #fff;
+$c-text-primary-black: #000;
+$c-text-secondary-gray: #484848;
+
+$c-signal-success: #3aaa36;
+$c-signal-aware: #f7bf42;
+$c-signal-alert: #d5364a;
+
+// *** CSS variables for identity color tints ***
+:root {
+  --tint-color-h: 145;
+  --tint-color-s: 22%;
+  --tint-color-l: 35%;
+  --tint-color-hsl: var(--tint-color-h), var(--tint-color-s),
+    var(--tint-color-l);
+  --tint-color: hsl(var(--tint-color-hsl));
+  --tint-color-20: hsl(var(--tint-color-hsl), 0.2);
+  --tint-color-40: hsl(var(--tint-color-hsl), 0.4);
+  --tint-color-60: hsl(var(--tint-color-hsl), 0.6);
+  --tint-color-80: hsl(var(--tint-color-hsl), 0.8);
+  --tint-color-120: hsl(
+    var(--tint-color-h),
+    calc(var(--tint-color-s) - 1%),
+    calc(var(--tint-color-l) - 8%)
+  );
+}
+
+// *** Global colors ***
+// Background
+.bg-global-primary {
+  background-color: $c-global-primary;
+}
+
+.bg-global-secondary {
+  background-color: $c-global-secondary;
+}
+
+.bg-global-tertiary {
+  background-color: $c-global-tertiary;
+}
+
+// Border
+.border-global-primary {
+  border-color: $c-global-primary;
+}
+
+.border-global-secondary {
+  border-color: $c-global-secondary;
+}
+
+.border-global-tertiary {
+  border-color: $c-global-tertiary;
+}
+
+// *** Identity colors ***
+// Background
+.bg-identity-primary {
+  background-color: $c-identity-primary;
+}
+
+// Border
+.border-identity-primary {
+  border-color: $c-identity-primary;
+}
+
+// Color
+.color-identity-primary {
+  border-color: $c-identity-primary;
+}
+
+// *** Identity color tints ***
+// Background
+.bg-identity-tint-20 {
+  background-color: var(--tint-color-20);
+}
+
+.bg-identity-tint-40 {
+  background-color: var(--tint-color-40);
+}
+
+.bg-identity-tint-60 {
+  background-color: var(--tint-color-60);
+}
+
+.bg-identity-tint-80 {
+  background-color: var(--tint-color-80);
+}
+
+.bg-identity-tint-120 {
+  background-color: var(--tint-color-120);
+}
+
+// *** Text colors ***
+// Color
+.color-primary-white {
+  color: $c-text-primary-white;
+}
+
+.color-primary-black {
+  color: $c-text-primary-black;
+}
+
+.color-secondary-gray {
+  color: $c-text-secondary-gray;
+}
+
+.bg-color-primary-white {
+  background-color: $c-text-primary-white;
+}
+
+.bg-color-primary-black {
+  background-color: $c-text-primary-black;
+}
+
+.bg-color-secondary-gray {
+  background-color: $c-text-secondary-gray;
+}
+
+// *** Signal colors ***
+// Background
+.bg-signal-success {
+  background-color: $c-signal-success;
+}
+.bg-signal-aware {
+  background-color: $c-signal-aware;
+}
+.bg-signal-alert {
+  background-color: $c-signal-alert;
+}
+
+// Border
+.border-signal-success {
+  border-color: $c-signal-success;
+}
+
+.border-signal-aware {
+  border-color: $c-signal-aware;
+}
+
+.border-signal-alert {
+  border-color: $c-signal-alert;
+}
+
+// Color
+.color-signal-success {
+  color: $c-signal-success;
+}
+.color-signal-aware {
+  color: $c-signal-aware;
+}
+.color-signal-alert {
+  color: $c-signal-alert;
+}
+
+// Hover colors ??

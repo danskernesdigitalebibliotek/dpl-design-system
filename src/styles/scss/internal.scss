@@ -5,3 +5,20 @@
   justify-content: center;
   align-items: center;
 }
+
+.internal-colors-container {
+  margin-top: 20px;
+}
+
+.internal-colors-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.internal-colors-box {
+  width: 150px;
+  height: 150px;
+}
