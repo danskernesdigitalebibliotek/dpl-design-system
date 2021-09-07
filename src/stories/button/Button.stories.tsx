@@ -1,53 +1,55 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { withDesign } from 'storybook-addon-designs';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { withDesign } from "storybook-addon-designs";
 
-import { Button } from './Button';
+import { Button } from "./Button";
 
 export default {
-  title: 'Example/Button',
+  title: "Example / Button",
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
   decorators: [withDesign],
+  argTypes: {
+    label: {
+      defaultValue: "se hele kalenderen",
+    },
+    disabled: {
+      defaultValue: false,
+    },
+    collapsible: {
+      defaultValue: false,
+    },
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=296%3A5345",
+    },
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
+export const Default = Template.bind({});
+Default.args = {
+  buttonType: "default",
+  collapsible: true,
 };
 
-Primary.parameters = {
-  design: {
-    type: 'figma',
-    url: 'https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=296%3A5345',
-  },
-}
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
+export const External = Template.bind({});
+External.args = {
+  buttonType: "external-link",
 };
 
-Secondary.parameters = {
-  design: {
-    type: 'figma',
-    url: 'https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=296%3A5345',
-  },
-}
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
+export const Search = Template.bind({});
+Search.args = {
+  label: "se alle søgeresultater",
+  buttonType: "search",
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+export const Disabled = Template.bind({});
+Disabled.args = {
+  label: "se alle søgeresultater",
+  buttonType: "search",
+  disabled: true,
 };

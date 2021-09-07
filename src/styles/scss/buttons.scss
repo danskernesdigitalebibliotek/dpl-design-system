@@ -1,0 +1,41 @@
+$c-btn-border-active: $c-text-primary-black;
+$c-btn-border-disabled: $c-global-tertiary;
+
+.btn-icon {
+  margin-left: 16px;
+}
+
+.btn-collapsible {
+  margin-left: 16px;
+  display: none;
+}
+
+.btn-primary {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 26px;
+  background-color: transparent;
+  border-radius: 0;
+  border: 1px solid $c-btn-border-active;
+  cursor: pointer;
+
+  @extend %text-button;
+
+  &:hover {
+    .btn-collapsible {
+      display: block;
+    }
+  }
+
+  &[disabled] {
+    border: 1px solid $c-btn-border-disabled;
+    color: $c-btn-border-disabled;
+    fill: $c-btn-border-disabled;
+
+    .btn-icon {
+      opacity: 0.6;
+    }
+  }
+}

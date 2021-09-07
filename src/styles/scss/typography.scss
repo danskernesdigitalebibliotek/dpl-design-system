@@ -175,8 +175,10 @@
   }
 }
 
+// Using the placeholder selector, recommended by this rule
+// https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-extend-no-missing-placeholder/README.md
 //styleName: Desktop/Button text;
-.text-button {
+%text-button {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -184,6 +186,7 @@
   line-height: 17px;
   letter-spacing: 0.02em;
   text-align: left;
+  text-transform: uppercase;
 
   @include breakpoint-xl {
     font-size: 16px;
