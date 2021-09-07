@@ -1,36 +1,44 @@
-import React from 'react';
-import './button.css';
+import React from "react";
 
-type ButtonProps = {
-  primary?: boolean;
-  backgroundColor?: string;
-  size?: 'small' | 'medium' | 'large';
+export type ButtonProps = {
   label: string;
-  onClick?: () => void;
+  buttonType: "none" | "default" | "external-link" | "search";
+  disabled: boolean;
+  collapsible: boolean;
 };
 
 export const Button = (props: ButtonProps) => {
-  const {
-    primary = false,
-    size = 'medium',
-    backgroundColor,
-    label,
-    ...extraProps
-  } = props;
+  const { label, buttonType, disabled, collapsible } = props;
+  const iconClassName = `btn-icon ${collapsible ? "btn-collapsible" : ""}`;
 
-  const mode = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary';
+  const Icon = () => {
+    if (buttonType === "default") {
+      return (
+        <img
+          className={iconClassName}
+          src={`icons/buttons/icon-btn-arrow.svg`}
+          alt="arrow"
+        />
+      );
+    }
+
+    if (buttonType === "external-link") {
+      return (
+        <img
+          className={iconClassName}
+          src={`icons/buttons/icon-btn-external-link.svg`}
+          alt="external-link"
+        />
+      );
+    }
+
+    return null;
+  };
+
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(
-        ' '
-      )}
-      style={{ backgroundColor }}
-      {...extraProps}
-    >
-      {label}
+    <button type="button" className={`btn-primary`} disabled={disabled}>
+      {`${label} ${buttonType === "search" ? "(6)" : ""}`}
+      <Icon />
     </button>
   );
 };
