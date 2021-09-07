@@ -288,7 +288,7 @@ select {
   }
 }
 
-.text-button {
+.btn-primary {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -296,9 +296,10 @@ select {
   line-height: 17px;
   letter-spacing: 0.02em;
   text-align: left;
+  text-transform: uppercase;
 }
 @media (min-width: 1920px) {
-  .text-button {
+  .btn-primary {
     font-size: 16px;
     line-height: 19px;
   }
@@ -619,38 +620,39 @@ select {
   color: #d5364a;
 }
 
+.btn-icon {
+  margin-left: 16px;
+}
+
+.btn-collapsible {
+  margin-left: 16px;
+  display: none;
+}
+
+.btn-primary {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 26px;
+  background-color: transparent;
+  border-radius: 0;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.btn-primary:hover .btn-collapsible {
+  display: block;
+}
+.btn-primary[disabled] {
+  border: 1px solid #dbdbdb;
+  color: #dbdbdb;
+  fill: #dbdbdb;
+}
+.btn-primary[disabled] .btn-icon {
+  opacity: 0.6;
+}
+
 /*# sourceMappingURL=base.css.map */
 
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-}
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
-}
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
-.storybook-button--small {
-  font-size: 12px;
-  padding: 10px 16px;
-}
-.storybook-button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
-}
-.storybook-button--large {
-  font-size: 16px;
-  padding: 12px 24px;
-}
 
-
-/*# sourceMappingURL=main.3d6fc160.chunk.css.map*/
+/*# sourceMappingURL=main.3e8f59f0.chunk.css.map*/
