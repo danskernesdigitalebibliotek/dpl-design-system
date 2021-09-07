@@ -7,7 +7,7 @@ import ArrowAccent from "../../icons/arrow-accent/icon-arrow-accent.svg";
 
 export const IconAccent = () => {
   return (
-    <div className="INTERNAL__container">
+    <div className="internal-container">
       <img src={ArrowAccent as string} />
     </div>
   );

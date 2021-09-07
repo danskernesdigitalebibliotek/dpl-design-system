@@ -50,7 +50,7 @@ export const IconArrow = (props: IconArrowProps) => {
   const ArrowComp = getArrow();
 
   return (
-    <div className="INTERNAL__container">
+    <div className="internal-container">
       {props.hover ? (
         <div className={`arrow-hover-${props.direction}-${props.size}`}>
           <p className="text-header-h1">Text example</p>

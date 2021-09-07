@@ -1,4 +1,4 @@
-@mixin createArrowAnimated($direction, $size, $scaleX, $translatePx, $origin) {
+@mixin icon-arrow-animated($direction, $size, $scaleX, $translatePx, $origin) {
   .arrow-hover-#{$direction}-#{$size} {
     cursor: pointer;
 
@@ -25,12 +25,12 @@
 
     .arrow-head {
       transition: 0.6s;
-      transform: translateX(0px);
+      transform: translateX(0);
     }
   }
 }
 
-@include createArrowAnimated("right", "large", 1.333, 50px, left);
-@include createArrowAnimated("right", "small", 2, 60px, left);
-@include createArrowAnimated("left", "large", 1.333, -50px, right);
-@include createArrowAnimated("left", "small", 2, -60px, right);
+@include icon-arrow-animated("right", "large", 1.333, 50px, left);
+@include icon-arrow-animated("right", "small", 2, 60px, left);
+@include icon-arrow-animated("left", "large", 1.333, -50px, right);
+@include icon-arrow-animated("left", "small", 2, -60px, right);
