@@ -210,7 +210,7 @@
 }
 
 //styleName: Desktop/Tags;
-.text-tags {
+%text-tags {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -218,6 +218,7 @@
   line-height: 14px;
   letter-spacing: 0.02em;
   text-align: left;
+  text-transform: uppercase;
 
   @include breakpoint-xl {
     font-size: 16px;
