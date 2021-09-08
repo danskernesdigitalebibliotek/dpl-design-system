@@ -1260,7 +1260,21 @@ code {
   cursor: pointer;
 }
 
+.logo-fallback-text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 27px;
+  text-align: left;
+}
+.logo-fallback-text--name {
+  font-weight: 700;
+}
+.logo-fallback-text--libraries {
+  font-weight: 300;
+}
+
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.9f5176eb.chunk.css.map*/
+/*# sourceMappingURL=main.1fb9f41a.chunk.css.map*/
