@@ -21,7 +21,7 @@ $c-btn-border-disabled: $c-global-tertiary;
   border: 1px solid $c-btn-border-active;
   cursor: pointer;
 
-  @extend %text-button;
+  @extend %text-button-placeholder;
 
   &:hover {
     .btn-collapsible {

@@ -1,14 +1,15 @@
 @import "./reset";
+@import "./color-variables";
 @import "./internal";
 @import "./breakpoints";
 @import "./typography";
 @import "./arrows";
-@import "./color-variables";
 @import "./buttons";
 @import "./spacing";
 @import "./tag";
 @import "./logo";
 @import "./pagefold";
+@import "./accordion";
 
 // Should be last to make it easier to overwrite.
 @import "./color-classes";
