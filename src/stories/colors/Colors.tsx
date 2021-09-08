@@ -16,12 +16,9 @@ export const Colors = () => {
                     (colorItem.classNameBg || colorItem.className)
                   }
                 />
-                <code
-                  style={{ marginTop: "15px" }}
-                  className="text-small-caption"
-                >
-                  .{colorItem.className}
-                </code>
+                <pre>
+                  <code>.{colorItem.className}</code>
+                </pre>
               </div>
             ))}
           </div>

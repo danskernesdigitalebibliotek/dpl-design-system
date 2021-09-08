@@ -22,7 +22,11 @@ export const Spacing = () => {
         <div className="internal-spacing-css-wrapper mt-24">
           {spaceClasses.map((spaceClass) => (
             <div className="internal-spacing-css-inner">
-              <div className="internal-spacing-css-inner-prefix p-8">{`.${spaceClass.classPrefix}-[SCALE_VALUE]`}</div>
+              <div className="internal-spacing-css-inner-prefix p-8">
+                <pre>
+                  <code>{`.${spaceClass.classPrefix}-[SCALE_VALUE]`}</code>
+                </pre>
+              </div>
               <div className="internal-spacing-css-inner-property p-8">
                 {spaceClass.classProperty}
               </div>
