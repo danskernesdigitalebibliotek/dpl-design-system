@@ -127,13 +127,13 @@ select {
 .internal-spacing-css-inner-prefix {
   border: 1px solid #dbdbdb;
   width: 200px;
-  height: 45px;
+  height: 60px;
 }
 
 .internal-spacing-css-inner-property {
   border: 1px solid #dbdbdb;
   width: 250px;
-  height: 45px;
+  height: 60px;
 }
 
 .internal-spacing-css-inner {
@@ -142,7 +142,16 @@ select {
 
 .internal-spacing-css-inner-prefix,
 .internal-spacing-css-inner-property {
-  background-color: #f6f5f0;
+  background-color: #fff;
+}
+
+code {
+  font-family: monospace;
+  background-color: #f5f8fa;
+  padding: 4px;
+  border-radius: 2px;
+  font-size: 90%;
+  line-height: 1.45;
 }
 
 .text-header-h1 {
@@ -1253,4 +1262,4 @@ select {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.186e6648.chunk.css.map*/
+/*# sourceMappingURL=main.f8afede6.chunk.css.map*/
