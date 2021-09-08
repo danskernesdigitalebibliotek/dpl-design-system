@@ -3,8 +3,12 @@
 @import "./breakpoints";
 @import "./typography";
 @import "./arrows";
-@import "./colors";
+@import "./color-variables";
 @import "./buttons";
 @import "./spacing";
 @import "./tag";
 @import "./logo";
+@import "./pagefold";
+
+// Should be last to make it easier to overwrite.
+@import "./color-classes";
