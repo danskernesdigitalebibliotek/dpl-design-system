@@ -361,6 +361,7 @@ code {
   font-weight: 400;
   line-height: 17px;
   text-align: left;
+  text-decoration: underline;
 }
 @media (min-width: 1920px) {
   .text-links {
@@ -1262,4 +1263,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.f8afede6.chunk.css.map*/
+/*# sourceMappingURL=main.9f5176eb.chunk.css.map*/
