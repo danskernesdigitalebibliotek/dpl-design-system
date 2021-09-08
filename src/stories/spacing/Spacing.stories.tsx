@@ -5,7 +5,7 @@ import { Meta } from "@storybook/react";
 import { Spacing } from "./Spacing";
 
 export default {
-  title: "Example/Spacing",
+  title: "DPL Design System / Spacing",
   component: Spacing,
   decorators: [withDesign],
   parameters: {

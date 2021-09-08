@@ -5,13 +5,14 @@ import { Meta } from "@storybook/react";
 import { Colors } from "./Colors";
 
 export default {
-  title: "Example/Colors",
+  title: "DPL Design System / Colors",
   component: Colors,
   decorators: [withDesign],
   parameters: {
     design: {
-      type: 'figma',
-      url: 'https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2%3A4',
+      type: "figma",
+      url:
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2%3A4",
     },
   },
 } as Meta;
