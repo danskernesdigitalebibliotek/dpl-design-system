@@ -5,13 +5,14 @@ import { Meta } from "@storybook/react";
 import { Typography } from "./Typography";
 
 export default {
-  title: "Example/Typography",
+  title: "DPL Design System / Typography",
   component: Typography,
   decorators: [withDesign],
   parameters: {
     design: {
-      type: 'figma',
-      url: 'https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=6%3A762',
+      type: "figma",
+      url:
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=6%3A762",
     },
   },
 } as Meta;

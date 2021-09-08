@@ -5,7 +5,7 @@ import { withDesign } from "storybook-addon-designs";
 import { IconBasic as IconBasicComp } from "./IconBasic";
 
 const StoryBase: Meta = {
-  title: "Example / Icons",
+  title: "DPL Design System / Icons",
   component: IconBasicComp,
   decorators: [withDesign],
   parameters: {

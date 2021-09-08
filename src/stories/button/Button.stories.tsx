@@ -5,7 +5,7 @@ import { withDesign } from "storybook-addon-designs";
 import { Button } from "./Button";
 
 export default {
-  title: "Example / Button",
+  title: "DPL Design System / Button",
   component: Button,
   decorators: [withDesign],
   argTypes: {
