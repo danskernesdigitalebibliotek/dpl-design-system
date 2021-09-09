@@ -1,0 +1,32 @@
+$c-global-primary: #f6f5f0;
+$c-global-secondary: #eee9e5;
+$c-global-tertiary: #dbdbdb;
+
+$c-identity-primary: #476e57;
+
+$c-text-primary-white: #fff;
+$c-text-primary-black: #000;
+$c-text-secondary-gray: #484848;
+
+$c-signal-success: #3aaa36;
+$c-signal-aware: #f7bf42;
+$c-signal-alert: #d5364a;
+
+// *** CSS variables for identity color tints ***
+:root {
+  --tint-color-h: 145;
+  --tint-color-s: 22%;
+  --tint-color-l: 35%;
+  --tint-color-hsl: var(--tint-color-h), var(--tint-color-s),
+    var(--tint-color-l);
+  --tint-color: hsl(var(--tint-color-hsl));
+  --tint-color-20: hsl(var(--tint-color-hsl), 0.2);
+  --tint-color-40: hsl(var(--tint-color-hsl), 0.4);
+  --tint-color-60: hsl(var(--tint-color-hsl), 0.6);
+  --tint-color-80: hsl(var(--tint-color-hsl), 0.8);
+  --tint-color-120: hsl(
+    var(--tint-color-h),
+    calc(var(--tint-color-s) - 1%),
+    calc(var(--tint-color-l) - 8%)
+  );
+}

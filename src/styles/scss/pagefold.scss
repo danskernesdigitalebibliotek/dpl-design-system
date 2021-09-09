@@ -1,0 +1,26 @@
+$triangle-width: 38px;
+
+.pagefold-parent {
+  position: relative;
+  clip-path: polygon(
+    $triangle-width 0,
+    0 $triangle-width,
+    0 100%,
+    100% 100%,
+    100% 0
+  );
+}
+
+.pagefold-triangle {
+  width: $triangle-width;
+  height: $triangle-width;
+  background-color: $c-identity-primary;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pagefold-inherit-parent {
+  opacity: 0.2;
+  background-color: #000;
+}
