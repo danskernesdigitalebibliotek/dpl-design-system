@@ -136,6 +136,7 @@
 }
 
 //styleName: Desktop/Body Copy - M - regular;
+%text-body-medium-regular-placeholder,
 .text-body-medium-regular {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
@@ -143,6 +144,7 @@
   font-weight: 400;
   line-height: 22px;
   text-align: left;
+  color: $c-text-secondary-gray;
 
   @include breakpoint-m {
     font-size: 16px;
@@ -178,7 +180,8 @@
 // Using the placeholder selector, recommended by this rule
 // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-extend-no-missing-placeholder/README.md
 //styleName: Desktop/Button text;
-%text-button {
+%text-button-placeholder,
+.text-button {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -203,6 +206,7 @@
   line-height: 17px;
   text-align: left;
   text-decoration: underline;
+  color: $c-text-secondary-gray;
 
   @include breakpoint-xl {
     font-size: 16px;
