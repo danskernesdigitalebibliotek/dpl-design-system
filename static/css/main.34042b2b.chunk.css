@@ -158,9 +158,25 @@ select {
   display: flex;
 }
 
-.internal-spacing-css-inner-prefix,
-.internal-spacing-css-inner-property {
-  background-color: #fff;
+.internal-breakpoints-container {
+  display: flex;
+  justify-content: center;
+}
+
+.internal-breakpoints-css-inner-prefix {
+  border: 1px solid #dbdbdb;
+  width: 250px;
+  height: 60px;
+}
+
+.internal-breakpoints-css-inner-property {
+  border: 1px solid #dbdbdb;
+  width: 90px;
+  height: 60px;
+}
+
+.internal-breakpoints-css-inner {
+  display: flex;
 }
 
 code {
@@ -1370,4 +1386,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.51e39d67.chunk.css.map*/
+/*# sourceMappingURL=main.34042b2b.chunk.css.map*/
