@@ -3,7 +3,7 @@ $screen-s: 768px;
 $screen-m: 1024px;
 $screen-l: 1440px;
 $screen-xl: 1920px;
-$screen-xxl: 22000px;
+$screen-xxl: 2200px;
 
 @mixin breakpoint-s {
   @media (min-width: $screen-s) {
