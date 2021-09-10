@@ -15,7 +15,7 @@ type AccordionProps = {
 export const Accordion = (props: AccordionProps) => {
   useEffect(() => {
     /* eslint @typescript-eslint/no-var-requires: "off" */
-    require("./accordion");
+    require("./initaccordion");
   }, []);
   return (
     <ul className="accordion">

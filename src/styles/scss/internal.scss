@@ -48,13 +48,13 @@
 }
 
 .internal-spacing-css-inner-prefix {
-  border: 1px solid #dbdbdb;
+  border: 1px solid $c-global-tertiary;
   width: 200px;
   height: 60px;
 }
 
 .internal-spacing-css-inner-property {
-  border: 1px solid #dbdbdb;
+  border: 1px solid $c-global-tertiary;
   width: 250px;
   height: 60px;
 }
@@ -63,9 +63,26 @@
   display: flex;
 }
 
-.internal-spacing-css-inner-prefix,
-.internal-spacing-css-inner-property {
-  background-color: #fff;
+// Breakpoints
+.internal-breakpoints-container {
+  display: flex;
+  justify-content: center;
+}
+
+.internal-breakpoints-css-inner-prefix {
+  border: 1px solid $c-global-tertiary;
+  width: 250px;
+  height: 60px;
+}
+
+.internal-breakpoints-css-inner-property {
+  border: 1px solid $c-global-tertiary;
+  width: 90px;
+  height: 60px;
+}
+
+.internal-breakpoints-css-inner {
+  display: flex;
 }
 
 // Code tag
