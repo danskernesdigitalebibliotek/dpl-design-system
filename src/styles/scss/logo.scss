@@ -1,8 +1,8 @@
 .logo-fallback-text {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 24px;
+  font-size: 14px;
   font-style: normal;
-  line-height: 27px;
+  line-height: 18px;
   text-align: left;
 
   &--name {
@@ -11,5 +11,10 @@
 
   &--libraries {
     font-weight: 300;
+  }
+
+  @include breakpoint-m {
+    font-size: 24px;
+    line-height: 27px;
   }
 }
