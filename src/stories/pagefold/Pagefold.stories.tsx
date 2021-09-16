@@ -13,6 +13,24 @@ export default {
     inherit: {
       defaultValue: false,
     },
+    container: {
+      defaultValue: true,
+    },
+    size: {
+      defaultValue: "medium",
+    },
+    classes: {
+      // Only used internally
+      control: {
+        disable: true,
+      },
+    },
+    compProps: {
+      // Only used internally
+      control: {
+        disable: true,
+      },
+    },
   },
   parameters: {
     design: {

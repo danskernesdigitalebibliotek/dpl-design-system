@@ -1,26 +1,39 @@
-$triangle-width: 38px;
-
-.pagefold-parent {
-  position: relative;
-  clip-path: polygon(
-    $triangle-width 0,
-    0 $triangle-width,
-    0 100%,
-    100% 100%,
-    100% 0
-  );
-}
-
-.pagefold-triangle {
-  width: $triangle-width;
-  height: $triangle-width;
-  background-color: $c-identity-primary;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .pagefold-inherit-parent {
   opacity: 0.2;
   background-color: #000;
+}
+
+$pagefold-map: (
+  "small": 16,
+  "medium": 24,
+  "large": 38,
+  "xlarge": 56,
+);
+
+@each $size, $triangle-width in $pagefold-map {
+  .m-#{$size} {
+    margin: #{$size}px;
+  }
+
+  .pagefold-parent-#{$size} {
+    width: #{$triangle-width}px;
+    height: #{$triangle-width}px;
+    position: relative;
+    clip-path: polygon(
+      #{$triangle-width}px 0,
+      0 #{$triangle-width}px,
+      0 100%,
+      100% 100%,
+      100% 0
+    );
+  }
+
+  .pagefold-triangle-#{$size} {
+    width: #{$triangle-width}px;
+    height: #{$triangle-width}px;
+    background-color: $c-identity-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }

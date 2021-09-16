@@ -1,0 +1,215 @@
+.header {
+  border: 1px solid $c-global-tertiary;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: $c-global-primary;
+
+  @include breakpoint-s {
+    grid-template-columns: 1fr 105px;
+  }
+
+  @include breakpoint-m {
+    grid-template-columns: 250px 1fr 105px;
+  }
+}
+
+.header-logo--desktop {
+  display: none;
+  border-right: 1px solid $c-global-tertiary;
+  @include breakpoint-m {
+    display: block;
+  }
+}
+
+.header-logo--desktop--link {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-menu {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.header-menu--first {
+  border-bottom: 1px solid $c-global-tertiary;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+}
+
+.header-menu--navigation--logo {
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.header-menu--navigation {
+  display: none;
+
+  @include breakpoint-m {
+    display: flex;
+    padding: 0 12px;
+    height: 100%;
+  }
+}
+
+.header-menu--navigation--mobile {
+  display: flex;
+
+  @include breakpoint-s {
+    .pagefold-triangle-small {
+      display: none;
+    }
+  }
+
+  @include breakpoint-m {
+    display: none;
+  }
+}
+
+.header-menu--navigation--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid $c-global-tertiary;
+}
+
+.header-menu--navigation--item:hover {
+  border-top: 1px solid transparent; // to prevent jumping
+  border-bottom: 1px solid #000;
+}
+
+.header-menu--navigation--link {
+  padding: 0 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-menu--profile,
+.header-menu--bookmarked {
+  position: relative;
+  border-left: 1px solid $c-global-tertiary;
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  span {
+    position: absolute;
+    bottom: 8px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 4px;
+    text-align: center;
+  }
+
+  .header--notification {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    transform: translateX(10px) translateY(-12px);
+  }
+}
+
+.header-menu--search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.header-menu--search--input {
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  border: 0 solid transparent;
+  background-color: transparent;
+
+  ::placeholder {
+    color: $c-text-secondary-gray;
+  }
+}
+
+.header-menu--search--icon {
+  position: absolute;
+  right: 24px;
+}
+
+.header-clock {
+  border-left: 1px solid $c-global-tertiary;
+  display: none;
+
+  @include breakpoint-s {
+    display: block;
+  }
+}
+
+.header-clock--items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-button {
+  height: 56px;
+  width: 56px;
+
+  @include breakpoint-s {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+#header-overlay.visible {
+  display: grid;
+}
+#header-overlay {
+  display: none;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 384px 1fr;
+
+  @include breakpoint-s {
+    grid-template-columns: 384px 1fr;
+  }
+}
+
+.header-overlay--main {
+  background-color: $c-global-primary;
+}
+
+.header-overlay--backdrop {
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.header-overlay--menu {
+  margin-top: 96px;
+  margin-left: 56px;
+}
+
+.header-overlay--menu--item {
+  margin-bottom: 8px;
+}
+
+#header-menu--close {
+  position: fixed;
+  padding: 30px;
+}
