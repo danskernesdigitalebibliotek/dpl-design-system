@@ -5,7 +5,7 @@ import "../../../styles/css/base.css";
 export const IconAccent = () => {
   return (
     <div className="internal-container">
-      <img src="icons/arrow-accent/icon-arrow-accent.svg" />
+      <img src="icons/arrow-accent/icon-arrow-accent.svg" alt="arrow accent" />
     </div>
   );
 };

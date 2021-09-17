@@ -1,0 +1,23 @@
+name: Accessibility
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - run: npm ci
+
+      - name: Compile styles
+        run: npm run css:build
+
+      - name: Run accessibility tests
+        run: npm run storybook:axe

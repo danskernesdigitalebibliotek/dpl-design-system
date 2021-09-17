@@ -47,4 +47,5 @@ const list = [
 export const Dropdown = Template.bind({});
 Dropdown.args = {
   list,
+  ariaLabel: "Dropdown with different artists",
 };

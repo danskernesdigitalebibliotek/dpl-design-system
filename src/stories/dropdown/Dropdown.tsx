@@ -7,12 +7,13 @@ type DropdownItem = {
 
 type DropdownProps = {
   list: DropdownItem[];
+  ariaLabel: string;
 };
 
 export const Dropdown = (props: DropdownProps) => {
   return (
     <div className="dropdown">
-      <select className="dropdown--select" name="cars" id="ddlProducts">
+      <select className="dropdown--select" aria-label={props.ariaLabel}>
         {props.list.map((i) => (
           <option className="dropdown--option" value={i.title}>
             {i.title}
