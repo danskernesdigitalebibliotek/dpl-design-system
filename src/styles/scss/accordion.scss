@@ -17,6 +17,12 @@
   border-top: 1px solid $c-global-tertiary-1;
 }
 
+.accordion--row:last-child {
+  .accordion--button {
+    border-bottom: 1px solid #dbdbdb;
+  }
+}
+
 .accordion--arrow {
   transition: transform 0.3s;
   transform: rotateZ(0deg);

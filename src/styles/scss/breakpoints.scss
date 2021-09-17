@@ -5,6 +5,12 @@ $screen-l: 1440px;
 $screen-xl: 1920px;
 $screen-xxl: 2200px;
 
+@mixin breakpoint-max-s {
+  @media (max-width: $screen-s) {
+    @content;
+  }
+}
+
 @mixin breakpoint-s {
   @media (min-width: $screen-s) {
     @content;
