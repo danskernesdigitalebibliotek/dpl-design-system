@@ -1579,6 +1579,7 @@ code {
   height: 50px;
   padding: 0 20px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .dropdown--option {
@@ -1748,4 +1749,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.c77f5c56.chunk.css.map*/
+/*# sourceMappingURL=main.c083ea1d.chunk.css.map*/
