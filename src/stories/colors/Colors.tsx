@@ -46,7 +46,10 @@ const colorClasses: ColorClasses = [
         className: "bg-global-secondary",
       },
       {
-        className: "bg-global-tertiary",
+        className: "bg-global-tertiary-1",
+      },
+      {
+        className: "bg-global-tertiary-2",
       },
     ],
   },

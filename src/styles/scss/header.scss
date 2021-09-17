@@ -1,5 +1,5 @@
 .header {
-  border: 1px solid $c-global-tertiary;
+  border: 1px solid $c-global-tertiary-1;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -16,7 +16,7 @@
 
 .header-logo--desktop {
   display: none;
-  border-right: 1px solid $c-global-tertiary;
+  border-right: 1px solid $c-global-tertiary-1;
   @include breakpoint-m {
     display: block;
   }
@@ -36,7 +36,7 @@
 }
 
 .header-menu--first {
-  border-bottom: 1px solid $c-global-tertiary;
+  border-bottom: 1px solid $c-global-tertiary-1;
   display: grid;
   grid-template-columns: 1fr auto auto;
 }
@@ -75,7 +75,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid $c-global-tertiary;
+  border-right: 1px solid $c-global-tertiary-1;
 }
 
 .header-menu--navigation--item:hover {
@@ -93,7 +93,7 @@
 .header-menu--profile,
 .header-menu--bookmarked {
   position: relative;
-  border-left: 1px solid $c-global-tertiary;
+  border-left: 1px solid $c-global-tertiary-1;
 
   a {
     width: 100%;
@@ -149,7 +149,7 @@
 }
 
 .header-clock {
-  border-left: 1px solid $c-global-tertiary;
+  border-left: 1px solid $c-global-tertiary-1;
   display: none;
 
   @include breakpoint-s {

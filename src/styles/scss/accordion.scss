@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid $c-global-tertiary;
+  border-top: 1px solid $c-global-tertiary-1;
 }
 
 .accordion--arrow {
@@ -23,7 +23,7 @@
 }
 
 .accordion--button[aria-expanded="true"] {
-  border-bottom: 1px solid $c-global-tertiary;
+  border-bottom: 1px solid $c-global-tertiary-1;
 
   .accordion--arrow {
     transform: rotateZ(180deg);

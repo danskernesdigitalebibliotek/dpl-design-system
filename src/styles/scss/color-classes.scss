@@ -8,8 +8,12 @@
   background-color: $c-global-secondary;
 }
 
-.bg-global-tertiary {
-  background-color: $c-global-tertiary;
+.bg-global-tertiary-1 {
+  background-color: $c-global-tertiary-1;
+}
+
+.bg-global-tertiary-2 {
+  background-color: $c-global-tertiary-2;
 }
 
 // Border
@@ -22,7 +26,7 @@
 }
 
 .border-global-tertiary {
-  border-color: $c-global-tertiary;
+  border-color: $c-global-tertiary-1;
 }
 
 // *** Identity colors ***
