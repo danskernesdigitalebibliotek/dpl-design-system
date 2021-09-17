@@ -13,7 +13,7 @@ const StoryBase: Meta = {
     design: {
       type: "figma",
       url:
-        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=10%3A395",
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=282%3A3763",
     },
   },
 };
