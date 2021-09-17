@@ -25,7 +25,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "storybook:axe": "build-storybook && axe-storybook",
     "build-storybook": "build-storybook -s public",
-    "js:eslint": "eslint 'src/**/*.{js,ts}'",
+    "js:eslint": "eslint 'src/**/*.{js,ts}' --max-warnings=0",
     "js:prettier": "prettier 'src/**/*.{js,ts}'",
     "js:lint": "concurrently 'npm:js:eslint' 'npm:js:prettier -- --check' --raw",
     "js:format": "concurrently 'npm:js:eslint -- --fix' 'npm:js:prettier -- --write' --max-processes 1 --raw",
