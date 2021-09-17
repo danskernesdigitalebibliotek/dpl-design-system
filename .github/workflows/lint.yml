@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  storybook:
+  css_stylelint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,7 +25,19 @@ jobs:
           fail_on_error: false
           level: error
 
-  prettier:
+  js_eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - run: npm ci
+
+      - name: Run eslint
+        run: npm run js:eslint
+
+  css_prettier:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -37,3 +49,16 @@ jobs:
 
       - name: Run Prettier
         run: npm run css:prettier -- --check
+
+  js_prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      
+      - run: npm ci
+
+      - name: Run Prettier
+        run: npm run js:prettier -- --check

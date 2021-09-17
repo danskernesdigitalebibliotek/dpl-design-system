@@ -11,7 +11,7 @@ type ArgTypesWithKeys<T> = {
     name?: string;
     description?: string;
     defaultValue: T[Key];
-    [key: string]: any;
+    [key: string]: unknown;
   };
 };
 
