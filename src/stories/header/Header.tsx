@@ -39,7 +39,10 @@ export const Header = (props: HeaderProps) => {
                   classes="header-menu--navigation--button header-button"
                   compProps={{ id: "header-menu--open" }}
                 >
-                  <img src={`icons/basic/icon-menu.svg`} />
+                  <img
+                    src={`icons/basic/icon-menu.svg`}
+                    alt="List of bookmarks"
+                  />
                 </Pagefold>
                 <div className="header-menu--navigation--logo">
                   <Logo
@@ -67,7 +70,7 @@ export const Header = (props: HeaderProps) => {
                 {signedIn && haveNotification && (
                   <div className="header--notification bg-identity-primary" />
                 )}
-                <img src={`icons/basic/icon-profile.svg`} />
+                <img src={`icons/basic/icon-profile.svg`} alt="Profile" />
                 {signedIn && (
                   <span className="text-small-caption">{username}</span>
                 )}
@@ -75,7 +78,10 @@ export const Header = (props: HeaderProps) => {
             </div>
             <div className="header-menu--bookmarked header-button">
               <a href="/">
-                <img src={`icons/basic/icon-heart.svg`} />
+                <img
+                  src={`icons/basic/icon-heart.svg`}
+                  alt="List of bookmarks"
+                />
               </a>
             </div>
           </nav>
@@ -89,6 +95,7 @@ export const Header = (props: HeaderProps) => {
               <img
                 className="header-menu--search--icon"
                 src={`icons/basic/icon-search.svg`}
+                alt="search icon"
               />
             </div>
           </div>
@@ -97,7 +104,11 @@ export const Header = (props: HeaderProps) => {
         <div className="header-clock">
           <Pagefold inherit={false} container={false} size="medium" />
           <div className="header-clock--items">
-            <img src={`icons/basic/icon-watch-static.svg`} className="mb-8" />
+            <img
+              src={`icons/basic/icon-watch-static.svg`}
+              className="mb-8"
+              alt="clock icon"
+            />
             <span className="text-small-caption">Fredag</span>
             <span className="text-small-caption">28 Maj</span>
           </div>

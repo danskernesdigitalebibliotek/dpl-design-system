@@ -101,3 +101,10 @@ code {
   background: #eee9e5;
   padding: 50px;
 }
+
+.internal-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

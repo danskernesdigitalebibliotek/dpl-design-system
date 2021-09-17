@@ -1,13 +1,12 @@
 import React from "react";
-import { InvalidProps } from "../../../components/InvalidProps";
 import "../../../styles/css/base.css";
 
 export const IconWatch = () => {
   return (
     <div className="internal-container-grid">
-      <div>
-        <img src={`icons/basic/icon-watch-static.svg`} />
-        <span>Clock</span>
+      <div className="internal-center">
+        <img src={`icons/basic/icon-watch-static.svg`} alt="klokke" />
+        <span className="text-body-medium-regular">Clock</span>
       </div>
     </div>
   );

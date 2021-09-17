@@ -25,9 +25,9 @@ export const IconSocial = () => {
   return (
     <div className="internal-container-grid">
       {svgIcons.map((i) => (
-        <div>
-          <img src={`icons/social/${i.fileName}`} />
-          <span>{i.title}</span>
+        <div className="internal-center">
+          <img src={`icons/social/${i.fileName}`} alt={i.title} />
+          <span className="text-body-medium-regular">{i.title}</span>
         </div>
       ))}
     </div>
