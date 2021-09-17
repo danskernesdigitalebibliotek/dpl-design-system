@@ -10,10 +10,12 @@ export default {
   title: "DPL Design System / Tag",
   component: TagComp,
   decorators: [withDesign],
-  design: {
-    type: "figma",
-    url:
-      "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=836%3A5757",
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=836%3A5757",
+    },
   },
 };
 

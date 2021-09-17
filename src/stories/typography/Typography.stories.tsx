@@ -12,7 +12,7 @@ export default {
     design: {
       type: "figma",
       url:
-        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=6%3A762",
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2%3A476",
     },
   },
 } as Meta;
