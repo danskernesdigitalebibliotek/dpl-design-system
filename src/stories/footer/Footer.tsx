@@ -77,7 +77,7 @@ export const Footer = () => {
           </div>
           <Accordion list={accordionList} />
           <div className="footer-widgets mt-48">
-            <Dropdown list={dropdownList} />
+            <Dropdown list={dropdownList} ariaLabel="dropdown" />
             <Logo fallback={false} libraryName={""} altText={"logo"} />
           </div>
           <div className="footer-separator mt-24"></div>
@@ -90,17 +90,17 @@ export const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="" className="footer-site-info-link">
+                  <a href="/" className="footer-site-info-link">
                     Servicedeklaration
                   </a>
                 </li>
                 <li>
-                  <a href="" className="footer-site-info-link">
+                  <a href="/" className="footer-site-info-link">
                     Relement
                   </a>
                 </li>
                 <li>
-                  <a href="" className="footer-site-info-link">
+                  <a href="/" className="footer-site-info-link">
                     Tilgængelighed
                   </a>
                 </li>
@@ -108,18 +108,10 @@ export const Footer = () => {
             </div>
 
             <div className="footer-site-info-icons mt-32">
-              <a href="">
-                <img src={`icons/social/icon-social-facebook.svg`} />
-              </a>
-              <a href="">
-                <img src={`icons/social/icon-social-instagram.svg`} />
-              </a>
-              <a href="">
-                <img src={`icons/social/icon-social-youtube.svg`} />
-              </a>
-              <a href="">
-                <img src={`icons/social/icon-social-spotify.svg`} />
-              </a>
+              <a href="/"><img src={`icons/social/icon-social-facebook.svg`} alt="Facebook link" /></a>
+              <a href="/"><img src={`icons/social/icon-social-instagram.svg`} alt="Instagram link" /></a>
+              <a href="/"><img src={`icons/social/icon-social-youtube.svg`} alt="Youtube link" /></a>
+              <a href="/"><img src={`icons/social/icon-social-spotify.svg`} alt="Spotify link" /></a>
             </div>
           </div>
         </Pagefold>
@@ -145,28 +137,28 @@ export const Footer = () => {
               <h4 className="text-header-h4">Om bibliotekerne</h4>
               <ul>
                 <li className="footer-list-link">
-                  <a href="">Brug af bibliotekerne</a>
+                  <a href="/">Brug af bibliotekerne</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Erstatninger og gebyrer</a>
+                  <a href="/">Erstatninger og gebyrer</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Opret bruger</a>
+                  <a href="/">Opret bruger</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Biblioteket - A til Å</a>
+                  <a href="/">Biblioteket - A til Å</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Internetadgang</a>
+                  <a href="/">Internetadgang</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Print, scan og kopi</a>
+                  <a href="/">Print, scan og kopi</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Booking af lokaler</a>
+                  <a href="/">Booking af lokaler</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Nyhedsbrev</a>
+                  <a href="/">Nyhedsbrev</a>
                 </li>
               </ul>
             </div>
@@ -174,16 +166,16 @@ export const Footer = () => {
               <h4 className="text-header-h4">Online tilbud</h4>
               <ul>
                 <li className="footer-list-link">
-                  <a href="">Litteratursiden</a>
+                  <a href="/">Litteratursiden</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Bibliotek.dk</a>
+                  <a href="/">Bibliotek.dk</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">eReolen</a>
+                  <a href="/">eReolen</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Filmstriben</a>
+                  <a href="/">Filmstriben</a>
                 </li>
               </ul>
             </div>
@@ -198,40 +190,23 @@ export const Footer = () => {
                 Man - fre / Kl. 10-16 <br />
               </p>
               <div className="footer-list-link">
-                <a href="">info@ltk.dk</a>
+                <a href="/">info@ltk.dk</a>
               </div>
             </div>
             <div className="footer-column">
               <h4 className="text-header-h4">Text</h4>
               <ul>
                 <li className="footer-list-link">
-                  <a href="">Lorem ipsum a la lorem ip</a>
+                  <a href="/">Lorem ipsum a la lorem ip</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Bibliotekerne lorem </a>
+                  <a href="/">Bibliotekerne lorem </a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Labore ipsum</a>
+                  <a href="/">Labore ipsum</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Adipisci velit le lorem</a>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h4 className="text-header-h4">Text</h4>
-              <ul>
-                <li className="footer-list-link">
-                  <a href="">Lorem ipsum a la lorem ip</a>
-                </li>
-                <li className="footer-list-link">
-                  <a href="">Bibliotekerne lorem </a>
-                </li>
-                <li className="footer-list-link">
-                  <a href="">Labore ipsum</a>
-                </li>
-                <li className="footer-list-link">
-                  <a href="">Adipisci velit le lorem</a>
+                  <a href="/">Adipisci velit le lorem</a>
                 </li>
               </ul>
             </div>
@@ -239,23 +214,40 @@ export const Footer = () => {
               <h4 className="text-header-h4">Text</h4>
               <ul>
                 <li className="footer-list-link">
-                  <a href="">Lorem ipsum a la lorem ip</a>
+                  <a href="/">Lorem ipsum a la lorem ip</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Bibliotekerne lorem </a>
+                  <a href="/">Bibliotekerne lorem </a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Labore ipsum</a>
+                  <a href="/">Labore ipsum</a>
                 </li>
                 <li className="footer-list-link">
-                  <a href="">Adipisci velit le lorem</a>
+                  <a href="/">Adipisci velit le lorem</a>
+                </li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4 className="text-header-h4">Text</h4>
+              <ul>
+                <li className="footer-list-link">
+                  <a href="/">Lorem ipsum a la lorem ip</a>
+                </li>
+                <li className="footer-list-link">
+                  <a href="/">Bibliotekerne lorem </a>
+                </li>
+                <li className="footer-list-link">
+                  <a href="/">Labore ipsum</a>
+                </li>
+                <li className="footer-list-link">
+                  <a href="/">Adipisci velit le lorem</a>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="footer-widgets mt-80">
-            <Dropdown list={dropdownList} />
+            <Dropdown list={dropdownList} ariaLabel="dropdown" />
             <Logo fallback={false} libraryName={""} altText={"logo"} />
           </div>
 
@@ -263,30 +255,22 @@ export const Footer = () => {
 
           <div className="footer-site-info">
             <div className="footer-site-info-icons">
-              <a href="">
-                <img src={`icons/social/icon-social-facebook.svg`} />
-              </a>
-              <a href="">
-                <img src={`icons/social/icon-social-instagram.svg`} />
-              </a>
-              <a href="">
-                <img src={`icons/social/icon-social-youtube.svg`} />
-              </a>
-              <a href="">
-                <img src={`icons/social/icon-social-spotify.svg`} />
-              </a>
+              <a href="/"><img src={`icons/social/icon-social-facebook.svg`} alt="Facebook link" /></a>
+              <a href="/"><img src={`icons/social/icon-social-instagram.svg`} alt="Instagram link" /></a>
+              <a href="/"><img src={`icons/social/icon-social-youtube.svg`} alt="Youtube link" /></a>
+              <a href="/"><img src={`icons/social/icon-social-spotify.svg`} alt="Spotify link" /></a>
             </div>
             <div className="footer-site-info-links">
-              <a href="" className="footer-site-info-link">
+              <a href="/" className="footer-site-info-link">
                 Behandling af persondata
               </a>
-              <a href="" className="footer-site-info-link">
+              <a href="/" className="footer-site-info-link">
                 Servicedeklaration
               </a>
-              <a href="" className="footer-site-info-link">
+              <a href="/" className="footer-site-info-link">
                 Relement
               </a>
-              <a href="" className="footer-site-info-link">
+              <a href="/" className="footer-site-info-link">
                 Tilgængelighed
               </a>
             </div>
