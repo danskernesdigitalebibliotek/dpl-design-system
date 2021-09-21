@@ -90,13 +90,13 @@
 
 // Separator
 .footer-separator {
-  border-bottom: 1px solid $c-global-tertiary;
+  border-bottom: 1px solid $c-global-tertiary-1;
   margin: #{$s-24}px 0;
 }
 
 // Separator mobile tweaks
 .footer-mobile .footer-separator {
-    margin: 0 -50px;
+  margin: 0 -50px;
 }
 
 // Link tweaks
@@ -123,5 +123,5 @@
 
 // Accordion mobile tweaks
 .footer-mobile .accordion {
-    margin: 0 -50px;
+  margin: 0 -50px;
 }
