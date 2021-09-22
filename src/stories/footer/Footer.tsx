@@ -7,21 +7,6 @@ import { list } from "../accordion/accordionList";
 import { FooterColumn } from "./FooterColumn";
 
 export const Footer = () => {
-  const dropdownList = [
-    {
-      title: "DK",
-      href: "/",
-    },
-    {
-      title: "SEK",
-      href: "/",
-    },
-    {
-      title: "ENG",
-      href: "/",
-    },
-  ];
-
   return (
     <div className="footer">
       {/* Footer mobile */}
@@ -234,3 +219,18 @@ export const Footer = () => {
     </div>
   );
 };
+
+const dropdownList = [
+  {
+    title: "DK",
+    href: "/",
+  },
+  {
+    title: "SEK",
+    href: "/",
+  },
+  {
+    title: "ENG",
+    href: "/",
+  },
+];

@@ -24,7 +24,7 @@ function initAccordion() {
     }
 
     if (!btn.parentNode?.nextElementSibling) {
-      console.info("Accordion - Can't find next sibling too parentNode");
+      console.info("Accordion - Can't find next sibling to parentNode");
       return;
     }
 
