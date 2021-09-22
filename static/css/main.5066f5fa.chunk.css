@@ -207,7 +207,7 @@ code {
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: 38px;
+  line-height: 40px;
   text-align: left;
 }
 @media (min-width: 1024px) {
@@ -228,7 +228,7 @@ code {
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 32px;
   text-align: left;
 }
 @media (min-width: 1024px) {
@@ -249,7 +249,7 @@ code {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 32px;
   text-align: left;
 }
 @media (min-width: 1024px) {
@@ -270,7 +270,7 @@ code {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 24px;
   text-align: left;
 }
 @media (min-width: 1024px) {
@@ -291,7 +291,7 @@ code {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 32px;
   text-align: left;
 }
 @media (min-width: 1024px) {
@@ -327,7 +327,7 @@ code {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 32px;
   text-align: left;
 }
 @media (min-width: 1024px) {
@@ -349,7 +349,7 @@ code {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 24px;
   text-align: left;
   color: #484848;
 }
@@ -373,7 +373,7 @@ code {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 32px;
   text-align: left;
 }
 @media (min-width: 1024px) {
@@ -395,10 +395,17 @@ code {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 24px;
   letter-spacing: 0.02em;
   text-align: left;
   text-transform: uppercase;
+}
+@media (min-width: 1024px) {
+  .dropdown--select, .btn-primary,
+.text-button {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 @media (min-width: 1920px) {
   .dropdown--select, .btn-primary,
@@ -413,10 +420,16 @@ code {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 17px;
+  line-height: 24px;
   text-align: left;
   text-decoration: underline;
   color: #484848;
+}
+@media (min-width: 1024px) {
+  .text-links {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 @media (min-width: 1920px) {
   .text-links {
@@ -430,10 +443,16 @@ code {
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: 14px;
+  line-height: 24px;
   letter-spacing: 0.02em;
   text-align: left;
   text-transform: uppercase;
+}
+@media (min-width: 1024px) {
+  .tag-primary {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 @media (min-width: 1920px) {
   .tag-primary {
@@ -447,10 +466,10 @@ code {
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
-  line-height: 12px;
+  line-height: 16px;
   text-align: left;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .text-small-caption {
     font-size: 12px;
     line-height: 14px;
@@ -1749,4 +1768,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.c083ea1d.chunk.css.map*/
+/*# sourceMappingURL=main.5066f5fa.chunk.css.map*/
