@@ -1,20 +1,20 @@
 .footer {
-  @include breakpoint-max-s {
-    .footer-mobile {
+  @include breakpoint-s--max {
+    .footer--mobile {
       display: block;
     }
 
-    .footer-desktop {
+    .footer--desktop {
       display: none;
     }
   }
 
   @include breakpoint-s {
-    .footer-mobile {
+    .footer--mobile {
       display: none;
     }
 
-    .footer-desktop {
+    .footer--desktop {
       display: block;
     }
   }
@@ -35,13 +35,13 @@
 }
 
 // Grid / columns
-.footer-desktop .footer-column-wrapper {
+.footer--desktop .footer-column-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(263px, 1fr));
   grid-gap: 82px;
 }
 
-.footer-desktop .footer-column {
+.footer--desktop .footer-column {
   width: 263px;
   height: auto;
 }
@@ -69,17 +69,17 @@
 }
 
 // Site info
-.footer-desktop .footer-site-info {
+.footer--desktop .footer-site-info {
   display: flex;
   justify-content: space-between;
 }
 
-.footer-site-info-links {
+.footer-site-info--links {
   display: flex;
   gap: 24px;
 }
 
-.footer-site-info-icons {
+.footer-site-info--icons {
   display: flex;
   gap: 30px;
 
@@ -95,12 +95,12 @@
 }
 
 // Separator mobile tweaks
-.footer-mobile .footer-separator {
+.footer--mobile .footer-separator {
   margin: #{$s-24}px -50px;
 }
 
 // Link tweaks
-.footer-list-link {
+.footer-column--link {
   margin-top: #{$s-16}px;
 
   a {
@@ -115,13 +115,13 @@
   }
 }
 
-.footer-site-info-link {
+.footer-site-info--link {
   text-decoration: none;
 
   @extend %text-links-placeholder;
 }
 
 // Accordion mobile tweaks
-.footer-mobile .accordion {
+.footer--mobile .accordion {
   margin: 0 -50px;
 }

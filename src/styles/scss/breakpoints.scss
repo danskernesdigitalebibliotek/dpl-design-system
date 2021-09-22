@@ -5,7 +5,7 @@ $screen-l: 1440px;
 $screen-xl: 1920px;
 $screen-xxl: 2200px;
 
-@mixin breakpoint-max-s {
+@mixin breakpoint-s--max {
   @media (max-width: $screen-s) {
     @content;
   }
