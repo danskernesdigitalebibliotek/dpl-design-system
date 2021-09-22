@@ -3,6 +3,7 @@ import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 
 import { Accordion as AccordionComp } from "./Accordion";
+import { list } from "./accordionList";
 
 type AccordionProps = typeof AccordionComp;
 
@@ -22,44 +23,6 @@ export default {
 const Template: ComponentStory<AccordionProps> = (args) => (
   <AccordionComp {...args} />
 );
-
-const list = ["Om Bibliotekerne", "Online tilbud", "Kontakt"].map((header) => ({
-  header,
-  content: [
-    {
-      title: "Brug bibliotekerne",
-      href: "/",
-    },
-    {
-      title: "Erstatninger og gebyrer",
-      href: "/",
-    },
-    {
-      title: "Opret bruger",
-      href: "/",
-    },
-    {
-      title: "Biblioteket - A til Å",
-      href: "/",
-    },
-    {
-      title: "Internetadgang",
-      href: "/",
-    },
-    {
-      title: "Print, scan og kopi",
-      href: "/",
-    },
-    {
-      title: "Booking af lokaler",
-      href: "/",
-    },
-    {
-      title: "Nyhedsbrev",
-      href: "/",
-    },
-  ],
-}));
 
 export const Accordion = Template.bind({});
 Accordion.args = {

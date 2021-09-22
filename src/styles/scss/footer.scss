@@ -1,0 +1,127 @@
+.footer {
+  @include breakpoint-s--max {
+    .footer--mobile {
+      display: block;
+    }
+
+    .footer--desktop {
+      display: none;
+    }
+  }
+
+  @include breakpoint-s {
+    .footer--mobile {
+      display: none;
+    }
+
+    .footer--desktop {
+      display: block;
+    }
+  }
+
+  // Pagefold tweaks
+  .pagefold-parent-medium {
+    width: 100vw;
+    height: auto;
+  }
+
+  .internal-pagefold-parent {
+    background-color: $c-global-secondary;
+
+    @include breakpoint-m {
+      padding: 56px 100px 24px;
+    }
+  }
+}
+
+// Grid / columns
+.footer--desktop .footer-column-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(263px, 1fr));
+  grid-gap: 82px;
+}
+
+.footer--desktop .footer-column {
+  width: 263px;
+  height: auto;
+}
+
+// Widgets
+.footer-widgets {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Dropdown tweaks
+.footer .dropdown {
+  width: 82px;
+}
+
+.footer .dropdown--select {
+  background-color: $c-global-secondary;
+  height: 32px;
+  padding: 0 12px;
+}
+
+.footer .dropdown--arrows {
+  height: 32px;
+  width: 32px;
+}
+
+// Site info
+.footer--desktop .footer-site-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-site-info--links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-site-info--icons {
+  display: flex;
+  gap: 30px;
+
+  @include breakpoint-s {
+    margin-right: #{$s-48}px;
+  }
+}
+
+// Separator
+.footer-separator {
+  border-bottom: 1px solid $c-global-tertiary-1;
+  margin: #{$s-24}px 0;
+}
+
+// Separator mobile tweaks
+.footer--mobile .footer-separator {
+  margin: #{$s-24}px -50px;
+}
+
+// Link tweaks
+.footer-column--link {
+  margin-top: #{$s-16}px;
+
+  a {
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: $c-text-primary-black;
+    border-bottom: 1px solid;
+    padding-bottom: 7px;
+
+    @extend %text-body-medium-regular-placeholder;
+  }
+}
+
+.footer-site-info--link {
+  text-decoration: none;
+
+  @extend %text-links-placeholder;
+}
+
+// Accordion mobile tweaks
+.footer--mobile .accordion {
+  margin: 0 -50px;
+}
