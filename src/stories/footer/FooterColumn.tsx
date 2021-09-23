@@ -1,4 +1,5 @@
 import React from "react";
+import { Links } from "../links/Links";
 
 type FooterColumnProps = {
   title: string;
@@ -12,7 +13,7 @@ export const FooterColumn = ({ title, links }: FooterColumnProps) => {
       <ul>
         {links.map((link) => (
           <li className="footer-column--link">
-            <a href="/">{link}</a>
+            <Links href={"/"} linkText={link} />
           </li>
         ))}
       </ul>

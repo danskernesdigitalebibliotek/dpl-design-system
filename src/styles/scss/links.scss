@@ -1,0 +1,22 @@
+.link-tag {
+  text-decoration: none;
+  color: $c-text-primary-black;
+  display: inline-block;
+
+  @extend %text-body-medium-regular-placeholder;
+}
+
+.link-tag::after {
+  display: block;
+  content: "";
+  border-bottom: solid 1px;
+  transform: scaleX(1);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+  padding-bottom: 7px;
+}
+
+.link-tag:hover::after {
+  transform: scaleX(0);
+  transform-origin: 100% 0%;
+}

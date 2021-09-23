@@ -102,17 +102,6 @@
 // Link tweaks
 .footer-column--link {
   margin-top: #{$s-16}px;
-
-  a {
-    font-size: 16px;
-    line-height: 24px;
-    text-decoration: none;
-    color: $c-text-primary-black;
-    border-bottom: 1px solid;
-    padding-bottom: 7px;
-
-    @extend %text-body-medium-regular-placeholder;
-  }
 }
 
 .footer-site-info--link {
