@@ -343,7 +343,7 @@ code {
   }
 }
 
-.footer-column--link a, .dropdown--option, .accordion--body a,
+.footer-column--link a, .dropdown-option, .accordion-body a,
 .text-body-medium-regular {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
@@ -354,14 +354,14 @@ code {
   color: #484848;
 }
 @media (min-width: 1024px) {
-  .footer-column--link a, .dropdown--option, .accordion--body a,
+  .footer-column--link a, .dropdown-option, .accordion-body a,
 .text-body-medium-regular {
     font-size: 16px;
     line-height: 19px;
   }
 }
 @media (min-width: 1920px) {
-  .footer-column--link a, .dropdown--option, .accordion--body a,
+  .footer-column--link a, .dropdown-option, .accordion-body a,
 .text-body-medium-regular {
     font-size: 18px;
     line-height: 22px;
@@ -389,7 +389,7 @@ code {
   }
 }
 
-.dropdown--select, .btn-primary,
+.dropdown-select, .btn-primary,
 .text-button {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
@@ -401,14 +401,14 @@ code {
   text-transform: uppercase;
 }
 @media (min-width: 1024px) {
-  .dropdown--select, .btn-primary,
+  .dropdown-select, .btn-primary,
 .text-button {
     font-size: 14px;
     line-height: 17px;
   }
 }
 @media (min-width: 1920px) {
-  .dropdown--select, .btn-primary,
+  .dropdown-select, .btn-primary,
 .text-button {
     font-size: 16px;
     line-height: 19px;
@@ -1303,7 +1303,7 @@ code {
   background-color: #eee9e5;
 }
 
-.accordion--button {
+.accordion-button {
   border-width: 0;
   border-color: transparent;
   border-radius: 0;
@@ -1318,14 +1318,7 @@ code {
   border-top: 1px solid #dbdbdb;
 }
 
-.accordion--row:last-child .accordion--button {
-  border-bottom: 1px solid #dbdbdb;
-}
-.accordion--row:last-child .accordion--body {
-  border-bottom: 1px solid #dbdbdb;
-}
-
-.accordion--arrow {
+.accordion-button--arrow {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
@@ -1333,36 +1326,43 @@ code {
           transform: rotateZ(0deg);
 }
 
-.accordion--button[aria-expanded=true] {
+.accordion-button[aria-expanded=true] {
   border-bottom: 1px solid #dbdbdb;
 }
-.accordion--button[aria-expanded=true] .accordion--arrow {
+.accordion-button[aria-expanded=true] .accordion-button--arrow {
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
 }
 
-.accordion--row {
+.accordion-row {
   list-style-type: none;
 }
 
-.accordion--header {
+.accordion-header {
   height: 60px;
 }
 
-.accordion--header button:focus {
+.accordion-header button:focus {
   outline: -webkit-focus-ring-color auto 5px;
 }
 
-.accordion--body {
+.accordion-body {
   display: grid;
 }
-.accordion--body a {
+.accordion-body a {
   line-height: 32px;
   padding-left: 48px;
   text-decoration: none;
 }
-.accordion--body[hidden] {
+.accordion-body[hidden] {
   display: none;
+}
+
+.accordion-row:last-child .accordion-button {
+  border-bottom: 1px solid #dbdbdb;
+}
+.accordion-row:last-child .accordion-body {
+  border-bottom: 1px solid #dbdbdb;
 }
 
 .header {
@@ -1601,7 +1601,7 @@ code {
   text-decoration: inherit;
 }
 
-.dropdown--select {
+.dropdown-select {
   -webkit-appearance: none;
           appearance: none;
   width: 100%;
@@ -1611,7 +1611,7 @@ code {
   background-color: transparent;
 }
 
-.dropdown--option {
+.dropdown-option {
   text-transform: capitalize;
   background-color: #f9f9f9;
   height: 400px;
@@ -1622,7 +1622,7 @@ code {
   position: relative;
 }
 
-.dropdown--arrows {
+.dropdown-arrows {
   pointer-events: none;
   position: absolute;
   right: 0;
@@ -1636,7 +1636,7 @@ code {
   border-left: 1px solid #000;
 }
 
-.dropdown--arrow--bottom {
+.dropdown-arrow--bottom {
   margin-top: 4px;
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
@@ -1691,13 +1691,13 @@ code {
   width: 82px;
 }
 
-.footer .dropdown--select {
+.footer .dropdown-select {
   background-color: #eee9e5;
   height: 32px;
   padding: 0 12px;
 }
 
-.footer .dropdown--arrows {
+.footer .dropdown-arrows {
   height: 32px;
   width: 32px;
 }
@@ -1889,4 +1889,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.d4f23521.chunk.css.map*/
+/*# sourceMappingURL=main.a466d980.chunk.css.map*/
