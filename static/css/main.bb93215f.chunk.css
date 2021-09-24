@@ -343,7 +343,7 @@ code {
   }
 }
 
-.footer-column--link a, .dropdown-option, .accordion-body a,
+.footer-column--link a, .dropdown-option, .accordion-body a, .link-filters-counter, .link-filters-tag,
 .text-body-medium-regular {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
@@ -354,14 +354,14 @@ code {
   color: #484848;
 }
 @media (min-width: 1024px) {
-  .footer-column--link a, .dropdown-option, .accordion-body a,
+  .footer-column--link a, .dropdown-option, .accordion-body a, .link-filters-counter, .link-filters-tag,
 .text-body-medium-regular {
     font-size: 16px;
     line-height: 19px;
   }
 }
 @media (min-width: 1920px) {
-  .footer-column--link a, .dropdown-option, .accordion-body a,
+  .footer-column--link a, .dropdown-option, .accordion-body a, .link-filters-counter, .link-filters-tag,
 .text-body-medium-regular {
     font-size: 18px;
     line-height: 22px;
@@ -483,6 +483,38 @@ code {
     font-size: 14px;
     line-height: 17px;
   }
+}
+
+.link-filters-container {
+  display: flex;
+  justify-content: flex-end;
+  grid-gap: 24px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.link-filters-tag {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  padding-bottom: 2px;
+}
+.link-filters-tag--active {
+  border-bottom: 0;
+}
+
+.link-filters-counter {
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+  top: -8px;
+  padding-left: 8px;
+}
+
+.link-filters-tag:active {
+  border-bottom: 0;
 }
 
 .arrow-hover-right-large {
@@ -1889,4 +1921,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.a466d980.chunk.css.map*/
+/*# sourceMappingURL=main.bb93215f.chunk.css.map*/
