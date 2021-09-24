@@ -6,7 +6,7 @@ import { Links as LinksComp } from "./Links";
 type LinksProps = typeof LinksComp;
 
 export default {
-  title: "DPL Design System / Links",
+  title: "Atoms / Links",
   component: LinksComp,
   decorators: [withDesign],
   argTypes: {

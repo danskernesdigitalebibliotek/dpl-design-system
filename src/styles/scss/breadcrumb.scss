@@ -1,0 +1,18 @@
+.breadcrumb {
+  .arrow-link {
+    text-decoration: none;
+  }
+
+  .text-links {
+    color: $c-text-secondary-gray;
+    margin-bottom: -4px;
+    @extend %text-links-placeholder;
+  }
+
+  .arrow-body {
+    stroke: $c-text-secondary-gray;
+  }
+  .arrow-head {
+    fill: $c-text-secondary-gray;
+  }
+}

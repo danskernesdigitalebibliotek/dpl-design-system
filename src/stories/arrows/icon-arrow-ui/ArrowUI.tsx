@@ -18,10 +18,11 @@ export type IconArrowProps = {
   size: "large" | "small";
   direction: "right" | "left";
   hover: boolean;
+  children?: React.ReactNode;
 };
 
 export const IconArrow = (props: IconArrowProps) => {
-  const { size, direction, hover } = props;
+  const { size, direction, hover, children } = props;
   const isRight = direction === "right";
 
   const getStaticArrow = (): string => {
@@ -50,9 +51,9 @@ export const IconArrow = (props: IconArrowProps) => {
 
   const ArrowComp = getDynamicArrow();
 
-  return props.hover ? (
+  return hover ? (
     <div className={`arrow-hover-${props.direction}-${props.size}`}>
-      <p className="text-header-h1">Text example</p>
+      {children}
       <ArrowComp />
     </div>
   ) : (

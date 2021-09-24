@@ -34,3 +34,7 @@
 @include icon-arrow-animated("right", "small", 2, 60px, left);
 @include icon-arrow-animated("left", "large", 1.333, -50px, right);
 @include icon-arrow-animated("left", "small", 2, -60px, right);
+
+.arrow-link {
+  text-decoration: none;
+}
