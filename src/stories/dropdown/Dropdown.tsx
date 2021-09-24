@@ -13,21 +13,21 @@ type DropdownProps = {
 export const Dropdown = (props: DropdownProps) => {
   return (
     <div className="dropdown">
-      <select className="dropdown--select" aria-label={props.ariaLabel}>
+      <select className="dropdown-select" aria-label={props.ariaLabel}>
         {props.list.map((i) => (
-          <option className="dropdown--option" value={i.title}>
+          <option className="dropdown-option" value={i.title}>
             {i.title}
           </option>
         ))}
       </select>
-      <div className="dropdown--arrows">
+      <div className="dropdown-arrows">
         <img
-          className="dropdown--arrow--top"
+          className="dropdown-arrow--top"
           src="icons/basic/icon-triangle.svg"
           alt=""
         />
         <img
-          className="dropdown--arrow--bottom"
+          className="dropdown-arrow--bottom"
           src="icons/basic/icon-triangle.svg"
           alt=""
         />
