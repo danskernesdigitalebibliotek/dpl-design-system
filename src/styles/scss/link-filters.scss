@@ -1,0 +1,33 @@
+.link-filters-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.link-filters-tag {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  padding-bottom: 2px;
+  @extend %text-body-medium-regular-placeholder;
+
+  &--active {
+    border-bottom: 0;
+  }
+}
+
+.link-filters-counter {
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+  top: -8px;
+  padding-left: 8px;
+  @extend %text-body-medium-regular-placeholder;
+}
+
+.link-filters-tag:active {
+  border-bottom: 0;
+}
