@@ -4,12 +4,6 @@ import "../../styles/css/base.css";
 export const Typography = () => {
   return (
     <div style={{ display: "grid", gridGap: "40px" }}>
-      <pre>
-        <code>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora&family=Noto+Sans+JP:wght@400;500&display=swap');
-        </code>
-      </pre>
       {typographyClasses.map((typography) => (
         <div key={typography.className} className={typography.className}>
           {typography.title}
