@@ -93,14 +93,6 @@ select {
   );
 }
 
-.internal-container {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .internal-container-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
@@ -156,11 +148,6 @@ select {
 
 .internal-spacing-css-inner {
   display: flex;
-}
-
-.internal-breakpoints-container {
-  display: flex;
-  justify-content: center;
 }
 
 .internal-breakpoints-css-inner-prefix {
@@ -487,7 +474,6 @@ code {
 
 .link-filters-container {
   display: flex;
-  justify-content: flex-end;
   grid-gap: 24px;
   gap: 24px;
   flex-wrap: wrap;
@@ -1921,4 +1907,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.bb93215f.chunk.css.map*/
+/*# sourceMappingURL=main.011b562c.chunk.css.map*/
