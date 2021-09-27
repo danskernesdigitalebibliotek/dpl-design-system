@@ -6,7 +6,7 @@ import { Logo as LogoComp } from "./Logo";
 type LogoProps = typeof LogoComp;
 
 export default {
-  title: "DPL Design System / Logo",
+  title: "Atoms / Logo",
   component: LogoComp,
   decorators: [withDesign],
   argTypes: {

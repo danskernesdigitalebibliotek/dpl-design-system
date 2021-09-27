@@ -5,7 +5,7 @@ import { Meta } from "@storybook/react";
 import { Typography } from "./Typography";
 
 export default {
-  title: "DPL Design System / Typography",
+  title: "Atoms / Typography",
   component: Typography,
   decorators: [withDesign],
   parameters: {

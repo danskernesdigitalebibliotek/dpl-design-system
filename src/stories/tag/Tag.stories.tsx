@@ -7,7 +7,7 @@ import { Tag as TagComp } from "./Tag";
 type TagProps = typeof TagComp;
 
 export default {
-  title: "DPL Design System / Tag",
+  title: "Atoms / Tag",
   component: TagComp,
   decorators: [withDesign],
   parameters: {

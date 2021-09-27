@@ -7,7 +7,7 @@ import { Dropdown as DropdownComp } from "./Dropdown";
 type DropdownProps = typeof DropdownComp;
 
 export default {
-  title: "DPL Design System / Dropdown",
+  title: "Components / Dropdown",
   component: DropdownComp,
   decorators: [withDesign],
   parameters: {

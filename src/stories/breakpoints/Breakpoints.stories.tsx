@@ -5,7 +5,7 @@ import { Meta } from "@storybook/react";
 import { Breakpoints } from "./Breakpoints";
 
 export default {
-  title: "DPL Design System / Breakpoints",
+  title: "Atoms / Breakpoints",
   component: Breakpoints,
   decorators: [withDesign],
   parameters: {

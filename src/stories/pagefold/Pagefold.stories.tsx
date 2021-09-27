@@ -6,7 +6,7 @@ import { Pagefold as PagefoldComp } from "./Pagefold";
 type PagefoldProps = typeof PagefoldComp;
 
 export default {
-  title: "DPL Design System / Pagefold",
+  title: "Atoms / Pagefold",
   component: PagefoldComp,
   decorators: [withDesign],
   argTypes: {

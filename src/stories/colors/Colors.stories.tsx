@@ -5,7 +5,7 @@ import { Meta } from "@storybook/react";
 import { Colors } from "./Colors";
 
 export default {
-  title: "DPL Design System / Colors",
+  title: "Atoms / Colors",
   component: Colors,
   decorators: [withDesign],
   parameters: {

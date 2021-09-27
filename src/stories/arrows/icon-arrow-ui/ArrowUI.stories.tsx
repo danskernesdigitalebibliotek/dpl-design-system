@@ -5,7 +5,7 @@ import { StoryBaseType } from "../../../types/StorybookHelpers";
 import { IconArrow as ArrowComp, IconArrowProps } from "./ArrowUI";
 
 const StoryBase: StoryBaseType<IconArrowProps> = {
-  title: "DPL Design System / Arrows / Arrow UI",
+  title: "Atoms / Arrows / Arrow UI",
   component: ArrowComp,
   decorators: [withDesign],
   argTypes: {
