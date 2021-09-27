@@ -29,6 +29,13 @@
   height: 150px;
 }
 
+.internal-colors-code {
+  pre {
+    display: grid;
+    grid-template-columns: min-content;
+  }
+}
+
 // Spacing
 .internal-spacing-container {
   display: flex;

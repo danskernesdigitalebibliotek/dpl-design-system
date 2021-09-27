@@ -2,8 +2,12 @@ $c-global-primary: #f6f5f0;
 $c-global-secondary: #eee9e5;
 $c-global-tertiary-1: #dbdbdb;
 $c-global-tertiary-2: #949494;
-
-$c-identity-primary: #476e57;
+$c-identity-primary: hsl(
+  var(--identity-color-h),
+  var(--identity-color-s),
+  var(--identity-color-l),
+  1
+);
 
 $c-text-primary-white: #fff;
 $c-text-primary-black: #000;
@@ -15,19 +19,18 @@ $c-signal-alert: #d5364a;
 
 // *** CSS variables for identity color tints ***
 :root {
-  --tint-color-h: 145;
-  --tint-color-s: 22%;
-  --tint-color-l: 35%;
-  --tint-color-hsl: var(--tint-color-h), var(--tint-color-s),
-    var(--tint-color-l);
-  --tint-color: hsl(var(--tint-color-hsl));
-  --tint-color-20: hsl(var(--tint-color-hsl), 0.2);
-  --tint-color-40: hsl(var(--tint-color-hsl), 0.4);
-  --tint-color-60: hsl(var(--tint-color-hsl), 0.6);
-  --tint-color-80: hsl(var(--tint-color-hsl), 0.8);
+  --identity-color-h: 145;
+  --identity-color-s: 22%;
+  --identity-color-l: 35%;
+  --identity-color: var(--identity-color-h), var(--identity-color-s),
+    var(--identity-color-l);
+  --tint-color-20: hsl(var(--identity-color), 0.2);
+  --tint-color-40: hsl(var(--identity-color), 0.4);
+  --tint-color-60: hsl(var(--identity-color), 0.6);
+  --tint-color-80: hsl(var(--identity-color), 0.8);
   --tint-color-120: hsl(
-    var(--tint-color-h),
-    calc(var(--tint-color-s) - 1%),
-    calc(var(--tint-color-l) - 8%)
+    var(--identity-color-h),
+    calc(var(--identity-color-s) - 1%),
+    calc(var(--identity-color-l) - 8%)
   );
 }

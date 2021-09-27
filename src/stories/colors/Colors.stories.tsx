@@ -2,12 +2,18 @@ import React from "react";
 import { withDesign } from "storybook-addon-designs";
 import { Meta } from "@storybook/react";
 
-import { Colors } from "./Colors";
+import { Colors, ColorsProps } from "./Colors";
 
 export default {
   title: "DPL Design System / Colors",
   component: Colors,
   decorators: [withDesign],
+  argTypes: {
+    identityColor: {
+      defaultValue: "#476e57",
+      control: { type: "color" },
+    },
+  },
   parameters: {
     design: {
       type: "figma",
@@ -17,4 +23,4 @@ export default {
   },
 } as Meta;
 
-export const Default = () => <Colors />;
+export const Default = (props: ColorsProps) => <Colors {...props} />;
