@@ -5,7 +5,7 @@ import { withDesign } from "storybook-addon-designs";
 import { IconWatch as IconWatchComp } from "./IconWatch";
 
 const StoryBase: Meta = {
-  title: "DPL Design System / Icons",
+  title: "Atoms / Icons",
   component: IconWatchComp,
   decorators: [withDesign],
   parameters: {

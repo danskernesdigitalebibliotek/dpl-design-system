@@ -8,7 +8,7 @@ import { list } from "./accordionList";
 type AccordionProps = typeof AccordionComp;
 
 export default {
-  title: "DPL Design System / Accordion",
+  title: "Components / Accordion",
   component: AccordionComp,
   decorators: [withDesign],
   parameters: {

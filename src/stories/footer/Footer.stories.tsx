@@ -2,11 +2,11 @@ import React from "react";
 import { withDesign } from "storybook-addon-designs";
 import { Meta } from "@storybook/react";
 
-import { Footer } from "./Footer";
+import { Footer as FooterComp } from "./Footer";
 
 export default {
-  title: "DPL Design System / Footer",
-  component: Footer,
+  title: "Components / Footer",
+  component: FooterComp,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -17,4 +17,4 @@ export default {
   },
 } as Meta;
 
-export const Default = () => <Footer />;
+export const Footer = () => <FooterComp />;

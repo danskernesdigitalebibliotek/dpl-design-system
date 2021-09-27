@@ -5,7 +5,7 @@ import { withDesign } from "storybook-addon-designs";
 import { IconSocial as IconSocialComp } from "./IconSocial";
 
 const StoryBase: Meta = {
-  title: "DPL Design System  / Icons",
+  title: "Atoms / Icons",
   component: IconSocialComp,
   decorators: [withDesign],
   parameters: {

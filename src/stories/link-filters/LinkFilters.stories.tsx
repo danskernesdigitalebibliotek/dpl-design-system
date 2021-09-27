@@ -5,7 +5,7 @@ import { Meta } from "@storybook/react";
 import { LinkFilters } from "./LinkFilters";
 
 export default {
-  title: "DPL Design System / Link filters",
+  title: "Atoms / Link filters",
   component: LinkFilters,
   decorators: [withDesign],
   parameters: {

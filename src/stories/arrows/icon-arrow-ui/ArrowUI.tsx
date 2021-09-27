@@ -50,16 +50,12 @@ export const IconArrow = (props: IconArrowProps) => {
 
   const ArrowComp = getDynamicArrow();
 
-  return (
-    <div className="internal-container">
-      {props.hover ? (
-        <div className={`arrow-hover-${props.direction}-${props.size}`}>
-          <p className="text-header-h1">Text example</p>
-          <ArrowComp />
-        </div>
-      ) : (
-        <img src={getStaticArrow()} />
-      )}
+  return props.hover ? (
+    <div className={`arrow-hover-${props.direction}-${props.size}`}>
+      <p className="text-header-h1">Text example</p>
+      <ArrowComp />
     </div>
+  ) : (
+    <img src={getStaticArrow()} />
   );
 };

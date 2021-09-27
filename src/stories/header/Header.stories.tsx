@@ -5,7 +5,7 @@ import { withDesign } from "storybook-addon-designs";
 import { Header as HeaderComp, HeaderProps } from "./Header";
 
 export default {
-  title: "DPL Design System / Header",
+  title: "Components / Header",
   component: HeaderComp,
   decorators: [withDesign],
   argTypes: {

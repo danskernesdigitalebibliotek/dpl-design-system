@@ -6,7 +6,7 @@ import { StoryBaseType } from "../../../types/StorybookHelpers";
 import { IconAccent as IconAccentComp } from "./ArrowAccent";
 
 const StoryBase: Meta = {
-  title: "DPL Design System / Arrows / Arrow Accent",
+  title: "Atoms / Arrows / Arrow Accent",
   component: IconAccentComp,
   decorators: [withDesign],
   parameters: {
