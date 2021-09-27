@@ -4,6 +4,7 @@ import { Accordion } from "../accordion/Accordion";
 import { Dropdown } from "../dropdown/Dropdown";
 import { Logo } from "../logo/Logo";
 import { list } from "../accordion/accordionList";
+import { Links } from "../links/Links";
 import { FooterColumn } from "./FooterColumn";
 
 export const Footer = () => {
@@ -19,7 +20,7 @@ export const Footer = () => {
               non numquam eius modi tempora incidunt ut labore.
             </p>
             <div className="footer-column--link mb-48">
-              <a href="/">Se bibliotekernes åbningstider</a>
+              <Links href={"/"} linkText={"Se bibliotekernes åbningstider"} />
             </div>
           </div>
           <Accordion list={list} />
@@ -96,7 +97,10 @@ export const Footer = () => {
                   quia non numquam eius modi tempora incidunt ut labore.
                 </p>
                 <div className="footer-column--link">
-                  <a href="/">Se bibliotekernes åbningstider</a>
+                  <Links
+                    href={"/"}
+                    linkText={"Se bibliotekernes åbningstider"}
+                  />
                 </div>
               </div>
             </div>
@@ -133,7 +137,7 @@ export const Footer = () => {
                 Man - fre / Kl. 10-16 <br />
               </p>
               <div className="footer-column--link">
-                <a href="/">info@ltk.dk</a>
+                <Links href={"/"} linkText={"info@ltk.dk"} />
               </div>
             </div>
             <FooterColumn
