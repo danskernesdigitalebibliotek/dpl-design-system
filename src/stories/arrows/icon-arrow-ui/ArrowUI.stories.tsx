@@ -10,7 +10,7 @@ const StoryBase: StoryBaseType<IconArrowProps> = {
   decorators: [withDesign],
   argTypes: {
     direction: {
-      defaultValue: "left",
+      defaultValue: "right",
     },
     hover: {
       defaultValue: true,
@@ -23,7 +23,7 @@ const StoryBase: StoryBaseType<IconArrowProps> = {
     design: {
       type: "figma",
       url:
-        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=10%3A395",
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=264%3A3146",
     },
   },
 };

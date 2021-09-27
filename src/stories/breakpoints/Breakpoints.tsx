@@ -3,23 +3,21 @@ import "../../styles/css/base.css";
 
 export const Breakpoints = () => {
   return (
-    <div className="internal-breakpoints-container">
-      <div>
-        <p className="text-body-large">CSS breakpoints / sizes</p>
-        <div className="internal-breakpoints-css-wrapper mt-24">
-          {spaceClasses.map((spaceClass) => (
-            <div className="internal-breakpoints-css-inner">
-              <div className="internal-breakpoints-css-inner-prefix p-8">
-                <pre>
-                  <code>{spaceClass.classPrefix}</code>
-                </pre>
-              </div>
-              <div className="internal-breakpoints-css-inner-property p-8">
-                {spaceClass.classProperty}
-              </div>
+    <div>
+      <p className="text-body-large">CSS breakpoints / sizes</p>
+      <div className="internal-breakpoints-css-wrapper mt-24">
+        {spaceClasses.map((spaceClass) => (
+          <div className="internal-breakpoints-css-inner">
+            <div className="internal-breakpoints-css-inner-prefix p-8">
+              <pre>
+                <code>{spaceClass.classPrefix}</code>
+              </pre>
             </div>
-          ))}
-        </div>
+            <div className="internal-breakpoints-css-inner-property p-8">
+              {spaceClass.classProperty}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
