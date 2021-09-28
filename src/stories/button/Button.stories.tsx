@@ -10,7 +10,7 @@ export default {
   decorators: [withDesign],
   argTypes: {
     label: {
-      defaultValue: "se hele kalenderen",
+      defaultValue: "Se hele kalenderen",
     },
     disabled: {
       defaultValue: false,

@@ -106,18 +106,129 @@ import { Meta } from "@storybook/addon-docs";
   
 `}</style>
 
-# DPL Design System in Storybook
+# DPL Design System i Storybook
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+<div className="subheading">Hvad er DPL Design System</div>
 
-Browse example stories now by navigating to them in the sidebar.
-View their code in the `src/stories` directory to learn how they work.
-We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+DPL Design System er et bibliotek af UI komponenter der skal danne rammer for basis systemet til "Danmarks Biblioteker"/"Det Digitale Folkebibliotek"??
+Designet er implementeret med Storybook/React og bliver outputtet som HTML markup med CSS-klasser via et addon i Storybook.
+Kodebasen følger navngivningen fra designet i Figma så tæt som muligt for at skabe konsistens og sammenhæng mellem design og implementation.
 
-<div className="subheading">Configure</div>
+<!-- For at demonstrere hvordan komponenterne ser ud med markup og css-klasser -->
 
-<div className="tip-wrapper">
-  <span className="tip">Tip</span>Edit the Markdown in{" "}
-  <code>src/stories/Introduction.stories.mdx</code>
-</div>
+<div className="subheading">Hvad er storybook</div>
+
+Storybook er et open source værktøj til at bygge UI komponenter og sider i isolation fra applikationens forretningslogik, data og kontekst. <br/>
+Med Storybook er det nemt at dokumentere og genbruge komponenter samt at teste dem visuelt, hvilket også er med til at forebygge fejl. <br/>
+Samtidig understøtter Storybook at arbejde [**component-driven**](https://componentdriven.org) og agilt.
+
+Det er muligt at tilføje udvidelser/addons til Storybook så man kan tilpasse den efter behov.
+
+<div className="subheading">Sådan bruges Storybook</div>
+
+Storybooks interface er simpelt og intuitivt at bruge. Du kan browse projektets `stories` ved at navigere mellem dem i sidebaren. <br/>
+Projektets `stories` er delt op i "Components" og "Atoms", hvor Atoms er mindre byggeklodser der bliver brugt til at sammensætte større Components. <br/>
+Hvert Component/Atom har en tilhørende `.stories` fil, som bruges til at tilføje komponentet til Storybooks interface. Filerne findes i projektets `src/stories` mappe.
+
+<div className="subheading">Addons</div>
+
+Storybook kommer ud af boksen med nogle forudinstallerede [**addons**](https://storybook.js.org/addons/tag/essentials/), som bl.a. er nyttige ift. udvikling og test af funktionalitet, samt dokumentation af komponenterne.
+
+- [**Controls**](https://storybook.js.org/addons/@storybook/addon-controls/)
+- [**Actions**](https://storybook.js.org/addons/@storybook/addon-actions/)
+- [**Docs**](https://storybook.js.org/addons/@storybook/addon-docs/)
+- [**Viewport**](https://storybook.js.org/addons/@storybook/addon-viewport/)
+- [**Backgrounds**](https://storybook.js.org/addons/@storybook/addon-backgrounds/)
+- [**Toolbars**](https://storybook.js.org/addons/@storybook/addon-toolbars/)
+- [**Measure**](https://storybook.js.org/addons/@storybook/addon-measure/)
+- [**Outline**](https://storybook.js.org/addons/@storybook/addon-outline/)
+
+Det er muligt at tilføje mange andre addons til projektet som kan udvide funktionalitet og brugeroplevelse. <br/>
+I dette projekt er der tilføjet ekstra addons som:
+
+- [**HTML / storybook-addon-html**](https://storybook.js.org/addons/@whitespace/storybook-addon-html/): <br/>
+  Dette addon bliver brugt til at vise HTML markup for hver story. Da vi udvikler i React, er der brug for at kunne vise komponenterne med HTML markup og
+  de tilhørende css-klasser, for at gøre det nemt for udviklere der i fremtiden skal bruge koden til at implementere det i andre systemer.
+  Markuppen ændrer sig desuden automatisk ift. de controls der bliver sat/valgt. <br/>
+  Addon'et er til at finde under "HTML" fanen i addon panelet nederst på hver story/komponent.
+
+- [**Designs / storybook-addon-designs**](https://storybook.js.org/addons/storybook-addon-designs/): <br/>
+  Dette addon bliver brugt til at embedde Figma for at opnå et bedre design-udvikling-workflow. <br/>
+  Addon'et er til at finde under "Design" fanen i addon panelet nederst på hver story/komponent.
+
+- [**A11Y**](https://storybook.js.org/addons/@storybook/addon-a11y/):<br/>
+  Dette addon bliver brugt til at tjekke/teste "accessibility" for hver komponent.
+
+Se hvilke addons der bliver brugt til projektet i `storybook/main.js` filen.
+
+<div className="subheading">Vigtigt at vide</div>
+
+**Internal classes** <br/>
+For at vise nogle af komponenterne (fx Colors, Spacing) på en mere præsentabel måde, gør vi brug af nogle "internal" classes som er til at finde i filen `styles/internal.scss`.
+Alle css-klasser med "internal" foran skal derfor ignoreres i HTML markuppen.
+
+<br />
+<br />
+
+---
+
+<br />
+
+# DPL Design System in Storybook (English)
+
+<div className="subheading">What is DPL Design System</div>
+
+DPL Design System is a library of UI components that should be used as a common base system for "Danmarks Biblioteker" / "Det Digitale Folkebibliotek" ??
+The design is implemented via Storybook/React and is output with HTML markup and css-classes through an addon in Storybook. <br/>
+The codebase follows the naming that designers have used in Figma closely to ensure consistency.
+
+<div className="subheading">What is storybook</div>
+
+Storybook is an open source tool for building UI components and pages in isolation from your app's business logic, data, and context. <br/>
+Storybook helps you document components for reuse and automatically visually test your components to prevent bugs. <br/>
+It promotes the [**component-driven**](https://componentdriven.org) process and agile development.
+
+It is possible to extend Storybook with an ecosystem of addons that help you do things like fine-tune responsive layouts or verify accessibility.
+
+<div className="subheading">How to use</div>
+
+The Storybook interface is simple and intuitive to use. Browse the project's stories now by navigating to them in the sidebar. <br/>
+The stories are divided into "Components" and "Atoms" where atoms are the smaller building blocks that can be used to build bigger components. <br/>
+Each Atom/Component has a corresponding `.stories` file. View their code in the `src/stories` directory to learn how they work. <br/>
+The `stories` file is used to add the component to the Storybook interface.
+
+<div className="subheading">Addons</div>
+
+Storybook ships with some essential pre-installed [**addons**](https://storybook.js.org/addons/tag/essentials/) to power the core Storybook experience.
+
+- [**Controls**](https://storybook.js.org/addons/@storybook/addon-controls/)
+- [**Actions**](https://storybook.js.org/addons/@storybook/addon-actions/)
+- [**Docs**](https://storybook.js.org/addons/@storybook/addon-docs/)
+- [**Viewport**](https://storybook.js.org/addons/@storybook/addon-viewport/)
+- [**Backgrounds**](https://storybook.js.org/addons/@storybook/addon-backgrounds/)
+- [**Toolbars**](https://storybook.js.org/addons/@storybook/addon-toolbars/)
+- [**Measure**](https://storybook.js.org/addons/@storybook/addon-measure/)
+- [**Outline**](https://storybook.js.org/addons/@storybook/addon-outline/)
+
+There are many other helpful addons to customise the usage and experience.
+
+Additional addons used for this project:
+
+- [**HTML / storybook-addon-html**](https://storybook.js.org/addons/@whitespace/storybook-addon-html/): <br/>
+  This addon is used to display compiled HTML markup for each story and make it easier for developers to grab the code.
+  Because we are developing with React, it is necessary to be able to show the HTML markup with the css-classes to make it easier for other developers that will implement it in the future.
+  If a story has controls the HTML markup changes according to the controls that are set.
+
+- [**Designs / storybook-addon-designs**](https://storybook.js.org/addons/storybook-addon-designs/): <br/>
+  This addon is used to embed Figma in the addon panel for a better design-development workflow.
+
+- [**A11Y**](https://storybook.js.org/addons/@storybook/addon-a11y/): <br/>
+  This addon is used to check the accessibility of the components.
+
+All the addons can be found in `storybook/main.js` directory.
+
+<div className="subheading">Important to notice</div>
+
+**Internal classes** <br/>
+To display some of the components (fx Colors, Spacing) in a more presentable way, we are using some "internal" css-classes which can be found in the `styles/internal.scss` file.
+All css-classes with "internal" in the front should therefore be ignored in the HTML markup.
