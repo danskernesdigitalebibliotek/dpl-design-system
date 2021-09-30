@@ -2,11 +2,13 @@ name: Deployment
 
 on:
   push:
+    tags:
+      - '*'
     branches:
       - main
 
 jobs:
-  css_stylelint:
+  deployment:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,5 +16,22 @@ jobs:
         with:
           node-version: "16"
       - run: npm ci
-      - run: npm run css:build
-      - run: ./deploy.sh
+
+      - name: Building
+        run: npm run css:build
+
+      - name: Bundling assets
+        run: ./bundle.sh
+
+      - name: Release with tag
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: dist.zip
+
+      - name: Release with latest
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/heads/main')
+        with:
+          files: dist.zip
+          name: latest
