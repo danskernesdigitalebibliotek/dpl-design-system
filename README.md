@@ -1,6 +1,6 @@
 # DPL Design System
 
-DPL Design System is a library of UI components that should be used as a common base system for "Danmarks Biblioteker" / "Det Digitale Folkebibliotek" ?? The design is implemented with [Storybook](https://storybook.js.org/docs/react/get-started/introduction) / [React](https://reactjs.org/) and is output with HTML markup and css-classes through an addon in Storybook.
+DPL Design System is a library of UI components that should be used as a common base system for "Danmarks Biblioteker" / "Det Digitale Folkebibliotek". The design is implemented with [Storybook](https://storybook.js.org/docs/react/get-started/introduction) / [React](https://reactjs.org/) and is output with HTML markup and css-classes through an addon in Storybook.
 
 The codebase follows the naming that designers have used in Figma closely to ensure consistency.
 
@@ -22,6 +22,14 @@ Use the node package manager to install project dependencies:
 ```bash
 npm install
 ```
+
+## Usage
+
+You can download a `dist.zip` file with `latest` assets (or different tags) under "Releases", and unzip it somewhere within the web root of your project. The assets consist of javascript files, css styles and icons. You can find the html output for a given story under the HTML tab inside storybook.
+
+## Deployment
+
+The latest release is getting rebuild on merge to the main branch, and the tag release points to specific commit.
 
 ## Storybook
 
