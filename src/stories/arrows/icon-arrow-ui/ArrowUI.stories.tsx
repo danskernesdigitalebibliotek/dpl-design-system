@@ -30,4 +30,8 @@ const StoryBase: StoryBaseType<IconArrowProps> = {
 
 export default StoryBase;
 
-export const ArrowUI = (props: IconArrowProps) => <ArrowComp {...props} />;
+export const ArrowUI = (props: IconArrowProps) => (
+  <ArrowComp {...props}>
+    <div className="internal-arrow-box" />
+  </ArrowComp>
+);
