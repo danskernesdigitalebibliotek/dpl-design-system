@@ -194,6 +194,13 @@ code {
   flex-direction: column;
 }
 
+.internal-arrow-box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+  margin: 10px 0;
+}
+
 .text-header-h1 {
   font-family: "Lora", serif;
   font-size: 32px;
@@ -407,7 +414,7 @@ code {
   }
 }
 
-.footer-site-info--link,
+.breadcrumb .text-links, .footer-site-info--link,
 .text-links {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
@@ -415,18 +422,17 @@ code {
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  text-decoration: underline;
-  color: #484848;
+  color: #000;
 }
 @media (min-width: 1024px) {
-  .footer-site-info--link,
+  .breadcrumb .text-links, .footer-site-info--link,
 .text-links {
     font-size: 14px;
     line-height: 17px;
   }
 }
 @media (min-width: 1920px) {
-  .footer-site-info--link,
+  .breadcrumb .text-links, .footer-site-info--link,
 .text-links {
     font-size: 16px;
     line-height: 19px;
@@ -649,6 +655,10 @@ code {
   transition: 0.6s;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.arrow-link {
+  text-decoration: none;
 }
 
 .btn-icon {
@@ -1799,6 +1809,20 @@ code {
   margin: 0 -50px;
 }
 
+.breadcrumb .arrow-link {
+  text-decoration: none;
+}
+.breadcrumb .text-links {
+  color: #484848;
+  margin-bottom: -4px;
+}
+.breadcrumb .arrow-body {
+  stroke: #484848;
+}
+.breadcrumb .arrow-head {
+  fill: #484848;
+}
+
 .bg-global-primary {
   background-color: #f6f5f0;
 }
@@ -1938,4 +1962,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.5103cf47.chunk.css.map*/
+/*# sourceMappingURL=main.535ecae8.chunk.css.map*/
