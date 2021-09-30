@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import "../../styles/css/base.css";
+import "../../../styles/css/base.css";
 
-export type ColorsProps = {
+export type IdentityColorProps = {
   identityColor: string;
 };
-export const Colors = ({ identityColor }: ColorsProps) => {
+export const IdentityColor = ({ identityColor }: IdentityColorProps) => {
   useEffect(() => {
     const { h, s, l } = hexToHSL(identityColor);
     document.documentElement.style.setProperty("--identity-color-h", `${h}`);
@@ -14,29 +14,6 @@ export const Colors = ({ identityColor }: ColorsProps) => {
 
   return (
     <div>
-      <div className="internal-colors-code">
-        <p>
-          To be able to change the primary identity color + tones, you will have
-          to set 3 variables in the <code>:root</code> element. With javascript,
-          you can achieve this by running the following commands (remember to
-          replace the <code>h</code>, <code>s</code> and <code>l</code> value):
-        </p>
-        <pre>
-          <code>
-            document.documentElement.style.setProperty("--identity-color-h",
-            [h]);
-          </code>
-          <code>
-            document.documentElement.style.setProperty("--identity-color-s",
-            [s]);
-          </code>
-          <code>
-            document.documentElement.style.setProperty("--identity-color-l",
-            [l]);
-          </code>
-        </pre>
-      </div>
-
       {colorClasses.map((color) => (
         <div className="internal-colors-container">
           <h1 className="text-header-h3">{color.colorTitle}</h1>
@@ -57,6 +34,45 @@ export const Colors = ({ identityColor }: ColorsProps) => {
           </div>
         </div>
       ))}
+
+      <div className="internal-colors-code">
+        <p className="text-body-medium-regular">
+          Til at generere identitetsfarven/tonerne, er der brugt
+          <code>HSL</code> (Hue, Saturation, Lightness) farve værdier. <br />
+          For at ændre identitetsfarven/tonerne er det nødvendigt at sætte 3
+          variabler i <code>:root</code> elementet, som svarer til de 3 værdier
+          i <code>HSL</code>. <br />
+          Med javascript er det muligt at tilføje følgende linjer kode for at
+          ændre værdierne (husk at udskift <code>[h]</code>, <code>[s]</code>,
+          og <code>[l]</code>):
+        </p>
+        {/* <p className="mt-24">
+          To be able to change the primary identity color + tones, you will have
+          to set 3 variables in the <code>:root</code> element. With javascript,
+          you can achieve this by running the following commands (remember to
+          replace the <code>h</code>, <code>s</code> and <code>l</code> value):
+        </p> */}
+        <pre>
+          <code>
+            document.documentElement.style.setProperty("--identity-color-h",
+            [h]);
+          </code>
+          <code>
+            document.documentElement.style.setProperty("--identity-color-s",
+            [s]);
+          </code>
+          <code>
+            document.documentElement.style.setProperty("--identity-color-l",
+            [l]);
+          </code>
+        </pre>
+        <p className="text-body-medium-regular mt-24">
+          I addon panelet kan du under "Controls" skifte farve med farvehjulet
+          og se de forskellige toner blive genereret med det samme. Det er dog
+          kun til visuelt brug og ændrer ikke noget i den bagvedliggende kode.
+          <br />
+        </p>
+      </div>
     </div>
   );
 };
@@ -117,23 +133,6 @@ type ColorClasses = {
 }[];
 const colorClasses: ColorClasses = [
   {
-    colorTitle: "Globale farver",
-    colorItems: [
-      {
-        className: "bg-global-primary",
-      },
-      {
-        className: "bg-global-secondary",
-      },
-      {
-        className: "bg-global-tertiary-1",
-      },
-      {
-        className: "bg-global-tertiary-2",
-      },
-    ],
-  },
-  {
     colorTitle: "Identitetsfarver",
     colorItems: [
       {
@@ -158,37 +157,6 @@ const colorClasses: ColorClasses = [
       },
       {
         className: "bg-identity-tint-20",
-      },
-    ],
-  },
-  {
-    colorTitle: "Tekst farver",
-    colorItems: [
-      {
-        className: "color-primary-white",
-        classNameBg: "bg-color-primary-white",
-      },
-      {
-        className: "color-primary-black",
-        classNameBg: "bg-color-primary-black",
-      },
-      {
-        className: "color-secondary-gray",
-        classNameBg: "bg-color-secondary-gray",
-      },
-    ],
-  },
-  {
-    colorTitle: "Signal farver",
-    colorItems: [
-      {
-        className: "bg-signal-success",
-      },
-      {
-        className: "bg-signal-aware",
-      },
-      {
-        className: "bg-signal-alert",
       },
     ],
   },

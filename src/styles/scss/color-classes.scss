@@ -18,15 +18,19 @@
 
 // Border
 .border-global-primary {
-  border-color: $c-global-primary;
+  border: 1px solid $c-global-primary;
 }
 
 .border-global-secondary {
-  border-color: $c-global-secondary;
+  border: 1px solid $c-global-secondary;
 }
 
-.border-global-tertiary {
-  border-color: $c-global-tertiary-1;
+.border-global-tertiary-1 {
+  border: 1px solid $c-global-tertiary-1;
+}
+
+.border-global-tertiary-2 {
+  border: 1px solid $c-global-tertiary-2;
 }
 
 // *** Identity colors ***
@@ -37,12 +41,12 @@
 
 // Border
 .border-identity-primary {
-  border-color: $c-identity-primary;
+  border: 1px solid $c-identity-primary;
 }
 
 // Color
 .color-identity-primary {
-  border-color: $c-identity-primary;
+  color: $c-identity-primary;
 }
 
 // *** Identity color tints ***
@@ -81,6 +85,7 @@
   color: $c-text-secondary-gray;
 }
 
+// Only used internally for bg-color in Colors comp.
 .bg-color-primary-white {
   background-color: $c-text-primary-white;
 }
@@ -107,15 +112,15 @@
 
 // Border
 .border-signal-success {
-  border-color: $c-signal-success;
+  border: 1px solid $c-signal-success;
 }
 
 .border-signal-aware {
-  border-color: $c-signal-aware;
+  border: 1px solid $c-signal-aware;
 }
 
 .border-signal-alert {
-  border-color: $c-signal-alert;
+  border: 1px solid $c-signal-alert;
 }
 
 // Color
@@ -128,5 +133,3 @@
 .color-signal-alert {
   color: $c-signal-alert;
 }
-
-// Hover colors ??
