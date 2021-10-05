@@ -26,6 +26,13 @@ $pagefold-map: (
       100% 100%,
       100% 0
     );
+    -webkit-clip-path: polygon(
+      #{$triangle-width}px 0,
+      0 #{$triangle-width}px,
+      0 100%,
+      100% 100%,
+      100% 0
+    );
   }
 
   .pagefold-triangle-#{$size} {

@@ -20,7 +20,7 @@
   }
 
   // Pagefold tweaks
-  .pagefold-parent-medium {
+  .pagefold-parent-small {
     width: 100vw;
     height: auto;
   }
@@ -76,15 +76,30 @@
 
 .footer-site-info--links {
   display: flex;
-  gap: 24px;
+
+  li {
+    padding-bottom: 16px;
+  }
+
+  @include breakpoint-s {
+    li {
+      padding-bottom: 0;
+    }
+    a {
+      padding-right: 24px;
+    }
+
+    a:last-child {
+      padding-right: 0;
+    }
+  }
 }
 
 .footer-site-info--icons {
   display: flex;
-  gap: 30px;
 
-  @include breakpoint-s {
-    margin-right: #{$s-48}px;
+  a {
+    padding-right: 24px;
   }
 }
 
@@ -108,6 +123,11 @@
   text-decoration: none;
 
   @extend %text-links-placeholder;
+}
+
+.footer-column--phone {
+  color: $c-text-primary-black;
+  text-decoration: none;
 }
 
 // Accordion mobile tweaks
