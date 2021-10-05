@@ -31,6 +31,12 @@ You can download a `dist.zip` file with `latest` assets (or different tags) unde
 
 The latest release is getting rebuild on merge to the main branch, and the tag release points to specific commit.
 
+Run the following to create a tag and push a release:
+
+```bash
+git tag -a v*.*.* && git push origin v*.*.*
+```
+
 ## Storybook
 
 Spin up storybook by running this command in the terminal:
