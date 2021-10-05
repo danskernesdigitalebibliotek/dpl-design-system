@@ -2,18 +2,12 @@ import React from "react";
 import { withDesign } from "storybook-addon-designs";
 import { Meta } from "@storybook/react";
 
-import { Colors, ColorsProps } from "./Colors";
+import { Colors as ColorsComp } from "./Colors";
 
 export default {
-  title: "Atoms / Colors",
-  component: Colors,
+  title: "Atoms / Colors / Colors",
+  component: ColorsComp,
   decorators: [withDesign],
-  argTypes: {
-    identityColor: {
-      defaultValue: "#476e57",
-      control: { type: "color" },
-    },
-  },
   parameters: {
     design: {
       type: "figma",
@@ -23,4 +17,4 @@ export default {
   },
 } as Meta;
 
-export const Default = (props: ColorsProps) => <Colors {...props} />;
+export const Colors = () => <ColorsComp />;

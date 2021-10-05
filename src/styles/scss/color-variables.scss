@@ -1,3 +1,4 @@
+// Global colors
 $c-global-primary: #f6f5f0;
 $c-global-secondary: #eee9e5;
 $c-global-tertiary-1: #dbdbdb;
@@ -19,6 +20,7 @@ $c-signal-alert: #d5364a;
 
 // *** CSS variables for identity color tints ***
 :root {
+  // Identity color tones
   --identity-color-h: 145;
   --identity-color-s: 22%;
   --identity-color-l: 35%;
@@ -33,4 +35,16 @@ $c-signal-alert: #d5364a;
     calc(var(--identity-color-s) - 1%),
     calc(var(--identity-color-l) - 8%)
   );
+
+  // Global colors
+  --c-global-primary: #f6f5f0;
+  --c-global-secondary: #eee9e5;
+  --c-global-tertiary-1: #dbdbdb;
+  --c-global-tertiary-2: #949494;
+  --c-text-primary-white: #fff;
+  --c-text-primary-black: #000;
+  --c-text-secondary-gray: #484848;
+  --c-signal-success: #3aaa36;
+  --c-signal-aware: #f7bf42;
+  --c-signal-alert: #d5364a;
 }

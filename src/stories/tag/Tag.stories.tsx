@@ -16,6 +16,7 @@ export default {
       url:
         "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=836%3A5757",
     },
+    layout: "centered",
   },
 };
 
