@@ -36,5 +36,5 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: true
-          title: "Latest"
+          title: "Main"
           files: dist.zip
