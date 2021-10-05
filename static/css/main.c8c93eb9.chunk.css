@@ -90,6 +90,16 @@ select {
     calc(var(--identity-color-s) - 1%),
     calc(var(--identity-color-l) - 8%)
   );
+  --c-global-primary: #f6f5f0;
+  --c-global-secondary: #eee9e5;
+  --c-global-tertiary-1: #dbdbdb;
+  --c-global-tertiary-2: #949494;
+  --c-text-primary-white: #fff;
+  --c-text-primary-black: #000;
+  --c-text-secondary-gray: #484848;
+  --c-signal-success: #3aaa36;
+  --c-signal-aware: #f7bf42;
+  --c-signal-alert: #d5364a;
 }
 
 .internal-container-grid {
@@ -1840,15 +1850,19 @@ code {
 }
 
 .border-global-primary {
-  border-color: #f6f5f0;
+  border: 1px solid #f6f5f0;
 }
 
 .border-global-secondary {
-  border-color: #eee9e5;
+  border: 1px solid #eee9e5;
 }
 
-.border-global-tertiary {
-  border-color: #dbdbdb;
+.border-global-tertiary-1 {
+  border: 1px solid #dbdbdb;
+}
+
+.border-global-tertiary-2 {
+  border: 1px solid #949494;
 }
 
 .bg-identity-primary {
@@ -1857,13 +1871,13 @@ code {
 }
 
 .border-identity-primary {
-  border-color: hsl(145, 22%, 35%, 1);
-  border-color: hsl(var(--identity-color-h), var(--identity-color-s), var(--identity-color-l), 1);
+  border: 1px solid hsl(145, 22%, 35%, 1);
+  border: 1px solid hsl(var(--identity-color-h), var(--identity-color-s), var(--identity-color-l), 1);
 }
 
 .color-identity-primary {
-  border-color: hsl(145, 22%, 35%, 1);
-  border-color: hsl(var(--identity-color-h), var(--identity-color-s), var(--identity-color-l), 1);
+  color: hsl(145, 22%, 35%, 1);
+  color: hsl(var(--identity-color-h), var(--identity-color-s), var(--identity-color-l), 1);
 }
 
 .bg-identity-tint-20 {
@@ -1936,15 +1950,15 @@ code {
 }
 
 .border-signal-success {
-  border-color: #3aaa36;
+  border: 1px solid #3aaa36;
 }
 
 .border-signal-aware {
-  border-color: #f7bf42;
+  border: 1px solid #f7bf42;
 }
 
 .border-signal-alert {
-  border-color: #d5364a;
+  border: 1px solid #d5364a;
 }
 
 .color-signal-success {
@@ -1962,4 +1976,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.535ecae8.chunk.css.map*/
+/*# sourceMappingURL=main.c8c93eb9.chunk.css.map*/
