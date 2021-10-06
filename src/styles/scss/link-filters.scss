@@ -1,7 +1,15 @@
 .link-filters-container {
   display: flex;
-  gap: 24px;
   flex-wrap: wrap;
+}
+
+.link-filters-tag-wrapper {
+  padding-right: 24px;
+  padding-bottom: 12px;
+}
+.link-filters-tag-wrapper:last-child {
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
 .link-filters-tag {

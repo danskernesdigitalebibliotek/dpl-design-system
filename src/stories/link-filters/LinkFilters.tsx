@@ -4,7 +4,7 @@ export const LinkFilters = () => {
   return (
     <div className="link-filters-container">
       {list.map((item) => (
-        <div>
+        <div className="link-filters-tag-wrapper">
           <a
             href={item.href}
             className={

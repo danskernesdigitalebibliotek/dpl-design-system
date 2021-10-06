@@ -8,5 +8,6 @@
         "ignore": ["attribute", "class", "id"]
       }
     ],
+    "property-no-vendor-prefix": null   
   }
 }

@@ -12,7 +12,7 @@ export const Footer = () => {
     <div className="footer">
       {/* Footer mobile */}
       <div className="footer--mobile">
-        <Pagefold inherit={true} container={true} size={"medium"}>
+        <Pagefold inherit={true} container={true} size="small">
           <div>
             <h4 className="text-header-h4 mb-16">Åbningstider</h4>
             <p className="text-body-medium-regular mb-24">
@@ -87,7 +87,7 @@ export const Footer = () => {
 
       {/* Footer tablet/desktop */}
       <div className="footer--desktop">
-        <Pagefold inherit={true} container={true} size={"medium"}>
+        <Pagefold inherit={true} container={true} size="medium">
           <div className="footer-column-wrapper">
             <div className="footer-column">
               <h4 className="text-header-h4 mb-16">Åbningstider</h4>
@@ -133,7 +133,10 @@ export const Footer = () => {
                 Lyngby Hovedgade 28 <br />
                 2800 Kgs. Lyngby <br />
                 <br />
-                +45 45 97 37 00 <br />
+                <a className="footer-column--phone" href="tel:4545973700">
+                  +45 45 97 37 00
+                </a>
+                <br />
                 Man - fre / Kl. 10-16 <br />
               </p>
               <div className="footer-column--link">
