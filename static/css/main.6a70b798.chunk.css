@@ -1745,7 +1745,8 @@ code {
     display: block;
   }
 }
-.footer .pagefold-parent-small {
+.footer .pagefold-parent-small,
+.footer .pagefold-parent-medium {
   width: 100vw;
   height: auto;
 }
@@ -2002,4 +2003,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.5cbffd58.chunk.css.map*/
+/*# sourceMappingURL=main.6a70b798.chunk.css.map*/
