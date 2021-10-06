@@ -522,9 +522,17 @@ code {
 
 .link-filters-container {
   display: flex;
-  grid-gap: 24px;
-  gap: 24px;
   flex-wrap: wrap;
+}
+
+.link-filters-tag-wrapper {
+  padding-right: 24px;
+  padding-bottom: 12px;
+}
+
+.link-filters-tag-wrapper:last-child {
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
 .link-filters-tag {
@@ -687,6 +695,7 @@ code {
   justify-content: center;
   padding: 0 26px;
   background-color: transparent;
+  color: #000;
   border-radius: 0;
   border: 1px solid #000;
   cursor: pointer;
@@ -1293,8 +1302,8 @@ code {
   width: 16px;
   height: 16px;
   position: relative;
+  clip-path: polygon(16px 0, 0 16px, 0 100%, 100% 100%, 100% 0);
   -webkit-clip-path: polygon(16px 0, 0 16px, 0 100%, 100% 100%, 100% 0);
-          clip-path: polygon(16px 0, 0 16px, 0 100%, 100% 100%, 100% 0);
 }
 
 .pagefold-triangle-small {
@@ -1315,8 +1324,8 @@ code {
   width: 24px;
   height: 24px;
   position: relative;
+  clip-path: polygon(24px 0, 0 24px, 0 100%, 100% 100%, 100% 0);
   -webkit-clip-path: polygon(24px 0, 0 24px, 0 100%, 100% 100%, 100% 0);
-          clip-path: polygon(24px 0, 0 24px, 0 100%, 100% 100%, 100% 0);
 }
 
 .pagefold-triangle-medium {
@@ -1337,8 +1346,8 @@ code {
   width: 38px;
   height: 38px;
   position: relative;
+  clip-path: polygon(38px 0, 0 38px, 0 100%, 100% 100%, 100% 0);
   -webkit-clip-path: polygon(38px 0, 0 38px, 0 100%, 100% 100%, 100% 0);
-          clip-path: polygon(38px 0, 0 38px, 0 100%, 100% 100%, 100% 0);
 }
 
 .pagefold-triangle-large {
@@ -1359,8 +1368,8 @@ code {
   width: 56px;
   height: 56px;
   position: relative;
+  clip-path: polygon(56px 0, 0 56px, 0 100%, 100% 100%, 100% 0);
   -webkit-clip-path: polygon(56px 0, 0 56px, 0 100%, 100% 100%, 100% 0);
-          clip-path: polygon(56px 0, 0 56px, 0 100%, 100% 100%, 100% 0);
 }
 
 .pagefold-triangle-xlarge {
@@ -1378,6 +1387,7 @@ code {
 }
 
 .accordion-button {
+  color: #000;
   border-width: 0;
   border-color: transparent;
   border-radius: 0;
@@ -1676,13 +1686,16 @@ code {
 }
 
 .dropdown-select {
+  appearance: none;
   -webkit-appearance: none;
-          appearance: none;
   width: 100%;
   height: 50px;
   padding: 0 20px;
   cursor: pointer;
   background-color: transparent;
+  color: #000;
+  border-radius: 0;
+  border: 1px solid #000;
 }
 
 .dropdown-option {
@@ -1732,7 +1745,7 @@ code {
     display: block;
   }
 }
-.footer .pagefold-parent-medium {
+.footer .pagefold-parent-small {
   width: 100vw;
   height: auto;
 }
@@ -1783,19 +1796,27 @@ code {
 
 .footer-site-info--links {
   display: flex;
-  grid-gap: 24px;
-  gap: 24px;
+}
+.footer-site-info--links li {
+  padding-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .footer-site-info--links li {
+    padding-bottom: 0;
+  }
+  .footer-site-info--links a {
+    padding-right: 24px;
+  }
+  .footer-site-info--links a:last-child {
+    padding-right: 0;
+  }
 }
 
 .footer-site-info--icons {
   display: flex;
-  grid-gap: 30px;
-  gap: 30px;
 }
-@media (min-width: 768px) {
-  .footer-site-info--icons {
-    margin-right: 48px;
-  }
+.footer-site-info--icons a {
+  padding-right: 24px;
 }
 
 .footer-separator {
@@ -1812,6 +1833,11 @@ code {
 }
 
 .footer-site-info--link {
+  text-decoration: none;
+}
+
+.footer-column--phone {
+  color: #000;
   text-decoration: none;
 }
 
@@ -1976,4 +2002,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.c8c93eb9.chunk.css.map*/
+/*# sourceMappingURL=main.5cbffd58.chunk.css.map*/
