@@ -352,7 +352,7 @@ code {
   }
 }
 
-.dropdown-option, .accordion-body a, .link-filters-counter, .link-filters-tag, .link-tag,
+.dropdown-option, .header-menu--search--input, .accordion-body a, .link-filters-counter, .link-filters-tag, .link-tag,
 .text-body-medium-regular {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
@@ -363,14 +363,14 @@ code {
   color: #484848;
 }
 @media (min-width: 1024px) {
-  .dropdown-option, .accordion-body a, .link-filters-counter, .link-filters-tag, .link-tag,
+  .dropdown-option, .header-menu--search--input, .accordion-body a, .link-filters-counter, .link-filters-tag, .link-tag,
 .text-body-medium-regular {
     font-size: 16px;
     line-height: 19px;
   }
 }
 @media (min-width: 1920px) {
-  .dropdown-option, .accordion-body a, .link-filters-counter, .link-filters-tag, .link-tag,
+  .dropdown-option, .header-menu--search--input, .accordion-body a, .link-filters-counter, .link-filters-tag, .link-tag,
 .text-body-medium-regular {
     font-size: 18px;
     line-height: 22px;
@@ -1594,6 +1594,7 @@ code {
   padding: 0 24px;
   border: 0 solid transparent;
   background-color: transparent;
+  font-size: 16px;
 }
 .header-menu--search--input ::-webkit-input-placeholder {
   color: #484848;
@@ -2003,4 +2004,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.6a70b798.chunk.css.map*/
+/*# sourceMappingURL=main.7c3a0c6f.chunk.css.map*/
