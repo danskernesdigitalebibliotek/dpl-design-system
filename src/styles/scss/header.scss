@@ -137,6 +137,8 @@
   padding: 0 24px;
   border: 0 solid transparent;
   background-color: transparent;
+  font-size: 16px;
+  @extend %text-body-medium-regular-placeholder;
 
   ::placeholder {
     color: $c-text-secondary-gray;
