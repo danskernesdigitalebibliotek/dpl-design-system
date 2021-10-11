@@ -14,6 +14,12 @@ const ArrowLargeRightStatic = "icons/arrow-ui/icon-arrow-ui-large-right.svg";
 const ArrowSmallLeftStatic = "icons/arrow-ui/icon-arrow-ui-small-left.svg";
 const ArrowSmallRightStatic = "icons/arrow-ui/icon-arrow-ui-small-right.svg";
 
+/**
+ * Icons imported as components will be processed by webpack. This will embed
+ * the svg code inline in the final html, and is necessary to be able to animate on hover.
+ * If we dont animate the icon, the static import is more elegant.
+ */
+
 export type IconArrowProps = {
   size: "large" | "small";
   direction: "right" | "left";
