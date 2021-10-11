@@ -37,9 +37,14 @@ export const IdentityColor = ({ identityColor }: IdentityColorProps) => {
 
       <div className="internal-colors-code">
         <p className="text-body-medium-regular">
-          For generating the identity color tones we have used <code>HSL</code> (Hue, Saturation, Lightness) values. <br/>
-          To change the identity color it is necessary to set 3 variables in the <code>:root</code> element corresponding to each value in <code>HSL</code>.
-          With Javascript you can achieve this by running the following commands (remember to replace the <code>h</code>, <code>s</code> and <code>l</code> values).
+          For generating the identity color tones we have used <code>HSL</code>{" "}
+          (Hue, Saturation, Lightness) values. <br />
+          To change the identity color it is necessary to set 3 variables in the{" "}
+          <code>:root</code> element corresponding to each value in{" "}
+          <code>HSL</code>. With Javascript you can achieve this by running the
+          following commands (remember to replace the <code>h</code>,{" "}
+          <code>s</code> and <code>l</code> values).
+        </p>
         <pre>
           <code>
             document.documentElement.style.setProperty("--identity-color-h",
@@ -54,11 +59,15 @@ export const IdentityColor = ({ identityColor }: IdentityColorProps) => {
             [l]);
           </code>
         </pre>
-          By changing the HSL values it will automatically calculate the color tones.
+        <p className="text-body-medium-regular">
+          By changing the HSL values it will automatically calculate the color
+          tones.
         </p>
         <p className="text-body-medium-regular mt-24">
-          In "Controls" within the addon panel it is possible to change the color with the color-picker and 
-          directly see the color tones being generated. This feature is only to visualize the color tones in storybook and does not change any underlying code.
+          In "Controls" within the addon panel it is possible to change the
+          color with the color-picker and directly see the color tones being
+          generated. This feature is only to visualize the color tones in
+          storybook and does not change any underlying code.
           <br />
         </p>
       </div>
