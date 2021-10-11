@@ -33,6 +33,8 @@ export default StoryBase;
 
 export const ArrowUI = (props: IconArrowProps) => (
   <ArrowComp {...props}>
-    <div className="internal-arrow-box" />
+    <div className="internal-arrow-box">
+      To animate the arrow on hover, we have to embed the svg inline
+    </div>
   </ArrowComp>
 );
