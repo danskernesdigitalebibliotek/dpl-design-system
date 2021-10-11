@@ -1,22 +1,24 @@
 @import "./reset";
-@import "./color-variables";
-@import "./internal";
-@import "./breakpoints";
-@import "./typography";
-@import "./links";
-@import "./link-filters";
-@import "./arrows";
-@import "./buttons";
-@import "./spacing";
-@import "./tag";
-@import "./logo";
-@import "./pagefold";
-@import "./accordion";
-@import "./header";
+@import "../../stories/colors/color-variables";
+
+@import "../../stories/breakpoints/breakpoints";
+@import "../../stories/typography/typography";
+@import "../../stories/links/links";
+@import "../../stories/link-filters/link-filters";
+@import "../../stories/arrows/arrows";
+@import "../../stories/button/buttons";
+@import "../../stories/spacing/spacing";
+@import "../../stories/tag/tag";
+@import "../../stories/logo/logo";
+@import "../../stories/pagefold/pagefold";
+@import "../../stories/accordion/accordion";
+@import "../../stories/header/header";
+@import "../../stories/dropdown/dropdown";
+@import "../../stories/footer/footer";
+@import "../../stories/breadcrumb/breadcrumb";
+
 @import "./shared";
-@import "./dropdown";
-@import "./footer";
-@import "./breadcrumb";
+@import "./internal";
 
 // Should be last to make it easier to overwrite.
-@import "./color-classes";
+@import "../../stories/colors/color-classes";
