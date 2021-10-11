@@ -37,21 +37,9 @@ export const IdentityColor = ({ identityColor }: IdentityColorProps) => {
 
       <div className="internal-colors-code">
         <p className="text-body-medium-regular">
-          Til at generere identitetsfarven/tonerne, er der brugt
-          <code>HSL</code> (Hue, Saturation, Lightness) farve værdier. <br />
-          For at ændre identitetsfarven/tonerne er det nødvendigt at sætte 3
-          variabler i <code>:root</code> elementet, som svarer til de 3 værdier
-          i <code>HSL</code>. <br />
-          Med javascript er det muligt at tilføje følgende linjer kode for at
-          ændre værdierne (husk at udskift <code>[h]</code>, <code>[s]</code>,
-          og <code>[l]</code>):
-        </p>
-        {/* <p className="mt-24">
-          To be able to change the primary identity color + tones, you will have
-          to set 3 variables in the <code>:root</code> element. With javascript,
-          you can achieve this by running the following commands (remember to
-          replace the <code>h</code>, <code>s</code> and <code>l</code> value):
-        </p> */}
+          For generating the identity color tones we have used <code>HSL</code> (Hue, Saturation, Lightness) values. <br/>
+          To change the identity color it is necessary to set 3 variables in the <code>:root</code> element corresponding to each value in <code>HSL</code>.
+          With Javascript you can achieve this by running the following commands (remember to replace the <code>h</code>, <code>s</code> and <code>l</code> values).
         <pre>
           <code>
             document.documentElement.style.setProperty("--identity-color-h",
@@ -66,10 +54,11 @@ export const IdentityColor = ({ identityColor }: IdentityColorProps) => {
             [l]);
           </code>
         </pre>
+          By changing the HSL values it will automatically calculate the color tones.
+        </p>
         <p className="text-body-medium-regular mt-24">
-          I addon panelet kan du under "Controls" skifte farve med farvehjulet
-          og se de forskellige toner blive genereret med det samme. Det er dog
-          kun til visuelt brug og ændrer ikke noget i den bagvedliggende kode.
+          In "Controls" within the addon panel it is possible to change the color with the color-picker and 
+          directly see the color tones being generated. This feature is only to visualize the color tones in storybook and does not change any underlying code.
           <br />
         </p>
       </div>
@@ -133,7 +122,7 @@ type ColorClasses = {
 }[];
 const colorClasses: ColorClasses = [
   {
-    colorTitle: "Identitetsfarver",
+    colorTitle: "Identity color",
     colorItems: [
       {
         className: "bg-identity-primary",
@@ -141,7 +130,7 @@ const colorClasses: ColorClasses = [
     ],
   },
   {
-    colorTitle: "Toner",
+    colorTitle: "Identity color tones",
     colorItems: [
       {
         className: "bg-identity-tint-120",

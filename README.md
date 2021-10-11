@@ -9,7 +9,7 @@ The codebase follows the naming that designers have used in Figma closely to ens
 This project requires the following setup:
 
 - `npm >= 7`
-- `node 14`
+- `node 16`
 
 Check in the terminal which versions you have installed with `npm -v` and `node -v`.
 
@@ -94,5 +94,5 @@ All the addons can be found in `storybook/main.js` directory.
 #### Important to notice
 
 **Internal classes**
-To display some of the components (fx Colors, Spacing) in a more presentable way, we are using some "internal" css-classes which can be found in the `styles/internal.scss` file.
-All css-classes with "internal" in the front should therefore be ignored in the HTML markup.
+
+To display some of the components (fx Colors, Spacing) in a more presentable way, we are using some "internal" css-classes which can be found in the `styles/internal.scss` file. All css-classes with "internal" in the front should therefore be ignored in the HTML markup.

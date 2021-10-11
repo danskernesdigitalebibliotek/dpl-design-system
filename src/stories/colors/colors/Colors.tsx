@@ -25,21 +25,17 @@ export const Colors = () => {
       ))}
 
       <div>
-        <h1 className="text-header-h3">CSS-klasser</h1>
-        <p className="text-body-medium-regular mt-24">
-          Der er lavet en række css-klasser til henholdvis baggrundsfarver (bg),
-          kanter (border), og tekst (color), som er til at finde i
-          <code>scss/color-classes.scss</code> filen. Klasserne bruger
-          henholdsvis <code>bg</code> / <code>border</code> / <code>color</code>
-          som prefix. <br />
-          Det er også muligt at bruge css-variabler fra
-          <code>scss/color-variables.scss</code> direkte i css-filerne.
+        <h1 className="text-header-h3">CSS-classes</h1>
+        <p className="text-body-medium-regular mt-24"> 
+          There are other css-classes for background colors, border colors and text colors available in the <code> scss / color-classes.scss </code> file.
+          The classes use <code> bg </code> / <code> border </code> / <code> color </code> as a prefix. <br />
+          It is also possible to use the css-variables from <code> scss / color-variables.scss </code> directly in the css files.
         </p>
 
         <p className="text-body-medium-regular mt-16">
-          Eksempel: <br />
-          <code>div</code> med <code>.bg-global-secondary</code>, og
-          <code>p</code>-element med <code>.color-primary-black</code>:
+          Example: <br />
+          A <code>div</code> with <code>.bg-global-secondary</code>, and a
+          <code>p</code>-element with <code>.color-primary-black</code>:
         </p>
         <div className="bg-global-secondary p-32 mt-16">
           <p className="color-primary-black text-header-h2">Nyt på hylderne</p>
@@ -101,7 +97,7 @@ type ColorClasses = {
 }[];
 const colorClasses: ColorClasses = [
   {
-    colorTitle: "Globale farver",
+    colorTitle: "Global colors",
     colorItems: [
       {
         className: "bg-global-primary",
@@ -118,7 +114,7 @@ const colorClasses: ColorClasses = [
     ],
   },
   {
-    colorTitle: "Tekst farver",
+    colorTitle: "Text colors",
     colorItems: [
       {
         className: "color-primary-white",
@@ -135,7 +131,7 @@ const colorClasses: ColorClasses = [
     ],
   },
   {
-    colorTitle: "Signal farver",
+    colorTitle: "Signal colors",
     colorItems: [
       {
         className: "bg-signal-success",
