@@ -37,12 +37,12 @@ export const IdentityColor = ({ identityColor }: IdentityColorProps) => {
 
       <div className="internal-colors-code">
         <p className="text-body-medium-regular">
-          For generating the identity color tones we have used <code>HSL</code>{" "}
+          For generating the identity color tones we have used <code>HSL</code>
           (Hue, Saturation, Lightness) values. <br />
-          To change the identity color it is necessary to set 3 variables in the{" "}
-          <code>:root</code> element corresponding to each value in{" "}
+          To change the identity color it is necessary to set 3 variables in the
+          <code>:root</code> element corresponding to each value in
           <code>HSL</code>. With Javascript you can achieve this by running the
-          following commands (remember to replace the <code>h</code>,{" "}
+          following commands (remember to replace the <code>h</code>,
           <code>s</code> and <code>l</code> values).
         </p>
         <pre>
