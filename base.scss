@@ -1,0 +1,24 @@
+@import "./src/styles/scss/reset";
+@import "./src/stories/colors/color-variables";
+
+@import "./src/stories/breakpoints/breakpoints";
+@import "./src/stories/typography/typography";
+@import "./src/stories/links/links";
+@import "./src/stories/link-filters/link-filters";
+@import "./src/stories/arrows/arrows";
+@import "./src/stories/button/buttons";
+@import "./src/stories/spacing/spacing";
+@import "./src/stories/tag/tag";
+@import "./src/stories/logo/logo";
+@import "./src/stories/pagefold/pagefold";
+@import "./src/stories/accordion/accordion";
+@import "./src/stories/header/header";
+@import "./src/stories/dropdown/dropdown";
+@import "./src/stories/footer/footer";
+@import "./src/stories/breadcrumb/breadcrumb";
+
+@import "./src/styles/scss/shared";
+@import "./src/styles/scss/internal";
+
+// Should be last to make it easier to overwrite.
+@import "./src/stories/colors/color-classes";
