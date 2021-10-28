@@ -3,10 +3,10 @@ import { useEffect } from "react";
 
 type AccordionRow = {
   header: string;
-  content: {
+  content: Array<{
     title: string;
     href: string;
-  }[];
+  }>;
 };
 type AccordionProps = {
   list: AccordionRow[];
