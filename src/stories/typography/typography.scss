@@ -3,40 +3,44 @@
 // styleName: Desktop/H1;
 .text-header-h1 {
   font-family: "Lora", serif;
-  font-size: 32px;
   font-style: normal;
   font-weight: 400;
+  font-size: 32px;
   line-height: 40px;
   text-align: left;
 
+  @include breakpoint-s {
+    line-height: 120%;
+  }
+
   @include breakpoint-m {
-    font-size: 48px;
-    line-height: 58px;
+    font-size: 52px;
   }
 
   @include breakpoint-xl {
     font-size: 58px;
-    line-height: 70px;
   }
 }
 
 //styleName: Desktop/H2;
 .text-header-h2 {
   font-family: "Lora", serif;
-  font-size: 28px;
   font-style: normal;
   font-weight: 400;
+  font-size: 28px;
   line-height: 32px;
   text-align: left;
 
+  @include breakpoint-s {
+    line-height: 120%;
+  }
+
   @include breakpoint-m {
     font-size: 42px;
-    line-height: 50px;
   }
 
   @include breakpoint-xl {
     font-size: 44px;
-    line-height: 53px;
   }
 }
 
@@ -49,89 +53,97 @@
   line-height: 32px;
   text-align: left;
 
+  @include breakpoint-s {
+    line-height: 120%;
+  }
+
   @include breakpoint-m {
     font-size: 32px;
-    line-height: 38px;
   }
 
   @include breakpoint-xl {
     font-size: 34px;
-    line-height: 41px;
   }
 }
 
 //styleName: Desktop/H4;
 .text-header-h4 {
   font-family: "Lora", serif;
-  font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  font-size: 18px;
   line-height: 24px;
   text-align: left;
 
+  @include breakpoint-s {
+    line-height: 130%;
+  }
+
   @include breakpoint-m {
     font-size: 24px;
-    line-height: 29px;
+    line-height: 120%;
   }
 
   @include breakpoint-xl {
     font-size: 26px;
-    line-height: 31px;
   }
 }
 
 //styleName: Desktop/Subtitle;
 .text-subtitle {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  font-size: 18px;
   line-height: 32px;
   text-align: left;
 
+  @include breakpoint-s {
+    line-height: 160%;
+  }
+
   @include breakpoint-m {
     font-size: 24px;
-    line-height: 29px;
   }
 
   @include breakpoint-xl {
     font-size: 26px;
-    line-height: 31px;
   }
 }
 
 //styleName: Desktop/Accent;
 .text-accent {
   font-family: "Gochi Hand", cursive;
-  font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 29px;
+  font-size: 24px;
+  line-height: 120%;
   text-align: left;
 
   @include breakpoint-xl {
     font-size: 26px;
-    line-height: 31px;
   }
 }
 
 // styleName: Desktop/Body Copy - L
 .text-body-large {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 42px;
   text-align: left;
+
+  @include breakpoint-s {
+    line-height: 160%;
+  }
 
   @include breakpoint-m {
     font-size: 18px;
-    line-height: 22px;
   }
 
   @include breakpoint-xl {
     font-size: 20px;
-    line-height: 24px;
   }
 }
 
@@ -139,41 +151,41 @@
 %text-body-medium-regular-placeholder,
 .text-body-medium-regular {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 32px;
   text-align: left;
   color: $c-text-secondary-gray;
 
+  @include breakpoint-s {
+    line-height: 160%;
+  }
+
   @include breakpoint-m {
     font-size: 16px;
-    line-height: 19px;
   }
 
   @include breakpoint-xl {
     font-size: 18px;
-    line-height: 22px;
   }
 }
 
 //styleName: Desktop/Body Copy - M - medium;
 .text-body-medium-medium {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 32px;
+  font-size: 14px;
+  line-height: 160%;
   text-align: left;
 
   @include breakpoint-m {
     font-size: 16px;
-    line-height: 19px;
   }
 
   @include breakpoint-xl {
     font-size: 18px;
-    line-height: 22px;
   }
 }
 
@@ -183,17 +195,16 @@
 %text-button-placeholder,
 .text-button {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.02em;
   text-align: left;
   text-transform: uppercase;
 
-  @include breakpoint-m {
-    font-size: 14px;
-    line-height: 17px;
+  @include breakpoint-s {
+    line-height: 120%;
   }
 
   @include breakpoint-xl {
@@ -206,62 +217,62 @@
 %text-links-placeholder,
 .text-links {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  font-size: 14px;
   line-height: 24px;
   text-align: left;
   color: $c-text-primary-black;
 
-  @include breakpoint-m {
-    font-size: 14px;
-    line-height: 17px;
+  @include breakpoint-s {
+    line-height: 150%;
   }
 
   @include breakpoint-xl {
     font-size: 16px;
-    line-height: 19px;
   }
 }
 
 //styleName: Desktop/Tags;
 %text-tags {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
   font-style: normal;
   font-weight: 500;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.02em;
   text-align: left;
   text-transform: uppercase;
 
-  @include breakpoint-m {
-    font-size: 12px;
-    line-height: 14px;
+  @include breakpoint-s {
+    line-height: 120%;
   }
 
   @include breakpoint-xl {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 14px;
   }
 }
 
 //styleName: Desktop/Small Text - Caption;
 .text-small-caption {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 10px;
   font-style: normal;
   font-weight: 400;
+  font-size: 10px;
   line-height: 16px;
   text-align: left;
 
-  @include breakpoint-l {
+  @include breakpoint-s {
+    line-height: 160%;
+  }
+
+  @include breakpoint-m {
     font-size: 12px;
-    line-height: 14px;
+    line-height: 120%;
   }
 
   @include breakpoint-xl {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 130%;
   }
 }
