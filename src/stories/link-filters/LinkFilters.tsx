@@ -1,20 +1,17 @@
 import React from "react";
 
+import { Links } from "../links/Links";
+
 export const LinkFilters = () => {
   return (
     <div className="link-filters-container">
       {list.map((item) => (
         <div className="link-filters-tag-wrapper">
-          <a
+          <Links
             href={item.href}
-            className={
-              item.active
-                ? "link-filters-tag"
-                : "link-filters-tag link-filters-tag--active"
-            }
-          >
-            {item.title}
-          </a>
+            linkText={item.title}
+            classNames="link-filters-tag"
+          />
           <span className="link-filters-counter">{item.counter}</span>
         </div>
       ))}

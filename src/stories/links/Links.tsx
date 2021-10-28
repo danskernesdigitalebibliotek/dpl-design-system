@@ -3,13 +3,14 @@ import React from "react";
 type LinksProps = {
   href: string;
   linkText: string;
+  classNames?: string;
 };
 
 export const Links = (props: LinksProps) => {
-  const { href, linkText } = props;
+  const { href, linkText, classNames } = props;
 
   return (
-    <a href={href} className="link-tag">
+    <a href={href} className={`link-tag ${classNames || ""}`}>
       {linkText}
     </a>
   );
