@@ -25,6 +25,10 @@ export const Breakpoints = () => {
 
 const spaceClasses = [
   {
+    classPrefix: "@media (min-width: 375px) {}",
+    classProperty: "375px",
+  },
+  {
     classPrefix: "@media (min-width: 768px) {}",
     classProperty: "768px",
   },

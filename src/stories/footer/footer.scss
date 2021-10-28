@@ -1,12 +1,10 @@
 .footer {
-  @include breakpoint-s--max {
-    .footer--mobile {
-      display: block;
-    }
+  .footer--mobile {
+    display: block;
+  }
 
-    .footer--desktop {
-      display: none;
-    }
+  .footer--desktop {
+    display: none;
   }
 
   @include breakpoint-s {
