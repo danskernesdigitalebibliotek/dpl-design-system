@@ -206,7 +206,7 @@ export const Footer = () => {
                 />
               </a>
             </div>
-            <div className="footer-site-info--links">
+            <div className="footer-site-info--links color-secondary-gray">
               <a href="/" className="footer-site-info--link">
                 Behandling af persondata
               </a>
