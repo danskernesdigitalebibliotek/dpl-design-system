@@ -5,10 +5,11 @@ export type ButtonProps = {
   buttonType: "none" | "default" | "external-link" | "search";
   disabled: boolean;
   collapsible: boolean;
+  size: "large" | "medium" | "small";
 };
 
 export const Button = (props: ButtonProps) => {
-  const { label, buttonType, disabled, collapsible } = props;
+  const { label, buttonType, disabled, collapsible, size } = props;
   const iconClassName = `btn-icon ${collapsible ? "btn-collapsible" : ""}`;
 
   const Icon = () => {
@@ -35,8 +36,19 @@ export const Button = (props: ButtonProps) => {
     return null;
   };
 
+  const getSize = () => {
+    if (size === "large") return "btn-large";
+    if (size === "medium") return "btn-medium";
+    if (size === "small") return "btn-small";
+    return "";
+  };
+
   return (
-    <button type="button" className={`btn-primary`} disabled={disabled}>
+    <button
+      type="button"
+      className={`btn-primary ${getSize()}`}
+      disabled={disabled}
+    >
       {`${label} ${buttonType === "search" ? "(6)" : ""}`}
       <Icon />
     </button>

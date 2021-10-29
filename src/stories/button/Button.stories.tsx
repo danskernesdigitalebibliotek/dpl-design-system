@@ -18,6 +18,9 @@ export default {
     collapsible: {
       defaultValue: false,
     },
+    size: {
+      defaultValue: "medium",
+    },
   },
   parameters: {
     design: {
