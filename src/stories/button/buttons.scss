@@ -33,8 +33,12 @@ $c-btn-border-disabled: $c-global-tertiary-2;
     color: $c-btn-border-disabled;
     fill: $c-btn-border-disabled;
 
-    .btn-icon {
-      opacity: 0.6;
+    .arrow-body {
+      stroke: $c-btn-border-disabled;
+    }
+
+    .arrow-head {
+      fill: $c-btn-border-disabled;
     }
   }
 }

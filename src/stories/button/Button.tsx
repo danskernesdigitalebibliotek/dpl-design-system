@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as ArrowSmallRight } from "../../icons/arrow-ui/icon-arrow-ui-small-right.svg";
 
 export type ButtonProps = {
   label: string;
@@ -15,11 +16,9 @@ export const Button = (props: ButtonProps) => {
   const Icon = () => {
     if (buttonType === "default") {
       return (
-        <img
-          className={iconClassName}
-          src={`icons/buttons/icon-btn-arrow.svg`}
-          alt="arrow"
-        />
+        <div className="ml-16">
+          <ArrowSmallRight />
+        </div>
       );
     }
 
@@ -46,7 +45,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <button
       type="button"
-      className={`btn-primary ${getSize()}`}
+      className={`btn-primary ${getSize()} arrow-hover-right-small`}
       disabled={disabled}
     >
       {`${label} ${buttonType === "search" ? "(6)" : ""}`}
