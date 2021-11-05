@@ -68,7 +68,7 @@ export const Header = (props: HeaderProps) => {
             <div className={`header-menu--profile header-button`}>
               <a href="/" className="hide-linkstyle">
                 {signedIn && haveNotification && (
-                  <div className="header--notification bg-identity-primary" />
+                  <div className="header--notification bg-signal-alert" />
                 )}
                 <img src={`icons/basic/icon-profile.svg`} alt="Profile" />
                 {signedIn && (
