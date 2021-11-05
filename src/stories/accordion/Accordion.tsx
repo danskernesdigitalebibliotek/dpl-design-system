@@ -18,7 +18,7 @@ export const Accordion = (props: AccordionProps) => {
     require("./initaccordion");
   }, []);
   return (
-    <ul className="accordion">
+    <ul className="accordion" onClick={(e) => window.eventAccordion(e)}>
       {props.list.map((row) => (
         <li key={row.header} className="accordion-row">
           <h3 className="accordion-header text-header-h4">
@@ -47,3 +47,10 @@ export const Accordion = (props: AccordionProps) => {
     </ul>
   );
 };
+
+
+declare global {
+  interface Window {
+    eventAccordion: (event: React.MouseEvent<HTMLUListElement, MouseEvent>) => void;
+  }
+}
