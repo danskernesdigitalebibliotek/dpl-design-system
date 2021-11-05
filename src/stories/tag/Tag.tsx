@@ -17,7 +17,11 @@ export const Tag = (props: TagProps) => {
     ) : null;
 
   return (
-    <span className={`tag-primary ${removable ? "tag-removable" : ""}`}>
+    <span
+      className={`tag-primary ${
+        removable ? "tag-removable tag-small" : "tag-large"
+      }`}
+    >
       {label}
       <Icon />
     </span>

@@ -11,11 +11,9 @@ $c-btn-border-disabled: $c-global-tertiary-2;
 }
 
 .btn-primary {
-  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 26px;
   background-color: transparent;
   color: $c-text-primary-black;
   border-radius: 0;
@@ -35,8 +33,27 @@ $c-btn-border-disabled: $c-global-tertiary-2;
     color: $c-btn-border-disabled;
     fill: $c-btn-border-disabled;
 
-    .btn-icon {
-      opacity: 0.6;
+    .arrow-body {
+      stroke: $c-btn-border-disabled;
+    }
+
+    .arrow-head {
+      fill: $c-btn-border-disabled;
     }
   }
+}
+
+.btn-large {
+  height: 48px;
+  padding: 0 86px;
+}
+
+.btn-medium {
+  height: 48px;
+  padding: 0 48px;
+}
+
+.btn-small {
+  height: 40px;
+  padding: 0 32px;
 }

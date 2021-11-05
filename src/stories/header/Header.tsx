@@ -37,7 +37,7 @@ export const Header = (props: HeaderProps) => {
                   container={false}
                   size="small"
                   classes="header-menu--navigation--button header-button"
-                  compProps={{ id: "header-menu--open" }}
+                  compProps={{ id: "header-menu--open", onClick:  () => window.eventHeader()}}
                 >
                   <img
                     src={`icons/basic/icon-menu.svg`}
@@ -68,7 +68,7 @@ export const Header = (props: HeaderProps) => {
             <div className={`header-menu--profile header-button`}>
               <a href="/" className="hide-linkstyle">
                 {signedIn && haveNotification && (
-                  <div className="header--notification bg-identity-primary" />
+                  <div className="header--notification bg-signal-alert" />
                 )}
                 <img src={`icons/basic/icon-profile.svg`} alt="Profile" />
                 {signedIn && (
@@ -114,7 +114,7 @@ export const Header = (props: HeaderProps) => {
           </div>
         </div>
       </header>
-      <div id="header-overlay">
+      <div id="header-overlay" onClick={() => window.eventHeader()}>
         <div className="header-overlay--main">
           <img
             id="header-menu--close"
@@ -161,3 +161,9 @@ const list = [
     href: "/",
   },
 ];
+
+declare global {
+  interface Window {
+    eventHeader: () => void;
+  }
+}

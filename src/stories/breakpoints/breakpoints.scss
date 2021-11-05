@@ -1,12 +1,14 @@
-// Breakpoints
+/** Breakpoints **/
+$screen-xs: 375px;
 $screen-s: 768px;
 $screen-m: 1024px;
 $screen-l: 1440px;
 $screen-xl: 1920px;
 $screen-xxl: 2200px;
 
-@mixin breakpoint-s--max {
-  @media (max-width: $screen-s) {
+/** Breakpoint mixin's **/
+@mixin breakpoint-xs {
+  @media (min-width: $screen-xs) {
     @content;
   }
 }

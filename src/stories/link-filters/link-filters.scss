@@ -13,17 +13,20 @@
 }
 
 .link-filters-tag {
+  @extend %text-body-medium-regular-placeholder;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 1px solid;
-  padding-bottom: 2px;
-  @extend %text-body-medium-regular-placeholder;
+  padding-bottom: 0px;
 
   &--active {
     border-bottom: 0;
   }
+}
+
+.link-filters-tag::after {
+  padding-bottom: calc(18px - 14px);
 }
 
 .link-filters-counter {

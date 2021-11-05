@@ -2,8 +2,6 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 32px;
-  padding: 0 8px;
   background-color: $c-global-secondary;
   @extend %text-tags;
 }
@@ -14,4 +12,14 @@
 
 .tag-removable {
   cursor: pointer;
+}
+
+.tag-large {
+  height: 40px;
+  padding: 0 16px;
+}
+
+.tag-small {
+  height: 32px;
+  padding: 0 8px;
 }

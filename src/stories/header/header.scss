@@ -106,13 +106,19 @@
 
   span {
     position: absolute;
-    bottom: 8px;
+    bottom: 0px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     width: 100%;
     padding: 0 4px;
     text-align: center;
+  }
+
+  @include breakpoint-s {
+    span {
+      bottom: 4px;
+    }
   }
 
   .header--notification {
