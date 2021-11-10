@@ -9,7 +9,7 @@ import { FooterColumn } from "./FooterColumn";
 
 export const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       {/* Footer mobile */}
       <div className="footer--mobile">
         <Pagefold inherit={true} container={true} size="small">
@@ -223,7 +223,7 @@ export const Footer = () => {
           </div>
         </Pagefold>
       </div>
-    </div>
+    </footer>
   );
 };
 
