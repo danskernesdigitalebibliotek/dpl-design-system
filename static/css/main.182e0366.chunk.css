@@ -1808,6 +1808,26 @@ select {
   text-decoration: inherit;
 }
 
+/**
+ * Hide element visually but not from screen readers.
+ *
+ * https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/
+ *
+ * The class is intentionally called .hide-visually and not .visually-hidden.
+ * Drupal which is a known consumer of the design system also has a
+ * .visually-hidden class where the implementation is a bit different.
+ * To avoid any conflicts we call our class something else.
+ *
+ * https://git.drupalcode.org/project/drupal/-/blob/9.2.x/core/modules/system/css/components/hidden.module.css#L18-33
+ */
+.hide-visually {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .internal-container-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
@@ -2069,4 +2089,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.237c1fd2.chunk.css.map*/
+/*# sourceMappingURL=main.182e0366.chunk.css.map*/
