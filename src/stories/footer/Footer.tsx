@@ -9,12 +9,13 @@ import { FooterColumn } from "./FooterColumn";
 
 export const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
+      <h2 className="hide-visually">Globale links</h2>
       {/* Footer mobile */}
       <div className="footer--mobile">
         <Pagefold inherit={true} container={true} size="small">
           <div>
-            <h4 className="text-header-h4 mb-16">Åbningstider</h4>
+            <h3 className="text-header-h4 mb-16">Åbningstider</h3>
             <p className="text-body-medium-regular mb-24">
               Bibliotekerne lorem ipsum consectetur, adipisci velit, sed quia
               non numquam eius modi tempora incidunt ut labore.
@@ -90,7 +91,7 @@ export const Footer = () => {
         <Pagefold inherit={true} container={true} size="medium">
           <div className="footer-column-wrapper">
             <div className="footer-column">
-              <h4 className="text-header-h4 mb-16">Åbningstider</h4>
+              <h3 className="text-header-h4 mb-16">Åbningstider</h3>
               <div className="footer-column">
                 <p className="text-body-medium-regular">
                   Bibliotekerne lorem ipsum consectetur, adipisci velit, sed
@@ -127,7 +128,7 @@ export const Footer = () => {
               ]}
             />
             <div className="footer-column">
-              <h4 className="text-header-h4 mb-16">Kontakt</h4>
+              <h3 className="text-header-h4 mb-16">Kontakt</h3>
               <p className="text-body-medium-regular">
                 Lyngby-Taarbæk Bibliotekerne <br />
                 Lyngby Hovedgade 28 <br />
@@ -223,7 +224,7 @@ export const Footer = () => {
           </div>
         </Pagefold>
       </div>
-    </div>
+    </footer>
   );
 };
 

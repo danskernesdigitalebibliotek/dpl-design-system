@@ -23,6 +23,17 @@ Use the node package manager to install project dependencies:
 npm install
 ```
 
+## Development
+
+To start developing run:
+
+```
+npm run dev
+```
+
+Components and CSS will be automatically recompiled when making changes in the
+source code.
+
 ## Usage
 
 You can download a `dist.zip` file with `latest` assets (or different tags) under "Releases", and unzip it somewhere within the web root of your project. The assets consist of javascript files, css styles and icons. You can find the html output for a given story under the HTML tab inside storybook.

@@ -9,7 +9,7 @@ type FooterColumnProps = {
 export const FooterColumn = ({ title, links }: FooterColumnProps) => {
   return (
     <div className="footer-column">
-      <h4 className="text-header-h4">{title}</h4>
+      <h3 className="text-header-h4">{title}</h3>
       <ul>
         {links.map((link) => (
           <li className="footer-column--link">

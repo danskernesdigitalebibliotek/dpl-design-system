@@ -19,6 +19,7 @@
     "web-vitals": "^1.0.1"
   },
   "engines": {
+    "node": ">=16",
     "npm": ">=7"
   },
   "scripts": {
@@ -34,7 +35,8 @@
     "css:lint": "concurrently 'npm:css:stylelint' 'npm:css:prettier -- --check' --raw",
     "css:format": "concurrently 'npm:css:stylelint -- --fix' 'npm:css:prettier -- --write' --max-processes 1 --raw",
     "css:build": "sass base.scss:src/styles/css/base.css",
-    "css:watch": "npm run css:build -- --watch"
+    "css:watch": "npm run css:build -- --watch",
+    "dev": "concurrently --raw \"npm run storybook\" \"npm run css:watch\""
   },
   "browserslist": {
     "production": [
