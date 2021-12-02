@@ -7,6 +7,6 @@ type StoryPlaceholder = {
 export const StoryPlaceholder = (props: StoryPlaceholder) => {
   const {name} = props;
   return (
-    <div style={{color: "red"}}>{name} is not implemented yet...</div>
+    <div className="story-placeholder">{name} has not been implemented yet...</div>
   );
 };

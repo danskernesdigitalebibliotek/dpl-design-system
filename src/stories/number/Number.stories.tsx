@@ -1,10 +1,11 @@
 import React from "react";
-import { ComponentMeta } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { StoryPlaceholder } from "../storyplaceholder/StoryPlaceholder";
+import { StoryPlaceholder } from "../story-placeholder/StoryPlaceholder";
+import { addMissingLabel } from "../story-placeholder/tools";
 
 export default {
-  title: "Atoms / Number",
+  title: addMissingLabel("Atoms / Number"),
   component: StoryPlaceholder,
   decorators: [withDesign],
   argTypes: {
@@ -15,5 +16,5 @@ export default {
   parameters: {},
 } as ComponentMeta<typeof StoryPlaceholder>;
 
-export const Default = StoryPlaceholder.bind({});
+export const Default: ComponentStory<typeof StoryPlaceholder>  = StoryPlaceholder.bind({});
 
