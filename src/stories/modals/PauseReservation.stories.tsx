@@ -1,12 +1,12 @@
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { StoryPlaceholder } from "../story-placeholder/StoryPlaceholder";
-import { addMissingLabel } from "../story-placeholder/tools";
+import { MissingStory } from "../missing-story/MissingStory";
+import { addMissingLabel } from "../missing-story/tools";
 
 export default {
   title: addMissingLabel("Components / Modals"),
-  component: StoryPlaceholder,
+  component: MissingStory,
   decorators: [withDesign],
   argTypes: {
     name: {
@@ -14,7 +14,7 @@ export default {
     }
   },
   parameters: {},
-} as ComponentMeta<typeof StoryPlaceholder>;
+} as ComponentMeta<typeof MissingStory>;
 
-export const ModalReservationPause: ComponentStory<typeof StoryPlaceholder> = StoryPlaceholder.bind({});
+export const ModalReservationPause: ComponentStory<typeof MissingStory> = MissingStory.bind({});
 ModalReservationPause.storyName = addMissingLabel("Reservation Pause");
