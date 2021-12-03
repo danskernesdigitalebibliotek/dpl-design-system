@@ -27,3 +27,7 @@ storybook-static
 
 # SCSS to CSS
 /src/styles/css
+
+# Dev Tools
+.vscode
+.history
