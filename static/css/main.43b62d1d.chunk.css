@@ -1803,6 +1803,10 @@ select {
   fill: #484848;
 }
 
+.missing-story {
+  color: #d5364a;
+}
+
 .hide-linkstyle {
   color: inherit;
   text-decoration: inherit;
@@ -2089,4 +2093,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.182e0366.chunk.css.map*/
+/*# sourceMappingURL=main.43b62d1d.chunk.css.map*/
