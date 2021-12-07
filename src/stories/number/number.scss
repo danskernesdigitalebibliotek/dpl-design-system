@@ -1,0 +1,26 @@
+.number {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  border-radius: 100%;
+  @extend %text-body-medium-medium;
+}
+
+.number-danger {
+  border-color: $c-signal-alert;
+}
+
+.number-warning {
+  border-color: $c-signal-aware;
+}
+
+.number-info {
+  border-color: $c-signal-success;
+}
+
+.number-neutral {
+  border-color: $c-text-secondary-gray;
+}
