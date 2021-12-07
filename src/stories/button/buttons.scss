@@ -14,11 +14,10 @@ $c-btn-border-disabled: $c-global-tertiary-2;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
-  color: $c-text-primary-black;
   border-radius: 0;
   border: 1px solid $c-btn-border-active;
   cursor: pointer;
+  white-space: nowrap;
 
   @extend %text-button-placeholder;
 
@@ -56,4 +55,19 @@ $c-btn-border-disabled: $c-global-tertiary-2;
 .btn-small {
   height: 40px;
   padding: 0 32px;
+}
+
+.btn-xsmall {
+  height: 32px;
+  padding: 0 24px;
+}
+
+.btn-filled {
+  background-color: $c-text-primary-black;
+  color: $c-text-primary-white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $c-text-primary-black;
 }

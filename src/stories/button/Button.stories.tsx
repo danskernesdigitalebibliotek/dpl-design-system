@@ -21,6 +21,9 @@ export default {
     size: {
       defaultValue: "medium",
     },
+    variant: {
+      defaultValue: "outline",
+    },
   },
   parameters: {
     design: {
@@ -36,12 +39,21 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  label: "default state",
+  buttonType: "none",
+  collapsible: true,
+};
+
+export const Hover = Template.bind({});
+Hover.args = {
+  label: "hover state",
   buttonType: "default",
   collapsible: true,
 };
 
 export const External = Template.bind({});
 External.args = {
+  label: "external link",
   buttonType: "external-link",
 };
 
@@ -51,9 +63,16 @@ Search.args = {
   buttonType: "search",
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  label: "se alle søgeresultater",
+export const Inactive = Template.bind({});
+Inactive.args = {
+  label: "inactive state",
   buttonType: "search",
   disabled: true,
+};
+
+export const Active = Template.bind({});
+Active.args = {
+  label: "active state",
+  buttonType: "none",
+  variant: "filled",
 };

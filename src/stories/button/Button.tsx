@@ -5,14 +5,17 @@ export type ButtonProps = {
   buttonType: "none" | "default" | "external-link" | "search";
   disabled: boolean;
   collapsible: boolean;
-  size: "large" | "medium" | "small";
+  size: "large" | "medium" | "small" | "xsmall";
+  variant: "outline" | "filled";
 };
 
 export const Button = (props: ButtonProps) => {
-  const { label, buttonType, disabled, collapsible, size } = props;
+  const { label, buttonType, disabled, collapsible, size, variant } = props;
   const iconClassName = `btn-icon ${collapsible ? "btn-collapsible" : ""}`;
 
   const Icon = () => {
+    if (variant !== "outline") return null;
+
     if (buttonType === "default") {
       return (
         <div className="ml-16">
@@ -38,13 +41,20 @@ export const Button = (props: ButtonProps) => {
     if (size === "large") return "btn-large";
     if (size === "medium") return "btn-medium";
     if (size === "small") return "btn-small";
+    if (size === "xsmall") return "btn-xsmall";
+    return "";
+  };
+
+  const getVariant = () => {
+    if (variant === "filled") return "btn-filled";
+    if (variant === "outline") return "btn-outline";
     return "";
   };
 
   return (
     <button
       type="button"
-      className={`btn-primary ${getSize()} arrow-hover-right-small`}
+      className={`btn-primary ${getVariant()} ${getSize()} arrow-hover-right-small`}
       disabled={disabled}
     >
       {`${label} ${buttonType === "search" ? "(6)" : ""}`}
