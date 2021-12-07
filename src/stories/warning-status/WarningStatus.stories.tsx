@@ -1,20 +1,41 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { MissingStory } from "../missing-story/MissingStory";
 import { addMissingLabel } from "../missing-story/tools";
+import { WarningStatus } from "./WarningStatus";
 
 export default {
   title: addMissingLabel("Components / Warning Status"),
-  component: MissingStory,
+  component: WarningStatus,
   decorators: [withDesign],
-  argTypes: {
-    name: {
-      defaultValue: "Warning Status",
-    },
-  },
+  argTypes: {},
   parameters: {},
-} as ComponentMeta<typeof MissingStory>;
+} as ComponentMeta<typeof WarningStatus>;
 
-export const Default: ComponentStory<typeof MissingStory> = MissingStory.bind(
-  {}
+const Template: ComponentStory<typeof WarningStatus> = (args) => (
+  <WarningStatus {...args} />
 );
+
+export const Description = Template.bind({});
+Description.args = {
+  description:
+    "Derfor har du i øjeblikket ikke mulighed for at låne eller reservere materialer fra biblioteket",
+  url: window.location.href,
+};
+
+export const TitleAndDescription = Template.bind({});
+TitleAndDescription.args = {
+  title: "Du skylder i alt",
+  description:
+    "Derfor har du i øjeblikket ikke mulighed for at låne eller reservere materialer fra biblioteket",
+  url: window.location.href,
+};
+
+export const DescriptionAndButton = Template.bind({});
+DescriptionAndButton.args = {
+  description: "Du skylder i alt",
+  owes: "256",
+  button: {
+    title: "se mere",
+    url: window.location.href,
+  },
+};
