@@ -1,10 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { addMissingLabel } from "../missing-story/tools";
 import { WarningStatus } from "./WarningStatus";
 
 export default {
-  title: addMissingLabel("Components / Warning Status"),
+  title: "Atoms / Warning Status",
   component: WarningStatus,
   decorators: [withDesign],
   argTypes: {},
