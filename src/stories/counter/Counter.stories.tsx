@@ -1,20 +1,48 @@
 import React from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { MissingStory } from "../missing-story/MissingStory";
-import { addMissingLabel } from "../missing-story/tools";
+import { Counter } from "./Counter";
 
 export default {
-  title: addMissingLabel("Atoms / Counter"),
-  component: MissingStory,
+  title: "Atoms / Counter",
+  component: Counter,
   decorators: [withDesign],
-  argTypes: {
-    name: {
-      defaultValue: "Counter",
-    }
-  },
+  argTypes: {},
   parameters: {},
-} as ComponentMeta<typeof MissingStory>;
+} as ComponentMeta<typeof Counter>;
 
-export const Default: ComponentStory<typeof MissingStory> = MissingStory.bind({});
+const Template: ComponentStory<typeof Counter> = (args) => (
+  <Counter {...args} />
+);
 
+export const Danger = Template.bind({});
+Danger.args = {
+  value: 0,
+  percentage: 94,
+  label: "dage",
+  status: "danger",
+};
+
+export const Warning = Template.bind({});
+Warning.args = {
+  value: 7,
+  percentage: 40,
+  label: "dage",
+  status: "warning",
+};
+
+export const Info = Template.bind({});
+Info.args = {
+  value: 24,
+  percentage: 20,
+  label: "dage",
+  status: "info",
+};
+
+export const Ready = Template.bind({});
+Ready.args = {
+  percentage: 100,
+  label: "klar",
+  status: "info",
+  isReady: true,
+};
