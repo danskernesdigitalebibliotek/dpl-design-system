@@ -1,4 +1,3 @@
-import React from "react";
 import { ReactComponent as ArrowSmallRight } from "../../icons/arrow-ui/icon-arrow-ui-small-right.svg";
 
 export type ButtonProps = {

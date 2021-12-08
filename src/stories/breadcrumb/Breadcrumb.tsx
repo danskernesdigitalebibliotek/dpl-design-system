@@ -1,4 +1,3 @@
-import React from "react";
 import { IconArrow } from "../arrows/icon-arrow-ui/ArrowUI";
 
 export type BreadcrumbProps = {

@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 type AccordionRow = {
   header: string;
@@ -48,9 +47,10 @@ export const Accordion = (props: AccordionProps) => {
   );
 };
 
-
 declare global {
   interface Window {
-    eventAccordion: (event: React.MouseEvent<HTMLUListElement, MouseEvent>) => void;
+    eventAccordion: (
+      event: React.MouseEvent<HTMLUListElement, MouseEvent>
+    ) => void;
   }
 }

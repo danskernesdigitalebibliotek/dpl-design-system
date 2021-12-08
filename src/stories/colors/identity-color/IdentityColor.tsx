@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import "../../../styles/css/base.css";
+import { useEffect } from "react";
 
 export type IdentityColorProps = {
   identityColor: string;

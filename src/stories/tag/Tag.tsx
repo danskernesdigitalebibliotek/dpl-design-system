@@ -1,5 +1,3 @@
-import React from "react";
-
 type TagProps = {
   label: string;
   removable: boolean;

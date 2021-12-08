@@ -1,6 +1,5 @@
 import React from "react";
 import { InvalidProps } from "../../../components/InvalidProps";
-import "../../../styles/css/base.css";
 
 // Imported as components
 import { ReactComponent as ArrowLargeLeft } from "../../../icons/arrow-ui/icon-arrow-ui-large-left.svg";
