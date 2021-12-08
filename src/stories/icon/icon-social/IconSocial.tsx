@@ -1,7 +1,3 @@
-import React from "react";
-import { InvalidProps } from "../../../components/InvalidProps";
-import "../../../styles/css/base.css";
-
 const svgIcons = [
   {
     title: "Facebook",

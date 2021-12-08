@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Logo } from "../logo/Logo";
 import { Pagefold } from "../pagefold/Pagefold";
 
@@ -37,7 +37,10 @@ export const Header = (props: HeaderProps) => {
                   container={false}
                   size="small"
                   classes="header-menu--navigation--button header-button"
-                  compProps={{ id: "header-menu--open", onClick:  () => window.eventHeader()}}
+                  compProps={{
+                    id: "header-menu--open",
+                    onClick: () => window.eventHeader(),
+                  }}
                 >
                   <img
                     src={`icons/basic/icon-menu.svg`}

@@ -1,6 +1,3 @@
-import React from "react";
-import "../../styles/css/base.css";
-
 export const Typography = () => {
   return (
     <div style={{ display: "grid", gridGap: "40px" }}>

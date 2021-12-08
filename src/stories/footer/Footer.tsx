@@ -1,4 +1,3 @@
-import React from "react";
 import { Pagefold } from "../pagefold/Pagefold";
 import { Accordion } from "../accordion/Accordion";
 import { Dropdown } from "../dropdown/Dropdown";

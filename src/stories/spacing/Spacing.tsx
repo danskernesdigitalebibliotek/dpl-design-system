@@ -1,6 +1,3 @@
-import React from "react";
-import "../../styles/css/base.css";
-
 export const Spacing = () => {
   return (
     <div className="internal-spacing-container">

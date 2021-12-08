@@ -58,6 +58,24 @@ npm run storybook
 
 When storybook is ready it automatically opens up in a browser with the interface ready to use.
 
+## Chromatic
+
+We are using Chromatic for visual test. You can access the dashboard
+under the `danskernesdigitalebibliotek` (organisation) `dpl-design-system` (project).
+
+https://www.chromatic.com/builds?appId=616ffdab9acbf5003ad5fd2b
+
+You can deploy a version locally to Chromatic by running:
+
+```bash
+npm run chromatic
+```
+
+Make sure to set the `CHROMATIC_PROJECT_TOKEN` environment variable is available in your shell context.
+You can access the token from:
+
+https://www.chromatic.com/manage?appId=616ffdab9acbf5003ad5fd2b&view=configure
+
 ### What is Storybook
 
 [Storybook](https://storybook.js.org/docs/react/get-started/introduction) is an open source tool for building UI components and pages in isolation from your app's business logic, data, and context.
