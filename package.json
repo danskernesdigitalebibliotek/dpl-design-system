@@ -36,7 +36,8 @@
     "css:format": "concurrently 'npm:css:stylelint -- --fix' 'npm:css:prettier -- --write' --max-processes 1 --raw",
     "css:build": "sass base.scss:src/styles/css/base.css",
     "css:watch": "npm run css:build -- --watch",
-    "dev": "concurrently --raw \"npm run storybook\" \"npm run css:watch\""
+    "dev": "concurrently --raw \"npm run storybook\" \"npm run css:watch\"",
+    "chromatic": "npx chromatic --exit-zero-on-changes"
   },
   "browserslist": {
     "production": [
