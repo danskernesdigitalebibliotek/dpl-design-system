@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
 import { Counter, CounterProps } from "../counter/Counter";
 import { StatusLabel, StatusLabelProps } from "../status-label/StatusLabel";
 import { ArrowUI } from "../arrows/icon-arrow-ui/ArrowUI.stories";
+import { Material } from "../material/Material";
 
 export type ReservationsAndLoansProps = {
   material: {
@@ -29,7 +29,7 @@ export const ReservationsAndLoans = (props: ReservationsAndLoansProps) => {
       <div className="list-reservation">
         <div className="list-reservation__material">
           <div>
-            <ImageMaterial url={material.image} />
+            <Material animate={true} url={material.image} />
             <a
               href={material.noteUrl}
               style={{ height: "14px", fontSize: "12px" }}
@@ -106,14 +106,6 @@ export const ReservationsAndLoans = (props: ReservationsAndLoansProps) => {
     </div>
   );
 };
-
-function ImageMaterial({ url }: { url: string }) {
-  return (
-    <div className="image-material">
-      <img src={"url"} alt="" />
-    </div>
-  );
-}
 
 declare global {
   interface Window {

@@ -128,13 +128,3 @@ $space-desktop: 24px;
   transform: translateY(16px) scale(0.9);
   z-index: -2;
 }
-
-.image-material {
-  aspect-ratio: 0.69;
-  height: 136px;
-  background-color: red;
-
-  @include breakpoint-s {
-    width: 94px;
-  }
-}
