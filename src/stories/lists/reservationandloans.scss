@@ -1,0 +1,140 @@
+$space-mobile: 16px;
+$space-desktop: 24px;
+
+.list-container {
+  position: relative;
+}
+
+.list-reservation {
+  background-color: $c-text-primary-white;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: $space-mobile;
+
+  @include breakpoint-s {
+    grid-template-columns: 1fr 1fr;
+    height: 184px;
+    padding: $space-desktop;
+  }
+}
+
+.list-reservation__material {
+  display: flex;
+  align-items: center;
+}
+
+.list-reservation__note-mobile {
+  display: block;
+  text-align: center;
+  margin-top: 4px;
+  white-space: nowrap;
+
+  @include breakpoint-s {
+    display: none;
+  }
+}
+
+.list-reservation__note-desktop {
+  display: none;
+  @include breakpoint-s {
+    display: block;
+  }
+}
+
+.list-reservation__information {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: $space-mobile;
+
+  @include breakpoint-s {
+    margin-left: $space-desktop;
+    justify-content: space-between;
+  }
+}
+
+.list-reservation__type {
+  @extend %text-tags;
+  padding: 6px $space-mobile;
+  border: 1px solid $c-global-tertiary-1;
+  display: inline-flex;
+}
+
+.list-reservation__about {
+  margin: 16px 0px;
+
+  @include breakpoint-s {
+    margin-top: 0px;
+  }
+}
+
+.list-reservation__status {
+  display: grid;
+  align-items: flex-end;
+  grid-template-columns: auto 1fr auto;
+
+  @include breakpoint-s {
+    align-items: center;
+    // margin-left: $space-desktop;
+  }
+}
+
+.list-reservation__counter {
+  display: none;
+
+  @include breakpoint-s {
+    width: 92px;
+    display: block;
+  }
+}
+
+.list-reservation__deadline {
+  display: inline-grid;
+  grid-row-gap: 8px;
+  margin-left: calc(72px + 16px);
+
+  @include breakpoint-s {
+    margin-left: 32px;
+  }
+}
+
+.list-reservation__fee {
+  > p {
+    text-align: end;
+  }
+}
+
+%list-stacked {
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: $c-text-primary-white;
+  perspective: 500px;
+  box-shadow: 0px 4px 20px rgba(72, 72, 72, 0.1);
+}
+
+.list-reservation__stacked_1 {
+  @extend %list-stacked;
+  transform: translateY(8px) scale(0.95);
+  z-index: -1;
+}
+
+.list-reservation__stacked_2 {
+  @extend %list-stacked;
+  transform: translateY(16px) scale(0.9);
+  z-index: -2;
+}
+
+.image-material {
+  aspect-ratio: 0.69;
+  height: 136px;
+  background-color: red;
+
+  @include breakpoint-s {
+    width: 94px;
+  }
+}
