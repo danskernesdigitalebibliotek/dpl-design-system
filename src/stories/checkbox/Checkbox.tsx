@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 
-export type CounterProps = {
+export type CheckboxProps = {
   isChecked: boolean;
   label?: string;
 };
 
-export const Checkbox = (props: CounterProps) => {
+export const Checkbox = (props: CheckboxProps) => {
   const { isChecked, label } = props;
   const checkboxId = useRef(`checkbox_id__${Date.now()}`);
   const inputRef = useRef<HTMLInputElement | null>(null);
