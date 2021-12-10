@@ -1,0 +1,30 @@
+.list-dashboard {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  position: relative;
+  padding: 16px;
+
+  @include breakpoint-s {
+    padding: 16px 24px;
+  }
+}
+
+.list-dashboard__title {
+  margin-left: 8px;
+  margin-right: 16px;
+
+  @include breakpoint-s {
+    margin-left: 24px;
+  }
+}
+
+.list-dashboard__dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background: #d63649;
+  border-radius: 100%;
+}

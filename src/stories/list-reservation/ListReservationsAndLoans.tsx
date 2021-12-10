@@ -3,7 +3,7 @@ import { StatusLabel, StatusLabelProps } from "../status-label/StatusLabel";
 import { ArrowUI } from "../arrows/icon-arrow-ui/ArrowUI.stories";
 import { Material } from "../material/Material";
 
-export type ReservationsAndLoansProps = {
+export type ListReservationsAndLoansProps = {
   material: {
     type: string;
     title: string;
@@ -21,7 +21,9 @@ export type ReservationsAndLoansProps = {
   fee: number;
 };
 
-export const ReservationsAndLoans = (props: ReservationsAndLoansProps) => {
+export const ListReservationsAndLoans = (
+  props: ListReservationsAndLoansProps
+) => {
   const { material, isStacked, counter, statusLabel, statusNotes, fee } = props;
 
   return (

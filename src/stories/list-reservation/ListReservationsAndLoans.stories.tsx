@@ -1,18 +1,18 @@
 import React from "react";
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ReservationsAndLoans } from "./ReservationsAndLoans";
+import { ListReservationsAndLoans } from "./ListReservationsAndLoans";
 
 export default {
-  title: "Components / Lists",
-  component: ReservationsAndLoans,
+  title: "Components / List - ReservationAndLoans",
+  component: ListReservationsAndLoans,
   decorators: [withDesign],
   argTypes: {},
   parameters: {},
-} as ComponentMeta<typeof ReservationsAndLoans>;
+} as ComponentMeta<typeof ListReservationsAndLoans>;
 
-const Template: ComponentStory<typeof ReservationsAndLoans> = (args) => (
-  <ReservationsAndLoans {...args} />
+const Template: ComponentStory<typeof ListReservationsAndLoans> = (args) => (
+  <ListReservationsAndLoans {...args} />
 );
 
 export const Item1 = Template.bind({});
