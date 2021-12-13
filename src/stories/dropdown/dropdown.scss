@@ -1,6 +1,7 @@
 .dropdown-select {
   appearance: none;
   -webkit-appearance: none;
+  min-width: 200px;
   width: 100%;
   height: 50px;
   padding: 0 20px;
@@ -9,7 +10,6 @@
   color: $c-text-primary-black;
   border-radius: 0;
   border: 1px solid $c-text-primary-black;
-
   @extend %text-button-placeholder;
 }
 
