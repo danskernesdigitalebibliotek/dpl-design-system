@@ -89,6 +89,17 @@
   }
 }
 
+//styleName: Desktop/H5;
+.text-header-h5 {
+  font-family: "Lora", serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 //styleName: Desktop/Subtitle;
 .text-subtitle {
   font-family: "Noto Sans JP", sans-serif;
@@ -190,6 +201,18 @@
   }
 }
 
+//styleName: Desktop/Body Copy - S - regular;
+%text-body-small-regular,
+.text-body-small-regular {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 // Using the placeholder selector, recommended by this rule
 // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-extend-no-missing-placeholder/README.md
 //styleName: Desktop/Button text;
@@ -276,4 +299,16 @@
     font-size: 14px;
     line-height: 130%;
   }
+}
+
+//styleName: Desktop/Label;
+%text-label,
+.text-label {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: left;
 }
