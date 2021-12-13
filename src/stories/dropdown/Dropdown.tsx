@@ -5,7 +5,7 @@ type DropdownItem = {
   href: string;
 };
 
-type DropdownProps = {
+export type DropdownProps = {
   list: DropdownItem[];
   ariaLabel: string;
 };

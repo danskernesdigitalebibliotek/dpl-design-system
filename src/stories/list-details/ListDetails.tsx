@@ -1,11 +1,17 @@
 import { StatusLabel, StatusLabelProps } from "../status-label/StatusLabel";
 import { Number, NumberProps } from "../number/Number";
-import { Dropdown } from "../dropdown/Dropdown";
+import { Dropdown, DropdownProps } from "../dropdown/Dropdown";
+import { Links } from "../links/Links";
 
 export type ListDetailsProps = {
   title: string;
   date: string;
   icon: string;
+  menu?: DropdownProps;
+  link?: {
+    label: string;
+    url: string;
+  };
 };
 
 export const ListDetails = (props: ListDetailsProps) => {
@@ -20,15 +26,12 @@ export const ListDetails = (props: ListDetailsProps) => {
           <p className="text-small-caption">{props.date}</p>
         </div>
         <div className="list-details__menu">
-          <Dropdown
-            ariaLabel="dropdown"
-            list={[
-              {
-                href: "",
-                title: "6 måneder",
-              },
-            ]}
-          />
+          {props.menu && (
+            <Dropdown ariaLabel={props.menu.ariaLabel} list={props.menu.list} />
+          )}
+          {props.link && (
+            <Links href={props.link.url} linkText={props.link.label} />
+          )}
         </div>
       </div>
     </div>

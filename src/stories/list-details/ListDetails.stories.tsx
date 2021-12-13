@@ -14,8 +14,33 @@ const Template: ComponentStory<typeof ListDetails> = (args) => (
   <ListDetails {...args} />
 );
 
-export const Item1 = Template.bind({});
-Item1.args = {
+export const Item = Template.bind({});
+Item.args = {
   title: "Afleveres",
   date: "31.11.21",
+};
+
+export const ItemLink = Template.bind({});
+ItemLink.args = {
+  title: "Har ingen interesse efter",
+  date: "6 måneder",
+  link: {
+    label: "Skift",
+    url: window.location.href,
+  },
+};
+
+export const ItemDropdown = Template.bind({});
+ItemDropdown.args = {
+  title: "Afleveres",
+  date: "31.11.21",
+  menu: {
+    ariaLabel: "dropdown",
+    list: [
+      {
+        href: "",
+        title: "Default state",
+      },
+    ],
+  },
 };
