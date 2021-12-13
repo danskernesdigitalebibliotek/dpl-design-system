@@ -1,0 +1,45 @@
+.material-card {
+  padding: 16px;
+  max-width: 360px;
+}
+
+.material-card__icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.material-card__material {
+  display: flex;
+  justify-content: center;
+  .material {
+    margin-top: 8px;
+  }
+}
+
+.material-card__texts {
+  margin-top: 16px;
+
+  @include breakpoint-s {
+    margin-top: 32px;
+  }
+}
+
+.material-card__description {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.material-card__title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
