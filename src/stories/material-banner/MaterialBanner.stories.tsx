@@ -60,6 +60,46 @@ Item.args = {
         size: "large",
       },
     },
+    {
+      title: "Lone Als Egebo (2021)",
+      description: "Mikrobiologibogen",
+      isLiked: false,
+      material: {
+        url: "images/book_cover_1.jpg",
+        animate: true,
+        size: "large",
+      },
+    },
+    {
+      title: "Lone Als Egebo (2021)",
+      description: "Mikrobiologibogen",
+      isLiked: false,
+      material: {
+        url: "images/book_cover_2.jpg",
+        animate: true,
+        size: "large",
+      },
+    },
+    {
+      title: "Lone Als Egebo (2021)",
+      description: "Mikrobiologibogen",
+      isLiked: true,
+      material: {
+        url: "images/book_cover_3.jpg",
+        animate: true,
+        size: "large",
+      },
+    },
+    {
+      title: "Lone Als Egebo (2021)",
+      description: "Mikrobiologibogen",
+      isLiked: false,
+      material: {
+        url: "images/book_cover_4.jpg",
+        animate: true,
+        size: "large",
+      },
+    },
   ],
   button: undefined,
   links: [],

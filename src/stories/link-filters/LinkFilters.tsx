@@ -11,8 +11,8 @@ export type LinkFiltersProps = {
 export const LinkFilters = (linkFilters: LinkFiltersProps) => {
   return (
     <div className="link-filters-container">
-      {list.map((item) => (
-        <div className="link-filters-tag-wrapper">
+      {list.map((item, index) => (
+        <div key={index} className="link-filters-tag-wrapper">
           <Links
             href={item.href}
             linkText={item.title}

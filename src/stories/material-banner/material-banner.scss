@@ -1,9 +1,9 @@
 .material-banner__header {
   padding: 24px;
-  padding-left: calc(100vw / 8 - 95px / 2);
+  padding-left: 45px;
 
   @include breakpoint-s {
-    padding-left: calc(100vw / 8 - 150px / 2);
+    padding-left: 100px;
   }
 }
 
@@ -42,5 +42,9 @@
 
   @include breakpoint-s {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include breakpoint-l {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 }

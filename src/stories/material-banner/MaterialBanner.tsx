@@ -32,8 +32,8 @@ export const MaterialBanner = (props: MaterialBannerProps) => {
         )}
       </div>
       <div className="material-banner__cards">
-        {props.cards.map((card) => (
-          <MaterialCard {...card} />
+        {props.cards.map((card, index) => (
+          <MaterialCard key={index} {...card} />
         ))}
       </div>
     </div>

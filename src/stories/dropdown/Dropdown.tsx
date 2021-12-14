@@ -14,8 +14,8 @@ export const Dropdown = (props: DropdownProps) => {
   return (
     <div className="dropdown">
       <select className="dropdown-select" aria-label={props.ariaLabel}>
-        {props.list.map((i) => (
-          <option className="dropdown-option" value={i.title}>
+        {props.list.map((i, index) => (
+          <option key={index} className="dropdown-option" value={i.title}>
             {i.title}
           </option>
         ))}
