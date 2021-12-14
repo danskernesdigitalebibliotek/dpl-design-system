@@ -1,6 +1,6 @@
 import React from "react";
 import { withDesign } from "storybook-addon-designs";
-import { Meta } from "@storybook/react";
+import { ComponentMeta, ComponentStory, Meta } from "@storybook/react";
 
 import { LinkFilters } from "./LinkFilters";
 
@@ -16,6 +16,39 @@ export default {
     },
     layout: "centered",
   },
-} as Meta;
+} as ComponentMeta<typeof LinkFilters>;
 
-export const Default = () => <LinkFilters />;
+const Template: ComponentStory<typeof LinkFilters> = (args) => (
+  <LinkFilters {...args} />
+);
+
+export const Item = Template.bind({});
+Item.args = {
+  filters: [
+    {
+      title: "Foredrag",
+      href: "",
+      counter: "24",
+    },
+    {
+      title: "Børn",
+      href: "",
+      counter: "16",
+    },
+    {
+      title: "Kunst og kreativitet",
+      href: "",
+      counter: "7",
+    },
+    {
+      title: "Bøger til din ferie",
+      href: "",
+      counter: "48",
+    },
+    {
+      title: "Læs dig gennem danmark",
+      href: "",
+      counter: "14",
+    },
+  ],
+};

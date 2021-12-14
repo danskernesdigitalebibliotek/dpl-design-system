@@ -1,6 +1,14 @@
 import { Links } from "../links/Links";
 
-export const LinkFilters = () => {
+export type LinkFiltersProps = {
+  filters: Array<{
+    title: string;
+    href: string;
+    counter: string;
+  }>;
+};
+
+export const LinkFilters = (linkFilters: LinkFiltersProps) => {
   return (
     <div className="link-filters-container">
       {list.map((item) => (
@@ -22,30 +30,25 @@ const list = [
     title: "Foredrag",
     href: "",
     counter: "24",
-    active: false,
   },
   {
     title: "Børn",
     href: "",
     counter: "16",
-    active: true,
   },
   {
     title: "Kunst og kreativitet",
     href: "",
     counter: "7",
-    active: true,
   },
   {
     title: "Bøger til din ferie",
     href: "",
     counter: "48",
-    active: true,
   },
   {
     title: "Læs dig gennem danmark",
     href: "",
     counter: "14",
-    active: true,
   },
 ];

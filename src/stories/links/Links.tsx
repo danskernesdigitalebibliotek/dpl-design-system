@@ -1,4 +1,4 @@
-type LinksProps = {
+export type LinksProps = {
   href: string;
   linkText: string;
   classNames?: string;
