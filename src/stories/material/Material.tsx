@@ -1,6 +1,7 @@
 export type MaterialProps = {
-  url?: string;
+  url: string;
   animate?: boolean;
+  size: "small" | "large";
 };
 
 const placeholderBg = [
@@ -12,9 +13,14 @@ const placeholderBg = [
 ];
 
 export const Material = (props: MaterialProps) => {
+  console.log(props);
   const bg = placeholderBg[(Math.random() * placeholderBg.length) | 0];
   return (
-    <a className={`material ${bg} ${props.animate ? "material-animate" : ""}`}>
+    <a
+      className={`material material-${props.size} ${bg} ${
+        props.animate ? "material-animate" : ""
+      }`}
+    >
       <img src={props.url} alt="" />
     </a>
   );

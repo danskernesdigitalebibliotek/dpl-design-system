@@ -1,0 +1,46 @@
+.material-banner__header {
+  padding: 24px;
+  padding-left: calc(100vw / 8 - 95px / 2);
+
+  @include breakpoint-s {
+    padding-left: calc(100vw / 8 - 150px / 2);
+  }
+}
+
+.material-banner__row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.material-banner__menu {
+  .link-filters-container {
+    display: none;
+  }
+
+  @include breakpoint-s {
+    .dropdown {
+      display: none;
+    }
+    .link-filters-container {
+      display: flex;
+    }
+  }
+}
+
+.material-banner__cards {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+
+  > .material-card {
+    background-color: #f6f5f0;
+  }
+
+  @include breakpoint-s {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,11 +1,16 @@
 .material-card {
   padding: 16px;
   max-width: 360px;
+  text-decoration: none;
 }
 
 .material-card__icon {
   display: flex;
   justify-content: flex-end;
+
+  svg {
+    cursor: pointer;
+  }
 }
 
 .material-card__material {

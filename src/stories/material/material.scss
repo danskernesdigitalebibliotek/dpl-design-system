@@ -1,12 +1,33 @@
+$MATERIAL_SMALL_MOBILE: 104px;
+$MATERIAL_SMALL_DESKTOP: 137px;
+$MATERIAL_LARGE_MOBILE: 137px;
+$MATERIAL_LARGE_DESKTOP: 216px;
+
+.material-small {
+  height: $MATERIAL_SMALL_MOBILE;
+
+  @include breakpoint-s {
+    height: $MATERIAL_SMALL_DESKTOP;
+  }
+}
+
+.material-large {
+  height: $MATERIAL_LARGE_MOBILE;
+
+  @include breakpoint-s {
+    height: $MATERIAL_LARGE_DESKTOP;
+  }
+}
+
 .material {
   aspect-ratio: 0.69;
-  height: 104px;
   background-color: red;
   display: inline-block;
   overflow: hidden;
 
-  @include breakpoint-s {
-    height: 136px;
+  > img {
+    width: 100%;
+    object-fit: cover;
   }
 }
 

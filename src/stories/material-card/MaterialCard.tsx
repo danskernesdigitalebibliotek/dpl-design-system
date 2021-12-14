@@ -9,7 +9,7 @@ export type MaterialCardProps = {
 
 export const MaterialCard = (props: MaterialCardProps) => {
   return (
-    <div className="material-card">
+    <a href="" className="material-card">
       <div className="material-card__icon">
         <svg
           width="20"
@@ -30,12 +30,12 @@ export const MaterialCard = (props: MaterialCardProps) => {
         </svg>
       </div>
       <div className="material-card__material">
-        <Material url={props.material.url} />
+        <Material {...props.material} />
       </div>
       <div className="material-card__texts">
         <p className="material-card__description">{props.description}</p>
         <p className="material-card__title">{props.title}</p>
       </div>
-    </div>
+    </a>
   );
 };
