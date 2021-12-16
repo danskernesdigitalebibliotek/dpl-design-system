@@ -1,7 +1,7 @@
 export type MaterialProps = {
   url: string;
   animate?: boolean;
-  size: "small" | "large";
+  size: "small" | "medium" | "large";
 };
 
 const placeholderBg = [
@@ -13,16 +13,17 @@ const placeholderBg = [
 ];
 
 export const Material = (props: MaterialProps) => {
-  console.log(props);
   const bg = placeholderBg[(Math.random() * placeholderBg.length) | 0];
   return (
-    <a
-      className={`material material-${props.size} ${bg} ${
-        props.animate ? "material-animate" : ""
-      }`}
-    >
-      <img src={props.url} alt="" />
-    </a>
+    <div className="material__container">
+      <a
+        className={`material material-${props.size} ${bg} ${
+          props.animate ? "material-animate" : ""
+        }`}
+      >
+        <img src={props.url} alt="" />
+      </a>
+    </div>
   );
 };
 

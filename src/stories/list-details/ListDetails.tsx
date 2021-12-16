@@ -1,5 +1,3 @@
-import { StatusLabel, StatusLabelProps } from "../status-label/StatusLabel";
-import { Number, NumberProps } from "../number/Number";
 import { Dropdown, DropdownProps } from "../dropdown/Dropdown";
 import { Links } from "../links/Links";
 
@@ -18,7 +16,7 @@ export const ListDetails = (props: ListDetailsProps) => {
   return (
     <div className="list-details">
       <div className="list-details__icon">
-        <img src="icons/collection/Ebook.svg" alt="arrow accent" />
+        <img src={props.icon} alt="arrow accent" />
       </div>
       <div className="list-details__container">
         <div className="list-details__content">

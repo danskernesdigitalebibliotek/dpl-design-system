@@ -1,10 +1,6 @@
-import React, { useEffect } from "react";
-import { Button } from "../button/Button";
-import { Links } from "../links/Links";
-
 export type StatusLabelProps = {
   label: string;
-  status: "danger" | "warning" | "info" | "neutral";
+  status: "danger" | "warning" | "info" | "neutral" | "outline";
 };
 
 export const StatusLabel = (props: StatusLabelProps) => {
@@ -15,6 +11,8 @@ export const StatusLabel = (props: StatusLabelProps) => {
     if (status === "warning") return "sl-warning";
     if (status === "info") return "sl-info";
     if (status === "neutral") return "sl-neutral";
+    if (status === "outline") return "sl-outline";
+
     return "";
   }
 

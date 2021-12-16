@@ -1,9 +1,16 @@
 $MATERIAL_SMALL_MOBILE: 104px;
 $MATERIAL_SMALL_DESKTOP: 137px;
-$MATERIAL_LARGE_MOBILE: 137px;
+$MATERIAL_MEDIUM_MOBILE: 137px;
+$MATERIAL_MEDIUM_DESKTOP: 216px;
+$MATERIAL_LARGE_MOBILE: 216px;
 $MATERIAL_LARGE_DESKTOP: 216px;
 
+.material__container {
+  display: flex;
+}
+
 .material-small {
+  aspect-ratio: 0.69;
   height: $MATERIAL_SMALL_MOBILE;
 
   @include breakpoint-s {
@@ -11,7 +18,17 @@ $MATERIAL_LARGE_DESKTOP: 216px;
   }
 }
 
+.material-medium {
+  aspect-ratio: 0.69;
+  height: $MATERIAL_LARGE_MOBILE;
+
+  @include breakpoint-s {
+    height: $MATERIAL_LARGE_DESKTOP;
+  }
+}
+
 .material-large {
+  aspect-ratio: 0.79;
   height: $MATERIAL_LARGE_MOBILE;
 
   @include breakpoint-s {
@@ -20,13 +37,13 @@ $MATERIAL_LARGE_DESKTOP: 216px;
 }
 
 .material {
-  aspect-ratio: 0.69;
   background-color: red;
   display: inline-block;
   overflow: hidden;
 
   > img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }

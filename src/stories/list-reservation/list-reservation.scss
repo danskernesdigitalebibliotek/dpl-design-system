@@ -56,13 +56,6 @@ $space-desktop: 24px;
   }
 }
 
-.list-reservation__type {
-  @extend %text-tags;
-  padding: 6px $space-mobile;
-  border: 1px solid $c-global-tertiary-1;
-  display: inline-flex;
-}
-
 .list-reservation__about {
   margin: 16px 0px;
 

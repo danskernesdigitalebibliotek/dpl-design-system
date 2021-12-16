@@ -31,7 +31,7 @@ export const ListReservationsAndLoans = (
       <div className="list-reservation">
         <div className="list-reservation__material">
           <div>
-            <Material animate={true} url={material.image} />
+            <Material size="small" animate={true} url={material.image} />
             <a
               href={material.noteUrl}
               style={{ height: "14px", fontSize: "12px" }}
@@ -46,7 +46,7 @@ export const ListReservationsAndLoans = (
           </div>
           <div className="list-reservation__information">
             <div>
-              <span className="list-reservation__type">{material.type}</span>
+              <StatusLabel label="bog" status="outline" />
             </div>
             <div className="list-reservation__about">
               <p className="text-header-h4">{material.title}</p>

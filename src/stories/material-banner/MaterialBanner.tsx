@@ -1,13 +1,12 @@
 import { ButtonProps } from "../button/Button";
 import { Dropdown } from "../dropdown/Dropdown";
-import { LinkFilters } from "../link-filters/LinkFilters";
-import { LinksProps } from "../links/Links";
+import { LinkFilter, LinkFilters } from "../link-filters/LinkFilters";
 import { MaterialCard, MaterialCardProps } from "../material-card/MaterialCard";
 
 export type MaterialBannerProps = {
   title: string;
   body: string;
-  links: LinksProps[];
+  linkFilters: LinkFilter[];
   button?: ButtonProps;
   cards: MaterialCardProps[];
   showLinkfilters: boolean;
@@ -22,8 +21,8 @@ export const MaterialBanner = (props: MaterialBannerProps) => {
           <h3 className="text-header-h2">{props.title}</h3>
           {props.showLinkfilters && (
             <div className="material-banner__menu">
-              <LinkFilters filters={linksFilters} />
-              <Dropdown ariaLabel="Dropdown filter" list={linksFilters} />
+              <LinkFilters filters={props.linkFilters} />
+              <Dropdown ariaLabel="Dropdown filter" list={props.linkFilters} />
             </div>
           )}
         </div>
@@ -39,26 +38,3 @@ export const MaterialBanner = (props: MaterialBannerProps) => {
     </div>
   );
 };
-
-const linksFilters = [
-  {
-    title: "Bob Dylan 80 år",
-    href: "",
-    counter: "8",
-  },
-  {
-    title: "Familien Bridgerton",
-    href: "",
-    counter: "24",
-  },
-  {
-    title: "Bøger til din ferie",
-    href: "",
-    counter: "48",
-  },
-  {
-    title: "Læs dig gennem Danmark",
-    href: "",
-    counter: "16",
-  },
-];

@@ -1,19 +1,29 @@
 .material-banner__header {
   padding: 24px;
-  padding-left: 45px;
 
   @include breakpoint-s {
+    padding: 24px 45px;
+  }
+
+  @include breakpoint-m {
     padding-left: 100px;
   }
 }
 
 .material-banner__row {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @include breakpoint-s {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 }
 
 .material-banner__menu {
+  margin-top: 16px;
+
   .link-filters-container {
     display: none;
   }

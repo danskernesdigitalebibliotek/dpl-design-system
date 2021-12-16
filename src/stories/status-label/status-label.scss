@@ -34,3 +34,11 @@
   background-color: $c-global-primary;
   color: $c-text-secondary-gray;
 }
+
+.sl-outline {
+  @extend %text-button-placeholder;
+
+  background-color: transparent;
+  border: 1px solid #dbdbdb;
+  color: $c-text-secondary-gray;
+}

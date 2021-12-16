@@ -27,7 +27,7 @@ Item.args = {
       material: {
         url: "images/book_cover_1.jpg",
         animate: true,
-        size: "large",
+        size: "medium",
       },
     },
     {
@@ -37,7 +37,7 @@ Item.args = {
       material: {
         url: "images/book_cover_2.jpg",
         animate: true,
-        size: "large",
+        size: "medium",
       },
     },
     {
@@ -47,7 +47,7 @@ Item.args = {
       material: {
         url: "images/book_cover_3.jpg",
         animate: true,
-        size: "large",
+        size: "medium",
       },
     },
     {
@@ -57,7 +57,7 @@ Item.args = {
       material: {
         url: "images/book_cover_4.jpg",
         animate: true,
-        size: "large",
+        size: "medium",
       },
     },
     {
@@ -67,7 +67,7 @@ Item.args = {
       material: {
         url: "images/book_cover_1.jpg",
         animate: true,
-        size: "large",
+        size: "medium",
       },
     },
     {
@@ -77,7 +77,7 @@ Item.args = {
       material: {
         url: "images/book_cover_2.jpg",
         animate: true,
-        size: "large",
+        size: "medium",
       },
     },
     {
@@ -87,7 +87,7 @@ Item.args = {
       material: {
         url: "images/book_cover_3.jpg",
         animate: true,
-        size: "large",
+        size: "medium",
       },
     },
     {
@@ -97,11 +97,32 @@ Item.args = {
       material: {
         url: "images/book_cover_4.jpg",
         animate: true,
-        size: "large",
+        size: "medium",
       },
     },
   ],
+  linkFilters: [
+    {
+      title: "Bob Dylan 80 år",
+      href: "",
+      counter: "8",
+    },
+    {
+      title: "Familien Bridgerton",
+      href: "",
+      counter: "24",
+    },
+    {
+      title: "Bøger til din ferie",
+      href: "",
+      counter: "48",
+    },
+    {
+      title: "Læs dig gennem Danmark",
+      href: "",
+      counter: "16",
+    },
+  ],
   button: undefined,
-  links: [],
   showLinkfilters: true,
 };

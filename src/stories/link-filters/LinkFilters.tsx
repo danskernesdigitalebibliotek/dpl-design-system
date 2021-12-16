@@ -1,17 +1,19 @@
 import { Links } from "../links/Links";
 
-export type LinkFiltersProps = {
-  filters: Array<{
-    title: string;
-    href: string;
-    counter: string;
-  }>;
+export type LinkFilter = {
+  title: string;
+  href: string;
+  counter: string;
 };
 
-export const LinkFilters = (linkFilters: LinkFiltersProps) => {
+export type LinkFiltersProps = {
+  filters: Array<LinkFilter>;
+};
+
+export const LinkFilters = (props: LinkFiltersProps) => {
   return (
     <div className="link-filters-container">
-      {list.map((item, index) => (
+      {props.filters.map((item, index) => (
         <div key={index} className="link-filters-tag-wrapper">
           <Links
             href={item.href}
@@ -24,31 +26,3 @@ export const LinkFilters = (linkFilters: LinkFiltersProps) => {
     </div>
   );
 };
-
-const list = [
-  {
-    title: "Foredrag",
-    href: "",
-    counter: "24",
-  },
-  {
-    title: "Børn",
-    href: "",
-    counter: "16",
-  },
-  {
-    title: "Kunst og kreativitet",
-    href: "",
-    counter: "7",
-  },
-  {
-    title: "Bøger til din ferie",
-    href: "",
-    counter: "48",
-  },
-  {
-    title: "Læs dig gennem danmark",
-    href: "",
-    counter: "14",
-  },
-];

@@ -3,6 +3,7 @@
   align-items: flex-start;
   min-height: 72px;
   padding: 16px;
+  background-color: $c-text-primary-white;
 
   @include breakpoint-s {
     height: 96px;

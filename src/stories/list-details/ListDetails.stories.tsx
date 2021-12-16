@@ -18,12 +18,14 @@ export const Item = Template.bind({});
 Item.args = {
   title: "Afleveres",
   date: "31.11.21",
+  icon: "icons/collection/Ebook.svg",
 };
 
 export const ItemLink = Template.bind({});
 ItemLink.args = {
   title: "Har ingen interesse efter",
   date: "6 måneder",
+  icon: "icons/collection/Ebook.svg",
   link: {
     label: "Skift",
     url: window.location.href,
@@ -34,6 +36,7 @@ export const ItemDropdown = Template.bind({});
 ItemDropdown.args = {
   title: "Afleveres",
   date: "31.11.21",
+  icon: "icons/collection/Ebook.svg",
   menu: {
     ariaLabel: "dropdown",
     list: [

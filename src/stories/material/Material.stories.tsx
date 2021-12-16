@@ -17,15 +17,18 @@ const Template: ComponentStory<typeof Material> = (args) => (
 export const MaterialVisible = Template.bind({});
 MaterialVisible.args = {
   url: "images/book_cover_3.jpg",
+  size: "small",
 };
 
 export const MaterialNotVisible = Template.bind({});
 MaterialNotVisible.args = {
   url: "",
+  size: "small",
 };
 
 export const MaterialAnimated = Template.bind({});
 MaterialAnimated.args = {
   url: "images/book_cover_3.jpg",
   animate: true,
+  size: "small",
 };

@@ -1,11 +1,10 @@
 .link-filters-container {
   display: flex;
-  flex-wrap: wrap;
+  grid-column-gap: 24px;
+  grid-column-row: 12px;
 }
 
 .link-filters-tag-wrapper {
-  padding-right: 24px;
-  padding-bottom: 12px;
 }
 .link-filters-tag-wrapper:last-child {
   padding-right: 0;

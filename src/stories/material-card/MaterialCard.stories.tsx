@@ -34,6 +34,6 @@ MaterialLarge.args = {
   material: {
     url: "images/book_cover_5.jpg",
     animate: false,
-    size: "large",
+    size: "medium",
   },
 };
