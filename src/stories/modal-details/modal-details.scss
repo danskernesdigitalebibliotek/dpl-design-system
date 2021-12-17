@@ -1,14 +1,8 @@
-$MODEL_CONTAINER_WIDTH: 1000px;
+$MODEL_DETAILS_CONTAINER_WIDTH: 1000px;
 
 .modal-details {
   flex-direction: column;
   align-items: center;
-  background-color: $c-global-primary;
-  position: relative;
-
-  opacity: 0;
-  display: none;
-  transition: opacity 0.3s;
 }
 
 .modal-show {
@@ -19,7 +13,7 @@ $MODEL_CONTAINER_WIDTH: 1000px;
 .modal-details__container {
   margin: 0px 24px;
 
-  max-width: $MODEL_CONTAINER_WIDTH;
+  max-width: $MODEL_DETAILS_CONTAINER_WIDTH;
 
   @include breakpoint-s {
     margin: 0px 45px;

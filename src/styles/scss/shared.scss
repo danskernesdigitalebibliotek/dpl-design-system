@@ -22,3 +22,28 @@
   height: 1px;
   overflow: hidden;
 }
+
+.modal-button__close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 34px;
+  transition: 0.3s;
+  z-index: 2;
+
+  &:hover {
+    transform: rotateZ(90deg);
+  }
+}
+.modal {
+  background-color: $c-global-primary;
+  position: relative;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+.modal-show {
+  display: flex;
+  opacity: 1;
+}

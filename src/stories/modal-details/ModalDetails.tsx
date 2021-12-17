@@ -9,6 +9,10 @@ import { WarningStatus } from "../warning-status/WarningStatus";
 import { StatusLabel } from "../status-label/StatusLabel";
 import { Button } from "../button/Button";
 import { ButtonUI } from "../button-ui/ButtonUI";
+import {
+  ModalCloseButton,
+  ModalFallbackButton,
+} from "../../components/ModalShared";
 
 export type ModalDetailsProps = {
   title: string;
@@ -30,34 +34,12 @@ export const ModalDetails = (props: ModalDetailsProps) => {
   };
 
   if (!showModal) {
-    return (
-      <div
-        style={{ display: "flex", justifyContent: "flex-end", padding: "20px" }}
-      >
-        <Button
-          buttonType="default"
-          size="large"
-          variant="filled"
-          label="Show modal"
-          disabled={false}
-          collapsible={true}
-          onClick={toggleModal}
-        />
-      </div>
-    );
+    return <ModalFallbackButton toggleModal={toggleModal} />;
   }
 
   return (
-    <div className={`modal-details ${showModal ? "modal-show" : ""}`}>
-      <ButtonUI
-        onClick={toggleModal}
-        classes="modal-details__close"
-        content={{
-          kind: "ICON",
-          alt: "close modal button",
-          url: "icons/collection/CloseLarge.svg",
-        }}
-      />
+    <div className={`modal modal-details ${showModal ? "modal-show" : ""}`}>
+      <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-details__container">
         <div className="modal-details__header">
           <div className="modal-details__cover">
