@@ -1,17 +1,17 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ModelDetails } from "./ModelDetails";
+import { ModalDetails } from "./ModalDetails";
 
 export default {
-  title: "Components / Model - Details",
-  component: ModelDetails,
+  title: "Components / Modal - Details",
+  component: ModalDetails,
   decorators: [withDesign],
   argTypes: {},
   parameters: {},
-} as ComponentMeta<typeof ModelDetails>;
+} as ComponentMeta<typeof ModalDetails>;
 
-const Template: ComponentStory<typeof ModelDetails> = (args) => (
-  <ModelDetails {...args} />
+const Template: ComponentStory<typeof ModalDetails> = (args) => (
+  <ModalDetails {...args} />
 );
 
 export const Item = Template.bind({});

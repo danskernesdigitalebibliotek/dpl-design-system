@@ -8,7 +8,7 @@ import { StatusLabel } from "../status-label/StatusLabel";
 import { Button } from "../button/Button";
 import { ButtonUI } from "../button-ui/ButtonUI";
 
-export type ModelDetailsProps = {
+export type ModalDetailsProps = {
   title: string;
   author: string;
   type: string;
@@ -16,39 +16,39 @@ export type ModelDetailsProps = {
   showModal: boolean;
 };
 
-export const ModelDetails = (props: ModelDetailsProps) => {
+export const ModalDetails = (props: ModalDetailsProps) => {
   return (
-    <div className={`model-details ${!props.showModal ? "model-hide" : ""}`}>
+    <div className={`modal-details ${!props.showModal ? "modal-hide" : ""}`}>
       <ButtonUI
-        classes="model-details__close"
+        classes="modal-details__close"
         icon={{
           alt: "close modal button",
           url: "icons/collection/CloseLarge.svg",
         }}
       />
-      <div className="model-details__container">
-        <div className="model-details__header">
-          <div className="model-details__cover">
+      <div className="modal-details__container">
+        <div className="modal-details__header">
+          <div className="modal-details__cover">
             <Material
               size="large"
               url="images/book_cover_large_1.jpg"
               animate={true}
             />
           </div>
-          <div className="model-details__material">
-            <div className="model-details__tags">
+          <div className="modal-details__material">
+            <div className="modal-details__tags">
               <StatusLabel label={props.type} status="outline" />
               {props.showWarning && (
                 <StatusLabel label="overskrevet" status="danger" />
               )}
             </div>
-            <h2 className="model-details__title text-header-h2">
+            <h2 className="modal-details__title text-header-h2">
               {props.title}
             </h2>
             <p className="text-body-medium-regular">{props.author}</p>
           </div>
         </div>
-        <div className="model-details__buttons">
+        <div className="modal-details__buttons">
           <Button
             buttonType="default"
             label="forny dit lån"
@@ -58,7 +58,7 @@ export const ModelDetails = (props: ModelDetailsProps) => {
             collapsible={true}
           />
         </div>
-        <div className="model-details__warning">
+        <div className="modal-details__warning">
           {props.showWarning && (
             <WarningStatus
               url="/"
@@ -66,13 +66,13 @@ export const ModelDetails = (props: ModelDetailsProps) => {
             />
           )}
         </div>
-        <div className="model-details__list">
+        <div className="modal-details__list">
           {listDetails.map((detail) => (
             <ListDetails {...detail} />
           ))}
         </div>
       </div>
-      <div className="model-details__banner">
+      <div className="modal-details__banner">
         <MaterialBanner
           title="Andre materialer"
           body=""
