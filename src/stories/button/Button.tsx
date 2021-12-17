@@ -7,6 +7,7 @@ export type ButtonProps = {
   collapsible: boolean;
   size: "large" | "medium" | "small" | "xsmall";
   variant: "outline" | "filled";
+  onClick?: () => void;
 };
 
 export const Button = (props: ButtonProps) => {
@@ -56,6 +57,7 @@ export const Button = (props: ButtonProps) => {
       type="button"
       className={`btn-primary ${getVariant()} ${getSize()} arrow-hover-right-small`}
       disabled={disabled}
+      onClick={props.onClick}
     >
       {`${label} ${buttonType === "search" ? "(6)" : ""}`}
       <Icon />

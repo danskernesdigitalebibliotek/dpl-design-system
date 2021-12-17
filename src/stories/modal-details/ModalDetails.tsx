@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import { MaterialBanner } from "../material-banner/MaterialBanner";
 import { MaterialCardProps } from "../material-card/MaterialCard";
 import { LinkFilter } from "../link-filters/LinkFilters";
@@ -17,9 +19,38 @@ export type ModalDetailsProps = {
 };
 
 export const ModalDetails = (props: ModalDetailsProps) => {
+  const [showModal, setShow] = useState(props.showModal);
+
+  useEffect(() => {
+    setShow(props.showModal);
+  }, [props.showModal]);
+
+  const toggleModal = () => {
+    setShow(!showModal);
+  };
+
+  if (!showModal) {
+    return (
+      <div
+        style={{ display: "flex", justifyContent: "flex-end", padding: "20px" }}
+      >
+        <Button
+          buttonType="default"
+          size="large"
+          variant="filled"
+          label="Show modal"
+          disabled={false}
+          collapsible={true}
+          onClick={toggleModal}
+        />
+      </div>
+    );
+  }
+
   return (
-    <div className={`modal-details ${!props.showModal ? "modal-hide" : ""}`}>
+    <div className={`modal-details ${showModal ? "modal-show" : ""}`}>
       <ButtonUI
+        onClick={toggleModal}
         classes="modal-details__close"
         content={{
           kind: "ICON",
@@ -68,8 +99,8 @@ export const ModalDetails = (props: ModalDetailsProps) => {
           )}
         </div>
         <div className="modal-details__list">
-          {listDetails.map((detail) => (
-            <ListDetails {...detail} />
+          {listDetails.map((detail, index) => (
+            <ListDetails key={index} {...detail} />
           ))}
         </div>
       </div>

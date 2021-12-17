@@ -1,17 +1,19 @@
 $MODEL_CONTAINER_WIDTH: 1000px;
 
 .modal-details {
-  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $c-global-primary;
   position: relative;
-  transition: 0.3s;
+
+  opacity: 0;
+  display: none;
+  transition: opacity 0.3s;
 }
 
-.modal-hide {
-  opacity: 0;
-  transform: translateY(20px);
+.modal-show {
+  display: flex;
+  opacity: 1;
 }
 
 .modal-details__container {
@@ -97,6 +99,7 @@ $MODEL_CONTAINER_WIDTH: 1000px;
   right: 0;
   padding: 34px;
   transition: 0.3s;
+  z-index: 2;
 
   &:hover {
     transform: rotateZ(90deg);
