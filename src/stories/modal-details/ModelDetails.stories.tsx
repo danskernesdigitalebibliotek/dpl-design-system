@@ -20,4 +20,5 @@ Item.args = {
   author: "Mike Madrid",
   type: "bog",
   showWarning: true,
+  showModal: true,
 };

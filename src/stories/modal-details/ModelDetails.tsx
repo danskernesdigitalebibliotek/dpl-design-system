@@ -6,17 +6,26 @@ import { Material } from "../material/Material";
 import { WarningStatus } from "../warning-status/WarningStatus";
 import { StatusLabel } from "../status-label/StatusLabel";
 import { Button } from "../button/Button";
+import { ButtonUI } from "../button-ui/ButtonUI";
 
 export type ModelDetailsProps = {
   title: string;
   author: string;
   type: string;
   showWarning: boolean;
+  showModal: boolean;
 };
 
 export const ModelDetails = (props: ModelDetailsProps) => {
   return (
-    <div className="model-details">
+    <div className={`model-details ${!props.showModal ? "model-hide" : ""}`}>
+      <ButtonUI
+        classes="model-details__close"
+        icon={{
+          alt: "close modal button",
+          url: "icons/collection/CloseLarge.svg",
+        }}
+      />
       <div className="model-details__container">
         <div className="model-details__header">
           <div className="model-details__cover">

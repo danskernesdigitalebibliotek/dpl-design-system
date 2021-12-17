@@ -5,6 +5,13 @@ $MODEL_CONTAINER_WIDTH: 1000px;
   flex-direction: column;
   align-items: center;
   background-color: $c-global-primary;
+  position: relative;
+  transition: 0.3s;
+}
+
+.model-hide {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .model-details__container {
@@ -24,7 +31,7 @@ $MODEL_CONTAINER_WIDTH: 1000px;
 
   @include breakpoint-s {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     padding-top: 96px;
     width: 80%;
   }
@@ -82,4 +89,16 @@ $MODEL_CONTAINER_WIDTH: 1000px;
 .model-details__banner {
   width: 100%;
   margin-top: 128px;
+}
+
+.model-details__close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 34px;
+  transition: 0.3s;
+
+  &:hover {
+    transform: rotateZ(90deg);
+  }
 }
