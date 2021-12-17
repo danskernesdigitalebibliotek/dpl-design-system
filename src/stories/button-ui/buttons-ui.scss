@@ -1,0 +1,9 @@
+$c-btn-border-active: $c-text-primary-black;
+$c-btn-border-disabled: $c-global-tertiary-2;
+
+.button-ui {
+  margin-left: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
