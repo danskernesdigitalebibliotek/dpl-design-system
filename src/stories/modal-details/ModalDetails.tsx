@@ -21,7 +21,8 @@ export const ModalDetails = (props: ModalDetailsProps) => {
     <div className={`modal-details ${!props.showModal ? "modal-hide" : ""}`}>
       <ButtonUI
         classes="modal-details__close"
-        icon={{
+        content={{
+          kind: "ICON",
           alt: "close modal button",
           url: "icons/collection/CloseLarge.svg",
         }}
