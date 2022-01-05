@@ -76,12 +76,11 @@
   text-align: left;
 
   @include breakpoint-s {
-    line-height: 130%;
+    line-height: 120%;
   }
 
   @include breakpoint-m {
     font-size: 24px;
-    line-height: 120%;
   }
 
   @include breakpoint-xl {
@@ -205,9 +204,21 @@
 %text-body-small-regular,
 .text-body-small-regular {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+//styleName: Desktop/Body Copy - S - medium;
+%text-body-small-medium,
+.text-body-small-medium {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
@@ -263,7 +274,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 24px;
+  line-height: 120%;
   letter-spacing: 0.02em;
   text-align: left;
   text-transform: uppercase;
