@@ -47,8 +47,8 @@ export const MaterialCard = (props: MaterialCardProps) => {
         <Material {...props.material} />
       </div>
       <div className="material-card__texts">
-        <p className="material-card__description">{props.description}</p>
         <p className="material-card__title">{props.title}</p>
+        <p className="material-card__description">{props.description}</p>
       </div>
     </div>
   );

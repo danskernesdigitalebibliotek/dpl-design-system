@@ -1,33 +1,30 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 export type CheckboxProps = {
   isChecked: boolean;
   label?: string;
+  callback?: (isChecked: boolean) => void;
 };
 
 export const Checkbox = (props: CheckboxProps) => {
-  const { isChecked, label } = props;
-  const checkboxId = useRef(`checkbox_id__${Date.now()}`);
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const checkboxId = useRef(`checkbox_id__${Math.random()}`);
+  const [isChecked, setChecked] = useState(props.isChecked)
 
-  useEffect(() => {
-    require("./initcheckbox");
-  }, []);
-
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.checked = isChecked;
+  const handleClick = () => {
+    if (props.callback) {
+      props.callback(!isChecked)
     }
-  }, [isChecked]);
+    setChecked(!isChecked)
+  }
 
   return (
-    <div onClick={(e) => window.eventCheckbox(e)}>
+    <div >
       <input
         id={checkboxId.current}
         className="checkbox-input"
         type="checkbox"
-        defaultChecked={isChecked}
-        ref={inputRef}
+        checked={isChecked}
+        onClick={handleClick}
       />
       <label className="checkbox" htmlFor={checkboxId.current}>
         <span>
@@ -40,16 +37,8 @@ export const Checkbox = (props: CheckboxProps) => {
             />
           </svg>
         </span>
-        {label && <span>{label}</span>}
+        {props.label && <span>{props.label}</span>}
       </label>
     </div>
   );
 };
-
-declare global {
-  interface Window {
-    eventCheckbox: (
-      event: React.MouseEvent<HTMLDivElement, MouseEvent>
-    ) => void;
-  }
-}

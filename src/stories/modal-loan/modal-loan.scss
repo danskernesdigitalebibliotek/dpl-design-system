@@ -1,0 +1,55 @@
+$MODEL_LOAN_CONTAINER_WIDTH: 1000px;
+
+.modal-loan {
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 96px;
+}
+
+.modal-loan__container {
+  margin: 0px 24px;
+
+  max-width: $MODEL_LOAN_CONTAINER_WIDTH;
+  width: 100%;
+
+  @include breakpoint-s {
+    margin: 0px 45px;
+  }
+}
+
+.modal-loan__header {
+  display: flex;
+  align-items: center;
+}
+
+.modal-loan__warning {
+  
+}
+
+.modal-loan__list__container {
+  display: grid;
+  grid-row-gap: 100px;
+}
+
+.modal-loan__list {
+  position: relative;
+  margin-top: 24px;
+}
+
+.modal-loan__count {
+  position: absolute;
+  top: -48px;
+}
+
+.modal-loan__list__materials{
+  display: grid;
+  grid-row-gap: 8px;
+}
+
+.modal-loan__buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 40px;
+}

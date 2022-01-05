@@ -1,0 +1,43 @@
+.list-materials {
+  display: flex;
+  min-height: 72px;
+  padding: 16px;
+  background-color: $c-global-secondary;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include breakpoint-s {
+    height: 96px;
+    padding: 16px 32px;
+    align-items: center;
+    flex-direction: row;
+
+  }
+}
+
+.list-materials__content {
+  flex: 1;
+}
+
+.list-materials__selected {
+  background-color: $c-text-primary-white;
+}
+
+.list-materials__status {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 16px;
+  grid-gap: 8px;
+
+  @include breakpoint-s {
+    margin-top: 0px;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 16px;
+ }
+
+ .text-small-caption {
+   color: $c-text-secondary-gray;
+ }
+}

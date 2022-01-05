@@ -34,7 +34,7 @@ export const ModalCTA = (props: ModalCTAProps) => {
       <div className="modal-cta__container">
         <h2 className="modal-cta__title text-header-h2">{props.title}</h2>
         <div className="mt-48 color-secondary-gray">
-          <p className="text-body-medium-medium">
+          <p className="text-body-medium-regular">
             Fornyer du dine lån, forhøjes dit gebyr.
           </p>
           <p className="text-links mt-24">
