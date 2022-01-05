@@ -21,7 +21,7 @@ export const Counter = (props: CounterProps) => {
 
   const borderProgress = `radial-gradient(
     closest-side,
-    white calc(100% - 3px),
+    var(--parent-bg-color) calc(100% - 3px),
     transparent calc(100% - 2px),
     transparent 0 100%
   ),

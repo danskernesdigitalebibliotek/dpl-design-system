@@ -36,6 +36,11 @@
   }
 }
 .modal {
+    /**
+  * This color is inherited by the <Counter /> component.
+  **/
+  --parent-bg-color: #f6f5f0;
+
   background-color: $c-global-primary;
   position: relative;
   opacity: 0;
@@ -46,4 +51,12 @@
 .modal-show {
   display: flex;
   opacity: 1;
+}
+
+:root {
+  --parent-bg-color: white;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
