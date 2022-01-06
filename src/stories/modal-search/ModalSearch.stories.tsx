@@ -1,0 +1,23 @@
+import { withDesign } from "storybook-addon-designs";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { ModalSearch } from "./ModalSearch";
+
+export default {
+  title: "Components / Modal - Search",
+  component: ModalSearch,
+  decorators: [withDesign],
+  argTypes: {},
+  parameters: {},
+} as ComponentMeta<typeof ModalSearch>;
+
+const Template: ComponentStory<typeof ModalSearch> = (args) => (
+  <ModalSearch {...args} />
+);
+
+export const Search = Template.bind({});
+Search.args = {
+  title: "Afleveres 12. oktober 2021",
+  description: "Kan afleveres på alle Rudersdals biblioteker",
+  showExpired: true,
+  showModal: true,
+};
