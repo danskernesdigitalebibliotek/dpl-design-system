@@ -7,7 +7,13 @@ export default {
   component: ModalText,
   decorators: [withDesign],
   argTypes: {},
-  parameters: {},
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2137%3A11417",
+    },
+  },
 } as ComponentMeta<typeof ModalText>;
 
 const Template: ComponentStory<typeof ModalText> = (args) => (

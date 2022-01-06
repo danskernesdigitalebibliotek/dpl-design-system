@@ -7,7 +7,13 @@ export default {
   component: ListDetails,
   decorators: [withDesign],
   argTypes: {},
-  parameters: {},
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1385%3A8923",
+    },
+  },
 } as ComponentMeta<typeof ListDetails>;
 
 const Template: ComponentStory<typeof ListDetails> = (args) => (

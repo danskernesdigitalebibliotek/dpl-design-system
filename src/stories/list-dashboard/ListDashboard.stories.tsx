@@ -7,7 +7,13 @@ export default {
   component: ListDashboard,
   decorators: [withDesign],
   argTypes: {},
-  parameters: {},
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1543%3A5965",
+    },
+  },
 } as ComponentMeta<typeof ListDashboard>;
 
 const Template: ComponentStory<typeof ListDashboard> = (args) => (

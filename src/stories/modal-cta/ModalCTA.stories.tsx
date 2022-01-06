@@ -7,7 +7,13 @@ export default {
   component: ModalCTA,
   decorators: [withDesign],
   argTypes: {},
-  parameters: {},
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2137%3A11410",
+    },
+  },
 } as ComponentMeta<typeof ModalCTA>;
 
 const Template: ComponentStory<typeof ModalCTA> = (args) => (

@@ -7,7 +7,13 @@ export default {
   component: ModalLoan,
   decorators: [withDesign],
   argTypes: {},
-  parameters: {},
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2137%3A11409",
+    },
+  },
 } as ComponentMeta<typeof ModalLoan>;
 
 const Template: ComponentStory<typeof ModalLoan> = (args) => (

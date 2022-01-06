@@ -8,7 +8,13 @@ export default {
   component: ListReservationsAndLoans,
   decorators: [withDesign],
   argTypes: {},
-  parameters: {},
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1181%3A5923",
+    },
+  },
 } as ComponentMeta<typeof ListReservationsAndLoans>;
 
 const Template: ComponentStory<typeof ListReservationsAndLoans> = (args) => (
