@@ -1,0 +1,48 @@
+$MODEL_TEXT_CONTAINER_WIDTH: 550px;
+
+.modal-text {
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: scroll;
+  padding-top: 96px;
+  padding-bottom: 100px;
+}
+
+.modal-text__container {
+  margin: 0px 24px;
+
+  max-width: $MODEL_TEXT_CONTAINER_WIDTH;
+  width: 100%;
+
+  @include breakpoint-s {
+    margin: 0px 45px;
+  }
+}
+
+.modal-text__content {
+  display: grid;
+  grid-row-gap: 16px;
+  margin-top: 32px;
+}
+
+.modal-text__buttons {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  height: 88px;
+  width: 100%;
+  background-color: $c-global-primary;
+  filter:  drop-shadow(4px 0px 20px rgba(72, 72, 72, 0.1));
+}
+
+.modal-text__buttons__inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-column-gap: 24px;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+}

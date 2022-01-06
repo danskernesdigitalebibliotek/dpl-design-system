@@ -10,7 +10,7 @@ $MODEL_SEARCH_CONTAINER_WIDTH: 550px;
 .modal-search__container {
   margin: 0px 24px;
 
-  max-width: $MODEL_LOAN_CONTAINER_WIDTH;
+  max-width: $MODEL_SEARCH_CONTAINER_WIDTH;
   width: 100%;
 
   @include breakpoint-s {
