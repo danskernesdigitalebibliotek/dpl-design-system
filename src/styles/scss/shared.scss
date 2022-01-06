@@ -46,6 +46,7 @@
   opacity: 0;
   display: none;
   transition: opacity 0.3s;
+  overflow: scroll;
 }
 
 .modal-show {
