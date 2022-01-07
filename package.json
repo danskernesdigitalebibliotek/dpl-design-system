@@ -30,7 +30,7 @@
     "js:prettier": "prettier 'src/**/*.{js,ts}'",
     "js:lint": "concurrently 'npm:js:eslint' 'npm:js:prettier -- --check' --raw",
     "js:format": "concurrently 'npm:js:eslint -- --fix' 'npm:js:prettier -- --write' --max-processes 1 --raw",
-    "css:stylelint": "stylelint 'src/styles/**/*.scss'",
+    "css:stylelint": "stylelint 'src/**/*.scss'",
     "css:prettier": "prettier 'src/styles/**/*.scss'",
     "css:lint": "concurrently 'npm:css:stylelint' 'npm:css:prettier -- --check' --raw",
     "css:format": "concurrently 'npm:css:stylelint -- --fix' 'npm:css:prettier -- --write' --max-processes 1 --raw",

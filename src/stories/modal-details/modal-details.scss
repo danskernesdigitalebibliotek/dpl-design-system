@@ -11,12 +11,11 @@ $MODEL_DETAILS_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-details__container {
-  margin: 0px 24px;
-
+  margin: 0 24px;
   max-width: $MODEL_DETAILS_CONTAINER_WIDTH;
 
   @include breakpoint-s {
-    margin: 0px 45px;
+    margin: 0 45px;
   }
 }
 
@@ -34,17 +33,17 @@ $MODEL_DETAILS_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-details__cover {
-  margin: 48px 0px;
+  margin: 48px 0;
   @include breakpoint-s {
-    margin: 0px;
+    margin: 0;
   }
 }
 
 .modal-details__material {
-  margin: 0px;
+  margin: 0;
 
   @include breakpoint-s {
-    margin: 0px 46px;
+    margin: 0 46px;
   }
 }
 
@@ -55,15 +54,7 @@ $MODEL_DETAILS_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-details__title {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  padding-bottom: 0px; // To prevent wrapped text to be cutted off
-
-  @include breakpoint-s {
-    padding-bottom: 6px; // To prevent wrapped text to be cutted off
-  }
+  display: block;
 }
 
 .modal-details__buttons {

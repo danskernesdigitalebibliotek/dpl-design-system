@@ -18,7 +18,7 @@
   width: 24px;
 
   @include breakpoint-s {
-    margin-top: 0px;
+    margin-top: 0;
     margin-right: 32px;
     width: 32px;
   }
@@ -34,13 +34,10 @@
   }
 }
 
-.list-details__content {
-}
-
 .list-details__menu {
   margin-top: 16px;
 
   @include breakpoint-s {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }

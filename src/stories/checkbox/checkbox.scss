@@ -50,14 +50,16 @@
   border-color: $c-text-secondary-gray;
 }
 
+/* stylelint-disable selector-max-compound-selectors */
 .checkbox-input:checked + .checkbox span:first-child {
   background: $c-text-secondary-gray;
   border-color: $c-text-secondary-gray;
   animation: zoom-in-out 0.3s ease;
-}
 
-.checkbox-input:checked + .checkbox span:first-child svg {
-  stroke-dashoffset: 0;
+  svg {
+    stroke-dashoffset: 0;
+
+  }
 }
 
 @keyframes zoom-in-out {

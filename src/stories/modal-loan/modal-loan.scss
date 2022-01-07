@@ -7,23 +7,18 @@ $MODEL_LOAN_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-loan__container {
-  margin: 0px 24px;
-
+  margin: 0 24px;
   max-width: $MODEL_LOAN_CONTAINER_WIDTH;
   width: 100%;
 
   @include breakpoint-s {
-    margin: 0px 45px;
+    margin: 0 45px;
   }
 }
 
 .modal-loan__header {
   display: flex;
   align-items: center;
-}
-
-.modal-loan__warning {
-  
 }
 
 .modal-loan__list__container {

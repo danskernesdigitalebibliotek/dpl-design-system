@@ -29,7 +29,7 @@
   }
 }
 
-.modal-button__close {
+.modal-button-close {
   position: fixed;
   top: 0;
   right: 0;
@@ -41,6 +41,7 @@
     transform: rotateZ(90deg);
   }
 }
+
 .modal {
     /**
   * This color is inherited by the <Counter /> component.
@@ -66,7 +67,7 @@
 }
 
 :root {
-  --parent-bg-color: white;
+  --parent-bg-color: $c-text-primary-white;
 }
 
 .uppercase {

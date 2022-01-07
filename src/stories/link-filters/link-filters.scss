@@ -1,11 +1,8 @@
 .link-filters-container {
   display: flex;
   grid-column-gap: 24px;
-  grid-column-row: 12px;
 }
 
-.link-filters-tag-wrapper {
-}
 .link-filters-tag-wrapper:last-child {
   padding-right: 0;
   padding-bottom: 0;
@@ -13,11 +10,12 @@
 
 .link-filters-tag {
   @extend %text-body-medium-regular-placeholder;
+  
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 
   &--active {
     border-bottom: 0;

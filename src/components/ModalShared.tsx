@@ -31,7 +31,7 @@ export function ModalCloseButton({ toggleModal }: { toggleModal: () => void }) {
   return (
     <ButtonUI
       onClick={toggleModal}
-      classes="modal-button__close"
+      classes="modal-button-close"
       content={{
         kind: "ICON",
         alt: "close modal button",
