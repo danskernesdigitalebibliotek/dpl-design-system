@@ -24,13 +24,16 @@ export const ListMaterials = (props: ListMaterialsProps) => {
         }`}
     >
       {props.canBeRenewed && (
-        <div className="mr-32">
+        <div className="list-materials__checkbox mr-32">
           <Checkbox isChecked={isChecked} callback={handleToggle} />
         </div>
       )}
       <div className="list-materials__content">
-        <StatusLabel {...props.statusMaterialType} />
-        <p className="text-header-h5">{props.title}</p>
+        <div className="list-materials__content_status">
+          <StatusLabel {...props.statusMaterialType} />
+          <StatusLabel classNames="hide-768px" {...props.statusDelivery} />
+        </div>
+        <p className="text-header-h5 mt-8">{props.title}</p>
         <p className="text-small-caption">{props.author}</p>
       </div>
       <div className="list-materials__status">

@@ -1,10 +1,11 @@
 export type StatusLabelProps = {
   label: string;
   status: "danger" | "warning" | "info" | "neutral" | "outline";
+  classNames?: string;
 };
 
 export const StatusLabel = (props: StatusLabelProps) => {
-  const { label, status } = props;
+  const { label, status, classNames } = props;
 
   function getStatus() {
     if (status === "danger") return "sl-danger";
@@ -17,7 +18,7 @@ export const StatusLabel = (props: StatusLabelProps) => {
   }
 
   return (
-    <div className={`status-label  ${getStatus()}`}>
+    <div className={`status-label  ${getStatus()} ${classNames || ""}`}>
       <span>{label}</span>
     </div>
   );

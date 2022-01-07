@@ -23,6 +23,12 @@
   overflow: hidden;
 }
 
+.hide-768px {
+  @include breakpoint-s {
+    display: none;
+  }
+}
+
 .modal-button__close {
   position: fixed;
   top: 0;
@@ -46,7 +52,12 @@
   opacity: 0;
   display: none;
   transition: opacity 0.3s;
-  overflow: scroll;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.modal-padding {
+  padding: 20px;
 }
 
 .modal-show {

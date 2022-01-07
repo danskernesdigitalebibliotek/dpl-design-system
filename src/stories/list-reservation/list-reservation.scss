@@ -28,9 +28,8 @@ $space-desktop: 24px;
 
 .list-reservation__note-mobile {
   display: block;
-  text-align: center;
   margin-top: 4px;
-  white-space: nowrap;
+  white-space: break-spaces;
 
   @include breakpoint-s {
     display: none;
@@ -97,6 +96,7 @@ $space-desktop: 24px;
 .list-reservation__fee {
   > p {
     text-align: end;
+    white-space: nowrap;
   }
 }
 

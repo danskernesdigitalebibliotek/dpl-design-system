@@ -28,7 +28,7 @@ export const ModalText = (props: ModalTextProps) => {
   }
 
   return (
-    <div className={`modal modal-text ${showModal ? "modal-show" : ""}`}>
+    <div className={`modal modal-text ${showModal ? "modal-show" : ""} modal-padding`}>
       <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-text__container color-secondary-gray">
         <h2 className="text-header-h2">Vilkår for brug og opbevaring af Data</h2>

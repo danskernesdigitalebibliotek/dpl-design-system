@@ -4,7 +4,6 @@
   padding: 16px;
   background-color: $c-global-secondary;
   justify-content: space-between;
-  flex-direction: column;
 
   @include breakpoint-s {
     height: 96px;
@@ -13,6 +12,11 @@
     flex-direction: row;
 
   }
+}
+
+.list-materials__checkbox {
+  display: flex;
+  align-items: center;
 }
 
 .list-materials__content {
@@ -24,13 +28,10 @@
 }
 
 .list-materials__status {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-top: 16px;
-  grid-gap: 8px;
+  display: none;
 
   @include breakpoint-s {
+    display: flex;
     margin-top: 0px;
     flex-direction: row;
     align-items: center;
@@ -40,4 +41,15 @@
  .text-small-caption {
    color: $c-text-secondary-gray;
  }
+}
+
+.list-materials__content_status {
+  display: inline-flex;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+
+  @include breakpoint-s {
+    display: flex;
+    flex-direction: row;
+  }
 }

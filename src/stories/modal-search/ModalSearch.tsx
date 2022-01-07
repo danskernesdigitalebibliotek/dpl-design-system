@@ -28,7 +28,7 @@ export const ModalSearch = (props: ModalSearchProps) => {
   }
 
   return (
-    <div className={`modal modal-search ${showModal ? "modal-show" : ""}`}>
+    <div className={`modal modal-search ${showModal ? "modal-show" : ""} modal-padding `}>
       <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-search__container">
         <h2 className="text-header-h2">Gem søgning</h2>
@@ -38,7 +38,7 @@ export const ModalSearch = (props: ModalSearchProps) => {
           </p>
         </div>
         <div className="modal-search__input mt-24">
-          <input className="modal-search__input_element" type="text" />
+          <input className="modal-search__input_element text-body-large" type="text" />
         </div>
         <div className="modal-search__buttons mt-48">
           <Button

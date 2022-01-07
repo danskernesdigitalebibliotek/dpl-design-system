@@ -32,17 +32,6 @@ export const ListReservationsAndLoans = (
         <div className="list-reservation__material">
           <div>
             <Material size="small" animate={true} url={material.image} />
-            <a
-              href={material.noteUrl}
-              style={{ height: "14px", fontSize: "12px" }}
-              className={`list-reservation__note-mobile text-small-caption ${
-                material.noteAsWarning
-                  ? "color-signal-alert"
-                  : "color-secondary-gray"
-              }`}
-            >
-              {material.noteLabel}
-            </a>
           </div>
           <div className="list-reservation__information">
             <div>
@@ -59,12 +48,11 @@ export const ListReservationsAndLoans = (
             </div>
             <a
               href={material.noteUrl}
-              style={{ height: "14px", fontSize: "12px" }}
-              className={`list-reservation__note-desktop text-small-caption ${
-                material.noteAsWarning
-                  ? "color-signal-alert"
-                  : "color-secondary-gray"
-              }`}
+              style={{ fontSize: "12px" }}
+              className={`list-reservation__note-desktop text-small-caption ${material.noteAsWarning
+                ? "color-signal-alert"
+                : "color-secondary-gray"
+                }`}
             >
               {material.noteLabel}
             </a>
@@ -92,15 +80,22 @@ export const ListReservationsAndLoans = (
                 />
               )}
               <p className="text-small-caption">{statusNotes}</p>
+              <a
+                href={material.noteUrl}
+                style={{ fontSize: "12px" }}
+                className={`list-reservation__note-mobile text-small-caption ${material.noteAsWarning
+                  ? "color-signal-alert"
+                  : "color-secondary-gray"
+                  }`}
+              >
+                {material.noteLabel}
+              </a>
             </div>
           </div>
-          <div className="list-reservation__fee">
-            {fee ? (
-              <p className="text-body-medium-medium">Gebyr {fee},-</p>
-            ) : (
-              <ArrowUI direction="right" hover={false} size="small" />
-            )}
-          </div>
+
+          {fee > 0 ? <div className="list-reservation__fee">
+            <p className="text-body-medium-medium">Gebyr {fee},-</p>
+          </div> : null}
         </div>
       </div>
       {isStacked && <div className="list-reservation__stacked_1" />}

@@ -3,12 +3,11 @@ $MODEL_SEARCH_CONTAINER_WIDTH: 550px;
 .modal-search {
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  padding-top: 96px;
 }
 
 .modal-search__container {
   margin: 0px 24px;
+  padding-top: 96px;
 
   max-width: $MODEL_SEARCH_CONTAINER_WIDTH;
   width: 100%;
@@ -29,4 +28,5 @@ $MODEL_SEARCH_CONTAINER_WIDTH: 550px;
   border: none;
   border-bottom: 1px solid black;
   background-color: transparent;
+  border-radius: 0px;;
 }

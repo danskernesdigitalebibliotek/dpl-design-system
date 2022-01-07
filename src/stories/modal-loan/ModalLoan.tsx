@@ -48,7 +48,7 @@ export const ModalLoan = (props: ModalLoanProps) => {
   }
 
   return (
-    <div className={`modal modal-loan ${showModal ? "modal-show" : ""}`}>
+    <div className={`modal modal-padding modal-loan ${showModal ? "modal-show" : ""}`}>
       <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-loan__container">
         <div className="modal-loan__header">
