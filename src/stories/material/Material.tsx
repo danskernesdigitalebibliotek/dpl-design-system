@@ -1,6 +1,6 @@
 export type MaterialProps = {
   url: string;
-  animate?: boolean;
+  animate: boolean;
   size: "small" | "medium" | "large";
 };
 
@@ -17,9 +17,8 @@ export const Material = (props: MaterialProps) => {
   return (
     <div className="material__container">
       <a
-        className={`material material-${props.size} ${bg} ${
-          props.animate ? "material-animate" : ""
-        }`}
+        className={`material material-${props.size} ${bg} ${props.animate ? "material-animate" : ""
+          }`}
       >
         <img src={props.url} alt="" />
       </a>

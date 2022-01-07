@@ -18,12 +18,16 @@ export const MaterialVisible = Template.bind({});
 MaterialVisible.args = {
   url: "images/book_cover_3.jpg",
   size: "small",
+  animate: false,
+
 };
 
 export const MaterialNotVisible = Template.bind({});
 MaterialNotVisible.args = {
   url: "",
   size: "small",
+  animate: false,
+
 };
 
 export const MaterialAnimated = Template.bind({});
