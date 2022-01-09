@@ -20,6 +20,7 @@ export const MaterialCard = (props: MaterialCardProps) => {
       <div className="material-card__icon">
         <ButtonUI
           onClick={handleClick}
+          ariaLabel="bookmark material"
           content={{
             kind: "CHILDREN",
           }}

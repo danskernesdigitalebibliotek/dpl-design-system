@@ -32,6 +32,7 @@ export const Counter = (props: CounterProps) => {
       role="progressbar"
       style={{ background: borderProgress }}
       className={`counter`}
+      aria-label="counter showing time remaining "
     >
       {isReady ? (
         <img

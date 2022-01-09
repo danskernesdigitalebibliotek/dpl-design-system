@@ -46,17 +46,11 @@ export const ModalText = (props: ModalTextProps) => {
       </div>
       <div className="modal-text__buttons">
         <div className="modal-text__buttons__inner">
-          <ButtonUI
-            content={{
-              kind: "CHILDREN",
-            }}
-          >
-            <Links
-              href={"/"}
-              linkText="Ikke nu"
-              classNames="color-secondary-gray"
-            />
-          </ButtonUI>
+          <Links
+            href={"/"}
+            linkText="Ikke nu"
+            classNames="color-secondary-gray"
+          />
           <Button
             buttonType="default"
             size="large"

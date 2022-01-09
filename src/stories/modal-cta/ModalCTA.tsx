@@ -58,18 +58,13 @@ export const ModalCTA = (props: ModalCTAProps) => {
             disabled={false}
             collapsible={true}
           />
-          <ButtonUI
-            classes="mt-16"
-            content={{
-              kind: "CHILDREN",
-            }}
-          >
+          <div className="modal-cta__link">
             <Links
               href={"/"}
               linkText="Ja, forny mulige"
-              classNames="color-secondary-gray  ml-8"
+              classNames="color-secondary-gray   ml-8"
             />
-          </ButtonUI>
+          </div>
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ export const ModalSearch = (props: ModalSearchProps) => {
           </p>
         </div>
         <div className="modal-search__input mt-24">
-          <input className="modal-search__input_element text-body-large" type="text" />
+          <input className="modal-search__input_element text-body-large" type="text" aria-label="Save your search results" />
         </div>
         <div className="modal-search__buttons mt-48">
           <Button

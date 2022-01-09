@@ -17,6 +17,7 @@ export type ButtonUIProps = {
   content: ContentIcon | ContentLabel | ContentChildren;
   children?: React.ReactNode;
   classes?: string;
+  ariaLabel: string;
   onClick?: () => void;
 };
 
@@ -39,6 +40,7 @@ export const ButtonUI = (props: ButtonUIProps) => {
       type="button"
       className={`button-ui ${classes || ""}`}
       onClick={props.onClick}
+      aria-label={props.ariaLabel}
     >
       {getChild()}
     </button>

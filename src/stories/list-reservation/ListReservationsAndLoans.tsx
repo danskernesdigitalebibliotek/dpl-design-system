@@ -49,6 +49,7 @@ export const ListReservationsAndLoans = (
             <a
               href={material.noteUrl}
               style={{ fontSize: "12px" }}
+              aria-label="note about material"
               className={`list-reservation__note-desktop text-small-caption ${material.noteAsWarning
                 ? "color-signal-alert"
                 : "color-secondary-gray"
