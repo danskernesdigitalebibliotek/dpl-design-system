@@ -50,10 +50,11 @@ export const ListReservationsAndLoans = (
               href={material.noteUrl}
               style={{ fontSize: "12px" }}
               aria-label="note about material"
-              className={`list-reservation__note-desktop text-small-caption ${material.noteAsWarning
-                ? "color-signal-alert"
-                : "color-secondary-gray"
-                }`}
+              className={`list-reservation__note-desktop text-small-caption ${
+                material.noteAsWarning
+                  ? "color-signal-alert"
+                  : "color-secondary-gray"
+              }`}
             >
               {material.noteLabel}
             </a>
@@ -84,19 +85,22 @@ export const ListReservationsAndLoans = (
               <a
                 href={material.noteUrl}
                 style={{ fontSize: "12px" }}
-                className={`list-reservation__note-mobile text-small-caption ${material.noteAsWarning
-                  ? "color-signal-alert"
-                  : "color-secondary-gray"
-                  }`}
+                className={`list-reservation__note-mobile text-small-caption ${
+                  material.noteAsWarning
+                    ? "color-signal-alert"
+                    : "color-secondary-gray"
+                }`}
               >
                 {material.noteLabel}
               </a>
             </div>
           </div>
 
-          {fee > 0 ? <div className="list-reservation__fee">
-            <p className="text-body-medium-medium">Gebyr {fee},-</p>
-          </div> : null}
+          {fee > 0 ? (
+            <div className="list-reservation__fee">
+              <p className="text-body-medium-medium">Gebyr {fee},-</p>
+            </div>
+          ) : null}
         </div>
       </div>
       {isStacked && <div className="list-reservation__stacked_1" />}

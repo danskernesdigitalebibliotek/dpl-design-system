@@ -28,17 +28,23 @@ export const ModalSearch = (props: ModalSearchProps) => {
   }
 
   return (
-    <div className={`modal modal-search ${showModal ? "modal-show" : ""} modal-padding `}>
+    <div
+      className={`modal modal-search ${
+        showModal ? "modal-show" : ""
+      } modal-padding `}
+    >
       <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-search__container">
         <h2 className="text-header-h2">Gem søgning</h2>
         <div className="mt-48 color-secondary-gray">
-          <p className="text-body-medium-regular">
-            Navngiv din søgning
-          </p>
+          <p className="text-body-medium-regular">Navngiv din søgning</p>
         </div>
         <div className="modal-search__input mt-24">
-          <input className="modal-search__input_element text-body-large" type="text" aria-label="Save your search results" />
+          <input
+            className="modal-search__input_element text-body-large"
+            type="text"
+            aria-label="Save your search results"
+          />
         </div>
         <div className="modal-search__buttons mt-48">
           <Button
@@ -54,4 +60,3 @@ export const ModalSearch = (props: ModalSearchProps) => {
     </div>
   );
 };
-

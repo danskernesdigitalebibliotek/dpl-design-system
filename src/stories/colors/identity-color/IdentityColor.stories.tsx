@@ -2,7 +2,10 @@ import React from "react";
 import { withDesign } from "storybook-addon-designs";
 import { Meta } from "@storybook/react";
 
-import { IdentityColor as IdentityColorComp, IdentityColorProps } from "./IdentityColor";
+import {
+  IdentityColor as IdentityColorComp,
+  IdentityColorProps,
+} from "./IdentityColor";
 
 export default {
   title: "Atoms / Colors / Identity Color",
@@ -23,4 +26,6 @@ export default {
   },
 } as Meta;
 
-export const IdentityColor = (props: IdentityColorProps) => <IdentityColorComp {...props} />;
+export const IdentityColor = (props: IdentityColorProps) => (
+  <IdentityColorComp {...props} />
+);

@@ -29,7 +29,11 @@ export const ModalCTA = (props: ModalCTAProps) => {
   }
 
   return (
-    <div className={`modal modal-padding modal-cta ${showModal ? "modal-show" : ""}`}>
+    <div
+      className={`modal modal-padding modal-cta ${
+        showModal ? "modal-show" : ""
+      }`}
+    >
       <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-cta__container">
         <h2 className="text-header-h2">{props.title}</h2>

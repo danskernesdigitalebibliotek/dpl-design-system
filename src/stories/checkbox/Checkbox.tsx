@@ -8,17 +8,17 @@ export type CheckboxProps = {
 
 export const Checkbox = (props: CheckboxProps) => {
   const checkboxId = useRef(`checkbox_id__${Math.random()}`);
-  const [isChecked, setChecked] = useState(props.isChecked)
+  const [isChecked, setChecked] = useState(props.isChecked);
 
   const handleClick = () => {
     if (props.callback) {
-      props.callback(!isChecked)
+      props.callback(!isChecked);
     }
-    setChecked(!isChecked)
-  }
+    setChecked(!isChecked);
+  };
 
   return (
-    <div >
+    <div>
       <input
         id={checkboxId.current}
         className="checkbox-input"

@@ -10,7 +10,10 @@ import { Checkbox } from "../checkbox/Checkbox";
 import { Counter } from "../counter/Counter";
 import { LinkFilters } from "../link-filters/LinkFilters";
 import { Links } from "../links/Links";
-import { ListMaterials, ListMaterialsProps } from "../list-materials/ListMaterials";
+import {
+  ListMaterials,
+  ListMaterialsProps,
+} from "../list-materials/ListMaterials";
 import { WarningStatus } from "../warning-status/WarningStatus";
 
 export type ModalLoanProps = {
@@ -31,24 +34,29 @@ export const ModalLoan = (props: ModalLoanProps) => {
     setShow(!showModal);
   };
 
-  const isExpired = props.showExpired
+  const isExpired = props.showExpired;
   const loanList = isExpired ? listExpired : listExpiresSoon;
 
   const countRenewable = useMemo(() => {
-    let total = 0
-    loanList.forEach(loans => loans.list.forEach(material => {
-      if (material.canBeRenewed) total += 1
-    }))
-    return total
-  }, [loanList])
-
+    let total = 0;
+    loanList.forEach((loans) =>
+      loans.list.forEach((material) => {
+        if (material.canBeRenewed) total += 1;
+      })
+    );
+    return total;
+  }, [loanList]);
 
   if (!showModal) {
     return <ModalFallbackButton toggleModal={toggleModal} />;
   }
 
   return (
-    <div className={`modal modal-padding modal-loan ${showModal ? "modal-show" : ""}`}>
+    <div
+      className={`modal modal-padding modal-loan ${
+        showModal ? "modal-show" : ""
+      }`}
+    >
       <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-loan__container">
         <div className="modal-loan__header">
@@ -79,7 +87,6 @@ export const ModalLoan = (props: ModalLoanProps) => {
           </div>
         )}
 
-
         <div className="modal-loan__buttons">
           <Button
             buttonType="default"
@@ -92,43 +99,37 @@ export const ModalLoan = (props: ModalLoanProps) => {
         </div>
 
         <div className="modal-loan__list__container">
-          {
-            loanList.map(({ materialType, list }) => (
-              <div className="modal-loan__list">
-                {
-                  materialType && (
-                    <div className="modal-loan__count">
-                      <LinkFilters filters={[
-                        {
-                          title: materialType,
-                          counter: `${list.length}`,
-                        }
-                      ]} />
-                    </div>
-                  )
-                }
-                <div className="modal-loan__list__materials">
-                  {
-                    list.map((listItem, index) => (
-                      <ListMaterials key={index} {...listItem} />
-                    ))
-                  }
+          {loanList.map(({ materialType, list }) => (
+            <div className="modal-loan__list">
+              {materialType && (
+                <div className="modal-loan__count">
+                  <LinkFilters
+                    filters={[
+                      {
+                        title: materialType,
+                        counter: `${list.length}`,
+                      },
+                    ]}
+                  />
                 </div>
+              )}
+              <div className="modal-loan__list__materials">
+                {list.map((listItem, index) => (
+                  <ListMaterials key={index} {...listItem} />
+                ))}
               </div>
-            ))
-          }
+            </div>
+          ))}
         </div>
-
       </div>
     </div>
   );
 };
 
-
 type LoanMaterials = Array<{
-  materialType?: string,
+  materialType?: string;
   list: Array<ListMaterialsProps>;
-}>
+}>;
 
 const listExpired: LoanMaterials = [
   {
@@ -188,11 +189,10 @@ const listExpired: LoanMaterials = [
           label: "bog",
           status: "outline",
         },
-      }
-    ]
-  }
-]
-
+      },
+    ],
+  },
+];
 
 const listExpiresSoon: LoanMaterials = [
   {
@@ -212,7 +212,7 @@ const listExpiresSoon: LoanMaterials = [
           status: "outline",
         },
       },
-    ]
+    ],
   },
   {
     materialType: "digitale lån",
@@ -231,6 +231,6 @@ const listExpiresSoon: LoanMaterials = [
           status: "outline",
         },
       },
-    ]
-  }
-]
+    ],
+  },
+];

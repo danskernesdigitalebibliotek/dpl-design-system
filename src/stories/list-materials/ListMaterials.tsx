@@ -12,16 +12,17 @@ export type ListMaterialsProps = {
 };
 
 export const ListMaterials = (props: ListMaterialsProps) => {
-  const [isChecked, setChecked] = useState(props.isChecked)
+  const [isChecked, setChecked] = useState(props.isChecked);
 
   const handleToggle = (state: boolean) => {
-    setChecked(state)
-  }
+    setChecked(state);
+  };
 
   return (
     <div
-      className={`list-materials ${isChecked ? "list-materials__selected" : ""
-        }`}
+      className={`list-materials ${
+        isChecked ? "list-materials__selected" : ""
+      }`}
     >
       {props.canBeRenewed && (
         <div className="list-materials__checkbox mr-32">
@@ -37,7 +38,11 @@ export const ListMaterials = (props: ListMaterialsProps) => {
         <p className="text-small-caption">{props.author}</p>
       </div>
       <div className="list-materials__status">
-        {!props.canBeRenewed && <span className="text-small-caption">Digitale materialer kan ikke fornys</span>}
+        {!props.canBeRenewed && (
+          <span className="text-small-caption">
+            Digitale materialer kan ikke fornys
+          </span>
+        )}
         <StatusLabel {...props.statusDelivery} />
       </div>
     </div>
