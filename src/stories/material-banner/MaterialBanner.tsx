@@ -1,5 +1,5 @@
 import { ButtonProps } from "../button/Button";
-import { Dropdown } from "../dropdown/Dropdown";
+import { Dropdown, DropdownItem } from "../dropdown/Dropdown";
 import { LinkFilter, LinkFilters } from "../link-filters/LinkFilters";
 import { MaterialCard, MaterialCardProps } from "../material-card/MaterialCard";
 
@@ -14,6 +14,11 @@ export type MaterialBannerProps = {
 };
 
 export const MaterialBanner = (props: MaterialBannerProps) => {
+const dropdownList: DropdownItem[] = props.linkFilters.map(i => ({
+  title: i.title,
+  href: i.href || "",
+}))
+
   return (
     <div className="material-banner">
       <div className="material-banner__header">
@@ -22,7 +27,7 @@ export const MaterialBanner = (props: MaterialBannerProps) => {
           {props.showLinkfilters && (
             <div className="material-banner__menu">
               <LinkFilters filters={props.linkFilters} />
-              <Dropdown ariaLabel="Dropdown filter" list={props.linkFilters} />
+              <Dropdown ariaLabel="Dropdown filter" list={dropdownList} />
             </div>
           )}
         </div>

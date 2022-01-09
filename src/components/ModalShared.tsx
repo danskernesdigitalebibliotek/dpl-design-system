@@ -32,6 +32,7 @@ export function ModalCloseButton({ toggleModal }: { toggleModal: () => void }) {
     <ButtonUI
       onClick={toggleModal}
       classes="modal-button-close"
+      ariaLabel="close modal"
       content={{
         kind: "ICON",
         alt: "close modal button",

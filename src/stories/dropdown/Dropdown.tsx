@@ -1,6 +1,6 @@
 import React from "react";
 
-type DropdownItem = {
+export type DropdownItem = {
   title: string;
   href: string;
 };

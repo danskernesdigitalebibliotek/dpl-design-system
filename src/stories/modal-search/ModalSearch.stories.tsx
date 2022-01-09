@@ -22,7 +22,6 @@ const Template: ComponentStory<typeof ModalSearch> = (args) => (
 
 export const Search = Template.bind({});
 Search.args = {
-  title: "Afleveres 12. oktober 2021",
   description: "Kan afleveres på alle Rudersdals biblioteker",
   showExpired: true,
   showModal: true,
