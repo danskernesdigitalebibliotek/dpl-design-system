@@ -1,7 +1,7 @@
-$space-mobile: 16px;
-$space-desktop: 24px;
+$list-reservation-space-mobile: 16px;
+$list-reservation-space-desktop: 24px;
 
-.list-container {
+.list-reservation-container {
   position: relative;
 }
 
@@ -12,12 +12,12 @@ $space-desktop: 24px;
   grid-template-columns: 1fr;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   position: relative;
-  padding: $space-mobile;
+  padding: $list-reservation-space-mobile;
 
   @include breakpoint-s {
     grid-template-columns: 1fr 1fr;
     height: 184px;
-    padding: $space-desktop;
+    padding: $list-reservation-space-desktop;
   }
 }
 
@@ -30,6 +30,7 @@ $space-desktop: 24px;
   display: block;
   margin-top: 4px;
   white-space: break-spaces;
+  font-size: 12px;
 
   @include breakpoint-s {
     display: none;
@@ -38,6 +39,7 @@ $space-desktop: 24px;
 
 .list-reservation__note-desktop {
   display: none;
+
   @include breakpoint-s {
     display: block;
   }
@@ -47,16 +49,20 @@ $space-desktop: 24px;
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin-left: $space-mobile;
+  margin-left: $list-reservation-space-mobile;
 
   @include breakpoint-s {
-    margin-left: $space-desktop;
+    margin-left: $list-reservation-space-desktop;
     justify-content: space-between;
   }
 }
 
 .list-reservation__about {
   margin: 16px 0;
+
+  p {
+    margin-top: 2px;
+  }
 
   @include breakpoint-s {
     margin-top: 0;
@@ -70,7 +76,6 @@ $space-desktop: 24px;
 
   @include breakpoint-s {
     align-items: center;
-    // margin-left: $space-desktop;
   }
 }
 
@@ -86,7 +91,7 @@ $space-desktop: 24px;
 .list-reservation__deadline {
   display: inline-grid;
   grid-row-gap: 8px;
-  margin-left: calc(72px + 16px);
+  margin-left: 88px;
 
   @include breakpoint-s {
     margin-left: 32px;
@@ -110,14 +115,14 @@ $space-desktop: 24px;
   box-shadow: 0 4px 20px rgba(72, 72, 72, 0.1);
 }
 
-.list-reservation__stacked_1 {
+.list-reservation__stacked-1 {
   @extend %list-stacked;
 
   transform: translateY(8px) scale(0.95);
   z-index: -1;
 }
 
-.list-reservation__stacked_2 {
+.list-reservation__stacked-2 {
   @extend %list-stacked;
 
   transform: translateY(16px) scale(0.9);

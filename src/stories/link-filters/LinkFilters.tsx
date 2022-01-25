@@ -12,20 +12,20 @@ export type LinkFiltersProps = {
 
 export const LinkFilters = (props: LinkFiltersProps) => {
   return (
-    <div className="link-filters-container">
+    <div className="link-filters">
       {props.filters.map((item, index) => (
-        <div key={index} className="link-filters-tag-wrapper">
+        <div key={index} className="link-filters__tag-wrapper">
           {item.href ? (
             <Links
               href={item.href}
               linkText={item.title}
-              classNames="link-filters-tag"
+              classNames="link-tag link-filters__tag"
             />
           ) : (
-            <span className="text-links uppercase">{item.title}</span>
+            <span className="link-filters__title text-links">{item.title}</span>
           )}
 
-          <span className="link-filters-counter">{item.counter}</span>
+          <span className="link-filters__counter">{item.counter}</span>
         </div>
       ))}
     </div>

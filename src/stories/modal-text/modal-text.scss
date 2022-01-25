@@ -1,4 +1,4 @@
-$MODEL_TEXT_CONTAINER_WIDTH: 550px;
+$MODAL_TEXT_CONTAINER_WIDTH: 550px;
 
 .modal-text {
   flex-direction: column;
@@ -9,7 +9,7 @@ $MODEL_TEXT_CONTAINER_WIDTH: 550px;
   margin: 0 24px;
   padding-top: 96px;
   padding-bottom: 100px;
-  max-width: $MODEL_TEXT_CONTAINER_WIDTH;
+  max-width: $MODAL_TEXT_CONTAINER_WIDTH;
   width: 100%;
 
   @include breakpoint-s {
@@ -34,7 +34,7 @@ $MODEL_TEXT_CONTAINER_WIDTH: 550px;
   filter: drop-shadow(4px 0 20px rgba(72, 72, 72, 0.1));
 }
 
-.modal-text__buttons__inner {
+.modal-text__buttons-inner {
   display: flex;
   justify-content: flex-end;
   align-items: center;

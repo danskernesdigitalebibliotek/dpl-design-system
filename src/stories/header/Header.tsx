@@ -18,8 +18,8 @@ export const Header = (props: HeaderProps) => {
   return (
     <div>
       <header className="header">
-        <div className="header-logo--desktop">
-          <a className="header-logo--desktop--link" href="/">
+        <div className="header__logo-desktop">
+          <a className="header__logo-desktop-link" href="/">
             <Logo
               fallback={false}
               libraryName="Hjørring"
@@ -28,17 +28,17 @@ export const Header = (props: HeaderProps) => {
           </a>
         </div>
 
-        <div className="header-menu">
-          <nav className="header-menu--first">
+        <div className="header__menu">
+          <nav className="header__menu-first">
             <div>
-              <div className="header-menu--navigation--mobile">
+              <div className="header__menu-navigation-mobile">
                 <Pagefold
                   inherit={false}
                   container={false}
                   size="small"
-                  classes="header-menu--navigation--button header-button"
+                  classes="header__menu-navigation-button header__button"
                   compProps={{
-                    id: "header-menu--open",
+                    id: "header__menu--open",
                     onClick: () => window.eventHeader(),
                   }}
                 >
@@ -47,7 +47,7 @@ export const Header = (props: HeaderProps) => {
                     alt="List of bookmarks"
                   />
                 </Pagefold>
-                <div className="header-menu--navigation--logo">
+                <div className="header__menu-navigation-logo">
                   <Logo
                     fallback={true}
                     libraryName="Lyngby-Taarbæk"
@@ -55,12 +55,12 @@ export const Header = (props: HeaderProps) => {
                   />
                 </div>
               </div>
-              <ul className="header-menu--navigation">
+              <ul className="header__menu-navigation">
                 {list.map((i) => (
-                  <li className="header-menu--navigation--item">
+                  <li className="header__menu-navigation-item">
                     <a
                       href={i.href}
-                      className="header-menu--navigation--link text-body-medium-regular hide-linkstyle"
+                      className="header__menu-navigation-link text-body-medium-regular hide-linkstyle"
                     >
                       {i.title}
                     </a>
@@ -68,10 +68,10 @@ export const Header = (props: HeaderProps) => {
                 ))}
               </ul>
             </div>
-            <div className={`header-menu--profile header-button`}>
+            <div className={`header__menu-profile header__button`}>
               <a href="/" className="hide-linkstyle">
                 {signedIn && haveNotification && (
-                  <div className="header--notification bg-signal-alert" />
+                  <div className="header__notification bg-signal-alert" />
                 )}
                 <img src={`icons/basic/icon-profile.svg`} alt="Profile" />
                 {signedIn && (
@@ -79,7 +79,7 @@ export const Header = (props: HeaderProps) => {
                 )}
               </a>
             </div>
-            <div className="header-menu--bookmarked header-button">
+            <div className="header__menu-bookmarked header__button">
               <a href="/">
                 <img
                   src={`icons/basic/icon-heart.svg`}
@@ -88,15 +88,15 @@ export const Header = (props: HeaderProps) => {
               </a>
             </div>
           </nav>
-          <div className="header-menu--second">
-            <div className="header-menu--search">
+          <div className="header__menu-second">
+            <div className="header__menu-search">
               <input
-                className="header-menu--search--input text-body-medium-regular"
+                className="header__menu-search-input text-body-medium-regular"
                 type="text"
                 placeholder="Søg blandt bibliotekets materialer"
               />
               <img
-                className="header-menu--search--icon"
+                className="header__menu-search-icon"
                 src={`icons/basic/icon-search.svg`}
                 alt="search icon"
               />
@@ -104,9 +104,9 @@ export const Header = (props: HeaderProps) => {
           </div>
         </div>
 
-        <div className="header-clock">
+        <div className="header__clock">
           <Pagefold inherit={false} container={false} size="medium" />
-          <div className="header-clock--items">
+          <div className="header__clock-items">
             <img
               src={`icons/basic/icon-watch-static.svg`}
               className="mb-8"
@@ -117,18 +117,18 @@ export const Header = (props: HeaderProps) => {
           </div>
         </div>
       </header>
-      <div id="header-overlay" onClick={() => window.eventHeader()}>
-        <div className="header-overlay--main">
+      <div id="header__overlay" onClick={() => window.eventHeader()}>
+        <div className="header__overlay-main">
           <img
-            id="header-menu--close"
+            id="header__menu--close"
             src={`icons/basic/icon-cross-medium.svg`}
           />
-          <ul className="header-overlay--menu">
+          <ul className="header__overlay-menu">
             {list.map((i) => (
-              <li className="header-overlay--menu--item">
+              <li className="header__overlay-menu-item">
                 <a
                   href={i.href}
-                  className="header-overlay--menu--link text-body-large hide-linkstyle"
+                  className="header__overlay-menu-link text-body-large hide-linkstyle"
                 >
                   {i.title}
                 </a>
@@ -136,7 +136,7 @@ export const Header = (props: HeaderProps) => {
             ))}
           </ul>
         </div>
-        <div className="header-overlay--backdrop" />
+        <div className="header__overlay-backdrop" />
       </div>
     </div>
   );

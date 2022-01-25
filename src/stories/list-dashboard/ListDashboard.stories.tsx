@@ -23,7 +23,7 @@ const Template: ComponentStory<typeof ListDashboard> = (args) => (
 export const Item1 = Template.bind({});
 Item1.args = {
   label: {
-    label: "overskrevet",
+    label: "overskredet",
     status: "danger",
   },
   number: {

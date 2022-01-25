@@ -53,7 +53,7 @@ export const ModalLoan = (props: ModalLoanProps) => {
 
   return (
     <div
-      className={`modal modal-padding modal-loan ${
+      className={`modal modal-loan modal-padding ${
         showModal ? "modal-show" : ""
       }`}
     >
@@ -98,9 +98,9 @@ export const ModalLoan = (props: ModalLoanProps) => {
           />
         </div>
 
-        <div className="modal-loan__list__container">
+        <ul className="modal-loan__list-container">
           {loanList.map(({ materialType, list }) => (
-            <div className="modal-loan__list">
+            <li className="modal-loan__list">
               {materialType && (
                 <div className="modal-loan__count">
                   <LinkFilters
@@ -108,19 +108,22 @@ export const ModalLoan = (props: ModalLoanProps) => {
                       {
                         title: materialType,
                         counter: `${list.length}`,
+                        href: "/",
                       },
                     ]}
                   />
                 </div>
               )}
-              <div className="modal-loan__list__materials">
+              <ul className="modal-loan__list-materials">
                 {list.map((listItem, index) => (
-                  <ListMaterials key={index} {...listItem} />
+                  <li>
+                    <ListMaterials key={index} {...listItem} />
+                  </li>
                 ))}
-              </div>
-            </div>
+              </ul>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

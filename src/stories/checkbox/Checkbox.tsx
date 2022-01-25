@@ -18,16 +18,18 @@ export const Checkbox = (props: CheckboxProps) => {
   };
 
   return (
-    <div>
+    <div className="checkbox">
       <input
         id={checkboxId.current}
-        className="checkbox-input"
+        className="checkbox__input"
         type="checkbox"
         checked={isChecked}
         onClick={handleClick}
       />
-      <label className="checkbox" htmlFor={checkboxId.current}>
-        <span>
+      <label className="checkbox__label" htmlFor={checkboxId.current}>
+        <span className="checkbox__icon">
+          {/* The svg is inline since it should be white.
+          The stroke color is manipulated with css. */}
           <svg width="20px" height="20px">
             <polyline
               points="1.5 6 4.5 9 10.5 1"
@@ -37,7 +39,7 @@ export const Checkbox = (props: CheckboxProps) => {
             />
           </svg>
         </span>
-        {props.label && <span>{props.label}</span>}
+        {props.label && <span className="checkbox__text">{props.label}</span>}
       </label>
     </div>
   );

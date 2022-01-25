@@ -20,7 +20,7 @@ const Template: ComponentStory<typeof ModalText> = (args) => (
   <ModalText {...args} />
 );
 
-export const Search = Template.bind({});
-Search.args = {
+export const Text = Template.bind({});
+Text.args = {
   showModal: true,
 };

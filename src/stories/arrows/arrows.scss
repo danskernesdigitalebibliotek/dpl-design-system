@@ -1,5 +1,5 @@
 @mixin icon-arrow-animated($direction, $size, $scaleX, $translatePx, $origin) {
-  .arrow-hover-#{$direction}-#{$size} {
+  .arrow__hover--#{$direction}-#{$size} {
     cursor: pointer;
 
     svg {
@@ -7,23 +7,23 @@
     }
 
     &:hover {
-      .arrow-head {
+      .arrow__head {
         transition: 0.3s;
         transform: translateX($translatePx);
       }
-      .arrow-body {
+      .arrow__body {
         transition: 0.3s;
         transform: scaleX($scaleX);
       }
     }
 
-    .arrow-body {
+    .arrow__body {
       transition: 0.6s;
       transform: scaleX(1);
       transform-origin: $origin;
     }
 
-    .arrow-head {
+    .arrow__head {
       transition: 0.6s;
       transform: translateX(0);
     }
@@ -35,6 +35,6 @@
 @include icon-arrow-animated("left", "large", 1.165, -25px, right);
 @include icon-arrow-animated("left", "small", 1.5, -30px, right);
 
-.arrow-link {
+.arrow__link {
   text-decoration: none;
 }

@@ -14,7 +14,7 @@ export const Counter = (props: CounterProps) => {
   function getColor() {
     if (status === "danger") return "#d5364a";
     if (status === "warning") return "#f7bf42";
-    if (status === "info") return "#3aaa36";
+    if (status === "info") return "#068802";
     if (status === "neutral") return "#484848";
     return "#484848";
   }
@@ -47,9 +47,3 @@ export const Counter = (props: CounterProps) => {
     </div>
   );
 };
-
-declare global {
-  interface Window {
-    eventHeader: () => void;
-  }
-}

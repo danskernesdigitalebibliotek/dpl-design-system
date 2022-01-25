@@ -21,8 +21,8 @@ Item.args = {
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   cards: [
     {
-      title: "Lone Als Egebo (2021)",
-      description: "Mikrobiologibogen",
+      title: "De uadskillelige",
+      description: "Simone de Beauvoir",
       isLiked: false,
       material: {
         url: "images/book_cover_1.jpg",
@@ -31,8 +31,8 @@ Item.args = {
       },
     },
     {
-      title: "Lone Als Egebo (2021)",
-      description: "Mikrobiologibogen",
+      title: "Den lille bog om dansk design",
+      description: "Af Marie Hugsted",
       isLiked: false,
       material: {
         url: "images/book_cover_2.jpg",
@@ -41,8 +41,8 @@ Item.args = {
       },
     },
     {
-      title: "Lone Als Egebo (2021)",
-      description: "Mikrobiologibogen",
+      title: "Audrey Hepburn",
+      description: "Isabel Sánchez Vegara",
       isLiked: true,
       material: {
         url: "images/book_cover_3.jpg",
@@ -51,8 +51,8 @@ Item.args = {
       },
     },
     {
-      title: "Lone Als Egebo (2021)",
-      description: "Mikrobiologibogen",
+      title: "Døgnkioskmennesket",
+      description: "Sayaka Murata",
       isLiked: false,
       material: {
         url: "images/book_cover_4.jpg",
@@ -61,8 +61,28 @@ Item.args = {
       },
     },
     {
-      title: "Lone Als Egebo (2021)",
-      description: "Mikrobiologibogen",
+      title: "Experiment with photosynthesis",
+      description: "Søren Rasmussen",
+      isLiked: false,
+      material: {
+        url: "images/book_cover_5.jpg",
+        animate: true,
+        size: "medium",
+      },
+    },
+    {
+      title: "Sauna",
+      description: "Af Anton M. Berg",
+      isLiked: false,
+      material: {
+        url: "images/book_cover_6.jpg",
+        animate: true,
+        size: "medium",
+      },
+    },
+    {
+      title: "De uadskillelige",
+      description: "Simone de Beauvoir",
       isLiked: false,
       material: {
         url: "images/book_cover_1.jpg",
@@ -71,31 +91,11 @@ Item.args = {
       },
     },
     {
-      title: "Lone Als Egebo (2021)",
-      description: "Mikrobiologibogen",
+      title: "Den lille bog om dansk design",
+      description: "Af Marie Hugsted",
       isLiked: false,
       material: {
         url: "images/book_cover_2.jpg",
-        animate: true,
-        size: "medium",
-      },
-    },
-    {
-      title: "Lone Als Egebo (2021)",
-      description: "Mikrobiologibogen",
-      isLiked: true,
-      material: {
-        url: "images/book_cover_3.jpg",
-        animate: true,
-        size: "medium",
-      },
-    },
-    {
-      title: "Lone Als Egebo (2021)",
-      description: "Mikrobiologibogen",
-      isLiked: false,
-      material: {
-        url: "images/book_cover_4.jpg",
         animate: true,
         size: "medium",
       },
@@ -104,22 +104,22 @@ Item.args = {
   linkFilters: [
     {
       title: "Bob Dylan 80 år",
-      href: "",
+      href: "/",
       counter: "8",
     },
     {
       title: "Familien Bridgerton",
-      href: "",
+      href: "/",
       counter: "24",
     },
     {
       title: "Bøger til din ferie",
-      href: "",
+      href: "/",
       counter: "48",
     },
     {
       title: "Læs dig gennem Danmark",
-      href: "",
+      href: "/",
       counter: "16",
     },
   ],

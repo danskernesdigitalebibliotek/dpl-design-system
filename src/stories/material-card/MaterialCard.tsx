@@ -25,6 +25,7 @@ export const MaterialCard = (props: MaterialCardProps) => {
             kind: "CHILDREN",
           }}
         >
+          {/* To toggle the like-state we need the svg to be inline.  */}
           <svg
             width="20"
             height="18"

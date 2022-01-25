@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 import {
   ModalCloseButton,
@@ -54,7 +54,7 @@ export const ModalText = (props: ModalTextProps) => {
         </div>
       </div>
       <div className="modal-text__buttons">
-        <div className="modal-text__buttons__inner">
+        <div className="modal-text__buttons-inner">
           <Links
             href={"/"}
             linkText="Ikke nu"

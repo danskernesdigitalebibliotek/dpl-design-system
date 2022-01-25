@@ -35,9 +35,3 @@ export const ListDetails = (props: ListDetailsProps) => {
     </div>
   );
 };
-
-declare global {
-  interface Window {
-    eventHeader: () => void;
-  }
-}

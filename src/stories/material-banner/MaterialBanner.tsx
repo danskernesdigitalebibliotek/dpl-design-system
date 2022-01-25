@@ -35,11 +35,13 @@ const dropdownList: DropdownItem[] = props.linkFilters.map(i => ({
           <p className="text-body-medium-regular">{props.body}</p>
         )}
       </div>
-      <div className="material-banner__cards">
+      <ul className="material-banner__cards">
         {props.cards.map((card, index) => (
-          <MaterialCard key={index} {...card} />
+          <li>
+            <MaterialCard key={index} {...card} />
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

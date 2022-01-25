@@ -43,7 +43,7 @@ Item1.args = {
     value: 0,
   },
   statusLabel: {
-    label: "overskrevet",
+    label: "overskredet",
     status: "danger",
   },
   statusNotes: "Afleveres 02.10.2021",
@@ -71,7 +71,7 @@ Item2.args = {
     value: 0,
   },
   statusLabel: {
-    label: "overskrevet",
+    label: "overskredet",
     status: "danger",
   },
   statusNotes: "Afleveres 02.10.2021",

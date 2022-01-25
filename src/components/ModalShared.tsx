@@ -11,9 +11,7 @@ export function ModalFallbackButton({
   toggleModal: () => void;
 }) {
   return (
-    <div
-      style={{ display: "flex", justifyContent: "flex-end", padding: "20px" }}
-    >
+    <div className="modal-btn-fallback">
       <Button
         buttonType="default"
         size="large"
@@ -31,7 +29,7 @@ export function ModalCloseButton({ toggleModal }: { toggleModal: () => void }) {
   return (
     <ButtonUI
       onClick={toggleModal}
-      classes="modal-button-close"
+      classes="modal-btn-close"
       ariaLabel="close modal"
       content={{
         kind: "ICON",

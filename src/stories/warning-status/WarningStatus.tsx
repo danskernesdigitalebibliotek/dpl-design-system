@@ -58,9 +58,3 @@ export const WarningStatus = (props: WarningStatusProps) => {
     </div>
   );
 };
-
-declare global {
-  interface Window {
-    eventHeader: () => void;
-  }
-}

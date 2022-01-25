@@ -9,22 +9,16 @@ export const Number = (props: NumberProps) => {
   const { label, status } = props;
 
   function getStatus() {
-    if (status === "danger") return "number-danger";
-    if (status === "warning") return "number-warning";
-    if (status === "info") return "number-info";
-    if (status === "neutral") return "number-neutral";
+    if (status === "danger") return "number--danger";
+    if (status === "warning") return "number--warning";
+    if (status === "info") return "number--info";
+    if (status === "neutral") return "number--neutral";
     return "";
   }
 
   return (
     <div className={`number  ${getStatus()}`}>
-      <span>{label}</span>
+      {label}
     </div>
   );
 };
-
-declare global {
-  interface Window {
-    eventHeader: () => void;
-  }
-}

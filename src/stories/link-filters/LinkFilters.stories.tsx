@@ -27,27 +27,27 @@ Item.args = {
   filters: [
     {
       title: "Foredrag",
-      href: "",
+      href: "/",
       counter: "24",
     },
     {
       title: "Børn",
-      href: "",
+      href: "/",
       counter: "16",
     },
     {
       title: "Kunst og kreativitet",
-      href: "",
+      href: "/",
       counter: "7",
     },
     {
       title: "Bøger til din ferie",
-      href: "",
+      href: "/",
       counter: "48",
     },
     {
       title: "Læs dig gennem danmark",
-      href: "",
+      href: "/",
       counter: "14",
     },
   ],

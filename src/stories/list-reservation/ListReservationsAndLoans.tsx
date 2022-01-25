@@ -27,7 +27,7 @@ export const ListReservationsAndLoans = (
   const { material, isStacked, counter, statusLabel, statusNotes, fee } = props;
 
   return (
-    <div className="list-container">
+    <div className="list-reservation-container">
       <div className="list-reservation">
         <div className="list-reservation__material">
           <div>
@@ -38,17 +38,13 @@ export const ListReservationsAndLoans = (
               <StatusLabel label="bog" status="outline" />
             </div>
             <div className="list-reservation__about">
-              <p className="text-header-h4">{material.title}</p>
-              <p
-                className="text-small-caption color-secondary-gray"
-                style={{ marginTop: "2px" }}
-              >
+              <h3 className="text-header-h4">{material.title}</h3>
+              <p className="text-small-caption color-secondary-gray">
                 {material.description}
               </p>
             </div>
             <a
               href={material.noteUrl}
-              style={{ fontSize: "12px" }}
               aria-label="note about material"
               className={`list-reservation__note-desktop text-small-caption ${
                 material.noteAsWarning
@@ -84,7 +80,6 @@ export const ListReservationsAndLoans = (
               <p className="text-small-caption">{statusNotes}</p>
               <a
                 href={material.noteUrl}
-                style={{ fontSize: "12px" }}
                 className={`list-reservation__note-mobile text-small-caption ${
                   material.noteAsWarning
                     ? "color-signal-alert"
@@ -103,14 +98,8 @@ export const ListReservationsAndLoans = (
           ) : null}
         </div>
       </div>
-      {isStacked && <div className="list-reservation__stacked_1" />}
-      {isStacked && <div className="list-reservation__stacked_2" />}
+      {isStacked && <div className="list-reservation__stacked-1" />}
+      {isStacked && <div className="list-reservation__stacked-2" />}
     </div>
   );
 };
-
-declare global {
-  interface Window {
-    eventHeader: () => void;
-  }
-}

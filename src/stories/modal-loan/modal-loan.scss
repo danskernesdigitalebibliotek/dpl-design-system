@@ -1,4 +1,4 @@
-$MODEL_LOAN_CONTAINER_WIDTH: 1000px;
+$MODAL_LOAN_CONTAINER_WIDTH: 1000px;
 
 .modal-loan {
   flex-direction: column;
@@ -8,7 +8,7 @@ $MODEL_LOAN_CONTAINER_WIDTH: 1000px;
 
 .modal-loan__container {
   margin: 0 24px;
-  max-width: $MODEL_LOAN_CONTAINER_WIDTH;
+  max-width: $MODAL_LOAN_CONTAINER_WIDTH;
   width: 100%;
 
   @include breakpoint-s {
@@ -21,7 +21,7 @@ $MODEL_LOAN_CONTAINER_WIDTH: 1000px;
   align-items: center;
 }
 
-.modal-loan__list__container {
+.modal-loan__list-container {
   display: grid;
   grid-row-gap: 100px;
 }
@@ -36,7 +36,7 @@ $MODEL_LOAN_CONTAINER_WIDTH: 1000px;
   top: -48px;
 }
 
-.modal-loan__list__materials {
+.modal-loan__list-materials {
   display: grid;
   grid-row-gap: 8px;
 }

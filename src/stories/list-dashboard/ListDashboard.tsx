@@ -22,9 +22,3 @@ export const ListDashboard = (props: ListDashboardProps) => {
     </div>
   );
 };
-
-declare global {
-  interface Window {
-    eventHeader: () => void;
-  }
-}

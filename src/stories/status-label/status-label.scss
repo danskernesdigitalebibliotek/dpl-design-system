@@ -5,40 +5,40 @@
   justify-content: center;
   align-items: center;
   font-size: 10px;
-}
 
-.sl-danger {
-  @extend %text-button-placeholder;
+  &--danger {
+    @extend %text-button-placeholder;
 
-  background-color: $c-signal-alert;
-  color: $c-text-primary-white;
-}
+    background-color: $c-signal-alert;
+    color: $c-text-primary-white;
+  }
 
-.sl-warning {
-  @extend %text-button-placeholder;
+  &--warning {
+    @extend %text-button-placeholder;
 
-  background-color: $c-signal-aware;
-  color: $c-text-secondary-gray;
-}
+    background-color: $c-signal-aware;
+    color: $c-text-secondary-gray;
+  }
 
-.sl-info {
-  @extend %text-button-placeholder;
+  &--info {
+    @extend %text-button-placeholder;
 
-  background-color: $c-signal-success;
-  color: $c-text-primary-white;
-}
+    background-color: $c-signal-success;
+    color: $c-text-primary-white;
+  }
 
-.sl-neutral {
-  @extend %text-button-placeholder;
+  &--neutral {
+    @extend %text-button-placeholder;
 
-  background-color: $c-global-primary;
-  color: $c-text-secondary-gray;
-}
+    background-color: $c-global-primary;
+    color: $c-text-secondary-gray;
+  }
 
-.sl-outline {
-  @extend %text-button-placeholder;
+  &--outline {
+    @extend %text-button-placeholder;
 
-  background-color: transparent;
-  border: 1px solid #dbdbdb;
-  color: $c-text-secondary-gray;
+    background-color: transparent;
+    border: 1px solid #dbdbdb;
+    color: $c-text-secondary-gray;
+  }
 }

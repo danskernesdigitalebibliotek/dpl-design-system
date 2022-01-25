@@ -1,14 +1,14 @@
-.link-filters-container {
+.link-filters {
   display: flex;
   grid-column-gap: 24px;
 }
 
-.link-filters-tag-wrapper:last-child {
+.link-filters__tag-wrapper:last-child {
   padding-right: 0;
   padding-bottom: 0;
 }
 
-.link-filters-tag {
+.link-filters__tag {
   @extend %text-body-medium-regular-placeholder;
 
   font-size: 14px;
@@ -22,11 +22,11 @@
   }
 }
 
-.link-filters-tag::after {
+.link-filters__tag::after {
   padding-bottom: calc(18px - 14px);
 }
 
-.link-filters-counter {
+.link-filters__counter {
   font-size: 14px;
   line-height: 18px;
   position: relative;
@@ -35,6 +35,10 @@
   @extend %text-body-medium-regular-placeholder;
 }
 
-.link-filters-tag:active {
+.link-filters__tag:active {
   border-bottom: 0;
+}
+
+.link-filters__title {
+  text-transform: uppercase;
 }

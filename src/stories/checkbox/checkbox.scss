@@ -1,9 +1,9 @@
-.checkbox-input {
+.checkbox__input {
   position: absolute;
   visibility: hidden;
 }
 
-.checkbox {
+.checkbox__label {
   user-select: none;
   cursor: pointer;
   padding: 6px 8px;
@@ -13,23 +13,23 @@
   display: flex;
 }
 
-.checkbox span {
+.checkbox__label .checkbox__icon {
   vertical-align: middle;
   transform: translate3d(0, 0, 0);
 }
 
-.checkbox span:first-child {
+.checkbox__label .checkbox__icon:first-child {
   position: relative;
   flex: 0 0 18px;
   width: 18px;
   height: 18px;
   border-radius: 4px;
   transform: scale(1);
-  border: 1px solid #cccfdb;
+  border: 1px solid $c-global-tertiary-2;
   transition: all 0.3s ease;
 }
 
-.checkbox span:first-child svg {
+.checkbox__label .checkbox__icon:first-child svg {
   position: absolute;
   top: 3px;
   left: 2px;
@@ -41,17 +41,17 @@
   transform: translate3d(0, 0, 0);
 }
 
-.checkbox span:last-child {
+.checkbox__label .checkbox__text:last-child {
   padding-left: 8px;
   line-height: 18px;
 }
 
-.checkbox:hover span:first-child {
+.checkbox__label:hover .checkbox__icon:first-child {
   border-color: $c-text-secondary-gray;
 }
 
 /* stylelint-disable selector-max-compound-selectors */
-.checkbox-input:checked + .checkbox span:first-child {
+.checkbox__input:checked + .checkbox__label .checkbox__icon:first-child {
   background: $c-text-secondary-gray;
   border-color: $c-text-secondary-gray;
   animation: zoom-in-out 0.3s ease;

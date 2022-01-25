@@ -15,7 +15,7 @@ $pagefold-map: (
     margin: #{$size}px;
   }
 
-  .pagefold-parent-#{$size} {
+  .pagefold-parent--#{$size} {
     width: #{$triangle-width}px;
     height: #{$triangle-width}px;
     position: relative;
@@ -35,7 +35,7 @@ $pagefold-map: (
     );
   }
 
-  .pagefold-triangle-#{$size} {
+  .pagefold-triangle--#{$size} {
     width: #{$triangle-width}px;
     height: #{$triangle-width}px;
     background-color: $c-identity-primary;

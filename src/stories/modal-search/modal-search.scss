@@ -1,4 +1,4 @@
-$MODEL_SEARCH_CONTAINER_WIDTH: 550px;
+$MODAL_SEARCH_CONTAINER_WIDTH: 550px;
 
 .modal-search {
   flex-direction: column;
@@ -8,7 +8,7 @@ $MODEL_SEARCH_CONTAINER_WIDTH: 550px;
 .modal-search__container {
   margin: 0 24px;
   padding-top: 96px;
-  max-width: $MODEL_SEARCH_CONTAINER_WIDTH;
+  max-width: $MODAL_SEARCH_CONTAINER_WIDTH;
   width: 100%;
 
   @include breakpoint-s {
@@ -21,7 +21,7 @@ $MODEL_SEARCH_CONTAINER_WIDTH: 550px;
   justify-content: center;
 }
 
-.modal-search__input_element {
+.modal-search__input-element {
   width: 100%;
   height: 40px;
   border: 0;

@@ -1,7 +1,8 @@
 // Icons
 .internal-container-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-gap: 20px;
 }
 
 // Colors

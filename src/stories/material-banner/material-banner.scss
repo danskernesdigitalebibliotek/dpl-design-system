@@ -6,7 +6,7 @@
   }
 
   @include breakpoint-m {
-    padding-left: 100px;
+    padding: 50px 0 45px 100px;
   }
 }
 
@@ -24,17 +24,34 @@
 .material-banner__menu {
   margin-top: 16px;
 
-  .link-filters-container {
+  .link-filters {
     display: none;
   }
 
-  @include breakpoint-s {
+  @include breakpoint-m {
     .dropdown {
       display: none;
     }
-    .link-filters-container {
+    .link-filters {
       display: flex;
     }
+  }
+
+  .link-filters__tag-wrapper {
+    position: relative;
+  }
+
+  @include breakpoint-m {
+    position: absolute;
+    top: 88px;
+    right: 20px;
+  }
+
+  @include breakpoint-l {
+    position: unset;
+    top: unset;
+    right: unset;
+    padding-right: 20px;
   }
 }
 
@@ -46,7 +63,7 @@
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
 
-  > .material-card {
+  .material-card {
     background-color: #f6f5f0;
   }
 

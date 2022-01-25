@@ -55,7 +55,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <button
       type="button"
-      className={`btn-primary ${getVariant()} ${getSize()} arrow-hover-right-small`}
+      className={`btn-primary ${getVariant()} ${getSize()} arrow__hover--right-small`}
       disabled={disabled}
       onClick={props.onClick}
     >

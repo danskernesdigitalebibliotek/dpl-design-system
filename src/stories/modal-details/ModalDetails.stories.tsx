@@ -22,7 +22,7 @@ const Template: ComponentStory<typeof ModalDetails> = (args) => (
 
 export const Item = Template.bind({});
 Item.args = {
-  title: "Divas, dames & daredevils: Lost Heroines of Golden Age Comi...",
+  title: "Divas, dames & daredevils: Lost Heroines of Golden Age Comics",
   author: "Mike Madrid",
   type: "bog",
   showWarning: true,

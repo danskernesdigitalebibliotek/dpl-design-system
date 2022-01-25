@@ -20,7 +20,7 @@ jobs:
         uses: reviewdog/action-stylelint@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          stylelint_input: "src/styles/scss/**/*.scss"
+          stylelint_input: "src/**/*.scss"
           reporter: github-pr-review
           fail_on_error: false
           level: error

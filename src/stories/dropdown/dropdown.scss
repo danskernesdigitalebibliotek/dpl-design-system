@@ -1,4 +1,9 @@
-.dropdown-select {
+.dropdown {
+  width: 100%;
+  position: relative;
+}
+
+.dropdown__select {
   appearance: none;
   -webkit-appearance: none;
   min-width: 200px;
@@ -13,7 +18,7 @@
   @extend %text-button-placeholder;
 }
 
-.dropdown-option {
+.dropdown__option {
   text-transform: capitalize;
   background-color: #f9f9f9;
   height: 400px;
@@ -21,12 +26,7 @@
   @extend %text-body-medium-regular-placeholder;
 }
 
-.dropdown {
-  width: 100%;
-  position: relative;
-}
-
-.dropdown-arrows {
+.dropdown__arrows {
   pointer-events: none;
   position: absolute;
   right: 0;
@@ -40,7 +40,7 @@
   border-left: 1px solid #000;
 }
 
-.dropdown-arrow--bottom {
+.dropdown__arrow--bottom {
   margin-top: 4px;
   transform: rotateZ(180deg);
 }

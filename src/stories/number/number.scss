@@ -14,20 +14,20 @@
     width: 56px;
     height: 56px;
   }
-}
 
-.number-danger {
-  border-color: $c-signal-alert;
-}
+  &--danger {
+    border-color: $c-signal-alert;
+  }
 
-.number-warning {
-  border-color: $c-signal-aware;
-}
+  &--warning {
+    border-color: $c-signal-aware;
+  }
 
-.number-info {
-  border-color: $c-signal-success;
-}
+  &--info {
+    border-color: $c-signal-success;
+  }
 
-.number-neutral {
-  border-color: $c-text-secondary-gray;
+  &--neutral {
+    border-color: $c-text-secondary-gray;
+  }
 }

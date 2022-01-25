@@ -30,7 +30,7 @@ export const ModalCTA = (props: ModalCTAProps) => {
 
   return (
     <div
-      className={`modal modal-padding modal-cta ${
+      className={`modal modal-cta modal-padding ${
         showModal ? "modal-show" : ""
       }`}
     >
@@ -66,7 +66,7 @@ export const ModalCTA = (props: ModalCTAProps) => {
             <Links
               href={"/"}
               linkText="Ja, forny mulige"
-              classNames="color-secondary-gray   ml-8"
+              classNames="color-secondary-gray ml-8"
             />
           </div>
         </div>

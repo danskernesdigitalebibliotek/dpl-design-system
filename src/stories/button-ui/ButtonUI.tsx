@@ -38,7 +38,7 @@ export const ButtonUI = (props: ButtonUIProps) => {
   return (
     <button
       type="button"
-      className={`button-ui ${classes || ""}`}
+      className={`btn-ui ${classes || ""}`}
       onClick={props.onClick}
       aria-label={props.ariaLabel}
     >

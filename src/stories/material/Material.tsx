@@ -13,22 +13,17 @@ const placeholderBg = [
 ];
 
 export const Material = (props: MaterialProps) => {
+  // If Material does not have an img, show a random bg-color for each card.
   const bg = placeholderBg[(Math.random() * placeholderBg.length) | 0];
   return (
-    <div className="material__container">
+    <div className="material-container">
       <a
-        className={`material material-${props.size} ${bg} ${
-          props.animate ? "material-animate" : ""
+        className={`material material--${props.size} ${bg} ${
+          props.animate ? "material__animate" : ""
         }`}
       >
-        <img src={props.url} alt="" />
+        <img src={props.url} alt="" onError={(e) => (e.currentTarget.style["display"] = "none")} />
       </a>
     </div>
   );
 };
-
-declare global {
-  interface Window {
-    eventHeader: () => void;
-  }
-}

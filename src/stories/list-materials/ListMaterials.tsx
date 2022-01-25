@@ -30,9 +30,9 @@ export const ListMaterials = (props: ListMaterialsProps) => {
         </div>
       )}
       <div className="list-materials__content">
-        <div className="list-materials__content_status">
+        <div className="list-materials__content-status">
           <StatusLabel {...props.statusMaterialType} />
-          <StatusLabel classNames="hide-768px" {...props.statusDelivery} />
+          <StatusLabel classNames="list-materials__content-status-label" {...props.statusDelivery} />
         </div>
         <p className="text-header-h5 mt-8">{props.title}</p>
         <p className="text-small-caption">{props.author}</p>

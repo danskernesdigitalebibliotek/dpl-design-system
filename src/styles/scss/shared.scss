@@ -23,13 +23,7 @@
   overflow: hidden;
 }
 
-.hide-768px {
-  @include breakpoint-s {
-    display: none;
-  }
-}
-
-.modal-button-close {
+.modal-btn-close {
   position: fixed;
   top: 0;
   right: 0;
@@ -43,9 +37,7 @@
 }
 
 .modal {
-  /**
-  * This color is inherited by the <Counter /> component.
-  **/
+  // This color is inherited by the <Counter /> component.
   --parent-bg-color: #f6f5f0;
 
   background-color: $c-global-primary;
@@ -72,4 +64,10 @@
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.modal-btn-fallback {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
 }

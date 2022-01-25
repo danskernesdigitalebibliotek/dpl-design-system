@@ -41,7 +41,7 @@ export const ModalSearch = (props: ModalSearchProps) => {
         </div>
         <div className="modal-search__input mt-24">
           <input
-            className="modal-search__input_element text-body-large"
+            className="modal-search__input-element text-body-large"
             type="text"
             aria-label="Save your search results"
           />

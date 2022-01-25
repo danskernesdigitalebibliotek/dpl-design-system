@@ -53,7 +53,7 @@ export const ModalDetails = (props: ModalDetailsProps) => {
             <div className="modal-details__tags">
               <StatusLabel label={props.type} status="outline" />
               {props.showWarning && (
-                <StatusLabel label="overskrevet" status="danger" />
+                <StatusLabel label="overskredet" status="danger" />
               )}
             </div>
             <h2 className="modal-details__title text-header-h2">
@@ -120,8 +120,8 @@ const listDetails: Array<ListDetailsProps> = [
 
 const materialCards: MaterialCardProps[] = [
   {
-    title: "Af Isabel Sánchez Vegara",
-    description: "Ella Fitzgerald",
+    title: "De uadskillelige",
+    description: "Simone de Beauvoir",
     isLiked: false,
     material: {
       url: "images/book_cover_1.jpg",
@@ -130,8 +130,8 @@ const materialCards: MaterialCardProps[] = [
     },
   },
   {
-    title: "Af Isabel Sánchez Vegara",
-    description: "Audrey Hepburn",
+    title: "Den lille bog om dansk design",
+    description: "Af Marie Hugsted",
     isLiked: false,
     material: {
       url: "images/book_cover_2.jpg",
@@ -140,8 +140,8 @@ const materialCards: MaterialCardProps[] = [
     },
   },
   {
-    title: "Af Isabel Sánchez Vegara",
-    description: "Ada Lovelace",
+    title: "Audrey Hepburn",
+    description: "Isabel Sánchez Vegara",
     isLiked: true,
     material: {
       url: "images/book_cover_3.jpg",
@@ -150,26 +150,26 @@ const materialCards: MaterialCardProps[] = [
     },
   },
   {
-    title: "Af Isabel Sánchez Vegara",
-    description: "David Bowie",
+    title: "Døgnkioskmennesket",
+    description: "Sayaka Murata",
     isLiked: false,
     material: {
       url: "images/book_cover_4.jpg",
       animate: true,
       size: "medium",
     },
-  },
+  }
 ];
 
 const linksFilters: LinkFilter[] = [
   {
     title: "Noget der ligner",
-    href: "",
+    href: "/",
     counter: "4",
   },
   {
     title: "Af samme forfatter",
-    href: "",
+    href: "/",
     counter: "4",
   },
 ];
