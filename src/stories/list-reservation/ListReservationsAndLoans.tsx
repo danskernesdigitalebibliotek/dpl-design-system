@@ -1,6 +1,5 @@
 import { Counter, CounterProps } from "../counter/Counter";
 import { StatusLabel, StatusLabelProps } from "../status-label/StatusLabel";
-import { ArrowUI } from "../arrows/icon-arrow-ui/ArrowUI.stories";
 import { Material } from "../material/Material";
 
 export type ListReservationsAndLoansProps = {
@@ -28,7 +27,11 @@ export const ListReservationsAndLoans = (
 
   return (
     <div className="list-reservation-container">
-      <div className="list-reservation">
+      <div
+        className={`list-reservation ${
+          isStacked && "list-reservation--stacked"
+        }`}
+      >
         <div className="list-reservation__material">
           <div>
             <Material size="small" animate={true} url={material.image} />
@@ -98,8 +101,6 @@ export const ListReservationsAndLoans = (
           ) : null}
         </div>
       </div>
-      {isStacked && <div className="list-reservation__stacked-1" />}
-      {isStacked && <div className="list-reservation__stacked-2" />}
     </div>
   );
 };

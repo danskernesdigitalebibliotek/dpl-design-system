@@ -115,16 +115,20 @@ $list-reservation-space-desktop: 24px;
   box-shadow: 0 4px 20px rgba(72, 72, 72, 0.1);
 }
 
-.list-reservation__stacked-1 {
-  @extend %list-stacked;
+.list-reservation--stacked {
+  &::after {
+    @extend %list-stacked;
 
-  transform: translateY(8px) scale(0.95);
-  z-index: -1;
-}
+    content: " ";
+    transform: translateY(8px) scale(0.95);
+    z-index: -1;
+  }
 
-.list-reservation__stacked-2 {
-  @extend %list-stacked;
+  &::before {
+    @extend %list-stacked;
 
-  transform: translateY(16px) scale(0.9);
-  z-index: -2;
+    content: " ";
+    transform: translateY(16px) scale(0.9);
+    z-index: -2;
+  }
 }
