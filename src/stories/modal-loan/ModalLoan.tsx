@@ -25,6 +25,7 @@ export type ModalLoanProps = {
 
 export const ModalLoan = (props: ModalLoanProps) => {
   const [showModal, setShow] = useState(props.showModal);
+  const [isAllChecked, setChecked] = useState(false);
 
   useEffect(() => {
     setShow(props.showModal);
@@ -50,6 +51,10 @@ export const ModalLoan = (props: ModalLoanProps) => {
   if (!showModal) {
     return <ModalFallbackButton toggleModal={toggleModal} />;
   }
+
+  const handleToggleAll = () => {
+    setChecked(!isAllChecked);
+  };
 
   return (
     <div
@@ -88,6 +93,11 @@ export const ModalLoan = (props: ModalLoanProps) => {
         )}
 
         <div className="modal-loan__buttons">
+          <Checkbox
+            isChecked={isAllChecked}
+            callback={handleToggleAll}
+            label="Vælg alle med mulighed for fornyelse"
+          />
           <Button
             buttonType="default"
             label={`Forny mulige (${countRenewable})`}
@@ -117,7 +127,15 @@ export const ModalLoan = (props: ModalLoanProps) => {
               <ul className="modal-loan__list-materials">
                 {list.map((listItem, index) => (
                   <li>
-                    <ListMaterials key={index} {...listItem} />
+                    <ListMaterials
+                      key={`${index}-${isAllChecked}`}
+                      {...listItem}
+                      isChecked={
+                        listItem.canBeRenewed
+                          ? listItem.isChecked || isAllChecked
+                          : false
+                      }
+                    />
                   </li>
                 ))}
               </ul>
@@ -140,7 +158,7 @@ const listExpired: LoanMaterials = [
       {
         title: "Audrey Hepburn",
         author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
-        isChecked: true,
+        isChecked: false,
         canBeRenewed: true,
         statusDelivery: {
           label: "AFLEVERES 20.11.21",
@@ -154,7 +172,7 @@ const listExpired: LoanMaterials = [
       {
         title: "Audrey Hepburn",
         author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
-        isChecked: true,
+        isChecked: false,
         canBeRenewed: true,
         statusDelivery: {
           label: "AFLEVERES 20.11.21",
@@ -168,7 +186,7 @@ const listExpired: LoanMaterials = [
       {
         title: "Audrey Hepburn",
         author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
-        isChecked: true,
+        isChecked: false,
         canBeRenewed: true,
         statusDelivery: {
           label: "AFLEVERES 20.11.21",
@@ -204,7 +222,7 @@ const listExpiresSoon: LoanMaterials = [
       {
         title: "Audrey Hepburn",
         author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
-        isChecked: true,
+        isChecked: false,
         canBeRenewed: true,
         statusDelivery: {
           label: "AFLEVERES 20.11.21",

@@ -39,7 +39,11 @@ export const Checkbox = (props: CheckboxProps) => {
             />
           </svg>
         </span>
-        {props.label && <span className="checkbox__text">{props.label}</span>}
+        {props.label && (
+          <span className="checkbox__text text-small-caption color-secondary-gray">
+            {props.label}
+          </span>
+        )}
       </label>
     </div>
   );
