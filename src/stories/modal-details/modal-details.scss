@@ -58,10 +58,9 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
   uses ellipsis for truncating which we need.
   https://caniuse.com/?search=line-clamp
 */
-
-/* stylelint-disable value-no-vendor-prefix */
 .modal-details__title {
   display: block;
+  /* stylelint-disable-next-line */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
