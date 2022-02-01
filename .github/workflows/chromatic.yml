@@ -19,6 +19,7 @@ jobs:
       - run: npm ci
 
       - run: npm run css:build
+      - run: env
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
