@@ -35,6 +35,7 @@ export const ModalCTA = (props: ModalCTAProps) => {
       }`}
     >
       <ModalCloseButton toggleModal={toggleModal} />
+      <h1>TEEEST</h1>
       <div className="modal-cta__container">
         <h2 className="text-header-h2">{props.title}</h2>
         <div className="mt-48 color-secondary-gray">
