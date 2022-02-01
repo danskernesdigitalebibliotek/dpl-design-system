@@ -13,8 +13,8 @@ export const Pagefold = (props: PagefoldProps) => {
   const { inherit, container, size, children, classes, compProps } = props;
   const containerClass = container ? "internal-pagefold-parent" : "";
 
-  const parent = `pagefold-parent-${size} ${containerClass} ${classes || ""}`;
-  const child = `pagefold-triangle-${size} ${
+  const parent = `pagefold-parent--${size} ${containerClass} ${classes || ""}`;
+  const child = `pagefold-triangle--${size} ${
     inherit ? "pagefold-inherit-parent" : ""
   }`;
 

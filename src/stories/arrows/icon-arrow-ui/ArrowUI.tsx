@@ -57,7 +57,7 @@ export const IconArrow = (props: IconArrowProps) => {
   const ArrowComp = getDynamicArrow();
 
   return hover ? (
-    <div className={`arrow-hover-${props.direction}-${props.size}`}>
+    <div className={`arrow arrow__hover--${props.direction}-${props.size}`}>
       {children}
       <ArrowComp />
     </div>

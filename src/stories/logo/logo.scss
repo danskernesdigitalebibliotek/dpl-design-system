@@ -1,20 +1,20 @@
-.logo-fallback-text {
+.logo-fallback {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   font-style: normal;
   line-height: 18px;
   text-align: left;
 
-  &--name {
-    font-weight: 700;
-  }
-
-  &--libraries {
-    font-weight: 300;
-  }
-
   @include breakpoint-m {
     font-size: 24px;
     line-height: 27px;
   }
+}
+
+.logo-fallback__text-name {
+  font-weight: 700;
+}
+
+.logo-fallback__text-libraries {
+  font-weight: 300;
 }

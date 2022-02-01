@@ -1,26 +1,26 @@
 const svgIcons = [
   {
-    title: "Profil",
+    title: "Profile",
     fileName: "icon-profile.svg",
   },
   {
-    title: "Farvorit",
+    title: "Favorite",
     fileName: "icon-heart.svg",
   },
   {
-    title: "Bogmærke",
+    title: "Bookmark",
     fileName: "icon-bookmark.svg",
   },
   {
-    title: "Søg",
+    title: "Search",
     fileName: "icon-search.svg",
   },
   {
-    title: "Klokke",
+    title: "Bell",
     fileName: "icon-bell.svg",
   },
   {
-    title: "Eksternt link",
+    title: "External link",
     fileName: "icon-external-link.svg",
   },
 ];

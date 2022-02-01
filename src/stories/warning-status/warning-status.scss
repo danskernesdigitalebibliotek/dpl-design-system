@@ -1,0 +1,36 @@
+.warning-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+
+  @include breakpoint-s {
+    padding: 16px 32px;
+  }
+}
+
+.warning-bar__icon {
+  margin-right: 16px;
+}
+
+.warning-bar__left {
+  display: flex;
+  align-items: start;
+
+  @include breakpoint-s {
+    align-items: center;
+  }
+}
+
+.warning-bar__right {
+  display: flex;
+  align-items: center;
+}
+
+.warning-bar__owes {
+  margin-right: 8px;
+
+  @include breakpoint-s {
+    margin-right: 24px;
+  }
+}

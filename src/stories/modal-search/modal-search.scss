@@ -1,0 +1,31 @@
+$MODAL_SEARCH_CONTAINER_WIDTH: 550px;
+
+.modal-search {
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-search__container {
+  margin: 0 24px;
+  padding-top: 96px;
+  max-width: $MODAL_SEARCH_CONTAINER_WIDTH;
+  width: 100%;
+
+  @include breakpoint-s {
+    margin: 0 45px;
+  }
+}
+
+.modal-search__buttons {
+  display: grid;
+  justify-content: center;
+}
+
+.modal-search__input-element {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+  border-radius: 0;
+}

@@ -76,17 +76,27 @@
   text-align: left;
 
   @include breakpoint-s {
-    line-height: 130%;
+    line-height: 120%;
   }
 
   @include breakpoint-m {
     font-size: 24px;
-    line-height: 120%;
   }
 
   @include breakpoint-xl {
     font-size: 26px;
   }
+}
+
+//styleName: Desktop/H5;
+.text-header-h5 {
+  font-family: "Lora", serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
 }
 
 //styleName: Desktop/Subtitle;
@@ -172,6 +182,7 @@
 }
 
 //styleName: Desktop/Body Copy - M - medium;
+%text-body-medium-medium,
 .text-body-medium-medium {
   font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
@@ -187,6 +198,30 @@
   @include breakpoint-xl {
     font-size: 18px;
   }
+}
+
+//styleName: Desktop/Body Copy - S - regular;
+%text-body-small-regular,
+.text-body-small-regular {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+//styleName: Desktop/Body Copy - S - medium;
+%text-body-small-medium,
+.text-body-small-medium {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: left;
 }
 
 // Using the placeholder selector, recommended by this rule
@@ -233,12 +268,13 @@
 }
 
 //styleName: Desktop/Tags;
-%text-tags {
+%text-tags,
+.text-tags {
   font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 24px;
+  line-height: 120%;
   letter-spacing: 0.02em;
   text-align: left;
   text-transform: uppercase;
@@ -274,4 +310,16 @@
     font-size: 14px;
     line-height: 130%;
   }
+}
+
+//styleName: Desktop/Label;
+%text-label,
+.text-label {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: left;
 }

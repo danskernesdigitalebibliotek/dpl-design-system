@@ -22,3 +22,52 @@
   height: 1px;
   overflow: hidden;
 }
+
+.modal-btn-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 34px;
+  transition: 0.3s;
+  z-index: 2;
+
+  &:hover {
+    transform: rotateZ(90deg);
+  }
+}
+
+.modal {
+  // This color is inherited by the <Counter /> component.
+  --parent-bg-color: #f6f5f0;
+
+  background-color: $c-global-primary;
+  position: relative;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.3s;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.modal-padding {
+  padding: 20px;
+}
+
+.modal-show {
+  display: flex;
+  opacity: 1;
+}
+
+:root {
+  --parent-bg-color: #fff;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.modal-btn-fallback {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}

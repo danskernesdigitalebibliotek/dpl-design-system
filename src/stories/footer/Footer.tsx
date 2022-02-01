@@ -11,7 +11,7 @@ export const Footer = () => {
     <footer className="footer">
       <h2 className="hide-visually">Globale links</h2>
       {/* Footer mobile */}
-      <div className="footer--mobile">
+      <div className="footer__mobile">
         <Pagefold inherit={true} container={true} size="small">
           <div>
             <h3 className="text-header-h4 mb-16">Åbningstider</h3>
@@ -19,43 +19,43 @@ export const Footer = () => {
               Bibliotekerne lorem ipsum consectetur, adipisci velit, sed quia
               non numquam eius modi tempora incidunt ut labore.
             </p>
-            <div className="footer-column--link mb-48">
+            <div className="footer__column-link mb-48">
               <Links href={"/"} linkText={"Se bibliotekernes åbningstider"} />
             </div>
           </div>
           <Accordion list={list} />
-          <div className="footer-widgets mt-48">
+          <div className="footer__widgets mt-48">
             <Dropdown list={dropdownList} ariaLabel="dropdown" />
             <Logo fallback={false} libraryName={""} altText={"logo"} />
           </div>
-          <div className="footer-separator mt-24"></div>
-          <div className="footer-site-info mt-24">
-            <div className="footer-site-info--links">
+          <div className="footer__separator mt-24"></div>
+          <div className="footer__site-info mt-24">
+            <div className="footer__site-info-links">
               <ul>
                 <li>
-                  <a href="" className="footer-site-info--link">
+                  <a href="" className="footer__site-info-link">
                     Behandling af persondata
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="footer-site-info--link">
+                  <a href="/" className="footer__site-info-link">
                     Servicedeklaration
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="footer-site-info--link">
+                  <a href="/" className="footer__site-info-link">
                     Relement
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="footer-site-info--link">
+                  <a href="/" className="footer__site-info-link">
                     Tilgængelighed
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div className="footer-site-info--icons mt-32">
+            <div className="footer__site-info-icons mt-32">
               <a href="/">
                 <img
                   src={`icons/social/icon-social-facebook.svg`}
@@ -86,17 +86,17 @@ export const Footer = () => {
       </div>
 
       {/* Footer tablet/desktop */}
-      <div className="footer--desktop">
+      <div className="footer__desktop">
         <Pagefold inherit={true} container={true} size="medium">
-          <div className="footer-column-wrapper">
-            <div className="footer-column">
+          <div className="footer__column-wrapper">
+            <div className="footer__column">
               <h3 className="text-header-h4 mb-16">Åbningstider</h3>
-              <div className="footer-column">
+              <div className="footer__column">
                 <p className="text-body-medium-regular">
                   Bibliotekerne lorem ipsum consectetur, adipisci velit, sed
                   quia non numquam eius modi tempora incidunt ut labore.
                 </p>
-                <div className="footer-column--link">
+                <div className="footer__column-link">
                   <Links
                     href={"/"}
                     linkText={"Se bibliotekernes åbningstider"}
@@ -126,20 +126,20 @@ export const Footer = () => {
                 "Filmstriben",
               ]}
             />
-            <div className="footer-column">
+            <div className="footer__column">
               <h3 className="text-header-h4 mb-16">Kontakt</h3>
               <p className="text-body-medium-regular">
                 Lyngby-Taarbæk Bibliotekerne <br />
                 Lyngby Hovedgade 28 <br />
                 2800 Kgs. Lyngby <br />
                 <br />
-                <a className="footer-column--phone" href="tel:4545973700">
+                <a className="footer__column-phone" href="tel:4545973700">
                   +45 45 97 37 00
                 </a>
                 <br />
                 Man - fre / Kl. 10-16 <br />
               </p>
-              <div className="footer-column--link">
+              <div className="footer__column-link">
                 <Links href={"/"} linkText={"info@ltk.dk"} />
               </div>
             </div>
@@ -172,15 +172,15 @@ export const Footer = () => {
             />
           </div>
 
-          <div className="footer-widgets mt-80">
+          <div className="footer__widgets mt-80">
             <Dropdown list={dropdownList} ariaLabel="dropdown" />
             <Logo fallback={false} libraryName={""} altText={"logo"} />
           </div>
 
-          <div className="footer-separator"></div>
+          <div className="footer__separator"></div>
 
-          <div className="footer-site-info">
-            <div className="footer-site-info--icons">
+          <div className="footer__site-info">
+            <div className="footer__site-info-icons">
               <a href="/">
                 <img
                   src={`icons/social/icon-social-facebook.svg`}
@@ -206,17 +206,17 @@ export const Footer = () => {
                 />
               </a>
             </div>
-            <div className="footer-site-info--links color-secondary-gray">
-              <a href="/" className="footer-site-info--link">
+            <div className="footer__site-info-links color-secondary-gray">
+              <a href="/" className="footer__site-info-link">
                 Behandling af persondata
               </a>
-              <a href="/" className="footer-site-info--link">
+              <a href="/" className="footer__site-info-link">
                 Servicedeklaration
               </a>
-              <a href="/" className="footer-site-info--link">
+              <a href="/" className="footer__site-info-link">
                 Relement
               </a>
-              <a href="/" className="footer-site-info--link">
+              <a href="/" className="footer__site-info-link">
                 Tilgængelighed
               </a>
             </div>

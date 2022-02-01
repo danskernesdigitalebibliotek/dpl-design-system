@@ -7,6 +7,7 @@
 @import "./src/stories/link-filters/link-filters";
 @import "./src/stories/arrows/arrows";
 @import "./src/stories/button/buttons";
+@import "./src/stories/button-ui/buttons-ui";
 @import "./src/stories/spacing/spacing";
 @import "./src/stories/tag/tag";
 @import "./src/stories/logo/logo";
@@ -17,6 +18,26 @@
 @import "./src/stories/footer/footer";
 @import "./src/stories/breadcrumb/breadcrumb";
 @import "./src/stories/missing-story/missing-story";
+@import "./src/stories/warning-status/warning-status";
+@import "./src/stories/status-label/status-label";
+@import "./src/stories/number/number";
+@import "./src/stories/counter/counter";
+@import "./src/stories/checkbox/checkbox";
+
+@import "./src/stories/list-reservation/list-reservation";
+@import "./src/stories/list-dashboard/list-dashboard";
+@import "./src/stories/list-details/list-details";
+@import "./src/stories/list-materials/list-materials";
+
+@import "./src/stories/modal-details/modal-details";
+@import "./src/stories/modal-cta/modal-cta";
+@import "./src/stories/modal-loan/modal-loan";
+@import "./src/stories/modal-search/modal-search";
+@import "./src/stories/modal-text/modal-text";
+
+@import "./src/stories/material/material";
+@import "./src/stories/material-banner/material-banner";
+@import "./src/stories/material-card/material-card";
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";

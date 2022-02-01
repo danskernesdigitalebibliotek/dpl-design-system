@@ -1,11 +1,11 @@
 import React from "react";
 
-type DropdownItem = {
+export type DropdownItem = {
   title: string;
   href: string;
 };
 
-type DropdownProps = {
+export type DropdownProps = {
   list: DropdownItem[];
   ariaLabel: string;
 };
@@ -13,21 +13,21 @@ type DropdownProps = {
 export const Dropdown = (props: DropdownProps) => {
   return (
     <div className="dropdown">
-      <select className="dropdown-select" aria-label={props.ariaLabel}>
-        {props.list.map((i) => (
-          <option className="dropdown-option" value={i.title}>
+      <select className="dropdown__select" aria-label={props.ariaLabel}>
+        {props.list.map((i, index) => (
+          <option key={index} className="dropdown__option" value={i.title}>
             {i.title}
           </option>
         ))}
       </select>
-      <div className="dropdown-arrows">
+      <div className="dropdown__arrows">
         <img
-          className="dropdown-arrow--top"
+          className="dropdown__arrow"
           src="icons/basic/icon-triangle.svg"
           alt=""
         />
         <img
-          className="dropdown-arrow--bottom"
+          className="dropdown__arrow dropdown__arrow--bottom"
           src="icons/basic/icon-triangle.svg"
           alt=""
         />

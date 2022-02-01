@@ -1,0 +1,41 @@
+.material-card {
+  padding: 16px;
+  max-width: 500px;
+  text-decoration: none;
+  height: 100%;
+}
+
+.material-card__icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.material-card__material {
+  display: flex;
+  justify-content: center;
+  .material {
+    margin-top: 8px;
+  }
+}
+
+.material-card__texts {
+  margin-top: 16px;
+  display: grid;
+
+  @include breakpoint-s {
+    margin-top: 32px;
+  }
+}
+
+.material-card__description {
+  @extend %text-body-small-regular;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: normal;
+}
+
+.material-card__title {
+  @extend %text-body-small-medium;
+}

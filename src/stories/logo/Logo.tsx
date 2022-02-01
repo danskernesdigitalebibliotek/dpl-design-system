@@ -11,9 +11,9 @@ export const Logo = (props: LogoProps) => {
   const { fallback, libraryName, altText } = props;
 
   return fallback ? (
-    <div className="logo-fallback-text">
-      <p className="logo-fallback-text--name">{libraryName}</p>
-      <p className="logo-fallback-text--libraries">Bibliotekerne</p>
+    <div className="logo-fallback">
+      <p className="logo-fallback__text-name">{libraryName}</p>
+      <p className="logo-fallback__text-libraries">Bibliotekerne</p>
     </div>
   ) : (
     <div>

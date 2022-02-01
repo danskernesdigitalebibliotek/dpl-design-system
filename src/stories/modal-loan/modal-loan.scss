@@ -1,0 +1,50 @@
+$MODAL_LOAN_CONTAINER_WIDTH: 1000px;
+
+.modal-loan {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 96px;
+}
+
+.modal-loan__container {
+  margin: 0 24px;
+  max-width: $MODAL_LOAN_CONTAINER_WIDTH;
+  width: 100%;
+
+  @include breakpoint-s {
+    margin: 0 45px;
+  }
+}
+
+.modal-loan__header {
+  display: flex;
+  align-items: center;
+}
+
+.modal-loan__list-container {
+  display: grid;
+  grid-row-gap: 100px;
+}
+
+.modal-loan__list {
+  position: relative;
+  margin-top: 24px;
+}
+
+.modal-loan__count {
+  position: absolute;
+  top: -48px;
+}
+
+.modal-loan__list-materials {
+  display: grid;
+  grid-row-gap: 8px;
+}
+
+.modal-loan__buttons {
+  display: flex;
+  grid-gap: 24px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 40px;
+}

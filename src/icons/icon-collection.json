@@ -1,0 +1,294 @@
+[
+   {
+    "title": "About",
+    "fileName": "About.svg"
+  },
+  {
+    "title": "Arrow Left",
+    "fileName": "ArrowLeft.svg"
+  },
+  {
+    "title": "Arrow Right",
+    "fileName": "ArrowRight.svg"
+  },
+  {
+    "title": "Backspace",
+    "fileName": "Backspace.svg"
+  },
+  {
+    "title": "Backwards",
+    "fileName": "Backwards.svg"
+  },
+  {
+    "title": "Balance",
+    "fileName": "Balance.svg"
+  },
+  {
+    "title": "Balance",
+    "fileName": "Balance.svg"
+  },
+  {
+    "title": "Book",
+    "fileName": "Book.svg"
+  },
+  {
+    "title": "Brightness High",
+    "fileName": "BrightnessHigh.svg"
+  },
+  {
+    "title": "Brightness Low",
+    "fileName": "BrightnessLow.svg"
+  },
+  {
+    "title": "Burger",
+    "fileName": "Burger.svg"
+  },
+  {
+    "title": "Camera",
+    "fileName": "Camera.svg"
+  },
+  {
+    "title": "Cast",
+    "fileName": "Cast.svg"
+  },
+  {
+    "title": "Check",
+    "fileName": "Check.svg"
+  },
+  {
+    "title": "Close Large",
+    "fileName": "CloseLarge.svg"
+  },
+  {
+    "title": "Close Small",
+    "fileName": "CloseSmall.svg"
+  },
+  {
+    "title": "Create",
+    "fileName": "Create.svg"
+  },
+  {
+    "title": "Discover",
+    "fileName": "Discover.svg"
+  },
+  {
+    "title": "Ebook",
+    "fileName": "Ebook.svg"
+  },
+  {
+    "title": "Edit-1",
+    "fileName": "Edit-1.svg"
+  },
+  {
+    "title": "Edit",
+    "fileName": "Edit.svg"
+  },
+  {
+    "title": "Exit",
+    "fileName": "Exit.svg"
+  },
+  {
+    "title": "Expand More",
+    "fileName": "ExpandMore.svg"
+  },
+  {
+    "title": "Favourite",
+    "fileName": "Favourite.svg"
+  },
+  {
+    "title": "Favourite 2",
+    "fileName": "Favourite2.svg"
+  },
+  {
+    "title": "Filter",
+    "fileName": "Filter.svg"
+  },
+  {
+    "title": "Forward",
+    "fileName": "Forward.svg"
+  },
+  {
+    "title": "Fullscreen",
+    "fileName": "Fullscreen.svg"
+  },
+  {
+    "title": "Fullscreen Exit",
+    "fileName": "FullscreenExit.svg"
+  },
+  {
+    "title": "Arrow Back",
+    "fileName": "ArrowBack.svg"
+  },
+  {
+    "title": "Information",
+    "fileName": "Information.svg"
+  },
+  {
+    "title": "Keyboard Close",
+    "fileName": "KeyboardClose.svg"
+  },
+  {
+    "title": "LineHeight High",
+    "fileName": "LineHeightHigh.svg"
+  },
+  {
+    "title": "LineHeight Low",
+    "fileName": "LineHeightLow.svg"
+  },
+  {
+    "title": "List",
+    "fileName": "List.svg"
+  },
+  {
+    "title": "LoanerCard",
+    "fileName": "LoanerCard.svg"
+  },
+  {
+    "title": "LoanHistory",
+    "fileName": "LoanHistory.svg"
+  },
+  {
+    "title": "Loans",
+    "fileName": "Loans.svg"
+  },
+  {
+    "title": "Location",
+    "fileName": "Location.svg"
+  },
+  {
+    "title": "Logistics",
+    "fileName": "Logistics.svg"
+  },
+  {
+    "title": "Menu",
+    "fileName": "Menu.svg"
+  },
+  {
+    "title": "Message",
+    "fileName": "Message.svg"
+  },
+  {
+    "title": "Minus",
+    "fileName": "Minus.svg"
+  },
+  {
+    "title": "More",
+    "fileName": "More.svg"
+  },
+  {
+    "title": "Opening hours",
+    "fileName": "Opening hours.svg"
+  },
+  {
+    "title": "Pause",
+    "fileName": "Pause.svg"
+  },
+  {
+    "title": "Phone",
+    "fileName": "Phone.svg"
+  },
+  {
+    "title": "PlayCircle",
+    "fileName": "PlayCircle.svg"
+  },
+  {
+    "title": "Plus",
+    "fileName": "Plus.svg"
+  },
+  {
+    "title": "Printer",
+    "fileName": "Printer.svg"
+  },
+  {
+    "title": "Profile",
+    "fileName": "Profile.svg"
+  },
+  {
+    "title": "Question",
+    "fileName": "Question.svg"
+  },
+  {
+    "title": "Receipt",
+    "fileName": "Receipt.svg"
+  },
+  {
+    "title": "Reload",
+    "fileName": "Reload.svg"
+  },
+  {
+    "title": "Reservations",
+    "fileName": "Reservations.svg"
+  },
+  {
+    "title": "Scan",
+    "fileName": "Scan.svg"
+  },
+  {
+    "title": "Search",
+    "fileName": "Search.svg"
+  },
+  {
+    "title": "Search Back",
+    "fileName": "SearchBack.svg"
+  },
+  {
+    "title": "Send",
+    "fileName": "Send.svg"
+  },
+  {
+    "title": "Settings",
+    "fileName": "Settings.svg"
+  },
+  {
+    "title": "Shift",
+    "fileName": "Shift.svg"
+  },
+  {
+    "title": "SMS",
+    "fileName": "SMS.svg"
+  },
+  {
+    "title": "Sort",
+    "fileName": "Sort.svg"
+  },
+  {
+    "title": "Sound book",
+    "fileName": "Soundbook.svg"
+  },
+  {
+    "title": "Subtitles",
+    "fileName": "Subtitles.svg"
+  },
+  {
+    "title": "Support",
+    "fileName": "Support.svg"
+  },
+  {
+    "title": "Swap",
+    "fileName": "Swap.svg"
+  },
+  {
+    "title": "TextStyle",
+    "fileName": "TextStyle.svg"
+  },
+  {
+    "title": "Timer",
+    "fileName": "Timer.svg"
+  },
+  {
+    "title": "Various",
+    "fileName": "Various.svg"
+  },
+  {
+    "title": "Video",
+    "fileName": "Video.svg"
+  },
+  {
+    "title": "Volume",
+    "fileName": "Volume.svg"
+  },
+  {
+    "title": "Volume Off",
+    "fileName": "VolumeOff.svg"
+  }
+]

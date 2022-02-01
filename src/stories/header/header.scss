@@ -14,7 +14,7 @@
   }
 }
 
-.header-logo--desktop {
+.header__logo-desktop {
   display: none;
   border-right: 1px solid $c-global-tertiary-1;
   @include breakpoint-m {
@@ -22,7 +22,7 @@
   }
 }
 
-.header-logo--desktop--link {
+.header__logo-desktop-link {
   height: 100%;
   width: 100%;
   display: flex;
@@ -30,24 +30,24 @@
   justify-content: center;
 }
 
-.header-menu {
+.header__menu {
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
 
-.header-menu--first {
+.header__menu-first {
   border-bottom: 1px solid $c-global-tertiary-1;
   display: grid;
   grid-template-columns: 1fr auto auto;
 }
 
-.header-menu--navigation--logo {
+.header__menu-navigation-logo {
   margin-left: 16px;
   display: flex;
   align-items: center;
 }
 
-.header-menu--navigation {
+.header__menu-navigation {
   display: none;
 
   @include breakpoint-m {
@@ -57,7 +57,7 @@
   }
 }
 
-.header-menu--navigation--mobile {
+.header__menu-navigation-mobile {
   display: flex;
 
   @include breakpoint-s {
@@ -71,27 +71,27 @@
   }
 }
 
-.header-menu--navigation--button {
+.header__menu-navigation-button {
   display: flex;
   justify-content: center;
   align-items: center;
   border-right: 1px solid $c-global-tertiary-1;
 }
 
-.header-menu--navigation--item:hover {
+.header__menu-navigation-item:hover {
   border-top: 1px solid transparent; // to prevent jumping
   border-bottom: 1px solid #000;
 }
 
-.header-menu--navigation--link {
+.header__menu-navigation-link {
   padding: 0 12px;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.header-menu--profile,
-.header-menu--bookmarked {
+.header__menu-profile,
+.header__menu-bookmarked {
   position: relative;
   border-left: 1px solid $c-global-tertiary-1;
 
@@ -106,7 +106,7 @@
 
   span {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -121,7 +121,7 @@
     }
   }
 
-  .header--notification {
+  .header__notification {
     position: absolute;
     width: 8px;
     height: 8px;
@@ -130,14 +130,14 @@
   }
 }
 
-.header-menu--search {
+.header__menu-search {
   display: flex;
   align-items: center;
   position: relative;
   height: 100%;
 }
 
-.header-menu--search--input {
+.header__menu-search-input {
   width: 100%;
   height: 100%;
   padding: 0 24px;
@@ -151,12 +151,12 @@
   }
 }
 
-.header-menu--search--icon {
+.header__menu-search-icon {
   position: absolute;
   right: 24px;
 }
 
-.header-clock {
+.header__clock {
   border-left: 1px solid $c-global-tertiary-1;
   display: none;
 
@@ -165,13 +165,13 @@
   }
 }
 
-.header-clock--items {
+.header__clock-items {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header-button {
+.header__button {
   height: 56px;
   width: 56px;
 
@@ -181,10 +181,10 @@
   }
 }
 
-#header-overlay.visible {
+#header__overlay.visible {
   display: grid;
 }
-#header-overlay {
+#header__overlay {
   display: none;
   z-index: 5;
   position: fixed;
@@ -199,25 +199,25 @@
   }
 }
 
-.header-overlay--main {
+.header__overlay-main {
   background-color: $c-global-primary;
 }
 
-.header-overlay--backdrop {
+.header__overlay-backdrop {
   background-color: #000;
   opacity: 0.6;
 }
 
-.header-overlay--menu {
+.header__overlay-menu {
   margin-top: 96px;
   margin-left: 56px;
 }
 
-.header-overlay--menu--item {
+.header__overlay-menu-item {
   margin-bottom: 8px;
 }
 
-#header-menu--close {
+#header__menu--close {
   position: fixed;
   padding: 30px;
 }

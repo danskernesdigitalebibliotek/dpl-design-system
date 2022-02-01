@@ -1,5 +1,5 @@
 .breadcrumb {
-  .arrow-link {
+  .arrow__link {
     text-decoration: none;
   }
 
@@ -9,10 +9,10 @@
     @extend %text-links-placeholder;
   }
 
-  .arrow-body {
+  .arrow__body {
     stroke: $c-text-secondary-gray;
   }
-  .arrow-head {
+  .arrow__head {
     fill: $c-text-secondary-gray;
   }
 }

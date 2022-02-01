@@ -1,13 +1,21 @@
 {
-  "extends": ["@reloaddk/stylelint-recommended-scss"],
+  "extends": [
+    "@reloaddk/stylelint-recommended-scss"
+  ],
   "rules": {
     "selector-max-id": null,
     "selector-no-qualifying-type": [
       true,
       {
-        "ignore": ["attribute", "class", "id"]
+        "ignore": [
+          "attribute",
+          "class",
+          "id"
+        ]
       }
     ],
-    "property-no-vendor-prefix": null   
+    "selector-class-pattern": null,
+    "property-no-vendor-prefix": null,
+    "scss/dollar-variable-pattern": null
   }
 }
