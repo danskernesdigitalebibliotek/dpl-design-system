@@ -1,4 +1,5 @@
 .material-banner__header {
+  position: relative;
   padding: 24px;
 
   @include breakpoint-s {
@@ -23,15 +24,21 @@
 
 .material-banner__menu {
   margin-top: 16px;
+  padding-right: 20px;
 
   .link-filters {
     display: none;
   }
 
   @include breakpoint-m {
+    position: absolute;
+    top: 88px;
+    right: 20px;
+
     .dropdown {
       display: none;
     }
+
     .link-filters {
       display: flex;
     }
@@ -39,12 +46,6 @@
 
   .link-filters__tag-wrapper {
     position: relative;
-  }
-
-  @include breakpoint-m {
-    position: absolute;
-    top: 88px;
-    right: 20px;
   }
 
   @include breakpoint-l {

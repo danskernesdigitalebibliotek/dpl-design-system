@@ -25,7 +25,7 @@ export const ListDetails = (props: ListDetailsProps) => {
         </div>
         <div className="list-details__menu">
           {props.menu && (
-            <Dropdown ariaLabel={props.menu.ariaLabel} list={props.menu.list} />
+            <Dropdown ariaLabel={props.menu.ariaLabel} list={props.menu.list} arrowIcon="chevron" />
           )}
           {props.link && (
             <Links href={props.link.url} linkText={props.link.label} />

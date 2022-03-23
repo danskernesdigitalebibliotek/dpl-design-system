@@ -7,7 +7,15 @@ export default {
   title: "Atoms / Checkbox",
   component: Checkbox,
   decorators: [withDesign],
-  argTypes: {},
+  argTypes: {
+    // We disable the isChecked control, since it is not possible to
+    // get the states from the React component to work with Storybook controls.
+    isChecked: { 
+      control: {
+        disable: true
+      }
+    }
+  },
   parameters: {},
 } as ComponentMeta<typeof Checkbox>;
 

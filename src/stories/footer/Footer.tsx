@@ -25,7 +25,7 @@ export const Footer = () => {
           </div>
           <Accordion list={list} />
           <div className="footer__widgets mt-48">
-            <Dropdown list={dropdownList} ariaLabel="dropdown" />
+            <Dropdown list={dropdownList} ariaLabel="dropdown" arrowIcon="triangles" />
             <Logo fallback={false} libraryName={""} altText={"logo"} />
           </div>
           <div className="footer__separator mt-24"></div>
@@ -173,7 +173,7 @@ export const Footer = () => {
           </div>
 
           <div className="footer__widgets mt-80">
-            <Dropdown list={dropdownList} ariaLabel="dropdown" />
+            <Dropdown list={dropdownList} ariaLabel="dropdown" arrowIcon="triangles" />
             <Logo fallback={false} libraryName={""} altText={"logo"} />
           </div>
 

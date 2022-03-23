@@ -6,7 +6,15 @@ export default {
   title: "Atoms / Material - Card",
   component: MaterialCard,
   decorators: [withDesign],
-  argTypes: {},
+  // We disable the isChecked control, since it is not possible to
+  // get the states from the React component to work with Storybook controls.
+  argTypes: {
+    isLiked: { 
+      control: {
+        disable: true
+      }
+    }
+  },
   parameters: {},
 } as ComponentMeta<typeof MaterialCard>;
 

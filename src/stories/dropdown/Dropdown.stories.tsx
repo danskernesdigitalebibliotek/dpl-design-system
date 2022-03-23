@@ -10,6 +10,11 @@ export default {
   title: "Components / Dropdown",
   component: DropdownComp,
   decorators: [withDesign],
+  argTypes: {
+    arrowIcon: {
+      defaultValue: "triangles",
+    },
+  },
   parameters: {
     design: {
       type: "figma",
@@ -50,4 +55,5 @@ export const Dropdown = Template.bind({});
 Dropdown.args = {
   list,
   ariaLabel: "Dropdown with different artists",
+  arrowIcon: "triangles",
 };

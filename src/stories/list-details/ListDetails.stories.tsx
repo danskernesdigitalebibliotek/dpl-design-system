@@ -45,6 +45,7 @@ ItemDropdown.args = {
   icon: "icons/collection/Ebook.svg",
   menu: {
     ariaLabel: "dropdown",
+    arrowIcon: "chevron",
     list: [
       {
         href: "",
