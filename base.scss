@@ -1,6 +1,8 @@
 @import "./src/styles/scss/reset";
 @import "./src/stories/colors/color-variables";
 
+// the imports below are not advised to be moved around, because
+// they cross-reference various defined variables between each other
 @import "./src/stories/breakpoints/breakpoints";
 @import "./src/stories/typography/typography";
 @import "./src/stories/links/links";
@@ -23,6 +25,7 @@
 @import "./src/stories/number/number";
 @import "./src/stories/counter/counter";
 @import "./src/stories/checkbox/checkbox";
+@import "./src/stories/availability-label/availability-label";
 
 @import "./src/stories/list-reservation/list-reservation";
 @import "./src/stories/list-dashboard/list-dashboard";
