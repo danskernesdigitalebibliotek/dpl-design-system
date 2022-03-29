@@ -4,6 +4,8 @@
 }
 
 $pagefold-map: (
+  "none": 0,
+  "xsmall": 14,
   "small": 16,
   "medium": 24,
   "large": 38,
@@ -42,5 +44,13 @@ $pagefold-map: (
     position: absolute;
     top: 0;
     left: 0;
+
+    &.success {
+      background-color: $c-signal-success;
+    }
+
+    &.alert {
+      background-color: $c-signal-alert;
+    }
   }
 }

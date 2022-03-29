@@ -31,6 +31,11 @@ export default {
         disable: true,
       },
     },
+    colorClass: {
+      control: {
+        defaultValue: undefined,
+      },
+    },
   },
   parameters: {
     design: {
