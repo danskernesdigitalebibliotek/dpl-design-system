@@ -1,7 +1,7 @@
 {
-  "name": "dpl-design-system",
+  "name": "@danskernesdigitalebibliotek/dpl-design-system",
   "version": "0.1.0",
-  "private": true,
+  "repository": "https://github.com/danskernesdigitalebibliotek/dpl-design-system",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -62,6 +62,13 @@
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.7",
     "@whitespace/storybook-addon-html": "^5.0.0",
+    "json": "^11.0.0",
     "storybook-addon-designs": "^6.1.0"
-  }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "files": [
+    "build/**/*"
+  ]
 }
