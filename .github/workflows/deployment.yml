@@ -5,7 +5,7 @@ on:
     tags:
       - "*"
     branches:
-      - main
+      - "*"
 
 jobs:
   deploy_release:
@@ -30,14 +30,14 @@ jobs:
         with:
           files: dist.zip
 
-      - name: Release with latest
-        if: startsWith(github.ref, 'refs/heads/main')
+      - name: Release branch
+        if: startsWith(github.ref, 'refs/heads/')
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: ${{ github.ref_name }}
           prerelease: true
-          title: "Main"
+          title: ${{ github.ref_name }}
           files: dist.zip
 
   deploy_npm:
@@ -67,7 +67,7 @@ jobs:
           npm exec -- json -I -f package.json -e "this.repository='https://github.com/$GITHUB_REPOSITORY'"
 
       - name: Release branch
-        if: startsWith(github.ref, 'refs/heads/main')
+        if: startsWith(github.ref, 'refs/heads/')
         # Version 0.0.0-SHA is a schema that supports semantic versioning but
         # should sink below proper versions.
         # Output package.json to provide insight and help debugging
