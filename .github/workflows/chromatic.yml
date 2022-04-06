@@ -3,9 +3,7 @@ name: "Chromatic"
 on: push
 jobs:
   chromatic-deployment:
-    # Operating System
     runs-on: ubuntu-latest
-    # Job steps
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -25,3 +23,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        # Forks may not have a CHROMATIC_PROJECT_TOKEN secret set
+        # making the action fail unrelated to the change at hand.
+        # Make it not fail.
+        continue-on-error: true
