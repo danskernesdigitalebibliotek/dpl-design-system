@@ -2,12 +2,7 @@
   "name": "dpl-design-system",
   "version": "0.1.0",
   "repository": "https://github.com/danskernesdigitalebibliotek/dpl-design-system",
-  "dependencies": {
-  },
-  "engines": {
-    "node": ">=16",
-    "npm": ">=7"
-  },
+  "dependencies": {},
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
     "storybook:axe": "build-storybook && axe-storybook",
