@@ -23,7 +23,7 @@ Available.args = {
     inherit: false,
     container: false,
     size: "xsmall",
-    classes: "availability-label--unselected text-label",
+    classes: "availability-label availability-label--unselected text-label",
     colorClass: "success",
   },
 };
@@ -37,7 +37,7 @@ Selected.args = {
     inherit: false,
     container: false,
     size: "none",
-    classes: "availability-label--selected text-label",
+    classes: "availability-label availability-label--selected text-label",
   },
 };
 
@@ -50,7 +50,7 @@ Unavailable.args = {
     inherit: false,
     container: false,
     size: "xsmall",
-    classes: "availability-label--unselected text-label",
+    classes: "availability-label availability-label--unselected text-label",
     colorClass: "alert",
   },
 };

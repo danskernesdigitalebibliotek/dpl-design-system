@@ -8,12 +8,10 @@
   background-color: $c-global-primary;
 
   &--selected {
-    @extend .availability-label;
     border: 1px solid $c-text-primary-black;
   }
 
   &--unselected {
-    @extend .availability-label;
     border: 1px solid $c-global-tertiary-1;
   }
 

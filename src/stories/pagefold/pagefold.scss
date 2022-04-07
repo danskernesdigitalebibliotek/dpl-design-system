@@ -18,9 +18,11 @@ $pagefold-map: (
   }
 
   .pagefold-parent--#{$size} {
-    width: #{$triangle-width}px;
-    height: #{$triangle-width}px;
+    min-width: #{$triangle-width}px;
+    min-height: #{$triangle-width}px;
     position: relative;
+    background-color: #eee9e5;
+    display: inline-block;
     clip-path: polygon(
       #{$triangle-width}px 0,
       0 #{$triangle-width}px,

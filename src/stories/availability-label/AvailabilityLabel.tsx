@@ -17,16 +17,19 @@ export const AvailabilityLabel = (props: AvailabilityLabelPropsType) => {
   ) {
     if (currentStatus === "selected") {
       pagefoldProps.size = "none";
-      pagefoldProps.classes = "availability-label--selected text-label";
+      pagefoldProps.classes =
+        "availability-label availability-label--selected text-label";
     }
     if (currentStatus === "available") {
       pagefoldProps.size = "xsmall";
-      pagefoldProps.classes = "availability-label--unselected text-label";
+      pagefoldProps.classes =
+        "availability-label availability-label--unselected text-label";
       pagefoldProps.colorClass = "success";
     }
     if (currentStatus === "unavailable") {
       pagefoldProps.size = "xsmall";
-      pagefoldProps.classes = "availability-label--unselected text-label";
+      pagefoldProps.classes =
+        "availability-label availability-label--unselected text-label";
       pagefoldProps.colorClass = "alert";
     }
     return pagefoldProps;
