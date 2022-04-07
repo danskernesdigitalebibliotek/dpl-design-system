@@ -1,11 +1,6 @@
 name: Deployment
 
-on:
-  push:
-    tags:
-      - "*"
-    branches:
-      - "*"
+on: push
 
 jobs:
   deploy_release:
