@@ -1,0 +1,21 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "javascript.validate.enable": false,
+
+  // use .eslintrc for formatting
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+
+  // use .stylelintrc
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"],
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  }
+}
