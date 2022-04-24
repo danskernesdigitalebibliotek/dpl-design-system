@@ -10,7 +10,7 @@ export default {
   component: PagefoldComp,
   decorators: [withDesign],
   argTypes: {
-    inherit: {
+    isInheriting: {
       defaultValue: false,
     },
     container: {
@@ -53,10 +53,10 @@ const Template: ComponentStory<typeof PagefoldComp> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  inherit: false,
+  isInheriting: false,
 };
 
 export const Inherit = Template.bind({});
 Inherit.args = {
-  inherit: true,
+  isInheriting: true,
 };

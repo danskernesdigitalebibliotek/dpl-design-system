@@ -33,10 +33,10 @@ export const Header = (props: HeaderProps) => {
             <div>
               <div className="header__menu-navigation-mobile">
                 <Pagefold
-                  inherit={false}
-                  container={false}
+                  isInheriting={false}
+                  isAContainer={false}
                   size="small"
-                  classes="header__menu-navigation-button header__button"
+                  className="header__menu-navigation-button header__button"
                   compProps={{
                     id: "header__menu--open",
                     onClick: () => window.eventHeader(),
@@ -105,7 +105,7 @@ export const Header = (props: HeaderProps) => {
         </div>
 
         <div className="header__clock">
-          <Pagefold inherit={false} container={false} size="medium" />
+          <Pagefold isInheriting={false} isAContainer={false} size="medium" />
           <div className="header__clock-items">
             <img
               src={`icons/basic/icon-watch-static.svg`}

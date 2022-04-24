@@ -12,7 +12,7 @@ export const Footer = () => {
       <h2 className="hide-visually">Globale links</h2>
       {/* Footer mobile */}
       <div className="footer__mobile">
-        <Pagefold inherit={true} container={true} size="small">
+        <Pagefold isInheriting={true} isAContainer={true} size="small">
           <div>
             <h3 className="text-header-h4 mb-16">Åbningstider</h3>
             <p className="text-body-medium-regular mb-24">
@@ -87,7 +87,7 @@ export const Footer = () => {
 
       {/* Footer tablet/desktop */}
       <div className="footer__desktop">
-        <Pagefold inherit={true} container={true} size="medium">
+        <Pagefold isInheriting={true} isAContainer={true} size="medium">
           <div className="footer__column-wrapper">
             <div className="footer__column">
               <h3 className="text-header-h4 mb-16">Åbningstider</h3>
