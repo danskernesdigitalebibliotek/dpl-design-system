@@ -1,35 +1,43 @@
+import clsx from "clsx";
 import React from "react";
 
 export type PagefoldProps = {
-  inherit: boolean;
-  container: boolean;
+  isInheriting: boolean;
+  isAContainer: boolean;
   size: "none" | "xsmall" | "small" | "medium" | "large" | "xlarge";
-  colorClass?: "success" | "alert";
+  type?: "success" | "alert";
   children?: React.ReactNode;
-  classes?: string;
+  className?: string;
   compProps?: React.ComponentPropsWithoutRef<"div">;
 };
 
 export const Pagefold = (props: PagefoldProps) => {
   const {
-    inherit,
-    container,
+    isInheriting,
+    isAContainer,
     size,
-    colorClass,
+    type,
     children,
-    classes,
+    className,
     compProps,
   } = props;
-  const containerClass = container ? "internal-pagefold-parent" : "";
 
-  const parent = `pagefold-parent--${size} ${containerClass}  ${classes || ""}`;
-  const child = `pagefold-triangle--${size} ${
-    inherit ? "pagefold-inherit-parent" : ""
-  } ${colorClass ? colorClass : ""}`;
+  const classes = {
+    wrapper: clsx(
+      `pagefold-parent--${size}`,
+      {"internal-pagefold-parent": isAContainer},
+      className
+    ),
+    content: clsx(
+      type,
+      `pagefold-triangle--${size}`,
+      {"pagefold-inherit-parent": isInheriting}
+    )
+  }
 
   return (
-    <div className={parent} {...compProps}>
-      <div className={child} />
+    <div className={classes.wrapper} {...compProps}>
+      <div className={classes.content} />
       {children}
     </div>
   );

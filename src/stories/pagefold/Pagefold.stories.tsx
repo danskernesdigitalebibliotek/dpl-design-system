@@ -10,16 +10,16 @@ export default {
   component: PagefoldComp,
   decorators: [withDesign],
   argTypes: {
-    inherit: {
+    isInheriting: {
       defaultValue: false,
     },
-    container: {
+    isAContainer: {
       defaultValue: true,
     },
     size: {
       defaultValue: "medium",
     },
-    classes: {
+    className: {
       // Only used internally
       control: {
         disable: true,
@@ -31,7 +31,7 @@ export default {
         disable: true,
       },
     },
-    colorClass: {
+    type: {
       control: {
         defaultValue: undefined,
       },
@@ -53,10 +53,10 @@ const Template: ComponentStory<typeof PagefoldComp> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  inherit: false,
+  isInheriting: false,
 };
 
 export const Inherit = Template.bind({});
 Inherit.args = {
-  inherit: true,
+  isInheriting: true,
 };
