@@ -13,13 +13,13 @@ export default {
     isInheriting: {
       defaultValue: false,
     },
-    container: {
+    isAContainer: {
       defaultValue: true,
     },
     size: {
       defaultValue: "medium",
     },
-    classes: {
+    className: {
       // Only used internally
       control: {
         disable: true,
@@ -31,7 +31,7 @@ export default {
         disable: true,
       },
     },
-    colorClass: {
+    type: {
       control: {
         defaultValue: undefined,
       },
