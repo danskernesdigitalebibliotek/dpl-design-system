@@ -72,7 +72,8 @@ jobs:
         run: |
           npm version 0.0.0-$GITHUB_SHA --no-git-tag-version
           cat package.json
-          npm publish --tag $GITHUB_REF_NAME
+          NPM_TAG_NAME=$(echo $GITHUB_REF_NAME | tr -d [:space:] | tr -C [:alnum:] -)
+          npm publish --tag $NPM_TAG_NAME
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
