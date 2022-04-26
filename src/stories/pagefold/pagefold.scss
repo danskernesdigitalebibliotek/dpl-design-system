@@ -21,7 +21,7 @@ $pagefold-map: (
     min-width: #{$triangle-width}px;
     min-height: #{$triangle-width}px;
     position: relative;
-    background-color: #eee9e5;
+    background-color: $c-global-secondary;
     display: inline-block;
     clip-path: polygon(
       #{$triangle-width}px 0,
@@ -47,11 +47,11 @@ $pagefold-map: (
     top: 0;
     left: 0;
 
-    &.success {
+    &--success {
       background-color: $c-signal-success;
     }
 
-    &.alert {
+    &--alert {
       background-color: $c-signal-alert;
     }
   }

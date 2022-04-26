@@ -16,21 +16,21 @@ const Template: ComponentStory<typeof AvailabilityLabel> = (args) => (
 
 export const Available = Template.bind({});
 Available.args = {
-  manifestation: "bog",
+  manifestation: "Bog",
   availability: "Hjemme",
   status: "available",
 };
 
 export const Selected = Template.bind({});
 Selected.args = {
-  manifestation: "ebog",
+  manifestation: "Ebog",
   availability: "Online",
   status: "selected",
 };
 
 export const Unavailable = Template.bind({});
 Unavailable.args = {
-  manifestation: "lydbog (cd-mp3)",
+  manifestation: "Lydbog (cd-mp3)",
   availability: "Udlånt",
   status: "unavailable",
 };

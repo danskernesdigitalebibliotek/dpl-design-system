@@ -32,12 +32,12 @@ export const withAvailabilityProps =
       available: {
         size: "xsmall",
         classes: ["availability-label--unselected"],
-        type: "success",
+        type: "pagefold-triangle--xsmall--success",
       },
       unavailable: {
         size: "xsmall",
         classes: ["availability-label--unselected"],
-        type: "alert",
+        type: "pagefold-triangle--xsmall--alert",
       },
     };
 

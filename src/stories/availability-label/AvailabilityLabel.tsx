@@ -2,7 +2,7 @@ import { Pagefold } from "../pagefold/Pagefold";
 import { withAvailabilityProps } from "./abilityLabel.hoc";
 
 export type AvailabilityLabelPropsType = {
-  manifestation: "bog" | "ebog" | "lydbog (net)" | "lydbog (cd-mp3)";
+  manifestation: "Bog" | "Ebog" | "Lydbog (net)" | "Lydbog (cd-mp3)";
   availability: "Hjemme" | "Online" | "Udlånt";
   status: "available" | "unavailable" | "selected";
 };
@@ -24,4 +24,3 @@ export const AvailabilityLabel = (props: AvailabilityLabelPropsType) => {
     </AvailabilityPagefold>
   );
 };
-

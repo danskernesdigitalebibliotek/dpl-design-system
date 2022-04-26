@@ -1,8 +1,8 @@
 @import "./src/styles/scss/reset";
 @import "./src/stories/colors/color-variables";
 
-// the imports below are not advised to be moved around, because
-// they cross-reference various defined variables between each other
+// The imports below are not advised to be moved around, because
+// they cross-reference various defined variables between each other.
 @import "./src/stories/breakpoints/breakpoints";
 @import "./src/stories/typography/typography";
 @import "./src/stories/links/links";
