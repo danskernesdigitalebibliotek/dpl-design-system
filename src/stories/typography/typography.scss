@@ -323,10 +323,14 @@
   text-align: left;
 }
 
-.text-label-normal {  
+.text-label-normal {
+  @extend %text-label;
+
   font-weight: 400;
 }
 
 .text-label-semibold {
+  @extend %text-label;
+
   font-weight: 500;
 }
