@@ -3,22 +3,20 @@ import { PagefoldProps } from "../pagefold/Pagefold";
 import { AvailabilityLabelPropsType } from "./AvailabilityLabel";
 
 type PropMapItem = Omit<PagefoldProps, "isInheriting" | "isAContainer"> & {
-  classes: string[],
+  classes: string[];
 };
 
-export const withAvailabilityProps =
-<T extends PagefoldProps>
-(Component: React.ComponentType<T>) => {
+export const withAvailabilityProps = <T extends PagefoldProps>(
+  Component: React.ComponentType<T>
+) => {
+  const defaultClasses = ["availability-label", "text-label"];
 
-  const defaultClasses = [
-    "availability-label",
-    "text-label"
-  ];
-
-  return (props: Omit<T, "isInheriting" | "isAContainer" | "size"> & {
-    status: AvailabilityLabelPropsType["status"];
-  }) => {
-    const {status} = props;
+  return (
+    props: Omit<T, "isInheriting" | "isAContainer" | "size"> & {
+      status: AvailabilityLabelPropsType["status"];
+    }
+  ) => {
+    const { status } = props;
 
     const propMap: {
       selected: PropMapItem;
@@ -41,19 +39,16 @@ export const withAvailabilityProps =
       },
     };
 
-    const {classes, ...pageFoldProps} = propMap[status];
+    const { classes, ...pageFoldProps } = propMap[status];
 
     const updatedProps: PagefoldProps = {
-      className: clsx(
-        defaultClasses,
-        classes
-      ),
+      className: clsx(defaultClasses, classes),
       ...pageFoldProps,
       isInheriting: false,
       isAContainer: false,
       ...props,
     };
 
-    return (<Component {...updatedProps as T} />);
+    return <Component {...(updatedProps as T)} />;
   };
 };
