@@ -6,7 +6,7 @@ export type MaterialCardProps = {
   title: string;
   description: string;
   isLiked: boolean;
-  material: Required<MaterialProps>;
+  material: MaterialProps;
 };
 
 export const MaterialCard = (props: MaterialCardProps) => {

@@ -4,13 +4,17 @@ export type MaterialProps = {
   url: string;
   animate: boolean;
   size: "small" | "medium" | "large";
-  tint: "20" | "40" | "60" | "80" | "120";
+  tint?: "20" | "40" | "60" | "80" | "120";
 };
 
 export const Material = (props: MaterialProps) => {
   const { size, animate, url, tint } = props;
 
-  const tintClasses = {
+  type TintClassesType = {
+    [key: string]: string;
+  };
+  const tintClasses: TintClassesType = {
+    default: "bg-identity-tint-120",
     "120": "bg-identity-tint-120",
     "80": "bg-identity-tint-80",
     "60": "bg-identity-tint-60",
@@ -19,9 +23,13 @@ export const Material = (props: MaterialProps) => {
   };
 
   const classes = {
-    wrapper: clsx(`material material--${size}`, tintClasses[tint], {
-      material__animate: animate,
-    }),
+    wrapper: clsx(
+      `material material--${size}`,
+      tintClasses[tint || "default"],
+      {
+        material__animate: animate,
+      }
+    ),
   };
 
   return (
