@@ -29,22 +29,26 @@ $modal-pause-container-width: 550px;
 }
 
 .datepickers {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 80px;
+
+  @include breakpoint-s {
+    display: flex;
+    justify-content: space-between;
+  }
 
   input {
     border: 1px solid $c-global-tertiary-1;
     box-sizing: border-box;
     background-color: $c-global-primary;
-    min-width: 200px;
+    min-width: 230px;
     height: 50px;
-    padding: 0 20px;
+    padding: 0 10px;
     color: $c-text-secondary-gray;
     @extend %text-button-placeholder;
 
     @include breakpoint-s {
       min-width: 250px;
+      padding: 0 20px;
     }
   }
 
@@ -52,6 +56,11 @@ $modal-pause-container-width: 550px;
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 75px;
+    
+    @include breakpoint-s {
+      margin-bottom: 0;
+    }
   }
 
   [type="date"] {
