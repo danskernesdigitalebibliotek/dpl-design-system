@@ -349,7 +349,7 @@ select {
   text-align: left;
 }
 
-.status-label--outline, .status-label--neutral, .status-label--info, .status-label--warning, .status-label--danger, .dropdown__select, .btn-primary,
+.datepickers input, .status-label--outline, .status-label--neutral, .status-label--info, .status-label--warning, .status-label--danger, .dropdown__select, .btn-primary,
 .text-button {
   font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
@@ -361,13 +361,13 @@ select {
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  .status-label--outline, .status-label--neutral, .status-label--info, .status-label--warning, .status-label--danger, .dropdown__select, .btn-primary,
+  .datepickers input, .status-label--outline, .status-label--neutral, .status-label--info, .status-label--warning, .status-label--danger, .dropdown__select, .btn-primary,
 .text-button {
     line-height: 120%;
   }
 }
 @media (min-width: 1920px) {
-  .status-label--outline, .status-label--neutral, .status-label--info, .status-label--warning, .status-label--danger, .dropdown__select, .btn-primary,
+  .datepickers input, .status-label--outline, .status-label--neutral, .status-label--info, .status-label--warning, .status-label--danger, .dropdown__select, .btn-primary,
 .text-button {
     font-size: 16px;
     line-height: 19px;
@@ -1704,7 +1704,7 @@ select {
 .dropdown__select {
   appearance: none;
   -webkit-appearance: none;
-  min-width: 200px;
+  min-width: 230px;
   width: 100%;
   height: 50px;
   padding: 0 20px;
@@ -2619,6 +2619,73 @@ select {
   height: 100%;
 }
 
+.modal-pause {
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-pause__container {
+  margin: 0 24px;
+  padding-top: 96px;
+  max-width: 550px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .modal-pause__container {
+    margin: 0 45px;
+  }
+}
+
+.modal-pause__button {
+  display: grid;
+  justify-content: center;
+}
+
+.modal_pause__text-link .link-tag {
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+.datepickers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.datepickers input {
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  background-color: #f6f5f0;
+  min-width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  color: #484848;
+}
+@media (min-width: 768px) {
+  .datepickers input {
+    min-width: 250px;
+  }
+}
+.datepickers .datepicker {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.datepickers [type=date] {
+  background: #f6f5f0 url("https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png") 90% 50% no-repeat;
+}
+.datepickers [type=date]::-webkit-inner-spin-button {
+  display: none;
+}
+.datepickers [type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+.datepickers .datepicker-toggle {
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 19px;
+}
+
 .material-container {
   display: flex;
 }
@@ -2691,6 +2758,7 @@ select {
   }
 }
 .material-banner__header {
+  position: relative;
   padding: 24px;
 }
 @media (min-width: 768px) {
@@ -2718,11 +2786,17 @@ select {
 
 .material-banner__menu {
   margin-top: 16px;
+  padding-right: 20px;
 }
 .material-banner__menu .link-filters {
   display: none;
 }
 @media (min-width: 1024px) {
+  .material-banner__menu {
+    position: absolute;
+    top: 88px;
+    right: 20px;
+  }
   .material-banner__menu .dropdown {
     display: none;
   }
@@ -2732,13 +2806,6 @@ select {
 }
 .material-banner__menu .link-filters__tag-wrapper {
   position: relative;
-}
-@media (min-width: 1024px) {
-  .material-banner__menu {
-    position: absolute;
-    top: 88px;
-    right: 20px;
-  }
 }
 @media (min-width: 1440px) {
   .material-banner__menu {
@@ -3176,4 +3243,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.0a7ffd8a.chunk.css.map*/
+/*# sourceMappingURL=main.b07054dd.chunk.css.map*/
