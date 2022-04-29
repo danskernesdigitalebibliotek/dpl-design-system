@@ -2647,28 +2647,39 @@ select {
 }
 
 .datepickers {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .datepickers {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .datepickers input {
   border: 1px solid #dbdbdb;
   box-sizing: border-box;
   background-color: #f6f5f0;
-  min-width: 200px;
+  min-width: 230px;
   height: 50px;
-  padding: 0 20px;
+  padding: 0 10px;
   color: #484848;
 }
 @media (min-width: 768px) {
   .datepickers input {
     min-width: 250px;
+    padding: 0 20px;
   }
 }
 .datepickers .datepicker {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 75px;
+}
+@media (min-width: 768px) {
+  .datepickers .datepicker {
+    margin-bottom: 0;
+  }
 }
 .datepickers [type=date] {
   background: #f6f5f0 url("https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png") 90% 50% no-repeat;
@@ -3243,4 +3254,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.b07054dd.chunk.css.map*/
+/*# sourceMappingURL=main.5ba0993a.chunk.css.map*/
