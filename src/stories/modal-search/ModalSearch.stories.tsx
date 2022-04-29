@@ -22,7 +22,5 @@ const Template: ComponentStory<typeof ModalSearch> = (args) => (
 
 export const Search = Template.bind({});
 Search.args = {
-  description: "Kan afleveres på alle Rudersdals biblioteker",
-  showExpired: true,
   showModal: true,
 };

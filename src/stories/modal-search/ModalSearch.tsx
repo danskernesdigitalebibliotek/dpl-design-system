@@ -7,9 +7,7 @@ import {
 import { Button } from "../button/Button";
 
 export type ModalSearchProps = {
-  description: string;
   showModal: boolean;
-  showExpired: boolean;
 };
 
 export const ModalSearch = (props: ModalSearchProps) => {
@@ -35,7 +33,7 @@ export const ModalSearch = (props: ModalSearchProps) => {
     >
       <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-search__container">
-        <h2 className="text-header-h2">Gem søgning</h2>
+        <h3 className="text-header-h3">Gem søgning</h3>
         <div className="mt-48 color-secondary-gray">
           <p className="text-body-medium-regular">Navngiv din søgning</p>
         </div>

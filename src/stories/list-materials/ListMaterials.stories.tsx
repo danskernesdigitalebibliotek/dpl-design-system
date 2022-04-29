@@ -6,7 +6,15 @@ export default {
   title: "Components / List - Materials",
   component: ListMaterials,
   decorators: [withDesign],
-  argTypes: {},
+  // We disable the isChecked control, since it is not possible to
+  // get the states from the React component to work with Storybook controls.
+  argTypes: {
+    isChecked: { 
+      control: {
+        disable: true
+      }
+    }
+  },
   parameters: {
     design: {
       type: "figma",

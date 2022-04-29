@@ -27,7 +27,7 @@ const dropdownList: DropdownItem[] = props.linkFilters.map(i => ({
           {props.showLinkfilters && (
             <div className="material-banner__menu">
               <LinkFilters filters={props.linkFilters} />
-              <Dropdown ariaLabel="Dropdown filter" list={dropdownList} />
+              <Dropdown ariaLabel="Dropdown filter" list={dropdownList} arrowIcon="triangles" />
             </div>
           )}
         </div>
