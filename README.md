@@ -36,11 +36,26 @@ source code.
 
 ## Usage
 
-You can download a `dist.zip` file with `latest` assets (or different tags) under "Releases", and unzip it somewhere within the web root of your project. The assets consist of javascript files, css styles and icons. You can find the html output for a given story under the HTML tab inside storybook.
+The project is available in two ways and should be consumed accordingly:
+
+1. As package in the local npm registry for this repository
+2. As a `dist.zip` file attached to a release for this repository
+
+Both releases contain the built assets of the project: JavaScript files, CSS 
+styles and icons. 
+
+You can find the HTML output for a given story under the HTML tab inside 
+storybook.
 
 ## Deployment
 
-The latest release is getting rebuild on merge to the main branch, and the tag release points to specific commit.
+The project is getting rebuild on pushes to every branch and every tag. In 
+general consuming projects should prefer tagged versions as they are stable 
+proper releases.
+
+During development where the design system is being updated in parallel with 
+the implementation of a consuming project it may be advantageous to use a 
+version tagging a branch.
 
 Run the following to create a tag and push a release:
 
