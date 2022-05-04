@@ -21,8 +21,7 @@ $pagefold-map: (
     min-width: #{$triangle-width}px;
     min-height: #{$triangle-width}px;
     position: relative;
-    background-color: $c-global-secondary;
-    display: inline-block;
+    display: inherit;
     clip-path: polygon(
       #{$triangle-width}px 0,
       0 #{$triangle-width}px,
