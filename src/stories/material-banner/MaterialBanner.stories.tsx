@@ -28,6 +28,7 @@ Item.args = {
         url: "images/book_cover_1.jpg",
         animate: true,
         size: "medium",
+        tint: "80",
       },
     },
     {
@@ -38,6 +39,7 @@ Item.args = {
         url: "images/book_cover_2.jpg",
         animate: true,
         size: "medium",
+        tint: "40",
       },
     },
     {
@@ -48,6 +50,7 @@ Item.args = {
         url: "images/book_cover_3.jpg",
         animate: true,
         size: "medium",
+        tint: "60",
       },
     },
     {
@@ -58,6 +61,7 @@ Item.args = {
         url: "images/book_cover_4.jpg",
         animate: true,
         size: "medium",
+        tint: "120",
       },
     },
     {
@@ -68,6 +72,7 @@ Item.args = {
         url: "images/book_cover_5.jpg",
         animate: true,
         size: "medium",
+        tint: "20",
       },
     },
     {
@@ -78,6 +83,7 @@ Item.args = {
         url: "images/book_cover_6.jpg",
         animate: true,
         size: "medium",
+        tint: "80",
       },
     },
     {
@@ -88,6 +94,7 @@ Item.args = {
         url: "images/book_cover_1.jpg",
         animate: true,
         size: "medium",
+        tint: "40",
       },
     },
     {
@@ -98,6 +105,7 @@ Item.args = {
         url: "images/book_cover_2.jpg",
         animate: true,
         size: "medium",
+        tint: "60",
       },
     },
   ],

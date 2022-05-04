@@ -1,0 +1,33 @@
+.availability-label {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 25px;
+  background-color: $c-global-primary;
+
+  &--selected {
+    border: 1px solid $c-text-primary-black;
+  }
+
+  &--unselected {
+    border: 1px solid $c-global-tertiary-1;
+  }
+
+  &--divider {
+    height: 14px;
+    width: 1px;
+    background-color: $c-global-tertiary-1;
+  }
+
+  &--check {
+    width: 14px;
+    position: absolute;
+    left: 5px;
+    display: none;
+    &.selected {
+      display: inline-block;
+    }
+  }
+}

@@ -4,6 +4,8 @@
 }
 
 $pagefold-map: (
+  "none": 0,
+  "xsmall": 14,
   "small": 16,
   "medium": 24,
   "large": 38,
@@ -16,9 +18,10 @@ $pagefold-map: (
   }
 
   .pagefold-parent--#{$size} {
-    width: #{$triangle-width}px;
-    height: #{$triangle-width}px;
+    min-width: #{$triangle-width}px;
+    min-height: #{$triangle-width}px;
     position: relative;
+    display: inherit;
     clip-path: polygon(
       #{$triangle-width}px 0,
       0 #{$triangle-width}px,
@@ -42,5 +45,13 @@ $pagefold-map: (
     position: absolute;
     top: 0;
     left: 0;
+
+    &--success {
+      background-color: $c-signal-success;
+    }
+
+    &--alert {
+      background-color: $c-signal-alert;
+    }
   }
 }
