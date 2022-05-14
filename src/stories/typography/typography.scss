@@ -318,8 +318,19 @@
   font-family: "Noto Sans JP", sans-serif;
   font-size: 10px;
   font-style: normal;
-  font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.02em;
   text-align: left;
+}
+
+.text-label-normal {
+  @extend %text-label;
+
+  font-weight: 400;
+}
+
+.text-label-semibold {
+  @extend %text-label;
+
+  font-weight: 500;
 }

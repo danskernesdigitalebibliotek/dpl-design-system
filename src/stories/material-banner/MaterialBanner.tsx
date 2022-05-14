@@ -14,10 +14,10 @@ export type MaterialBannerProps = {
 };
 
 export const MaterialBanner = (props: MaterialBannerProps) => {
-const dropdownList: DropdownItem[] = props.linkFilters.map(i => ({
-  title: i.title,
-  href: i.href || "",
-}))
+  const dropdownList: DropdownItem[] = props.linkFilters.map((i) => ({
+    title: i.title,
+    href: i.href || "",
+  }));
 
   return (
     <div className="material-banner">

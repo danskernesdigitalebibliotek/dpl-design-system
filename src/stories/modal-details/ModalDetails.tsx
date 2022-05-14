@@ -8,7 +8,7 @@ import { Material } from "../material/Material";
 import { WarningStatus } from "../warning-status/WarningStatus";
 import { StatusLabel } from "../status-label/StatusLabel";
 import { Button } from "../button/Button";
-import { ButtonUI } from "../button-ui/ButtonUI";
+
 import {
   ModalCloseButton,
   ModalFallbackButton,
@@ -127,6 +127,7 @@ const materialCards: MaterialCardProps[] = [
       url: "images/book_cover_1.jpg",
       animate: true,
       size: "medium",
+      tint: "80",
     },
   },
   {
@@ -137,6 +138,7 @@ const materialCards: MaterialCardProps[] = [
       url: "images/book_cover_2.jpg",
       animate: true,
       size: "medium",
+      tint: "40",
     },
   },
   {
@@ -147,6 +149,7 @@ const materialCards: MaterialCardProps[] = [
       url: "images/book_cover_3.jpg",
       animate: true,
       size: "medium",
+      tint: "60",
     },
   },
   {
@@ -157,8 +160,9 @@ const materialCards: MaterialCardProps[] = [
       url: "images/book_cover_4.jpg",
       animate: true,
       size: "medium",
+      tint: "120",
     },
-  }
+  },
 ];
 
 const linksFilters: LinkFilter[] = [

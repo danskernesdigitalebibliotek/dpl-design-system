@@ -1,26 +1,45 @@
+import clsx from "clsx";
 import React from "react";
 
-type PagefoldProps = {
-  inherit: boolean;
-  container: boolean;
-  size: "small" | "medium" | "large" | "xlarge";
+export type PagefoldProps = {
+  isInheriting: boolean;
+  isAContainer: boolean;
+  size: "none" | "xsmall" | "small" | "medium" | "large" | "xlarge";
+  type?: "success" | "alert";
   children?: React.ReactNode;
-  classes?: string;
+  className?: string;
   compProps?: React.ComponentPropsWithoutRef<"div">;
 };
 
 export const Pagefold = (props: PagefoldProps) => {
-  const { inherit, container, size, children, classes, compProps } = props;
-  const containerClass = container ? "internal-pagefold-parent" : "";
+  const {
+    isInheriting,
+    isAContainer,
+    size,
+    type,
+    children,
+    className,
+    compProps,
+  } = props;
 
-  const parent = `pagefold-parent--${size} ${containerClass} ${classes || ""}`;
-  const child = `pagefold-triangle--${size} ${
-    inherit ? "pagefold-inherit-parent" : ""
-  }`;
+  const baseClass = `pagefold-triangle--${size}`;
+
+  const classes = {
+    wrapper: clsx(
+      `pagefold-parent--${size}`,
+      { "internal-pagefold-parent": isAContainer },
+      className
+    ),
+    triangle: clsx(
+      { [`${baseClass}--${type}`]: type },
+      `pagefold-triangle--${size}`,
+      { "pagefold-inherit-parent": isInheriting }
+    ),
+  };
 
   return (
-    <div className={parent} {...compProps}>
-      <div className={child} />
+    <div className={classes.wrapper} {...compProps}>
+      <div className={classes.triangle} />
       {children}
     </div>
   );
