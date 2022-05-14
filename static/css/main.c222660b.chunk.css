@@ -446,14 +446,22 @@ select {
   }
 }
 
+.text-label-semibold, .text-label-normal,
 .text-label {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 10px;
   font-style: normal;
-  font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.02em;
   text-align: left;
+}
+
+.text-label-normal {
+  font-weight: 400;
+}
+
+.text-label-semibold {
+  font-weight: 500;
 }
 
 .link-tag {
@@ -711,6 +719,66 @@ select {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+}
+
+.m-4 {
+  margin: 4px;
+}
+
+.mx-4 {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.my-4 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.ml-4 {
+  margin-left: 4px;
+}
+
+.mr-4 {
+  margin-right: 4px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+.mt-4 {
+  margin-top: 4px;
+}
+
+.p-4 {
+  padding: 4px;
+}
+
+.px-4 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.py-4 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.pl-4 {
+  padding-left: 4px;
+}
+
+.pr-4 {
+  padding-right: 4px;
+}
+
+.pb-4 {
+  padding-bottom: 4px;
+}
+
+.pt-4 {
+  padding-top: 4px;
 }
 
 .m-8 {
@@ -1305,14 +1373,73 @@ select {
   background-color: #000;
 }
 
+.m-none {
+  margin: nonepx;
+}
+
+.pagefold-parent--none {
+  min-width: 0px;
+  min-height: 0px;
+  position: relative;
+  display: inherit;
+  clip-path: polygon(0px 0, 0 0px, 0 100%, 100% 100%, 100% 0);
+  -webkit-clip-path: polygon(0px 0, 0 0px, 0 100%, 100% 100%, 100% 0);
+}
+
+.pagefold-triangle--none {
+  width: 0px;
+  height: 0px;
+  background-color: hsl(145, 22%, 35%, 1);
+  background-color: hsl(var(--identity-color-h), var(--identity-color-s), var(--identity-color-l), 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pagefold-triangle--none--success {
+  background-color: #068802;
+}
+.pagefold-triangle--none--alert {
+  background-color: #d5364a;
+}
+
+.m-xsmall {
+  margin: xsmallpx;
+}
+
+.pagefold-parent--xsmall {
+  min-width: 14px;
+  min-height: 14px;
+  position: relative;
+  display: inherit;
+  clip-path: polygon(14px 0, 0 14px, 0 100%, 100% 100%, 100% 0);
+  -webkit-clip-path: polygon(14px 0, 0 14px, 0 100%, 100% 100%, 100% 0);
+}
+
+.pagefold-triangle--xsmall {
+  width: 14px;
+  height: 14px;
+  background-color: hsl(145, 22%, 35%, 1);
+  background-color: hsl(var(--identity-color-h), var(--identity-color-s), var(--identity-color-l), 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pagefold-triangle--xsmall--success {
+  background-color: #068802;
+}
+.pagefold-triangle--xsmall--alert {
+  background-color: #d5364a;
+}
+
 .m-small {
   margin: smallpx;
 }
 
 .pagefold-parent--small {
-  width: 16px;
-  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
   position: relative;
+  display: inherit;
   clip-path: polygon(16px 0, 0 16px, 0 100%, 100% 100%, 100% 0);
   -webkit-clip-path: polygon(16px 0, 0 16px, 0 100%, 100% 100%, 100% 0);
 }
@@ -1326,15 +1453,22 @@ select {
   top: 0;
   left: 0;
 }
+.pagefold-triangle--small--success {
+  background-color: #068802;
+}
+.pagefold-triangle--small--alert {
+  background-color: #d5364a;
+}
 
 .m-medium {
   margin: mediumpx;
 }
 
 .pagefold-parent--medium {
-  width: 24px;
-  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   position: relative;
+  display: inherit;
   clip-path: polygon(24px 0, 0 24px, 0 100%, 100% 100%, 100% 0);
   -webkit-clip-path: polygon(24px 0, 0 24px, 0 100%, 100% 100%, 100% 0);
 }
@@ -1348,15 +1482,22 @@ select {
   top: 0;
   left: 0;
 }
+.pagefold-triangle--medium--success {
+  background-color: #068802;
+}
+.pagefold-triangle--medium--alert {
+  background-color: #d5364a;
+}
 
 .m-large {
   margin: largepx;
 }
 
 .pagefold-parent--large {
-  width: 38px;
-  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
   position: relative;
+  display: inherit;
   clip-path: polygon(38px 0, 0 38px, 0 100%, 100% 100%, 100% 0);
   -webkit-clip-path: polygon(38px 0, 0 38px, 0 100%, 100% 100%, 100% 0);
 }
@@ -1370,15 +1511,22 @@ select {
   top: 0;
   left: 0;
 }
+.pagefold-triangle--large--success {
+  background-color: #068802;
+}
+.pagefold-triangle--large--alert {
+  background-color: #d5364a;
+}
 
 .m-xlarge {
   margin: xlargepx;
 }
 
 .pagefold-parent--xlarge {
-  width: 56px;
-  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
   position: relative;
+  display: inherit;
   clip-path: polygon(56px 0, 0 56px, 0 100%, 100% 100%, 100% 0);
   -webkit-clip-path: polygon(56px 0, 0 56px, 0 100%, 100% 100%, 100% 0);
 }
@@ -1391,6 +1539,12 @@ select {
   position: absolute;
   top: 0;
   left: 0;
+}
+.pagefold-triangle--xlarge--success {
+  background-color: #068802;
+}
+.pagefold-triangle--xlarge--alert {
+  background-color: #d5364a;
 }
 
 .accordion {
@@ -2087,6 +2241,36 @@ select {
             transform: scale(0.9);
   }
 }
+.availability-label {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 25px;
+  background-color: #f6f5f0;
+}
+.availability-label--selected {
+  border: 1px solid #000;
+}
+.availability-label--unselected {
+  border: 1px solid #dbdbdb;
+}
+.availability-label--divider {
+  height: 14px;
+  width: 1px;
+  background-color: #dbdbdb;
+}
+.availability-label--check {
+  width: 14px;
+  position: absolute;
+  left: 5px;
+  display: none;
+}
+.availability-label--check.selected {
+  display: inline-block;
+}
+
 .list-reservation-container {
   position: relative;
 }
@@ -3254,4 +3438,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.5ba0993a.chunk.css.map*/
+/*# sourceMappingURL=main.c222660b.chunk.css.map*/
