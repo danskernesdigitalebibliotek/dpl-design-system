@@ -149,6 +149,12 @@
   ::placeholder {
     color: $c-text-secondary-gray;
   }
+
+  &:focus {
+    background-color: $c-text-primary-white;
+    border: 0 solid transparent;
+    outline: none;
+  }
 }
 
 .header__menu-search-icon {
