@@ -60,19 +60,18 @@ tasks:
     cmds:
       - task dev:cli -- npm run chromatic
 
-
-#"lint:markdown": "markdownlint-cli2",
-#"lint:markdown:fix": "markdownlint-cli2-fix",
-
   dev:lint:
     summary: Run linters
     cmds:
       - task dev:cli -- npm run js:eslint
       - task dev:cli -- npm run js:lint
       - task dev:cli -- npm run css:stylelint
+      - task dev:cli -- npm run lint:markdown
 
-# Chromatic for visual test
-# npm run chromatic
+  dev:chromatic:
+    summary:  Run Chromatic for visual test
+    cmds:
+      - task dev:cli -- npm run chromatic
 
   dev:cli:
     summary: Performs command inside container. Expects parameter(s).
