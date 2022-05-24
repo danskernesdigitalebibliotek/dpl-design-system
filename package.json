@@ -2,7 +2,6 @@
   "name": "dpl-design-system",
   "version": "0.1.0",
   "repository": "https://github.com/danskernesdigitalebibliotek/dpl-design-system",
-  "dependencies": {},
   "scripts": {
     "storybook": "start-storybook -p 80 -s public",
     "storybook:axe": "build-storybook && axe-storybook",
@@ -18,7 +17,9 @@
     "css:build": "sass base.scss:src/styles/css/base.css",
     "css:watch": "npm run css:build -- --watch",
     "dev": "concurrently --raw \"npm run storybook\" \"npm run css:watch\"",
-    "chromatic": "npx chromatic --exit-zero-on-changes"
+    "chromatic": "npx chromatic --exit-zero-on-changes",
+    "lint:markdown": "markdownlint-cli2",
+    "lint:markdown:fix": "markdownlint-cli2-fix"
   },
   "browserslist": {
     "production": [
@@ -53,6 +54,7 @@
     "clsx": "^1.1.1",
     "eslint-plugin-reload": "^0.3.0",
     "json": "^11.0.0",
+    "markdownlint-cli2": "^0.4.0",
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.1.0",
     "react-dom": "^17.0.2",
