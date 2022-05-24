@@ -1,3 +1,30 @@
+<!-- markdownlint-disable-next-line first-line-h1 -->
+![https://detdigitalefolkebibliotek.dk/sites/default/files/ddf_logo_rgb_blue_web.png](https://detdigitalefolkebibliotek.dk/sites/default/files/ddf_logo_rgb_blue_web.png)
+
+<!-- markdownlint-disable -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [DPL Design System](#dpl-design-system)
+  - [Requirements](#requirements)
+    - [Manual requirements](#manual-requirements)
+  - [Installation](#installation)
+    - [Installation outside docker](#installation-outside-docker)
+  - [Development](#development)
+    - [Development without docker](#development-without-docker)
+  - [Usage](#usage)
+  - [Deployment](#deployment)
+  - [Storybook](#storybook)
+  - [Chromatic](#chromatic)
+    - [What is Storybook](#what-is-storybook)
+      - [How to use](#how-to-use)
+      - [Addons](#addons)
+      - [Important to notice](#important-to-notice)
+        - [Internal classes](#internal-classes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- markdownlint-enable -->
+
 # DPL Design System
 
 DPL Design System is a library of UI components that should be used as a common
@@ -12,7 +39,12 @@ to ensure consistency.
 
 ## Requirements
 
-This project requires the following setup:
+This project comes with [go-task](https://github.com/go-task/task) and docker
+compose, hence the requirements are limited to having docker install and tasks.
+
+### Manual requirements
+
+This project can be used outside docker with the following requirements:
 
 - `npm >= 7`
 - `node 16`
@@ -27,6 +59,14 @@ installed.
 
 ## Installation
 
+Use the tasks defined in `Taskfile` to run the project:
+
+```shell
+task dev:install
+```
+
+### Installation outside docker
+
 Use the node package manager to install project dependencies:
 
 ```shell
@@ -34,6 +74,26 @@ npm install
 ```
 
 ## Development
+
+To start the docker compose setup in development simple use the `start` task:
+
+```shell
+task dev:start
+```
+
+To see the output from the compile process and start of storybook:
+
+```shell
+task dev:logs
+```
+
+Use `task` and tabulator key in the terminal to see the other predefined tasks:
+
+```shell
+task dev:[TAB]
+```
+
+### Development without docker
 
 To start developing run:
 

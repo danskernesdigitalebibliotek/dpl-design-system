@@ -19,7 +19,8 @@
     "dev": "concurrently --raw \"npm run storybook\" \"npm run css:watch\"",
     "chromatic": "npx chromatic --exit-zero-on-changes",
     "lint:markdown": "markdownlint-cli2",
-    "lint:markdown:fix": "markdownlint-cli2-fix"
+    "lint:markdown:fix": "markdownlint-cli2-fix",
+    "build:doc": "doctoc README.md"
   },
   "browserslist": {
     "production": [
@@ -52,6 +53,7 @@
     "@types/react-dom": "^17.0.0",
     "@whitespace/storybook-addon-html": "^5.0.0",
     "clsx": "^1.1.1",
+    "doctoc": "^2.2.0",
     "eslint-plugin-reload": "^0.3.0",
     "json": "^11.0.0",
     "markdownlint-cli2": "^0.4.0",
