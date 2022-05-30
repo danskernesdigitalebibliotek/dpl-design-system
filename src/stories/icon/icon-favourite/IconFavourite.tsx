@@ -7,6 +7,7 @@ export const IconFavourite = ({ fill }: IconFavouriteProps) => {
   // It is made as inline svg to be able to change fill value from props
   return (
     <svg
+      className="icon-favourite"
       width="24"
       height="24"
       viewBox="0 0 24 24"
