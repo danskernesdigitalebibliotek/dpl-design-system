@@ -90,16 +90,18 @@ export const Header = (props: HeaderProps) => {
           </nav>
           <div className="header__menu-second">
             <div className="header__menu-search">
-              <input
-                className="header__menu-search-input text-body-medium-regular"
-                type="text"
-                placeholder="Søg blandt bibliotekets materialer"
-              />
-              <img
-                className="header__menu-search-icon"
-                src={`icons/basic/icon-search.svg`}
-                alt="search icon"
-              />
+              <form className="header__menu-search-form">
+                <input
+                  className="header__menu-search-input text-body-medium-regular"
+                  type="text"
+                  placeholder="Søg blandt bibliotekets materialer"
+                />
+                <img
+                  className="header__menu-search-icon"
+                  src={`icons/basic/icon-search.svg`}
+                  alt="search icon"
+                />
+              </form>
             </div>
           </div>
         </div>
