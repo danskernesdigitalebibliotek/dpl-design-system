@@ -1,0 +1,13 @@
+globs:
+  - './**/*.{md,markdown}'
+
+ignores:
+  - node_modules
+
+config:
+  MD033:
+    allowed_elements:
+      # We use certain HTML elements with GitHub support to structure examples
+      # https://gist.github.com/scmx/eca72d44afee0113ceb0349dd54a84a2
+      - summary
+      - details
