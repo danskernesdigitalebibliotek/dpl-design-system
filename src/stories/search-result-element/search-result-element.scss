@@ -1,0 +1,44 @@
+.search-result-element {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  &__info {
+    display: flex;
+
+    &__text-content {
+      margin-left: 24px;
+
+      &__top {
+        display: flex;
+        align-items: center;
+
+        svg {
+          cursor: pointer;
+        }
+
+        &__category-score {
+          white-space: nowrap;
+          margin-left: 12px;
+
+          &__underline {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &__bottom {
+        :first-child {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  &__availability {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
