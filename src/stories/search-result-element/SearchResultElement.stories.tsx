@@ -30,7 +30,7 @@ export default {
       control: { type: "text" },
       defaultValue: "2018",
     },
-    categoryScore: {
+    seriesNumber: {
       control: { type: "text" },
       defaultValue: "3",
     },

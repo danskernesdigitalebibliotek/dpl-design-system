@@ -7,7 +7,7 @@ export type SearchResultElementProps = {
   title: string;
   author: string;
   year: string;
-  categoryScore?: string;
+  seriesNumber?: string;
   series?: string;
 };
 
@@ -16,7 +16,7 @@ export const SearchResultElement = ({
   title = "Title",
   author = "Author",
   year = "2022",
-  categoryScore,
+  seriesNumber,
   series,
 }: SearchResultElementProps) => {
   return (
@@ -32,9 +32,9 @@ export const SearchResultElement = ({
           <div className="search-result-element__info__text-content__top">
             <IconFavourite fill={heartFill} />
 
-            {categoryScore && (
+            {seriesNumber && (
               <div className="search-result-element__info__text-content__top__category-score text-small-caption">
-                <span className="text-label-semibold">{`Nr. ${categoryScore} `}</span>
+                <span className="text-label-semibold">{`Nr. ${seriesNumber} `}</span>
                 {series && (
                   <>
                     i serien{" "}
