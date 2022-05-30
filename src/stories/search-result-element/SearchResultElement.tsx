@@ -21,36 +21,37 @@ export const SearchResultElement = ({
 }: SearchResultElementProps) => {
   return (
     <div className="search-result-element">
-      <div className="search-result-element__info">
-        <Material
-          url={"images/book_cover_3.jpg"}
-          size={"small"}
-          animate={false}
-          tint={"120"}
-        />
-        <div className="search-result-element__info__text-content">
-          <div className="search-result-element__info__text-content__top">
+      <Material
+        url={"images/book_cover_3.jpg"}
+        size={"small"}
+        animate={false}
+        tint={"120"}
+      />
+      <div className="search-result-element-content">
+        <div className="search-result-element-content__text">
+          <div className="search-result-element-content__text__top">
             <IconFavourite fill={heartFill} />
 
             {seriesNumber && (
-              <div className="search-result-element__info__text-content__top__category-score text-small-caption">
+              <div className="search-result-element-content__text__top__series-number text-small-caption">
                 <span className="text-label-semibold">{`Nr. ${seriesNumber} `}</span>
                 {series && (
                   <>
                     i serien{" "}
-                    <span className="search-result-element__info__text-content__top__category-score__underline">
+                    <a href="/" className="link-tag text-label-semibold">
                       {series}
-                    </span>
+                    </a>
                   </>
                 )}
               </div>
             )}
           </div>
-          <div className="search-result-element__info__text-content__bottom">
-            <h3 className="text-header-h3">{title}</h3>
+          <div className="search-result-element-content__text__bottom">
+            <h2 className="text-header-h4">{title}</h2>
             <p className="text-small-caption">{`Af ${author} (${year})`}</p>
           </div>
         </div>
+        <div className="search-result-element-availability">
           <AvailabilityLabel
             manifestation={"Bog"}
             availability={"Hjemme"}
