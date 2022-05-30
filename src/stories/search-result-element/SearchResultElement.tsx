@@ -51,23 +51,28 @@ export const SearchResultElement = ({
             <p className="text-small-caption">{`Af ${author} (${year})`}</p>
           </div>
         </div>
-      </div>
-      <div className="search-result-element__availability">
-        <AvailabilityLabel
-          manifestation={"Bog"}
-          availability={"Hjemme"}
-          status={"available"}
-        />
-        <AvailabilityLabel
-          manifestation={"Ebog"}
-          availability={"Online"}
-          status={"selected"}
-        />
-        <AvailabilityLabel
-          manifestation={"Lydbog (cd-mp3)"}
-          availability={"Udlånt"}
-          status={"unavailable"}
-        />
+          <AvailabilityLabel
+            manifestation={"Bog"}
+            availability={"Hjemme"}
+            status={"available"}
+          />
+          <AvailabilityLabel
+            manifestation={"Bog"}
+            availability={"Hjemme"}
+            status={"available"}
+          />
+
+          <AvailabilityLabel
+            manifestation={"Lydbog (cd-mp3)"}
+            availability={"Udlånt"}
+            status={"unavailable"}
+          />
+          <AvailabilityLabel
+            manifestation={"Lydbog (cd-mp3)"}
+            availability={"Udlånt"}
+            status={"unavailable"}
+          />
+        </div>
       </div>
     </div>
   );
