@@ -16,21 +16,27 @@ export default {
   argTypes: {
     heartFill: {
       control: "boolean",
+      defaultValue: false,
     },
     title: {
-      type: { name: "string" },
+      control: { type: "text" },
+      defaultValue: "Audrey Hepburn",
     },
     author: {
-      type: { name: "string" },
+      control: { type: "text" },
+      defaultValue: "Sánchez Vegara, Amaia Arrazola",
     },
     year: {
-      type: { name: "string" },
+      control: { type: "text" },
+      defaultValue: "2018",
     },
     categoryScore: {
-      type: { name: "string" },
+      control: { type: "text" },
+      defaultValue: "3",
     },
     series: {
-      type: { name: "string" },
+      control: { type: "text" },
+      defaultValue: "Små mennesker, store drømme",
     },
   },
 } as ComponentMeta<typeof SearchResultElement>;
@@ -40,11 +46,4 @@ const Template: ComponentStory<typeof SearchResultElement> = (args) => {
 };
 
 export const Item = Template.bind({});
-Item.args = {
-  heartFill: false,
-  title: "Audrey Hepburn",
-  author: "Sánchez Vegara, Amaia Arrazola",
-  year: "2018",
-  categoryScore: "3",
-  series: "Små mennesker, store drømme",
-};
+Item.args = {};
