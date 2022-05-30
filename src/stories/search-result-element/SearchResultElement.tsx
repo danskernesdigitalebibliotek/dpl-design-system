@@ -1,5 +1,5 @@
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
-import { IconFavourite } from "../icon/icon-heart/IconFavourite";
+import { IconFavourite } from "../icon/icon-favourite/IconFavourite";
 import { Material } from "../material/Material";
 
 export type SearchResultElementProps = {
