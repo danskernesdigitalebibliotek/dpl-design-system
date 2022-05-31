@@ -1774,6 +1774,11 @@ select {
 .header__menu-search-input ::placeholder {
   color: #484848;
 }
+.header__menu-search-input:focus {
+  background-color: #fff;
+  border: 0 solid transparent;
+  outline: none;
+}
 
 .header__menu-search-icon {
   position: absolute;
@@ -3438,4 +3443,4 @@ code {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.c222660b.chunk.css.map*/
+/*# sourceMappingURL=main.7f583374.chunk.css.map*/
