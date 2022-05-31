@@ -13,9 +13,9 @@ export type SearchResultElementProps = {
 
 export const SearchResultElement = ({
   heartFill,
-  title = "Title",
-  author = "Author",
-  year = "2022",
+  title,
+  author,
+  year,
   seriesNumber,
   series,
 }: SearchResultElementProps) => {
