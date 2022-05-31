@@ -22,8 +22,8 @@
 .search-result-element__availability {
   grid-column: 2;
   display: flex;
+  align-content: center;
   flex-wrap: wrap;
-  align-items: center;
   gap: 6px;
 
   @include breakpoint-s {
@@ -37,7 +37,7 @@
 }
 
 .search-result-element__title {
- margin-top: 10px;
+  margin-top: 10px;
 
   @include breakpoint-s {
     margin-top: 16px;
