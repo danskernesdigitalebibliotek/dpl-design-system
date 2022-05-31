@@ -57,8 +57,8 @@ export const SearchResultElement = ({
           status={"available"}
       />
       <AvailabilityLabel
-          manifestation={"Bog"}
-          availability={"Hjemme"}
+          manifestation={"Ebog"}
+          availability={"Online"}
           status={"available"}
       />
 
@@ -68,9 +68,9 @@ export const SearchResultElement = ({
           status={"unavailable"}
       />
       <AvailabilityLabel
-          manifestation={"Lydbog (cd-mp3)"}
-          availability={"Udlånt"}
-          status={"unavailable"}
+          manifestation={"Lydbog (net)"}
+          availability={"Online"}
+          status={"available"}
       />
     </div>
     </div>
