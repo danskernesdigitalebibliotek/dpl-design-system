@@ -3,12 +3,13 @@
   padding: 16px 24px;
   display: grid;
   grid-template-columns: min-content 1fr;
-  gap: 16px;
+  gap: 22px 16px;
 
   @include breakpoint-s {
-    gap: 24px;
+    height: 184px;
+    gap: 0;
     padding: 24px;
-    grid-template-columns: min-content max-content 1fr;
+    grid-template-columns: min-content 407px 1fr;
   }
 
   &:hover {
@@ -21,6 +22,7 @@
 
   @include breakpoint-s {
     grid-row: auto;
+    margin-right: 24px;
   }
 }
 
@@ -33,6 +35,7 @@
 
   @include breakpoint-s {
     grid-column: 3;
+    margin-left: 90px;
   }
 }
 
