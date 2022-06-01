@@ -4,6 +4,7 @@ export type IconFavouriteProps = {
 
 export const IconFavourite = ({ fill }: IconFavouriteProps) => {
   // This svg is a copy from public/icons/basic/icon-heart.svg.
+  // If you find out it no longer matches the original file, please update it
   // It is made as inline svg to be able to change fill value from props
   return (
     <svg
