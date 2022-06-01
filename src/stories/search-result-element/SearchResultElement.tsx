@@ -23,10 +23,10 @@ export const SearchResultElement = ({
     <div className="search-result-element">
       <div className="search-result-element__cover">
         <Material
-          url={"images/book_cover_3.jpg"}
-          size={"small"}
+          url="images/book_cover_3.jpg"
+          size="small"
           animate={false}
-          tint={"120"}
+          tint="120"
         />
       </div>
       <div className="search-result-element__text">
@@ -49,30 +49,30 @@ export const SearchResultElement = ({
         </div>
         <h2 className="search-result-element__title text-header-h4">{title}</h2>
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
-    </div>
+      </div>
       <div className="search-result-element__availability">
-      <AvailabilityLabel
-          manifestation={"Bog"}
-          availability={"Hjemme"}
-          status={"available"}
-      />
-      <AvailabilityLabel
-          manifestation={"Ebog"}
-          availability={"Online"}
-          status={"available"}
-      />
+        <AvailabilityLabel
+          manifestation="Bog"
+          availability="Hjemme"
+          status="available"
+        />
+        <AvailabilityLabel
+          manifestation="Ebog"
+          availability="Online"
+          status="available"
+        />
 
-      <AvailabilityLabel
-          manifestation={"Lydbog (cd-mp3)"}
-          availability={"Udlånt"}
-          status={"unavailable"}
-      />
-      <AvailabilityLabel
-          manifestation={"Lydbog (net)"}
-          availability={"Online"}
-          status={"available"}
-      />
-    </div>
+        <AvailabilityLabel
+          manifestation="Lydbog (cd-mp3)"
+          availability="Udlånt"
+          status="unavailable"
+        />
+        <AvailabilityLabel
+          manifestation="Lydbog (net)"
+          availability="Online"
+          status="available"
+        />
+      </div>
     </div>
   );
 };
