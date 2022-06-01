@@ -6,10 +6,11 @@ export type HeaderProps = {
   signedIn: boolean;
   haveNotification: boolean;
   username: string;
+  inputPlaceholder: string;
 };
 
 export const Header = (props: HeaderProps) => {
-  const { signedIn, haveNotification, username } = props;
+  const { signedIn, haveNotification, username, inputPlaceholder } = props;
 
   useEffect(() => {
     require("./initheader");
@@ -94,7 +95,7 @@ export const Header = (props: HeaderProps) => {
                 <input
                   className="header__menu-search-input text-body-medium-regular"
                   type="text"
-                  placeholder="Søg blandt bibliotekets materialer"
+                  placeholder={inputPlaceholder}
                 />
                 <img
                   className="header__menu-search-icon"
