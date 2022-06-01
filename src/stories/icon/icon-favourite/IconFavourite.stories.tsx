@@ -18,6 +18,7 @@ export default {
   argTypes: {
     fill: {
       control: "boolean",
+      defaultValue: true,
     },
   },
 } as ComponentMeta<typeof IconFavourite>;
@@ -27,6 +28,4 @@ const Template: ComponentStory<typeof IconFavourite> = (args) => (
 );
 
 export const favourite = Template.bind({});
-favourite.args = {
-  fill: true,
-};
+favourite.args = {};
