@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { AutosuggestText } from "./AutosuggestText";
+import { AutosuggestText, AutosuggestTextProps } from "./AutosuggestText";
 
 export default {
   title: "Components / Autosuggest - Text",
@@ -16,7 +16,7 @@ export default {
   parameters: {},
 } as ComponentMeta<typeof AutosuggestText>;
 
-const Template: ComponentStory<typeof AutosuggestText> = (args) => (
+const Template: ComponentStory<typeof AutosuggestText> = (args: AutosuggestTextProps) => (
   // apart from SuggestText, everything else is here just for the story context
   // SuggestText style is directly dependent on the header and search field styling
   <>

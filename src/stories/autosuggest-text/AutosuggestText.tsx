@@ -1,8 +1,8 @@
-export type AutosuggestTextType = {
+export type AutosuggestTextProps = {
   items: string[]
 }
 
-export const AutosuggestText = (props: AutosuggestTextType) => {
+export const AutosuggestText = (props: AutosuggestTextProps) => {
   const { items } = props;
   return (
     <ul className="suggest-text--container">
