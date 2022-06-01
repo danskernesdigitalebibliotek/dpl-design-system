@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  node:
+    image: node:16
+    user: node
+    init: true
+    working_dir: /home/node/app
+    volumes:
+      - root:/home/node/app
+      - ~/.npmrc:/home/node/.npmrc
+    expose:
+      - 80
+    command: 'npm run dev'
+    environment:
+      VIRTUAL_HOST: dpl-design-system.docker
+      VIRTUAL_PORT: 6006
+      STORYBOOK_CLIENT_ID: bdc1d425-9117-4867-acb9-c7307ddc2e0f
+
+volumes:
+  root:
+    driver_opts:
+      type: none
+      device: $PWD
+      o: bind

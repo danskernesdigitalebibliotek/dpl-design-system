@@ -62,3 +62,21 @@ jobs:
 
       - name: Run Prettier
         run: npm run js:prettier -- --check
+
+  markdownlint:
+    name: Lint markdown
+    if: '!github.event.deleted'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+      - name: Install Dependencies
+        run: npm install
+      - name: Install problem matcher
+        uses: xt0rted/markdownlint-problem-matcher@v1
+      - name: Lint markdown
+        run: npm run lint:markdown
