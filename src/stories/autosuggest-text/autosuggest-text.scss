@@ -1,0 +1,25 @@
+.autosuggest-text-container {
+  background-color: $c-global-primary;
+  outline: 1px solid $c-global-tertiary-1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 2px);
+  padding-bottom: 30px;
+    
+  @include breakpoint-m {
+    padding-top: 17px;
+  }
+  
+  &__item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 23px;
+
+    &:hover {
+      background-color: $c-global-secondary;
+      cursor: pointer;
+    }
+  }
+}
