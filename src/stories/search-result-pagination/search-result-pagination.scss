@@ -1,0 +1,17 @@
+.search-result-pagination {
+  &__title {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+// Override button css (Center + Width)
+.search-result-pagination > .btn-primary {
+  margin: 0 auto;
+  width: 100%;
+
+  @include breakpoint-s {
+    max-width: 253px;
+  }
+}
