@@ -1,6 +1,7 @@
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { IconFavourite } from "../icon/icon-favourite/IconFavourite";
 import { Material } from "../material/Material";
+import { ReactComponent as ArrowSmallRight } from "../../icons/arrow-ui/icon-arrow-ui-small-right.svg";
 
 export type SearchResultElementProps = {
   heartFill?: boolean;
@@ -20,7 +21,7 @@ export const SearchResultElement = ({
   series,
 }: SearchResultElementProps) => {
   return (
-    <div className="search-result-element">
+    <div className="search-result-element arrow arrow__hover--right-small">
       <div className="search-result-element__cover">
         <Material
           url="images/book_cover_3.jpg"
@@ -73,6 +74,8 @@ export const SearchResultElement = ({
           status="available"
         />
       </div>
+
+      <ArrowSmallRight />
     </div>
   );
 };
