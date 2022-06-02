@@ -1,24 +1,29 @@
 @import "./src/styles/scss/reset";
-@import "./src/stories/colors/color-variables";
+@import "./src/stories/01 Atoms/colors/color-variables";
 
 // The imports below are not advised to be moved around, because
 // they cross-reference various defined variables between each other.
-@import "./src/stories/breakpoints/breakpoints";
-@import "./src/stories/typography/typography";
-@import "./src/stories/links/links";
-@import "./src/stories/link-filters/link-filters";
-@import "./src/stories/arrows/arrows";
-@import "./src/stories/button/buttons";
-@import "./src/stories/button-ui/buttons-ui";
-@import "./src/stories/spacing/spacing";
-@import "./src/stories/tag/tag";
-@import "./src/stories/logo/logo";
-@import "./src/stories/pagefold/pagefold";
-@import "./src/stories/accordion/accordion";
-@import "./src/stories/header/header";
-@import "./src/stories/dropdown/dropdown";
-@import "./src/stories/footer/footer";
-@import "./src/stories/breadcrumb/breadcrumb";
+
+// 01 Atoms
+@import "./src/stories/01 Atoms/breakpoints/breakpoints";
+@import "./src/stories/01 Atoms/typography/typography";
+@import "./src/stories/01 Atoms/links/links";
+@import "./src/stories/01 Atoms/link-filters/link-filters";
+@import "./src/stories/01 Atoms/arrows/arrows";
+@import "./src/stories/01 Atoms/Buttons/button/buttons";
+@import "./src/stories/01 Atoms/Buttons/button-ui/buttons-ui";
+@import "./src/stories/01 Atoms/spacing/spacing";
+@import "./src/stories/01 Atoms/tag/tag";
+@import "./src/stories/01 Atoms/logo/logo";
+@import "./src/stories/01 Atoms/pagefold/pagefold";
+@import "./src/stories/01 Atoms/dropdown/dropdown";
+@import "./src/stories/01 Atoms/breadcrumb/breadcrumb";
+@import "./src/stories/01 Atoms/warning-status/warning-status";
+@import "./src/stories/01 Atoms/status-label/status-label";
+@import "./src/stories/01 Atoms/number/number";
+@import "./src/stories/01 Atoms/counter/counter";
+@import "./src/stories/01 Atoms/checkbox/checkbox";
+@import "./src/stories/01 Atoms/material/material";
 @import "./src/stories/missing-story/missing-story";
 @import "./src/stories/warning-status/warning-status";
 @import "./src/stories/status-label/status-label";
@@ -37,24 +42,30 @@
 @import "./src/stories/material-description/material-description";
 @import "./src/stories/material-series-line/material-series-line";
 
-@import "./src/stories/list-reservation/list-reservation";
-@import "./src/stories/list-dashboard/list-dashboard";
-@import "./src/stories/list-details/list-details";
-@import "./src/stories/list-materials/list-materials";
+// 02 Elements
+@import "./src/stories/02 Elements/availability-label/availability-label";
+@import "./src/stories/02 Elements/material-card/material-card";
 
-@import "./src/stories/modal-details/modal-details";
-@import "./src/stories/modal-cta/modal-cta";
-@import "./src/stories/modal-loan/modal-loan";
-@import "./src/stories/modal-search/modal-search";
-@import "./src/stories/modal-text/modal-text";
-@import "./src/stories/modal-pause/modal-pause";
+// 03 Components
+@import "./src/stories/03 Components/Lists/list-reservation/list-reservation";
+@import "./src/stories/03 Components/Lists/list-dashboard/list-dashboard";
+@import "./src/stories/03 Components/Lists/list-details/list-details";
+@import "./src/stories/03 Components/Lists/list-materials/list-materials";
+@import "./src/stories/03 Components/accordion/accordion";
+@import "./src/stories/03 Components/footer/footer";
+@import "./src/stories/03 Components/header/header";
+@import "./src/stories/03 Components/material-banner/material-banner";
 
-@import "./src/stories/material/material";
-@import "./src/stories/material-banner/material-banner";
-@import "./src/stories/material-card/material-card";
+// 04 Pages
+@import "./src/stories/04 Pages/Modals/modal-details/modal-details";
+@import "./src/stories/04 Pages/Modals/modal-cta/modal-cta";
+@import "./src/stories/04 Pages/Modals/modal-loan/modal-loan";
+@import "./src/stories/04 Pages/Modals/modal-search/modal-search";
+@import "./src/stories/04 Pages/Modals/modal-text/modal-text";
+@import "./src/stories/04 Pages/Modals/modal-pause/modal-pause";
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";
 
 // Should be last to make it easier to overwrite.
-@import "./src/stories/colors/color-classes";
+@import "./src/stories/01 Atoms/colors/color-classes";
