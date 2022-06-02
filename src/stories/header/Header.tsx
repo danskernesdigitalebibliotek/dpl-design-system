@@ -89,7 +89,7 @@ export const Header = (props: HeaderProps) => {
               </a>
             </div>
           </nav>
-          <div className="header__menu-second">
+          <div>
             <div className="header__menu-search">
               <form className="header__menu-search-form">
                 <input
