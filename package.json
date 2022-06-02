@@ -36,9 +36,6 @@
   },
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^5.0.1",
-    "@reloaddk/daft": "^1.2.0",
-    "@reloaddk/stylelint-recommended": "^0.2.0",
-    "@reloaddk/stylelint-recommended-scss": "^0.4.0",
     "@storybook/addon-a11y": "^6.5.6",
     "@storybook/addon-actions": "^6.5.6",
     "@storybook/addon-essentials": "^6.5.6",
