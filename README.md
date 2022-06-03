@@ -1,4 +1,5 @@
 <!-- markdownlint-disable-next-line first-line-h1 -->
+
 ![https://detdigitalefolkebibliotek.dk/sites/default/files/ddf_logo_rgb_blue_web.png](https://detdigitalefolkebibliotek.dk/sites/default/files/ddf_logo_rgb_blue_web.png)
 
 <!-- markdownlint-disable -->
@@ -201,8 +202,8 @@ things like fine-tune responsive layouts or verify accessibility.
 
 The Storybook interface is simple and intuitive to use. Browse the project's
 stories now by navigating to them in the sidebar. The stories are divided into
-"Components" and "Atoms" where atoms are the smaller building blocks that can be
-used to build bigger components. Each Atom/Component has a corresponding
+"Atoms", "Elements", "Components" and "Pages" where Atoms are the smaller building blocks that can be
+used in Elements. Components assembles from Atoms and Elements and corrosponds to a "Block" in Drupal. Pages provide a view of more than 1 Component. Each Atom/Element/Component/Page has a corresponding
 `.stories` file. View their code in the `src/stories` directory to learn how
 they work. The `stories` file is used to add the component to the Storybook
 interface.
