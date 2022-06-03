@@ -12,7 +12,6 @@
   user-select: none;
   cursor: pointer;
   padding: 6px 8px;
-  border-radius: 6px;
   overflow: hidden;
   transition: all 0.3s ease;
   display: flex;
@@ -64,6 +63,13 @@
   svg {
     stroke-dashoffset: 0;
   }
+}
+
+.checkbox__input:focus + .checkbox__label {
+  // TODO: Determine a proper design for elements in focus.
+  // This is a temporary solution to make it easier to test keyboard navigation.
+  outline: solid 1px $c-text-secondary-gray;
+  outline-offset: 0;
 }
 
 @keyframes zoom-in-out {
