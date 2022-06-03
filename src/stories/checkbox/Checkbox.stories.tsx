@@ -8,6 +8,11 @@ export default {
   component: Checkbox,
   decorators: [withDesign],
   argTypes: {
+    ariaLabel: {
+      control: {
+        type: "text",
+      }
+    },
     // We disable the isChecked control, since it is not possible to
     // get the states from the React component to work with Storybook controls.
     isChecked: {
