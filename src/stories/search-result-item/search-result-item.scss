@@ -60,6 +60,11 @@
 .search-result-item__meta {
   display: flex;
   gap: 10px;
+
+  span,
+  a {
+    font-size: 12px;
+  }
 }
 
 .search-result-item__title {

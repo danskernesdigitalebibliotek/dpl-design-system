@@ -39,8 +39,8 @@ export const SearchResultItem = ({
               <span className="text-label-semibold">{`Nr. ${seriesNumber} `}</span>
               {series && (
                 <>
-                  i serien{" "}
-                  <a href="/" className="link-tag text-label-semibold">
+                  <span>i serien </span>
+                  <a href="/" className="link-tag">
                     {series}
                   </a>
                 </>
