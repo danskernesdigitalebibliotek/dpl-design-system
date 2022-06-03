@@ -1,10 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { SearchResultElement } from "./SearchResultElement";
+import { SearchResultItem } from "./SearchResultItem";
 
 export default {
-  title: "Components / Search Result Element",
-  component: SearchResultElement,
+  title: "Components / Search Result Item",
+  component: SearchResultItem,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -39,10 +39,10 @@ export default {
       defaultValue: "Små mennesker, store drømme",
     },
   },
-} as ComponentMeta<typeof SearchResultElement>;
+} as ComponentMeta<typeof SearchResultItem>;
 
-const Template: ComponentStory<typeof SearchResultElement> = (args) => {
-  return <SearchResultElement {...args} />;
+const Template: ComponentStory<typeof SearchResultItem> = (args) => {
+  return <SearchResultItem {...args} />;
 };
 
 export const Item = Template.bind({});

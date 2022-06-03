@@ -1,4 +1,4 @@
-.search-result-element {
+.search-result-item {
   background-color: #fff;
   padding: 16px 24px;
   display: grid;
@@ -34,7 +34,7 @@
   }
 }
 
-.search-result-element__cover {
+.search-result-item__cover {
   grid-row: span 2;
 
   @include breakpoint-s {
@@ -43,7 +43,7 @@
   }
 }
 
-.search-result-element__availability {
+.search-result-item__availability {
   grid-column: 2;
   display: flex;
   align-content: center;
@@ -56,12 +56,12 @@
   }
 }
 
-.search-result-element__meta {
+.search-result-item__meta {
   display: flex;
   gap: 10px;
 }
 
-.search-result-element__title {
+.search-result-item__title {
   margin-top: 10px;
 
   @include breakpoint-s {

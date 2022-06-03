@@ -3,7 +3,7 @@ import { IconFavourite } from "../icon/icon-favourite/IconFavourite";
 import { Material } from "../material/Material";
 import { ReactComponent as ArrowSmallRight } from "../../icons/arrow-ui/icon-arrow-ui-small-right.svg";
 
-export type SearchResultElementProps = {
+export type SearchResultItemProps = {
   heartFill?: boolean;
   title: string;
   author: string;
@@ -12,17 +12,17 @@ export type SearchResultElementProps = {
   series?: string;
 };
 
-export const SearchResultElement = ({
+export const SearchResultItem = ({
   heartFill,
   title,
   author,
   year,
   seriesNumber,
   series,
-}: SearchResultElementProps) => {
+}: SearchResultItemProps) => {
   return (
-    <div className="search-result-element arrow arrow__hover--right-small">
-      <div className="search-result-element__cover">
+    <div className="search-result-item arrow arrow__hover--right-small">
+      <div className="search-result-item__cover">
         <Material
           url="images/book_cover_3.jpg"
           size="small"
@@ -30,8 +30,8 @@ export const SearchResultElement = ({
           tint="120"
         />
       </div>
-      <div className="search-result-element__text">
-        <div className="search-result-element__meta">
+      <div className="search-result-item__text">
+        <div className="search-result-item__meta">
           <IconFavourite fill={heartFill} />
 
           {seriesNumber && (
@@ -48,10 +48,10 @@ export const SearchResultElement = ({
             </div>
           )}
         </div>
-        <h2 className="search-result-element__title text-header-h4">{title}</h2>
+        <h2 className="search-result-item__title text-header-h4">{title}</h2>
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
       </div>
-      <div className="search-result-element__availability">
+      <div className="search-result-item__availability">
         <AvailabilityLabel
           manifestation="Bog"
           availability="Hjemme"
