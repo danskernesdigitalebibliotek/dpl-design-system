@@ -10,7 +10,7 @@ export default {
   argTypes: {
     // We disable the isChecked control, since it is not possible to
     // get the states from the React component to work with Storybook controls.
-    isChecked: { 
+    isChecked: {
       control: {
         disable: true
       }
@@ -34,3 +34,20 @@ Unchecked.args = {
   isChecked: false,
   label: "Toggle this checkbox",
 };
+
+// Show multiple checkboxes to make it easier to test keyboard navigation.
+const Several: ComponentStory<typeof Checkbox> = (args) => (
+  <>
+    { [1, 2, 3, 4, 5].map((value) => {
+      // Append a number to make it easier to distinguish between each entry.
+      const elementArgs = {...args, label: `${args.label} ${value}`  }
+      return <Checkbox {...elementArgs} />
+    })}
+  </>
+);
+
+export const Multiple = Several.bind({});
+Multiple.args = {
+  isChecked: false,
+  label: "Checkbox",
+}
