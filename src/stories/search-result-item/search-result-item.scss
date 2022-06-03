@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: min-content 1fr;
   gap: 22px 16px;
+  cursor: pointer;
 
   @include breakpoint-s {
     height: 184px;
