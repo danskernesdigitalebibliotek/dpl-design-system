@@ -1,7 +1,10 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { StoryBaseType } from "../../../types/StorybookHelpers";
-import { ProgressBar as ProgressBarComp, ProgressBarProps } from "./progressBar";
+import {
+  ProgressBar as ProgressBarComp,
+  ProgressBarProps,
+} from "./progressBar";
 
 const StoryBase: StoryBaseType<ProgressBarProps> = {
   title: "Atoms / Progress bar",
