@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 export type CheckboxProps = {
   isChecked: boolean;
   label?: string;
+  ariaLabel?: string
   callback?: (isChecked: boolean) => void;
 };
 
@@ -23,6 +24,7 @@ export const Checkbox = (props: CheckboxProps) => {
         id={checkboxId.current}
         className="checkbox__input"
         type="checkbox"
+        aria-label={props.ariaLabel}
         checked={isChecked}
         onClick={handleClick}
       />

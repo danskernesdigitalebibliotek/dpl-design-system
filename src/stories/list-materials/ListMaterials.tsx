@@ -26,7 +26,7 @@ export const ListMaterials = (props: ListMaterialsProps) => {
     >
       {props.canBeRenewed && (
         <div className="list-materials__checkbox mr-32">
-          <Checkbox isChecked={isChecked} callback={handleToggle} />
+          <Checkbox isChecked={isChecked} callback={handleToggle} ariaLabel={`Vælg materiale`} />
         </div>
       )}
       <div className="list-materials__content">
