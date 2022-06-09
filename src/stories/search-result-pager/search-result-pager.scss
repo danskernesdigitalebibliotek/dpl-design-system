@@ -1,4 +1,4 @@
-.search-result-pagination {
+.search-result-pager {
   &__title {
     text-align: center;
     margin-top: 24px;
@@ -7,7 +7,7 @@
 }
 
 // Override button css (Center + Width)
-.search-result-pagination > .btn-primary {
+.search-result-pager > .btn-primary {
   margin: 0 auto;
   width: 100%;
 
