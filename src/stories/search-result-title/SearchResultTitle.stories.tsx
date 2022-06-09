@@ -17,7 +17,7 @@ export default {
       control: { type: "text" },
       defaultValue: "harry potter",
     },
-    total: {
+    totalResults: {
       control: { type: "text" },
       defaultValue: "3.576",
     },
