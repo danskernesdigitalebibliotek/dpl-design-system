@@ -1,12 +1,15 @@
 export type SearchResultTitleProps = {
   title: string;
-  total: string;
+  totalResults: string;
 };
 
-export const SearchResultTitle = ({ title, total }: SearchResultTitleProps) => {
+export const SearchResultTitle = ({
+  title,
+  totalResults,
+}: SearchResultTitleProps) => {
   return (
     <h1 className="text-header-h2 search-result-title">
-      {`Viser resultater for “${title}” (${total})`}
+      {`Viser resultater for “${title}” (${totalResults})`}
     </h1>
   );
 };
