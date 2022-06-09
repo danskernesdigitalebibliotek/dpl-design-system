@@ -8,7 +8,7 @@ export const SearchResultTitle = ({
   totalResults,
 }: SearchResultTitleProps) => {
   return (
-    <h1 className="text-header-h2 search-result-title">
+    <h1 className="text-header-h2 mb-16 search-result-title">
       {`Viser resultater for “${title}” (${totalResults})`}
     </h1>
   );
