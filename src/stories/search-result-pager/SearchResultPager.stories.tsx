@@ -1,10 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { SearchResultPagination } from "./SearchResultPagination";
+import { SearchResultPager } from "./SearchResultPager";
 
 export default {
-  title: "Components / Search Result - Pagination",
-  component: SearchResultPagination,
+  title: "Components / Search Result - Pager",
+  component: SearchResultPager,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -23,10 +23,10 @@ export default {
       defaultValue: "423",
     },
   },
-} as ComponentMeta<typeof SearchResultPagination>;
+} as ComponentMeta<typeof SearchResultPager>;
 
-const Template: ComponentStory<typeof SearchResultPagination> = (args) => {
-  return <SearchResultPagination {...args} />;
+const Template: ComponentStory<typeof SearchResultPager> = (args) => {
+  return <SearchResultPager {...args} />;
 };
 
 export const Item = Template.bind({});
