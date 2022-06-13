@@ -10,6 +10,7 @@ export type SearchResultItemProps = {
   year: string;
   seriesNumber?: string;
   series?: string;
+  materialUrl?: string;
 };
 
 export const SearchResultItem = ({
@@ -19,16 +20,12 @@ export const SearchResultItem = ({
   year,
   seriesNumber,
   series,
+  materialUrl = "images/book_cover_3.jpg",
 }: SearchResultItemProps) => {
   return (
     <a href="/" className="search-result-item arrow arrow__hover--right-small">
       <div className="search-result-item__cover">
-        <Material
-          url="images/book_cover_3.jpg"
-          size="small"
-          animate={false}
-          tint="120"
-        />
+        <Material url={materialUrl} size="small" animate={false} tint="120" />
       </div>
       <div className="search-result-item__text">
         <div className="search-result-item__meta">
