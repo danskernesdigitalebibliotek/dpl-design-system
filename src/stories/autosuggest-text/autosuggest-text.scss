@@ -22,4 +22,8 @@
       cursor: pointer;
     }
   }
+
+  &__item--highlight {
+    background-color: $c-global-secondary;
+  }
 }
