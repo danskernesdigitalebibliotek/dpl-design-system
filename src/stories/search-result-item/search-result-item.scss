@@ -10,7 +10,7 @@
     height: 184px;
     gap: 0;
     padding: 24px;
-    grid-template-columns: min-content 407px 1fr max-content;
+    grid-template-columns: min-content minmax(min-content, 407px) 1fr max-content;
   }
 
   &:hover {
