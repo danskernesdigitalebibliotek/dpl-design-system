@@ -17,6 +17,10 @@ export default {
       control: { type: "text" },
       defaultValue: "harry potter",
     },
+    totalResults: {
+      control: { type: "text" },
+      defaultValue: "3.576",
+    },
     linkName: {
       control: { type: "text" },
       defaultValue: "bibliotekets hjemmeside",
@@ -29,9 +33,10 @@ export default {
       control: { type: "text" },
       defaultValue: "10",
     },
-    totalResults: {
-      control: { type: "text" },
-      defaultValue: "3.576",
+
+    zeroResult: {
+      control: { type: "boolean" },
+      defaultValue: false,
     },
   },
 } as ComponentMeta<typeof SearchResultPage>;

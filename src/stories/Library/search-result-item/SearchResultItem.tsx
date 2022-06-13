@@ -24,12 +24,7 @@ export const SearchResultItem = ({
   return (
     <a href="/" className="search-result-item arrow arrow__hover--right-small">
       <div className="search-result-item__cover">
-        <Material
-          url="images/book_cover_3.jpg"
-          size="small"
-          animate={false}
-          tint="120"
-        />
+        <Material url="/" size="small" animate={false} tint="120" />
       </div>
       <div className="search-result-item__text">
         <div className="search-result-item__meta">
