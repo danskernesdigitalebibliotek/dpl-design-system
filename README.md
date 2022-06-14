@@ -203,7 +203,7 @@ things like fine-tune responsive layouts or verify accessibility.
 The Storybook interface is simple and intuitive to use. Browse the project's
 stories now by navigating to them in the sidebar. The stories are divided into
 "Atoms", "Elements", "Components" and "Pages" where Atoms are the smaller building blocks that can be
-used in Elements. Components assembles from Atoms and Elements and corrosponds to a "Block" in Drupal. Pages provide a view of more than 1 Component. Each Atom/Element/Component/Page has a corresponding
+used in Elements. Components are assembled from Atoms and Elements and corresponds to a "Block" in Drupal. Pages provide a view of more than 1 Component. Each Atom/Element/Component/Page has a corresponding
 `.stories` file. View their code in the `src/stories` directory to learn how
 they work. The `stories` file is used to add the component to the Storybook
 interface.
