@@ -117,6 +117,28 @@ styles and icons.
 You can find the HTML output for a given story under the HTML tab inside
 storybook.
 
+### NPM package
+
+[The GitHub NPM package registry requires authentication if you are to access
+packages there](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token).
+
+Consequently, if you want to use the design system as an NPM package or if you
+use a project that depends on the design system as an NPM package you must
+authenticate:
+
+1. [Create a GitHub token with the required scopes: `repo` and `read:packages`](https://github.com/settings/tokens/new?description=npm&scopes=repo,read:packages)
+2. Run `npm login --registry=https://npm.pkg.github.com`
+3. Enter the following information:
+
+```shell
+> Username: [Your GitHub username]
+> Password: [Your GitHub token]
+> Email: [An email address used with your GitHub account]
+```
+
+Note that you will need to reauthenticate when your personal access token
+expires.
+
 ## Deployment
 
 The project is getting rebuild on pushes to every branch and every tag. In
