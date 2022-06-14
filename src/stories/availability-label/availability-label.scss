@@ -6,6 +6,7 @@
   width: auto;
   height: 25px;
   background-color: $c-global-primary;
+  white-space: nowrap;
 
   &--selected {
     border: 1px solid $c-text-primary-black;
