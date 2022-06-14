@@ -2,13 +2,13 @@ import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { StoryBaseType } from "../../../types/StorybookHelpers";
 import {
-  ProgressBarComponent as ProgressBarComponentComp,
-  ProgressBarComponentProps,
-} from "./progressBarComponent";
+  StatusBarComponent as StatusBarComponentComp,
+  StatusBarComponentProps,
+} from "./statusBarComponent";
 
-const StoryBase: StoryBaseType<ProgressBarComponentProps> = {
-  title: "Components / Progress bar container",
-  component: ProgressBarComponentComp,
+const StoryBase: StoryBaseType<StatusBarComponentProps> = {
+  title: "Components / Status bar component",
+  component: StatusBarComponentComp,
   parameters: {
     design: {
       type: "figma",
@@ -17,18 +17,18 @@ const StoryBase: StoryBaseType<ProgressBarComponentProps> = {
     },
   },
   argTypes: {
-    progressBarsData: {
+    statusBarsData: {
       defaultValue: [
         {
           title: "Lån pr. måned",
-          progressBars: [
+          statusBars: [
             { amount: 1, fullAmount: 4, title: "Ebøger", outOf: "ud af" },
             { amount: 2, fullAmount: 10, title: "Lydbøger", outOf: "ud af" },
           ],
         },
         {
           title: "Reserveringer pr. måned",
-          progressBars: [
+          statusBars: [
             { amount: 3, fullAmount: 4, title: "Ebøger", outOf: "ud af" },
             { amount: 2, fullAmount: 2, title: "Lydbøger", outOf: "ud af" },
           ],
@@ -50,10 +50,10 @@ const StoryBase: StoryBaseType<ProgressBarComponentProps> = {
       },
     },
   },
-} as ComponentMeta<typeof ProgressBarComponentComp>;
+} as ComponentMeta<typeof StatusBarComponentComp>;
 
 export default StoryBase;
 
-export const ProgressBarComponent = (props: ProgressBarComponentProps) => (
-  <ProgressBarComponentComp {...props} />
+export const StatusBarComponent = (props: StatusBarComponentProps) => (
+  <StatusBarComponentComp {...props} />
 );
