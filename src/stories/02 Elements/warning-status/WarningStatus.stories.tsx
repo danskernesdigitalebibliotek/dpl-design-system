@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import { WarningStatus } from "./WarningStatus";
 
 export default {
-  title: "Atoms / Warning Status",
+  title: "Elements / Warning Status",
   component: WarningStatus,
   decorators: [withDesign],
   argTypes: {},

@@ -18,7 +18,6 @@
 @import "./src/stories/01 Atoms/pagefold/pagefold";
 @import "./src/stories/01 Atoms/dropdown/dropdown";
 @import "./src/stories/01 Atoms/breadcrumb/breadcrumb";
-@import "./src/stories/01 Atoms/warning-status/warning-status";
 @import "./src/stories/01 Atoms/status-label/status-label";
 @import "./src/stories/01 Atoms/number/number";
 @import "./src/stories/01 Atoms/counter/counter";
@@ -26,24 +25,20 @@
 @import "./src/stories/01 Atoms/material/material";
 @import "./src/stories/01 Atoms/status-bar/status-bar";
 @import "./src/stories/missing-story/missing-story";
-@import "./src/stories/warning-status/warning-status";
-@import "./src/stories/status-label/status-label";
-@import "./src/stories/number/number";
-@import "./src/stories/counter/counter";
-@import "./src/stories/checkbox/checkbox";
-@import "./src/stories/availability-label/availability-label";
-@import "./src/stories/search-result-item/search-result-item";
 @import "./src/stories/icon/icon-favourite/icon-favourite";
 @import "./src/stories/autosuggest-text/autosuggest-text";
 @import "./src/stories/button-favourite/button-favourite";
 @import "./src/stories/autosuggest-material/autosuggest-material";
 
 // 02 Elements
+@import "./src/stories/02 Elements/warning-status/warning-status";
 @import "./src/stories/02 Elements/availability-label/availability-label";
+@import "./src/stories/02 Elements/autosuggest-text/autosuggest-text";
 @import "./src/stories/02 Elements/material-card/material-card";
 @import "./src/stories/02 Elements/status-bars-element/status-bar-element";
 
 // 03 Components
+@import "./src/stories/03 Components/search-result-item/search-result-item";
 @import "./src/stories/03 Components/Lists/list-reservation/list-reservation";
 @import "./src/stories/03 Components/Lists/list-dashboard/list-dashboard";
 @import "./src/stories/03 Components/Lists/list-details/list-details";
