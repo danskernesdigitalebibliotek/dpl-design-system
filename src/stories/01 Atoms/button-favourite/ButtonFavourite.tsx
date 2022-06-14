@@ -1,4 +1,4 @@
-import { IconFavourite } from "../icon/icon-favourite/IconFavourite";
+import { IconFavourite } from "../../icon/icon-favourite/IconFavourite";
 
 interface ButtonFavouriteProps {
   fill?: boolean;
