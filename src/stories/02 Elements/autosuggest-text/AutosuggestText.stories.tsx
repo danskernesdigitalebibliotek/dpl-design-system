@@ -3,24 +3,26 @@ import { withDesign } from "storybook-addon-designs";
 import { AutosuggestText, AutosuggestTextProps } from "./AutosuggestText";
 
 export default {
-  title: "Components / Autosuggest - Text",
+  title: "Elements / Autosuggest - Text",
   component: AutosuggestText,
   decorators: [withDesign],
   argTypes: {
     items: {
       name: "Items",
       defaultValue: ["Item one", "Item two"],
-      control: { type: "array" }
-    }
+      control: { type: "array" },
+    },
   },
   parameters: {},
 } as ComponentMeta<typeof AutosuggestText>;
 
-const Template: ComponentStory<typeof AutosuggestText> = (args: AutosuggestTextProps) => (
+const Template: ComponentStory<typeof AutosuggestText> = (
+  args: AutosuggestTextProps
+) => (
   // apart from SuggestText, everything else is here just for the story context
   // SuggestText style is directly dependent on the header and search field styling
   <>
-    <header className="header" style={{height: "144px"}}>
+    <header className="header" style={{ height: "144px" }}>
       <div className="header__logo-desktop">
         <p className="text-body-medium-regular">Context</p>
       </div>
@@ -31,15 +33,15 @@ const Template: ComponentStory<typeof AutosuggestText> = (args: AutosuggestTextP
         <div className="header__menu-second">
           <div className="header__menu-search">
             <input
-                  className="header__menu-search-input text-body-medium-regular"
-                  type="text"
-                  placeholder="This field is here just for context."
-                />
+              className="header__menu-search-input text-body-medium-regular"
+              type="text"
+              placeholder="This field is here just for context."
+            />
             <img
-                  className="header__menu-search-icon"
-                  src={`icons/basic/icon-search.svg`}
-                  alt="search icon"
-                />
+              className="header__menu-search-icon"
+              src={`icons/basic/icon-search.svg`}
+              alt="search icon"
+            />
             <AutosuggestText {...args} />
           </div>
         </div>
