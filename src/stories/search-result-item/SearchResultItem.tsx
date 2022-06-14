@@ -1,7 +1,7 @@
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
-import { IconFavourite } from "../icon/icon-favourite/IconFavourite";
 import { Material } from "../material/Material";
 import { ReactComponent as ArrowSmallRight } from "../../icons/arrow-ui/icon-arrow-ui-small-right.svg";
+import { ButtonFavourite } from "../button-favourite/ButtonFavourite";
 
 export type SearchResultItemProps = {
   heartFill?: boolean;
@@ -21,7 +21,7 @@ export const SearchResultItem = ({
   series,
 }: SearchResultItemProps) => {
   return (
-    <div className="search-result-item arrow arrow__hover--right-small">
+    <a href="/" className="search-result-item arrow arrow__hover--right-small">
       <div className="search-result-item__cover">
         <Material
           url="images/book_cover_3.jpg"
@@ -32,7 +32,7 @@ export const SearchResultItem = ({
       </div>
       <div className="search-result-item__text">
         <div className="search-result-item__meta">
-          <IconFavourite fill={heartFill} />
+          <ButtonFavourite fill={heartFill} />
 
           {seriesNumber && (
             <div className="text-small-caption">
@@ -76,6 +76,6 @@ export const SearchResultItem = ({
       </div>
 
       <ArrowSmallRight />
-    </div>
+    </a>
   );
 };

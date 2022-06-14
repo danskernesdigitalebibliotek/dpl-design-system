@@ -5,6 +5,7 @@
   grid-template-columns: min-content 1fr;
   gap: 22px 16px;
   cursor: pointer;
+  text-decoration: none;
 
   @include breakpoint-s {
     height: 184px;
