@@ -8,7 +8,7 @@ import {
   ListDetailsProps,
 } from "../../../03 Components/Lists/list-details/ListDetails";
 import { Material } from "../../../01 Atoms/material/Material";
-import { WarningStatus } from "../../../01 Atoms/warning-status/WarningStatus";
+import { WarningStatus } from "../../../02 Elements/warning-status/WarningStatus";
 import { StatusLabel } from "../../../01 Atoms/status-label/StatusLabel";
 import { Button } from "../../../01 Atoms/Buttons/button/Button";
 

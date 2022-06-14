@@ -11,7 +11,7 @@ import {
   ListMaterials,
   ListMaterialsProps,
 } from "../../../03 Components/Lists/list-materials/ListMaterials";
-import { WarningStatus } from "../../../01 Atoms/warning-status/WarningStatus";
+import { WarningStatus } from "../../../02 Elements/warning-status/WarningStatus";
 
 export type ModalLoanProps = {
   title: string;
