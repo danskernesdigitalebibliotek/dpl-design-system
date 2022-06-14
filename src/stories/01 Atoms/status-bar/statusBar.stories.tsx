@@ -1,14 +1,11 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { StoryBaseType } from "../../../types/StorybookHelpers";
-import {
-  ProgressBar as ProgressBarComp,
-  ProgressBarProps,
-} from "./progressBar";
+import { StatusBar as StatusBarComp, StatusBarProps } from "./statusBar";
 
-const StoryBase: StoryBaseType<ProgressBarProps> = {
-  title: "Atoms / Progress bar",
-  component: ProgressBarComp,
+const StoryBase: StoryBaseType<StatusBarProps> = {
+  title: "Atoms / Status bar",
+  component: StatusBarComp,
   parameters: {
     design: {
       type: "figma",
@@ -31,10 +28,10 @@ const StoryBase: StoryBaseType<ProgressBarProps> = {
       defaultValue: "ud af",
     },
   },
-} as ComponentMeta<typeof ProgressBarComp>;
+} as ComponentMeta<typeof StatusBarComp>;
 
 export default StoryBase;
 
-export const ProgressBar = (props: ProgressBarProps) => (
-  <ProgressBarComp {...props} />
+export const StatusBar = (props: StatusBarProps) => (
+  <StatusBarComp {...props} />
 );

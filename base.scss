@@ -24,7 +24,7 @@
 @import "./src/stories/01 Atoms/counter/counter";
 @import "./src/stories/01 Atoms/checkbox/checkbox";
 @import "./src/stories/01 Atoms/material/material";
-@import "./src/stories/01 Atoms/progress-bar/progress-bar";
+@import "./src/stories/01 Atoms/status-bar/status-bar";
 @import "./src/stories/missing-story/missing-story";
 @import "./src/stories/warning-status/warning-status";
 @import "./src/stories/status-label/status-label";
@@ -46,7 +46,7 @@
 // 02 Elements
 @import "./src/stories/02 Elements/availability-label/availability-label";
 @import "./src/stories/02 Elements/material-card/material-card";
-@import "./src/stories/02 Elements/progress-bar-container/progress-bar-container";
+@import "./src/stories/02 Elements/status-bars-element/status-bar-element";
 
 // 03 Components
 @import "./src/stories/03 Components/Lists/list-reservation/list-reservation";
@@ -57,7 +57,7 @@
 @import "./src/stories/03 Components/footer/footer";
 @import "./src/stories/03 Components/header/header";
 @import "./src/stories/03 Components/material-banner/material-banner";
-@import "./src/stories/03 Components/progress-bar-component/progress-bar-component";
+@import "./src/stories/03 Components/status-bar-component/status-bar-component";
 
 // 04 Pages
 @import "./src/stories/04 Pages/Modals/modal-details/modal-details";
