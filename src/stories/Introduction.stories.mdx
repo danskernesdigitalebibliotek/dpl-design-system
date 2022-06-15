@@ -65,7 +65,7 @@ import { Meta } from "@storybook/addon-docs";
     display: block;
     margin-bottom: 2px;
   }
-  
+
   .link-item img {
     height: 40px;
     width: 40px;
@@ -103,7 +103,7 @@ import { Meta } from "@storybook/addon-docs";
     display: inline-block;
   }
 
-  
+
 `}</style>
 
 # DPL Design System in Storybook
@@ -125,9 +125,9 @@ It is possible to extend Storybook with an ecosystem of addons that help you do 
 <div className="subheading">How to use</div>
 
 The Storybook interface is simple and intuitive to use. Browse the project's stories now by navigating to them in the sidebar. <br/>
-The stories are divided into "Components" and "Atoms" where atoms are the smaller building blocks that can be used to build bigger components. <br/>
-Each Atom/Component has a corresponding `.stories` file. View their code in the `src/stories` directory to learn how they work. <br/>
-The `stories` file is used to add the component to the Storybook interface.
+The stories are sorted into a Library witch holds all individual conponents and Blocks (Drupal) witch assembles components to replicate Block for building pages in Drupal. <br/>
+Each story has a corresponding `.stories` file. View their code in the `src/stories` directory to learn how they work. <br/>
+The `stories` file is used to add the component to the Storybook interface via the title. Start the title with "Library" or "Blocks (Drupal)" and use / to divide into folders fx. `Library / Buttons / Button`
 
 <div className="subheading">Addons</div>
 
