@@ -15,6 +15,7 @@
 
     @include breakpoint-m {
       flex-direction: row;
+      justify-content: center;
       flex-wrap: nowrap;
     }
   }
