@@ -13,7 +13,13 @@ export default {
       control: { type: "array" }
     }
   },
-  parameters: {},
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4709%3A24976",
+    },
+  },
 } as ComponentMeta<typeof AutosuggestText>;
 
 const Template: ComponentStory<typeof AutosuggestText> = (args: AutosuggestTextProps) => (
