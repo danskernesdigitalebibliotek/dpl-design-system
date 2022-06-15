@@ -1,7 +1,7 @@
 import { AvailabilityLabel } from "../../02 Elements/availability-label/AvailabilityLabel";
 import { Material } from "../../01 Atoms/material/Material";
 import { ReactComponent as ArrowSmallRight } from "../../01 Atoms/Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
-import { ButtonFavourite } from "../../01 Atoms/button-favourite/ButtonFavourite";
+import { ButtonFavourite } from "../../01 Atoms/Buttons/button-favourite/ButtonFavourite";
 
 export type SearchResultItemProps = {
   heartFill?: boolean;
