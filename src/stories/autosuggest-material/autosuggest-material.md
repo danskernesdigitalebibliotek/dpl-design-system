@@ -1,1 +1,0 @@
-This folder will hold the autosuggest material component.
