@@ -1,7 +1,7 @@
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { Material } from "../material/Material";
 import { ReactComponent as ArrowSmallRight } from "../../icons/arrow-ui/icon-arrow-ui-small-right.svg";
-import { ButtonFavourite } from "../button-favourite/ButtonFavourite";
+import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
 import MaterialLink, {
   SeriesLineProps,
 } from "../material-series-line/MaterialSeriesLine";
