@@ -3,7 +3,7 @@ import clsx from "clsx";
 export type MaterialProps = {
   url: string;
   animate: boolean;
-  size: "small" | "medium" | "large";
+  size: "xsmall" | "small" | "medium" | "large";
   tint?: "20" | "40" | "60" | "80" | "120";
 };
 

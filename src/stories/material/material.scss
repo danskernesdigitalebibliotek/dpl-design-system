@@ -1,3 +1,5 @@
+$MATERIAL_XSMALL_MOBILE: 104px;
+$MATERIAL_XSMALL_DESKTOP: 104px;
 $MATERIAL_SMALL_MOBILE: 104px;
 $MATERIAL_SMALL_DESKTOP: 137px;
 $MATERIAL_MEDIUM_MOBILE: 137px;
@@ -17,6 +19,16 @@ $MATERIAL_LARGE_DESKTOP: 216px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  &--xsmall {
+    aspect-ratio: 0.69;
+    height: $MATERIAL_XSMALL_MOBILE;
+    border-radius: 3px;
+
+    @include breakpoint-s {
+      height: $MATERIAL_XSMALL_DESKTOP;
+    }
   }
 
   &--small {
