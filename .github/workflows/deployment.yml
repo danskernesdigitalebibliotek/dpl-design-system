@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
 
       - name: Building
         run: npm run css:build
@@ -47,7 +47,7 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
           scope: "@${{ github.repository_owner }}"
 
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
 
       - name: Building
         run: npm run css:build
