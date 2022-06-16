@@ -8,7 +8,7 @@ export const AutosuggestText = (props: AutosuggestTextProps) => {
     <ul className="autosuggest">
       {items.map((item) => {
         return (
-          <li className="autosuggest__item--text text-body-medium-regular">
+          <li className="autosuggest__item--text text-body-medium-regular px-24">
             {item}
           </li>
         )

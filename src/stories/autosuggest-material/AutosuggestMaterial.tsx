@@ -20,23 +20,25 @@ export const AutosuggestMaterial = (props: AutosuggestMaterialProps) => {
       <li>
         <hr className="autosuggest__divider"/>
       </li>
-      <ul className="autosuggest__materials">
-        {items.map((item) => {
-          return (
-            <li className="autosuggest__materials__item">
-              <div className="autosuggest__materials__item__content">
-                <div className="autosuggest__materials__item__content__cover">
-                  <Material size="xsmall" animate={true} url={item.cover} />
+      <li>
+        <ul className="autosuggest__item--materials">
+          {items.map((item) => {
+            return (
+              <li className="autosuggest__item--materials__item">
+                <div className="autosuggest__item--materials__item__content">
+                  <div className="autosuggest__item--materials__item__content--cover">
+                    <Material size="xsmall" animate={true} url={item.cover} />
+                  </div>
+                  <div className="autosuggest__item--materials__item__content--info">
+                    <div className="text-body-medium-medium autosuggest__item--materials__item__content--info__title">{item.title}</div>
+                    <div className="text-body-small-regular autosuggest__item--materials__item__content--info__author">{`${item.author} (${item.year})`}</div>
+                  </div>
                 </div>
-                <div className="autosuggest__materials__item__content__info">
-                  <div className="text-body-medium-medium autosuggest__materials__item__content__info__title">{item.title}</div>
-                  <div className="text-body-small-regular autosuggest__materials__item__content__info__author">{`${item.author} (${item.year})`}</div>
-                </div>
-              </div>
-            </li>
-          )
-        })}
-      </ul>
+              </li>
+            )
+          })}
+        </ul>
+      </li>
     </ul>
   )
 }
