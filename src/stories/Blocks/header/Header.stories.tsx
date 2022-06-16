@@ -5,7 +5,7 @@ import { withDesign } from "storybook-addon-designs";
 import { Header as HeaderComp, HeaderProps } from "./Header";
 
 export default {
-  title: "Blocks (Drupal) / Header",
+  title: "Blocks / Header",
   component: HeaderComp,
   decorators: [withDesign],
   argTypes: {

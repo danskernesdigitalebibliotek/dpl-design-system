@@ -5,7 +5,7 @@ import { Meta } from "@storybook/react";
 import { Footer as FooterComp } from "./Footer";
 
 export default {
-  title: "Blocks (Drupal) / Footer",
+  title: "Blocks / Footer",
   component: FooterComp,
   decorators: [withDesign],
   parameters: {

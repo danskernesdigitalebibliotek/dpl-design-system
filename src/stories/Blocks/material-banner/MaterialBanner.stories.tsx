@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import { MaterialBanner } from "./MaterialBanner";
 
 export default {
-  title: "Blocks (Drupal) / Material Banner",
+  title: "Blocks / Material Banner",
   component: MaterialBanner,
   decorators: [withDesign],
   argTypes: {},

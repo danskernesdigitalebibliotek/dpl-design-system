@@ -1,14 +1,11 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { StoryBaseType } from "../../../types/StorybookHelpers";
-import {
-  StatusBarElement as StatusBarElementComp,
-  StatusBarElementProps,
-} from "./statusBarElement";
+import { Status as StatusComp, StatusProps } from "./status";
 
-const StoryBase: StoryBaseType<StatusBarElementProps> = {
-  title: "Library / Status bar container",
-  component: StatusBarElementComp,
+const StoryBase: StoryBaseType<StatusProps> = {
+  title: "Library / Status",
+  component: StatusComp,
   parameters: {
     design: {
       type: "figma",
@@ -17,7 +14,7 @@ const StoryBase: StoryBaseType<StatusBarElementProps> = {
     },
   },
   argTypes: {
-    StatusBars: {
+    statusBars: {
       defaultValue: [
         { amount: 1, fullAmount: 4, title: "Ebøger", outOf: "ud af" },
         { amount: 2, fullAmount: 10, title: "Lydbøger", outOf: "ud af" },
@@ -27,10 +24,8 @@ const StoryBase: StoryBaseType<StatusBarElementProps> = {
       defaultValue: "Lån pr. måned",
     },
   },
-} as ComponentMeta<typeof StatusBarElementComp>;
+} as ComponentMeta<typeof StatusComp>;
 
 export default StoryBase;
 
-export const StatusBarElement = (props: StatusBarElementProps) => (
-  <StatusBarElementComp {...props} />
-);
+export const Status = (props: StatusProps) => <StatusComp {...props} />;
