@@ -5,10 +5,9 @@
   left: 0;
   right: 0;
   top: calc(100% + 1px);
-  padding-bottom: 10px;
     
   @include breakpoint-m {
-    padding-top: 17px;
+    padding-top: 16px;
   }
   
   &__item {
