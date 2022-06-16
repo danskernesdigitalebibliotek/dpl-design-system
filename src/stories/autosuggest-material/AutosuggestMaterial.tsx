@@ -17,7 +17,9 @@ export const AutosuggestMaterial = (props: AutosuggestMaterialProps) => {
       <li className="autosuggest__item--text text-body-medium-regular">
             I am a contextual text item
       </li>
-      <hr className="autosuggest__divider"/>
+      <li>
+        <hr className="autosuggest__divider"/>
+      </li>
       <ul className="autosuggest__materials">
         {items.map((item) => {
           return (
