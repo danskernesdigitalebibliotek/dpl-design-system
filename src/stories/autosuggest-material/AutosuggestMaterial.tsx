@@ -13,7 +13,7 @@ export const AutosuggestMaterial = (props: AutosuggestMaterialProps) => {
   const {items} = props
 
   return (
-    <ul className="autosuggest">
+    <ul className="autosuggest pb-16">
       <li className="autosuggest__item--text text-body-medium-regular">
             I am a contextual text item
       </li>
