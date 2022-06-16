@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ModalText } from "./ModalText";
+import { ModalText, textContent } from "./ModalText";
+
 
 export default {
   title: "Components / Modal - Text",
@@ -26,14 +27,5 @@ Text.args = {
   subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   linkText: "Ikke nu",
   btnLabel: "Giv samtykke",
-  textContent: [
-    {
-      title: "item 1 title",
-      text: "item 1 text"
-    },
-    {
-      title: "item 2 title",
-      text: "item 2 text"
-    }
-  ],
+  textContent: textContent
 };
