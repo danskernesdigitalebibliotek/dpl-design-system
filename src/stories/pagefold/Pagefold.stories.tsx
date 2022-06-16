@@ -3,8 +3,6 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 import { Pagefold as PagefoldComp } from "./Pagefold";
 
-type PagefoldProps = typeof PagefoldComp;
-
 export default {
   title: "Atoms / Pagefold",
   component: PagefoldComp,

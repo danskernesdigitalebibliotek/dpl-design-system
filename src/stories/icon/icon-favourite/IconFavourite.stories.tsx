@@ -2,8 +2,6 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 import { IconFavourite } from "./IconFavourite";
 
-type IconFavouriteProps = typeof IconFavourite;
-
 export default {
   title: "Atoms / Icons",
   component: IconFavourite,

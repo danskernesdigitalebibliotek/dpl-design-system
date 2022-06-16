@@ -4,7 +4,6 @@ import {
   ModalCloseButton,
   ModalFallbackButton,
 } from "../../components/ModalShared";
-import { ButtonUI } from "../button-ui/ButtonUI";
 import { Button } from "../button/Button";
 import { Links } from "../links/Links";
 

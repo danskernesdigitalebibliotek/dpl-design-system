@@ -1,7 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ModalText } from "./ModalText";
-import { textContent } from "./ModalText";
 
 export default {
   title: "Components / Modal - Text",
