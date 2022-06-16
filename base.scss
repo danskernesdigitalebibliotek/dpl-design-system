@@ -23,7 +23,7 @@
 @import "./src/stories/Library/counter/counter";
 @import "./src/stories/Library/Forms/checkbox/checkbox";
 @import "./src/stories/Library/material/material";
-@import "./src/stories/Library/status-bar/status-bar";
+@import "./src/stories/Library/progress-bar/progress-bar";
 @import "./src/stories/missing-story/missing-story";
 @import "./src/stories/icon/icon-favourite/icon-favourite";
 @import "./src/stories/autosuggest-text/autosuggest-text";
@@ -67,23 +67,25 @@
 @import "./src/stories/Library/availability-label/availability-label";
 @import "./src/stories/Library/autosuggest-text/autosuggest-text";
 @import "./src/stories/Library/material-card/material-card";
-@import "./src/stories/Library/status-bars-element/status-bar-element";
+@import "./src/stories/Library/status/status";
 @import "./src/stories/Library/search-result-item/search-result-item";
 @import "./src/stories/Library/Lists/list-reservation/list-reservation";
 @import "./src/stories/Library/Lists/list-dashboard/list-dashboard";
 @import "./src/stories/Library/Lists/list-details/list-details";
 @import "./src/stories/Library/Lists/list-materials/list-materials";
 @import "./src/stories/Library/accordion/accordion";
-@import "./src/stories/Blocks/footer/footer";
-@import "./src/stories/Blocks/header/header";
-@import "./src/stories/Blocks/material-banner/material-banner";
-@import "./src/stories/Library/status-bar-component/status-bar-component";
 @import "./src/stories/Library/Modals/modal-details/modal-details";
 @import "./src/stories/Library/Modals/modal-cta/modal-cta";
 @import "./src/stories/Library/Modals/modal-loan/modal-loan";
 @import "./src/stories/Library/Modals/modal-search/modal-search";
 @import "./src/stories/Library/Modals/modal-text/modal-text";
 @import "./src/stories/Library/Modals/modal-pause/modal-pause";
+
+// Blocks
+@import "./src/stories/Blocks/footer/footer";
+@import "./src/stories/Blocks/header/header";
+@import "./src/stories/Blocks/material-banner/material-banner";
+@import "./src/stories/Blocks/status-loans/status-loans";
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";
