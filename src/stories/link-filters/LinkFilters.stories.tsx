@@ -1,6 +1,6 @@
 import React from "react";
 import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory, Meta } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { LinkFilters } from "./LinkFilters";
 
