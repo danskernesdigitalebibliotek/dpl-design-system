@@ -8,7 +8,7 @@ export const ButtonFavourite = ({ fill }: ButtonFavouriteProps) => {
   return (
     <button
       type="button"
-      aria-label="Add to favourites"
+      aria-label="Tilføj til favoritter"
       className="button-favourite"
     >
       <IconFavourite fill={fill} />
