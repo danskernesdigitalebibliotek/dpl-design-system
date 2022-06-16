@@ -2,13 +2,13 @@ import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { StoryBaseType } from "../../../types/StorybookHelpers";
 import {
-  StatusBarComponent as StatusBarComponentComp,
-  StatusBarComponentProps,
-} from "./statusBarComponent";
+  StatusLoans as StatusLoansComp,
+  StatusLoansProps,
+} from "./statusLoans";
 
-const StoryBase: StoryBaseType<StatusBarComponentProps> = {
-  title: "Library / Status bar component",
-  component: StatusBarComponentComp,
+const StoryBase: StoryBaseType<StatusLoansProps> = {
+  title: "Blocks / Userprofile / Status loans",
+  component: StatusLoansComp,
   parameters: {
     design: {
       type: "figma",
@@ -50,10 +50,10 @@ const StoryBase: StoryBaseType<StatusBarComponentProps> = {
       },
     },
   },
-} as ComponentMeta<typeof StatusBarComponentComp>;
+} as ComponentMeta<typeof StatusLoansComp>;
 
 export default StoryBase;
 
-export const StatusBarComponent = (props: StatusBarComponentProps) => (
-  <StatusBarComponentComp {...props} />
+export const StatusLoans = (props: StatusLoansProps) => (
+  <StatusLoansComp {...props} />
 );
