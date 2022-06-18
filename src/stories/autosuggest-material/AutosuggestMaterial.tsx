@@ -16,24 +16,24 @@ export const AutosuggestMaterial = (props: AutosuggestMaterialProps) => {
     <ul className="autosuggest pb-16">
       <li>
         <ul>
-          <li className="autosuggest__item--text text-body-medium-regular px-24">
+          <li className="autosuggest__text text-body-medium-regular px-24">
                 I am a contextual text item
           </li>
         </ul>
       </li>
       <li className="autosuggest__divider" />
       <li>
-        <ul className="autosuggest__item--materials">
+        <ul className="autosuggest__materials">
           {items.map((item) => {
             return (
-              <li className="autosuggest__item--materials__item">
-                <div className="autosuggest__item--materials__item__content">
-                  <div className="autosuggest__item--materials__item__content--cover">
+              <li className="autosuggest__material">
+                <div className="autosuggest__material__content">
+                  <div className="autosuggest__cover">
                     <Material size="xsmall" animate={true} url={item.cover} />
                   </div>
-                  <div className="autosuggest__item--materials__item__content--info">
-                    <div className="text-body-medium-medium autosuggest__item--materials__item__content--info__title">{item.title}</div>
-                    <div className="text-body-small-regular autosuggest__item--materials__item__content--info__author">{`${item.author} (${item.year})`}</div>
+                  <div className="autosuggest__info">
+                    <div className="text-body-medium-medium autosuggest__title">{item.title}</div>
+                    <div className="text-body-small-regular autosuggest__author">{`${item.author} (${item.year})`}</div>
                   </div>
                 </div>
               </li>
