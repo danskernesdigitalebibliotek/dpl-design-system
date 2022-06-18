@@ -10,21 +10,19 @@
     padding-top: 16px;
   }
   
-  &__item {
 
-    &--text {
-      height: 40px;
-      display: flex;
-      align-items: center;
+  &__text {
+    height: 40px;
+    display: flex;
+    align-items: center;
 
-      &:hover {
-        background-color: $c-global-secondary;
-        cursor: pointer;
-      }
+    &:hover {
+      background-color: $c-global-secondary;
+      cursor: pointer;
+    }
   
-      &--highlight {
-        background-color: $c-global-secondary;
-      }
+    &--highlight {
+      background-color: $c-global-secondary;
     }
   }
 }

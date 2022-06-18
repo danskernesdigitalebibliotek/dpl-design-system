@@ -9,7 +9,7 @@ export const AutosuggestText = (props: AutosuggestTextProps) => {
       <ul>
         {items.map((item) => {
           return (
-            <li className="autosuggest__item--text text-body-medium-regular px-24">
+            <li className="autosuggest__text text-body-medium-regular px-24">
               {item}
             </li>
           )
