@@ -11,17 +11,17 @@ export default {
       name: "Items",
       defaultValue: [
         {
-          cover: "https://imgcdn.saxo.com/_9780345514400/0x500",
+          cover: "images/book_cover_7.jpg",
           title: "I know why the caged bird sings",
           author: "Maya Angelou",
           year: "1969",
         },{
-          cover: "https://imgcdn.saxo.com/_9781616550417/0x500",
+          cover: "images/book_cover_8.jpg",
           title: "The Legend of Zelda: Hyrule Historia",
           author: "Patrick Thorpe, Michael Gombos, Takahiro Moriki, et al.",
           year: "2013",
         },{
-          cover: "https://imgcdn.saxo.com/_9781449401160/0x500",
+          cover: "images/book_cover_9.jpg",
           title: "5 very good reasons to punch a dolphin in the mouth and other useful guides",
           author: "Matthew Inman",
           year: "2010",
