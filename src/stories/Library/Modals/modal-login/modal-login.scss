@@ -1,0 +1,15 @@
+.modal-login {
+  flex-direction: column;
+  place-content: center;
+
+  &__container {
+    display: grid;
+    place-content: center;
+    row-gap: 28px;
+  }
+
+  &__btn-create-profile {
+    width: fit-content;
+    justify-self: center;
+  }
+}
