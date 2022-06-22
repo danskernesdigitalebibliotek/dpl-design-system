@@ -7,6 +7,7 @@ module.exports = {
     "@whitespace/storybook-addon-html",
     "storybook-addon-designs",
     "@storybook/addon-a11y",
+    "storybook-addon-pseudo-states",
   ],
   typescript: {
     check: false,
