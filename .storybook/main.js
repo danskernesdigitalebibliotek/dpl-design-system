@@ -19,4 +19,5 @@ module.exports = {
         prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
     },
   },
+  staticDir: ["../public"],
 };

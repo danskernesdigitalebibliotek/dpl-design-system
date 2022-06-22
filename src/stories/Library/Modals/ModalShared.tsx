@@ -34,7 +34,7 @@ export function ModalCloseButton({ toggleModal }: { toggleModal: () => void }) {
       content={{
         kind: "ICON",
         alt: "close modal button",
-        url: "icons/collection/CloseLarge.svg",
+        url: "../icons/collection/CloseLarge.svg",
       }}
     />
   );
