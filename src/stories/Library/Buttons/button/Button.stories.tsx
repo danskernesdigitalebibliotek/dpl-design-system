@@ -28,8 +28,7 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=296%3A5345",
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=296%3A5345",
     },
     layout: "centered",
   },
@@ -39,16 +38,35 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "default state",
-  buttonType: "none",
-  collapsible: true,
+  label: "default",
+  buttonType: "default",
 };
 
 export const Hover = Template.bind({});
 Hover.args = {
   label: "hover state",
   buttonType: "default",
-  collapsible: true,
+};
+Hover.parameters = {
+  pseudo: { hover: true },
+};
+
+export const Focus = Template.bind({});
+Focus.args = {
+  label: "focus state",
+  buttonType: "default",
+};
+Focus.parameters = {
+  pseudo: { focusVisible: true },
+};
+
+export const Active = Template.bind({});
+Active.args = {
+  label: "active state",
+  variant: "filled",
+};
+Active.parameters = {
+  pseudo: { active: true },
 };
 
 export const External = Template.bind({});
@@ -63,16 +81,29 @@ Search.args = {
   buttonType: "search",
 };
 
-export const Inactive = Template.bind({});
-Inactive.args = {
-  label: "inactive state",
-  buttonType: "search",
+export const Filled = Template.bind({});
+Filled.args = {
+  label: "filled variant",
+  variant: "filled",
+};
+
+// TODO: Not sure what this Collapsible is intended for?
+export const Collapsible = Template.bind({});
+Collapsible.args = {
+  label: "Collapsible",
+  collapsible: true,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  label: "Default disabled",
+  buttonType: "default",
   disabled: true,
 };
 
-export const Active = Template.bind({});
-Active.args = {
-  label: "active state",
-  buttonType: "none",
+export const FilledDisabled = Template.bind({});
+FilledDisabled.args = {
+  label: "Filled disabled",
   variant: "filled",
+  disabled: true,
 };
