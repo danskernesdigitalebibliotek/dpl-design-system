@@ -1,0 +1,36 @@
+.modal-profile {
+  flex-direction: column;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+
+    @include breakpoint-s {
+      padding: {
+        top: 40px;
+        right: 80px;
+        bottom: 40px;
+        left: 80px;
+      }
+    }
+  }
+
+  &__links .link-filters {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  &__btn-logout {
+    button {
+      width: 100%;
+    }
+
+    @include breakpoint-s {
+      margin-left: auto;
+    }
+  }
+}
