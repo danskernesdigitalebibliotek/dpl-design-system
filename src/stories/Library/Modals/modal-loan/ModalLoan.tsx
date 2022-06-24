@@ -171,7 +171,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
         shoulShowModal ? "modal-show" : ""
       }`}
     >
-      <div className="modal-screen-reader-description">
+      <div className="modal__screen-reader-description">
         Denne modal dækker sidens indhold, og er en demo
       </div>
       <ModalCloseButton toggleModal={toggleModal} />
