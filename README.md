@@ -1,5 +1,4 @@
 <!-- markdownlint-disable-next-line first-line-h1 -->
-
 ![https://detdigitalefolkebibliotek.dk/sites/default/files/ddf_logo_rgb_blue_web.png](https://detdigitalefolkebibliotek.dk/sites/default/files/ddf_logo_rgb_blue_web.png)
 
 <!-- markdownlint-disable -->
@@ -201,10 +200,16 @@ things like fine-tune responsive layouts or verify accessibility.
 
 #### How to use
 
-The Storybook interface is simple and intuitive to use. Browse the project's stories now by navigating to them in the sidebar. <br/>
-The stories are sorted into a Library witch holds all individual conponents and Blocks (Drupal) witch assembles components to replicate Block for building pages in Drupal. <br/>
-Each story has a corresponding `.stories` file. View their code in the `src/stories` directory to learn how they work. <br/>
-The `stories` file is used to add the component to the Storybook interface via the title. Start the title with "Library" or "Blocks (Drupal)" and use / to divide into folders fx. `Library / Buttons / Button`
+The Storybook interface is simple and intuitive to use. Browse the project's
+stories now by navigating to them in the sidebar.
+The stories are sorted into a Library witch holds all individual conponents
+and Blocks (Drupal) witch assembles components to replicate Block for building
+pages in Drupal.
+Each story has a corresponding `.stories` file. View their code in the
+`src/stories` directory to learn how they work.
+The `stories` file is used to add the component to the Storybook interface via
+the title. Start the title with "Library" or "Blocks (Drupal)" and use / to
+divide into folders fx. `Library / Buttons / Button`
 
 #### Addons
 
