@@ -1,15 +1,32 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { AutosuggestText, AutosuggestTextProps } from "./AutosuggestText";
+import { AutosuggestMaterial, AutosuggestMaterialProps } from "./AutosuggestMaterial";
 
 export default {
-  title: "Components / Autosuggest - Text",
-  component: AutosuggestText,
+  title: "Components / Autosuggest - Material",
+  component: AutosuggestMaterial,
   decorators: [withDesign],
   argTypes: {
     items: {
       name: "Items",
-      defaultValue: ["Item one", "Item two"],
+      defaultValue: [
+        {
+          cover: "images/book_cover_1.jpg",
+          title: "De uadskillelige",
+          author: "Simone De Beauvoir",
+          year: "1954",
+        },{
+          cover: "images/book_cover_2.jpg",
+          title: "Den lille bog om dansk design",
+          author: "Marie Hugsted",
+          year: "2018",
+        },{
+          cover: "images/book_cover_3.jpg",
+          title: "Audrey Hepburn",
+          author: "Maria Isabel Sanchez Vegara",
+          year: "2018",
+        }
+      ],
       control: { type: "array" }
     }
   },
@@ -20,11 +37,13 @@ export default {
         "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4709%3A24976",
     },
   },
-} as ComponentMeta<typeof AutosuggestText>;
+} as ComponentMeta<typeof AutosuggestMaterial>;
 
-const Template: ComponentStory<typeof AutosuggestText> = (args: AutosuggestTextProps) => (
-  // apart from SuggestText, everything else is here just for the story context
-  // SuggestText style is directly dependent on the header and search field styling
+const Template: ComponentStory<typeof AutosuggestMaterial> = (args: AutosuggestMaterialProps) => (
+  // Apart from AutosuggestMaterial, everything else is here just for the story
+  // context. AutosuggestMaterial style is directly dependent on the header,
+  // search field, and AutosuggestText styling.
+  // If you find out this context no longer represents reality, please adjust it.
   <>
     <header className="header" style={{height: "144px"}}>
       <div className="header__logo-desktop">
@@ -46,7 +65,7 @@ const Template: ComponentStory<typeof AutosuggestText> = (args: AutosuggestTextP
                   src={`icons/basic/icon-search.svg`}
                   alt="search icon"
                 />
-            <AutosuggestText {...args} />
+            <AutosuggestMaterial {...args} />
           </div>
         </div>
       </div>
@@ -57,4 +76,4 @@ const Template: ComponentStory<typeof AutosuggestText> = (args: AutosuggestTextP
   </>
 );
 
-export const TextSuggestion = Template.bind({});
+export const MaterialSuggestion = Template.bind({});

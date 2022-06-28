@@ -5,14 +5,18 @@ export type AutosuggestTextProps = {
 export const AutosuggestText = (props: AutosuggestTextProps) => {
   const { items } = props;
   return (
-    <ul className="autosuggest-text-container">
-      {items.map((item) => {
-        return (
-          <li className="autosuggest-text-container__item text-body-medium-regular">
-            {item}
-          </li>
-        )
-      })}
+    <ul className="autosuggest pb-16">
+      <li>
+        <ul>
+          {items.map((item) => {
+            return (
+              <li className="autosuggest__text text-body-medium-regular px-24">
+                {item}
+              </li>
+            )
+          })}
+        </ul>
+      </li>
     </ul>
   )
 }

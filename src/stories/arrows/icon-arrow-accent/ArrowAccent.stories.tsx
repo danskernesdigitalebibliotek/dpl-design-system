@@ -1,7 +1,6 @@
 import { Meta } from "@storybook/react";
 import React from "react";
 import { withDesign } from "storybook-addon-designs";
-import { StoryBaseType } from "../../../types/StorybookHelpers";
 
 import { IconAccent as IconAccentComp } from "./ArrowAccent";
 
