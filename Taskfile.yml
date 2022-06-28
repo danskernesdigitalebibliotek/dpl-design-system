@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 dotenv: [".task.env"]
 
@@ -11,12 +11,12 @@ vars:
 
   # Constructing docker image name.
   RELEASE_IMAGE_NAME: '{{.RELEASE_IMAGE_NAME | default "dpl-cms-source"}}'
-  RELEASE_FULL_NAME: '{{.RELEASE_IMAGE_REGISTRY}}/{{.RELEASE_IMAGE_NAME}}:{{.RELEASE_IMAGE_TAG}}'
+  RELEASE_FULL_NAME: "{{.RELEASE_IMAGE_REGISTRY}}/{{.RELEASE_IMAGE_NAME}}:{{.RELEASE_IMAGE_TAG}}"
 
   # Docker file selection
   DOCKER_COMPOSE_FILES_OSX: '{{if eq OS "darwin"}}-f docker-compose.mac-nfs.yml{{end}}'
-  DOCKER_COMPOSE_FILES_DEFAULT: '-f docker-compose.yml {{ .DOCKER_COMPOSE_FILES_OSX }}'
-  DOCKER_COMPOSE_FILES: '{{.DOCKER_COMPOSE_FILES | default .DOCKER_COMPOSE_FILES_DEFAULT }}'
+  DOCKER_COMPOSE_FILES_DEFAULT: "-f docker-compose.yml {{ .DOCKER_COMPOSE_FILES_OSX }}"
+  DOCKER_COMPOSE_FILES: "{{.DOCKER_COMPOSE_FILES | default .DOCKER_COMPOSE_FILES_DEFAULT }}"
 
 tasks:
   dev:install:
@@ -47,10 +47,14 @@ tasks:
     cmds:
       - docker compose logs node --follow
 
+  dev:axe:
+    summary: Run accessibility tests
+    cmds:
+      - task dev:cli -- npm run storybook:axe
+
   dev:reset:
     summary: Install development environment and clean up.
     cmds:
-      - task dev:cli -- storybook:axe
       - task dev:down
       - rm -rf node_modules
       - task dev:up
@@ -69,7 +73,7 @@ tasks:
       - task dev:cli -- npm run lint:markdown
 
   dev:chromatic:
-    summary:  Run Chromatic for visual test
+    summary: Run Chromatic for visual test
     cmds:
       - task dev:cli -- npm run chromatic
 
