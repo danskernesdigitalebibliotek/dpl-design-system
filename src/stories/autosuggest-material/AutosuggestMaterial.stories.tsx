@@ -11,20 +11,20 @@ export default {
       name: "Items",
       defaultValue: [
         {
-          cover: "images/book_cover_7.jpg",
-          title: "I know why the caged bird sings",
-          author: "Maya Angelou",
-          year: "1969",
+          cover: "images/book_cover_1.jpg",
+          title: "De uadskillelige",
+          author: "Simone De Beauvoir",
+          year: "1954",
         },{
-          cover: "images/book_cover_8.jpg",
-          title: "The Legend of Zelda: Hyrule Historia",
-          author: "Patrick Thorpe, Michael Gombos, Takahiro Moriki, et al.",
-          year: "2013",
+          cover: "images/book_cover_2.jpg",
+          title: "Den lille bog om dansk design",
+          author: "Marie Hugsted",
+          year: "2018",
         },{
-          cover: "images/book_cover_9.jpg",
-          title: "5 very good reasons to punch a dolphin in the mouth and other useful guides",
-          author: "Matthew Inman",
-          year: "2010",
+          cover: "images/book_cover_3.jpg",
+          title: "Audrey Hepburn",
+          author: "Maria Isabel Sanchez Vegara",
+          year: "2018",
         }
       ],
       control: { type: "array" }
