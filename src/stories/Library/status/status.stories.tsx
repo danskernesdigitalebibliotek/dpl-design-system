@@ -1,9 +1,7 @@
-import React from "react";
-import { ComponentMeta } from "@storybook/react";
-import { StoryBaseType } from "../../../types/StorybookHelpers";
-import { Status as StatusComp, StatusProps } from "./status";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Status as StatusComp } from "./status";
 
-const StoryBase: StoryBaseType<StatusProps> = {
+export default {
   title: "Library / Status",
   component: StatusComp,
   parameters: {
@@ -26,6 +24,8 @@ const StoryBase: StoryBaseType<StatusProps> = {
   },
 } as ComponentMeta<typeof StatusComp>;
 
-export default StoryBase;
+const Template: ComponentStory<typeof StatusComp> = (args) => (
+  <StatusComp {...args} />
+);
 
-export const Status = (props: StatusProps) => <StatusComp {...props} />;
+export const ProgressBar = Template.bind({});

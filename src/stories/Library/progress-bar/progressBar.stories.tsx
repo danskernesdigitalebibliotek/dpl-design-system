@@ -1,12 +1,9 @@
-import React from "react";
-import { ComponentMeta } from "@storybook/react";
-import { StoryBaseType } from "../../../types/StorybookHelpers";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import {
   ProgressBar as ProgressBarComp,
-  ProgressBarProps,
 } from "./progressBar";
 
-const StoryBase: StoryBaseType<ProgressBarProps> = {
+export default {
   title: "Library / Progress bar",
   component: ProgressBarComp,
   parameters: {
@@ -15,7 +12,7 @@ const StoryBase: StoryBaseType<ProgressBarProps> = {
       url:
         "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=1239%3A66855",
     },
-    layout: "centered",
+    layout: "fullscreen",
   },
   argTypes: {
     amount: {
@@ -33,8 +30,8 @@ const StoryBase: StoryBaseType<ProgressBarProps> = {
   },
 } as ComponentMeta<typeof ProgressBarComp>;
 
-export default StoryBase;
-
-export const ProgressBar = (props: ProgressBarProps) => (
-  <ProgressBarComp {...props} />
+const Template: ComponentStory<typeof ProgressBarComp> = (args) => (
+  <ProgressBarComp {...args} />
 );
+
+export const ProgressBar = Template.bind({});

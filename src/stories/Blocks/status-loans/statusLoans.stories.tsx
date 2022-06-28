@@ -1,12 +1,9 @@
-import React from "react";
-import { ComponentMeta } from "@storybook/react";
-import { StoryBaseType } from "../../../types/StorybookHelpers";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import {
   StatusLoans as StatusLoansComp,
-  StatusLoansProps,
 } from "./statusLoans";
 
-const StoryBase: StoryBaseType<StatusLoansProps> = {
+export default {
   title: "Blocks / Userprofile / Status loans",
   component: StatusLoansComp,
   parameters: {
@@ -50,10 +47,10 @@ const StoryBase: StoryBaseType<StatusLoansProps> = {
       },
     },
   },
-} as ComponentMeta<typeof StatusLoansComp>;
+} as ComponentMeta<typeof MaterialBanner>;
 
-export default StoryBase;
-
-export const StatusLoans = (props: StatusLoansProps) => (
-  <StatusLoansComp {...props} />
+const Template: ComponentStory<typeof StatusLoansComp> = (args) => (
+  <StatusLoansComp {...args} />
 );
+
+export const StatusLoans = Template.bind({});
