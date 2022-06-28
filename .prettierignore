@@ -1,0 +1,5 @@
+# Ignore markdown since linter uses other rules than Prettier
+*.md
+
+# Ignore Yaml since linter uses other rules than Prettier
+*.yml
