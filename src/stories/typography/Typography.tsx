@@ -75,4 +75,9 @@ const typographyClasses = [
     className: "text-label text-label-semibold",
     title: "Desktop / Label semibold",
   },
+  {
+    className: "text-header-h2 text-truncate",
+    title:
+      "Truncated text at a 100% width - Here goes all the text nec varius nibh, eu iaculis purus. Aenean tellus nisi, posuere a elit a, finibus elementum lorem.",
+  },
 ];
