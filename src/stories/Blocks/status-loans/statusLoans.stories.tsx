@@ -47,7 +47,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof MaterialBanner>;
+} as ComponentMeta<typeof StatusLoansComp>;
 
 const Template: ComponentStory<typeof StatusLoansComp> = (args) => (
   <StatusLoansComp {...args} />
