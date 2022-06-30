@@ -5,10 +5,12 @@ export type MaterialProps = {
   animate: boolean;
   size: "xsmall" | "small" | "medium" | "large";
   tint?: "20" | "40" | "60" | "80" | "120";
+  materialUrl?: string;
+  materialDescription?: string;
 };
 
 export const Material = (props: MaterialProps) => {
-  const { size, animate, url, tint } = props;
+  const { size, animate, url, tint, materialUrl, materialDescription } = props;
 
   type TintClassesType = {
     [key: string]: string;
@@ -32,15 +34,23 @@ export const Material = (props: MaterialProps) => {
     ),
   };
 
+  const materialCover = url && (
+    <img src={url} alt={materialDescription || ""} />
+  );
+
   return (
     <div className="material-container">
-      <a className={classes.wrapper}>
-        <img
-          src={url}
-          alt=""
-          onError={(e) => (e.currentTarget.style["display"] = "none")}
-        />
-      </a>
+      {/**
+       * Images inside links must have an non-empty alt text to meet accessibility requirements.
+       * Only render the material as a link if we have both an url and a description.
+       */}
+      {materialUrl && materialDescription ? (
+        <a href={materialUrl} className={classes.wrapper}>
+          {materialCover}
+        </a>
+      ) : (
+        <span className={classes.wrapper}>{materialCover}</span>
+      )}
     </div>
   );
 };
