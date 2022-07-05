@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
       - name: Run stylelint
         uses: reviewdog/action-stylelint@v1
@@ -32,10 +32,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
       - name: Run eslint
-        run: npm run js:eslint
+        run: yarn js:eslint
 
   css_prettier:
     runs-on: ubuntu-latest
@@ -45,10 +45,10 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
       - name: Run Prettier
-        run: npm run css:prettier -- --check
+        run: yarn css:prettier -- --check
 
   js_prettier:
     runs-on: ubuntu-latest
@@ -58,10 +58,10 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
       - name: Run Prettier
-        run: npm run js:prettier -- --check
+        run: yarn js:prettier -- --check
 
   markdownlint:
     name: Lint markdown
@@ -73,10 +73,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-          cache: 'npm'
+          cache: 'yarn'
       - name: Install Dependencies
-        run: npm install
+        run: yarn install
       - name: Install problem matcher
         uses: xt0rted/markdownlint-problem-matcher@v1
       - name: Lint markdown
-        run: npm run lint:markdown
+        run: yarn lint:markdown

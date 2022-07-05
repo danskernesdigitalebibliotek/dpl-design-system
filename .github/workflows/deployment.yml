@@ -11,10 +11,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
       - name: Building
-        run: npm run css:build
+        run: yarn css:build
 
       - name: Bundling assets
         run: ./bundle.sh
@@ -47,10 +47,10 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
           scope: "@${{ github.repository_owner }}"
 
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
       - name: Building
-        run: npm run css:build
+        run: yarn css:build
 
       - name: Bundling assets
         run: ./bundle.sh
@@ -59,8 +59,8 @@ jobs:
         # Values in package.json must match the current GitHub repository to
         # publish to it.
         run: |
-          npm exec -- json -I -f package.json -e "this.name='@$GITHUB_REPOSITORY'"
-          npm exec -- json -I -f package.json -e "this.repository='https://github.com/$GITHUB_REPOSITORY'"
+          yarn exec -- json -I -f package.json -e "this.name='@$GITHUB_REPOSITORY'"
+          yarn exec -- json -I -f package.json -e "this.repository='https://github.com/$GITHUB_REPOSITORY'"
 
       - name: Release branch
         if: startsWith(github.ref, 'refs/heads/')
@@ -70,10 +70,10 @@ jobs:
         # Using branch names as tags allows other projects to track unreleased
         # development.
         run: |
-          npm version 0.0.0-$GITHUB_SHA --no-git-tag-version
+          yarn version 0.0.0-$GITHUB_SHA --no-git-tag-version
           cat package.json
           NPM_TAG_NAME=$(echo $GITHUB_REF_NAME | tr -d [:space:] | tr -C [:alnum:] -)
-          npm publish --tag $NPM_TAG_NAME
+          yarn npm publish --tag $NPM_TAG_NAME
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -81,8 +81,8 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         # The latest tag follows tagged versions to follow NPM conventions.
         run: |
-          npm version $GITHUB_REF_NAME --no-git-tag-version
+          yarn version $GITHUB_REF_NAME --no-git-tag-version
           cat package.json
-          npm publish --tag latest
+          yarn npm publish --tag latest
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
