@@ -22,7 +22,7 @@ tasks:
   dev:install:
     summary: Install packages
     cmds:
-      - task dev:cli -- npm install
+      - task dev:cli -- yarn install
 
   dev:start:
     summary: Install and run docker compose
@@ -50,7 +50,7 @@ tasks:
   dev:axe:
     summary: Run accessibility tests
     cmds:
-      - task dev:cli -- npm run storybook:axe
+      - task dev:cli -- yarn storybook:axe
 
   dev:reset:
     summary: Install development environment and clean up.
@@ -62,20 +62,20 @@ tasks:
   dev:test:
     summary: Run tests
     cmds:
-      - task dev:cli -- npm run chromatic
+      - task dev:cli -- yarn chromatic
 
   dev:lint:
     summary: Run linters
     cmds:
-      - task dev:cli -- npm run js:eslint
-      - task dev:cli -- npm run js:lint
-      - task dev:cli -- npm run css:stylelint
-      - task dev:cli -- npm run lint:markdown
+      - task dev:cli -- yarn js:eslint
+      - task dev:cli -- yarn js:lint
+      - task dev:cli -- yarn css:stylelint
+      - task dev:cli -- yarn lint:markdown
 
   dev:chromatic:
     summary:  Run Chromatic for visual test
     cmds:
-      - task dev:cli -- npm run chromatic
+      - task dev:cli -- yarn chromatic
 
   dev:cli:
     summary: Performs command inside container. Expects parameter(s).
