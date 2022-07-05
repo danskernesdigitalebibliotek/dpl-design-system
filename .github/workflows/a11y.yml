@@ -14,10 +14,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
       - name: Compile styles
-        run: npm run css:build
+        run: yarn css:build
 
       - name: Run accessibility tests
-        run: npm run storybook:axe
+        run: yarn storybook:axe

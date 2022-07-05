@@ -14,9 +14,9 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
-      - run: npm run css:build
+      - run: yarn css:build
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1

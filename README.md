@@ -47,16 +47,10 @@ compose, hence the requirements are limited to having docker install and tasks.
 
 This project can be used outside docker with the following requirements:
 
-- `npm >= 7`
 - `node 16`
+- `yarn`
 
-Check in the terminal which versions you have installed with `npm -v` and
-`node -v`.
-
-If you don't have the right `npm` version, you can bump it with
-`nvm install-latest-npm` - which requires you to
-have [nvm](https://github.com/nvm-sh/nvm)
-installed.
+Check in the terminal which versions you have installed with `node -v`.
 
 ## Installation
 
@@ -71,7 +65,7 @@ task dev:install
 Use the node package manager to install project dependencies:
 
 ```shell
-npm install
+yarn install
 ```
 
 ## Development
@@ -99,7 +93,7 @@ task dev:[TAB]
 To start developing run:
 
 ```shell
-npm run dev
+yarn dev
 ```
 
 Components and CSS will be automatically recompiled when making changes in the
@@ -161,7 +155,7 @@ git tag -a v*.*.* && git push origin v*.*.*
 Spin up storybook by running this command in the terminal:
 
 ```shell
-npm run storybook
+yarn storybook
 ```
 
 When storybook is ready it automatically opens up in a browser with the
@@ -178,7 +172,7 @@ under the `danskernesdigitalebibliotek` (organisation) `dpl-design-system`
 You can deploy a version locally to Chromatic by running:
 
 ```shell
-npm run chromatic
+yarn chromatic
 ```
 
 Make sure to set the `CHROMATIC_PROJECT_TOKEN` environment variable is available

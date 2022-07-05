@@ -13,7 +13,7 @@ services:
       - ~/.npmrc:/home/node/.npmrc
     expose:
       - 80
-    command: 'npm run dev'
+    command: 'yarn dev'
     environment:
       VIRTUAL_HOST: dpl-design-system.docker
       VIRTUAL_PORT: 6006
