@@ -18,6 +18,9 @@ export default {
     username: {
       defaultValue: "Christine",
     },
+    inputPlaceholder: {
+      defaultValue: "Søg blandt bibliotekets materialer",
+    }
   },
   parameters: {
     design: {

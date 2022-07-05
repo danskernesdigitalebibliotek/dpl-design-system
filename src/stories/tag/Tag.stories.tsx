@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 
 import { Tag as TagComp } from "./Tag";

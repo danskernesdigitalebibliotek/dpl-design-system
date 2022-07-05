@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 export type CounterProps = {
   value: number;
   percentage: number;

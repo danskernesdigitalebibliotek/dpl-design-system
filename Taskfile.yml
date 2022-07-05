@@ -7,7 +7,7 @@ vars:
     sh: git rev-list --count origin/main
 
   # Constructing docker image name.
-  DOCKER_IMAGE_PREFIX: "{{ .RELEASE_IMAGE_REGISTRY }}/{{ .DOCKER_IMAGE_NAMESPACE }}"
+  DOCKER_IMAGE_PREFIX: '{{ .RELEASE_IMAGE_REGISTRY }}/{{ .DOCKER_IMAGE_NAMESPACE }}'
 
   # Constructing docker image name.
   RELEASE_IMAGE_NAME: '{{.RELEASE_IMAGE_NAME | default "dpl-cms-source"}}'
@@ -28,7 +28,7 @@ tasks:
     summary: Install and run docker compose
     cmds:
       - task dev:install
-      - docker compose up --detach
+      - docker compose {{ .DOCKER_COMPOSE_FILES }} up --detach
 
   dev:stop:
     summary: Stop docker compose environment
@@ -47,10 +47,14 @@ tasks:
     cmds:
       - docker compose logs node --follow
 
+  dev:axe:
+    summary: Run accessibility tests
+    cmds:
+      - task dev:cli -- npm run storybook:axe
+
   dev:reset:
     summary: Install development environment and clean up.
     cmds:
-      - task dev:cli -- storybook:axe
       - task dev:down
       - rm -rf node_modules
       - task dev:up
