@@ -1,16 +1,132 @@
 {
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "eslint:recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
-    "plugin:import/recommended",
-    "plugin:import/typescript",
-    "eslint-config-prettier"
+    "prettier",
+    "plugin:prettier/recommended"
   ],
+  "settings": {
+    "react": {
+      "version": "16.11.0"
+    }
+  },
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "ecmaFeatures": {
+      "jsx": true,
+      "globalReturn": false,
+    },
+    "project": "./tsconfig.json"
   },
   "rules": {
-    "@typescript-eslint/explicit-module-boundary-types": "off"
-  }
+    "prefer-arrow-callback": [
+      "error",
+      {
+        "allowNamedFunctions": false,
+        "allowUnboundThis": true
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "state"
+        ]
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "/**/*.dev.jsx",
+          "/**/*.dev.tsx",
+          "/**/*.test.js",
+          "/**/*.test.jsx",
+          "/**/*.test.ts",
+          "/**/*.test.tsx",
+          "webpack.config.js",
+          "postcss.config.js",
+          "orval.config.ts",
+          "cypress/plugins/index.js",
+          "cypress/support/index.js",
+          "scripts/postcss-node-sass.js",
+          "scripts/post-process-generated-graphql.ts"
+        ]
+      }
+    ],
+    // We like to use arrow function syntax also for functional components.
+    "react/function-component-definition": "off",
+    // No complaints about missing trailing comma
+    "@typescript-eslint/comma-dangle": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {
+        // These rules were triggered on the former non-typescript codebase.
+        // We are planning to use only ts/tsx in the future
+        // Therefor we can seperate them by only being ignored on js/jsx files.
+        // Start - ddb-react former code
+        "react/jsx-no-bind": "off",
+        "react/function-component-definition": "off",
+        "react/forbid-prop-types": "off",
+        "react/destructuring-assignment": "off",
+        "@typescript-eslint/return-await": "off",
+        "no-param-reassign": "off",
+        "@typescript-eslint/no-var-requires": "off"
+        // End - ddb-react former code
+      }
+    },
+    {
+      "files": [
+        "*.tsx"
+      ],
+      "rules": {
+        // We do not use prop-types in ts.
+        "react/prop-types": "off",
+        "react/require-default-props": "off",
+        "react/no-unused-prop-types": "off",
+        "no-underscore-dangle": [
+          "error",
+          {
+            "allow": [
+              "__typename"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.dev.jsx",
+        "*.dev.tsx"
+      ],
+      "rules": {
+        // We need a simple way of passing args in stories via object spreading.
+        "react/jsx-props-no-spreading": "off",
+      }
+    },
+    {
+      "files": [
+        "*.entry.tsx"
+      ],
+      "rules": {
+        // Since we use High Order Functional Component in entries for text props
+        // and want to show the props being used we disable this rule.
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    }
+  ]
 }
