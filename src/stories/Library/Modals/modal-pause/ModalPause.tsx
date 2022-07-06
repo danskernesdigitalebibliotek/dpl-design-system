@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
@@ -12,32 +12,38 @@ export type ModalPauseProps = {
   linkText: string;
 };
 
-export const ModalPause = (props: ModalPauseProps) => {
-  const [showModal, setShow] = useState(props.showModal);
+export const ModalPause: React.FC<ModalPauseProps> = ({
+  showModal,
+  title,
+  subtitle,
+  textWithLink,
+  linkText,
+}) => {
+  const [shouldShowModal, setShouldShowModal] = useState(showModal);
 
   useEffect(() => {
-    setShow(props.showModal);
-  }, [props.showModal]);
+    setShouldShowModal(showModal);
+  }, [showModal]);
 
   const toggleModal = () => {
-    setShow(!showModal);
+    setShouldShowModal(!shouldShowModal);
   };
 
-  if (!showModal) {
+  if (!shouldShowModal) {
     return <ModalFallbackButton toggleModal={toggleModal} />;
   }
 
   return (
     <div
       className={`modal modal-pause ${
-        showModal ? "modal-show" : ""
+        shouldShowModal ? "modal-show" : ""
       } modal-padding `}
     >
       <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-pause__container">
-        <h3 className="text-header-h3">{props.title}</h3>
+        <h3 className="text-header-h3">{title}</h3>
         <div className="mt-48 color-secondary-gray">
-          <p className="text-body-medium-regular">{props.subtitle}</p>
+          <p className="text-body-medium-regular">{subtitle}</p>
         </div>
 
         <div className="modal-pause__dropdowns mt-24">
@@ -76,7 +82,7 @@ export const ModalPause = (props: ModalPauseProps) => {
 
         <div className="modal_pause__text-link mt-24 color-secondary-gray">
           <p className="text-body-small-regular">
-            {props.textWithLink} <Links href={"/"} linkText={props.linkText} />
+            {textWithLink} <Links href="/" linkText={linkText} />
           </p>
         </div>
         <div className="modal-pause__button mt-48">
@@ -86,7 +92,7 @@ export const ModalPause = (props: ModalPauseProps) => {
             variant="filled"
             label="gem"
             disabled={false}
-            collapsible={true}
+            collapsible
           />
         </div>
       </div>

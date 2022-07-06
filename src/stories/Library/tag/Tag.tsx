@@ -1,3 +1,5 @@
+import React from "react";
+
 type TagProps = {
   label: string;
   removable: boolean;
@@ -9,7 +11,7 @@ export const Tag = (props: TagProps) => {
     removable ? (
       <img
         className="tag-icon"
-        src={`icons/basic/icon-cross.svg`}
+        src="icons/basic/icon-cross.svg"
         alt="close icon"
       />
     ) : null;
@@ -25,3 +27,5 @@ export const Tag = (props: TagProps) => {
     </span>
   );
 };
+
+export default Tag;

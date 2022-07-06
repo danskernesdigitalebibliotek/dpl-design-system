@@ -19,8 +19,16 @@ export type MaterialBannerProps = {
   showBodyText: boolean;
 };
 
-export const MaterialBanner = (props: MaterialBannerProps) => {
-  const dropdownList: DropdownItem[] = props.linkFilters.map((i) => ({
+export const MaterialBanner: React.FC<MaterialBannerProps> = ({
+  title,
+  body,
+  linkFilters,
+  button,
+  cards,
+  showBodyText,
+  showLinkfilters,
+}) => {
+  const dropdownList: DropdownItem[] = linkFilters.map((i) => ({
     title: i.title,
     href: i.href || "",
   }));
@@ -29,10 +37,10 @@ export const MaterialBanner = (props: MaterialBannerProps) => {
     <div className="material-banner">
       <div className="material-banner__header">
         <div className="material-banner__row">
-          <h3 className="text-header-h2">{props.title}</h3>
-          {props.showLinkfilters && (
+          <h3 className="text-header-h2">{title}</h3>
+          {showLinkfilters && (
             <div className="material-banner__menu">
-              <LinkFilters filters={props.linkFilters} />
+              <LinkFilters filters={linkFilters} />
               <Dropdown
                 ariaLabel="Dropdown filter"
                 list={dropdownList}
@@ -41,12 +49,10 @@ export const MaterialBanner = (props: MaterialBannerProps) => {
             </div>
           )}
         </div>
-        {props.showBodyText && (
-          <p className="text-body-medium-regular">{props.body}</p>
-        )}
+        {showBodyText && <p className="text-body-medium-regular">{body}</p>}
       </div>
       <ul className="material-banner__cards">
-        {props.cards.map((card, index) => (
+        {cards.map((card, index) => (
           <li>
             <MaterialCard key={index} {...card} />
           </li>

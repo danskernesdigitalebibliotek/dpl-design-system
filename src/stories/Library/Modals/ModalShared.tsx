@@ -18,7 +18,7 @@ export function ModalFallbackButton({
         variant="filled"
         label="Show modal"
         disabled={false}
-        collapsible={true}
+        collapsible
         onClick={toggleModal}
       />
     </div>

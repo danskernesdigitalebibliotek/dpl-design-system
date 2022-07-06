@@ -1,3 +1,5 @@
+import React from "react";
+
 type ContentIcon = {
   kind: "ICON";
   url: string;
@@ -21,9 +23,13 @@ export type ButtonUIProps = {
   onClick?: () => void;
 };
 
-export const ButtonUI = (props: ButtonUIProps) => {
-  const { content, classes, children } = props;
-
+export const ButtonUI: React.FC<ButtonUIProps> = ({
+  content,
+  classes,
+  children,
+  onClick,
+  ariaLabel,
+}) => {
   const getChild = () => {
     if (content.kind === "LABEL") return content.label;
 
@@ -39,8 +45,8 @@ export const ButtonUI = (props: ButtonUIProps) => {
     <button
       type="button"
       className={`btn-ui ${classes || ""}`}
-      onClick={props.onClick}
-      aria-label={props.ariaLabel}
+      onClick={onClick}
+      aria-label={ariaLabel}
     >
       {getChild()}
     </button>

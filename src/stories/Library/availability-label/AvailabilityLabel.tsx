@@ -1,11 +1,6 @@
-import { Pagefold } from "../../Library/pagefold/Pagefold";
+import { AvailabilityLabelPropsType } from "../../availability-label/types";
+import { Pagefold } from "../pagefold/Pagefold";
 import { withAvailabilityProps } from "./abilityLabel.hoc";
-
-export type AvailabilityLabelPropsType = {
-  manifestation: "Bog" | "Ebog" | "Lydbog (net)" | "Lydbog (cd-mp3)";
-  availability: "Hjemme" | "Online" | "Udlånt";
-  status: "available" | "unavailable" | "selected";
-};
 
 export const AvailabilityLabel = (props: AvailabilityLabelPropsType) => {
   const { manifestation, availability, status } = props;
@@ -24,3 +19,5 @@ export const AvailabilityLabel = (props: AvailabilityLabelPropsType) => {
     </AvailabilityPagefold>
   );
 };
+
+export default AvailabilityLabel;

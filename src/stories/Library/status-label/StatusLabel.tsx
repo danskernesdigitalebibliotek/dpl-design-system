@@ -1,3 +1,5 @@
+import React from "react";
+
 export type StatusLabelProps = {
   label: string;
   status: "danger" | "warning" | "info" | "neutral" | "outline";

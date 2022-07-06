@@ -1,3 +1,5 @@
+import React from "react";
+
 const svgIcons = [
   {
     title: "Profile",
@@ -37,3 +39,5 @@ export const IconBasic = () => {
     </div>
   );
 };
+
+export default IconBasic;

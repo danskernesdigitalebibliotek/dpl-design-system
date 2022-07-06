@@ -44,8 +44,9 @@ Unchecked.args = {
 const Several: ComponentStory<typeof Checkbox> = (args) => (
   <>
     {[1, 2, 3, 4, 5].map((value) => {
+      const { label } = args;
       // Append a number to make it easier to distinguish between each entry.
-      const elementArgs = { ...args, label: `${args.label} ${value}` };
+      const elementArgs = { ...args, label: `${label} ${value}` };
       return <Checkbox {...elementArgs} />;
     })}
   </>

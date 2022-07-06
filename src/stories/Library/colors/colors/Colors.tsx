@@ -1,93 +1,4 @@
-export const Colors = () => {
-  return (
-    <div>
-      {colorClasses.map((color) => (
-        <div className="internal-colors-container">
-          <h1 className="text-header-h3">{color.colorTitle}</h1>
-          <div className="internal-colors-wrapper">
-            {color.colorItems.map((colorItem) => (
-              <div>
-                <div
-                  className={
-                    "internal-colors-box " +
-                    (colorItem.classNameBg || colorItem.className)
-                  }
-                />
-                <pre>
-                  <code>.{colorItem.className}</code>
-                </pre>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-
-      <div>
-        <h1 className="text-header-h3">CSS-classes</h1>
-        <p className="text-body-medium-regular mt-24">
-          There are other css-classes for background colors, border colors and
-          text colors available in the <code> scss / color-classes.scss </code>{" "}
-          file. The classes use <code> bg </code> / <code> border </code> /{" "}
-          <code> color </code> as a prefix. <br />
-          It is also possible to use the css-variables from{" "}
-          <code> scss / color-variables.scss </code> directly in the css files.
-        </p>
-
-        <p className="text-body-medium-regular mt-16">
-          Example: <br />A <code>div</code> with{" "}
-          <code>.bg-global-secondary</code>, and a<code>p</code>-element with{" "}
-          <code>.color-primary-black</code>:
-        </p>
-        <div className="bg-global-secondary p-32 mt-16">
-          <p className="color-primary-black text-header-h2">Nyt på hylderne</p>
-        </div>
-
-        <div>
-          <div className="internal-colors-wrapper">
-            <div>
-              <p className="text-body-large mb-8">Background classes</p>
-              {bgClasses.map((bgClass) => (
-                <div className="internal-spacing-css-inner">
-                  <div className="internal-spacing-css-inner-prefix p-8">
-                    <pre>
-                      <code>{`.${bgClass.classPrefix}`}</code>
-                    </pre>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div>
-              <p className="text-body-large mb-8">Border classes</p>
-              {borderClasses.map((borderClass) => (
-                <div className="internal-spacing-css-inner">
-                  <div className="internal-spacing-css-inner-prefix p-8">
-                    <pre>
-                      <code>{`.${borderClass.classPrefix}`}</code>
-                    </pre>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div>
-              <p className="text-body-large mb-8">Color (text) classes</p>
-              {textColorClasses.map((textColorClass) => (
-                <div className="internal-spacing-css-inner">
-                  <div className="internal-spacing-css-inner-prefix p-8">
-                    <pre>
-                      <code>{`.${textColorClass.classPrefix}`}</code>
-                    </pre>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+import React from "react";
 
 type ColorClasses = {
   colorTitle: string;
@@ -227,3 +138,95 @@ const textColorClasses = [
     classPrefix: "color-signal-alert",
   },
 ];
+
+export const Colors = () => {
+  return (
+    <div>
+      {colorClasses.map((color) => (
+        <div className="internal-colors-container">
+          <h1 className="text-header-h3">{color.colorTitle}</h1>
+          <div className="internal-colors-wrapper">
+            {color.colorItems.map((colorItem) => (
+              <div>
+                <div
+                  className={`internal-colors-box ${
+                    colorItem.classNameBg || colorItem.className
+                  }`}
+                />
+                <pre>
+                  <code>.{colorItem.className}</code>
+                </pre>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <div>
+        <h1 className="text-header-h3">CSS-classes</h1>
+        <p className="text-body-medium-regular mt-24">
+          There are other css-classes for background colors, border colors and
+          text colors available in the <code> scss / color-classes.scss </code>{" "}
+          file. The classes use <code> bg </code> / <code> border </code> /{" "}
+          <code> color </code> as a prefix. <br />
+          It is also possible to use the css-variables from{" "}
+          <code> scss / color-variables.scss </code> directly in the css files.
+        </p>
+
+        <p className="text-body-medium-regular mt-16">
+          Example: <br />A <code>div</code> with{" "}
+          <code>.bg-global-secondary</code>, and a<code>p</code>-element with{" "}
+          <code>.color-primary-black</code>:
+        </p>
+        <div className="bg-global-secondary p-32 mt-16">
+          <p className="color-primary-black text-header-h2">Nyt på hylderne</p>
+        </div>
+
+        <div>
+          <div className="internal-colors-wrapper">
+            <div>
+              <p className="text-body-large mb-8">Background classes</p>
+              {bgClasses.map((bgClass) => (
+                <div className="internal-spacing-css-inner">
+                  <div className="internal-spacing-css-inner-prefix p-8">
+                    <pre>
+                      <code>{`.${bgClass.classPrefix}`}</code>
+                    </pre>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div>
+              <p className="text-body-large mb-8">Border classes</p>
+              {borderClasses.map((borderClass) => (
+                <div className="internal-spacing-css-inner">
+                  <div className="internal-spacing-css-inner-prefix p-8">
+                    <pre>
+                      <code>{`.${borderClass.classPrefix}`}</code>
+                    </pre>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div>
+              <p className="text-body-large mb-8">Color (text) classes</p>
+              {textColorClasses.map((textColorClass) => (
+                <div className="internal-spacing-css-inner">
+                  <div className="internal-spacing-css-inner-prefix p-8">
+                    <pre>
+                      <code>{`.${textColorClass.classPrefix}`}</code>
+                    </pre>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Colors;

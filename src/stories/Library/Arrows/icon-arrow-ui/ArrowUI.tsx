@@ -26,8 +26,12 @@ export type IconArrowProps = {
   children?: React.ReactNode;
 };
 
-export const IconArrow = (props: IconArrowProps) => {
-  const { size, direction, hover, children } = props;
+export const IconArrow: React.FC<IconArrowProps> = ({
+  size,
+  direction,
+  hover,
+  children,
+}) => {
   const isRight = direction === "right";
 
   const getStaticArrow = (): string => {
@@ -57,7 +61,7 @@ export const IconArrow = (props: IconArrowProps) => {
   const ArrowComp = getDynamicArrow();
 
   return hover ? (
-    <div className={`arrow arrow__hover--${props.direction}-${props.size}`}>
+    <div className={`arrow arrow__hover--${direction}-${size}`}>
       {children}
       <ArrowComp />
     </div>

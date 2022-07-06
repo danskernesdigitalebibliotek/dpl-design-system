@@ -46,21 +46,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [
-          "/**/*.dev.jsx",
-          "/**/*.dev.tsx",
-          "/**/*.test.js",
-          "/**/*.test.jsx",
-          "/**/*.test.ts",
-          "/**/*.test.tsx",
-          "webpack.config.js",
-          "postcss.config.js",
-          "orval.config.ts",
-          "cypress/plugins/index.js",
-          "cypress/support/index.js",
-          "scripts/postcss-node-sass.js",
-          "scripts/post-process-generated-graphql.ts"
-        ]
+        "devDependencies": true
       }
     ],
     // We like to use arrow function syntax also for functional components.
@@ -105,13 +91,27 @@
               "__typename"
             ]
           }
-        ]
+        ],
+        // We do not create any functionality for our components
+        // outside of making them work for storybook viewing
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "react/button-has-type": "off",
+        "jsx-a11y/alt-text": "off",
+        "react/no-unstable-nested-components": "off",
+        "react/no-array-index-key": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "global-require": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "react/jsx-props-no-spreading": "off",
+        "jsx-a11y/label-has-associated-control": "off"
       }
     },
     {
       "files": [
-        "*.dev.jsx",
-        "*.dev.tsx"
+        "*.stories.jsx",
+        "*.stories.tsx",
+        "*.hoc.tsx"
       ],
       "rules": {
         // We need a simple way of passing args in stories via object spreading.

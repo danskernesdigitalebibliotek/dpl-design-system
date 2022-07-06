@@ -1,3 +1,5 @@
+import React from "react";
+
 export type NumberProps = {
   label: number;
   status: "danger" | "warning" | "info" | "neutral";
@@ -14,9 +16,5 @@ export const Number = (props: NumberProps) => {
     return "";
   }
 
-  return (
-    <div className={`number  ${getStatus()}`}>
-      {label}
-    </div>
-  );
+  return <div className={`number  ${getStatus()}`}>{label}</div>;
 };

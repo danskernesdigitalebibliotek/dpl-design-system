@@ -11,9 +11,11 @@ export type DropdownProps = {
   arrowIcon: "triangles" | "chevron";
 };
 
-export const Dropdown = (props: DropdownProps) => {
-  const { arrowIcon } = props;
-
+export const Dropdown: React.FC<DropdownProps> = ({
+  arrowIcon,
+  ariaLabel,
+  list,
+}) => {
   const Icon = () => {
     if (arrowIcon === "triangles") {
       return (
@@ -47,8 +49,8 @@ export const Dropdown = (props: DropdownProps) => {
 
   return (
     <div className="dropdown">
-      <select className="dropdown__select" aria-label={props.ariaLabel}>
-        {props.list.map((i, index) => (
+      <select className="dropdown__select" aria-label={ariaLabel}>
+        {list.map((i, index) => (
           <option key={index} className="dropdown__option" value={i.title}>
             {i.title}
           </option>

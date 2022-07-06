@@ -1,8 +1,8 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-
 import { Logo as LogoComp } from "./Logo";
+
 type LogoProps = typeof LogoComp;
 
 export default {
@@ -20,8 +20,7 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=264%3A2263",
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=264%3A2263",
     },
     layout: "centered",
   },

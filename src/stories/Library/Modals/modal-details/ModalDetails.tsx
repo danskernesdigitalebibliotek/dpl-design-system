@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { MaterialBanner } from "../../../Blocks/material-banner/MaterialBanner";
 import { MaterialCardProps } from "../../material-card/MaterialCard";
@@ -13,92 +13,6 @@ import { StatusLabel } from "../../status-label/StatusLabel";
 import { Button } from "../../Buttons/button/Button";
 
 import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
-
-export type ModalDetailsProps = {
-  title: string;
-  author: string;
-  type: string;
-  showWarning: boolean;
-  showModal: boolean;
-};
-
-export const ModalDetails = (props: ModalDetailsProps) => {
-  const [showModal, setShow] = useState(props.showModal);
-
-  useEffect(() => {
-    setShow(props.showModal);
-  }, [props.showModal]);
-
-  const toggleModal = () => {
-    setShow(!showModal);
-  };
-
-  if (!showModal) {
-    return <ModalFallbackButton toggleModal={toggleModal} />;
-  }
-
-  return (
-    <div className={`modal modal-details ${showModal ? "modal-show" : ""}`}>
-      <ModalCloseButton toggleModal={toggleModal} />
-      <div className="modal-details__container">
-        <div className="modal-details__header">
-          <div className="modal-details__cover">
-            <Material
-              size="large"
-              url="images/book_cover_large_1.jpg"
-              animate={true}
-            />
-          </div>
-          <div className="modal-details__material">
-            <div className="modal-details__tags">
-              <StatusLabel label={props.type} status="outline" />
-              {props.showWarning && (
-                <StatusLabel label="overskredet" status="danger" />
-              )}
-            </div>
-            <h2 className="modal-details__title text-header-h2">
-              {props.title}
-            </h2>
-            <p className="text-body-medium-regular">{props.author}</p>
-          </div>
-        </div>
-        <div className="modal-details__buttons">
-          <Button
-            buttonType="default"
-            label="forny dit lån"
-            size="small"
-            variant="filled"
-            disabled={false}
-            collapsible={true}
-          />
-        </div>
-        <div className="modal-details__warning">
-          {props.showWarning && (
-            <WarningStatus
-              url="/"
-              description="Afleveringsdatoen for lånet er overskredet, derfor pålægges du et gebyr, når materialet afleveres"
-            />
-          )}
-        </div>
-        <div className="modal-details__list">
-          {listDetails.map((detail, index) => (
-            <ListDetails key={index} {...detail} />
-          ))}
-        </div>
-      </div>
-      <div className="modal-details__banner">
-        <MaterialBanner
-          title="Andre materialer"
-          body=""
-          linkFilters={linksFilters}
-          cards={materialCards}
-          showBodyText={false}
-          showLinkfilters={true}
-        />
-      </div>
-    </div>
-  );
-};
 
 const listDetails: Array<ListDetailsProps> = [
   {
@@ -177,3 +91,95 @@ const linksFilters: LinkFilter[] = [
     counter: "4",
   },
 ];
+
+export type ModalDetailsProps = {
+  title: string;
+  author: string;
+  type: string;
+  showWarning: boolean;
+  showModal: boolean;
+};
+
+export const ModalDetails: React.FC<ModalDetailsProps> = ({
+  title,
+  author,
+  type,
+  showModal,
+  showWarning,
+}) => {
+  const [shoudShowModal, setShouldShowModal] = useState(showModal);
+
+  useEffect(() => {
+    setShouldShowModal(showModal);
+  }, [showModal]);
+
+  const toggleModal = () => {
+    setShouldShowModal(!showModal);
+  };
+
+  if (!shoudShowModal) {
+    return <ModalFallbackButton toggleModal={toggleModal} />;
+  }
+
+  return (
+    <div
+      className={`modal modal-details ${shoudShowModal ? "modal-show" : ""}`}
+    >
+      <ModalCloseButton toggleModal={toggleModal} />
+      <div className="modal-details__container">
+        <div className="modal-details__header">
+          <div className="modal-details__cover">
+            <Material
+              size="large"
+              url="images/book_cover_large_1.jpg"
+              animate
+            />
+          </div>
+          <div className="modal-details__material">
+            <div className="modal-details__tags">
+              <StatusLabel label={type} status="outline" />
+              {showWarning && (
+                <StatusLabel label="overskredet" status="danger" />
+              )}
+            </div>
+            <h2 className="modal-details__title text-header-h2">{title}</h2>
+            <p className="text-body-medium-regular">{author}</p>
+          </div>
+        </div>
+        <div className="modal-details__buttons">
+          <Button
+            buttonType="default"
+            label="forny dit lån"
+            size="small"
+            variant="filled"
+            disabled={false}
+            collapsible
+          />
+        </div>
+        <div className="modal-details__warning">
+          {showWarning && (
+            <WarningStatus
+              url="/"
+              description="Afleveringsdatoen for lånet er overskredet, derfor pålægges du et gebyr, når materialet afleveres"
+            />
+          )}
+        </div>
+        <div className="modal-details__list">
+          {listDetails.map((detail, index) => (
+            <ListDetails key={index} {...detail} />
+          ))}
+        </div>
+      </div>
+      <div className="modal-details__banner">
+        <MaterialBanner
+          title="Andre materialer"
+          body=""
+          linkFilters={linksFilters}
+          cards={materialCards}
+          showBodyText={false}
+          showLinkfilters
+        />
+      </div>
+    </div>
+  );
+};

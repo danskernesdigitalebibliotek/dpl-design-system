@@ -11,14 +11,14 @@ type AccordionProps = {
   list: AccordionRow[];
 };
 
-export const Accordion = (props: AccordionProps) => {
+const Accordion: React.FC<AccordionProps> = ({ list }) => {
   useEffect(() => {
-    /* eslint @typescript-eslint/no-var-requires: "off" */
+    /* eslint-disable-next-line global-require */
     require("./initaccordion");
   }, []);
   return (
     <ul className="accordion" onClick={(e) => window.eventAccordion(e)}>
-      {props.list.map((row) => (
+      {list.map((row) => (
         <li key={row.header} className="accordion__row">
           <h3 className="accordion__header text-header-h4">
             <button
@@ -30,7 +30,7 @@ export const Accordion = (props: AccordionProps) => {
               <img
                 className="accordion__button-arrow"
                 src="icons/basic/icon-triangle.svg"
-                alt="" 
+                alt=""
               />
             </button>
           </h3>
@@ -54,3 +54,5 @@ declare global {
     ) => void;
   }
 }
+
+export default Accordion;

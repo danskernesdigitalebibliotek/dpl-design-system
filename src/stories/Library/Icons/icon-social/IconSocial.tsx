@@ -1,3 +1,5 @@
+import React from "react";
+
 const svgIcons = [
   {
     title: "Facebook",
@@ -29,3 +31,5 @@ export const IconSocial = () => {
     </div>
   );
 };
+
+export default IconSocial;
