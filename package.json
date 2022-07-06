@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^6.0.1",
+    "@namics/stylelint-bem": "^7.0.0",
     "@storybook/addon-a11y": "6.5.9",
     "@storybook/addon-actions": "6.5.9",
     "@storybook/addon-essentials": "6.5.9",
@@ -69,8 +70,11 @@
     "storybook-addon-designs": "^6.2.1",
     "stylelint": "^14.9.1",
     "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-scss": "^6.0.0",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-config-standard": "^26.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.2.0",
     "typescript": "^4.7.4",
     "web-vitals": "^1.0.1"
   },
@@ -79,5 +83,6 @@
   },
   "files": [
     "build/**/*"
-  ]
+  ],
+  "dependencies": {}
 }
