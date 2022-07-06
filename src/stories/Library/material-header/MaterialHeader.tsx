@@ -6,6 +6,34 @@ import { Material } from "../material/Material";
 import MaterialHeaderText from "./MaterialHeaderText";
 import MaterialPeriodikumSelect from "./MaterialPeriodikumSelect";
 
+const listOfAvailabilityLabels = [
+  {
+    manifestation: "Bog",
+    availability: "Hjemme",
+    status: "selected",
+  } as const,
+  {
+    manifestation: "Bog",
+    availability: "Hjemme",
+    status: "available",
+  } as const,
+  {
+    manifestation: "Bog",
+    availability: "Hjemme",
+    status: "available",
+  } as const,
+  {
+    manifestation: "Bog",
+    availability: "Hjemme",
+    status: "available",
+  } as const,
+  {
+    manifestation: "Bog",
+    availability: "Hjemme",
+    status: "available",
+  } as const,
+].map((item) => <AvailabilityLabel {...item} />);
+
 interface MaterialHeaderProps {
   title: string;
   author: string;
@@ -26,7 +54,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
           url="images/book_cover_3.jpg"
           size="large"
           tint="120"
-          animate={true}
+          animate
         />
       </div>
       <div className="material-header__content">
@@ -61,31 +89,3 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
 };
 
 export default MaterialHeader;
-
-const listOfAvailabilityLabels = [
-  {
-    manifestation: "Bog",
-    availability: "Hjemme",
-    status: "selected",
-  } as const,
-  {
-    manifestation: "Bog",
-    availability: "Hjemme",
-    status: "available",
-  } as const,
-  {
-    manifestation: "Bog",
-    availability: "Hjemme",
-    status: "available",
-  } as const,
-  {
-    manifestation: "Bog",
-    availability: "Hjemme",
-    status: "available",
-  } as const,
-  {
-    manifestation: "Bog",
-    availability: "Hjemme",
-    status: "available",
-  } as const,
-].map((item) => <AvailabilityLabel {...item} />);
