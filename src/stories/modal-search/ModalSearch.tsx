@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import {
   ModalCloseButton,
   ModalFallbackButton,
@@ -10,25 +9,25 @@ export type ModalSearchProps = {
   showModal: boolean;
 };
 
-export const ModalSearch = (props: ModalSearchProps) => {
-  const [showModal, setShow] = useState(props.showModal);
+export const ModalSearch: React.FC<ModalSearchProps> = ({ showModal }) => {
+  const [shouldShowModal, setShouldShowModal] = useState(showModal);
 
   useEffect(() => {
-    setShow(props.showModal);
-  }, [props.showModal]);
+    setShouldShowModal(showModal);
+  }, [showModal]);
 
   const toggleModal = () => {
-    setShow(!showModal);
+    setShouldShowModal(!shouldShowModal);
   };
 
-  if (!showModal) {
+  if (!shouldShowModal) {
     return <ModalFallbackButton toggleModal={toggleModal} />;
   }
 
   return (
     <div
       className={`modal modal-search ${
-        showModal ? "modal-show" : ""
+        shouldShowModal ? "modal-show" : ""
       } modal-padding `}
     >
       <ModalCloseButton toggleModal={toggleModal} />
@@ -51,7 +50,7 @@ export const ModalSearch = (props: ModalSearchProps) => {
             variant="filled"
             label="gem"
             disabled={false}
-            collapsible={true}
+            collapsible
           />
         </div>
       </div>

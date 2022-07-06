@@ -11,8 +11,7 @@ const StoryBase: Meta = {
   parameters: {
     design: {
       type: "figma",
-      url:
-        "hhttps://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1385%3A10755",
+      url: "hhttps://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1385%3A10755",
     },
   },
 };

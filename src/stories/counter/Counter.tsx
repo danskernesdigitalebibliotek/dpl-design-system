@@ -1,3 +1,5 @@
+import React from "react";
+
 export type CounterProps = {
   value: number;
   percentage: number;
@@ -29,13 +31,13 @@ export const Counter = (props: CounterProps) => {
     <div
       role="progressbar"
       style={{ background: borderProgress }}
-      className={`counter`}
+      className="counter"
       aria-label="counter showing time remaining "
     >
       {isReady ? (
         <img
           className="counter__icon"
-          src={`icons/basic/icon-check.svg`}
+          src="icons/basic/icon-check.svg"
           alt="check icon"
         />
       ) : (

@@ -1,4 +1,5 @@
-import iconsCollection from '../../../icons/icon-collection.json';
+import React from "react";
+import iconsCollection from "../../../icons/icon-collection.json";
 
 export const IconCollection = () => {
   return (
@@ -12,3 +13,5 @@ export const IconCollection = () => {
     </div>
   );
 };
+
+export default IconCollection;

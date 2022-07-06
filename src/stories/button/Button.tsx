@@ -1,3 +1,4 @@
+import React from "react";
 import { ReactComponent as ArrowSmallRight } from "../../icons/arrow-ui/icon-arrow-ui-small-right.svg";
 
 export type ButtonProps = {
@@ -10,8 +11,15 @@ export type ButtonProps = {
   onClick?: () => void;
 };
 
-export const Button = (props: ButtonProps) => {
-  const { label, buttonType, disabled, collapsible, size, variant } = props;
+export const Button: React.FC<ButtonProps> = ({
+  label,
+  buttonType,
+  disabled,
+  collapsible,
+  size,
+  variant,
+  onClick,
+}) => {
   const iconClassName = `btn-icon ${collapsible ? "btn-collapsible" : ""}`;
 
   const Icon = () => {
@@ -29,7 +37,7 @@ export const Button = (props: ButtonProps) => {
       return (
         <img
           className={iconClassName}
-          src={`icons/buttons/icon-btn-external-link.svg`}
+          src="icons/buttons/icon-btn-external-link.svg"
           alt="external-link"
         />
       );
@@ -57,7 +65,7 @@ export const Button = (props: ButtonProps) => {
       type="button"
       className={`btn-primary ${getVariant()} ${getSize()} arrow__hover--right-small`}
       disabled={disabled}
-      onClick={props.onClick}
+      onClick={onClick}
     >
       {`${label} ${buttonType === "search" ? "(6)" : ""}`}
       <Icon />

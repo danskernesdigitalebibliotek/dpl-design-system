@@ -1,3 +1,4 @@
+import React from "react";
 import { ButtonUI } from "../stories/button-ui/ButtonUI";
 import { Button } from "../stories/button/Button";
 
@@ -18,7 +19,7 @@ export function ModalFallbackButton({
         variant="filled"
         label="Show modal"
         disabled={false}
-        collapsible={true}
+        collapsible
         onClick={toggleModal}
       />
     </div>

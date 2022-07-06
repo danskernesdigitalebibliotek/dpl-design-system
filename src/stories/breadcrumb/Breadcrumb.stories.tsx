@@ -16,8 +16,7 @@ const StoryBase: StoryBaseType<BreadcrumbProps> = {
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=437%3A4681",
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=437%3A4681",
     },
     layout: "centered",
   },

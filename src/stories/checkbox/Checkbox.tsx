@@ -3,19 +3,24 @@ import React, { useState, useRef } from "react";
 export type CheckboxProps = {
   isChecked: boolean;
   label?: string;
-  ariaLabel?: string
+  ariaLabel?: string;
   callback?: (isChecked: boolean) => void;
 };
 
-export const Checkbox = (props: CheckboxProps) => {
+export const Checkbox: React.FC<CheckboxProps> = ({
+  isChecked,
+  label,
+  ariaLabel,
+  callback,
+}) => {
   const checkboxId = useRef(`checkbox_id__${Math.random()}`);
-  const [isChecked, setChecked] = useState(props.isChecked);
+  const [checked, setChecked] = useState(isChecked);
 
   const handleClick = () => {
-    if (props.callback) {
-      props.callback(!isChecked);
+    if (callback) {
+      callback(!checked);
     }
-    setChecked(!isChecked);
+    setChecked(!checked);
   };
 
   return (
@@ -24,8 +29,8 @@ export const Checkbox = (props: CheckboxProps) => {
         id={checkboxId.current}
         className="checkbox__input"
         type="checkbox"
-        aria-label={props.ariaLabel}
-        checked={isChecked}
+        aria-label={ariaLabel}
+        checked={checked}
         onClick={handleClick}
       />
       <label className="checkbox__label" htmlFor={checkboxId.current}>
@@ -41,9 +46,9 @@ export const Checkbox = (props: CheckboxProps) => {
             />
           </svg>
         </span>
-        {props.label && (
+        {label && (
           <span className="checkbox__text text-small-caption color-secondary-gray">
-            {props.label}
+            {label}
           </span>
         )}
       </label>

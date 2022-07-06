@@ -1,24 +1,4 @@
-export const Breakpoints = () => {
-  return (
-    <div>
-      <p className="text-body-large">CSS breakpoints / sizes</p>
-      <div className="internal-breakpoints-css-wrapper mt-24">
-        {spaceClasses.map((spaceClass) => (
-          <div className="internal-breakpoints-css-inner">
-            <div className="internal-breakpoints-css-inner-prefix p-8">
-              <pre>
-                <code>{spaceClass.classPrefix}</code>
-              </pre>
-            </div>
-            <div className="internal-breakpoints-css-inner-property p-8">
-              {spaceClass.classProperty}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+import React from "react";
 
 const spaceClasses = [
   {
@@ -46,3 +26,27 @@ const spaceClasses = [
     classProperty: "2200px",
   },
 ];
+
+export const Breakpoints = () => {
+  return (
+    <div>
+      <p className="text-body-large">CSS breakpoints / sizes</p>
+      <div className="internal-breakpoints-css-wrapper mt-24">
+        {spaceClasses.map((spaceClass) => (
+          <div className="internal-breakpoints-css-inner">
+            <div className="internal-breakpoints-css-inner-prefix p-8">
+              <pre>
+                <code>{spaceClass.classPrefix}</code>
+              </pre>
+            </div>
+            <div className="internal-breakpoints-css-inner-property p-8">
+              {spaceClass.classProperty}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Breakpoints;

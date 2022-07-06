@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
+import React from "react";
 import { MaterialCard } from "./MaterialCard";
 
 export default {
@@ -9,11 +10,11 @@ export default {
   // We disable the isChecked control, since it is not possible to
   // get the states from the React component to work with Storybook controls.
   argTypes: {
-    isLiked: { 
+    isLiked: {
       control: {
-        disable: true
-      }
-    }
+        disable: true,
+      },
+    },
   },
   parameters: {},
 } as ComponentMeta<typeof MaterialCard>;

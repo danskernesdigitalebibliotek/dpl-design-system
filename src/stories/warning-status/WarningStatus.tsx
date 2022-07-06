@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "../button/Button";
 import { Links } from "../links/Links";
 
@@ -20,7 +21,7 @@ export const WarningStatus = (props: WarningStatusProps) => {
       <div className="warning-bar__left">
         <img
           className="warning-bar__icon"
-          src={`icons/basic/icon-warning.svg`}
+          src="icons/basic/icon-warning.svg"
           alt="warning icon"
         />
         <div>
@@ -50,7 +51,7 @@ export const WarningStatus = (props: WarningStatusProps) => {
             variant="filled"
             label="se mere"
             disabled={false}
-            collapsible={true}
+            collapsible
           />
         )}
       </div>

@@ -1,14 +1,4 @@
-export const Typography = () => {
-  return (
-    <div style={{ display: "grid", gridGap: "40px" }}>
-      {typographyClasses.map((typography) => (
-        <div key={typography.className} className={typography.className}>
-          {typography.title}
-        </div>
-      ))}
-    </div>
-  );
-};
+import React from "react";
 
 const typographyClasses = [
   {
@@ -76,3 +66,17 @@ const typographyClasses = [
     title: "Desktop / Label semibold",
   },
 ];
+
+export const Typography = () => {
+  return (
+    <div style={{ display: "grid", gridGap: "40px" }}>
+      {typographyClasses.map((typography) => (
+        <div key={typography.className} className={typography.className}>
+          {typography.title}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Typography;

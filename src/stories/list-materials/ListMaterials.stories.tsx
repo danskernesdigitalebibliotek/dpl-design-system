@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
 import { ListMaterials } from "./ListMaterials";
 
 export default {
@@ -9,17 +10,16 @@ export default {
   // We disable the isChecked control, since it is not possible to
   // get the states from the React component to work with Storybook controls.
   argTypes: {
-    isChecked: { 
+    isChecked: {
       control: {
-        disable: true
-      }
-    }
+        disable: true,
+      },
+    },
   },
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1385%3A8204",
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1385%3A8204",
     },
   },
 } as ComponentMeta<typeof ListMaterials>;

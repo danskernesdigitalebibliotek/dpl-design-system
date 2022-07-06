@@ -1,4 +1,5 @@
 import "../../styles/css/base.css";
+import React from "react";
 import logo from "./logo.png";
 
 type LogoProps = {
@@ -21,3 +22,5 @@ export const Logo = (props: LogoProps) => {
     </div>
   );
 };
+
+export default Logo;

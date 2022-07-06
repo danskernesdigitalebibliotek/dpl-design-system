@@ -1,3 +1,4 @@
+import React from "react";
 import { Counter, CounterProps } from "../counter/Counter";
 import { StatusLabel, StatusLabelProps } from "../status-label/StatusLabel";
 import { Material } from "../material/Material";
@@ -34,7 +35,7 @@ export const ListReservationsAndLoans = (
       >
         <div className="list-reservation__material">
           <div>
-            <Material size="small" animate={true} url={material.image} />
+            <Material size="small" animate url={material.image} />
           </div>
           <div className="list-reservation__information">
             <div>

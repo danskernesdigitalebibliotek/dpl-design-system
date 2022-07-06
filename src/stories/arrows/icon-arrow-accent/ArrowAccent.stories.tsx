@@ -2,17 +2,16 @@ import { Meta } from "@storybook/react";
 import React from "react";
 import { withDesign } from "storybook-addon-designs";
 
-import { IconAccent as IconAccentComp } from "./ArrowAccent";
+import IconAccent from "./ArrowAccent";
 
 const StoryBase: Meta = {
   title: "Atoms / Arrows / Arrow Accent",
-  component: IconAccentComp,
+  component: IconAccent,
   decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=282%3A3763",
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=282%3A3763",
     },
     layout: "centered",
   },
@@ -20,4 +19,4 @@ const StoryBase: Meta = {
 
 export default StoryBase;
 
-export const ArrowAccent = () => <IconAccentComp />;
+export const ArrowAccent = () => <IconAccent />;

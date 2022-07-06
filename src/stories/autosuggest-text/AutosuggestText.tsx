@@ -1,6 +1,8 @@
+import React from "react";
+
 export type AutosuggestTextProps = {
-  items: string[]
-}
+  items: string[];
+};
 
 export const AutosuggestText = (props: AutosuggestTextProps) => {
   const { items } = props;
@@ -13,10 +15,10 @@ export const AutosuggestText = (props: AutosuggestTextProps) => {
               <li className="autosuggest__text text-body-medium-regular px-24">
                 {item}
               </li>
-            )
+            );
           })}
         </ul>
       </li>
     </ul>
-  )
-}
+  );
+};

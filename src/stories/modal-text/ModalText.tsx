@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import {
   ModalCloseButton,
   ModalFallbackButton,
@@ -19,68 +18,69 @@ export type ModalTextProps = {
   }>;
 };
 
-export const ModalText = (props: ModalTextProps) => {
-  const [showModal, setShow] = useState(props.showModal);
+export const ModalText: React.FC<ModalTextProps> = ({
+  showModal,
+  title,
+  linkText,
+  btnLabel,
+  subtitle,
+  textContent,
+}) => {
+  const [shouldShowModal, setShouldShowModal] = useState(showModal);
 
   useEffect(() => {
-    setShow(props.showModal);
-  }, [props.showModal]);
+    setShouldShowModal(showModal);
+  }, [showModal]);
 
   const toggleModal = () => {
-    setShow(!showModal);
+    setShouldShowModal(!shouldShowModal);
   };
 
-  if (!showModal) {
+  if (!shouldShowModal) {
     return <ModalFallbackButton toggleModal={toggleModal} />;
   }
 
   return (
     <div
       className={`modal modal-text ${
-        showModal ? "modal-show" : ""
+        shouldShowModal ? "modal-show" : ""
       } modal-padding`}
     >
       <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-text__container color-secondary-gray">
-        <h3 className="text-header-h3">
-          {props.title}
-        </h3>
+        <h3 className="text-header-h3">{title}</h3>
 
-      <p className="mt-48 text-body-large">
-        {props.subtitle}
-      </p>
+        <p className="mt-48 text-body-large">{subtitle}</p>
 
-      <div className="mt-48">
-        {props.textContent.map((row) => (
-          <div className="modal-text__content">
-            <p className="text-body-medium-regular">{row.title}</p>
-            <p className="text-links">{row.text}</p>
-          </div>
-        ))}
-      </div>
-
+        <div className="mt-48">
+          {textContent.map((row) => (
+            <div className="modal-text__content">
+              <p className="text-body-medium-regular">{row.title}</p>
+              <p className="text-links">{row.text}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="modal-text__buttons">
         <div className="modal-text__buttons-inner">
           <Links
-            href={"/"}
-            linkText={props.linkText}
+            href="/"
+            linkText={linkText}
             classNames="color-secondary-gray"
           />
           <Button
             buttonType="default"
             size="large"
             variant="filled"
-            label={props.btnLabel}
+            label={btnLabel}
             disabled={false}
-            collapsible={true}
+            collapsible
           />
         </div>
       </div>
     </div>
   );
 };
-
 
 export const textContent = [
   {
@@ -95,4 +95,4 @@ export const textContent = [
     title: "Lorem Ipsum",
     text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci",
   },
-]
+];

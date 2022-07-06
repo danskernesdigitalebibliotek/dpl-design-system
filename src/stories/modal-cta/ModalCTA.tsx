@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   ModalCloseButton,
@@ -12,15 +12,15 @@ export type ModalCTAProps = {
   showModal: boolean;
 };
 
-export const ModalCTA = (props: ModalCTAProps) => {
-  const [showModal, setShow] = useState(props.showModal);
+export const ModalCTA: React.FC<ModalCTAProps> = ({ title, showModal }) => {
+  const [shownModal, setShownModal] = useState(showModal);
 
   useEffect(() => {
-    setShow(props.showModal);
-  }, [props.showModal]);
+    setShownModal(showModal);
+  }, [showModal]);
 
   const toggleModal = () => {
-    setShow(!showModal);
+    setShownModal(!showModal);
   };
 
   if (!showModal) {
@@ -30,12 +30,12 @@ export const ModalCTA = (props: ModalCTAProps) => {
   return (
     <div
       className={`modal modal-cta modal-padding ${
-        showModal ? "modal-show" : ""
+        shownModal ? "modal-show" : ""
       }`}
     >
       <ModalCloseButton toggleModal={toggleModal} />
       <div className="modal-cta__container">
-        <h2 className="text-header-h2">{props.title}</h2>
+        <h2 className="text-header-h2">{title}</h2>
         <div className="mt-48 color-secondary-gray">
           <p className="text-body-medium-regular">
             Fornyer du dine lån, forhøjes dit gebyr.
@@ -45,7 +45,7 @@ export const ModalCTA = (props: ModalCTAProps) => {
             overskredne lån modtager du et gebyr pr. lån og derfor forhøjes dit
             samlede gebyr, hvis du vælger at gå videre med at fornye.{" "}
             <Links
-              href={"/"}
+              href="/"
               linkText="Læs mere"
               classNames="color-secondary-gray ml-8"
             />
@@ -59,11 +59,11 @@ export const ModalCTA = (props: ModalCTAProps) => {
             variant="filled"
             label="Annuller fornyelse"
             disabled={false}
-            collapsible={true}
+            collapsible
           />
           <div className="modal-cta__link">
             <Links
-              href={"/"}
+              href="/"
               linkText="Ja, forny mulige"
               classNames="color-secondary-gray ml-8"
             />
