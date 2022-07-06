@@ -10,12 +10,14 @@ interface MaterialHeaderProps {
   title: string;
   author: string;
   periodikum?: boolean;
+  ctaText?: string;
 }
 
 const MaterialHeader: React.FC<MaterialHeaderProps> = ({
   title,
   author,
   periodikum,
+  ctaText,
 }) => {
   return (
     <header className="material-header">
@@ -52,6 +54,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
             size="large"
           />
         </div>
+        {ctaText && <p className="mt-16 text-small-caption">{ctaText}</p>}
       </div>
     </header>
   );
