@@ -1,0 +1,9 @@
+{
+  "extends": ["plugin:reload/typescript"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}
