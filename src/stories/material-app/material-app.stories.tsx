@@ -23,6 +23,9 @@ export default {
     periodikum: {
       control: { type: "boolean" },
     },
+    ctaText: {
+      control: { type: "text" },
+    },
   },
 } as ComponentMeta<typeof MaterialApp>;
 
@@ -35,4 +38,5 @@ Item.args = {
   title: "Audrey Hepburn",
   author: "James Joyce (2013)",
   periodikum: false,
+  ctaText: "Vi har 8 eksemplarer og 21 står i kø",
 };
