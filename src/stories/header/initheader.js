@@ -4,6 +4,7 @@ window.eventHeader = () => {
   const elementOpen = document.getElementById("header__menu--open");
 
   if (!elementOverlay || !elementClose || !elementOpen) {
+    // eslint-disable-next-line
     console.info("Header - Couldn't find elements");
     return;
   }
