@@ -14,46 +14,53 @@ export type ListMaterialsProps = {
   isChecked: boolean;
 };
 
-export const ListMaterials = (props: ListMaterialsProps) => {
-  const [isChecked, setChecked] = useState(props.isChecked);
+export const ListMaterials: React.FC<ListMaterialsProps> = ({
+  title,
+  author,
+  statusDelivery,
+  statusMaterialType,
+  canBeRenewed,
+  isChecked,
+}) => {
+  const [isItChecked, setIsItChecked] = useState(isChecked);
 
   const handleToggle = (state: boolean) => {
-    setChecked(state);
+    setIsItChecked(state);
   };
 
   return (
     <div
       className={`list-materials ${
-        isChecked ? "list-materials__selected" : ""
+        isItChecked ? "list-materials__selected" : ""
       }`}
     >
-      {props.canBeRenewed && (
+      {canBeRenewed && (
         <div className="list-materials__checkbox mr-32">
           <Checkbox
-            isChecked={isChecked}
+            isChecked={isItChecked}
             callback={handleToggle}
-            ariaLabel={`Vælg materiale`}
+            ariaLabel="Vælg materiale"
           />
         </div>
       )}
       <div className="list-materials__content">
         <div className="list-materials__content-status">
-          <StatusLabel {...props.statusMaterialType} />
+          <StatusLabel {...statusMaterialType} />
           <StatusLabel
             classNames="list-materials__content-status-label"
-            {...props.statusDelivery}
+            {...statusDelivery}
           />
         </div>
-        <p className="text-header-h5 mt-8">{props.title}</p>
-        <p className="text-small-caption">{props.author}</p>
+        <p className="text-header-h5 mt-8">{title}</p>
+        <p className="text-small-caption">{author}</p>
       </div>
       <div className="list-materials__status">
-        {!props.canBeRenewed && (
+        {!canBeRenewed && (
           <span className="text-small-caption">
             Digitale materialer kan ikke fornys
           </span>
         )}
-        <StatusLabel {...props.statusDelivery} />
+        <StatusLabel {...statusDelivery} />
       </div>
     </div>
   );

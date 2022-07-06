@@ -1,13 +1,13 @@
 import clsx from "clsx";
+import { AvailabilityLabelPropsType } from "../../availability-label/types";
 import { PagefoldProps } from "../../Library/pagefold/Pagefold";
-import { AvailabilityLabelPropsType } from "./AvailabilityLabel";
 
 type PropMapItem = Omit<PagefoldProps, "isInheriting" | "isAContainer"> & {
   classes: string[];
 };
 
 export const withAvailabilityProps = <T extends PagefoldProps>(
-  Component: React.ComponentType<T>
+  Component: React.FC<T>
 ) => {
   const defaultClasses = ["availability-label", "text-label"];
 
@@ -52,3 +52,5 @@ export const withAvailabilityProps = <T extends PagefoldProps>(
     return <Component {...(updatedProps as T)} />;
   };
 };
+
+export default withAvailabilityProps;

@@ -1,3 +1,4 @@
+import React from "react";
 import { Links } from "../links/Links";
 
 export type LinkFilter = {
@@ -10,10 +11,10 @@ export type LinkFiltersProps = {
   filters: Array<LinkFilter>;
 };
 
-export const LinkFilters = (props: LinkFiltersProps) => {
+export const LinkFilters: React.FC<LinkFiltersProps> = ({ filters }) => {
   return (
     <div className="link-filters">
-      {props.filters.map((item, index) => (
+      {filters.map((item, index) => (
         <div key={index} className="link-filters__tag-wrapper">
           {item.href ? (
             <Links

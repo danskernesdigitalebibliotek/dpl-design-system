@@ -11,7 +11,7 @@ export type PagefoldProps = {
   compProps?: React.ComponentPropsWithoutRef<"div">;
 };
 
-export const Pagefold = (props: PagefoldProps) => {
+export const Pagefold: React.FC<PagefoldProps> = (props) => {
   const {
     isInheriting,
     isAContainer,

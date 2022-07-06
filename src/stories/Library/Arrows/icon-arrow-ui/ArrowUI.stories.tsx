@@ -22,8 +22,7 @@ const StoryBase: StoryBaseType<IconArrowProps> = {
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=264%3A3146",
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=264%3A3146",
     },
     layout: "centered",
   },

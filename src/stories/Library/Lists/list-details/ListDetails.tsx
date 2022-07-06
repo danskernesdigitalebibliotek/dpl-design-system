@@ -12,28 +12,32 @@ export type ListDetailsProps = {
   };
 };
 
-export const ListDetails = (props: ListDetailsProps) => {
+export const ListDetails: React.FC<ListDetailsProps> = ({
+  title,
+  date,
+  icon,
+  menu,
+  link,
+}) => {
   return (
     <div className="list-details">
       <div className="list-details__icon">
-        <img src={props.icon} alt="arrow accent" />
+        <img src={icon} alt="arrow accent" />
       </div>
       <div className="list-details__container">
         <div className="list-details__content">
-          <p className="text-header-h5">{props.title}</p>
-          <p className="text-small-caption">{props.date}</p>
+          <p className="text-header-h5">{title}</p>
+          <p className="text-small-caption">{date}</p>
         </div>
         <div className="list-details__menu">
-          {props.menu && (
+          {menu && (
             <Dropdown
-              ariaLabel={props.menu.ariaLabel}
-              list={props.menu.list}
+              ariaLabel={menu.ariaLabel}
+              list={menu.list}
               arrowIcon="chevron"
             />
           )}
-          {props.link && (
-            <Links href={props.link.url} linkText={props.link.label} />
-          )}
+          {link && <Links href={link.url} linkText={link.label} />}
         </div>
       </div>
     </div>

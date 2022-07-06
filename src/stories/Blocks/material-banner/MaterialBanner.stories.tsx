@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
+import React from "react";
 import { MaterialBanner } from "./MaterialBanner";
 
 export default {
@@ -17,8 +18,7 @@ const Template: ComponentStory<typeof MaterialBanner> = (args) => (
 export const Item = Template.bind({});
 Item.args = {
   title: "Nyt på hylderne",
-  body:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   cards: [
     {
       title: "De uadskillelige",

@@ -6,13 +6,28 @@ import { list } from "../../Library/accordion/accordionList";
 import { Links } from "../../Library/links/Links";
 import { FooterColumn } from "./FooterColumn";
 
+const dropdownList = [
+  {
+    title: "DK",
+    href: "/",
+  },
+  {
+    title: "SEK",
+    href: "/",
+  },
+  {
+    title: "ENG",
+    href: "/",
+  },
+];
+
 export const Footer = () => {
   return (
     <footer className="footer">
       <h2 className="hide-visually">Globale links</h2>
       {/* Footer mobile */}
       <div className="footer__mobile">
-        <Pagefold isInheriting={true} isAContainer={true} size="small">
+        <Pagefold isInheriting isAContainer size="small">
           <div>
             <h3 className="text-header-h4 mb-16">Åbningstider</h3>
             <p className="text-body-medium-regular mb-24">
@@ -20,7 +35,7 @@ export const Footer = () => {
               non numquam eius modi tempora incidunt ut labore.
             </p>
             <div className="footer__column-link mb-48">
-              <Links href={"/"} linkText={"Se bibliotekernes åbningstider"} />
+              <Links href="/" linkText="Se bibliotekernes åbningstider" />
             </div>
           </div>
           <Accordion list={list} />
@@ -30,9 +45,9 @@ export const Footer = () => {
               ariaLabel="dropdown"
               arrowIcon="triangles"
             />
-            <Logo fallback={false} libraryName={""} altText={"logo"} />
+            <Logo fallback={false} libraryName="" altText="logo" />
           </div>
-          <div className="footer__separator mt-24"></div>
+          <div className="footer__separator mt-24" />
           <div className="footer__site-info mt-24">
             <div className="footer__site-info-links">
               <ul>
@@ -62,25 +77,25 @@ export const Footer = () => {
             <div className="footer__site-info-icons mt-32">
               <a href="/">
                 <img
-                  src={`icons/social/icon-social-facebook.svg`}
+                  src="icons/social/icon-social-facebook.svg"
                   alt="Facebook link"
                 />
               </a>
               <a href="/">
                 <img
-                  src={`icons/social/icon-social-instagram.svg`}
+                  src="icons/social/icon-social-instagram.svg"
                   alt="Instagram link"
                 />
               </a>
               <a href="/">
                 <img
-                  src={`icons/social/icon-social-youtube.svg`}
+                  src="icons/social/icon-social-youtube.svg"
                   alt="Youtube link"
                 />
               </a>
               <a href="/">
                 <img
-                  src={`icons/social/icon-social-spotify.svg`}
+                  src="icons/social/icon-social-spotify.svg"
                   alt="Spotify link"
                 />
               </a>
@@ -91,7 +106,7 @@ export const Footer = () => {
 
       {/* Footer tablet/desktop */}
       <div className="footer__desktop">
-        <Pagefold isInheriting={true} isAContainer={true} size="medium">
+        <Pagefold isInheriting isAContainer size="medium">
           <div className="footer__column-wrapper">
             <div className="footer__column">
               <h3 className="text-header-h4 mb-16">Åbningstider</h3>
@@ -101,15 +116,12 @@ export const Footer = () => {
                   quia non numquam eius modi tempora incidunt ut labore.
                 </p>
                 <div className="footer__column-link">
-                  <Links
-                    href={"/"}
-                    linkText={"Se bibliotekernes åbningstider"}
-                  />
+                  <Links href="/" linkText="Se bibliotekernes åbningstider" />
                 </div>
               </div>
             </div>
             <FooterColumn
-              title={"Om bibliotekerne"}
+              title="Om bibliotekerne"
               links={[
                 "Brug af bibliotekerne",
                 "Erstatninger og gebyrer",
@@ -122,7 +134,7 @@ export const Footer = () => {
               ]}
             />
             <FooterColumn
-              title={"Online tilbud"}
+              title="Online tilbud"
               links={[
                 "Litteratursiden",
                 "Bibliotek.dk",
@@ -144,11 +156,11 @@ export const Footer = () => {
                 Man - fre / Kl. 10-16 <br />
               </p>
               <div className="footer__column-link">
-                <Links href={"/"} linkText={"info@ltk.dk"} />
+                <Links href="/" linkText="info@ltk.dk" />
               </div>
             </div>
             <FooterColumn
-              title={"Text"}
+              title="Text"
               links={[
                 "Lorem ipsum a la lorem ip",
                 "Bibliotekerne lorem",
@@ -157,7 +169,7 @@ export const Footer = () => {
               ]}
             />
             <FooterColumn
-              title={"Text"}
+              title="Text"
               links={[
                 "Lorem ipsum a la lorem ip",
                 "Bibliotekerne lorem",
@@ -166,7 +178,7 @@ export const Footer = () => {
               ]}
             />
             <FooterColumn
-              title={"Text"}
+              title="Text"
               links={[
                 "Lorem ipsum a la lorem ip",
                 "Bibliotekerne lorem",
@@ -182,34 +194,34 @@ export const Footer = () => {
               ariaLabel="dropdown"
               arrowIcon="triangles"
             />
-            <Logo fallback={false} libraryName={""} altText={"logo"} />
+            <Logo fallback={false} libraryName="" altText="logo" />
           </div>
 
-          <div className="footer__separator"></div>
+          <div className="footer__separator" />
 
           <div className="footer__site-info">
             <div className="footer__site-info-icons">
               <a href="/">
                 <img
-                  src={`icons/social/icon-social-facebook.svg`}
+                  src="icons/social/icon-social-facebook.svg"
                   alt="Facebook link"
                 />
               </a>
               <a href="/">
                 <img
-                  src={`icons/social/icon-social-instagram.svg`}
+                  src="icons/social/icon-social-instagram.svg"
                   alt="Instagram link"
                 />
               </a>
               <a href="/">
                 <img
-                  src={`icons/social/icon-social-youtube.svg`}
+                  src="icons/social/icon-social-youtube.svg"
                   alt="Youtube link"
                 />
               </a>
               <a href="/">
                 <img
-                  src={`icons/social/icon-social-spotify.svg`}
+                  src="icons/social/icon-social-spotify.svg"
                   alt="Spotify link"
                 />
               </a>
@@ -235,17 +247,4 @@ export const Footer = () => {
   );
 };
 
-const dropdownList = [
-  {
-    title: "DK",
-    href: "/",
-  },
-  {
-    title: "SEK",
-    href: "/",
-  },
-  {
-    title: "ENG",
-    href: "/",
-  },
-];
+export default Footer;

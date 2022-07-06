@@ -1,5 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
 import { SearchResultItem } from "./SearchResultItem";
 
 export default {
@@ -9,8 +10,7 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4557%3A15899",
+      url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4557%3A15899",
     },
   },
   argTypes: {

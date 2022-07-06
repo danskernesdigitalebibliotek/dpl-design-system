@@ -50,36 +50,34 @@ const Template: ComponentStory<typeof AutosuggestMaterial> = (
   // context. AutosuggestMaterial style is directly dependent on the header,
   // search field, and AutosuggestText styling.
   // If you find out this context no longer represents reality, please adjust it.
-  <>
-    <header className="header" style={{ height: "144px" }}>
-      <div className="header__logo-desktop">
+  <header className="header" style={{ height: "144px" }}>
+    <div className="header__logo-desktop">
+      <p className="text-body-medium-regular">Context</p>
+    </div>
+    <div className="header__menu">
+      <nav className="header__menu-first">
         <p className="text-body-medium-regular">Context</p>
-      </div>
-      <div className="header__menu">
-        <nav className="header__menu-first">
-          <p className="text-body-medium-regular">Context</p>
-        </nav>
-        <div className="header__menu-second">
-          <div className="header__menu-search">
-            <input
-              className="header__menu-search-input text-body-medium-regular"
-              type="text"
-              placeholder="This field is here just for context."
-            />
-            <img
-              className="header__menu-search-icon"
-              src={`icons/basic/icon-search.svg`}
-              alt="search icon"
-            />
-            <AutosuggestMaterial {...args} />
-          </div>
+      </nav>
+      <div className="header__menu-second">
+        <div className="header__menu-search">
+          <input
+            className="header__menu-search-input text-body-medium-regular"
+            type="text"
+            placeholder="This field is here just for context."
+          />
+          <img
+            className="header__menu-search-icon"
+            src="icons/basic/icon-search.svg"
+            alt="search icon"
+          />
+          <AutosuggestMaterial {...args} />
         </div>
       </div>
-      <div className="header__clock">
-        <p className="text-body-medium-regular">Context</p>
-      </div>
-    </header>
-  </>
+    </div>
+    <div className="header__clock">
+      <p className="text-body-medium-regular">Context</p>
+    </div>
+  </header>
 );
 
 export const MaterialSuggestion = Template.bind({});

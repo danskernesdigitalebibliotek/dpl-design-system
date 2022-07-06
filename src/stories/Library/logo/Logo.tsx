@@ -21,3 +21,5 @@ export const Logo = (props: LogoProps) => {
     </div>
   );
 };
+
+export default Logo;

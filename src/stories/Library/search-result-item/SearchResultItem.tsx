@@ -1,3 +1,4 @@
+import React from "react";
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { Material } from "../material/Material";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";

@@ -9,6 +9,29 @@ export type HeaderProps = {
   inputPlaceholder: string;
 };
 
+const list = [
+  {
+    title: "Det sker",
+    href: "/",
+  },
+  {
+    title: "Biblioteker & åbningstider",
+    href: "/",
+  },
+  {
+    title: "Digitale tilbud",
+    href: "/",
+  },
+  {
+    title: "Litteratur",
+    href: "/",
+  },
+  {
+    title: "Børn & forældre",
+    href: "/",
+  },
+];
+
 export const Header = (props: HeaderProps) => {
   const { signedIn, haveNotification, username, inputPlaceholder } = props;
 
@@ -44,13 +67,13 @@ export const Header = (props: HeaderProps) => {
                   }}
                 >
                   <img
-                    src={`icons/basic/icon-menu.svg`}
+                    src="icons/basic/icon-menu.svg"
                     alt="List of bookmarks"
                   />
                 </Pagefold>
                 <div className="header__menu-navigation-logo">
                   <Logo
-                    fallback={true}
+                    fallback
                     libraryName="Lyngby-Taarbæk"
                     altText="Logo image of libary"
                   />
@@ -69,12 +92,12 @@ export const Header = (props: HeaderProps) => {
                 ))}
               </ul>
             </div>
-            <div className={`header__menu-profile header__button`}>
+            <div className="header__menu-profile header__button">
               <a href="/" className="hide-linkstyle">
                 {signedIn && haveNotification && (
                   <div className="header__notification bg-signal-alert" />
                 )}
-                <img src={`icons/basic/icon-profile.svg`} alt="Profile" />
+                <img src="icons/basic/icon-profile.svg" alt="Profile" />
                 {signedIn && (
                   <span className="text-small-caption">{username}</span>
                 )}
@@ -82,10 +105,7 @@ export const Header = (props: HeaderProps) => {
             </div>
             <div className="header__menu-bookmarked header__button">
               <a href="/">
-                <img
-                  src={`icons/basic/icon-heart.svg`}
-                  alt="List of bookmarks"
-                />
+                <img src="icons/basic/icon-heart.svg" alt="List of bookmarks" />
               </a>
             </div>
           </nav>
@@ -99,7 +119,7 @@ export const Header = (props: HeaderProps) => {
                 />
                 <img
                   className="header__menu-search-icon"
-                  src={`icons/basic/icon-search.svg`}
+                  src="icons/basic/icon-search.svg"
                   alt="search icon"
                 />
               </form>
@@ -111,7 +131,7 @@ export const Header = (props: HeaderProps) => {
           <Pagefold isInheriting={false} isAContainer={false} size="medium" />
           <div className="header__clock-items">
             <img
-              src={`icons/basic/icon-watch-static.svg`}
+              src="icons/basic/icon-watch-static.svg"
               className="mb-8"
               alt="clock icon"
             />
@@ -124,7 +144,7 @@ export const Header = (props: HeaderProps) => {
         <div className="header__overlay-main">
           <img
             id="header__menu--close"
-            src={`icons/basic/icon-cross-medium.svg`}
+            src="icons/basic/icon-cross-medium.svg"
           />
           <ul className="header__overlay-menu">
             {list.map((i) => (
@@ -144,29 +164,6 @@ export const Header = (props: HeaderProps) => {
     </div>
   );
 };
-
-const list = [
-  {
-    title: "Det sker",
-    href: "/",
-  },
-  {
-    title: "Biblioteker & åbningstider",
-    href: "/",
-  },
-  {
-    title: "Digitale tilbud",
-    href: "/",
-  },
-  {
-    title: "Litteratur",
-    href: "/",
-  },
-  {
-    title: "Børn & forældre",
-    href: "/",
-  },
-];
 
 declare global {
   interface Window {
