@@ -20,6 +20,9 @@ export default {
     author: {
       control: { type: "text" },
     },
+    periodikum: {
+      control: { type: "boolean" },
+    },
   },
 } as ComponentMeta<typeof MaterialApp>;
 
