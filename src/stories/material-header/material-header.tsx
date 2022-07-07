@@ -4,10 +4,12 @@ import { ButtonFavourite } from "../button-favourite/ButtonFavourite";
 import { Button } from "../button/Button";
 import { Material } from "../material/Material";
 import MaterialHeaderText from "./material-header-text";
+import MaterialPeriodikumSelect from "./material-periodikum-select";
 
 interface MaterialHeaderProps {
   title: string;
   author: string;
+  periodikum?: boolean;
 }
 
 const MaterialHeader: React.FC<MaterialHeaderProps> = ({
@@ -34,7 +36,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
         {periodikum && <MaterialPeriodikumSelect />}
         <div className="material-header__button">
           <Button
-            label="RESERVER BOG"
+            label={periodikum ? "RESERVER MAGASIN" : "RESERVER BOG"}
             buttonType="none"
             variant="filled"
             disabled={false}

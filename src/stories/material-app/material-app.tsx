@@ -5,6 +5,7 @@ import MaterialHeader from "../material-header/material-header";
 export interface MaterialAppProps {
   title: string;
   author: string;
+  periodikum?: boolean;
 }
 
 const MaterialApp: React.FC<MaterialAppProps> = ({
@@ -14,7 +15,7 @@ const MaterialApp: React.FC<MaterialAppProps> = ({
 }) => {
   return (
     <div className="material-app">
-      <MaterialHeader title={title} author={author} />
+      <MaterialHeader title={title} author={author} periodikum={periodikum} />
     </div>
   );
 };
