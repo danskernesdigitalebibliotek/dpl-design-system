@@ -9,6 +9,17 @@ $s-80: 80;
 $s-96: 96;
 $s-112: 112;
 
+$s-xs: 4px;
+$s-sm: 8px;
+$s-md: 16px;
+$s-lg: 24px;
+$s-xl: 32px;
+$s-2xl: 44px;
+$s-3xl: 60px;
+$s-4xl: 80px;
+$s-5xl: 100px;
+$s-6xl: 112px;
+
 $spacers: ($s-4, $s-8, $s-16, $s-24, $s-32, $s-48, $s-64, $s-80, $s-96, $s-112);
 
 @each $space in $spacers {
