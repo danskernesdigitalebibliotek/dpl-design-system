@@ -30,13 +30,19 @@ export default {
       control: { type: "text" },
       defaultValue: "2018",
     },
-    seriesNumber: {
-      control: { type: "text" },
-      defaultValue: "3",
-    },
-    series: {
-      control: { type: "text" },
-      defaultValue: "Små mennesker, store drømme",
+
+    seriesLineData: {
+      control: { type: "object" },
+      defaultValue: {
+        title: "Nr. 3",
+        subTitle: "i serien",
+        linkList: [
+          {
+            text: "Små mennesker, store drømme",
+            url: "/",
+          },
+        ],
+      },
     },
   },
 } as ComponentMeta<typeof SearchResultItem>;

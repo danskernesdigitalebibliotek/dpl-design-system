@@ -1,0 +1,15 @@
+.material-series-line {
+  display: flex;
+  align-items: center;
+  gap: $s-sm;
+
+  // Set all text to the same font size even if other text classes have been used.
+  * {
+    font-size: 12px;
+  }
+
+  &__list {
+    display: flex;
+    gap: $s-sm;
+  }
+}

@@ -1,0 +1,17 @@
+.material-description {
+  max-width: 750px;
+  padding: $s-md;
+  padding-top: $s-3xl;
+  padding-bottom: $s-2xl;
+
+  @include breakpoint-m {
+    padding-top: $s-4xl;
+    padding-left: $s-6xl;
+    padding-bottom: $s-5xl;
+  }
+
+  // spacing between the description links
+  &__links > * + * {
+    margin-top: $s-md;
+  }
+}

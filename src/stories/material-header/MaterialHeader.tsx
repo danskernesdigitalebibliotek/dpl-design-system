@@ -3,8 +3,8 @@ import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { ButtonFavourite } from "../button-favourite/ButtonFavourite";
 import { Button } from "../button/Button";
 import { Material } from "../material/Material";
-import MaterialHeaderText from "./material-header-text";
-import MaterialPeriodikumSelect from "./material-periodikum-select";
+import MaterialHeaderText from "./MaterialHeaderText";
+import MaterialPeriodikumSelect from "./MaterialPeriodikumSelect";
 
 interface MaterialHeaderProps {
   title: string;

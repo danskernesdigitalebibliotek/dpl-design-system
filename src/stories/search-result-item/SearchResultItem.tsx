@@ -2,14 +2,16 @@ import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { Material } from "../material/Material";
 import { ReactComponent as ArrowSmallRight } from "../../icons/arrow-ui/icon-arrow-ui-small-right.svg";
 import { ButtonFavourite } from "../button-favourite/ButtonFavourite";
+import MaterialLink, {
+  SeriesLineProps,
+} from "../material-series-line/MaterialSeriesLine";
 
 export type SearchResultItemProps = {
   heartFill?: boolean;
   title: string;
   author: string;
   year: string;
-  seriesNumber?: string;
-  series?: string;
+  seriesLineData?: SeriesLineProps;
 };
 
 export const SearchResultItem = ({
@@ -17,8 +19,7 @@ export const SearchResultItem = ({
   title,
   author,
   year,
-  seriesNumber,
-  series,
+  seriesLineData,
 }: SearchResultItemProps) => {
   return (
     <a href="/" className="search-result-item arrow arrow__hover--right-small">
@@ -33,21 +34,9 @@ export const SearchResultItem = ({
       <div className="search-result-item__text">
         <div className="search-result-item__meta">
           <ButtonFavourite fill={heartFill} />
-
-          {seriesNumber && (
-            <div className="text-small-caption">
-              <span className="text-label-semibold">{`Nr. ${seriesNumber} `}</span>
-              {series && (
-                <>
-                  <span>i serien </span>
-                  <a href="/" className="link-tag">
-                    {series}
-                  </a>
-                </>
-              )}
-            </div>
-          )}
+          {seriesLineData && <MaterialLink {...seriesLineData} />}
         </div>
+
         <h2 className="search-result-item__title text-header-h4">{title}</h2>
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
       </div>
