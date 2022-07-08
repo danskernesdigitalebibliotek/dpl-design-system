@@ -7,10 +7,21 @@ export default {
   component: Disclosure,
   decorators: [withDesign],
   argTypes: {
-    open: {
-      name: "Open",
-      defaultValue: false,
-      control: { type: "boolean" }
+    headline: {
+      name: "Headline",
+      defaultValue: "Headline",
+      control: { type: "text" }
+    },
+    children: {
+      name: "Headline",
+      defaultValue: "I am the content. Look at me!",
+      control: { type: "text" }
+    },
+    icon: {
+      name: "Icon name",
+      defaultValue: "Various",
+      options: ['Various', 'Receipt', 'Create', 'Profile'],
+      control: { type: "select" }
     }
   },
   parameters: {
@@ -24,7 +35,6 @@ export default {
 
 const Template: ComponentStory<typeof Disclosure> = (args: DisclosureProps) => (
   <Disclosure {...args} />
-          
 );
 
 export const Defult = Template.bind({});
