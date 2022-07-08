@@ -26,7 +26,7 @@ export default {
     ctaText: {
       control: { type: "text" },
     },
-    materialDescription: {
+    description: {
       control: { type: "text" },
     },
   },
@@ -42,6 +42,6 @@ Item.args = {
   author: "James Joyce (2013)",
   periodikum: false,
   ctaText: "Vi har 8 eksemplarer og 21 står i kø",
-  materialDescription:
+  description:
     "Stormandssønnen Arn får hos cisterciensermunkene i Sverige og Danmark den bedste uddannelse, der findes i middelalderens Europa. Men hans lærere aner, at han ikke er bestemt til at være klosterbroder og vil gøre bedre fyldest som Kristi strids... ",
 };

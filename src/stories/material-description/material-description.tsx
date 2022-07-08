@@ -1,25 +1,7 @@
 import React from "react";
-import MaterialLink from "../material-link/material-link";
+import SeriesLine from "../material-series-line/material-series-line";
 
-interface MaterialDescriptionProps {
-  materialDescription?: string;
-}
-
-const MaterialDescription: React.FC<MaterialDescriptionProps> = ({
-  materialDescription,
-}) => {
-  return (
-    <section className="material-description">
-      <h2 className="text-header-h4 pb-24">Beskrivelse</h2>
-      <p className="text-body-large ">{materialDescription}</p>
-      <div className="material-description__links mt-32">{MaterialLinks}</div>
-    </section>
-  );
-};
-
-export default MaterialDescription;
-
-const MaterialLinks = [
+const seriesLines = [
   {
     title: "Nr. 3",
     subTitle: "i serien",
@@ -73,4 +55,22 @@ const MaterialLinks = [
       },
     ],
   },
-].map((item) => <MaterialLink {...item} />);
+].map((item) => <SeriesLine {...item} />);
+
+interface MaterialDescriptionProps {
+  description?: string;
+}
+
+const MaterialDescription: React.FC<MaterialDescriptionProps> = ({
+  description,
+}) => {
+  return (
+    <section className="material-description">
+      <h2 className="text-header-h4 pb-24">Beskrivelse</h2>
+      <p className="text-body-large ">{description}</p>
+      <div className="material-description__links mt-32">{seriesLines}</div>
+    </section>
+  );
+};
+
+export default MaterialDescription;

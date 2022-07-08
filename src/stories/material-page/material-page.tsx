@@ -8,7 +8,7 @@ export interface MaterialPageProps {
   author: string;
   periodikum?: boolean;
   ctaText?: string;
-  materialDescription?: string;
+  description?: string;
 }
 
 const MaterialPage: React.FC<MaterialPageProps> = ({
@@ -16,7 +16,7 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
   author,
   periodikum,
   ctaText,
-  materialDescription,
+  description,
 }) => {
   return (
     <div className="material-page">
@@ -26,7 +26,7 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
         periodikum={periodikum}
         ctaText={ctaText}
       />
-      <MaterialDescription materialDescription={materialDescription} />
+      <MaterialDescription description={description} />
     </div>
   );
 };
