@@ -11,7 +11,7 @@ export type SearchResultItemProps = {
   title: string;
   author: string;
   year: string;
-  materialLinkData?: SeriesLineProps;
+  seriesLineData?: SeriesLineProps;
 };
 
 export const SearchResultItem = ({
@@ -19,7 +19,7 @@ export const SearchResultItem = ({
   title,
   author,
   year,
-  materialLinkData,
+  seriesLineData,
 }: SearchResultItemProps) => {
   return (
     <a href="/" className="search-result-item arrow arrow__hover--right-small">
@@ -34,7 +34,7 @@ export const SearchResultItem = ({
       <div className="search-result-item__text">
         <div className="search-result-item__meta">
           <ButtonFavourite fill={heartFill} />
-          {materialLinkData && <MaterialLink {...materialLinkData} />}
+          {seriesLineData && <MaterialLink {...seriesLineData} />}
         </div>
 
         <h2 className="search-result-item__title text-header-h4">{title}</h2>

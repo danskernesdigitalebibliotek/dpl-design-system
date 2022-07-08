@@ -31,7 +31,7 @@ export default {
       defaultValue: "2018",
     },
 
-    materialLinkData: {
+    seriesLineData: {
       control: { type: "object" },
       defaultValue: {
         title: "Nr. 3",
