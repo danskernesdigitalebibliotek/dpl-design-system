@@ -1,48 +1,21 @@
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { Button } from "../button/Button";
+import DetailsList, { ListData } from "../details-list/DetailsList";
 import { Material } from "../material/Material";
 
 export type MaterialMainfestationItemProps = {
   title: string;
   author: string;
   year: string;
+  detailsData: ListData;
 };
 
-const DetailList: React.FC = () => {
-  type Values = {[k: string]: {value: string, type: "standard" | "link"}};
-  const detailsListValues: Values = {
-    Type: {value: "Bog", type: "standard"},
-    Sprog: {value: "Dansk", type: "standard"},
-    Bidragsydere: {value: "Karsten Sand Iversen", type: "link"},
-    Originaltitel: {value: "Ulysses (1922)", type: "standard"},
-    ISBN: {value: "9788763814584", type: "standard"},
-    Udgave: {value: "Udgave, 2. oplag (2015)", type: "standard"},
-    Omfang: {value: "795 sider", type: "standard"},
-    Forlag: {value: "Rosinante", type: "standard"},
-    Målgruppe: {value: "Voksenmateriale", type: "standard"},
-  }
-  return (
-    <dl>
-      {Object.keys(detailsListValues).map((key, i) => {
-        const {value, type} =  detailsListValues[key as keyof Values];
-        return (
-          <>
-            <dt>{key}:</dt>
-            <dd>
-              {type === "standard" && value}
-              {type === "link" && <span className="link-tag">{value}</span>}
-            </dd>
-          </>
-        );
-      })}
-    </dl>
-  )
-};
 
 export const MaterialMainfestationItem = ({
   title,
   author,
   year,
+  detailsData
 }: MaterialMainfestationItemProps) => {
   return (
     <div className="material-manifestation-item">
@@ -71,9 +44,7 @@ export const MaterialMainfestationItem = ({
           <p className="link-tag text-small-caption">Detaljer om materialet </p>
           <img src="icons/collection/ExpandMore.svg" alt="ExpandMore" />
         </div>
-        <div className="details-list mt-24">
-          <DetailList />
-          </div>
+        <DetailsList className="mt-24" data={detailsData} />
       </div>
 
       <div className="material-manifestation-item__reserve">
