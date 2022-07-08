@@ -1,5 +1,5 @@
 import React from "react";
-import SeriesLine from "../material-series-line/material-series-line";
+import SeriesLine from "../material-series-line/MaterialSeriesLine";
 
 const seriesLines = [
   {

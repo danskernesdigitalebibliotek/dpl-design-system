@@ -4,7 +4,7 @@ import { ReactComponent as ArrowSmallRight } from "../../icons/arrow-ui/icon-arr
 import { ButtonFavourite } from "../button-favourite/ButtonFavourite";
 import MaterialLink, {
   SeriesLineProps,
-} from "../material-series-line/material-series-line";
+} from "../material-series-line/MaterialSeriesLine";
 
 export type SearchResultItemProps = {
   heartFill?: boolean;

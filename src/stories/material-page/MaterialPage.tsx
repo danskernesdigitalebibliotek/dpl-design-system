@@ -1,7 +1,7 @@
 import React from "react";
-import MaterialDescription from "../material-description/material-description";
+import MaterialDescription from "../material-description/MaterialDescription";
 
-import MaterialHeader from "../material-header/material-header";
+import MaterialHeader from "../material-header/MaterialHeader";
 
 export interface MaterialPageProps {
   title: string;

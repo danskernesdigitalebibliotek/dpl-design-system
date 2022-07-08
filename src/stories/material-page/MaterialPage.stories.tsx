@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import MaterialPage from "./material-page";
+import MaterialPage from "./MaterialPage";
 
 export default {
   title: "Components / Material Page",
