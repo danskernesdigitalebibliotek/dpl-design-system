@@ -1,7 +1,7 @@
 import React from "react";
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
-import { ButtonFavourite } from "../button-favourite/ButtonFavourite";
-import { Button } from "../button/Button";
+import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
+import { Button } from "../Buttons/button/Button";
 import { Material } from "../material/Material";
 import MaterialHeaderText from "./MaterialHeaderText";
 import MaterialPeriodikumSelect from "./MaterialPeriodikumSelect";
