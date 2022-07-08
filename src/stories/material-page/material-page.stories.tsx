@@ -1,10 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import MaterialApp from "./material-app";
+import MaterialPage from "./material-page";
 
 export default {
-  title: "Components / Material App",
-  component: MaterialApp,
+  title: "Components / Material Page",
+  component: MaterialPage,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -30,10 +30,10 @@ export default {
       control: { type: "text" },
     },
   },
-} as ComponentMeta<typeof MaterialApp>;
+} as ComponentMeta<typeof MaterialPage>;
 
-const Template: ComponentStory<typeof MaterialApp> = (args) => {
-  return <MaterialApp {...args} />;
+const Template: ComponentStory<typeof MaterialPage> = (args) => {
+  return <MaterialPage {...args} />;
 };
 
 export const Item = Template.bind({});

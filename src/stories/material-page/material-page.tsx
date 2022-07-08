@@ -3,7 +3,7 @@ import MaterialDescription from "../material-description/material-description";
 
 import MaterialHeader from "../material-header/material-header";
 
-export interface MaterialAppProps {
+export interface MaterialPageProps {
   title: string;
   author: string;
   periodikum?: boolean;
@@ -11,7 +11,7 @@ export interface MaterialAppProps {
   materialDescription?: string;
 }
 
-const MaterialApp: React.FC<MaterialAppProps> = ({
+const MaterialPage: React.FC<MaterialPageProps> = ({
   title,
   author,
   periodikum,
@@ -19,7 +19,7 @@ const MaterialApp: React.FC<MaterialAppProps> = ({
   materialDescription,
 }) => {
   return (
-    <div className="material-app">
+    <div className="material-page">
       <MaterialHeader
         title={title}
         author={author}
@@ -31,4 +31,4 @@ const MaterialApp: React.FC<MaterialAppProps> = ({
   );
 };
 
-export default MaterialApp;
+export default MaterialPage;
