@@ -1,4 +1,5 @@
 import React from "react";
+import MaterialDescription from "../material-description/material-description";
 
 import MaterialHeader from "../material-header/material-header";
 
@@ -7,6 +8,7 @@ export interface MaterialAppProps {
   author: string;
   periodikum?: boolean;
   ctaText?: string;
+  materialDescription?: string;
 }
 
 const MaterialApp: React.FC<MaterialAppProps> = ({
@@ -14,6 +16,7 @@ const MaterialApp: React.FC<MaterialAppProps> = ({
   author,
   periodikum,
   ctaText,
+  materialDescription,
 }) => {
   return (
     <div className="material-app">
@@ -23,6 +26,7 @@ const MaterialApp: React.FC<MaterialAppProps> = ({
         periodikum={periodikum}
         ctaText={ctaText}
       />
+      <MaterialDescription materialDescription={materialDescription} />
     </div>
   );
 };
