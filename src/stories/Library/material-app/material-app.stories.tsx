@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import MaterialPage from "./MaterialPage";
+import MaterialPage from "../material-page/MaterialPage";
 
 export default {
   title: "Components / Material Page",
@@ -9,8 +9,7 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=416%3A12503",
+      url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=416%3A12503",
     },
   },
   argTypes: {

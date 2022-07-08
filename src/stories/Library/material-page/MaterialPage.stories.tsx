@@ -3,14 +3,13 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import MaterialPage from "./MaterialPage";
 
 export default {
-  title: "Components / Material Page",
+  title: "Library / Material Page",
   component: MaterialPage,
   decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=416%3A12503",
+      url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=416%3A12503",
     },
   },
   argTypes: {
