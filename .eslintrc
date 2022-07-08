@@ -57,26 +57,6 @@
   "overrides": [
     {
       "files": [
-        "*.js",
-        "*.jsx"
-      ],
-      "rules": {
-        // These rules were triggered on the former non-typescript codebase.
-        // We are planning to use only ts/tsx in the future
-        // Therefor we can seperate them by only being ignored on js/jsx files.
-        // Start - ddb-react former code
-        "react/jsx-no-bind": "off",
-        "react/function-component-definition": "off",
-        "react/forbid-prop-types": "off",
-        "react/destructuring-assignment": "off",
-        "@typescript-eslint/return-await": "off",
-        "no-param-reassign": "off",
-        "@typescript-eslint/no-var-requires": "off"
-        // End - ddb-react former code
-      }
-    },
-    {
-      "files": [
         "*.tsx"
       ],
       "rules": {
