@@ -3,15 +3,15 @@ import { Material } from "../material/Material";
 import { ReactComponent as ArrowSmallRight } from "../../icons/arrow-ui/icon-arrow-ui-small-right.svg";
 import { ButtonFavourite } from "../button-favourite/ButtonFavourite";
 import MaterialLink, {
-  MaterialLinkProps,
-} from "../material-link/material-link";
+  SeriesLineProps,
+} from "../material-series-line/material-series-line";
 
 export type SearchResultItemProps = {
   heartFill?: boolean;
   title: string;
   author: string;
   year: string;
-  materialLinkData?: MaterialLinkProps;
+  materialLinkData?: SeriesLineProps;
 };
 
 export const SearchResultItem = ({
