@@ -1,8 +1,8 @@
 export type ListData = {[k: string]: {value: string, type: "standard" | "link"}};
 
-const DetailsList: React.FC<{data: ListData, className?: string}> = ({ data, className }) => {
+const ListDescription: React.FC<{data: ListData, className?: string}> = ({ data, className }) => {
   return (
-    <dl className={`details-list ${className ?? ""}`}>
+    <dl className={`list-description ${className ?? ""}`}>
       {Object.keys(data).map((key, i) => {
         const {value, type} =  data[key as keyof ListData];
         return (
@@ -19,4 +19,4 @@ const DetailsList: React.FC<{data: ListData, className?: string}> = ({ data, cla
   )
 };
 
-export default DetailsList;
+export default ListDescription;
