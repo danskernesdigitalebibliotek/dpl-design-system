@@ -1,7 +1,7 @@
-import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
-import { Button } from "../button/Button";
-import DetailsList, { ListData } from "../details-list/DetailsList";
-import { Material } from "../material/Material";
+import { AvailabilityLabel } from "../../Library/availability-label/AvailabilityLabel";
+import { Button } from "../../Library/Buttons/button/Button";
+import DetailsList, { ListData } from "../../Library/details-list/DetailsList";
+import { Material } from "../../Library/material/Material";
 
 export type MaterialMainfestationItemProps = {
   title: string;
