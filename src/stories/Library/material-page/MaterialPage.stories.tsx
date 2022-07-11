@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import MaterialPage from "./MaterialPage";
 
 export default {
-  title: "Library / Material Page",
+  title: "Blocks / Material Page",
   component: MaterialPage,
   decorators: [withDesign],
   parameters: {
