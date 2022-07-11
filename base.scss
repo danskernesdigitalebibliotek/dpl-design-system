@@ -33,6 +33,7 @@
 @import "./src/stories/Library/search-result-item/search-result-item";
 @import "./src/stories/Library/Lists/list-reservation/list-reservation";
 @import "./src/stories/Library/Lists/list-dashboard/list-dashboard";
+@import "./src/stories/Library/Lists/list-description/list-description";
 @import "./src/stories/Library/Lists/list-details/list-details";
 @import "./src/stories/Library/Lists/list-materials/list-materials";
 @import "./src/stories/Library/accordion/accordion";
@@ -43,14 +44,13 @@
 @import "./src/stories/Library/Modals/modal-text/modal-text";
 @import "./src/stories/Library/Modals/modal-pause/modal-pause";
 
-@import "./src/stories/Blocks/material-manifestation-item/material-manifestation-item";
-@import "./src/stories/Library/Lists/list-description/list-description";
 
 // Blocks
 @import "./src/stories/Blocks/footer/footer";
 @import "./src/stories/Blocks/header/header";
 @import "./src/stories/Blocks/material-banner/material-banner";
 @import "./src/stories/Blocks/status-loans/status-loans";
+@import "./src/stories/Blocks/material-manifestation-item/material-manifestation-item";
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";
