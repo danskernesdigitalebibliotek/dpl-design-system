@@ -13,6 +13,7 @@
   - [Development](#development)
     - [Development without docker](#development-without-docker)
   - [Usage](#usage)
+    - [NPM package](#npm-package)
   - [Deployment](#deployment)
   - [Storybook](#storybook)
   - [Chromatic](#chromatic)
@@ -200,12 +201,25 @@ things like fine-tune responsive layouts or verify accessibility.
 #### How to use
 
 The Storybook interface is simple and intuitive to use. Browse the project's
-stories now by navigating to them in the sidebar. The stories are divided into
-"Components" and "Atoms" where atoms are the smaller building blocks that can be
-used to build bigger components. Each Atom/Component has a corresponding
-`.stories` file. View their code in the `src/stories` directory to learn how
-they work. The `stories` file is used to add the component to the Storybook
-interface.
+stories now by navigating to them in the sidebar.
+
+The stories are placed in a flat structure, where developers should not spend
+time thinking of structure, since we want to keep all parts of the system under
+a heading called Library. This Library is then dividid in folders where common
+parts are kept together.
+
+To expose to the user how we think these parts stitch together for example
+for the new website, we have a heading called Blocks, to resemble what cms
+blocks a user can expect to find when building pages in the choosen CMS.
+
+This could replicate in to mobile applications, newsletters etc. all pulling
+parts from the Library.
+
+Each story has a corresponding `.stories` file. View their code in the
+`src/stories` directory to learn how they work.
+The `stories` file is used to add the component to the Storybook interface via
+the title. Start the title with "Library" or "Blocks" and use / to
+divide into folders fx. `Library / Buttons / Button`
 
 #### Addons
 
