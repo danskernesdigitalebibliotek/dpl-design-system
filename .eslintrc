@@ -85,7 +85,9 @@
         "global-require": "off",
         "jsx-a11y/no-static-element-interactions": "off",
         "react/jsx-props-no-spreading": "off",
-        "jsx-a11y/label-has-associated-control": "off"
+        "jsx-a11y/label-has-associated-control": "off",
+        // We do not need return types on react components.
+        "@typescript-eslint/explicit-module-boundary-types": "off"
       }
     },
     {
@@ -96,7 +98,7 @@
       ],
       "rules": {
         // We need a simple way of passing args in stories via object spreading.
-        "react/jsx-props-no-spreading": "off",
+        "react/jsx-props-no-spreading": "off"
       }
     },
     {
