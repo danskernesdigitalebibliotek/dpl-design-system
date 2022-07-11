@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora&family=Noto+Sans+JP:wght@400;500&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora&family=Noto+Sans+JP:wght@400;500&display=swap";
 
 // styleName: Desktop/H1;
 .text-header-h1 {
-  font-family: "Lora", serif;
+  font-family: Lora, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -24,7 +24,7 @@
 
 //styleName: Desktop/H2;
 .text-header-h2 {
-  font-family: "Lora", serif;
+  font-family: Lora, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -46,7 +46,7 @@
 
 //styleName: Desktop/H3;
 .text-header-h3 {
-  font-family: "Lora", serif;
+  font-family: Lora, serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -68,7 +68,7 @@
 
 //styleName: Desktop/H4;
 .text-header-h4 {
-  font-family: "Lora", serif;
+  font-family: Lora, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -90,7 +90,7 @@
 
 //styleName: Desktop/H5;
 .text-header-h5 {
-  font-family: "Lora", serif;
+  font-family: Lora, serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
