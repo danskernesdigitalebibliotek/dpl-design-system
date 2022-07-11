@@ -23,7 +23,6 @@ export const MaterialBanner: React.FC<MaterialBannerProps> = ({
   title,
   body,
   linkFilters,
-  button,
   cards,
   showBodyText,
   showLinkfilters,

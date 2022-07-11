@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
-import { ButtonUI } from "../../Buttons/button-ui/ButtonUI";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
 
