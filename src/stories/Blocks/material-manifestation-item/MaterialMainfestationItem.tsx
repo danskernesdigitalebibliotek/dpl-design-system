@@ -1,6 +1,8 @@
 import { AvailabilityLabel } from "../../Library/availability-label/AvailabilityLabel";
 import { Button } from "../../Library/Buttons/button/Button";
-import ListDescription, { ListData } from "../../Library/Lists/list-description/ListDescription";
+import ListDescription, {
+  ListData,
+} from "../../Library/Lists/list-description/ListDescription";
 import { Material } from "../../Library/material/Material";
 
 export type MaterialMainfestationItemProps = {
@@ -10,12 +12,11 @@ export type MaterialMainfestationItemProps = {
   detailsData: ListData;
 };
 
-
 export const MaterialMainfestationItem = ({
   title,
   author,
   year,
-  detailsData
+  detailsData,
 }: MaterialMainfestationItemProps) => {
   return (
     <div className="material-manifestation-item">

@@ -1,11 +1,11 @@
-import { Button } from "../button/Button";
+import { Button } from "../Buttons/button/Button";
 
 interface SearchResultPagerProps {
   currentResults: string;
   totalResults: string;
 }
 
-export const SearchResultPager = ({
+const SearchResultPager = ({
   currentResults,
   totalResults,
 }: SearchResultPagerProps) => {
@@ -15,16 +15,16 @@ export const SearchResultPager = ({
         {`Viser ${currentResults} ud af ${totalResults} resultater`}
       </p>
       <Button
-        label={"VIS FLERE"}
+        label="VIS FLERE"
         disabled={false}
-        buttonType={"none"}
+        buttonType="none"
         collapsible={false}
-        size={"medium"}
-        variant={"outline"}
-        onClick={() => {
-          console.log("onClick");
-        }}
+        size="medium"
+        variant="outline"
+        onClick={() => console.log("onClick")}
       />
     </div>
   );
 };
+
+export default SearchResultPager;

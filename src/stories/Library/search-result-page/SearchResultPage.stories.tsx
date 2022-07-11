@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { SearchResultPage } from "./SearchResultPage";
 
 export default {
-  title: "Components / Search Result Page",
+  title: "Blocks / Search Result Page",
   component: SearchResultPage,
   decorators: [withDesign],
   parameters: {

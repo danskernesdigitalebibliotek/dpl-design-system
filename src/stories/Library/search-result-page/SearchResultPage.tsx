@@ -1,8 +1,8 @@
-import { SearchResultInfo } from "../search-result-info/SearchResultInfo";
 import { SearchResultItem } from "../search-result-item/SearchResultItem";
-import { SearchResultPager } from "../search-result-pager/SearchResultPager";
-import { SearchResultTitle } from "../search-result-title/SearchResultTitle";
-import { SearchResultZero } from "../search-result-zero/SearchResultZero";
+import { SearchResultInfo } from "./SearchResultInfo";
+import SearchResultPager from "./SearchResultPager";
+import { SearchResultTitle } from "./SearchResultTitle";
+import { SearchResultZero } from "./SearchResultZero";
 
 export type SearchResultPageProps = {
   title: string;
