@@ -1,5 +1,3 @@
-import React from "react";
-
 export type DropdownItem = {
   title: string;
   href: string;

@@ -1,5 +1,3 @@
-import React from "react";
-
 const typographyClasses = [
   {
     className: "text-header-h1",

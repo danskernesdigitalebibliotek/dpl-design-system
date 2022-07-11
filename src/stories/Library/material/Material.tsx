@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import React from "react";
 
 export type MaterialProps = {
   url: string;

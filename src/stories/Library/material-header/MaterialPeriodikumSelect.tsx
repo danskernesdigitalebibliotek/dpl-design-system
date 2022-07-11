@@ -1,5 +1,3 @@
-import React from "react";
-
 const MaterialPeriodikumSelect: React.FC = () => {
   const placeholderData = {
     year: ["2017", "2018", "2019", "2020", "2021", "2022"],

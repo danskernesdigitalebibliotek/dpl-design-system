@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import React from "react";
+
 import { ModalPause } from "./ModalPause";
 
 export default {

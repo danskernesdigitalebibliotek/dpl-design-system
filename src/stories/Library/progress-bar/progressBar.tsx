@@ -1,5 +1,3 @@
-import React from "react";
-
 export type ProgressBarProps = {
   amount: number;
   fullAmount: number;
@@ -20,10 +18,7 @@ export const ProgressBar = (props: ProgressBarProps) => {
         </div>
       </div>
       <div className="dpl-progress-bar__progress-bar bg-global-secondary">
-        <div
-          className="bg-identity-primary"
-          style={{ width: `${width}%` }}
-        ></div>
+        <div className="bg-identity-primary" style={{ width: `${width}%` }} />
       </div>
     </div>
   );

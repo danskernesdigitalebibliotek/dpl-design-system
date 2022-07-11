@@ -1,4 +1,3 @@
-import React from "react";
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 

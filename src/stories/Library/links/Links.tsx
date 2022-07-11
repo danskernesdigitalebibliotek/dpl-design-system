@@ -1,5 +1,3 @@
-import React from "react";
-
 export type LinksProps = {
   href: string;
   linkText: string;

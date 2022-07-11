@@ -1,5 +1,3 @@
-import React from "react";
-
 const spaceClasses = [
   {
     classPrefix: "@media (min-width: 375px) {}",

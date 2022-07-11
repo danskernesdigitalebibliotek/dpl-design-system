@@ -1,5 +1,3 @@
-import React from "react";
-
 export type CounterProps = {
   value: number;
   percentage: number;

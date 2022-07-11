@@ -1,4 +1,3 @@
-import React from "react";
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
 import { Button } from "../Buttons/button/Button";

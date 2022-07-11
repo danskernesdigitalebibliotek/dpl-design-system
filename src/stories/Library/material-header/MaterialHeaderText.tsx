@@ -1,5 +1,3 @@
-import React from "react";
-
 interface MaterialHeaderTextProps {
   title: string;
   author: string;

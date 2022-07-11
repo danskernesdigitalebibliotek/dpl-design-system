@@ -1,5 +1,3 @@
-import React from "react";
-
 const scaleValues = [8, 16, 24, 32, 48, 64, 80, 96, 112];
 
 const spaceClasses = [
