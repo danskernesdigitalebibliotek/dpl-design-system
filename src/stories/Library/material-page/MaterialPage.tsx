@@ -1,4 +1,3 @@
-import React from "react";
 import MaterialDescription from "../material-description/MaterialDescription";
 
 import MaterialHeader from "../material-header/MaterialHeader";

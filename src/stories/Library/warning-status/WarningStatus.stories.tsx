@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import React from "react";
+
 import { WarningStatus } from "./WarningStatus";
 
 export default {

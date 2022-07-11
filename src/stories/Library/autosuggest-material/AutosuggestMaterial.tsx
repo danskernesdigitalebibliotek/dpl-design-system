@@ -1,4 +1,3 @@
-import React from "react";
 import { Material } from "../material/Material";
 
 export type AutosuggestMaterialProps = {

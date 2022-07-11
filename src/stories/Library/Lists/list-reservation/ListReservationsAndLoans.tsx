@@ -1,16 +1,9 @@
-<<<<<<< HEAD:src/stories/Library/Lists/list-reservation/ListReservationsAndLoans.tsx
 import { Counter, CounterProps } from "../../../Library/counter/Counter";
 import {
   StatusLabel,
   StatusLabelProps,
 } from "../../../Library/status-label/StatusLabel";
 import { Material } from "../../../Library/material/Material";
-=======
-import React from "react";
-import { Counter, CounterProps } from "../counter/Counter";
-import { StatusLabel, StatusLabelProps } from "../status-label/StatusLabel";
-import { Material } from "../material/Material";
->>>>>>> 6edef39 (Address eslint errors and adjust the eslintrc file to fit the repository):src/stories/list-reservation/ListReservationsAndLoans.tsx
 
 export type ListReservationsAndLoansProps = {
   material: {

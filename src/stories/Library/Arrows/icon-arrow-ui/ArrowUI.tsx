@@ -1,4 +1,3 @@
-import React from "react";
 import { InvalidProps } from "../../../../components/InvalidProps";
 
 // Imported as components

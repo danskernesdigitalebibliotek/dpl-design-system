@@ -1,4 +1,3 @@
-import React from "react";
 import { Links } from "../links/Links";
 
 export type LinkFilter = {

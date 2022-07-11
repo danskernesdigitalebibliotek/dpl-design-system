@@ -1,5 +1,3 @@
-import React from "react";
-
 export type NumberProps = {
   label: number;
   status: "danger" | "warning" | "info" | "neutral";

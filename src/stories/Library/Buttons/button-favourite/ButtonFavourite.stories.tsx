@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import React from "react";
+
 import { ButtonFavourite } from "./ButtonFavourite";
 
 export default {

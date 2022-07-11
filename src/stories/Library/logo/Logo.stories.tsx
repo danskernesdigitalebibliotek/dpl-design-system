@@ -1,4 +1,3 @@
-import React from "react";
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 import { Logo as LogoComp } from "./Logo";

@@ -1,4 +1,3 @@
-import React from "react";
 import { ProgressBar, ProgressBarProps } from "../progress-bar/progressBar";
 
 export type StatusProps = {
@@ -17,7 +16,7 @@ export const Status = (props: StatusProps) => {
           amount={amount}
           fullAmount={fullAmount}
           outOf={outOf}
-        ></ProgressBar>
+        />
       ))}
     </div>
   );

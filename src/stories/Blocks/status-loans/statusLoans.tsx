@@ -1,4 +1,3 @@
-import React from "react";
 import { Status, StatusProps } from "../../Library/status/status";
 
 export type LinkProps = {
@@ -28,7 +27,7 @@ export const StatusLoans = (props: StatusLoansProps) => {
       </div>
       <div className="dpl-status-loans__column">
         {statusBarsData.map(({ statusBars, title }) => (
-          <Status title={title} statusBars={statusBars}></Status>
+          <Status title={title} statusBars={statusBars} />
         ))}
       </div>
     </div>

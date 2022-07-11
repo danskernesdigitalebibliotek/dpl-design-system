@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 type AccordionRow = {
   header: string;
@@ -11,7 +11,7 @@ type AccordionProps = {
   list: AccordionRow[];
 };
 
-const Accordion: React.FC<AccordionProps> = ({ list }) => {
+export const Accordion: React.FC<AccordionProps> = ({ list }) => {
   useEffect(() => {
     /* eslint-disable-next-line global-require */
     require("./initaccordion");
@@ -55,4 +55,4 @@ declare global {
   }
 }
 
-export default Accordion;
+export default {};

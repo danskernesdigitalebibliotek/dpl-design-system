@@ -1,5 +1,3 @@
-import React from "react";
-
 export const IconWatch = () => {
   return (
     <div className="internal-container-grid">

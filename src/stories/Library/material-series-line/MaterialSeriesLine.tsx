@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface SeriesLineList {
   url: string;
   text: string;
