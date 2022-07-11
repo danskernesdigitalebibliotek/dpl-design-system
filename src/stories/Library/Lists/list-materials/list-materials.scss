@@ -44,8 +44,7 @@
 
 .list-materials__content-status {
   display: inline-flex;
-  grid-column-gap: 8px;
-  grid-row-gap: 8px;
+  gap: 8;
 
   @include breakpoint-s {
     display: flex;

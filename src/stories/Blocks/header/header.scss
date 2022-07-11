@@ -194,10 +194,13 @@
   }
 }
 
-#header__overlay.visible {
+// The kebab casing conflicts with our naming convention.
+#header__overlay.visible { /* stylelint-disable-line */
   display: grid;
 }
-#header__overlay {
+
+// The kebab casing conflicts with our naming convention.
+#header__overlay { /* stylelint-disable-line */
   display: none;
   z-index: 5;
   position: fixed;
@@ -230,7 +233,8 @@
   margin-bottom: 8px;
 }
 
-#header__menu--close {
+// The kebab casing conflicts with our naming convention.
+#header__menu--close { /* stylelint-disable-line */
   position: fixed;
   padding: 30px;
 }

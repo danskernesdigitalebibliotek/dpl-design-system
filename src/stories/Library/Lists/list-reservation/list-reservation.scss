@@ -10,7 +10,7 @@ $list-reservation-space-desktop: 24px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
   position: relative;
   padding: $list-reservation-space-mobile;
 
@@ -112,7 +112,7 @@ $list-reservation-space-desktop: 24px;
   bottom: 0;
   background-color: $c-text-primary-white;
   perspective: 500px;
-  box-shadow: 0 4px 20px rgba(72, 72, 72, 0.1);
+  box-shadow: 0 4px 20px rgb(72 72 72 / 10%);
 }
 
 .list-reservation--stacked {
