@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { Button } from "../Buttons/button/Button";
 import { Links } from "../links/Links";
 

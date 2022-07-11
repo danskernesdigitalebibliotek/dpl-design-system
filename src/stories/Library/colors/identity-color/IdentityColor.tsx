@@ -1,4 +1,7 @@
-import React, { useEffect } from "react";
+// There is something fundamentally wrong with the types in this file.
+// TODO: It needs to fixed!
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect } from "react";
 
 function hexToHSL(H: string) {
   // Convert hex to RGB first

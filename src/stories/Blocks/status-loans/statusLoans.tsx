@@ -15,7 +15,6 @@ export type StatusLoansProps = {
 export const StatusLoans = (props: StatusLoansProps) => {
   const { statusBarsData, title: statusBarsTitle, link, bread } = props;
   const { link: url, text: linkText } = link;
-  console.log(statusBarsData);
   return (
     <div className="dpl-status-loans">
       <h1 className="text-header-h1 m-8">{statusBarsTitle}</h1>
