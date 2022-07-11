@@ -2,7 +2,7 @@ import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 
 import { Accordion as AccordionComp } from "./Accordion";
-import { list } from "./accordionList";
+import list from "./accordionList";
 
 type AccordionProps = typeof AccordionComp;
 

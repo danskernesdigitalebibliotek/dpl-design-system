@@ -1,8 +1,5 @@
-import {
-  StatusLabel,
-  StatusLabelProps,
-} from "../../../Library/status-label/StatusLabel";
-import { Number, NumberProps } from "../../../Library/number/Number";
+import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
+import { Number, NumberProps } from "../../number/Number";
 
 export type ListDashboardProps = {
   title: string;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { Button } from "../../Library/Buttons/button/Button";
-import { Links } from "../../Library/links/Links";
+import { Button } from "../Buttons/button/Button";
+import { Links } from "../links/Links";
 
 export type WarningStatusProps = {
   title?: string;

@@ -1,7 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import {
-  ProgressBar as ProgressBarComp,
-} from "./progressBar";
+import { ProgressBar as ProgressBarComp } from "./progressBar";
 
 export default {
   title: "Library / Progress bar",
@@ -9,8 +7,7 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=1239%3A66855",
+      url: "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=1239%3A66855",
     },
     layout: "fullscreen",
   },

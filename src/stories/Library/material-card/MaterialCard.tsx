@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ButtonUI } from "../../Library/Buttons/button-ui/ButtonUI";
-import { Material, MaterialProps } from "../../Library/material/Material";
+import { ButtonUI } from "../Buttons/button-ui/ButtonUI";
+import { Material, MaterialProps } from "../material/Material";
 
 export type MaterialCardProps = {
   title: string;

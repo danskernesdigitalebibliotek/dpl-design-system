@@ -1,11 +1,10 @@
-import React from "react";
 import { Pagefold } from "../../Library/pagefold/Pagefold";
 import { Accordion } from "../../Library/accordion/Accordion";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
 import { Logo } from "../../Library/logo/Logo";
-import { list } from "../../Library/accordion/accordionList";
 import { Links } from "../../Library/links/Links";
 import { FooterColumn } from "./FooterColumn";
+import list from "../../Library/accordion/accordionList";
 
 const dropdownList = [
   {
