@@ -9,7 +9,7 @@ module.exports = {
     "@storybook/addon-a11y",
   ],
   typescript: {
-    check: false,
+    check: true,
     checkOptions: {},
     reactDocgen: "react-docgen-typescript",
     reactDocgenTypescriptOptions: {
