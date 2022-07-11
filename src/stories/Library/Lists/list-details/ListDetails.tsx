@@ -1,5 +1,5 @@
-import { Dropdown, DropdownProps } from "../../../Library/dropdown/Dropdown";
-import { Links } from "../../../Library/links/Links";
+import { Dropdown, DropdownProps } from "../../dropdown/Dropdown";
+import { Links } from "../../links/Links";
 
 export type ListDetailsProps = {
   title: string;

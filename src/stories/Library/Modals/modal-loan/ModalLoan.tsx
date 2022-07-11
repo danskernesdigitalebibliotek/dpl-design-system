@@ -8,7 +8,7 @@ import { LinkFilters } from "../../link-filters/LinkFilters";
 import {
   ListMaterials,
   ListMaterialsProps,
-} from "../..//Lists/list-materials/ListMaterials";
+} from "../../Lists/list-materials/ListMaterials";
 import { WarningStatus } from "../../warning-status/WarningStatus";
 
 type LoanMaterials = Array<{

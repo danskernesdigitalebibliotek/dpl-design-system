@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Checkbox } from "../../Forms/checkbox/Checkbox";
-import {
-  StatusLabel,
-  StatusLabelProps,
-} from "../../../Library/status-label/StatusLabel";
+import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
 
 export type ListMaterialsProps = {
   title: string;

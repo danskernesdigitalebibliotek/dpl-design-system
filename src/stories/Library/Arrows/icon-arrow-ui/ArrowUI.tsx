@@ -1,4 +1,4 @@
-import { InvalidProps } from "../../../../components/InvalidProps";
+import InvalidProps from "../../../../components/InvalidProps";
 
 // Imported as components
 import { ReactComponent as ArrowLargeLeft } from "./icon-arrow-ui-large-left.svg";

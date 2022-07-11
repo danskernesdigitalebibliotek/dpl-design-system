@@ -1,6 +1,6 @@
 import { Meta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { IconAccent as IconAccentComp } from "./ArrowAccent";
+import IconAccentComp from "./ArrowAccent";
 
 const StoryBase: Meta = {
   title: "Library / Arrows / Arrow Accent",

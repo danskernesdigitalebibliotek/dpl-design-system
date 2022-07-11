@@ -1,9 +1,6 @@
-import { Counter, CounterProps } from "../../../Library/counter/Counter";
-import {
-  StatusLabel,
-  StatusLabelProps,
-} from "../../../Library/status-label/StatusLabel";
-import { Material } from "../../../Library/material/Material";
+import { Counter, CounterProps } from "../../counter/Counter";
+import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
+import { Material } from "../../material/Material";
 
 export type ListReservationsAndLoansProps = {
   material: {

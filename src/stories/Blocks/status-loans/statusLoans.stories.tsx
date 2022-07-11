@@ -1,7 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import {
-  StatusLoans as StatusLoansComp,
-} from "./statusLoans";
+import { StatusLoans as StatusLoansComp } from "./statusLoans";
 
 export default {
   title: "Blocks / Userprofile / Status loans",
@@ -9,8 +7,7 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=1239%3A66855",
+      url: "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=1239%3A66855",
     },
   },
   argTypes: {
@@ -42,8 +39,7 @@ export default {
     link: {
       defaultValue: {
         text: "Se titler du altid kan låne",
-        link:
-          "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=1239%3A66855",
+        link: "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=1239%3A66855",
       },
     },
   },
