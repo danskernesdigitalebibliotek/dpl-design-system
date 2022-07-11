@@ -1,6 +1,6 @@
 import { AvailabilityLabel } from "../../Library/availability-label/AvailabilityLabel";
 import { Button } from "../../Library/Buttons/button/Button";
-import DetailsList, { ListData } from "../../Library/details-list/DetailsList";
+import ListDescription, { ListData } from "../../Library/Lists/list-description/ListDescription";
 import { Material } from "../../Library/material/Material";
 
 export type MaterialMainfestationItemProps = {
@@ -44,7 +44,7 @@ export const MaterialMainfestationItem = ({
           <p className="link-tag text-small-caption">Detaljer om materialet </p>
           <img src="icons/collection/ExpandMore.svg" alt="ExpandMore" />
         </div>
-        <DetailsList className="mt-24" data={detailsData} />
+        <ListDescription className="mt-24" data={detailsData} />
       </div>
 
       <div className="material-manifestation-item__reserve">

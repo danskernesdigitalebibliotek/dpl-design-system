@@ -1,10 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import DetailsList from "./DetailsList";
+import ListDescription from "./ListDescription";
 
 export default {
-  title: "Library / Details List",
-  component: DetailsList,
+  title: "Library / Lists / Description",
+  component: ListDescription,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -18,10 +18,10 @@ export default {
       control: { type: "object" },
     },
   },
-} as ComponentMeta<typeof DetailsList>;
+} as ComponentMeta<typeof ListDescription>;
 
-const Template: ComponentStory<typeof DetailsList> = (args) => {
-  return <DetailsList {...args} />;
+const Template: ComponentStory<typeof ListDescription> = (args) => {
+  return <ListDescription {...args} />;
 };
 
 export const Item = Template.bind({});
