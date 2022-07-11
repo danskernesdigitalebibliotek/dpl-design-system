@@ -1,10 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import DetailsList from "./DetailsList";
+import { MaterialMainfestationItem } from "./MaterialMainfestationItem";
 
 export default {
-  title: "Atoms / Details List",
-  component: DetailsList,
+  title: "Blocks / Material Manifestation Item",
+  component: MaterialMainfestationItem,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -14,19 +14,31 @@ export default {
     },
   },
   argTypes: {
-    data: {
+    title: {
+      control: { type: "text" },
+      defaultValue: "Audrey Hepburn",
+    },
+    author: {
+      control: { type: "text" },
+      defaultValue: "Sánchez Vegara, Amaia Arrazola",
+    },
+    year: {
+      control: { type: "text" },
+      defaultValue: "2018",
+    },
+    detailsData: {
       control: { type: "object" },
     },
   },
-} as ComponentMeta<typeof DetailsList>;
+} as ComponentMeta<typeof MaterialMainfestationItem>;
 
-const Template: ComponentStory<typeof DetailsList> = (args) => {
-  return <DetailsList {...args} />;
+const Template: ComponentStory<typeof MaterialMainfestationItem> = (args) => {
+  return <MaterialMainfestationItem {...args} />;
 };
 
 export const Item = Template.bind({});
 Item.args = {
-  data: {
+  detailsData: {
     Type: {value: "Bog", type: "standard"},
     Sprog: {value: "Dansk", type: "standard"},
     Bidragsydere: {value: "Karsten Sand Iversen", type: "link"},

@@ -1,41 +1,6 @@
 @import "./src/styles/scss/reset";
 @import "./src/stories/Library/colors/color-variables";
 
-// The imports below are not advised to be moved around, because
-// they cross-reference various defined variables between each other.
-<<<<<<< HEAD
-=======
-@import "./src/stories/breakpoints/breakpoints";
-@import "./src/stories/typography/typography";
-@import "./src/stories/links/links";
-@import "./src/stories/link-filters/link-filters";
-@import "./src/stories/arrows/arrows";
-@import "./src/stories/button/buttons";
-@import "./src/stories/button-ui/buttons-ui";
-@import "./src/stories/spacing/spacing";
-@import "./src/stories/tag/tag";
-@import "./src/stories/logo/logo";
-@import "./src/stories/details-list/details-list";
-@import "./src/stories/pagefold/pagefold";
-@import "./src/stories/accordion/accordion";
-@import "./src/stories/header/header";
-@import "./src/stories/dropdown/dropdown";
-@import "./src/stories/footer/footer";
-@import "./src/stories/breadcrumb/breadcrumb";
-@import "./src/stories/missing-story/missing-story";
-@import "./src/stories/warning-status/warning-status";
-@import "./src/stories/status-label/status-label";
-@import "./src/stories/number/number";
-@import "./src/stories/counter/counter";
-@import "./src/stories/checkbox/checkbox";
-@import "./src/stories/availability-label/availability-label";
-@import "./src/stories/search-result-item/search-result-item";
-@import "./src/stories/icon/icon-favourite/icon-favourite";
-@import "./src/stories/autosuggest-text/autosuggest-text";
-@import "./src/stories/button-favourite/button-favourite";
-@import "./src/stories/autosuggest-material/autosuggest-material";
->>>>>>> 9214f37 (Separate the details list)
-
 // Library
 @import "./src/stories/Library/breakpoints/breakpoints";
 @import "./src/stories/Library/typography/typography";
@@ -78,8 +43,8 @@
 @import "./src/stories/Library/Modals/modal-text/modal-text";
 @import "./src/stories/Library/Modals/modal-pause/modal-pause";
 
-@import "./src/stories/material-manifestation-item/material-manifestation-item";
-@import "./src/stories/list-details/list-details";
+@import "./src/stories/Blocks/material-manifestation-item/material-manifestation-item";
+@import "./src/stories/Library/details-list/details-list";
 
 // Blocks
 @import "./src/stories/Blocks/footer/footer";
