@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export type DisclosureProps = {
   headline: string;
   children: React.ReactNode | string;
