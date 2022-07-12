@@ -10,25 +10,24 @@ export default {
     headline: {
       name: "Headline",
       defaultValue: "Headline",
-      control: { type: "text" }
+      control: { type: "text" },
     },
     children: {
       name: "Headline",
       defaultValue: "I am the content. Look at me!",
-      control: { type: "text" }
+      control: { type: "text" },
     },
     icon: {
       name: "Icon name",
       defaultValue: "Various",
-      options: ['Various', 'Receipt', 'Create', 'Profile'],
-      control: { type: "select" }
-    }
+      options: ["Various", "Receipt", "Create", "Profile"],
+      control: { type: "select" },
+    },
   },
   parameters: {
     design: {
       type: "figma",
-      url:
-        "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=416%3A15008",
+      url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=416%3A15008",
     },
   },
 } as ComponentMeta<typeof Disclosure>;
