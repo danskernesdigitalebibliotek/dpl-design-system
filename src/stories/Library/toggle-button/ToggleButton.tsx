@@ -1,6 +1,5 @@
 type ToggleButtonProps = {
   isChecked: boolean;
-  label: string;
 };
 
 const ToggleButton = ({ isChecked }: ToggleButtonProps) => {
