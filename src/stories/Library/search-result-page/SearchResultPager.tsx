@@ -21,7 +21,6 @@ const SearchResultPager = ({
         collapsible={false}
         size="medium"
         variant="outline"
-        onClick={() => console.log("onClick")}
       />
     </div>
   );
