@@ -1,0 +1,33 @@
+.dpl-input {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    @extend .text-body-medium-medium;
+    color: $c-text-secondary-gray;
+  }
+  
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $c-global-tertiary-1;
+    height: 40px;
+
+    &:focus {
+      border-bottom-color: #000;
+      outline: none;
+    }
+  }
+
+  &__description {
+    color: $c-text-secondary-gray;
+    @extend .text-body-small-regular;
+    @extend .mt-8;
+  }
+
+  &__validation {
+    color: $c-signal-alert;
+    @extend .text-body-small-regular;
+    @extend .mt-8;
+  }
+}
