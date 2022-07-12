@@ -1,6 +1,16 @@
 import { Material } from "../material/Material";
 
-const ReservationHeader = () => {
+export type ReservationHeaderProps = {
+  author: string;
+  label: string;
+  title: string;
+};
+
+const ReservationHeader = ({
+  author,
+  label,
+  title,
+}: ReservationHeaderProps) => {
   return (
     <div className="dpl-reservation-header">
       <div className="dpl-reservation-header__material">
@@ -12,13 +22,9 @@ const ReservationHeader = () => {
         />
       </div>
       <div className="dpl-reservation-header__container">
-        <div className="dpl-reservation-header__container__tag">BOG</div>
-        <div className="dpl-reservation-header__container__header">
-          Steven Hawking
-        </div>
-        <div className="dpl-reservation-header__container__text">
-          Af Isabel Sánchez Vegara, Amaia Arrazola (2018)
-        </div>
+        <div className="dpl-reservation-header__container__tag">{label}</div>
+        <div className="dpl-reservation-header__container__header">{title}</div>
+        <div className="dpl-reservation-header__container__text">{author}</div>
       </div>
     </div>
   );
