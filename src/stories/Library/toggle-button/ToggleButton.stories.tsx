@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import { ToggleButton as ToggleButtonSB } from "./ToggleButton";
 
 export default {
-  title: "Atoms / Toggle button",
+  title: "Library / Toggle button",
   component: ToggleButtonSB,
   decorators: [withDesign],
   argTypes: {

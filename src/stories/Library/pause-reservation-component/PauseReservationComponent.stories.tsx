@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import { PauseReservationComponent } from "./PauseReservationComponent";
 
 export default {
-  title: "Components / Pause reservation",
+  title: "Library / Pause reservation",
   component: PauseReservationComponent,
   decorators: [withDesign],
   argTypes: {
