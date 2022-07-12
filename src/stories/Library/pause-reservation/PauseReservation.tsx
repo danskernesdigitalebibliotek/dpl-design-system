@@ -1,12 +1,10 @@
-import { ToggleButton } from "../toggle-button/ToggleButton.stories";
+import ToggleButton from "../toggle-button/ToggleButton";
 
-export type PauseReservationComponentProps = {
+export type PauseReservationProps = {
   isChecked: boolean;
 };
 
-export const PauseReservationComponent = ({
-  isChecked,
-}: PauseReservationComponentProps) => {
+export const PauseReservation = ({ isChecked }: PauseReservationProps) => {
   return (
     <div className="dpl-pause-reservation-component">
       <div className="dpl-pause-reservation-component__pagefold" />
