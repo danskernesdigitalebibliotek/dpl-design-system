@@ -10,8 +10,21 @@ export default {
     isChecked: {
       defaultValue: true,
     },
+    text: {
+      control: "text",
+      defaultValue: "Sæt fysiske reserveringer på pause",
+    },
+    dates: {
+      control: "text",
+      defaultValue: "20.09.2021 - 12.10.2021",
+    },
   },
-  parameters: {},
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=607%3A35282",
+    },
+  },
 } as ComponentMeta<typeof PauseReservation>;
 
 const Template: ComponentStory<typeof PauseReservation> = (args) => (
