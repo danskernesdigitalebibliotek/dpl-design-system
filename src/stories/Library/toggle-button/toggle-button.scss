@@ -1,0 +1,35 @@
+.dpl-toggle-button {
+  border-radius: 34px;
+  width: 44px;
+  height: 24px;
+  position: relative;
+  border: 0px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    top: 2px;
+    bottom: 2px;
+  }
+
+  &--inactive {
+    background-color: $c-global-tertiary-2;
+
+    &::before {
+      left: 2px;
+    }
+  }
+
+  &--active {
+    background-color: $c-signal-success;
+
+    &::before {
+      right: 2px;
+    }
+  }
+}
