@@ -19,6 +19,7 @@ export type ButtonUIProps = {
   classes?: string;
   ariaLabel: string;
   onClick?: () => void;
+  describe?: string;
 };
 
 export const ButtonUI: React.FC<ButtonUIProps> = ({
@@ -27,6 +28,7 @@ export const ButtonUI: React.FC<ButtonUIProps> = ({
   children,
   onClick,
   ariaLabel,
+  describe,
 }) => {
   const getChild = () => {
     if (content.kind === "LABEL") return content.label;
@@ -42,6 +44,7 @@ export const ButtonUI: React.FC<ButtonUIProps> = ({
   return (
     <button
       type="button"
+      aria-describedby={describe}
       className={`btn-ui ${classes || ""}`}
       onClick={onClick}
       aria-label={ariaLabel}

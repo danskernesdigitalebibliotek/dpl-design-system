@@ -25,9 +25,16 @@ export function ModalFallbackButton({
   );
 }
 
-export function ModalCloseButton({ toggleModal }: { toggleModal: () => void }) {
+export function ModalCloseButton({
+  toggleModal,
+  idAriaDescribedBy,
+}: {
+  toggleModal: () => void;
+  idAriaDescribedBy: string;
+}) {
   return (
     <ButtonUI
+      describe={idAriaDescribedBy}
       onClick={toggleModal}
       classes="modal-btn-close"
       ariaLabel="close modal"

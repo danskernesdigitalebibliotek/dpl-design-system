@@ -31,7 +31,13 @@ export const ModalCTA: React.FC<ModalCTAProps> = ({ title, showModal }) => {
         shownModal ? "modal-show" : ""
       }`}
     >
-      <ModalCloseButton toggleModal={toggleModal} />
+      <div className="modal__screen-reader-description" id="describemodal">
+        Denne modal dækker sidens indhold, og er en demo
+      </div>
+      <ModalCloseButton
+        idAriaDescribedBy="describemodal"
+        toggleModal={toggleModal}
+      />
       <div className="modal-cta__container">
         <h2 className="text-header-h2">{title}</h2>
         <div className="mt-48 color-secondary-gray">
