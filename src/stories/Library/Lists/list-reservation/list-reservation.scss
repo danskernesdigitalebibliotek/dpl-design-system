@@ -27,10 +27,13 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__note-mobile {
+  all: unset;
   display: block;
   margin-top: 4px;
   white-space: break-spaces;
-  font-size: 12px;
+  text-decoration: underline;
+  @extend .text-small-caption;
+  @extend .color-secondary-gray;
 
   @include breakpoint-s {
     display: none;
@@ -38,7 +41,11 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__note-desktop {
+  all: unset;
   display: none;
+  text-decoration: underline;
+  @extend .text-small-caption;
+  @extend .color-secondary-gray;
 
   @include breakpoint-s {
     display: block;
