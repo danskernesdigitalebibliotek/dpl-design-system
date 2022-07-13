@@ -1,7 +1,10 @@
-const IconButton: React.FC = () => {
+interface IconButtonProps {
+  src: string;
+}
+const IconButton: React.FC<IconButtonProps> = ({ src }) => {
   return (
     <button className="dpl-icon-button" type="button">
-      <img src="icons/collection/Menu.svg" alt="" />
+      <img src={src} alt="" />
     </button>
   );
 };

@@ -1,0 +1,33 @@
+.dpl-list-buttons {
+  display: flex;
+  justify-content: space-between;
+  @extend %text-body-medium-medium;
+
+  &__header {
+height: 35px;
+position: relative;
+    padding-right: 25px;
+      display: flex;
+      align-items: flex-end;
+  }
+  &__power {
+position: absolute;
+    right: 0;
+      top: 4px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__button {
+      @extend .mx-16;
+      display: flex;
+      
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

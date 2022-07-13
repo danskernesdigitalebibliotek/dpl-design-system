@@ -6,6 +6,12 @@ export default {
   title: "Library / Buttons / Button icon",
   component: IconButton,
   decorators: [withDesign],
+  argTypes: {
+    src: {
+      defaultValue: "icons/collection/Menu.svg",
+      control: "text",
+    },
+  },
   parameters: {
     design: {
       type: "figma",
@@ -15,5 +21,7 @@ export default {
   },
 } as ComponentMeta<typeof IconButton>;
 
-const Template: ComponentStory<typeof IconButton> = () => <IconButton />;
+const Template: ComponentStory<typeof IconButton> = (props) => (
+  <IconButton {...props} />
+);
 export const IconButtonExample = Template.bind({});
