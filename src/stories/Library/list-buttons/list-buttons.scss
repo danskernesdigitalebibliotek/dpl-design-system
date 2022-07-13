@@ -4,16 +4,16 @@
   @extend %text-body-medium-medium;
 
   &__header {
-height: 35px;
-position: relative;
+    height: 35px;
+    position: relative;
     padding-right: 25px;
-      display: flex;
-      align-items: flex-end;
+    display: flex;
+    align-items: flex-end;
   }
   &__power {
-position: absolute;
+    position: absolute;
     right: 0;
-      top: 4px;
+    top: 4px;
   }
 
   &__buttons {
@@ -23,8 +23,7 @@ position: absolute;
     &__button {
       @extend .mx-16;
       display: flex;
-      
-      
+
       &:last-child {
         margin-right: 0;
       }
