@@ -11,7 +11,7 @@
     "js:lint": "concurrently 'yarn:js:eslint' 'yarn:js:prettier -- --check' --raw",
     "js:format": "concurrently 'yarn:js:eslint -- --fix' 'yarn:js:prettier -- --write' --max-processes 1 --raw",
     "css:stylelint": "stylelint 'src/**/*.scss'",
-    "css:prettier": "prettier 'src/styles/**/*.scss'",
+    "css:prettier": "prettier 'src/**/*.scss'",
     "css:lint": "concurrently 'yarn:css:stylelint' 'yarn:css:prettier -- --check' --raw",
     "css:format": "concurrently 'yarn:css:stylelint -- --fix' 'yarn:css:prettier -- --write' --max-processes 1 --raw",
     "css:build": "sass base.scss:src/styles/css/base.css",
