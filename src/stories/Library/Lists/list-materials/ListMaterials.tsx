@@ -34,6 +34,7 @@ export const ListMaterials: React.FC<ListMaterialsProps> = ({
       {canBeRenewed && (
         <div className="list-materials__checkbox mr-32">
           <Checkbox
+            hiddenLabel={false}
             isChecked={isItChecked}
             callback={handleToggle}
             ariaLabel="Vælg materiale"
