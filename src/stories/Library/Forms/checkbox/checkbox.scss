@@ -45,9 +45,13 @@
   transform: translate3d(0, 0, 0);
 }
 
-.checkbox__label .checkbox__text:last-child {
+.checkbox__label .checkbox__text {
   padding-left: 8px;
   line-height: 18px;
+
+  &--validation {
+    color: $c-signal-alert;
+  }
 }
 
 .checkbox__label:hover .checkbox__icon:first-child {
