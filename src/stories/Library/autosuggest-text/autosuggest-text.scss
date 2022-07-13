@@ -5,11 +5,10 @@
   left: 0;
   right: 0;
   top: calc(100% + 1px);
-    
+
   @include breakpoint-m {
     padding-top: 16px;
   }
-  
 
   &__text {
     height: 40px;
@@ -20,7 +19,7 @@
       background-color: $c-global-secondary;
       cursor: pointer;
     }
-  
+
     &--highlight {
       background-color: $c-global-secondary;
     }

@@ -1,18 +1,18 @@
 .autosuggest {
   &__divider {
-    width: 100%; 
-    display: block; 
+    width: 100%;
+    display: block;
     height: 1px;
-    border: 0; 
+    border: 0;
     border-top: 1px solid $c-global-tertiary-1;
-    margin: 20px 0; 
+    margin: 20px 0;
     padding: 0;
   }
 
   &__materials {
     display: flex;
     flex-direction: column;
-  
+
     @include breakpoint-m {
       flex-direction: row;
       justify-content: center;
@@ -59,7 +59,7 @@
     flex-direction: column;
     justify-content: center;
     text-overflow: ellipsis;
-    overflow: hidden; 
+    overflow: hidden;
     white-space: nowrap;
   }
 
@@ -67,7 +67,7 @@
     color: $c-text-secondary-gray;
     line-height: 24px;
     text-overflow: ellipsis;
-    overflow: hidden; 
+    overflow: hidden;
     white-space: nowrap;
   }
 
@@ -75,7 +75,7 @@
     color: $c-text-primary-black;
     line-height: 24px;
     text-overflow: ellipsis;
-    overflow: hidden; 
+    overflow: hidden;
     white-space: nowrap;
   }
 }
