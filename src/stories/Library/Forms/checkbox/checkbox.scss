@@ -54,7 +54,7 @@
   }
 
   &--hide-visually {
-    @extend .hide-visually;
+    @extend .hide-visually !optional;
   }
 }
 
