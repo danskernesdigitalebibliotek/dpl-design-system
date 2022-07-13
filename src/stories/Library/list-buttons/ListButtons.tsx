@@ -21,10 +21,16 @@ export const ListButton: React.FC<ListButtonProps> = ({
       </div>
       <div className="dpl-list-buttons__buttons">
         <div className="dpl-list-buttons__buttons__button">
-          <IconButton src="icons/collection/Menu.svg" />
+          <IconButton
+            altText="Denne knap sorterer listen efter afleveringsdato"
+            src="icons/collection/Menu.svg"
+          />
         </div>
         <div className="dpl-list-buttons__buttons__button">
-          <IconButton src="icons/collection/Various.svg" />
+          <IconButton
+            altText="Denne knap sorterer listen i stakke"
+            src="icons/collection/Various.svg"
+          />
         </div>
         <div className="dpl-list-buttons__buttons__button">
           <Button

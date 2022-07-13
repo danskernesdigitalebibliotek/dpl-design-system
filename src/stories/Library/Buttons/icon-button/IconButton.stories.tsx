@@ -11,6 +11,10 @@ export default {
       defaultValue: "icons/collection/Menu.svg",
       control: "text",
     },
+    altText: {
+      defaultValue: "Denne knap sorterer listen efter dato",
+      control: "text",
+    },
   },
   parameters: {
     design: {
