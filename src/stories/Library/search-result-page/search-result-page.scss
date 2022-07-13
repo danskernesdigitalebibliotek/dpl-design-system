@@ -1,0 +1,13 @@
+.search-result-page {
+  background: $c-global-primary;
+  padding: 16px;
+
+  @include breakpoint-m {
+    padding: 157px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 16px;
+  }
+}
