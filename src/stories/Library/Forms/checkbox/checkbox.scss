@@ -52,6 +52,10 @@
   &--validation {
     color: $c-signal-alert;
   }
+
+  &--hide-visually {
+    @extend .hide-visually;
+  }
 }
 
 .checkbox__label:hover .checkbox__icon:first-child {
