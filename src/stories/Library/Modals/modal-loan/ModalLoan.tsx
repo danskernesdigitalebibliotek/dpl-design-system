@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-
 import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { Checkbox } from "../../Forms/checkbox/Checkbox";
@@ -171,7 +170,13 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
         shoulShowModal ? "modal-show" : ""
       }`}
     >
-      <ModalCloseButton toggleModal={toggleModal} />
+      <div className="modal__screen-reader-description" id="describemodal">
+        Denne modal dækker sidens indhold, og er en demo
+      </div>
+      <ModalCloseButton
+        idAriaDescribedBy="describemodal"
+        toggleModal={toggleModal}
+      />
       <div className="modal-loan__container">
         <div className="modal-loan__header">
           {isExpired && (

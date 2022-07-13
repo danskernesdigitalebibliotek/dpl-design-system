@@ -125,7 +125,13 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
     <div
       className={`modal modal-details ${shoudShowModal ? "modal-show" : ""}`}
     >
-      <ModalCloseButton toggleModal={toggleModal} />
+      <div className="modal__screen-reader-description" id="describemodal">
+        Denne modal dækker sidens indhold, og er en demo
+      </div>
+      <ModalCloseButton
+        idAriaDescribedBy="describemodal"
+        toggleModal={toggleModal}
+      />
       <div className="modal-details__container">
         <div className="modal-details__header">
           <div className="modal-details__cover">
