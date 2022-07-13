@@ -47,4 +47,14 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
   justify-content: flex-end;
   align-items: center;
   margin-top: 40px;
+
+  &--bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $c-global-primary;
+    padding: 20px 0;
+    margin: 0 20px;
+  }
 }
