@@ -1,6 +1,6 @@
-import SeriesLine from "../material-series-line/MaterialSeriesLine";
+import HorizontalTermLine from "../horizontal-term-line/HorizontalTermLine";
 
-const seriesLines = [
+const HorizontalTermLines = [
   {
     title: "Nr. 3",
     subTitle: "i serien",
@@ -54,7 +54,7 @@ const seriesLines = [
       },
     ],
   },
-].map((item) => <SeriesLine {...item} />);
+].map((item) => <HorizontalTermLine {...item} />);
 
 interface MaterialDescriptionProps {
   description?: string;
@@ -66,8 +66,12 @@ const MaterialDescription: React.FC<MaterialDescriptionProps> = ({
   return (
     <section className="material-description">
       <h2 className="text-header-h4 pb-24">Beskrivelse</h2>
-      <p className="text-body-large ">{description}</p>
-      <div className="material-description__links mt-32">{seriesLines}</div>
+      <p className="text-body-large material-description__content">
+        {description}
+      </p>
+      <div className="material-description__links mt-32">
+        {HorizontalTermLines}
+      </div>
     </section>
   );
 };
