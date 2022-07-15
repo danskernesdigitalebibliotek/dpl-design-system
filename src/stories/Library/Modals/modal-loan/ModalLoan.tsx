@@ -208,6 +208,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
 
         <div className="modal-loan__buttons">
           <Checkbox
+            hiddenLabel={false}
             isChecked={isAllChecked}
             callback={handleToggleAll}
             label="Vælg alle med mulighed for fornyelse"

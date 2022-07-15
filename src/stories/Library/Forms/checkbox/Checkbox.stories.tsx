@@ -46,6 +46,13 @@ Unchecked.args = {
   validation: "Error error error",
 };
 
+export const hiddenLabel = Template.bind({});
+hiddenLabel.args = {
+  isChecked: true,
+  label: "Checkbox",
+  hiddenLabel: true,
+};
+
 // Show multiple checkboxes to make it easier to test keyboard navigation.
 const Several: ComponentStory<typeof Checkbox> = (args) => (
   <>
