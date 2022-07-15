@@ -1,6 +1,6 @@
 import HorizontalTermLine from "../horizontal-term-line/HorizontalTermLine";
 
-const HorizontalTermLines = [
+const horizontalTermLines = [
   {
     title: "Nr. 3",
     subTitle: "i serien",
@@ -54,7 +54,7 @@ const HorizontalTermLines = [
       },
     ],
   },
-].map((item) => <HorizontalTermLine {...item} />);
+];
 
 interface MaterialDescriptionProps {
   description?: string;
@@ -70,7 +70,9 @@ const MaterialDescription: React.FC<MaterialDescriptionProps> = ({
         {description}
       </p>
       <div className="material-description__links mt-32">
-        {HorizontalTermLines}
+        {horizontalTermLines.map((item) => (
+          <HorizontalTermLine {...item} />
+        ))}
       </div>
     </section>
   );
