@@ -2,16 +2,16 @@ import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { Material } from "../material/Material";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
-import MaterialLink, {
-  SeriesLineProps,
-} from "../material-series-line/MaterialSeriesLine";
+import HorizontalTermLine, {
+  HorizontalTermLineProps,
+} from "../horizontal-term-line/HorizontalTermLine";
 
 export type SearchResultItemProps = {
   heartFill?: boolean;
   title: string;
   author: string;
   year: string;
-  seriesLineData?: SeriesLineProps;
+  horizontalTermLineData?: HorizontalTermLineProps;
 };
 
 export const SearchResultItem = ({
@@ -19,7 +19,7 @@ export const SearchResultItem = ({
   title,
   author,
   year,
-  seriesLineData,
+  horizontalTermLineData,
 }: SearchResultItemProps) => {
   return (
     <a href="/" className="search-result-item arrow arrow__hover--right-small">
@@ -34,7 +34,9 @@ export const SearchResultItem = ({
       <div className="search-result-item__text">
         <div className="search-result-item__meta">
           <ButtonFavourite fill={heartFill} />
-          {seriesLineData && <MaterialLink {...seriesLineData} />}
+          {horizontalTermLineData && (
+            <HorizontalTermLine {...horizontalTermLineData} />
+          )}
         </div>
 
         <h2 className="search-result-item__title text-header-h4">{title}</h2>
