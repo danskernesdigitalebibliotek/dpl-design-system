@@ -30,5 +30,11 @@
         margin-right: 0;
       }
     }
+    &--hide-on-mobile {
+      display: none;
+      @include breakpoint-s {
+        display: flex;
+      }
+    }
   }
 }
