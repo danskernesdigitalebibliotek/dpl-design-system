@@ -26,6 +26,7 @@ ModalLoanExpired.args = {
   description: "Kan afleveres på alle Rudersdals biblioteker",
   showExpired: true,
   showModal: true,
+  buttonsUpTop: true,
 };
 
 export const ModalLoanExpiresSoon = Template.bind({});
@@ -34,4 +35,14 @@ ModalLoanExpiresSoon.args = {
   description: "",
   showExpired: false,
   showModal: true,
+  buttonsUpTop: true,
+};
+
+export const ModalLoanStickyButtonInBottom = Template.bind({});
+ModalLoanStickyButtonInBottom.args = {
+  title: "Afleveres 12. oktober 2021",
+  description: "Kan afleveres på alle Rudersdals biblioteker",
+  showExpired: true,
+  showModal: true,
+  buttonsUpTop: false,
 };
