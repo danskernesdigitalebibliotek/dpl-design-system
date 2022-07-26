@@ -1,7 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import { ModalProfile, ModalProfileProps } from "./ModalProfile";
+import { ModalProfile } from "./ModalProfile";
 
 export default {
   title: "Library / Modals / Profile",
