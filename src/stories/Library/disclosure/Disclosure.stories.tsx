@@ -36,4 +36,4 @@ const Template: ComponentStory<typeof Disclosure> = (args: DisclosureProps) => (
   <Disclosure {...args} />
 );
 
-export const Defult = Template.bind({});
+export const Default = Template.bind({});
