@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import { Disclosure, DisclosureProps } from "./Disclosure";
 
 export default {
-  title: "Atoms / Disclosure",
+  title: "Library / Disclosure",
   component: Disclosure,
   decorators: [withDesign],
   argTypes: {
