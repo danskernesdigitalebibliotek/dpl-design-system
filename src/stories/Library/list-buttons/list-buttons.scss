@@ -4,6 +4,7 @@
   @extend %text-body-medium-medium;
 
   &__header {
+    all: unset;
     height: 35px;
     position: relative;
     padding-right: 25px;
@@ -11,6 +12,7 @@
     align-items: flex-end;
   }
   &__power {
+    all: unset;
     position: absolute;
     right: 0;
     top: 4px;
@@ -26,6 +28,12 @@
 
       &:last-child {
         margin-right: 0;
+      }
+    }
+    &--hide-on-mobile {
+      display: none;
+      @include breakpoint-s {
+        display: flex;
       }
     }
   }

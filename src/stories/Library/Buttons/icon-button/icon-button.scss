@@ -3,7 +3,7 @@
   cursor: pointer;
 
   &--selected {
-    fill: red;
+    fill: $c-global-tertiary-2;
   }
 
   &.dpl-icon-button:focus {

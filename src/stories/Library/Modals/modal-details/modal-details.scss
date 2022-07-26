@@ -11,6 +11,8 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-details__container {
+  width: 100%;
+  overflow: scroll;
   margin: 0 24px;
   max-width: $MODAL_DETAILS_CONTAINER_WIDTH;
 

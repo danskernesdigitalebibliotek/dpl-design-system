@@ -10,6 +10,7 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
   margin: 0 24px;
   max-width: $MODAL_LOAN_CONTAINER_WIDTH;
   width: 100%;
+  overflow: scroll;
 
   @include breakpoint-s {
     margin: 0 45px;

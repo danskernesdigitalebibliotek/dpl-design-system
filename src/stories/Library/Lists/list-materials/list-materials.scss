@@ -2,7 +2,7 @@
   display: flex;
   min-height: 72px;
   padding: 16px;
-  background-color: $c-global-secondary;
+  background-color: $c-text-primary-white;
   justify-content: space-between;
 
   @include breakpoint-s {
@@ -22,8 +22,9 @@
   flex: 1;
 }
 
-.list-materials__selected {
-  background-color: $c-text-primary-white;
+.list-materials--disabled {
+  background-color: $c-global-secondary;
+  cursor: not-allowed;
 }
 
 .list-materials__status {
