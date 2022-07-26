@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
-import { ButtonUI } from "../../Buttons/button-ui/ButtonUI";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
 
@@ -29,7 +28,7 @@ export const ModalLogin: React.FC<ModalLoginProps> = ({ showModal }) => {
     <div className="modal__backdrop">
       <div
         className={`modal modal-login modal-right modal-padding ${
-          showModal ? "modal-show" : ""
+          shownModal ? "modal-show" : ""
         }`}
       >
         <div className="modal__screen-reader-description" id="describemodal">
