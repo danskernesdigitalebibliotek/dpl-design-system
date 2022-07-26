@@ -39,7 +39,13 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
         shouldShowModal ? "modal-show" : ""
       } modal-padding `}
     >
-      <ModalCloseButton toggleModal={toggleModal} />
+      <div className="modal__screen-reader-description" id="describemodal">
+        Denne modal dækker sidens indhold, og er en demo
+      </div>
+      <ModalCloseButton
+        idAriaDescribedBy="describemodal"
+        toggleModal={toggleModal}
+      />
       <div className="modal-pause__container">
         <h3 className="text-header-h3">{title}</h3>
         <div className="mt-48 color-secondary-gray">

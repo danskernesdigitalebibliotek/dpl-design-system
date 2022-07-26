@@ -15,15 +15,18 @@
  *
  * https://git.drupalcode.org/project/drupal/-/blob/9.2.x/core/modules/system/css/components/hidden.module.css#L18-33
  */
-.hide-visually {
+@mixin hide-visually {
   position: absolute;
-  left: -10000px;
-  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
   height: 1px;
+  width: 1px;
   overflow: hidden;
 }
 
 .modal-btn-close {
+  background-color: $c-global-primary;
   position: fixed;
   top: 0;
   right: 0;
@@ -47,14 +50,21 @@
   transition: opacity 0.3s;
   min-height: 100vh;
   height: 100%;
+
+  &__screen-reader-description {
+    @include hide-visually;
+  }
 }
 
 .modal-padding {
-  padding: 20px;
+  padding: $s-lg;
 }
 
 .modal-show {
   display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
   opacity: 1;
 }
 

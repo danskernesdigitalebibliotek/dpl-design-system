@@ -4,7 +4,9 @@ export type CheckboxProps = {
   isChecked: boolean;
   label?: string;
   ariaLabel?: string;
+  validation?: string;
   callback?: (isChecked: boolean) => void;
+  hiddenLabel: boolean;
 };
 
 export const Checkbox: React.FC<CheckboxProps> = ({
@@ -12,6 +14,8 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   label,
   ariaLabel,
   callback,
+  validation,
+  hiddenLabel = false,
 }) => {
   const checkboxId = useRef(`checkbox_id__${Math.random()}`);
   const [checked, setChecked] = useState(isChecked);
@@ -46,11 +50,22 @@ export const Checkbox: React.FC<CheckboxProps> = ({
             />
           </svg>
         </span>
-        {label && (
-          <span className="checkbox__text text-small-caption color-secondary-gray">
-            {label}
-          </span>
-        )}
+        <div>
+          {label && (
+            <span
+              className={`checkbox__text text-small-caption color-secondary-gray ${
+                hiddenLabel ? "checkbox__text--hide-visually" : ""
+              }`}
+            >
+              {label}
+            </span>
+          )}
+          {validation && (
+            <div className="checkbox__text text-small-caption checkbox__text--validation">
+              {validation}
+            </div>
+          )}
+        </div>
       </label>
     </div>
   );

@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-
 import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { Checkbox } from "../../Forms/checkbox/Checkbox";
@@ -125,6 +124,7 @@ export type ModalLoanProps = {
   description: string;
   showModal: boolean;
   showExpired: boolean;
+  buttonsUpTop: boolean;
 };
 
 export const ModalLoan: React.FC<ModalLoanProps> = ({
@@ -132,6 +132,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
   description,
   showExpired,
   showModal,
+  buttonsUpTop,
 }) => {
   const [shoulShowModal, setShouldShowModal] = useState(showModal);
   const [isAllChecked, setChecked] = useState(false);
@@ -171,7 +172,13 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
         shoulShowModal ? "modal-show" : ""
       }`}
     >
-      <ModalCloseButton toggleModal={toggleModal} />
+      <div className="modal__screen-reader-description" id="describemodal">
+        Denne modal dækker sidens indhold, og er en demo
+      </div>
+      <ModalCloseButton
+        idAriaDescribedBy="describemodal"
+        toggleModal={toggleModal}
+      />
       <div className="modal-loan__container">
         <div className="modal-loan__header">
           {isExpired && (
@@ -200,23 +207,24 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
             />
           </div>
         )}
-
-        <div className="modal-loan__buttons">
-          <Checkbox
-            isChecked={isAllChecked}
-            callback={handleToggleAll}
-            label="Vælg alle med mulighed for fornyelse"
-          />
-          <Button
-            buttonType="default"
-            label={`Forny mulige (${countRenewable})`}
-            size="small"
-            variant="filled"
-            disabled={false}
-            collapsible
-          />
-        </div>
-
+        {buttonsUpTop && (
+          <div className="modal-loan__buttons">
+            <Checkbox
+              hiddenLabel={false}
+              isChecked={isAllChecked}
+              callback={handleToggleAll}
+              label="Vælg alle med mulighed for fornyelse"
+            />
+            <Button
+              buttonType="default"
+              label={`Forny mulige (${countRenewable})`}
+              size="small"
+              variant="filled"
+              disabled={false}
+              collapsible
+            />
+          </div>
+        )}
         <ul className="modal-loan__list-container">
           {loanList.map(({ materialType, list }) => (
             <li className="modal-loan__list">
@@ -251,6 +259,24 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
             </li>
           ))}
         </ul>
+        {!buttonsUpTop && (
+          <div className="modal-loan__buttons modal-loan__buttons--bottom">
+            <Checkbox
+              hiddenLabel={false}
+              isChecked={isAllChecked}
+              callback={handleToggleAll}
+              label="Vælg alle med mulighed for fornyelse"
+            />
+            <Button
+              buttonType="default"
+              label={`Forny mulige (${countRenewable})`}
+              size="small"
+              variant="filled"
+              disabled={false}
+              collapsible
+            />
+          </div>
+        )}
       </div>
     </div>
   );

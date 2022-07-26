@@ -12,6 +12,12 @@ export default {
         type: "text",
       },
     },
+    validation: {
+      control: {
+        type: "text",
+        defaultValue: "",
+      },
+    },
     // We disable the isChecked control, since it is not possible to
     // get the states from the React component to work with Storybook controls.
     isChecked: {
@@ -37,6 +43,14 @@ export const Unchecked = Template.bind({});
 Unchecked.args = {
   isChecked: false,
   label: "Toggle this checkbox",
+  validation: "Error error error",
+};
+
+export const hiddenLabel = Template.bind({});
+hiddenLabel.args = {
+  isChecked: true,
+  label: "Checkbox",
+  hiddenLabel: true,
 };
 
 // Show multiple checkboxes to make it easier to test keyboard navigation.

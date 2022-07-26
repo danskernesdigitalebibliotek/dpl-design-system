@@ -1,0 +1,12 @@
+.dpl-icon-button {
+  all: unset;
+  cursor: pointer;
+
+  &--selected {
+    fill: red;
+  }
+
+  &.dpl-icon-button:focus {
+    outline: $c-text-primary-black 5px auto;
+  }
+}

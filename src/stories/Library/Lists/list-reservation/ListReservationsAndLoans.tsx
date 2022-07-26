@@ -46,17 +46,17 @@ export const ListReservationsAndLoans = (
                 {material.description}
               </p>
             </div>
-            <a
-              href={material.noteUrl}
+            <button
+              type="button"
               aria-label="note about material"
-              className={`list-reservation__note-desktop text-small-caption ${
+              className={`list-reservation__note-desktop ${
                 material.noteAsWarning
                   ? "color-signal-alert"
                   : "color-secondary-gray"
               }`}
             >
               {material.noteLabel}
-            </a>
+            </button>
           </div>
         </div>
 
@@ -83,7 +83,7 @@ export const ListReservationsAndLoans = (
               <p className="text-small-caption">{statusNotes}</p>
               <a
                 href={material.noteUrl}
-                className={`list-reservation__note-mobile text-small-caption ${
+                className={`list-reservation__note-mobile ${
                   material.noteAsWarning
                     ? "color-signal-alert"
                     : "color-secondary-gray"

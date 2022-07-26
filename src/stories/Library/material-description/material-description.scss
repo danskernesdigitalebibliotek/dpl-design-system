@@ -1,8 +1,11 @@
 .material-description {
-  max-width: 750px;
   padding: $s-md;
   padding-top: $s-3xl;
   padding-bottom: $s-2xl;
+
+  &__content {
+      max-width: 750px;
+  }
 
   @include breakpoint-m {
     padding-top: $s-4xl;

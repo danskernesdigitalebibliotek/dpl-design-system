@@ -1,6 +1,8 @@
-.material-series-line {
+.horizontal-term-line {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  white-space: nowrap;
   gap: $s-sm;
 
   // Set all text to the same font size even if other text classes have been used.
@@ -10,6 +12,7 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     gap: $s-sm;
   }
 }
