@@ -7,7 +7,64 @@ export default {
   title: "Library / Modals / Profile",
   component: ModalProfile,
   decorators: [withDesign],
-  argTypes: {},
+  argTypes: {
+    showModal: {
+      control: "boolean",
+      defaultValue: true,
+    },
+    headerName: {
+      control: { type: "text" },
+      defaultValue: "Christine-Olivia Kristensen har et meget langt navn",
+    },
+    headerLinkHref: {
+      control: { type: "text" },
+      defaultValue: "/",
+    },
+    headerLinkText: {
+      control: { type: "text" },
+      defaultValue: "Se din profil",
+    },
+    profileNavLinks: {
+      control: { type: "object" },
+      defaultValue: [
+        {
+          title: "Lån",
+          href: "/",
+          counter: "12",
+        },
+        {
+          title: "Reserveringer",
+          href: "/",
+          counter: "7",
+        },
+        {
+          title: "Huskeliste",
+          href: "/",
+          counter: "",
+        },
+        {
+          title: "Gebyrer og erstatninger",
+          href: "/",
+          counter: "",
+        },
+        {
+          title: "Gemte søgninger",
+          href: "/",
+          counter: "3",
+        },
+        {
+          title: "Lånehistorik",
+          href: "/",
+          counter: "",
+        },
+        {
+          title: "Brugeroplysninger",
+          href: "/",
+          counter: "",
+        },
+      ],
+    },
+  },
   parameters: {
     design: {
       type: "figma",
@@ -21,46 +78,4 @@ const Template: ComponentStory<typeof ModalProfile> = (args) => (
 );
 
 export const Item = Template.bind({});
-Item.args = {
-  showModal: true,
-  headerName: "Christine-Olivia Kristensen har et meget langt navn",
-  headerLinkHref: "/",
-  headerLinkText: "Se din profil",
-  profileNavLinks: [
-    {
-      title: "Lån",
-      href: "/",
-      counter: "12",
-    },
-    {
-      title: "Reserveringer",
-      href: "/",
-      counter: "7",
-    },
-    {
-      title: "Huskeliste",
-      href: "/",
-      counter: "",
-    },
-    {
-      title: "Gebyrer og erstatninger",
-      href: "/",
-      counter: "",
-    },
-    {
-      title: "Gemte søgninger",
-      href: "/",
-      counter: "3",
-    },
-    {
-      title: "Lånehistorik",
-      href: "/",
-      counter: "",
-    },
-    {
-      title: "Brugeroplysninger",
-      href: "/",
-      counter: "",
-    },
-  ],
-};
+Item.args = {};
