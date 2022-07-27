@@ -1,0 +1,35 @@
+.disclosure {
+  width: auto;
+  border: solid 1px $c-global-tertiary-1;
+
+  @include breakpoint-m {
+    margin: 0 133px;
+  }
+
+  &__headline {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    cursor: pointer;
+  }
+
+  &__icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+
+    & > img {
+      width: 24px;
+      filter: invert(1);
+    }
+  }
+
+  &__expand {
+    margin-left: auto;
+    &-open {
+      transform: scaleY(-1);
+    }
+  }
+}
