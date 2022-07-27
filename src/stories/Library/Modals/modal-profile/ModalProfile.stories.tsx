@@ -24,6 +24,31 @@ export default {
       control: { type: "text" },
       defaultValue: "Se din profil",
     },
+    notifications: {
+      control: { type: "object" },
+      defaultValue: [
+        {
+          label: {
+            label: "overskredet",
+            status: "danger",
+          },
+          number: {
+            label: 2,
+            status: "danger",
+          },
+          title: "Afleveret for sent",
+          showDot: true,
+        },
+        {
+          number: {
+            label: 2,
+            status: "warning",
+          },
+          title: "Lån overskredet",
+          showDot: true,
+        },
+      ],
+    },
     profileNavLinks: {
       control: { type: "object" },
       defaultValue: [

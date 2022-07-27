@@ -4,12 +4,17 @@ import { ModalHeader } from "../modal-header/ModalHeader";
 import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { LinkFilters, LinkFilter } from "../../link-filters/LinkFilters";
+import {
+  ListDashboard,
+  ListDashboardProps,
+} from "../../Lists/list-dashboard/ListDashboard";
 
 export type ModalProfileProps = {
   showModal: boolean;
   headerName: string;
   headerLinkHref: string;
   headerLinkText: string;
+  notifications: ListDashboardProps[];
   profileNavLinks: LinkFilter[];
 };
 
@@ -18,6 +23,7 @@ export const ModalProfile: React.FC<ModalProfileProps> = ({
   headerName,
   headerLinkHref,
   headerLinkText,
+  notifications,
   profileNavLinks,
 }) => {
   const [shownModal, setShownModal] = useState(showModal);
@@ -54,6 +60,19 @@ export const ModalProfile: React.FC<ModalProfileProps> = ({
           headerLinkHref={headerLinkHref}
           headerLinkText={headerLinkText}
         />
+
+        <div className="modal-profile__notifications">
+          {notifications.map((item, index) => (
+            <div key={index} className="modal-profile__notification-item">
+              <ListDashboard
+                title={item.title}
+                number={item.number}
+                label={item.label}
+                showDot={item.showDot}
+              />
+            </div>
+          ))}
+        </div>
 
         <div className="modal-profile__container">
           <div className="modal-profile__links">
