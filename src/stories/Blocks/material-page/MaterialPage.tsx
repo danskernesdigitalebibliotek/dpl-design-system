@@ -1,6 +1,6 @@
-import MaterialDescription from "../material-description/MaterialDescription";
+import MaterialDescription from "../../Library/material-description/MaterialDescription";
 
-import MaterialHeader from "../material-header/MaterialHeader";
+import MaterialHeader from "../../Library/material-header/MaterialHeader";
 
 export interface MaterialPageProps {
   title: string;
