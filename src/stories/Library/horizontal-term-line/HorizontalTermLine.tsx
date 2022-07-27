@@ -9,6 +9,11 @@ export interface HorizontalTermLineProps {
   linkList: HorizontalTermLineList[];
 }
 
+export function generateId(index: number) {
+  const randomId = Math.random().toString(36);
+  return randomId.concat(index.toString());
+}
+
 const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
   title,
   subTitle,
@@ -22,7 +27,7 @@ const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
       </p>
       <ul className="horizontal-term-line__list">
         {linkList.map((link, index) => (
-          <li>
+          <li key={generateId(index)}>
             <a href="/" className="link-tag" key={index}>
               {link.text}
             </a>

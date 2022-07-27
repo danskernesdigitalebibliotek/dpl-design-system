@@ -1,6 +1,7 @@
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
 import { Button } from "../Buttons/button/Button";
+import { generateId } from "../horizontal-term-line/HorizontalTermLine";
 import { Material } from "../material/Material";
 import MaterialHeaderText from "./MaterialHeaderText";
 import MaterialPeriodikumSelect from "./MaterialPeriodikumSelect";
@@ -31,7 +32,7 @@ const listOfAvailabilityLabels = [
     availability: "Hjemme",
     status: "available",
   } as const,
-].map((item) => <AvailabilityLabel {...item} />);
+].map((item, index) => <AvailabilityLabel {...item} key={generateId(index)} />);
 
 interface MaterialHeaderProps {
   title: string;
