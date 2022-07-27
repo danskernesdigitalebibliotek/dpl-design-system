@@ -1,6 +1,35 @@
 .modal-profile {
   flex-direction: column;
 
+  &__notifications {
+    border-bottom: 1px solid $c-global-tertiary-1;
+
+    padding: 32px;
+
+    @include breakpoint-s {
+      padding: {
+        top: 40px;
+        right: 80px;
+        bottom: 40px;
+        left: 80px;
+      }
+    }
+  }
+
+  &__notification-item {
+    margin-bottom: 8px;
+  }
+
+  &__notification-item .list-dashboard {
+    padding: 8px;
+  }
+
+  &__notification-item .number {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
   &__container {
     height: 100%;
     display: flex;
@@ -33,4 +62,8 @@
       margin-left: auto;
     }
   }
+}
+
+.test-color {
+  color: red;
 }
