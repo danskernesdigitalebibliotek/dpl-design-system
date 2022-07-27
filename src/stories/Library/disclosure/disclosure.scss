@@ -28,5 +28,8 @@
 
   &__expand {
     margin-left: auto;
+    &-open {
+      transform: scaleY(-1);
+    }
   }
 }
