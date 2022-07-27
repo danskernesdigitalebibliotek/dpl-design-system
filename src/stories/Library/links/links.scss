@@ -2,6 +2,7 @@
   text-decoration: none;
   color: $c-text-primary-black;
   display: inline-block;
+  width: fit-content;
 
   @extend %text-body-medium-regular-placeholder;
 }
