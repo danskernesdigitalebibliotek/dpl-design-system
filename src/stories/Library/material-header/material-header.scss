@@ -20,15 +20,27 @@
     @include breakpoint-m {
       padding: 0;
     }
+
+    & .material-container {
+
+      & > span.material {
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.20);
+      }
+    }
   }
 
   &__content {
     padding: 16px;
+
     @include breakpoint-m {
-      padding: 112px; // TODO: this is just a guess
+      padding: $s-4xl $s-2xl $s-4xl $s-7xl;
       grid-column: 1/2;
       grid-row: 1/2;
       border-right: 1px solid $c-global-tertiary-1;
+    }
+
+    & > h1 {
+      margin-top: $s-sm;
     }
   }
 
@@ -43,7 +55,7 @@
     gap: 6px;
   }
 
-  // Spacing between button
+  // Spacing between buttons
   &__button > * + * {
     margin-top: 8px;
   }
@@ -51,5 +63,9 @@
   // set all buttons to the full width
   &__button button {
     width: 100%;
+    @include breakpoint-m {
+      width: 346px;
+      max-width: 346px;
+    }
   }
 }
