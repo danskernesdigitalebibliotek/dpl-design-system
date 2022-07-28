@@ -3,7 +3,7 @@ import { generateId } from "../../Library/horizontal-term-line/HorizontalTermLin
 import ListDescription, {
   ListData,
 } from "../../Library/Lists/list-description/ListDescription";
-import { fakeData } from "../../Library/Lists/list-description/ListDescription.stories";
+import fakeData from "../../Library/Lists/list-description/ListDescriptionFakeData";
 import MaterialDescription from "../../Library/material-description/MaterialDescription";
 import MaterialHeader from "../../Library/material-header/MaterialHeader";
 import { MaterialMainfestationItem } from "../material-manifestation-item/MaterialMainfestationItem";
