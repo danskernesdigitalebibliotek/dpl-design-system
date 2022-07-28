@@ -51,7 +51,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
     <header className="material-header">
       <div className="material-header__cover">
         <Material
-          url="images/book_cover_3.jpg"
+          url="images/book_cover_3_large.jpeg"
           size="xlarge"
           tint="120"
           animate
