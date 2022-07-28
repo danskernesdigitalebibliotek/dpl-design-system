@@ -3,13 +3,18 @@
   padding-top: $s-3xl;
   padding-bottom: $s-2xl;
 
+  & > h2.text-header-h4 {
+    font-size: $s-lg;
+  }
+
   &__content {
-      max-width: 750px;
+    max-width: 750px;
+    line-height: 160%;
   }
 
   @include breakpoint-m {
     padding-top: $s-4xl;
-    padding-left: $s-6xl;
+    padding-left: $s-7xl;
     padding-bottom: $s-5xl;
   }
 

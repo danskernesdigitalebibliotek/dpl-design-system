@@ -6,6 +6,8 @@ $MATERIAL_MEDIUM_MOBILE: 137px;
 $MATERIAL_MEDIUM_DESKTOP: 216px;
 $MATERIAL_LARGE_MOBILE: 216px;
 $MATERIAL_LARGE_DESKTOP: 216px;
+$MATERIAL_XLARGE_MOBILE: 408px;
+$MATERIAL_XLARGE_DESKTOP: 408px;
 
 .material-container {
   display: flex;
@@ -55,6 +57,15 @@ $MATERIAL_LARGE_DESKTOP: 216px;
 
     @include breakpoint-s {
       height: $MATERIAL_LARGE_DESKTOP;
+    }
+  }
+
+  &--xlarge {
+    aspect-ratio: 0.79;
+    height: $MATERIAL_XLARGE_MOBILE;
+
+    @include breakpoint-s {
+      height: $MATERIAL_XLARGE_DESKTOP;
     }
   }
 }

@@ -1,6 +1,7 @@
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
 import { Button } from "../Buttons/button/Button";
+import { generateId } from "../horizontal-term-line/HorizontalTermLine";
 import { Material } from "../material/Material";
 import MaterialHeaderText from "./MaterialHeaderText";
 import MaterialPeriodikumSelect from "./MaterialPeriodikumSelect";
@@ -31,7 +32,7 @@ const listOfAvailabilityLabels = [
     availability: "Hjemme",
     status: "available",
   } as const,
-].map((item) => <AvailabilityLabel {...item} />);
+].map((item, index) => <AvailabilityLabel {...item} key={generateId(index)} />);
 
 interface MaterialHeaderProps {
   title: string;
@@ -50,8 +51,8 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
     <header className="material-header">
       <div className="material-header__cover">
         <Material
-          url="images/book_cover_3.jpg"
-          size="large"
+          url="images/book_cover_3_large.jpeg"
+          size="xlarge"
           tint="120"
           animate
         />

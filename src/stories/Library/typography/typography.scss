@@ -332,8 +332,12 @@
 
 .text-label-semibold {
   @extend %text-label;
-
   font-weight: 500;
+}
+
+.text-label-bold {
+  @extend %text-label;
+  font-weight: 700;
 }
 
 .text-truncate {

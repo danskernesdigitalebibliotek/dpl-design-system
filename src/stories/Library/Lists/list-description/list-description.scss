@@ -3,12 +3,18 @@ dl.list-description {
 
   color: $c-text-secondary-gray;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
+
+  & > div {
+    display: flex;
+    flex-flow: row wrap;
+  }
 
   dt {
     flex-basis: 18%;
     padding: 2px 4px;
   }
+
   dd {
     flex-basis: 72%;
     flex-grow: 1;

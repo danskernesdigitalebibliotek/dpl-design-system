@@ -1,6 +1,7 @@
 .material-manifestation-item {
   background-color: #fff;
-  padding: 24px;
+  padding: $s-lg;
+  margin: 0 $s-lg $s-md $s-lg;
   padding-top: 30px;
   display: grid;
   cursor: pointer;
@@ -8,6 +9,7 @@
   @include breakpoint-s {
     min-height: 184px;
     grid-template-columns: min-content minmax(0, 634px) 1fr;
+    grid-template-rows: 40px auto;
   }
 
   &:hover {
@@ -80,7 +82,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 158px;
     justify-self: end;
   }
   button {
