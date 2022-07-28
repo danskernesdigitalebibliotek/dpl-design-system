@@ -37,7 +37,6 @@ export const MaterialMainfestationItem = ({
           tint="120"
         />
       </div>
-
       <div className="material-manifestation-item__text">
         <h2 className="material-manifestation-item__text__title text-header-h4">
           {title}

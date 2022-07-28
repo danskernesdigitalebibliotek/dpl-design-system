@@ -1,6 +1,7 @@
 .material-manifestation-item {
   background-color: #fff;
-  padding: 24px;
+  padding: $s-lg;
+  margin: 0 $s-lg $s-md $s-lg;
   padding-top: 30px;
   display: grid;
   cursor: pointer;
@@ -82,7 +83,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 158px;
     justify-self: end;
   }
   button {
