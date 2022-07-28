@@ -1,0 +1,17 @@
+.status-userprofile {
+  display: flex;
+  flex-direction: column;
+  column-gap: 25px;
+
+  @include breakpoint-s {
+    flex-direction: row;
+    row-gap: 25px;
+  }
+
+  &__column {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+}
