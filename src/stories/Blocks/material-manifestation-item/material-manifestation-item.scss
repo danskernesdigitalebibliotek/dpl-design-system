@@ -8,6 +8,7 @@
   @include breakpoint-s {
     min-height: 184px;
     grid-template-columns: min-content minmax(0, 634px) 1fr;
+    grid-template-rows: 40px auto;
   }
 
   &:hover {
@@ -30,6 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  height: fit-content;
 }
 
 .material-manifestation-item__text {

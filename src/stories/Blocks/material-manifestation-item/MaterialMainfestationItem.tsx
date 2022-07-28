@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { AvailabilityLabel } from "../../Library/availability-label/AvailabilityLabel";
 import { Button } from "../../Library/Buttons/button/Button";
 import ListDescription, {
@@ -18,6 +19,7 @@ export const MaterialMainfestationItem = ({
   year,
   detailsData,
 }: MaterialMainfestationItemProps) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="material-manifestation-item">
       <div className="material-manifestation-item__availability">
@@ -41,11 +43,18 @@ export const MaterialMainfestationItem = ({
           {title}
         </h2>
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
-        <div className="material-manifestation-item__text__details expanded">
+        <div
+          className={`material-manifestation-item__text__details ${
+            isOpen ? "expanded" : ""
+          }`}
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
           <p className="link-tag text-small-caption">Detaljer om materialet </p>
           <img src="icons/collection/ExpandMore.svg" alt="ExpandMore" />
         </div>
-        <ListDescription className="mt-24" data={detailsData} />
+        {isOpen && <ListDescription className="mt-24" data={detailsData} />}
       </div>
 
       <div className="material-manifestation-item__reserve">
