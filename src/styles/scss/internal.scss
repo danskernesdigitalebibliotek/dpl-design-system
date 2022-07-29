@@ -129,3 +129,13 @@ code {
 .sb-show-main {
   padding: 0 !important;
 }
+
+// Shadows
+.shadow-box-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.shadow-box-item {
+  padding: 24px;
+}
