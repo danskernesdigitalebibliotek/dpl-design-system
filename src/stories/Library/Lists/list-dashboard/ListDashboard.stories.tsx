@@ -7,7 +7,34 @@ export default {
   title: "Library / Lists / Dashboard",
   component: ListDashboard,
   decorators: [withDesign],
-  argTypes: {},
+  argTypes: {
+    label: {
+      control: "object",
+      defaultValue: {
+        label: "overskredet",
+        status: "danger",
+      },
+    },
+    number: {
+      control: "object",
+      defaultValue: {
+        label: "2",
+        status: "danger",
+      },
+    },
+    title: {
+      control: "text",
+      defaultValue: "Afleveret for sent",
+    },
+    showDot: {
+      control: "boolean",
+      defaultValue: "true",
+    },
+    href: {
+      control: "string",
+      defaultValue: "/",
+    },
+  },
   parameters: {
     design: {
       type: "figma",
@@ -17,19 +44,9 @@ export default {
 } as ComponentMeta<typeof ListDashboard>;
 
 const Template: ComponentStory<typeof ListDashboard> = (args) => (
-  <ListDashboard {...args} />
+  <div className="m-24">
+    <ListDashboard {...args} />
+  </div>
 );
 
-export const Item1 = Template.bind({});
-Item1.args = {
-  label: {
-    label: "overskredet",
-    status: "danger",
-  },
-  number: {
-    label: 2,
-    status: "danger",
-  },
-  title: "Afleveret for sent",
-  showDot: true,
-};
+export const DashboardList = Template.bind({});
