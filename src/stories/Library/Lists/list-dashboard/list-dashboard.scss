@@ -4,9 +4,16 @@
   background: #fff;
   position: relative;
   padding: 16px;
+  text-decoration: none;
 
   @include breakpoint-s {
     padding: 16px 24px;
+
+    &:hover {
+      .list-dashboard__arrow {
+        visibility: visible;
+      }
+    }
   }
 }
 
@@ -27,4 +34,10 @@
   height: 8px;
   background: #d63649;
   border-radius: 100%;
+}
+
+.list-dashboard__arrow {
+  visibility: hidden;
+  margin-left: auto;
+  width: 90px; // Avoids extending beyond the edge of the box.
 }

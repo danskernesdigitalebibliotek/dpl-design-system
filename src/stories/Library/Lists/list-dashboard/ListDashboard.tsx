@@ -1,8 +1,10 @@
 import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
 import { Number, NumberProps } from "../../number/Number";
+import { ReactComponent as ArrowSmallRight } from "../../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 
 export type ListDashboardProps = {
   title: string;
+  href: string;
   number: NumberProps;
   label: StatusLabelProps;
   showDot: boolean;
@@ -10,12 +12,16 @@ export type ListDashboardProps = {
 
 export const ListDashboard: React.FC<ListDashboardProps> = ({
   title,
+  href,
   number,
   label,
   showDot,
 }) => {
   return (
-    <div className="list-dashboard">
+    <a
+      href={href}
+      className="list-dashboard shadow-medium-hover arrow__hover--right-small"
+    >
       <Number label={number.label} status={number.status} />
       <span
         className={
@@ -28,6 +34,7 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
       </span>
       {label && <StatusLabel label={label.label} status={label.status} />}
       {showDot && <div className="list-dashboard__dot" />}
-    </div>
+      <ArrowSmallRight className="list-dashboard__arrow" />
+    </a>
   );
 };

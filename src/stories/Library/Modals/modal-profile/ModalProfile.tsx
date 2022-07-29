@@ -69,6 +69,7 @@ export const ModalProfile: React.FC<ModalProfileProps> = ({
                 number={item.number}
                 label={item.label}
                 showDot={item.showDot}
+                href={item.href}
               />
             </div>
           ))}
