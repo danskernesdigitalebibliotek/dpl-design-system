@@ -6,8 +6,8 @@ export type ReviewProps = {
   hearts: 1 | 2 | 3 | 4 | 5 | 6;
   headlineText: string;
   bodyText?: string;
-  linkText?: string;
-  linkLink: string;
+  linkText: string;
+  linkLink?: string;
 };
 
 export const Review: React.FC<ReviewProps> = ({
