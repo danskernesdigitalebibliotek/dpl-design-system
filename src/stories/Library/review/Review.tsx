@@ -30,6 +30,7 @@ export const Review: React.FC<ReviewProps> = ({
             <div className="review__meta mb-8">{meta}</div>
             <div
               className="mb-4"
+              role="figure"
               aria-label={`Rating of this item is ${hearts} out of 6`}
             >
               {filledHeartsArray.map((value) => {
