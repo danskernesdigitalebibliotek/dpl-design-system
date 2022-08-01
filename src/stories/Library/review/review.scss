@@ -1,5 +1,5 @@
 .reviews {
-  margin: 0 $s-4xl 0 $s-4xl;
+  margin: 0 $s-4xl;
 }
 
 .review {
@@ -13,9 +13,7 @@
   }
 
   &__heart {
-    // in Figma the heart is 12px but the img SVG in the browser has
-    // some white space in the top, so I went for making it visually
-    // the same height as the font to match the design brief
+    // Ensure SVG has same height as font despite top whitespace.
     height: 14px;
     display: inline-block;
     margin-right: 2px;

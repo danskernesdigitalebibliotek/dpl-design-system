@@ -54,10 +54,8 @@ export const Review: React.FC<ReviewProps> = ({
             <div className="review__headline mb-8">{headline}</div>
             {body && <p className="review__body mb-8">{body}</p>}
             {linkText && (
-              <a href={linkLink}>
-                <div className="link-tag text-small-caption mb-8">
-                  {linkText}
-                </div>
+              <a href={linkLink} className="link-tag text-small-caption mb-8">
+                {linkText}
               </a>
             )}
           </li>
