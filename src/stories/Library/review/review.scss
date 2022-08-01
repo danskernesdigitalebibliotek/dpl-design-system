@@ -1,0 +1,36 @@
+.reviews {
+  margin: 0 $s-4xl 0 $s-4xl;
+}
+
+.review {
+  margin-bottom: $s-xl;
+  &:last-of-type {
+    margin-bottom: $s-2xl;
+  }
+
+  &__meta {
+    color: $c-text-secondary-gray;
+  }
+
+  &__heart {
+    // in Figma the heart is 12px but the img SVG in the browser has
+    // some white space in the top, so I went for making it visually
+    // the same height as the font to match the design brief
+    height: 14px;
+    display: inline-block;
+    margin-right: 2px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__headline {
+    color: $c-text-secondary-gray;
+  }
+
+  &__body {
+    max-width: 545px;
+    line-height: 16px;
+    color: $c-text-secondary-gray;
+  }
+}
