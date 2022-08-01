@@ -10,7 +10,7 @@ export default {
     numberOfReviews: {
       defaultValue: 1,
     },
-    metaHeadline: {
+    meta: {
       defaultValue: "Berlingske tidende, 2021.03.19",
       control: "text",
     },

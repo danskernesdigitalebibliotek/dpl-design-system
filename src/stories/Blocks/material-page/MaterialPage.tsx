@@ -53,7 +53,7 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
       <Disclosure headline="Anmeldelser" icon="Create">
         <Review
           numberOfReviews={1}
-          metaHeadline="Meta headline"
+          meta="Meta headline"
           hearts={3}
           headline="Headline"
           body="Body text of the review..."
