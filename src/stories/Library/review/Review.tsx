@@ -4,8 +4,8 @@ export type ReviewProps = {
   numberOfReviews: number;
   metaHeadline: string;
   hearts: 1 | 2 | 3 | 4 | 5 | 6;
-  headlineText: string;
-  bodyText?: string;
+  headline: string;
+  body?: string;
   linkText: string;
   linkLink?: string;
 };
@@ -14,8 +14,8 @@ export const Review: React.FC<ReviewProps> = ({
   numberOfReviews,
   metaHeadline,
   hearts,
-  headlineText,
-  bodyText,
+  headline,
+  body,
   linkText,
   linkLink,
 }) => {
@@ -50,8 +50,8 @@ export const Review: React.FC<ReviewProps> = ({
                 );
               })}
             </div>
-            <div className="review__headline mb-8">{headlineText}</div>
-            {bodyText && <p className="review__body mb-8">{bodyText}</p>}
+            <div className="review__headline mb-8">{headline}</div>
+            {body && <p className="review__body mb-8">{body}</p>}
             {linkText && (
               <a href={linkLink}>
                 <div className="link-tag text-small-caption mb-8">

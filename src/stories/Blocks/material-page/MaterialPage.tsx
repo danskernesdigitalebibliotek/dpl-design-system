@@ -55,8 +55,8 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
           numberOfReviews={1}
           metaHeadline="Meta headline"
           hearts={3}
-          headlineText="Headline"
-          bodyText="Body text of the review..."
+          headline="Headline"
+          body="Body text of the review..."
           linkText="Link to review"
           linkLink="/"
         />

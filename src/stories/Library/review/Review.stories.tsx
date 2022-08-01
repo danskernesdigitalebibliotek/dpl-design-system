@@ -17,11 +17,11 @@ export default {
     hearts: {
       defaultValue: 5,
     },
-    headlineText: {
+    headline: {
       defaultValue: "Anmeldelse af: Efterskælv",
       control: "text",
     },
-    bodyText: {
+    body: {
       defaultValue:
         "Den anerkendte forfatter tager udgangspunkt i sit ægteskabs nøgne efterskælv. Veloplagt, men rystet, byder hun indenfor - også i de mørkeste kamre. Der har aldrig før været en skilsmisse i denne klan....",
       control: "text",
