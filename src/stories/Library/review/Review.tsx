@@ -38,6 +38,7 @@ export const Review: React.FC<ReviewProps> = ({
                     key={value}
                     src="icons/basic/icon-heart-filled.svg"
                     className="review__heart"
+                    alt=""
                   />
                 );
               })}
@@ -47,6 +48,7 @@ export const Review: React.FC<ReviewProps> = ({
                     key={value}
                     src="icons/basic/icon-heart-grey.svg"
                     className="review__heart"
+                    alt=""
                   />
                 );
               })}
