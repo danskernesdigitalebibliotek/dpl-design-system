@@ -1,11 +1,11 @@
 import { withDesign } from "storybook-addon-designs";
 import { Meta } from "@storybook/react";
 
-import { Shadow } from "./Shadow";
+import { Shadows } from "./Shadows";
 
 export default {
   title: "Library / Shadow",
-  component: Shadow,
+  component: Shadows,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -15,4 +15,4 @@ export default {
   },
 } as Meta;
 
-export const Default = () => <Shadow />;
+export const Default = () => <Shadows />;

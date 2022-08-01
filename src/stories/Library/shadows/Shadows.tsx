@@ -7,14 +7,14 @@ const shadowValues = [
   "shadow-high-hover",
 ];
 
-export const Shadow = () => {
+export const Shadows = () => {
   return (
     <div className="shadow-box-container m-24">
       <p className="text-body-large">Shadows</p>
-      {shadowValues.map((shadowValue) => (
-        <div className={shadowValue}>
+      {shadowValues.map((item, index) => (
+        <div key={index} className={item}>
           <div className="shadow-box-item">
-            <pre className="p-12">.{shadowValue}</pre>
+            <pre className="p-12">.{item}</pre>
           </div>
         </div>
       ))}
@@ -22,4 +22,4 @@ export const Shadow = () => {
   );
 };
 
-export default Shadow;
+export default Shadows;
