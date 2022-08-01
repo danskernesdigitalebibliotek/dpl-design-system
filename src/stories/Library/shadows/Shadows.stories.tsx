@@ -4,7 +4,7 @@ import { Meta } from "@storybook/react";
 import { Shadows } from "./Shadows";
 
 export default {
-  title: "Library / Shadow",
+  title: "Library / Shadows",
   component: Shadows,
   decorators: [withDesign],
   parameters: {
