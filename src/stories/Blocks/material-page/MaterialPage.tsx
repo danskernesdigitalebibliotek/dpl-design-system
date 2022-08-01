@@ -6,6 +6,7 @@ import ListDescription, {
 import fakeData from "../../Library/Lists/list-description/ListDescriptionFakeData";
 import MaterialDescription from "../../Library/material-description/MaterialDescription";
 import MaterialHeader from "../../Library/material-header/MaterialHeader";
+import { Review } from "../../Library/review/Review";
 import { MaterialMainfestationItem } from "../material-manifestation-item/MaterialMainfestationItem";
 
 export interface MaterialPageProps {
@@ -50,7 +51,15 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
         <ListDescription data={fakeData as ListData} className="pl-80 pb-48" />
       </Disclosure>
       <Disclosure headline="Anmeldelser" icon="Create">
-        Content
+        <Review
+          numberOfReviews={1}
+          metaHeadline="Meta headline"
+          hearts={3}
+          headlineText="Headline"
+          bodyText="Body text of the review..."
+          linkText="Link to review"
+          linkLink="/"
+        />
       </Disclosure>
     </div>
   );
