@@ -1,9 +1,9 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { Reviews as ReviewsComp } from "./Review";
+import { Review as ReviewsComp } from "./Review";
 
 export default {
-  title: "Library / Reviews",
+  title: "Library / Review",
   component: ReviewsComp,
   decorators: [withDesign],
   argTypes: {

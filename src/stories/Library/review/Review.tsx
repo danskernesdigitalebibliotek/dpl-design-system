@@ -1,6 +1,6 @@
 import React from "react";
 
-export type ReviewsProps = {
+export type ReviewProps = {
   numberOfReviews: number;
   metaHeadline: string;
   hearts: 1 | 2 | 3 | 4 | 5 | 6;
@@ -10,7 +10,7 @@ export type ReviewsProps = {
   linkLink: string;
 };
 
-export const Reviews: React.FC<ReviewsProps> = ({
+export const Review: React.FC<ReviewProps> = ({
   numberOfReviews,
   metaHeadline,
   hearts,
@@ -66,4 +66,4 @@ export const Reviews: React.FC<ReviewsProps> = ({
   );
 };
 
-export default Reviews;
+export default Review;
