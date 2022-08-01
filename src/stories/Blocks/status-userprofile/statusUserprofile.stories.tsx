@@ -37,6 +37,7 @@ export default {
           },
           title: "Afleveret for sent",
           showDot: true,
+          href: "/",
         },
         {
           label: {
@@ -49,6 +50,7 @@ export default {
           },
           title: "Afleveres snart",
           showDot: true,
+          href: "/",
         },
         {
           number: {
@@ -57,6 +59,7 @@ export default {
           },
           title: "Længere afleveringstid",
           showDot: false,
+          href: "/",
         },
       ],
     },
@@ -84,6 +87,7 @@ export default {
           },
           title: "Klar til dig",
           showDot: true,
+          href: "/",
         },
         {
           number: {
@@ -92,6 +96,7 @@ export default {
           },
           title: "Stadig i kø",
           showDot: false,
+          href: "/",
         },
       ],
     },
