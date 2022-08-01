@@ -30,6 +30,7 @@ export const StatusUserprofile = (props: StatusUserprofileProps) => {
                 number={item.number}
                 label={item.label}
                 showDot={item.showDot}
+                href={item.href}
               />
             </div>
           ))
@@ -51,6 +52,7 @@ export const StatusUserprofile = (props: StatusUserprofileProps) => {
                 number={item.number}
                 label={item.label}
                 showDot={item.showDot}
+                href={item.href}
               />
             </div>
           ))
