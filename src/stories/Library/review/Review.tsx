@@ -28,13 +28,15 @@ export const Review: React.FC<ReviewProps> = ({
         return (
           <li className="review text-small-caption" key={reviewNumber}>
             <div className="review__meta mb-8">{metaHeadline}</div>
-            <div className="mb-4">
+            <div
+              className="mb-4"
+              aria-label={`Rating of this item is ${hearts} out of 6`}
+            >
               {filledHeartsArray.map((value) => {
                 return (
                   <img
                     key={value}
                     src="icons/basic/icon-heart-filled.svg"
-                    alt="icon-heart-filled"
                     className="review__heart"
                   />
                 );
@@ -44,7 +46,6 @@ export const Review: React.FC<ReviewProps> = ({
                   <img
                     key={value}
                     src="icons/basic/icon-heart-grey.svg"
-                    alt="icon-heart-grey"
                     className="review__heart"
                   />
                 );
