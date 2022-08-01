@@ -9,6 +9,7 @@ export default {
   argTypes: {
     numberOfReviews: {
       defaultValue: 1,
+      control: { type: null },
     },
     meta: {
       defaultValue: "Berlingske tidende, 2021.03.19",
@@ -47,5 +48,17 @@ const Template: ComponentStory<typeof ReviewsComp> = (args) => {
   return <ReviewsComp {...args} />;
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Single = Template.bind({});
+Single.args = {};
+
+// Show multiple reviews to showcase different spacing
+export const Multiple = Template.bind({});
+Multiple.args = {
+  numberOfReviews: 2,
+  meta: "Berlingske tidende, 2021.03.19",
+  hearts: 2,
+  headline: "Headline",
+  body: "Body text.",
+  linkLink: "/",
+  linkText: "Berlingske tidende, 2021.03.19",
+};
