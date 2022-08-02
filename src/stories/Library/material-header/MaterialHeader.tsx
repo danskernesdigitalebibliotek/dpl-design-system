@@ -72,6 +72,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
             disabled={false}
             collapsible={false}
             size="large"
+            classNames="capitalize-all"
           />
           <Button
             label="FIND PÅ HYLDEN"
@@ -80,6 +81,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
             disabled={false}
             collapsible={false}
             size="large"
+            classNames="capitalize-all"
           />
         </div>
         {ctaText && <p className="mt-16 text-small-caption">{ctaText}</p>}

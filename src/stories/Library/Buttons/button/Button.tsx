@@ -8,6 +8,7 @@ export type ButtonProps = {
   size: "large" | "medium" | "small" | "xsmall";
   variant: "outline" | "filled";
   onClick?: () => void;
+  classNames?: string;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -18,6 +19,7 @@ export const Button: React.FC<ButtonProps> = ({
   size,
   variant,
   onClick,
+  classNames,
 }) => {
   const iconClassName = `btn-icon ${collapsible ? "btn-collapsible" : ""}`;
 
@@ -62,7 +64,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type="button"
-      className={`btn-primary ${getVariant()} ${getSize()} arrow__hover--right-small`}
+      className={`btn-primary ${getVariant()} ${getSize()} arrow__hover--right-small ${classNames}`}
       disabled={disabled}
       onClick={onClick}
     >
