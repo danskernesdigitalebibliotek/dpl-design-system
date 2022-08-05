@@ -1,16 +1,16 @@
 import clsx from "clsx";
 
-export type MaterialProps = {
+export type CoverProps = {
   url: string;
   animate: boolean;
   size: "xsmall" | "small" | "medium" | "large" | "xlarge";
   tint?: "20" | "40" | "60" | "80" | "120";
-  materialUrl?: string;
-  materialDescription?: string;
+  coverUrl?: string;
+  coverDescription?: string;
 };
 
-export const Material = (props: MaterialProps) => {
-  const { size, animate, url, tint, materialUrl, materialDescription } = props;
+export const Cover = (props: CoverProps) => {
+  const { size, animate, url, tint, coverUrl, coverDescription } = props;
 
   type TintClassesType = {
     [key: string]: string;
@@ -25,27 +25,21 @@ export const Material = (props: MaterialProps) => {
   };
 
   const classes = {
-    wrapper: clsx(
-      `material material--${size}`,
-      tintClasses[tint || "default"],
-      {
-        material__animate: animate,
-      }
-    ),
+    wrapper: clsx(`cover cover--${size}`, tintClasses[tint || "default"], {
+      cover__animate: animate,
+    }),
   };
 
-  const materialCover = url && (
-    <img src={url} alt={materialDescription || ""} />
-  );
+  const materialCover = url && <img src={url} alt={coverDescription || ""} />;
 
   return (
-    <div className="material-container">
+    <div className="cover-container">
       {/**
        * Images inside links must have an non-empty alt text to meet accessibility requirements.
-       * Only render the material as a link if we have both an url and a description.
+       * Only render the cover as a link if we have both an url and a description.
        */}
-      {materialUrl && materialDescription ? (
-        <a href={materialUrl} className={classes.wrapper}>
+      {coverUrl && coverDescription ? (
+        <a href={coverUrl} className={classes.wrapper}>
           {materialCover}
         </a>
       ) : (
