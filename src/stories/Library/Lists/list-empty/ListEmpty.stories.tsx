@@ -11,6 +11,19 @@ export default {
       defaultValue: "Du har i øjeblikket 0 Reserveringer",
       control: "text",
     },
+    links: {
+      control: "object",
+      defaultValue: [
+        {
+          linkText: "link tekst 1",
+          href: "https://example.com/",
+        },
+        {
+          linkText: "link tekst 2",
+          href: "https://example.com/",
+        },
+      ],
+    },
   },
   parameters: {
     design: {
