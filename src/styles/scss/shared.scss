@@ -106,3 +106,11 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+.capitalize-all {
+  text-transform: uppercase;
+}
+
+.capitalize-first:first-letter {
+  text-transform: uppercase;
+}

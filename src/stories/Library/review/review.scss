@@ -1,0 +1,33 @@
+.reviews {
+  margin: 0 $s-4xl;
+}
+
+.review {
+  margin-bottom: $s-xl;
+  &:last-of-type {
+    margin-bottom: $s-2xl;
+  }
+
+  &__meta {
+    color: $c-text-secondary-gray;
+  }
+
+  &__heart {
+    // Ensure SVG has same height as font despite top whitespace.
+    height: 14px;
+    display: inline-block;
+    margin-right: 2px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__headline {
+    color: $c-text-secondary-gray;
+  }
+
+  &__body {
+    max-width: 545px;
+    color: $c-text-secondary-gray;
+  }
+}
