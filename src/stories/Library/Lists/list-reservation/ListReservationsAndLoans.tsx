@@ -1,6 +1,6 @@
 import { Counter, CounterProps } from "../../counter/Counter";
 import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
-import { Material } from "../../material/Material";
+import { Cover } from "../../cover/Cover";
 
 export type ListReservationsAndLoansProps = {
   material: {
@@ -34,7 +34,7 @@ export const ListReservationsAndLoans = (
       >
         <div className="list-reservation__material">
           <div>
-            <Material size="small" animate url={material.image} />
+            <Cover size="small" animate url={material.image} />
           </div>
           <div className="list-reservation__information">
             <div>

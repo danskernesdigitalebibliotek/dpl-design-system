@@ -1,4 +1,4 @@
-import { Material } from "../material/Material";
+import { Cover } from "../cover/Cover";
 
 export type AutosuggestMaterialProps = {
   items: {
@@ -29,7 +29,7 @@ export const AutosuggestMaterial: React.FC<AutosuggestMaterialProps> = ({
               <li className="autosuggest__material">
                 <div className="autosuggest__material__content">
                   <div className="autosuggest__cover">
-                    <Material size="xsmall" animate url={item.cover} />
+                    <Cover size="xsmall" animate url={item.cover} />
                   </div>
                   <div className="autosuggest__info">
                     <div className="text-body-medium-medium autosuggest__title">

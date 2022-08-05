@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { ButtonUI } from "../Buttons/button-ui/ButtonUI";
-import { Material, MaterialProps } from "../material/Material";
+import { Cover, CoverProps } from "../cover/Cover";
 
 export type MaterialCardProps = {
   title: string;
   description: string;
   isLiked: boolean;
-  material: MaterialProps;
+  material: CoverProps;
 };
 
 export const MaterialCard: React.FC<MaterialCardProps> = ({
@@ -50,8 +50,8 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({
           </svg>
         </ButtonUI>
       </div>
-      <div className="material-card__material">
-        <Material {...material} />
+      <div className="material-card__cover">
+        <Cover {...material} />
       </div>
       <div className="material-card__texts">
         <p className="material-card__title">{title}</p>

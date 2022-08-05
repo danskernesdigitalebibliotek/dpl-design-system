@@ -1,4 +1,4 @@
-import { Material } from "../material/Material";
+import { Cover } from "../cover/Cover";
 
 export type ReservationHeaderProps = {
   author: string;
@@ -14,7 +14,7 @@ const ReservationHeader = ({
   return (
     <div className="dpl-reservation-header">
       <div className="dpl-reservation-header__material">
-        <Material
+        <Cover
           url="http://placehold.jp/150x150.png"
           size="medium"
           animate={false}

@@ -1,5 +1,5 @@
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
-import { Material } from "../material/Material";
+import { Cover } from "../cover/Cover";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
 import HorizontalTermLine, {
@@ -24,7 +24,7 @@ export const SearchResultItem = ({
   return (
     <a href="/" className="search-result-item arrow arrow__hover--right-small">
       <div className="search-result-item__cover">
-        <Material
+        <Cover
           url="images/book_cover_3.jpg"
           size="small"
           animate={false}
