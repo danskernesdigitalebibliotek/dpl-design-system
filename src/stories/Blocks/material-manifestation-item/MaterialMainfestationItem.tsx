@@ -38,12 +38,12 @@ export const MaterialMainfestationItem = ({
         />
       </div>
       <div className="material-manifestation-item__text">
-        <h2 className="material-manifestation-item__text__title text-header-h4">
+        <h2 className="material-manifestation-item__title text-header-h4">
           {title}
         </h2>
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
         <div
-          className={`material-manifestation-item__text__details ${
+          className={`material-manifestation-item__details ${
             isOpen ? "expanded" : ""
           }`}
           onClick={() => {
@@ -56,7 +56,7 @@ export const MaterialMainfestationItem = ({
         {isOpen && <ListDescription className="mt-24" data={detailsData} />}
       </div>
 
-      <div className="material-manifestation-item__reserve">
+      <div className="material-manifestation-item__buttons">
         <Button
           label="RESERVER"
           buttonType="none"
@@ -65,7 +65,7 @@ export const MaterialMainfestationItem = ({
           size="small"
           variant="filled"
         />
-        <span className="link-tag text-small-caption material-manifestation-item__reserve__find">
+        <span className="link-tag text-small-caption material-manifestation-item__find">
           Find på hylden
         </span>
       </div>
