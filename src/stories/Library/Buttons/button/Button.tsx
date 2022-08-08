@@ -22,7 +22,9 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   classNames,
 }) => {
-  const iconClassName = `btn-icon ${collapsible ? "btn-collapsible" : ""}`;
+  const iconClassName = `ml-16 btn-icon ${
+    collapsible ? "btn-collapsible" : ""
+  }`;
 
   const Icon = () => {
     if (buttonType === "default") {
@@ -34,7 +36,7 @@ export const Button: React.FC<ButtonProps> = ({
     }
     if (buttonType === "external-link") {
       return (
-        <div className="ml-16">
+        <div className={iconClassName}>
           <IconExternalLink />
         </div>
       );

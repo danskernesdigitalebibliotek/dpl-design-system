@@ -1,4 +1,3 @@
-import React from "react";
 import { ReactComponent as Svg } from "./svg/icon-external-link.svg";
 
 export const IconExternalLink = () => {
