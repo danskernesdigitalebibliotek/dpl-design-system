@@ -4,6 +4,8 @@ export type CheckboxProps = {
   isChecked: boolean;
   label?: string;
   ariaLabel?: string;
+  labelLinkText?: string;
+  labelLinkHref?: string;
   validation?: string;
   callback?: (isChecked: boolean) => void;
   hiddenLabel: boolean;
@@ -12,6 +14,8 @@ export type CheckboxProps = {
 export const Checkbox: React.FC<CheckboxProps> = ({
   isChecked,
   label,
+  labelLinkText,
+  labelLinkHref,
   ariaLabel,
   callback,
   validation,
@@ -64,6 +68,14 @@ export const Checkbox: React.FC<CheckboxProps> = ({
             <div className="checkbox__text text-small-caption checkbox__text--validation">
               {validation}
             </div>
+          )}
+          {labelLinkText && (
+            <a
+              href={labelLinkHref}
+              className="checkbox__text text-small-caption color-secondary-gray"
+            >
+              {labelLinkText}
+            </a>
           )}
         </div>
       </label>

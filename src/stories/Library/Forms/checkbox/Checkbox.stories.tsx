@@ -12,6 +12,16 @@ export default {
         type: "text",
       },
     },
+    labelLinkText: {
+      control: {
+        type: "text",
+      },
+    },
+    labelLinkHref: {
+      control: {
+        type: "text",
+      },
+    },
     validation: {
       control: {
         type: "text",
@@ -37,6 +47,14 @@ export const Checked = Template.bind({});
 Checked.args = {
   isChecked: true,
   label: "Toggle this checkbox",
+};
+
+export const CheckedWithLink = Template.bind({});
+CheckedWithLink.args = {
+  isChecked: true,
+  label: "Toggle this checkbox",
+  labelLinkText: "Se betingelser",
+  labelLinkHref: "#",
 };
 
 export const Unchecked = Template.bind({});
