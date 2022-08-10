@@ -18,12 +18,12 @@ export const Item = Template.bind({});
 Item.args = {
   title: "Nyt på hylderne",
   body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  cards: [
+  covers: [
     {
       title: "De uadskillelige",
       description: "Simone de Beauvoir",
       isLiked: false,
-      material: {
+      cover: {
         url: "images/book_cover_1.jpg",
         animate: true,
         size: "medium",
@@ -34,7 +34,7 @@ Item.args = {
       title: "Den lille bog om dansk design",
       description: "Af Marie Hugsted",
       isLiked: false,
-      material: {
+      cover: {
         url: "images/book_cover_2.jpg",
         animate: true,
         size: "medium",
@@ -45,7 +45,7 @@ Item.args = {
       title: "Audrey Hepburn",
       description: "Isabel Sánchez Vegara",
       isLiked: true,
-      material: {
+      cover: {
         url: "images/book_cover_3.jpg",
         animate: true,
         size: "medium",
@@ -56,7 +56,7 @@ Item.args = {
       title: "Døgnkioskmennesket",
       description: "Sayaka Murata",
       isLiked: false,
-      material: {
+      cover: {
         url: "images/book_cover_4.jpg",
         animate: true,
         size: "medium",
@@ -67,7 +67,7 @@ Item.args = {
       title: "Experiment with photosynthesis",
       description: "Søren Rasmussen",
       isLiked: false,
-      material: {
+      cover: {
         url: "images/book_cover_5.jpg",
         animate: true,
         size: "medium",
@@ -78,7 +78,7 @@ Item.args = {
       title: "Sauna",
       description: "Af Anton M. Berg",
       isLiked: false,
-      material: {
+      cover: {
         url: "images/book_cover_6.jpg",
         animate: true,
         size: "medium",
@@ -89,7 +89,7 @@ Item.args = {
       title: "De uadskillelige",
       description: "Simone de Beauvoir",
       isLiked: false,
-      material: {
+      cover: {
         url: "images/book_cover_1.jpg",
         animate: true,
         size: "medium",
@@ -100,7 +100,7 @@ Item.args = {
       title: "Den lille bog om dansk design",
       description: "Af Marie Hugsted",
       isLiked: false,
-      material: {
+      cover: {
         url: "images/book_cover_2.jpg",
         animate: true,
         size: "medium",

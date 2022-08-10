@@ -37,7 +37,7 @@ const materialCards: MaterialCardProps[] = [
     title: "De uadskillelige",
     description: "Simone de Beauvoir",
     isLiked: false,
-    material: {
+    cover: {
       url: "images/book_cover_1.jpg",
       animate: true,
       size: "medium",
@@ -48,7 +48,7 @@ const materialCards: MaterialCardProps[] = [
     title: "Den lille bog om dansk design",
     description: "Af Marie Hugsted",
     isLiked: false,
-    material: {
+    cover: {
       url: "images/book_cover_2.jpg",
       animate: true,
       size: "medium",
@@ -59,7 +59,7 @@ const materialCards: MaterialCardProps[] = [
     title: "Audrey Hepburn",
     description: "Isabel Sánchez Vegara",
     isLiked: true,
-    material: {
+    cover: {
       url: "images/book_cover_3.jpg",
       animate: true,
       size: "medium",
@@ -70,7 +70,7 @@ const materialCards: MaterialCardProps[] = [
     title: "Døgnkioskmennesket",
     description: "Sayaka Murata",
     isLiked: false,
-    material: {
+    cover: {
       url: "images/book_cover_4.jpg",
       animate: true,
       size: "medium",
@@ -177,7 +177,7 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
           title="Andre materialer"
           body=""
           linkFilters={linksFilters}
-          cards={materialCards}
+          covers={materialCards}
           showBodyText={false}
           showLinkfilters
         />
