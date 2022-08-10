@@ -28,7 +28,7 @@ MaterialSmall.args = {
   title: "Søren Rasmussen",
   description: "Experiment with photosynthesis",
   isLiked: false,
-  material: {
+  cover: {
     url: "images/book_cover_5.jpg",
     animate: false,
     size: "small",
@@ -40,7 +40,7 @@ MaterialLarge.args = {
   title: "Søren Rasmussen",
   description: "Experiment with photosynthesis",
   isLiked: true,
-  material: {
+  cover: {
     url: "images/book_cover_5.jpg",
     animate: false,
     size: "medium",

@@ -3,7 +3,7 @@ import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
 import { Cover } from "../../cover/Cover";
 
 export type ListReservationsAndLoansProps = {
-  material: {
+  cover: {
     type: string;
     title: string;
     description: string;
@@ -23,7 +23,7 @@ export type ListReservationsAndLoansProps = {
 export const ListReservationsAndLoans = (
   props: ListReservationsAndLoansProps
 ) => {
-  const { material, isStacked, counter, statusLabel, statusNotes, fee } = props;
+  const { cover, isStacked, counter, statusLabel, statusNotes, fee } = props;
 
   return (
     <div className="list-reservation-container">
@@ -34,28 +34,28 @@ export const ListReservationsAndLoans = (
       >
         <div className="list-reservation__material">
           <div>
-            <Cover size="small" animate url={material.image} />
+            <Cover size="small" animate url={cover.image} />
           </div>
           <div className="list-reservation__information">
             <div>
               <StatusLabel label="bog" status="outline" />
             </div>
             <div className="list-reservation__about">
-              <h3 className="text-header-h4">{material.title}</h3>
+              <h3 className="text-header-h4">{cover.title}</h3>
               <p className="text-small-caption color-secondary-gray">
-                {material.description}
+                {cover.description}
               </p>
             </div>
             <button
               type="button"
               aria-label="note about material"
               className={`list-reservation__note-desktop ${
-                material.noteAsWarning
+                cover.noteAsWarning
                   ? "color-signal-alert"
                   : "color-secondary-gray"
               }`}
             >
-              {material.noteLabel}
+              {cover.noteLabel}
             </button>
           </div>
         </div>
@@ -82,14 +82,14 @@ export const ListReservationsAndLoans = (
               )}
               <p className="text-small-caption">{statusNotes}</p>
               <a
-                href={material.noteUrl}
+                href={cover.noteUrl}
                 className={`list-reservation__note-mobile ${
-                  material.noteAsWarning
+                  cover.noteAsWarning
                     ? "color-signal-alert"
                     : "color-secondary-gray"
                 }`}
               >
-                {material.noteLabel}
+                {cover.noteLabel}
               </a>
             </div>
           </div>

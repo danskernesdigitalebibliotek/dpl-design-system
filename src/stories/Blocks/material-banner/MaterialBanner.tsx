@@ -14,7 +14,7 @@ export type MaterialBannerProps = {
   body: string;
   linkFilters: LinkFilter[];
   button?: ButtonProps;
-  cards: MaterialCardProps[];
+  covers: MaterialCardProps[];
   showLinkfilters: boolean;
   showBodyText: boolean;
 };
@@ -23,7 +23,7 @@ export const MaterialBanner: React.FC<MaterialBannerProps> = ({
   title,
   body,
   linkFilters,
-  cards,
+  covers,
   showBodyText,
   showLinkfilters,
 }) => {
@@ -51,9 +51,9 @@ export const MaterialBanner: React.FC<MaterialBannerProps> = ({
         {showBodyText && <p className="text-body-medium-regular">{body}</p>}
       </div>
       <ul className="material-banner__cards">
-        {cards.map((card, index) => (
+        {covers.map((item, index) => (
           <li>
-            <MaterialCard key={index} {...card} />
+            <MaterialCard key={index} {...item} />
           </li>
         ))}
       </ul>

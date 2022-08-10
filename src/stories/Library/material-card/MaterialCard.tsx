@@ -6,14 +6,14 @@ export type MaterialCardProps = {
   title: string;
   description: string;
   isLiked: boolean;
-  material: CoverProps;
+  cover: CoverProps;
 };
 
 export const MaterialCard: React.FC<MaterialCardProps> = ({
   title,
   description,
   isLiked,
-  material,
+  cover,
 }) => {
   const [isItLiked, setIsItLiked] = useState(isLiked);
   const handleClick = () => {
@@ -51,7 +51,7 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({
         </ButtonUI>
       </div>
       <div className="material-card__cover">
-        <Cover {...material} />
+        <Cover {...cover} />
       </div>
       <div className="material-card__texts">
         <p className="material-card__title">{title}</p>

@@ -21,7 +21,7 @@ const Template: ComponentStory<typeof ListReservationsAndLoans> = (args) => (
 
 export const Item1 = Template.bind({});
 Item1.args = {
-  material: {
+  cover: {
     type: "bog",
     title: "Mennesket i naturen",
     description: "Af Anton M. Berg (2020)",
@@ -49,7 +49,7 @@ Item1.args = {
 
 export const Item2 = Template.bind({});
 Item2.args = {
-  material: {
+  cover: {
     type: "bog",
     title: "Audrey Hepburn",
     description: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
@@ -77,7 +77,7 @@ Item2.args = {
 
 export const Item3 = Template.bind({});
 Item3.args = {
-  material: {
+  cover: {
     type: "bog",
     title: "Sauna",
     description: "Af Anton M. Berg (2020)",
@@ -105,7 +105,7 @@ Item3.args = {
 
 export const Item4 = Template.bind({});
 Item4.args = {
-  material: {
+  cover: {
     type: "bog",
     title: "De Uadskillige",
     description: "Af Anton M. Berg (2020)",
@@ -130,7 +130,7 @@ Item4.args = {
 
 export const Item5 = Template.bind({});
 Item5.args = {
-  material: {
+  cover: {
     type: "bog",
     title: "Den lille bog om dansk design - for børn og barnlige sjæle",
     description: "Af Marie Hugsted (2018)",
@@ -155,7 +155,7 @@ Item5.args = {
 
 export const Item6 = Template.bind({});
 Item6.args = {
-  material: {
+  cover: {
     type: "bog",
     title: "Døgnkioskmennesket",
     description: "Af Sayaka Murata (2019)",
@@ -180,7 +180,7 @@ Item6.args = {
 
 export const ItemStacked = Template.bind({});
 ItemStacked.args = {
-  material: {
+  cover: {
     type: "bog",
     title: "Audrey Hepburn",
     description: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
