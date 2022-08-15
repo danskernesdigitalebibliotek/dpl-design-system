@@ -3,6 +3,7 @@ $c-btn-border-disabled: $c-global-tertiary-2;
 
 .btn-icon {
   margin-left: 16px;
+  color: inherit;
 }
 
 .btn-collapsible {
@@ -65,10 +66,6 @@ $c-btn-border-disabled: $c-global-tertiary-2;
 .btn-filled {
   background-color: $c-text-primary-black;
   color: $c-text-primary-white;
-
-  .icon {
-    color: $c-text-primary-white;
-  }
 }
 
 .btn-outline {
