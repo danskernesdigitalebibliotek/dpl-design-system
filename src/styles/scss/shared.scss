@@ -26,7 +26,6 @@
 }
 
 .modal-btn-close {
-  background-color: $c-global-primary;
   position: fixed;
   top: 0;
   right: 0;
@@ -72,9 +71,10 @@
 
 .modal-show {
   display: flex;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
+  top: 0;
   opacity: 1;
 }
 

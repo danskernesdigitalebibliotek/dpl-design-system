@@ -15,10 +15,10 @@ export const ListButton: React.FC<ListButtonProps> = ({
 }) => {
   return (
     <div className="dpl-list-buttons">
-      <div className="dpl-list-buttons__header">
+      <h2 className="dpl-list-buttons__header">
         {header}
         <div className="dpl-list-buttons__power">{number}</div>
-      </div>
+      </h2>
       <div className="dpl-list-buttons__buttons">
         <div className="dpl-list-buttons__buttons__button">
           <IconButton
