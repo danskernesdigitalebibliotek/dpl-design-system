@@ -2,4 +2,9 @@
   cursor: pointer;
   height: 24px;
   width: 24px;
+
+  &--filled {
+    color: var(--identity-color);
+    fill: var(--identity-color);
+  }
 }
