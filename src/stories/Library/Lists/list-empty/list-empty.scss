@@ -3,6 +3,7 @@
   width: 100%;
   background-color: transparent;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px dotted $c-text-secondary-gray;
@@ -11,4 +12,14 @@
   @extend .pt-48;
   @extend .pb-48;
   @extend .text-body-large;
+
+  &__text {
+    @extend .pb-48;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    column-gap: $s-lg;
+  }
 }
