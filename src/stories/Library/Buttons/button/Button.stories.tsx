@@ -55,6 +55,13 @@ External.args = {
   buttonType: "external-link",
 };
 
+export const ExternalFilled = Template.bind({});
+ExternalFilled.args = {
+  label: "external link",
+  buttonType: "external-link",
+  variant: "filled",
+};
+
 export const Search = Template.bind({});
 Search.args = {
   label: "se alle søgeresultater",
