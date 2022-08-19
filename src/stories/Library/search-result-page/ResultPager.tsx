@@ -1,17 +1,14 @@
 import { Button } from "../Buttons/button/Button";
 
-interface SearchResultPagerProps {
+interface ResultPagerProps {
   currentResults: string;
   totalResults: string;
 }
 
-const SearchResultPager = ({
-  currentResults,
-  totalResults,
-}: SearchResultPagerProps) => {
+const ResultPager = ({ currentResults, totalResults }: ResultPagerProps) => {
   return (
-    <div className="search-result-pager">
-      <p className="text-small-caption search-result-pager__title">
+    <div className="result-pager">
+      <p className="text-small-caption result-pager__title">
         {`Viser ${currentResults} ud af ${totalResults} resultater`}
       </p>
       <Button
@@ -26,4 +23,4 @@ const SearchResultPager = ({
   );
 };
 
-export default SearchResultPager;
+export default ResultPager;
