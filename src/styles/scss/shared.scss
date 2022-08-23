@@ -114,3 +114,7 @@
 .capitalize-first:first-letter {
   text-transform: uppercase;
 }
+
+.invert {
+  filter: invert(1);
+}

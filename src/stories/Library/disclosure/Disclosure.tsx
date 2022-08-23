@@ -22,7 +22,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({
       >
         <div className="disclosure__icon bg-identity-tint-120 m-24">
           <img
-            className="disclosure__icon"
+            className="disclosure__icon invert"
             src={`icons/collection/${icon}.svg`}
             alt="various-icon"
           />
