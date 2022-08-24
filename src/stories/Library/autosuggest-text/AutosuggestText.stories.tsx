@@ -13,6 +13,16 @@ export default {
       defaultValue: ["Item one", "Item two"],
       control: { type: "array" },
     },
+    withCategory: {
+      name: "Show category?",
+      defaultValue: false,
+      control: { type: "boolean" },
+    },
+    categoryText: {
+      name: "Category text",
+      defaultValue: "Author",
+      control: { type: "text" },
+    },
   },
   parameters: {
     design: {
@@ -58,3 +68,10 @@ const Template: ComponentStory<typeof AutosuggestText> = (
 );
 
 export const TextSuggestion = Template.bind({});
+
+export const TextSuggestionWithCategory = Template.bind({});
+TextSuggestionWithCategory.args = {
+  items: ["Item one", "Item two"],
+  withCategory: true,
+  categoryText: "Author",
+};
