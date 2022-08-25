@@ -15,7 +15,7 @@ export const AutosuggestText = (props: AutosuggestTextProps) => {
               <li className="autosuggest__text text-body-medium-regular px-24">
                 {item}
                 {withCategory && (
-                  <div className="boxed-text text-tags noselect ml-10">
+                  <div className="boxed-text text-tags noselect ml-8">
                     {categoryText}
                   </div>
                 )}
