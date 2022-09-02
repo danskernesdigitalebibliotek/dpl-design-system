@@ -12,7 +12,7 @@ import { MaterialMainfestationItem } from "../material-manifestation-item/Materi
 export interface MaterialPageProps {
   title: string;
   author: string;
-  periodikum?: boolean;
+  periodical?: boolean;
   ctaText?: string;
   description?: string;
 }
@@ -20,7 +20,7 @@ export interface MaterialPageProps {
 const MaterialPage: React.FC<MaterialPageProps> = ({
   title,
   author,
-  periodikum,
+  periodical,
   ctaText,
   description,
 }) => {
@@ -30,7 +30,7 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
       <MaterialHeader
         title={title}
         author={author}
-        periodikum={periodikum}
+        periodical={periodical}
         ctaText={ctaText}
       />
       <MaterialDescription description={description} />

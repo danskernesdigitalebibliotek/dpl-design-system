@@ -1,14 +1,14 @@
-const MaterialPeriodikumSelect: React.FC = () => {
+const MaterialPeriodicalSelect: React.FC = () => {
   const placeholderData = {
     year: ["2017", "2018", "2019", "2020", "2021", "2022"],
     weeks: ["30", "31", "32", "33", "34", "35"],
   };
 
   return (
-    <div className="text-small-caption material-periodikum ">
-      <div className="material-periodikum-select">
+    <div className="text-small-caption material-periodical ">
+      <div className="material-periodical-select">
         <label htmlFor="year">Årgang</label>
-        <div className="material-periodikum-select__border-container">
+        <div className="material-periodical-select__border-container">
           <select id="year">
             {placeholderData.year.map((year) => (
               <option key={year} value={year}>
@@ -18,9 +18,9 @@ const MaterialPeriodikumSelect: React.FC = () => {
           </select>
         </div>
       </div>
-      <div className="material-periodikum-select">
+      <div className="material-periodical-select">
         <label htmlFor="weeks">Uge</label>
-        <div className="material-periodikum-select__border-container">
+        <div className="material-periodical-select__border-container">
           <select id="weeks">
             {placeholderData.weeks.map((week) => (
               <option key={week} value={week}>
@@ -34,4 +34,4 @@ const MaterialPeriodikumSelect: React.FC = () => {
   );
 };
 
-export default MaterialPeriodikumSelect;
+export default MaterialPeriodicalSelect;

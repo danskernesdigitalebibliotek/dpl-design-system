@@ -4,7 +4,7 @@ import { Button } from "../Buttons/button/Button";
 import { generateId } from "../horizontal-term-line/HorizontalTermLine";
 import { Cover } from "../cover/Cover";
 import MaterialHeaderText from "./MaterialHeaderText";
-import MaterialPeriodikumSelect from "./MaterialPeriodikumSelect";
+import MaterialPeriodicalSelect from "./MaterialPeriodicalSelect";
 
 const listOfAvailabilityLabels = [
   {
@@ -37,14 +37,14 @@ const listOfAvailabilityLabels = [
 interface MaterialHeaderProps {
   title: string;
   author: string;
-  periodikum?: boolean;
+  periodical?: boolean;
   ctaText?: string;
 }
 
 const MaterialHeader: React.FC<MaterialHeaderProps> = ({
   title,
   author,
-  periodikum,
+  periodical,
   ctaText,
 }) => {
   return (
@@ -63,10 +63,10 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
         <div className="material-header__availability-label">
           {listOfAvailabilityLabels}
         </div>
-        {periodikum && <MaterialPeriodikumSelect />}
+        {periodical && <MaterialPeriodicalSelect />}
         <div className="material-header__button">
           <Button
-            label={periodikum ? "RESERVER MAGASIN" : "RESERVER BOG"}
+            label={periodical ? "RESERVER MAGASIN" : "RESERVER BOG"}
             buttonType="none"
             variant="filled"
             disabled={false}
