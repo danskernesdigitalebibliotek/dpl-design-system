@@ -59,7 +59,6 @@
 @import "./src/stories/Library/Buttons/toggle-button/toggle-button";
 @import "./src/stories/Library/pause-reservation/pause-reservation";
 @import "./src/stories/Library/material-header/material-header";
-@import "./src/stories/Library/reservation-header/reservation-header";
 @import "./src/stories/Library/material-header/material-periodikum-select";
 @import "./src/stories/Library/material-description/material-description";
 @import "./src/stories/Library/disclosure/disclosure";
@@ -80,6 +79,8 @@
 @import "./src/stories/Blocks/status-loans/status-loans";
 @import "./src/stories/Blocks/status-userprofile/status-userprofile";
 @import "./src/stories/Blocks/material-manifestation-item/material-manifestation-item";
+@import "./src/stories/Blocks/reservation/reservation.scss";
+
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";
