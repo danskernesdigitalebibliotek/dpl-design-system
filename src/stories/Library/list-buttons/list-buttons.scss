@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   @extend %text-body-medium-medium;
+  @extend %text-body-medium-medium;
 
   &__header {
     all: unset;
@@ -11,11 +12,12 @@
     display: flex;
     align-items: flex-end;
   }
+
   &__power {
-    all: unset;
-    position: absolute;
-    right: 0;
-    top: 4px;
+    height: 30px;
+    vertical-align: super;
+    font-size: 12px;
+    @extend .text-body-medium-regular;
   }
 
   &__buttons {
