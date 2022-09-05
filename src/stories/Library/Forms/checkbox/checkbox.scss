@@ -61,6 +61,8 @@
     height: 1px;
     width: 1px;
     overflow: hidden;
+    // Should include "hide-visually", but it doesn't work, I suspect due to import order
+    // @include hide-visually;
   }
 }
 
