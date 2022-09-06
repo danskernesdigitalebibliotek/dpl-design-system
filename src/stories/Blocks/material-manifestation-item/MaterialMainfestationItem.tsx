@@ -66,7 +66,7 @@ export const MaterialMainfestationItem = ({
           variant="filled"
           classNames="reserve-button"
         />
-        <button className="remove-button-style link-tag text-small-caption material-manifestation-item__find">
+        <button className="link-tag text-small-caption material-manifestation-item__find">
           Find på hylden
         </button>
       </div>
