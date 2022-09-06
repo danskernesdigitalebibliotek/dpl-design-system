@@ -68,9 +68,9 @@ select {
 
 /* Reset default button styling */
 button,
-input[type=button],
-input[type=submit],
-input[type=reset] {
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
   border: inherit;
   background-color: inherit;
 }
