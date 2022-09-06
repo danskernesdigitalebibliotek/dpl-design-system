@@ -1,0 +1,104 @@
+.reservation {
+  background-color: #f6f5f0;
+
+  // ReservationHeader
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $s-md;
+    @include breakpoint-s {
+      flex-direction: row;
+    }
+
+    &__container {
+      margin-top: $s-lg;
+      @include breakpoint-s {
+        margin-left: 42px;
+      }
+    }
+
+    &__tag {
+      @extend .text-tags;
+      @extend .pl-16;
+      @extend .pr-16;
+      @extend .pt-4;
+      @extend .pb-4;
+      border: 1px solid $c-global-tertiary-1;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__title {
+      @extend .text-header-h2;
+      margin-top: 22px;
+      @include breakpoint-s {
+        margin-bottom: 0;
+      }
+    }
+
+    &__author {
+      @extend .text-body-medium-regular;
+      margin-top: $s-sm;
+    }
+  }
+  // ReservationForm
+  &__form {
+    &__submit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @extend .mb-24;
+
+      @include breakpoint-s {
+        justify-content: end;
+        flex-direction: row;
+      }
+
+      &__info {
+        @extend .mb-16;
+        @extend .text-small-caption;
+        @include breakpoint-s {
+          margin-right: $s-lg;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__list {
+      display: grid;
+      gap: $s-sm;
+
+      &__item {
+        background-color: white;
+        display: flex;
+        align-items: center;
+
+        &__icon {
+          @extend .p-35;
+        }
+        // Remove spacing between elements in reservation__form__list__item__content
+        &__container {
+          flex: 1;
+          & > * {
+            margin: 0;
+          }
+        }
+
+        &__title {
+          @extend .text-header-h5;
+        }
+
+        &__text {
+          @extend .text-small-caption;
+        }
+
+        &__change {
+          @extend .pr-32;
+          @extend .link-tag;
+          @extend .text-small-caption;
+        }
+      }
+    }
+  }
+}
