@@ -64,6 +64,7 @@ export const MaterialMainfestationItem = ({
           collapsible={false}
           size="small"
           variant="filled"
+          classNames="reserve-button"
         />
         <button className="remove-button-style link-tag text-small-caption material-manifestation-item__find">
           Find på hylden
