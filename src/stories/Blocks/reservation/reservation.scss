@@ -19,10 +19,8 @@
 
     &__tag {
       @extend .text-tags;
-      @extend .pl-16;
-      @extend .pr-16;
-      @extend .pt-4;
-      @extend .pb-4;
+      @extend .px-16;
+      @extend .py-4;
       border: 1px solid $c-global-tertiary-1;
       display: inline-flex;
       justify-content: center;
@@ -97,6 +95,7 @@
           @extend .pr-32;
           @extend .link-tag;
           @extend .text-small-caption;
+          cursor: pointer;
         }
       }
     }
