@@ -39,11 +39,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({
           <span className="disclosure__headline__text-shorter">{headline}</span>
         )}
         {withAvailability && (
-          <AvailabilityLabel
-            manifestation="Bog"
-            availability="Hjemme"
-            status="available"
-          />
+          <AvailabilityLabel availability="Hjemme" status="available" />
         )}
         <img
           className={`disclosure__expand noselect ${
