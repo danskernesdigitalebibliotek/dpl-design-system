@@ -5,7 +5,7 @@ export type DisclosureProps = {
   headline: string;
   children: React.ReactNode | string;
   icon: "Various" | "Receipt" | "Create" | "Profile";
-  withAvailability: boolean;
+  withAvailability?: boolean;
 };
 
 export const Disclosure: React.FC<DisclosureProps> = ({
