@@ -1,0 +1,76 @@
+.find-on-shelf {
+  background-color: $c-global-secondary;
+
+  &__header-row {
+    display: none;
+
+    @include breakpoint-s {
+      border-bottom: solid 1px $c-global-primary;
+      display: flex;
+      height: $s-xl;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    & > span {
+      &:first-child {
+        margin-left: $s-lg;
+        width: 404px;
+      }
+      &:last-child {
+        margin-right: $s-md;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__row {
+    min-width: $s-6xl;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-s {
+      flex-direction: row;
+      min-height: 110px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    & > span {
+      margin: $s-md $s-md 0 $s-md;
+
+      &:first-child {
+        margin-top: $s-lg;
+      }
+
+      &:last-child {
+        margin-bottom: $s-lg;
+      }
+
+      @include breakpoint-s {
+        margin: 0;
+        max-width: 600px;
+        text-overflow: ellipsis;
+        overflow-y: hidden;
+
+        &:first-child {
+          margin-left: $s-lg;
+          margin-top: inherit;
+          width: 404px;
+        }
+
+        &:last-child {
+          margin-bottom: inherit;
+          margin-left: auto;
+          margin-right: $s-xl;
+        }
+      }
+
+      & .hide-on-desktop {
+        @include breakpoint-s {
+          display: none;
+        }
+      }
+    }
+  }
+}
