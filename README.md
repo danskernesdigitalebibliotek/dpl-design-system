@@ -14,7 +14,13 @@
     - [Development without docker](#development-without-docker)
   - [Usage](#usage)
     - [NPM package](#npm-package)
-  - [Deployment](#deployment)
+  - [Deployment and releases](#deployment-and-releases)
+    - [Tagged releases](#tagged-releases)
+      - [Usage: npm package](#usage-npm-package)
+      - [Usage: Release file](#usage-release-file)
+    - [Branch releases](#branch-releases)
+      - [Usage: npm package](#usage-npm-package-1)
+      - [Usage: Release file](#usage-release-file-1)
   - [Storybook](#storybook)
   - [Chromatic](#chromatic)
     - [What is Storybook](#what-is-storybook)
@@ -134,21 +140,107 @@ authenticate:
 Note that you will need to reauthenticate when your personal access token
 expires.
 
-## Deployment
+## Deployment and releases
 
-The project is getting rebuild on pushes to every branch and every tag. In
-general consuming projects should prefer tagged versions as they are stable
+The project is [automatically built and deployed](.github/workflows/deployment.yml)
+on pushes to every branch and every tag and the result is available as releases
+which support [both types of usage](#usage). This applies for the original
+repository on GitHub and all GitHub forks.
+
+You can follow the status of deployments in the [Actions list for the repository
+on GitHub](https://github.com/danskernesdigitalebibliotek/dpl-design-system/actions/workflows/deployment.yml).
+The action logs also contain additional details regarding the contents and
+publication of each release.  If using a fork then deployment actions can be
+seen on the corresponding list.
+
+In general consuming projects should prefer tagged releases as they are stable
 proper releases.
 
 During development where the design system is being updated in parallel with
 the implementation of a consuming project it may be advantageous to use a
-version tagging a branch.
+release tagging a branch.
 
-Run the following to create a tag and push a release:
+### Tagged releases
+
+Run the following to publish a tag and create a release:
 
 ```shell
 git tag -a v*.*.* && git push origin v*.*.*
 ```
+
+#### Usage: npm package
+
+In the consuming project update usage to the new release:
+
+```shell
+npm install @danskernesdigitalebibliotek/dpl-design-system@*.*.*
+```
+
+#### Usage: Release file
+
+Find the release for the tag on [the releases page on GitHub](https://github.com/danskernesdigitalebibliotek/dpl-design-system/releases)
+and download the `dist.zip` file from there and use it as needed in the
+consuming project.
+
+### Branch releases
+
+The project automatically creates a release for each branch.
+
+Example: Pushing a commit to a new branch `feature/reservation-modal` will
+create the following parts:
+
+1. A git tag for the commit `release-feature/reservation-modal`. A tag is needed
+   to create a GitHub release.
+2. A GitHub release for the called *feature/reservation-modal*. The build is
+   attached here.
+3. A package in the local npm repository tagged `feature-reservation-modal`.
+   Special characters like `/` are not supported by npm tags and are converted
+   to `-`.
+
+Updating the branch will update all parts accordingly.
+
+#### Usage: npm package
+
+In the consuming project update usage to the new release:
+
+```shell
+npm install @danskernesdigitalebibliotek/dpl-design-system@feature-reservation-modal
+```
+
+If your release belongs to a fork you can use [aliasing](https://docs.npmjs.com/cli/v8/commands/npm-install)
+to point to the release of the package in the npm repository for the fork:
+
+```shell
+npm config set @my-fork:registry=https://npm.pkg.github.com
+npm install @danskernesdigitalebibliotek/dpl-design-system@npm:@my-fork/dpl-design-system@feature-reservation-modal
+```
+
+This will update your `package.json` and lock files accordingly. Note that
+branch releases use temporary versions in the format `0.0.0-[GIT-SHA]` and you
+may in practice see these referenced in both files.
+
+If you push new code to the branch you have to update the version used in the
+consuming project:
+
+```shell
+npm update @danskernesdigitalebibliotek/dpl-design-system
+```
+
+[Aliasing](https://classic.yarnpkg.com/lang/en/docs/cli/add/#toc-yarn-add-alias),
+[repository configuration](https://classic.yarnpkg.com/en/docs/cli/config) and
+[updating installed packages](https://classic.yarnpkg.com/en/docs/cli/upgrade)
+are also supported by Yarn.
+
+#### Usage: Release file
+
+Find the release for the branch on [the releases page on GitHub](https://github.com/danskernesdigitalebibliotek/dpl-design-system/releases)
+and download the `dist.zip` file from there and use it as needed in the
+consuming project.
+
+If your branch belongs to a fork then you can find the release on the releases
+page for the fork.
+
+Repeat the process if you push new code to the branch.
 
 ## Storybook
 
