@@ -23,6 +23,11 @@ export default {
       options: ["Various", "Receipt", "Create", "Profile"],
       control: { type: "select" },
     },
+    withAvailability: {
+      name: "Is with availability label?",
+      defaultValue: false,
+      control: { disable: true },
+    },
   },
   parameters: {
     design: {
@@ -37,3 +42,8 @@ const Template: ComponentStory<typeof Disclosure> = (args: DisclosureProps) => (
 );
 
 export const Default = Template.bind({});
+
+export const WithAvailabilityLabel = Template.bind({});
+WithAvailabilityLabel.args = {
+  withAvailability: true,
+};

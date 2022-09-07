@@ -7,10 +7,38 @@
   }
 
   &__headline {
+    height: 88px;
     display: flex;
     align-items: center;
-    justify-content: baseline;
+    justify-content: space-between;
     cursor: pointer;
+    padding-left: 16px;
+
+    @include breakpoint-m {
+      padding-left: 32px;
+    }
+
+    &__text {
+      width: 201px;
+      text-overflow: ellipsis;
+      max-height: 84px;
+      overflow-y: hidden;
+
+      @include breakpoint-m {
+        width: 685px;
+      }
+
+      &-shorter {
+        width: 197px;
+        text-overflow: ellipsis;
+        max-height: 84px;
+        overflow-y: hidden;
+
+        @include breakpoint-m {
+          width: 404px;
+        }
+      }
+    }
   }
 
   &__icon {
@@ -19,14 +47,29 @@
     border-radius: 20px;
     display: flex;
     justify-content: center;
+    margin-right: 16px;
+
+    @include breakpoint-m {
+      margin-left: -8px;
+      margin-right: 24px;
+    }
 
     & > img {
       width: 24px;
     }
   }
+  & .availability-label {
+    margin-left: 24px;
+  }
 
   &__expand {
     margin-left: auto;
+    margin-right: 16px;
+
+    @include breakpoint-m {
+      margin-right: 24px;
+    }
+
     &-open {
       transform: scaleY(-1);
     }
