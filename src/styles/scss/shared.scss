@@ -29,12 +29,24 @@
   position: fixed;
   top: 0;
   right: 0;
-  padding: 34px;
+  padding: 22.5px;
   transition: 0.3s;
   z-index: 2;
 
+  @include breakpoint-s {
+    padding: 34px;
+  }
+
   &:hover {
     transform: rotateZ(90deg);
+  }
+
+  & > img {
+    width: 11.5px;
+
+    @include breakpoint-s {
+      width: 19.5px;
+    }
   }
 }
 
