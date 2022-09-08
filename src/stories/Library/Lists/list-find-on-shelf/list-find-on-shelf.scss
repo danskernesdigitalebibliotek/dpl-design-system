@@ -28,12 +28,17 @@
     min-width: $s-6xl;
     display: flex;
     flex-direction: column;
+    border-bottom: solid 1px $c-global-primary;
 
     @include breakpoint-s {
       flex-direction: row;
       min-height: 110px;
       align-items: center;
       justify-content: flex-start;
+    }
+
+    &:last-child {
+      border-bottom: none;
     }
 
     & > span {
