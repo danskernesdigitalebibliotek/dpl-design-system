@@ -64,10 +64,11 @@ export const MaterialMainfestationItem = ({
           collapsible={false}
           size="small"
           variant="filled"
+          classNames="reserve-button"
         />
-        <span className="link-tag text-small-caption material-manifestation-item__find">
+        <button className="link-tag text-small-caption material-manifestation-item__find">
           Find på hylden
-        </span>
+        </button>
       </div>
     </div>
   );

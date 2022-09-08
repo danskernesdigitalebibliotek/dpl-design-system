@@ -66,6 +66,15 @@ select {
   font: inherit;
 }
 
+/* Reset default button styling */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  border: inherit;
+  background-color: inherit;
+}
+
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
