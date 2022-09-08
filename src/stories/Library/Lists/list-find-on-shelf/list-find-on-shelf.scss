@@ -13,11 +13,15 @@
     }
 
     & > span {
-      &:first-child {
+      &:first-of-type {
         margin-left: $s-lg;
         width: 404px;
+
+        @include breakpoint-s {
+          margin-left: $s-xl;
+        }
       }
-      &:last-child {
+      &:last-of-type {
         margin-right: $s-md;
         margin-left: auto;
       }
@@ -37,18 +41,18 @@
       justify-content: flex-start;
     }
 
-    &:last-child {
+    &:last-of-type {
       border-bottom: none;
     }
 
     & > span {
       margin: $s-md $s-md 0 $s-md;
 
-      &:first-child {
+      &:first-of-type {
         margin-top: $s-lg;
       }
 
-      &:last-child {
+      &:last-of-type {
         margin-bottom: $s-lg;
       }
 
@@ -58,16 +62,18 @@
         text-overflow: ellipsis;
         overflow-y: hidden;
 
-        &:first-child {
-          margin-left: $s-lg;
+        &:first-of-type {
+          margin-left: $s-xl;
           margin-top: inherit;
           width: 404px;
+          min-width: 404px;
         }
 
-        &:last-child {
+        &:last-of-type {
           margin-bottom: inherit;
           margin-left: auto;
           margin-right: $s-xl;
+          overflow-y: visible;
         }
       }
 
