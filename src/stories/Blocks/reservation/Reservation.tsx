@@ -17,7 +17,7 @@ const Reservation = ({
   submitButton,
 }: ReservationProps) => {
   return (
-    <section className="reservation">
+    <section className="reservation-modal">
       <ReservationHeader author={author} label={label} title={title} />
       <ReservationForm submitInfo={submitInfo} submitButton={submitButton} />
     </section>
