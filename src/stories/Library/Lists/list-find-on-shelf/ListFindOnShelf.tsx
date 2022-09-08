@@ -2,13 +2,17 @@ export type ListFindOnShelfProps = {
   manifestationName: string;
   location: string;
   nrAvailable: number;
+  nrOfListItems: number;
 };
 
 const ListFindOnShelf: React.FC<ListFindOnShelfProps> = ({
   manifestationName,
   location,
   nrAvailable,
+  nrOfListItems,
 }) => {
+  const numberArray = new Array(nrOfListItems).fill("item");
+
   return (
     <ul className="find-on-shelf">
       <li className="find-on-shelf__header-row text-small-caption">
@@ -16,14 +20,18 @@ const ListFindOnShelf: React.FC<ListFindOnShelfProps> = ({
         <span>Find det på hylden</span>
         <span>Hjemme</span>
       </li>
-      <li className="find-on-shelf__row text-body-medium-regular">
-        <span>{manifestationName}</span>
-        <span>{location}</span>
-        <span>
-          {nrAvailable}
-          <span className="hide-on-desktop"> hjemme</span>
-        </span>
-      </li>
+      {numberArray.map((key) => {
+        return (
+          <li className="find-on-shelf__row text-body-medium-regular" key={key}>
+            <span>{manifestationName}</span>
+            <span>{location}</span>
+            <span>
+              {nrAvailable}
+              <span className="hide-on-desktop"> hjemme</span>
+            </span>
+          </li>
+        );
+      })}
     </ul>
   );
 };

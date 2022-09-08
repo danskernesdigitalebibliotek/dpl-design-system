@@ -22,6 +22,11 @@ export default {
       defaultValue: 1,
       control: { type: "number" },
     },
+    nrOfListItems: {
+      name: "Amount of lit items",
+      defaultValue: 2,
+      control: { type: "number" },
+    },
   },
   parameters: {
     design: {
