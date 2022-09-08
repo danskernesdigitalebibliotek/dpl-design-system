@@ -26,10 +26,8 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
   }, [showModal]);
 
   const toggleModal = () => {
-    setShouldShowModal(!showModal);
+    setShouldShowModal(!shoudShowModal);
   };
-
-  console.log(shoudShowModal);
 
   if (!shoudShowModal) {
     return <ModalFallbackButton toggleModal={toggleModal} />;
