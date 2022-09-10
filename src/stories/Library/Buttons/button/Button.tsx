@@ -6,7 +6,7 @@ export type ButtonProps = {
   buttonType: "none" | "default" | "external-link" | "search";
   disabled: boolean;
   collapsible: boolean;
-  size: "large" | "medium" | "small" | "xsmall";
+  size: "xlarge" | "large" | "medium" | "small" | "xsmall";
   variant: "outline" | "filled";
   onClick?: () => void;
   classNames?: string;
@@ -45,6 +45,7 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const getSize = () => {
+    if (size === "xlarge") return "btn-xlarge";
     if (size === "large") return "btn-large";
     if (size === "medium") return "btn-medium";
     if (size === "small") return "btn-small";
