@@ -63,3 +63,17 @@
     margin: 0;
   }
 }
+
+.reservation-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    width: 45%;
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+  }
+}

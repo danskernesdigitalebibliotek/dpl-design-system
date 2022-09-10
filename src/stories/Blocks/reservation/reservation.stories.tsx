@@ -40,8 +40,8 @@ const Template: ComponentStory<typeof Reservation> = (args) => {
   return <Reservation {...args} />;
 };
 
-export const Item = Template.bind({});
-Item.args = {
+export const Modal = Template.bind({});
+Modal.args = {
   label: "bog",
   title: "Stephen Hawking",
   author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
