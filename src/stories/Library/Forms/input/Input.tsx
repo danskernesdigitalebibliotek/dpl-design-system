@@ -3,7 +3,7 @@ export type InputProps = {
   type: "text" | "password";
   id: string;
   description: string;
-  validation: string;
+  validation?: string;
 };
 
 const Input = (props: InputProps) => {
