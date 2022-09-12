@@ -9,8 +9,7 @@ interface ReservationProps {
   author: string;
   submitInfo: string;
   submitButton: string;
-  succes: boolean;
-  error: boolean;
+  state: "initial" | "success" | "error";
 }
 
 const Reservation = ({
@@ -19,11 +18,10 @@ const Reservation = ({
   author,
   submitInfo,
   submitButton,
-  succes,
-  error,
+  state,
 }: ReservationProps) => {
-  if (succes) return <ReservationSucces />;
-  if (error) return <ReservationError />;
+  if (state === "success") return <ReservationSucces />;
+  if (state === "error") return <ReservationError />;
   return (
     <section className="reservation-modal">
       <ReservationHeader author={author} label={label} title={title} />

@@ -33,15 +33,9 @@ export default {
       name: "Submit Button text",
       control: { type: "text" },
     },
-    succes: {
-      name: "Succes",
-      defaultValue: false,
-      control: { type: "boolean" },
-    },
-    error: {
-      name: "Error",
-      defaultValue: false,
-      control: { type: "boolean" },
+    state: {
+      name: "State for reservation",
+      defaultValue: "initial",
     },
   },
 } as ComponentMeta<typeof Reservation>;

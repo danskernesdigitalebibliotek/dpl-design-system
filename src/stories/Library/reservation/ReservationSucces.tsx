@@ -14,6 +14,7 @@ const ReservationSucces = () => {
         - afhentning på Københavns Hivedbibliotek.
       </p>
       <Button
+        classNames="reservation-modal__confirm-button"
         label="OK"
         disabled={false}
         collapsible={false}
