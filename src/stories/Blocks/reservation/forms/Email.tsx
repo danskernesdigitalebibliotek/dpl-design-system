@@ -10,13 +10,7 @@ const Email: FC = () => {
         "Hvis du ønsker at få notifikationer på e-mail kan du indtaste eller ændre den ønskede e-mail hér.",
       ]}
     >
-      <Input
-        description="Indtast e-mail"
-        id="id"
-        label="E-mail"
-        type="text"
-        validation="Den indtastede e-mail er ikke valid"
-      />
+      <Input description="Indtast e-mail" id="id" label="E-mail" type="text" />
     </Form>
   );
 };

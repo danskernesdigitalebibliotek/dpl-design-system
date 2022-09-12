@@ -15,7 +15,6 @@ const Sms: FC = () => {
         id="id"
         label="Telefonnummer"
         type="text"
-        validation="Det indtastede telefonnummer er ikke validt"
       />
     </Form>
   );
