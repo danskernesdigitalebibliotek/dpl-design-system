@@ -6,11 +6,11 @@
 .reservation-modal--confirm {
   display: grid;
   place-content: center;
+}
 
-  button {
-    width: 193px;
-    margin: 0 auto;
-  }
+.reservation-modal__confirm-button {
+  width: 193px;
+  margin: 0 auto;
 }
 
 .reservation-modal-header {

@@ -8,6 +8,7 @@ const ReservationError = () => {
         Der er desværre sket en fejl. Vi beklager ulejligheden. Prøv igen
       </p>
       <Button
+        classNames="reservation-modal__confirm-button"
         label="OK"
         disabled={false}
         collapsible={false}
