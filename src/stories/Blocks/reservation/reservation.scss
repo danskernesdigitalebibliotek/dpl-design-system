@@ -1,6 +1,16 @@
 .reservation-modal {
-  background-color: #f6f5f0;
+  background-color: $c-global-primary;
   width: 100%;
+}
+
+.reservation-modal--confirm {
+  display: grid;
+  place-content: center;
+
+  button {
+    width: 193px;
+    margin: 0 auto;
+  }
 }
 
 .reservation-modal-header {
