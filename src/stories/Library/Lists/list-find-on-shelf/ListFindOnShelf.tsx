@@ -16,14 +16,16 @@ const ListFindOnShelf: React.FC<ListFindOnShelfProps> = ({
   return (
     <ul className="find-on-shelf">
       <li className="find-on-shelf__header-row text-small-caption">
-        <span>Materiale</span>
+        <span className="find-on-shelf__material-title">Materiale</span>
         <span>Find det på hylden</span>
-        <span>Hjemme</span>
+        <span className="find-on-shelf__item-count-title">Hjemme</span>
       </li>
       {numberArray.map((key) => {
         return (
           <li className="find-on-shelf__row text-body-medium-regular" key={key}>
-            <span>{manifestationName}</span>
+            <span className="find-on-shelf__material-title">
+              {manifestationName}
+            </span>
             <span>{location}</span>
             <span>
               {nrAvailable}

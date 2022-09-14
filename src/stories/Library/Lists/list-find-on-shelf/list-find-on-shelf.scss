@@ -8,24 +8,19 @@
       border-bottom: solid 1px $c-global-primary;
       display: flex;
       height: $s-xl;
-      justify-content: flex-start;
       align-items: center;
+      padding-left: $s-xl;
+      margin-right: $s-md;
     }
+  }
 
-    & > span {
-      &:first-of-type {
-        margin-left: $s-lg;
-        width: 404px;
+  &__material-title {
+    width: 404px;
+  }
 
-        @include breakpoint-s {
-          margin-left: $s-xl;
-        }
-      }
-      &:last-of-type {
-        margin-right: $s-md;
-        margin-left: auto;
-      }
-    }
+  &__item-count-title {
+    justify-self: flex-end;
+    margin-left: auto;
   }
 
   &__row {
@@ -65,8 +60,6 @@
         &:first-of-type {
           margin-left: $s-xl;
           margin-top: inherit;
-          width: 404px;
-          min-width: 404px;
         }
 
         &:last-of-type {
