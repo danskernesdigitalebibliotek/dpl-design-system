@@ -1,6 +1,6 @@
 import { SearchResultItem } from "../search-result-item/SearchResultItem";
 import { SearchResultInfo } from "./SearchResultInfo";
-import SearchResultPager from "./SearchResultPager";
+import ResultPager from "./ResultPager";
 import { SearchResultTitle } from "./SearchResultTitle";
 import { SearchResultZero } from "./SearchResultZero";
 
@@ -121,7 +121,7 @@ export const SearchResultPage = ({
           <div className="search-result-page__list my-32">
             {SearchResultList}
           </div>
-          <SearchResultPager
+          <ResultPager
             currentResults={currentResults}
             totalResults={totalResults}
           />
