@@ -17,6 +17,7 @@ $pagefold-map: (
     margin: #{$size}px;
   }
 
+  %pagefold-parent--#{$size},
   .pagefold-parent--#{$size} {
     min-width: #{$triangle-width}px;
     min-height: #{$triangle-width}px;
@@ -38,6 +39,7 @@ $pagefold-map: (
     );
   }
 
+  %pagefold-triangle--#{$size},
   .pagefold-triangle--#{$size} {
     width: #{$triangle-width}px;
     height: #{$triangle-width}px;

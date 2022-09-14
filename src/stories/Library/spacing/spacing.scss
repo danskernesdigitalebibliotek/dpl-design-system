@@ -40,62 +40,76 @@ $spacers: (
 );
 
 @each $space in $spacers {
+  %m-#{$space},
   .m-#{$space} {
     margin: #{$space}px;
   }
 
+  %mx-#{$space},
   .mx-#{$space} {
     margin-left: #{$space}px;
     margin-right: #{$space}px;
   }
 
+  %my-#{$space},
   .my-#{$space} {
     margin-top: #{$space}px;
     margin-bottom: #{$space}px;
   }
 
+  %ml-#{$space},
   .ml-#{$space} {
     margin-left: #{$space}px;
   }
 
+  %mr-#{$space},
   .mr-#{$space} {
     margin-right: #{$space}px;
   }
 
+  %mb-#{$space},
   .mb-#{$space} {
     margin-bottom: #{$space}px;
   }
 
+  %mt-#{$space},
   .mt-#{$space} {
     margin-top: #{$space}px;
   }
 
+  %p-#{$space},
   .p-#{$space} {
     padding: #{$space}px;
   }
 
+  %px-#{$space},
   .px-#{$space} {
     padding-left: #{$space}px;
     padding-right: #{$space}px;
   }
 
+  %py-#{$space},
   .py-#{$space} {
     padding-top: #{$space}px;
     padding-bottom: #{$space}px;
   }
 
+  %pl-#{$space},
   .pl-#{$space} {
     padding-left: #{$space}px;
   }
 
+  %pr-#{$space},
   .pr-#{$space} {
     padding-right: #{$space}px;
   }
 
+  %pb-#{$space},
   .pb-#{$space} {
     padding-bottom: #{$space}px;
   }
 
+  %pt-#{$space},
   .pt-#{$space} {
     padding-top: #{$space}px;
   }

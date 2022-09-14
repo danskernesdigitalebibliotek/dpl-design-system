@@ -56,6 +56,6 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
     right: 0;
     background-color: $c-global-primary;
 
-    @extend .modal-padding;
+    @extend %modal-padding;
   }
 }

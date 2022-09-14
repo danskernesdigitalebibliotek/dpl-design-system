@@ -30,9 +30,9 @@
 }
 
 .reservation-modal-tag {
-  @extend .text-tags;
-  @extend .px-16;
-  @extend .py-4;
+  @extend %text-tags;
+  @extend %px-16;
+  @extend %py-4;
   border: 1px solid $c-global-tertiary-1;
   display: inline-flex;
   justify-content: center;
@@ -44,7 +44,7 @@
   flex-direction: column;
   align-items: center;
   gap: $s-md;
-  @extend .mb-24;
+  @extend %mb-24;
 
   @include breakpoint-s {
     justify-content: end;
@@ -63,7 +63,7 @@
   align-items: center;
   min-height: 96px;
   gap: 35px;
-  @extend .px-35;
+  @extend %px-35;
 }
 
 .reservation-modal-list-item-text {

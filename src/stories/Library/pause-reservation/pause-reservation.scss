@@ -4,11 +4,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  @extend .p-16;
-  @extend .pagefold-parent--medium;
+  @extend %p-16;
+  @extend %pagefold-parent--medium;
 
   &__pagefold {
-    @extend .pagefold-triangle--medium;
+    @extend %pagefold-triangle--medium;
   }
 
   &__flex {
@@ -26,17 +26,17 @@
     }
 
     &__text {
-      @extend .text-body-large;
-      @extend .pl-8;
+      @extend %text-body-large;
+      @extend %pl-8;
     }
 
     &__badge {
       background-color: $c-global-primary;
-      @extend .pl-8;
-      @extend .pr-8;
-      @extend .pt-4;
-      @extend .pb-4;
-      @extend .text-body-medium-medium;
+      @extend %pl-8;
+      @extend %pr-8;
+      @extend %pt-4;
+      @extend %pb-4;
+      @extend %text-body-medium-medium;
       margin-left: 32px;
       
       @include breakpoint-s {
@@ -48,7 +48,7 @@
       display: flex;
       flex: 1;
       justify-content: flex-end;
-      @extend .ml-8;
+      @extend %ml-8;
     }
   }
 }

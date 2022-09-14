@@ -1,37 +1,45 @@
 // *** Global colors ***
 // Background
+%bg-global-primary,
 .bg-global-primary {
   background-color: $c-global-primary;
 }
 
+%bg-global-secondary,
 .bg-global-secondary {
   background-color: $c-global-secondary;
 }
 
+%bg-global-tertiary-1,
 .bg-global-tertiary-1 {
   background-color: $c-global-tertiary-1;
 }
 
+%bg-global-tertiary-2,
 .bg-global-tertiary-2 {
   background-color: $c-global-tertiary-2;
 }
 
 // Border
+%border-global-primary,
 .border-global-primary {
   border: 1px solid $c-global-primary;
   stroke: $c-global-primary;
 }
 
+%border-global-secondary,
 .border-global-secondary {
   border: 1px solid $c-global-secondary;
   stroke: $c-global-secondary;
 }
 
+%border-global-tertiary-1,
 .border-global-tertiary-1 {
   border: 1px solid $c-global-tertiary-1;
   stroke: $c-global-tertiary-1;
 }
 
+%border-global-tertiary-2,
 .border-global-tertiary-2 {
   border: 1px solid $c-global-tertiary-2;
   stroke: $c-global-tertiary-2;
@@ -39,125 +47,151 @@
 
 // *** Identity colors ***
 // Background
+%bg-identity-primary,
 .bg-identity-primary {
   background-color: $c-identity-primary;
   fill: $c-identity-primary;
 }
 
 // Border
+%border-identity-primary,
 .border-identity-primary {
   border: 1px solid $c-identity-primary;
   stroke: $c-identity-primary;
 }
 
 // Color
+%color-identity-primary,
 .color-identity-primary {
   color: $c-identity-primary;
 }
 
+%color-secondary-gray,
 .color-secondary-gray {
   color: $c-text-secondary-gray;
 }
 
 // *** Identity color tints ***
 // Background
+%bg-identity-tint-20,
 .bg-identity-tint-20 {
   background-color: var(--tint-color-20);
 }
 
+%bg-identity-tint-40,
 .bg-identity-tint-40 {
   background-color: var(--tint-color-40);
 }
 
+%bg-identity-tint-60,
 .bg-identity-tint-60 {
   background-color: var(--tint-color-60);
 }
 
+%bg-identity-tint-80,
 .bg-identity-tint-80 {
   background-color: var(--tint-color-80);
 }
 
+%bg-identity-tint-120,
 .bg-identity-tint-120 {
   background-color: var(--tint-color-120);
 }
 
 // *** Text colors ***
 // Color
+%color-primary-white,
 .color-primary-white {
   color: $c-text-primary-white;
 }
 
+%color-primary-black,
 .color-primary-black {
   color: $c-text-primary-black;
 }
 
-.border-primary-white {
+%border-primary-white,
+border-primary-white {
   border: 1px solid $c-text-primary-white;
   stroke: $c-text-primary-white;
 }
 
+%border-primary-black,
 .border-primary-black {
   border: 1px solid $c-text-primary-black;
   stroke: $c-text-primary-black;
 }
 
+%border-secondary-gray,
 .border-secondary-gray {
   border: 1px solid $c-text-secondary-gray;
   stroke: $c-text-secondary-gray;
 }
 
 // Only used internally for bg-color in Colors comp.
+%bg-color-primary-white,
 .bg-color-primary-white {
   background-color: $c-text-primary-white;
 }
 
+%bg-color-primary-black,
 .bg-color-primary-black {
   background-color: $c-text-primary-black;
 }
 
+%bg-color-secondary-gray,
 .bg-color-secondary-gray {
   background-color: $c-text-secondary-gray;
 }
 
 // *** Signal colors ***
 // Background
+%bg-signal-success,
 .bg-signal-success {
   background-color: $c-signal-success;
 }
 
+%bg-signal-aware,
 .bg-signal-aware {
   background-color: $c-signal-aware;
 }
 
+%bg-signal-alert,
 .bg-signal-alert {
   background-color: $c-signal-alert;
 }
 
 // Border
+%border-signal-success,
 .border-signal-success {
   border: 1px solid $c-signal-success;
   stroke: $c-signal-success;
 }
 
+%border-signal-aware,
 .border-signal-aware {
   border: 1px solid $c-signal-aware;
   stroke: $c-signal-aware;
 }
 
+%border-signal-alert,
 .border-signal-alert {
   border: 1px solid $c-signal-alert;
   stroke: $c-signal-alert;
 }
 
 // Color
+%color-signal-success,
 .color-signal-success {
   color: $c-signal-success;
 }
 
+%color-signal-aware,
 .color-signal-aware {
   color: $c-signal-aware;
 }
 
+%color-signal-alert,
 .color-signal-alert {
   color: $c-signal-alert;
 }

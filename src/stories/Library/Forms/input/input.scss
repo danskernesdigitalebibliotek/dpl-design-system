@@ -3,7 +3,7 @@
   flex-direction: column;
 
   label {
-    @extend .text-body-medium-medium;
+    @extend %text-body-medium-medium;
     color: $c-text-secondary-gray;
   }
 
@@ -21,13 +21,13 @@
 
   &__description {
     color: $c-text-secondary-gray;
-    @extend .text-body-small-regular;
-    @extend .mt-8;
+    @extend %text-body-small-regular;
+    @extend %mt-8;
   }
 
   &__validation {
     color: $c-signal-alert;
-    @extend .text-body-small-regular;
-    @extend .mt-8;
+    @extend %text-body-small-regular;
+    @extend %mt-8;
   }
 }
