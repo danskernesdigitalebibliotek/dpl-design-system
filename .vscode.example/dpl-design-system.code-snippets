@@ -32,6 +32,6 @@
     "body": [
       "${${1:variable}}",
     ],
-    "description": "Formats a varaible to be used in a string literal"
+    "description": "Formats a variable to be used in a string literal"
   },
 }
