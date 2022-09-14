@@ -70,7 +70,9 @@
   justify-content: center;
 
   &__content {
-    width: 45%;
+    @include breakpoint-m {
+      width: 45%;
+    }
   }
   &__footer {
     display: flex;
