@@ -36,12 +36,6 @@
       align-items: center;
       gap: 0;
     }
-
-    & .hide-on-desktop {
-      @include breakpoint-s {
-        display: none;
-      }
-    }
   }
 
   &__material-text {

@@ -29,7 +29,7 @@ const ListFindOnShelf: React.FC<ListFindOnShelfProps> = ({
             <span>{location}</span>
             <span className="find-on-shelf__item-count-text">
               {nrAvailable}
-              <span className="hide-on-desktop"> hjemme</span>
+              <span className="hide-visually--on-desktop"> hjemme</span>
             </span>
           </li>
         );
