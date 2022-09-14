@@ -49,11 +49,9 @@
   }
 
   &__item-count-text {
-
     @include breakpoint-s {
       margin-left: auto;
       overflow-y: visible;
     }
   }
-
 }

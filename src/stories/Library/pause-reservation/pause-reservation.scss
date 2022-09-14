@@ -38,7 +38,7 @@
       @extend %pb-4;
       @extend %text-body-medium-medium;
       margin-left: 32px;
-      
+
       @include breakpoint-s {
         margin-left: 8px;
       }
