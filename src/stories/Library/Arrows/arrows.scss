@@ -1,3 +1,5 @@
+/* BEM plugin does not support interpolation */
+/* stylelint-disable plugin/stylelint-bem-namics */
 @mixin icon-arrow-animated($direction, $size, $scaleX, $translatePx, $origin) {
   .arrow__hover--#{$direction}-#{$size} {
     cursor: pointer;
@@ -30,6 +32,7 @@
     }
   }
 }
+/* stylelint-enable plugin/stylelint-bem-namics */
 
 @include icon-arrow-animated("right", "large", 1.165, 25px, left);
 @include icon-arrow-animated("right", "small", 1.5, 30px, left);

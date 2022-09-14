@@ -12,6 +12,8 @@ $pagefold-map: (
   "xlarge": 56,
 );
 
+/* BEM plugin does not support interpolation */
+/* stylelint-disable plugin/stylelint-bem-namics */
 @each $size, $triangle-width in $pagefold-map {
   .m-#{$size} {
     margin: #{$size}px;
@@ -57,3 +59,4 @@ $pagefold-map: (
     }
   }
 }
+/* stylelint-enable plugin/stylelint-bem-namics */

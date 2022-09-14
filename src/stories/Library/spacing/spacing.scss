@@ -39,6 +39,8 @@ $spacers: (
   $s-112
 );
 
+/* BEM plugin does not support interpolation */
+/* stylelint-disable plugin/stylelint-bem-namics */
 @each $space in $spacers {
   %m-#{$space},
   .m-#{$space} {
@@ -114,3 +116,4 @@ $spacers: (
     padding-top: #{$space}px;
   }
 }
+/* stylelint-enable plugin/stylelint-bem-namics */
