@@ -8,27 +8,27 @@ import MaterialPeriodicalSelect from "./MaterialPeriodicalSelect";
 
 const listOfAvailabilityLabels = [
   {
-    manifestation: "Bog",
+    manifestationType: "Bog",
     availability: "Hjemme",
     status: "selected",
   } as const,
   {
-    manifestation: "Bog",
+    manifestationType: "Bog",
     availability: "Hjemme",
     status: "available",
   } as const,
   {
-    manifestation: "Bog",
+    manifestationType: "Bog",
     availability: "Hjemme",
     status: "available",
   } as const,
   {
-    manifestation: "Bog",
+    manifestationType: "Bog",
     availability: "Hjemme",
     status: "available",
   } as const,
   {
-    manifestation: "Bog",
+    manifestationType: "Bog",
     availability: "Hjemme",
     status: "available",
   } as const,

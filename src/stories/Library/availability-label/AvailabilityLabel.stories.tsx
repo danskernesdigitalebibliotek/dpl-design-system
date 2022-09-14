@@ -8,7 +8,7 @@ export default {
   component: AvailabilityLabel,
   decorators: [withDesign],
   argTypes: {
-    manifestation: {
+    manifestationType: {
       name: "Manifestation Type",
       options: ["Bog", "Ebog", "Lydbog (net)", "Lydbog (cd-mp3)", undefined],
       control: { disable: true },
@@ -33,21 +33,21 @@ const Template: ComponentStory<typeof AvailabilityLabel> = (args) => (
 
 export const Available = Template.bind({});
 Available.args = {
-  manifestation: "Bog",
+  manifestationType: "Bog",
   availability: "Hjemme",
   status: "available",
 };
 
 export const Selected = Template.bind({});
 Selected.args = {
-  manifestation: "Ebog",
+  manifestationType: "Ebog",
   availability: "Online",
   status: "selected",
 };
 
 export const Unavailable = Template.bind({});
 Unavailable.args = {
-  manifestation: "Lydbog (cd-mp3)",
+  manifestationType: "Lydbog (cd-mp3)",
   availability: "Udlånt",
   status: "unavailable",
 };
@@ -55,7 +55,7 @@ Unavailable.args = {
 export const WithoutManifestationType = Template.bind({});
 WithoutManifestationType.args = {
   // manifestation is defined here as undefined to perserve the controls order
-  manifestation: undefined,
+  manifestationType: undefined,
   availability: "Udlånt",
   status: "unavailable",
 };

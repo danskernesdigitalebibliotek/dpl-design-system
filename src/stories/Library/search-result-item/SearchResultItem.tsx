@@ -44,23 +44,23 @@ export const SearchResultItem = ({
       </div>
       <div className="search-result-item__availability">
         <AvailabilityLabel
-          manifestation="Bog"
+          manifestationType="Bog"
           availability="Hjemme"
           status="available"
         />
         <AvailabilityLabel
-          manifestation="Ebog"
+          manifestationType="Ebog"
           availability="Online"
           status="available"
         />
 
         <AvailabilityLabel
-          manifestation="Lydbog (cd-mp3)"
+          manifestationType="Lydbog (cd-mp3)"
           availability="Udlånt"
           status="unavailable"
         />
         <AvailabilityLabel
-          manifestation="Lydbog (net)"
+          manifestationType="Lydbog (net)"
           availability="Online"
           status="available"
         />

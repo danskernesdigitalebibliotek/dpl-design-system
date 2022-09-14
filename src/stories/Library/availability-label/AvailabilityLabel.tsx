@@ -3,7 +3,7 @@ import { Pagefold } from "../pagefold/Pagefold";
 import { withAvailabilityProps } from "./abilityLabel.hoc";
 
 export const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
-  manifestation,
+  manifestationType,
   availability,
   status,
 }) => {
@@ -16,16 +16,16 @@ export const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
         src="icons/collection/Check.svg"
         alt="check-icon"
       />
-      {manifestation && (
+      {manifestationType && (
         <>
           <p className="text-label-semibold ml-24">
-            {manifestation.toUpperCase()}
+            {manifestationType.toUpperCase()}
           </p>
           <div className="availability-label--divider ml-4" />
           <p className="text-label-normal ml-4 mr-8">{availability}</p>
         </>
       )}
-      {!manifestation && (
+      {!manifestationType && (
         <p className="text-label-normal ml-24 mr-8">{availability}</p>
       )}
     </AvailabilityPagefold>
