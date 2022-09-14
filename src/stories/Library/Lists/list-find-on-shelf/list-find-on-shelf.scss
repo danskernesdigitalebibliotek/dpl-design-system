@@ -27,12 +27,14 @@
     flex-direction: column;
     border-top: solid 1px $c-global-primary;
     padding: $s-lg $s-md;
+    gap: $s-md;
 
     @include breakpoint-s {
       padding: 0 $s-xl 0 $s-xl;
       flex-direction: row;
       min-height: 110px;
       align-items: center;
+      gap: 0;
     }
 
     & .hide-on-desktop {
@@ -49,23 +51,13 @@
       // Both width and min-width need to be here to prevent flex shrink & stretch.
       width: 404px;
       min-width: 404px;
-      margin: 0;
-    }
-  }
-
-  &__location-text {
-    margin-top: $s-md;
-
-    @include breakpoint-s {
-      margin: 0;
     }
   }
 
   &__item-count-text {
-    margin-top: $s-md;
 
     @include breakpoint-s {
-      margin: 0 0 0 auto;
+      margin-left: auto;
       overflow-y: visible;
     }
   }

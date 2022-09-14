@@ -26,7 +26,7 @@ const ListFindOnShelf: React.FC<ListFindOnShelfProps> = ({
             <span className="find-on-shelf__material-text">
               {manifestationName}
             </span>
-            <span className="find-on-shelf__location-text">{location}</span>
+            <span>{location}</span>
             <span className="find-on-shelf__item-count-text">
               {nrAvailable}
               <span className="hide-on-desktop"> hjemme</span>
