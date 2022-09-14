@@ -25,6 +25,16 @@
   overflow: hidden;
 }
 
+.hide-visually {
+  @include hide-visually;
+
+  &--on-desktop {
+    @include breakpoint-s {
+      @include hide-visually;
+    }
+  }
+}
+
 .modal-btn-close {
   position: fixed;
   top: 0;
