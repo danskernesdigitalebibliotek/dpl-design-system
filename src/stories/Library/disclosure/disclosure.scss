@@ -31,26 +31,26 @@
     @include breakpoint-s {
       padding-left: $s-xl;
     }
+  }
 
-    &__text {
-      width: 201px;
+  &__text {
+    width: 201px;
+    text-overflow: ellipsis;
+    max-height: 84px;
+    overflow-y: hidden;
+
+    @include breakpoint-s {
+      width: 685px;
+    }
+
+    &--shorter {
+      width: 197px;
       text-overflow: ellipsis;
       max-height: 84px;
       overflow-y: hidden;
 
       @include breakpoint-s {
-        width: 685px;
-      }
-
-      &-shorter {
-        width: 197px;
-        text-overflow: ellipsis;
-        max-height: 84px;
-        overflow-y: hidden;
-
-        @include breakpoint-s {
-          width: 404px;
-        }
+        width: 404px;
       }
     }
   }
