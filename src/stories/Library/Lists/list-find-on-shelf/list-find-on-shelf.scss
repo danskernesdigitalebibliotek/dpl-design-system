@@ -5,76 +5,69 @@
     display: none;
 
     @include breakpoint-s {
-      border-bottom: solid 1px $c-global-primary;
       display: flex;
       height: $s-xl;
       align-items: center;
-      padding-left: $s-xl;
-      margin-right: $s-md;
+      padding: 0 $s-md 0 $s-xl;
     }
   }
 
-  &__material-title {
+  &__material-header {
     width: 404px;
   }
 
-  &__item-count-title {
-    justify-self: flex-end;
-    margin-left: auto;
+  &__item-count-header {
+    @include breakpoint-s {
+      margin-left: auto;
+    }
   }
 
   &__row {
-    min-width: $s-6xl;
     display: flex;
     flex-direction: column;
-    border-bottom: solid 1px $c-global-primary;
+    border-top: solid 1px $c-global-primary;
+    padding: $s-lg $s-md;
 
     @include breakpoint-s {
+      padding: 0 $s-xl 0 $s-xl;
       flex-direction: row;
       min-height: 110px;
       align-items: center;
-      justify-content: flex-start;
     }
 
-    &:last-of-type {
-      border-bottom: none;
-    }
-
-    & > span {
-      margin: $s-md $s-md 0 $s-md;
-
-      &:first-of-type {
-        margin-top: $s-lg;
-      }
-
-      &:last-of-type {
-        margin-bottom: $s-lg;
-      }
-
+    & .hide-on-desktop {
       @include breakpoint-s {
-        margin: 0;
-        max-width: 600px;
-        text-overflow: ellipsis;
-        overflow-y: hidden;
-
-        &:first-of-type {
-          margin-left: $s-xl;
-          margin-top: inherit;
-        }
-
-        &:last-of-type {
-          margin-bottom: inherit;
-          margin-left: auto;
-          margin-right: $s-xl;
-          overflow-y: visible;
-        }
-      }
-
-      & .hide-on-desktop {
-        @include breakpoint-s {
-          display: none;
-        }
+        display: none;
       }
     }
   }
+
+  &__material-text {
+    max-width: 600px;
+
+    @include breakpoint-s {
+      // Both width and min-width need to be here to prevent flex shrink & stretch.
+      width: 404px;
+      min-width: 404px;
+      margin: 0;
+    }
+  }
+
+  &__location-text {
+    margin-top: $s-md;
+
+    @include breakpoint-s {
+      margin: 0;
+    }
+  }
+
+  &__item-count-text {
+    margin-top: $s-md;
+
+    @include breakpoint-s {
+      margin: 0 0 0 auto;
+      overflow-y: visible;
+    }
+  }
+
 }
