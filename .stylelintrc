@@ -3,6 +3,10 @@
   "plugins": ["@namics/stylelint-bem"],
   "rules": {
     "max-nesting-depth": 3,
+    "plugin/stylelint-bem-namics": {
+      "patternPrefixes": [],
+      "helperPrefixes": []
+    },
     "selector-class-pattern": "^[a-z][a-z0-9_-]*$",
     "selector-max-id": null,
     "selector-no-qualifying-type": [
