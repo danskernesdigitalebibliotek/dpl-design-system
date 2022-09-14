@@ -11,6 +11,15 @@
     margin: 0 133px;
   }
 
+  &--full-width {
+    width: 100%;
+    margin: 0;
+
+    @include breakpoint-s {
+      margin: 0;
+    }
+  }
+
   &__headline {
     height: 88px;
     display: flex;

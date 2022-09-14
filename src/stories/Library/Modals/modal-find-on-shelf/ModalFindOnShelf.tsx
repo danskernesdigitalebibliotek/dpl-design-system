@@ -57,6 +57,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
         return (
           <Disclosure
             withAvailability
+            fullWidth
             headline="Bibliotek fliale navn"
             icon="Various"
             key={branchKey}

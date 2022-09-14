@@ -6,6 +6,7 @@ export type DisclosureProps = {
   children: React.ReactNode | string;
   icon: "Various" | "Receipt" | "Create" | "Profile";
   withAvailability?: boolean;
+  fullWidth?: boolean;
 };
 
 export const Disclosure: React.FC<DisclosureProps> = ({
@@ -13,10 +14,15 @@ export const Disclosure: React.FC<DisclosureProps> = ({
   children,
   icon,
   withAvailability,
+  fullWidth = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <details className="disclosure text-body-large">
+    <details
+      className={`disclosure text-body-large ${
+        fullWidth ? "disclosure--full-width" : ""
+      }`}
+    >
       <summary
         className="disclosure__headline text-body-large"
         onClick={() => {
