@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Disclosure } from "../../disclosure/Disclosure";
+import ListFindOnShelf from "../../Lists/list-find-on-shelf/ListFindOnShelf";
 import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
 
 export type ModalFindOnShelfProps = {
@@ -60,27 +61,12 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
             icon="Various"
             key={branchKey}
           >
-            <ul className="find-on-shelf">
-              <li className="find-on-shelf__header-row text-small-caption">
-                <span>Materiale</span>
-                <span>Find det på hylden</span>
-                <span>Hjemme</span>
-              </li>
-              {manifestationArray.map((manifestKey) => {
-                return (
-                  <li
-                    className="find-on-shelf__row text-body-medium-regular"
-                    key={manifestKey}
-                  >
-                    <span>Vejen til Jerusalem, 2008</span>
-                    <span>Voksen · Skønlitteratur · Standard · Guillou</span>
-                    <span>
-                      12<span className="hide-on-desktop"> hjemme</span>
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
+            <ListFindOnShelf
+              manifestationName="Vejen til Jerusalem, 2008"
+              location="Voksen · Skønlitteratur · Standard · Guillou"
+              nrAvailable={13}
+              nrOfListItems={manifestationArray.length}
+            />
           </Disclosure>
         );
       })}
