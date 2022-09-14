@@ -22,7 +22,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           stylelint_input: "src/**/*.scss"
           reporter: github-pr-review
-          fail_on_error: false
+          fail_on_error: true
           level: error
 
   js_eslint:
