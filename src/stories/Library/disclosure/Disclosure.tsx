@@ -38,12 +38,13 @@ export const Disclosure: React.FC<DisclosureProps> = ({
             />
           </div>
         )}
-        {!withAvailability && (
-          <span className="disclosure__text">{headline}</span>
-        )}
-        {withAvailability && (
-          <span className="disclosure__text--shorter">{headline}</span>
-        )}
+        <span
+          className={`disclosure__text ${
+            withAvailability ? "disclosure__text--shorter" : ""
+          }`}
+        >
+          {headline}
+        </span>
         {withAvailability && (
           <AvailabilityLabel availability="Hjemme" status="available" />
         )}

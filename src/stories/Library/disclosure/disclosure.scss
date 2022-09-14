@@ -45,9 +45,6 @@
 
     &--shorter {
       width: 197px;
-      text-overflow: ellipsis;
-      max-height: 84px;
-      overflow-y: hidden;
 
       @include breakpoint-s {
         width: 404px;
