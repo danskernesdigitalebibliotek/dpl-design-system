@@ -8,7 +8,7 @@ interface ListEmptyProps {
 const ListEmpty = ({ text, links }: ListEmptyProps) => {
   return (
     <div className="dpl-list-empty">
-      <div className="dpl-list-empty__text">{text}</div>
+      {text}
       {links && (
         <div className="dpl-list-empty__links">
           {links.map((item, index) => (
