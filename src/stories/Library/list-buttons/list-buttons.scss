@@ -27,6 +27,14 @@
     &__button {
       @extend %ml-32;
       display: flex;
+
+      &--hide-on-mobile {
+        display: none;
+
+        @include breakpoint-s {
+          display: flex;
+        }
+      }
     }
   }
 }
