@@ -29,7 +29,7 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__note-mobile {
   // To make it easy to click
-  height: 30px;
+  min-height: 20px;
   cursor: pointer;
   background-color: transparent;
   align-self: baseline;
@@ -60,7 +60,7 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__note-desktop {
   // To make it easy to click
-  height: 30px;
+  min-height: 20px;
   cursor: pointer;
   background-color: transparent;
   align-self: baseline;
