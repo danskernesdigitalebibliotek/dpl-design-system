@@ -47,9 +47,9 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
         idAriaDescribedBy="describemodal"
         toggleModal={toggleModal}
       />
-      <h1 className="text-header-h2 modal-find-on-shelf__headline">
+      <h2 className="text-header-h2 modal-find-on-shelf__headline">
         {workTitle} / {author}
-      </h1>
+      </h2>
       <div className="text-small-caption modal-find-on-shelf__caption">
         8 biblioteker har materialet
       </div>
