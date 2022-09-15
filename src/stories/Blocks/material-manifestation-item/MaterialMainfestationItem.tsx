@@ -24,7 +24,7 @@ export const MaterialMainfestationItem = ({
     <div className="material-manifestation-item">
       <div className="material-manifestation-item__availability">
         <AvailabilityLabel
-          manifestation="Bog"
+          manifestationType="Bog"
           availability="Hjemme"
           status="available"
         />

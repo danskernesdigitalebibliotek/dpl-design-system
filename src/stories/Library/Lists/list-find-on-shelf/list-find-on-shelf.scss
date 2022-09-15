@@ -1,0 +1,59 @@
+.find-on-shelf {
+  background-color: $c-global-secondary;
+
+  &__header-row {
+    display: none;
+
+    @include breakpoint-s {
+      display: flex;
+      height: $s-xl;
+      align-items: center;
+      padding: 0 $s-md 0 $s-xl;
+    }
+  }
+
+  &__material-header {
+    width: 404px;
+  }
+
+  &__item-count-header {
+    @include breakpoint-s {
+      margin-left: auto;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    border-top: solid 1px $c-global-primary;
+    padding: $s-lg $s-md;
+    gap: $s-md;
+
+    @include breakpoint-s {
+      padding: 0 $s-xl 0 $s-xl;
+      flex-direction: row;
+      min-height: 110px;
+      align-items: center;
+      gap: 0;
+    }
+  }
+
+  &__material-text {
+    max-width: 600px;
+
+    @include breakpoint-s {
+      // Both width and min-width need to be here to prevent flex shrink & stretch.
+      width: 404px;
+      min-width: 404px;
+    }
+  }
+
+  &__item-count-text {
+
+    @include breakpoint-s {
+      margin-left: auto;
+      overflow-y: visible;
+    }
+  }
+
+}

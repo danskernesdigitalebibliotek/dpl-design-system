@@ -1,16 +1,55 @@
 .disclosure {
   width: auto;
   border: solid 1px $c-global-tertiary-1;
+  border-top: none;
 
-  @include breakpoint-m {
+  &:first-of-type {
+    border-top: solid 1px $c-global-tertiary-1;
+  }
+
+  @include breakpoint-s {
     margin: 0 133px;
   }
 
+  &--full-width {
+    width: 100%;
+    margin: 0;
+
+    @include breakpoint-s {
+      margin: 0;
+    }
+  }
+
   &__headline {
+    height: 88px;
     display: flex;
     align-items: center;
-    justify-content: baseline;
+    justify-content: space-between;
     cursor: pointer;
+    padding-left: $s-md;
+
+    @include breakpoint-s {
+      padding-left: $s-xl;
+    }
+  }
+
+  &__text {
+    width: 201px;
+    text-overflow: ellipsis;
+    max-height: 84px;
+    overflow-y: hidden;
+
+    @include breakpoint-s {
+      width: 685px;
+    }
+
+    &--shorter {
+      width: 197px;
+
+      @include breakpoint-s {
+        width: 404px;
+      }
+    }
   }
 
   &__icon {
@@ -19,14 +58,26 @@
     border-radius: 20px;
     display: flex;
     justify-content: center;
+    margin-right: $s-md;
+
+    @include breakpoint-s {
+      margin-left: -#{$s-sm};
+      margin-right: $s-lg;
+    }
 
     & > img {
-      width: 24px;
+      width: $s-lg;
     }
   }
 
   &__expand {
     margin-left: auto;
+    margin-right: $s-md;
+
+    @include breakpoint-s {
+      margin-right: $s-xl;
+    }
+
     &-open {
       transform: scaleY(-1);
     }

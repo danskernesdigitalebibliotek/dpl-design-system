@@ -1,0 +1,25 @@
+.modal-find-on-shelf {
+  padding: 0;
+  overflow-y: scroll;
+  align-items: flex-start;
+
+  @include breakpoint-m {
+    padding: 0 215px $s-4xl 215px;
+  }
+
+  &__headline {
+    margin: 72px $s-md 0 $s-md;
+
+    @include breakpoint-m {
+      margin-top: $s-4xl;
+    }
+  }
+
+  &__caption {
+    margin: $s-2xl 0 $s-md $s-md;
+
+    @include breakpoint-m {
+      margin: 96px 0 $s-sm 16px;
+    }
+  }
+}
