@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-
-import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
+import { ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
+import ModalWrapper from "../ModalWrapper";
 
 export type ModalCTAProps = {
   title: string;
@@ -25,18 +25,11 @@ export const ModalCTA: React.FC<ModalCTAProps> = ({ title, showModal }) => {
   }
 
   return (
-    <div
-      className={`modal modal-cta modal-padding ${
-        shownModal ? "modal-show" : ""
-      }`}
+    <ModalWrapper
+      shownModal={shownModal}
+      classNames="modal-cta  modal-padding"
+      toggleModal={toggleModal}
     >
-      <div className="modal__screen-reader-description" id="describemodal">
-        Denne modal dækker sidens indhold, og er en demo
-      </div>
-      <ModalCloseButton
-        idAriaDescribedBy="describemodal"
-        toggleModal={toggleModal}
-      />
       <div className="modal-cta__container">
         <h2 className="text-header-h2">{title}</h2>
         <div className="mt-48 color-secondary-gray">
@@ -73,6 +66,6 @@ export const ModalCTA: React.FC<ModalCTAProps> = ({ title, showModal }) => {
           </div>
         </div>
       </div>
-    </div>
+    </ModalWrapper>
   );
 };
