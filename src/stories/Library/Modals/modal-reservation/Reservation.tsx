@@ -2,7 +2,7 @@ import ReservationError from "../../reservation/ReservationError";
 import ReservationForm from "../../reservation/ReservationForm";
 import ReservationHeader from "../../reservation/ReservationHeader";
 import ReservationSucces from "../../reservation/ReservationSucces";
-import { ModalCloseButton } from "../ModalShared";
+import ModalWrapper from "../ModalWrapper";
 
 interface ReservationProps {
   title: string;
@@ -23,35 +23,23 @@ const Reservation = ({
 }: ReservationProps) => {
   if (state === "success")
     return (
-      <div className="modal modal-show">
-        <ModalCloseButton
-          idAriaDescribedBy="describemodal"
-          toggleModal={() => {}}
-        />
+      <ModalWrapper shownModal>
         <ReservationSucces />
-      </div>
+      </ModalWrapper>
     );
   if (state === "error")
     return (
-      <div className="modal modal-show">
-        <ModalCloseButton
-          idAriaDescribedBy="describemodal"
-          toggleModal={() => {}}
-        />
+      <ModalWrapper shownModal>
         <ReservationError />;
-      </div>
+      </ModalWrapper>
     );
   return (
-    <div className="modal modal-show">
-      <ModalCloseButton
-        idAriaDescribedBy="describemodal"
-        toggleModal={() => {}}
-      />
+    <ModalWrapper shownModal>
       <section className="reservation-modal">
         <ReservationHeader author={author} label={label} title={title} />
         <ReservationForm submitInfo={submitInfo} submitButton={submitButton} />
       </section>
-    </div>
+    </ModalWrapper>
   );
 };
 

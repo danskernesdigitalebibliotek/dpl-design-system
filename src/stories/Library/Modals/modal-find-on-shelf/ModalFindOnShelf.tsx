@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Disclosure } from "../../disclosure/Disclosure";
 import ListFindOnShelf from "../../Lists/list-find-on-shelf/ListFindOnShelf";
-import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
+import { ModalFallbackButton } from "../ModalShared";
+import ModalWrapper from "../ModalWrapper";
 
 export type ModalFindOnShelfProps = {
   workTitle: string;
@@ -35,18 +36,11 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
   }
 
   return (
-    <div
-      className={`modal modal-details modal-find-on-shelf ${
-        shoudShowModal ? "modal-show" : ""
-      }`}
+    <ModalWrapper
+      shownModal={shoudShowModal}
+      classNames="modal-details modal-find-on-shelf"
+      toggleModal={toggleModal}
     >
-      <div className="modal__screen-reader-description" id="describemodal">
-        Denne modal dækker sidens indhold, og er en demo
-      </div>
-      <ModalCloseButton
-        idAriaDescribedBy="describemodal"
-        toggleModal={toggleModal}
-      />
       <h2 className="text-header-h2 modal-find-on-shelf__headline">
         {workTitle} / {author}
       </h2>
@@ -71,7 +65,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
           </Disclosure>
         );
       })}
-    </div>
+    </ModalWrapper>
   );
 };
 
