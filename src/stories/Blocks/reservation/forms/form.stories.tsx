@@ -1,6 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Reservation from "../Reservation";
+import Reservation from "../../../Library/Modals/modal-reservation/Reservation";
 import Email from "./Email";
 import Sms from "./Sms";
 import Expiration from "./Expiration";

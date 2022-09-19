@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Reservation from "./Reservation";
 
 export default {
-  title: "Blocks / Reservation",
+  title: "Library / Modals / Reservation",
   component: Reservation,
   decorators: [withDesign],
   parameters: {
