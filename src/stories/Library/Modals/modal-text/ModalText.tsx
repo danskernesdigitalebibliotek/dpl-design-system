@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
-import ModalWrapper from "../ModalWrapper";
+import Modal from "../Modal";
 
 export type ModalTextProps = {
   showModal: boolean;
@@ -42,7 +42,7 @@ export const ModalText = (props: ModalTextProps) => {
   }
 
   return (
-    <ModalWrapper
+    <Modal
       shownModal={showModal}
       classNames="modal-text modal-padding"
       toggleModal={toggleModal}
@@ -78,7 +78,7 @@ export const ModalText = (props: ModalTextProps) => {
           />
         </div>
       </div>
-    </ModalWrapper>
+    </Modal>
   );
 };
 

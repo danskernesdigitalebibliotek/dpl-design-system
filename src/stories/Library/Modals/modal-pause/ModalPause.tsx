@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
-import ModalWrapper from "../ModalWrapper";
+import Modal from "../Modal";
 
 export type ModalPauseProps = {
   showModal: boolean;
@@ -35,7 +35,7 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
   }
 
   return (
-    <ModalWrapper
+    <Modal
       shownModal={shouldShowModal}
       classNames="modal-padding modal-pause"
       toggleModal={toggleModal}
@@ -96,6 +96,6 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
           />
         </div>
       </div>
-    </ModalWrapper>
+    </Modal>
   );
 };

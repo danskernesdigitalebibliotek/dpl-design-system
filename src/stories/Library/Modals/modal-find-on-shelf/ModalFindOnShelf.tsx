@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Disclosure } from "../../disclosure/Disclosure";
 import ListFindOnShelf from "../../Lists/list-find-on-shelf/ListFindOnShelf";
 import { ModalFallbackButton } from "../ModalShared";
-import ModalWrapper from "../ModalWrapper";
+import Modal from "../Modal";
 
 export type ModalFindOnShelfProps = {
   workTitle: string;
@@ -36,7 +36,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
   }
 
   return (
-    <ModalWrapper
+    <Modal
       shownModal={shoudShowModal}
       classNames="modal-details modal-find-on-shelf"
       toggleModal={toggleModal}
@@ -65,7 +65,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
           </Disclosure>
         );
       })}
-    </ModalWrapper>
+    </Modal>
   );
 };
 

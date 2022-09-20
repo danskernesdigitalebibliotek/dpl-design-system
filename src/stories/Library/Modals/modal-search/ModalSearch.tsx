@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
-import ModalWrapper from "../ModalWrapper";
+import Modal from "../Modal";
 
 export type ModalSearchProps = {
   showModal: boolean;
@@ -24,7 +24,7 @@ export const ModalSearch: React.FC<ModalSearchProps> = ({ showModal }) => {
   }
 
   return (
-    <ModalWrapper
+    <Modal
       shownModal={shouldShowModal}
       classNames="modal-search modal-padding"
       toggleModal={toggleModal}
@@ -52,6 +52,6 @@ export const ModalSearch: React.FC<ModalSearchProps> = ({ showModal }) => {
           />
         </div>
       </div>
-    </ModalWrapper>
+    </Modal>
   );
 };

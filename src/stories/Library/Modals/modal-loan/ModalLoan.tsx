@@ -9,7 +9,7 @@ import {
   ListMaterialsProps,
 } from "../../Lists/list-materials/ListMaterials";
 import { WarningStatus } from "../../warning-status/WarningStatus";
-import ModalWrapper from "../ModalWrapper";
+import Modal from "../Modal";
 
 type LoanMaterials = Array<{
   materialType?: string;
@@ -168,7 +168,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
   };
 
   return (
-    <ModalWrapper
+    <Modal
       shownModal={shoulShowModal}
       classNames="modal-loan modal-padding"
       toggleModal={toggleModal}
@@ -272,6 +272,6 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
           </div>
         )}
       </div>
-    </ModalWrapper>
+    </Modal>
   );
 };
