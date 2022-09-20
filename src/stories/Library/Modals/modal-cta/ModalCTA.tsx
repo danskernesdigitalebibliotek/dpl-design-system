@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
-import ModalWrapper from "../ModalWrapper";
+import Modal from "../Modal";
 
 export type ModalCTAProps = {
   title: string;
@@ -25,7 +25,7 @@ export const ModalCTA: React.FC<ModalCTAProps> = ({ title, showModal }) => {
   }
 
   return (
-    <ModalWrapper
+    <Modal
       shownModal={shownModal}
       classNames="modal-cta  modal-padding"
       toggleModal={toggleModal}
@@ -66,6 +66,6 @@ export const ModalCTA: React.FC<ModalCTAProps> = ({ title, showModal }) => {
           </div>
         </div>
       </div>
-    </ModalWrapper>
+    </Modal>
   );
 };

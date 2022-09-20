@@ -2,7 +2,7 @@ import ReservationError from "../../reservation/ReservationError";
 import ReservationForm from "../../reservation/ReservationForm";
 import ReservationHeader from "../../reservation/ReservationHeader";
 import ReservationSucces from "../../reservation/ReservationSucces";
-import ModalWrapper from "../ModalWrapper";
+import Modal from "../Modal";
 
 interface ReservationProps {
   title: string;
@@ -23,23 +23,23 @@ const Reservation = ({
 }: ReservationProps) => {
   if (state === "success")
     return (
-      <ModalWrapper shownModal>
+      <Modal shownModal>
         <ReservationSucces />
-      </ModalWrapper>
+      </Modal>
     );
   if (state === "error")
     return (
-      <ModalWrapper shownModal>
+      <Modal shownModal>
         <ReservationError />;
-      </ModalWrapper>
+      </Modal>
     );
   return (
-    <ModalWrapper shownModal>
+    <Modal shownModal>
       <section className="reservation-modal">
         <ReservationHeader author={author} label={label} title={title} />
         <ReservationForm submitInfo={submitInfo} submitButton={submitButton} />
       </section>
-    </ModalWrapper>
+    </Modal>
   );
 };
 

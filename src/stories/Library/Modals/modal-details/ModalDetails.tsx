@@ -13,7 +13,7 @@ import { StatusLabel } from "../../status-label/StatusLabel";
 import { Button } from "../../Buttons/button/Button";
 
 import { ModalFallbackButton } from "../ModalShared";
-import ModalWrapper from "../ModalWrapper";
+import Modal from "../Modal";
 
 const listDetails: Array<ListDetailsProps> = [
   {
@@ -123,7 +123,7 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
   }
 
   return (
-    <ModalWrapper
+    <Modal
       shownModal={shoudShowModal}
       classNames="modal-details"
       toggleModal={toggleModal}
@@ -178,6 +178,6 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
           showLinkfilters
         />
       </div>
-    </ModalWrapper>
+    </Modal>
   );
 };

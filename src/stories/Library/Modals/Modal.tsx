@@ -8,7 +8,7 @@ interface ModalWrapperProps {
   toggleModal?: () => void;
 }
 
-const ModalWrapper = ({
+const Modal = ({
   children,
   shownModal,
   classNames,
@@ -30,4 +30,4 @@ const ModalWrapper = ({
   );
 };
 
-export default ModalWrapper;
+export default Modal;
