@@ -1,3 +1,6 @@
 .material-page {
-  // source can not be empty
+  padding-bottom: $s-2xl;
+  @include breakpoint-s {
+    padding-bottom: $s-6xl;
+  }
 }
