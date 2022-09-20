@@ -60,55 +60,6 @@
   }
 }
 
-.modal {
-  // This color is inherited by the <Counter /> component.
-  --parent-bg-color: #f6f5f0;
-
-  background-color: $c-global-primary;
-  position: relative;
-  opacity: 0;
-  display: none;
-  transition: opacity 0.3s;
-  min-height: 100vh;
-  height: 100%;
-
-  &__screen-reader-description {
-    @include hide-visually;
-  }
-
-  &__backdrop {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: hsla(0, 0%, 15%, 1);
-  }
-}
-
-.modal-padding {
-  padding: $s-lg;
-}
-
-.modal-show {
-  display: flex;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  opacity: 1;
-}
-
-.modal-right {
-  position: fixed;
-  top: 0;
-  left: initial;
-  right: 0;
-  max-width: 560px;
-  width: 100%;
-}
-
 :root {
   --parent-bg-color: #fff;
 }
