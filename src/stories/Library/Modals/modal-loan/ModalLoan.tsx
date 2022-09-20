@@ -170,7 +170,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
   return (
     <Modal
       shownModal={shoulShowModal}
-      classNames="modal-loan modal-padding"
+      classNames="modal-loan"
       toggleModal={toggleModal}
     >
       <div className="modal-loan__container">
