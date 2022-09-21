@@ -16,7 +16,7 @@
     height: 30px;
     vertical-align: super;
     font-size: 12px;
-    @extend .text-body-medium-regular;
+    @extend %text-body-medium-regular-placeholder;
   }
 
   &__buttons {
@@ -24,7 +24,7 @@
     justify-content: center;
     align-items: center;
     &__button {
-      @extend .mx-16;
+      @extend %mx-16;
       display: flex;
 
       &:last-child {

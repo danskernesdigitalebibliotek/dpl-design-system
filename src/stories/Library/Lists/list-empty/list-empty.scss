@@ -7,14 +7,14 @@
   justify-content: center;
   align-items: center;
   border: 1px dotted $c-text-secondary-gray;
-  @extend .color-secondary-gray;
-  @extend .p-4;
-  @extend .pt-48;
-  @extend .pb-48;
-  @extend .text-body-large;
+  @extend %color-secondary-gray;
+  @extend %p-4;
+  @extend %pt-48;
+  @extend %pb-48;
+  @extend %text-body-large;
 
   &__text {
-    @extend .pb-48;
+    @extend %pb-48;
   }
 
   &__links {

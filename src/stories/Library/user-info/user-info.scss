@@ -1,15 +1,15 @@
 .dpl-user-info {
-  @extend .color-secondary-gray;
-  @extend .bg-global-secondary;
-  @extend .pb-32;
+  @extend %color-secondary-gray;
+  @extend %bg-global-secondary;
+  @extend %pb-32;
 
   &__label {
-    @extend .text-body-medium-medium;
-    @extend .ml-32;
-    @extend .pt-32;
+    @extend %text-body-medium-medium;
+    @extend %ml-32;
+    @extend %pt-32;
   }
   &__text {
-    @extend .text-body-medium-regular;
-    @extend .ml-32;
+    @extend %text-body-medium-regular-placeholder;
+    @extend %ml-32;
   }
 }
