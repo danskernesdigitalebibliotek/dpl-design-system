@@ -21,6 +21,7 @@
   transition: opacity 0.3s;
   min-height: 100vh;
   height: 100%;
+  overflow: scroll;
 
   &__screen-reader-description {
     @include hide-visually;
