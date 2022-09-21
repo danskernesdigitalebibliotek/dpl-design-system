@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
+import { ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { Checkbox } from "../../Forms/checkbox/Checkbox";
 import { Counter } from "../../counter/Counter";
@@ -9,6 +9,7 @@ import {
   ListMaterialsProps,
 } from "../../Lists/list-materials/ListMaterials";
 import { WarningStatus } from "../../warning-status/WarningStatus";
+import Modal from "../Modal";
 
 type LoanMaterials = Array<{
   materialType?: string;
@@ -167,18 +168,11 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
   };
 
   return (
-    <div
-      className={`modal modal-loan modal-padding ${
-        shoulShowModal ? "modal-show" : ""
-      }`}
+    <Modal
+      shownModal={shoulShowModal}
+      classNames="modal-loan"
+      toggleModal={toggleModal}
     >
-      <div className="modal__screen-reader-description" id="describemodal">
-        Denne modal dækker sidens indhold, og er en demo
-      </div>
-      <ModalCloseButton
-        idAriaDescribedBy="describemodal"
-        toggleModal={toggleModal}
-      />
       <div className="modal-loan__container">
         <div className="modal-loan__header">
           {isExpired && (
@@ -278,6 +272,6 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
           </div>
         )}
       </div>
-    </div>
+    </Modal>
   );
 };

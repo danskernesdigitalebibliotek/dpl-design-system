@@ -46,6 +46,7 @@
 @import "./src/stories/Library/Lists/list-materials/list-materials";
 @import "./src/stories/Library/Lists/list-empty/list-empty";
 @import "./src/stories/Library/accordion/accordion";
+@import "./src/stories/Library/Modals/modal";
 @import "./src/stories/Library/Modals/modal-details/modal-details";
 @import "./src/stories/Library/Modals/modal-cta/modal-cta";
 @import "./src/stories/Library/Modals/modal-header/modal-header";
@@ -55,6 +56,8 @@
 @import "./src/stories/Library/Modals/modal-text/modal-text";
 @import "./src/stories/Library/Modals/modal-pause/modal-pause";
 @import "./src/stories/Library/Modals/modal-profile/modal-profile";
+@import "./src/stories/Library/Modals/modal-reservation/reservation";
+
 @import "./src/stories/Blocks/material-page/material-page";
 @import "./src/stories/Library/Buttons/toggle-button/toggle-button";
 @import "./src/stories/Library/pause-reservation/pause-reservation";
@@ -81,7 +84,6 @@
 @import "./src/stories/Blocks/status-loans/status-loans";
 @import "./src/stories/Blocks/status-userprofile/status-userprofile";
 @import "./src/stories/Blocks/material-manifestation-item/material-manifestation-item";
-@import "./src/stories/Blocks/reservation/reservation.scss";
 
 
 @import "./src/styles/scss/shared";

@@ -1,18 +1,14 @@
 .modal-find-on-shelf {
-  padding: 0;
+  padding-top: 72px;
   overflow-y: scroll;
   align-items: flex-start;
 
   @include breakpoint-m {
-    padding: 0 215px $s-4xl 215px;
+    padding: $s-4xl $s-7xl;
   }
 
   &__headline {
-    margin: 72px $s-md 0 $s-md;
-
-    @include breakpoint-m {
-      margin-top: $s-4xl;
-    }
+    margin: 0 $s-md;
   }
 
   &__caption {

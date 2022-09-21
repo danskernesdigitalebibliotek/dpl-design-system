@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
+import { ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
+import Modal from "../Modal";
 
 export type ModalPauseProps = {
   showModal: boolean;
@@ -34,18 +35,11 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
   }
 
   return (
-    <div
-      className={`modal modal-pause ${
-        shouldShowModal ? "modal-show" : ""
-      } modal-padding `}
+    <Modal
+      shownModal={shouldShowModal}
+      classNames="modal-padding modal-pause"
+      toggleModal={toggleModal}
     >
-      <div className="modal__screen-reader-description" id="describemodal">
-        Denne modal dækker sidens indhold, og er en demo
-      </div>
-      <ModalCloseButton
-        idAriaDescribedBy="describemodal"
-        toggleModal={toggleModal}
-      />
       <div className="modal-pause__container">
         <h3 className="text-header-h3">{title}</h3>
         <div className="mt-48 color-secondary-gray">
@@ -102,6 +96,6 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
           />
         </div>
       </div>
-    </div>
+    </Modal>
   );
 };

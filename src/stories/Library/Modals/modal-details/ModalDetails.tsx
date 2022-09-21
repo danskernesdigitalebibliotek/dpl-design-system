@@ -12,7 +12,8 @@ import { WarningStatus } from "../../warning-status/WarningStatus";
 import { StatusLabel } from "../../status-label/StatusLabel";
 import { Button } from "../../Buttons/button/Button";
 
-import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
+import { ModalFallbackButton } from "../ModalShared";
+import Modal from "../Modal";
 
 const listDetails: Array<ListDetailsProps> = [
   {
@@ -122,16 +123,11 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
   }
 
   return (
-    <div
-      className={`modal modal-details ${shoudShowModal ? "modal-show" : ""}`}
+    <Modal
+      shownModal={shoudShowModal}
+      classNames="modal-details"
+      toggleModal={toggleModal}
     >
-      <div className="modal__screen-reader-description" id="describemodal">
-        Denne modal dækker sidens indhold, og er en demo
-      </div>
-      <ModalCloseButton
-        idAriaDescribedBy="describemodal"
-        toggleModal={toggleModal}
-      />
       <div className="modal-details__container">
         <div className="modal-details__header">
           <div className="modal-details__cover">
@@ -182,6 +178,6 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
           showLinkfilters
         />
       </div>
-    </div>
+    </Modal>
   );
 };

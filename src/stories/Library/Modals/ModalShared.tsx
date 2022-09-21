@@ -29,13 +29,13 @@ export function ModalCloseButton({
   toggleModal,
   idAriaDescribedBy,
 }: {
-  toggleModal: () => void;
+  toggleModal: void | (() => void);
   idAriaDescribedBy: string;
 }) {
   return (
     <ButtonUI
       describe={idAriaDescribedBy}
-      onClick={toggleModal}
+      onClick={toggleModal || (() => {})}
       classes="modal-btn-close"
       ariaLabel="close modal"
       content={{

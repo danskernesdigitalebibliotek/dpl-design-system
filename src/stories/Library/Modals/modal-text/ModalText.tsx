@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
-import { ModalCloseButton, ModalFallbackButton } from "../ModalShared";
+import { ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
+import Modal from "../Modal";
 
 export type ModalTextProps = {
   showModal: boolean;
@@ -41,18 +42,11 @@ export const ModalText = (props: ModalTextProps) => {
   }
 
   return (
-    <div
-      className={`modal modal-text ${
-        showModal ? "modal-show" : ""
-      } modal-padding`}
+    <Modal
+      shownModal={showModal}
+      classNames="modal-text modal-padding"
+      toggleModal={toggleModal}
     >
-      <div className="modal__screen-reader-description" id="describemodal">
-        Denne modal dækker sidens indhold, og er en demo
-      </div>
-      <ModalCloseButton
-        idAriaDescribedBy="describemodal"
-        toggleModal={toggleModal}
-      />
       <div className="modal-text__container color-secondary-gray">
         <h3 className="text-header-h3">{title}</h3>
 
@@ -84,7 +78,7 @@ export const ModalText = (props: ModalTextProps) => {
           />
         </div>
       </div>
-    </div>
+    </Modal>
   );
 };
 
