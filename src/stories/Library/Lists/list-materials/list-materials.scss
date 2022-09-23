@@ -11,6 +11,10 @@
     align-items: center;
     flex-direction: row;
   }
+
+  &--bottom-buttons-visible {
+    padding-bottom: 90px;
+  }
 }
 
 .list-materials__checkbox {

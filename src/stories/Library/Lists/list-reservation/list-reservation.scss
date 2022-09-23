@@ -28,6 +28,9 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__note-mobile {
+  // To make it easy to click
+  min-height: 20px;
+  cursor: pointer;
   background-color: transparent;
   align-self: baseline;
   border: 0;
@@ -56,6 +59,9 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__note-desktop {
+  // To make it easy to click
+  min-height: 20px;
+  cursor: pointer;
   background-color: transparent;
   align-self: baseline;
   border: 0;
@@ -95,6 +101,7 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__status {
+  height: 100%;
   display: grid;
   align-items: flex-end;
   grid-template-columns: auto 1fr auto;
