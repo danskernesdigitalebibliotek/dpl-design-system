@@ -7,12 +7,14 @@ export type DropdownProps = {
   list: DropdownItem[];
   ariaLabel: string;
   arrowIcon: "triangles" | "chevron";
+  classNames?: string;
 };
 
 export const Dropdown: React.FC<DropdownProps> = ({
   arrowIcon,
   ariaLabel,
   list,
+  classNames,
 }) => {
   const Icon = () => {
     if (arrowIcon === "triangles") {
@@ -46,7 +48,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   };
 
   return (
-    <div className="dropdown">
+    <div className={`dropdown ${classNames || ""}`}>
       <select className="dropdown__select" aria-label={ariaLabel}>
         {list.map((i, index) => (
           <option key={index} className="dropdown__option" value={i.title}>
