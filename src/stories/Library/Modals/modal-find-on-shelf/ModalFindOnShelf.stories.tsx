@@ -32,6 +32,11 @@ export default {
       defaultValue: true,
       control: { type: "boolean" },
     },
+    isPeriodical: {
+      name: "Is periodical (e.g. magazine)?",
+      defaultValue: false,
+      control: { type: "null" },
+    },
   },
   parameters: {
     design: {
@@ -45,4 +50,9 @@ const Template: ComponentStory<typeof ModalFindOnShelf> = (
   args: ModalFindOnShelfProps
 ) => <ModalFindOnShelf {...args} />;
 
-export const FindOnShelf = Template.bind({});
+export const Default = Template.bind({});
+
+export const Periodical = Template.bind({});
+Periodical.args = {
+  isPeriodical: true,
+};

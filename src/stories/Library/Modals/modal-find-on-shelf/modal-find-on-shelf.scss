@@ -15,7 +15,20 @@
     margin: $s-2xl 0 $s-md $s-md;
 
     @include breakpoint-m {
-      margin: 96px 0 $s-sm 16px;
+    }
+  }
+
+  .periodical-dropdowns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0 $s-2xl 0;
+
+    @include breakpoint-m {
+      flex-direction: row;
+      gap: $s-lg;
+      max-width: 800px;
+      margin: 0 0 $s-3xl 0;
     }
   }
 }
