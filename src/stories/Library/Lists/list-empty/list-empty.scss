@@ -13,10 +13,6 @@
   @extend %pb-48;
   @extend %text-body-large;
 
-  &__text {
-    @extend %pb-48;
-  }
-
   &__links {
     display: flex;
     flex-direction: row;

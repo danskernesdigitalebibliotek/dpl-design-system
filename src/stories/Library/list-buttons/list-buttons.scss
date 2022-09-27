@@ -23,19 +23,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &__button {
-      @extend %mx-16;
-      display: flex;
 
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-    &--hide-on-mobile {
-      display: none;
-      @include breakpoint-s {
-        display: flex;
-      }
+    &__button {
+      @extend %ml-32;
+      display: flex;
     }
   }
 }
