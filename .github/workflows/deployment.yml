@@ -70,9 +70,10 @@ jobs:
         # Using branch names as tags allows other projects to track unreleased
         # development.
         run: |
-          npm version 0.0.0-$GITHUB_SHA --no-git-tag-version
-          cat package.json
           NPM_TAG_NAME=$(echo $GITHUB_REF_NAME | tr -d [:space:] | tr -C [:alnum:] -)
+          npm version 0.0.0-$GITHUB_SHA --no-git-tag-version
+          echo $NPM_TAG_NAME
+          cat package.json
           npm publish --tag $NPM_TAG_NAME
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
