@@ -48,7 +48,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
         {workTitle} / {author}
       </h2>
       {isPeriodical && (
-        <div className="periodical-dropdowns">
+        <div className="modal-find-on-shelf__periodical-dropdowns">
           <Dropdown
             ariaLabel="Choose periodical year"
             list={[
