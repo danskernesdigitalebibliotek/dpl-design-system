@@ -4,7 +4,7 @@
   width: 24px;
 
   &--filled {
-    color: var(--identity-color);
-    fill: var(--identity-color);
+    color: $c-identity-primary;
+    fill: $c-identity-primary;
   }
 }
