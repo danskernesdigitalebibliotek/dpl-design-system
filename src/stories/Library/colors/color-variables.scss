@@ -24,11 +24,8 @@ $c-signal-alert: #d5364a;
   --identity-color-h: 145;
   --identity-color-s: 22%;
   --identity-color-l: 35%;
-  --identity-color: hsl(
-    var(--identity-color-h),
-    var(--identity-color-s),
-    var(--identity-color-l)
-  );
+  --identity-color: var(--identity-color-h), var(--identity-color-s),
+    var(--identity-color-l);
   --tint-color-20: hsl(var(--identity-color), 0.2);
   --tint-color-40: hsl(var(--identity-color), 0.4);
   --tint-color-60: hsl(var(--identity-color), 0.6);
