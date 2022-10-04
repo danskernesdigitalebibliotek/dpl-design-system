@@ -1,4 +1,5 @@
 .modal-profile {
+  padding: 0; // reset padding from default .modal class
   flex-direction: column;
 
   &__notifications {
