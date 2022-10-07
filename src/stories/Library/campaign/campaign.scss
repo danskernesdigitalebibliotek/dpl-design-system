@@ -1,0 +1,40 @@
+.campaign {
+  background-color: $c-global-tertiary-2;
+  display: grid;
+  grid-template-rows: 150px auto;
+
+  @include breakpoint-s {
+    height: 150px;
+    display: flex;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    @include breakpoint-s {
+      max-width: 30%;
+    }
+  }
+
+  &__title {
+    @extend %text-header-h4;
+    margin: $s-lg;
+    align-self: center;
+    color: $c-text-primary-white;
+  }
+}
+
+.campaign--reverse {
+  @include breakpoint-s {
+    flex-direction: row-reverse;
+  }
+}
+
+.campaign__title--ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
