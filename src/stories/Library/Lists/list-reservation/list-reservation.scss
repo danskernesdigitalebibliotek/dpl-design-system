@@ -29,7 +29,7 @@ $list-reservation-space-desktop: 24px;
 
   @include breakpoint-s {
     div:first-of-type {
-      margin-bottom: $list-reservation-space-desktop;
+      margin-bottom: 8px;
     }
   }
 }
