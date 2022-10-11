@@ -11,6 +11,10 @@ export default {
       control: { type: "text" },
       defaultValue: "10 gode bøger om Venner & Veninder",
     },
+    imageUrl: {
+      control: { type: "text" },
+      defaultValue: "https://picsum.photos/id/777/300/200",
+    },
     reverse: {
       control: {
         type: "boolean",
@@ -47,4 +51,9 @@ Ellipsis.args = {
   title:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati temporibus odit omnis voluptatibus sapiente necessitatibus expedita consequuntur illum nobis eaque aspernatur porro incidunt quod illo vel laudantium nisi, vitae mollitia? Similique vero facere rerum repellendus perferendis commodi placeat illum corporis vel, accusantium fugiat sapiente odio doloribus inventore, aperiam quisquam veniam quia. Provident quo corporis incidunt, facilis laudantium expedita magni dolores?",
   ellipsis: true,
+};
+
+export const withoutImage = Template.bind({});
+withoutImage.args = {
+  imageUrl: "",
 };
