@@ -5,12 +5,14 @@ export type CampaignProps = {
   reverse?: boolean;
   ellipsis?: boolean;
   title: string;
+  imageUrl?: string;
 };
 
 const Campaign: React.FunctionComponent<CampaignProps> = ({
   reverse,
   ellipsis,
   title,
+  imageUrl,
 }) => {
   const classes = {
     campaign: clsx(`campaign`, { "campaign--reverse": reverse }),
@@ -20,11 +22,7 @@ const Campaign: React.FunctionComponent<CampaignProps> = ({
 
   return (
     <section className={classes.campaign}>
-      <img
-        className={classes.image}
-        src="https://picsum.photos/id/777/300/200"
-        alt=""
-      />
+      {imageUrl && <img className={classes.image} src={imageUrl} alt="" />}
       <h4 className={classes.title}>{title}</h4>
     </section>
   );
