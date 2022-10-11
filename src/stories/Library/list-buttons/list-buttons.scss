@@ -2,39 +2,40 @@
   display: flex;
   justify-content: space-between;
   @extend %text-body-medium-medium;
+}
 
-  &__header {
-    all: unset;
-    height: 35px;
-    position: relative;
-    padding-right: 25px;
+.dpl-list-buttons__header {
+  all: unset;
+  height: 35px;
+  position: relative;
+  padding-right: 25px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.dpl-list-buttons__power {
+  margin-left: 2px;
+  height: 30px;
+  vertical-align: super;
+  font-size: 12px;
+  @extend %text-body-medium-regular-placeholder;
+}
+
+.dpl-list-buttons__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpl-list-buttons__buttons__button {
+  @extend %ml-32;
+  display: flex;
+}
+
+.dpl-list-buttons__buttons__button--hide-on-mobile {
+  display: none;
+
+  @include breakpoint-s {
     display: flex;
-    align-items: flex-end;
-  }
-
-  &__power {
-    margin-left: 2px;
-    height: 30px;
-    vertical-align: super;
-    font-size: 12px;
-    @extend %text-body-medium-regular-placeholder;
-  }
-
-  &__buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__button {
-      @extend %ml-32;
-      display: flex;
-    }
-  }
-  .hide-on-mobile {
-    display: none;
-
-    @include breakpoint-s {
-      display: flex;
-    }
   }
 }
