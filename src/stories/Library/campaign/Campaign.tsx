@@ -20,7 +20,11 @@ const Campaign: React.FunctionComponent<CampaignProps> = ({
 
   return (
     <section className={classes.campaign}>
-      <img className={classes.image} src="images/campaign.png" alt="" />
+      <img
+        className={classes.image}
+        src="https://picsum.photos/id/777/300/200"
+        alt=""
+      />
       <h4 className={classes.title}>{title}</h4>
     </section>
   );
