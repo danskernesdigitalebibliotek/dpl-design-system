@@ -23,8 +23,15 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__material {
+  height: 100%;
   display: flex;
   align-items: center;
+
+  @include breakpoint-s {
+    div:first-of-type {
+      margin-bottom: 8px;
+    }
+  }
 }
 
 .list-reservation__note-mobile {
@@ -84,7 +91,6 @@ $list-reservation-space-desktop: 24px;
 
   @include breakpoint-s {
     margin-left: $list-reservation-space-desktop;
-    justify-content: space-between;
   }
 }
 

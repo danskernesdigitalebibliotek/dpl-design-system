@@ -1,0 +1,8 @@
+.reservation-list-page {
+  background: $c-global-primary;
+  padding: $s-md;
+
+  @include breakpoint-m {
+    padding: $s-6xl;
+  }
+}
