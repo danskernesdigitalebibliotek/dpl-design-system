@@ -1,8 +1,8 @@
 import { Disclosure } from "../../disclosure/Disclosure";
 import { Button } from "../../Buttons/button/Button";
 import Modal from "../Modal";
-import FacetBrowserTag from "./FacetBrowserTag";
 import facetBrowserDummyData from "./facet-browser-dummy-data";
+import FacetTag from "../../facet-tag/FacetTag";
 
 export type FacetBrowserProps = {
   title: string;
@@ -33,7 +33,7 @@ const FacetBrowser: React.FC<FacetBrowserProps> = ({
           <Disclosure key={facet.title} headline={facet.title}>
             <div className="facet-browser-facets">
               {facet.tags.map((tag) => (
-                <FacetBrowserTag tag={tag} key={tag} />
+                <FacetTag tag={tag} key={tag} />
               ))}
             </div>
             <button className="facet-browser-show-more-btn">{showMore}</button>
