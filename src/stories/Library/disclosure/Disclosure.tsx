@@ -4,7 +4,7 @@ import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 export type DisclosureProps = {
   headline: string;
   children: React.ReactNode | string;
-  icon: "Various" | "Receipt" | "Create" | "Profile";
+  icon?: "Various" | "Receipt" | "Create" | "Profile";
   withAvailability?: boolean;
   fullWidth?: boolean;
 };
@@ -29,7 +29,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({
           setIsOpen(!isOpen);
         }}
       >
-        {!withAvailability && (
+        {!withAvailability && icon && (
           <div className="disclosure__icon bg-identity-tint-120">
             <img
               className="invert"

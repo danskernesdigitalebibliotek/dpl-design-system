@@ -1,0 +1,78 @@
+.facet-browser {
+  width: 100%;
+}
+
+.facet-browser-header {
+  min-height: 120px;
+  padding: 32px;
+  padding-bottom: 28px;
+  @include breakpoint-s {
+    min-height: 144px;
+    padding: 48px;
+    padding-bottom: 28px;
+  }
+}
+
+.facet-browser-clear-all-btn {
+  @extend %link-tag;
+  padding: 0;
+  padding-top: 12px;
+  cursor: pointer;
+}
+
+// Remove default margin from disclosure
+.facet-browser .disclosure {
+  margin: 0;
+}
+// Remove default padding from disclosure headline
+.facet-browser .disclosure__headline {
+  @extend %pl-32;
+  @include breakpoint-s {
+    padding-left: 48px;
+  }
+}
+
+.facet-browser-facets {
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  @include breakpoint-s {
+    padding: 18px;
+  }
+}
+
+.facet-browser-tag {
+  //  TODO: extend boxed-text class instead of this.
+  //  The problem is that the boxed-text is loaded after spacing.css in base.css
+  //  so i can't override the padding
+  display: flex;
+  align-items: center;
+  outline: 1px solid $c-global-tertiary-1;
+  @extend %text-tags;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.facet-browser-tag--selected {
+  background-color: #eee9e5;
+}
+
+.facet-browser-show-more-btn {
+  @extend %link-tag;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: block;
+  margin-left: auto;
+  padding-bottom: 28px;
+  padding-right: 16px;
+  cursor: pointer;
+
+  @include breakpoint-s {
+    padding-right: 42px;
+  }
+}
+
+.facet-browser-show-results-btn {
+  margin: 50px auto 10px;
+}
