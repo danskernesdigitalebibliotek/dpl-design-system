@@ -42,22 +42,6 @@
   }
 }
 
-.facet-browser-tag {
-  //  TODO: extend boxed-text class instead of this.
-  //  The problem is that the boxed-text is loaded after spacing.css in base.css
-  //  so i can't override the padding
-  display: flex;
-  align-items: center;
-  outline: 1px solid $c-global-tertiary-1;
-  @extend %text-tags;
-  cursor: pointer;
-  padding: 8px 16px;
-}
-
-.facet-browser-tag--selected {
-  background-color: #eee9e5;
-}
-
 .facet-browser-show-more-btn {
   @extend %link-tag;
   font-size: 12px;
