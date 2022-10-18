@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { clsx } from "clsx";
 import { ModalCloseButton, ModalFallbackButton } from "./ModalShared";
 
 interface ModalWrapperProps {
@@ -17,11 +18,7 @@ const Modal = ({ children, shownModal, classNames }: ModalWrapperProps) => {
   if (!shoudShowModal) return <ModalFallbackButton toggleModal={toggleModal} />;
 
   return (
-    <div
-      className={`modal ${shoudShowModal ? "modal-show" : ""} ${
-        classNames ?? ""
-      }`}
-    >
+    <div className={clsx("modal", shoudShowModal && "modal-show", classNames)}>
       <div className="modal__screen-reader-description" id="describemodal">
         Denne modal dækker sidens indhold, og er en demo
       </div>
