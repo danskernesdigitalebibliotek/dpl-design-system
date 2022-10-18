@@ -27,16 +27,6 @@
     @include hide-visually;
   }
 
-  &__backdrop {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: hsla(0, 0%, 15%, 1);
-  }
-
   @include breakpoint-m {
     padding: $s-4xl $s-7xl;
   }
@@ -63,4 +53,18 @@
   right: 0;
   max-width: 560px;
   width: 100%;
+}
+
+.modal-backdrop {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 15%, 1);
+}
+
+.modal--no-padding {
+  padding: 0;
 }
