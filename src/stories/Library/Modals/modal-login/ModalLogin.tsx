@@ -10,7 +10,7 @@ export type ModalLoginProps = {
 };
 
 export const ModalLogin: React.FC<ModalLoginProps> = ({ showModal }) => {
-  const [shownModal, setShownModal] = useState(showModal);
+  <div className="modal-backdrop">
 
   useEffect(() => {
     setShownModal(showModal);

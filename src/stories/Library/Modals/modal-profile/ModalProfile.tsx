@@ -26,7 +26,7 @@ export const ModalProfile: React.FC<ModalProfileProps> = ({
   notifications,
   profileNavLinks,
 }) => {
-  const [shownModal, setShownModal] = useState(showModal);
+  <div className="modal-backdrop">
 
   useEffect(() => {
     setShownModal(showModal);
