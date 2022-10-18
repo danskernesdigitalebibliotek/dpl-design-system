@@ -1,22 +1,26 @@
-import React from "react";
-import { ModalCloseButton } from "./ModalShared";
+import React, { useEffect, useState } from "react";
+import { ModalCloseButton, ModalFallbackButton } from "./ModalShared";
 
 interface ModalWrapperProps {
   shownModal: boolean;
   children?: React.ReactNode;
   classNames?: string;
-  toggleModal?: () => void;
 }
 
-const Modal = ({
-  children,
-  shownModal,
-  classNames,
-  toggleModal,
-}: ModalWrapperProps) => {
+const Modal = ({ children, shownModal, classNames }: ModalWrapperProps) => {
+  const [shoudShowModal, setShouldShowModal] = useState(shownModal);
+
+  useEffect(() => setShouldShowModal(shownModal), [shownModal]);
+
+  const toggleModal = () => setShouldShowModal(!shoudShowModal);
+
+  if (!shoudShowModal) return <ModalFallbackButton toggleModal={toggleModal} />;
+
   return (
     <div
-      className={`modal ${shownModal ? "modal-show" : ""} ${classNames ?? ""}`}
+      className={`modal ${shoudShowModal ? "modal-show" : ""} ${
+        classNames ?? ""
+      }`}
     >
       <div className="modal__screen-reader-description" id="describemodal">
         Denne modal dækker sidens indhold, og er en demo

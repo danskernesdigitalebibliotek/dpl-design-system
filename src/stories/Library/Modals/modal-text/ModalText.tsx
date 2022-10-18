@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-
-import { ModalFallbackButton } from "../ModalShared";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
 import Modal from "../Modal";
@@ -19,34 +16,9 @@ export type ModalTextProps = {
 };
 
 export const ModalText = (props: ModalTextProps) => {
-  const {
-    title,
-    subtitle,
-    textContent,
-    linkText,
-    btnLabel,
-    showModal: showModalProp,
-  } = props;
-  const [showModal, setShow] = useState(showModalProp);
-
-  useEffect(() => {
-    setShow(showModalProp);
-  }, [showModalProp]);
-
-  const toggleModal = () => {
-    setShow(!showModal);
-  };
-
-  if (!showModal) {
-    return <ModalFallbackButton toggleModal={toggleModal} />;
-  }
-
+  const { title, subtitle, textContent, linkText, btnLabel, showModal } = props;
   return (
-    <Modal
-      shownModal={showModal}
-      classNames="modal-text modal-padding"
-      toggleModal={toggleModal}
-    >
+    <Modal shownModal={showModal} classNames="modal-text modal-padding">
       <div className="modal-text__container color-secondary-gray">
         <h3 className="text-header-h3">{title}</h3>
 
