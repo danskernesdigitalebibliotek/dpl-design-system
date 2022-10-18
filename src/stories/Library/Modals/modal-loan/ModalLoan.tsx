@@ -1,5 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
-import { ModalFallbackButton } from "../ModalShared";
+import { useMemo, useState } from "react";
 import { Button } from "../../Buttons/button/Button";
 import { Checkbox } from "../../Forms/checkbox/Checkbox";
 import { Counter } from "../../counter/Counter";
@@ -135,17 +134,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
   showModal,
   buttonsUpTop,
 }) => {
-  const [shoulShowModal, setShouldShowModal] = useState(showModal);
   const [isAllChecked, setChecked] = useState(false);
-
-  useEffect(() => {
-    setShouldShowModal(showModal);
-  }, [showModal]);
-
-  const toggleModal = () => {
-    setShouldShowModal(!showModal);
-  };
-
   const isExpired = showExpired;
   const loanList = isExpired ? listExpired : listExpiresSoon;
 
@@ -159,20 +148,12 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
     return total;
   }, [loanList]);
 
-  if (!shoulShowModal) {
-    return <ModalFallbackButton toggleModal={toggleModal} />;
-  }
-
   const handleToggleAll = () => {
     setChecked(!isAllChecked);
   };
 
   return (
-    <Modal
-      shownModal={shoulShowModal}
-      classNames="modal-loan"
-      toggleModal={toggleModal}
-    >
+    <Modal shownModal={showModal} classNames="modal-loan">
       <div className="modal-loan__container">
         <div className="modal-loan__header">
           {isExpired && (

@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 import { Disclosure } from "../../disclosure/Disclosure";
 import ListFindOnShelf from "../../Lists/list-find-on-shelf/ListFindOnShelf";
-import { ModalFallbackButton } from "../ModalShared";
 import Modal from "../Modal";
 import { Dropdown } from "../../dropdown/Dropdown";
 
@@ -24,25 +22,11 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
 }) => {
   const branchesArray = new Array(nrOfbranches).fill("item");
   const manifestationArray = new Array(nrOfManifestations).fill("item");
-  const [shoudShowModal, setShouldShowModal] = useState(showModal);
-
-  useEffect(() => {
-    setShouldShowModal(showModal);
-  }, [showModal]);
-
-  const toggleModal = () => {
-    setShouldShowModal(!shoudShowModal);
-  };
-
-  if (!shoudShowModal) {
-    return <ModalFallbackButton toggleModal={toggleModal} />;
-  }
 
   return (
     <Modal
-      shownModal={shoudShowModal}
+      shownModal={showModal}
       classNames="modal-details modal-find-on-shelf"
-      toggleModal={toggleModal}
     >
       <h2 className="text-header-h2 modal-find-on-shelf__headline">
         {workTitle} / {author}
