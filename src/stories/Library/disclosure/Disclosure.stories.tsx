@@ -6,6 +6,12 @@ export default {
   title: "Library / Disclosure",
   component: Disclosure,
   decorators: [withDesign],
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=416%3A15008",
+    },
+  },
   argTypes: {
     headline: {
       name: "Headline",
@@ -28,11 +34,10 @@ export default {
       defaultValue: false,
       control: { disable: true },
     },
-  },
-  parameters: {
-    design: {
-      type: "figma",
-      url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=416%3A15008",
+    fullWidth: {
+      name: "Full width?",
+      defaultValue: false,
+      control: { type: "boolean" },
     },
   },
 } as ComponentMeta<typeof Disclosure>;
