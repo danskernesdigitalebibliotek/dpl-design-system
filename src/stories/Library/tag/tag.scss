@@ -1,25 +1,32 @@
-.tag-primary {
+.tag {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   background-color: $c-global-secondary;
   @extend %text-tags;
+
+  &.tag--small {
+    height: 32px;
+    padding: 0 8px;
+  }
+
+  &.tag--large {
+    height: 40px;
+    padding: 0 16px;
+  }
+
+  &.tag--outlined {
+    background-color: transparent;
+    outline: 1px solid $c-global-tertiary-1;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &-selected {
+      background-color: #eee9e5;
+    }
+  }
 }
 
 .tag-icon {
   margin-left: 10px;
-}
-
-.tag-removable {
-  cursor: pointer;
-}
-
-.tag-large {
-  height: 40px;
-  padding: 0 16px;
-}
-
-.tag-small {
-  height: 32px;
-  padding: 0 8px;
 }

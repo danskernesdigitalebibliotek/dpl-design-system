@@ -35,7 +35,7 @@ export default {
     },
     showResults: {
       control: {
-        type: "text",
+        type: "null",
       },
     },
   },
