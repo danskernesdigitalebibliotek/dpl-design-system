@@ -31,3 +31,10 @@ TagRemovable.args = {
   label: "Litteratur",
   removable: true,
 };
+
+export const facet = Template.bind({});
+facet.args = {
+  label: "Skønlitteratur (96)",
+  removable: false,
+  facet: true,
+};
