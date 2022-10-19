@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { clsx } from "clsx";
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 
 export type DisclosureProps = {
@@ -7,6 +8,7 @@ export type DisclosureProps = {
   icon?: "Various" | "Receipt" | "Create" | "Profile";
   withAvailability?: boolean;
   fullWidth?: boolean;
+  classNames?: string;
 };
 
 export const Disclosure: React.FC<DisclosureProps> = ({
@@ -15,13 +17,16 @@ export const Disclosure: React.FC<DisclosureProps> = ({
   icon,
   withAvailability,
   fullWidth = false,
+  classNames,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <details
-      className={`disclosure text-body-large ${
-        fullWidth ? "disclosure--full-width" : ""
-      }`}
+      className={clsx(
+        "disclosure text-body-large",
+        fullWidth && "disclosure--full-width",
+        classNames
+      )}
     >
       <summary
         className="disclosure__headline text-body-large"

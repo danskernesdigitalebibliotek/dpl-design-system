@@ -11,7 +11,7 @@
     margin: 0 133px;
   }
 
-  &--full-width {
+  &.disclosure--full-width {
     width: 100%;
     margin: 0;
 
@@ -80,6 +80,13 @@
 
     &-open {
       transform: scaleY(-1);
+    }
+  }
+
+  &.disclosure--no-header-padding .disclosure__headline {
+    @extend %pl-32;
+    @include breakpoint-s {
+      padding-left: 48px;
     }
   }
 }
