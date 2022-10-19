@@ -13,25 +13,6 @@
   }
 }
 
-.facet-browser-clear-all-btn {
-  @extend %link-tag;
-  padding: 0;
-  padding-top: 12px;
-  cursor: pointer;
-}
-
-// Remove default margin from disclosure
-.facet-browser .disclosure {
-  margin: 0;
-}
-// Remove default padding from disclosure headline
-.facet-browser .disclosure__headline {
-  @extend %pl-32;
-  @include breakpoint-s {
-    padding-left: 48px;
-  }
-}
-
 .facet-browser-facets {
   padding: 16px;
   display: flex;
@@ -42,7 +23,14 @@
   }
 }
 
-.facet-browser-show-more-btn {
+.facet-browser-clear-btn {
+  @extend %link-tag;
+  padding: 0;
+  padding-top: 12px;
+  cursor: pointer;
+}
+
+.facet-browser-more-btn {
   @extend %link-tag;
   font-size: 12px;
   text-transform: uppercase;
@@ -57,6 +45,6 @@
   }
 }
 
-.facet-browser-show-results-btn {
+.facet-browser-results-btn {
   margin: 50px auto 10px;
 }

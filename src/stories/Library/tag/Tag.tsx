@@ -1,27 +1,42 @@
+import { useState } from "react";
+import clsx from "clsx";
+
 type TagProps = {
   label: string;
-  removable: boolean;
+  removable?: boolean;
+  facet?: boolean;
 };
 
-export const Tag = (props: TagProps) => {
-  const { label, removable } = props;
-  const Icon = () =>
-    removable ? (
-      <img
-        className="tag-icon"
-        src="icons/basic/icon-cross.svg"
-        alt="close icon"
-      />
-    ) : null;
+const Icon = () => (
+  <img className="tag-icon" src="icons/basic/icon-cross.svg" alt="close icon" />
+);
+
+export const Tag = ({ label, removable = false, facet }: TagProps) => {
+  const [selected, setSelected] = useState(false);
+
+  if (facet) {
+    return (
+      <button
+        onClick={() => setSelected(!selected)}
+        className={clsx(
+          "tag tag--outlined",
+          selected && "tag--outlined-selected"
+        )}
+      >
+        {label}
+      </button>
+    );
+  }
 
   return (
     <span
-      className={`tag-primary ${
-        removable ? "tag-removable tag-small" : "tag-large"
-      }`}
+      className={clsx(
+        "tag tag--small",
+        removable ? "cursor-pointer" : "tag--large"
+      )}
     >
       {label}
-      <Icon />
+      {removable && <Icon />}
     </span>
   );
 };

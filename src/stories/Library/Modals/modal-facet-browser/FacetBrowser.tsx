@@ -2,7 +2,7 @@ import { Disclosure } from "../../disclosure/Disclosure";
 import { Button } from "../../Buttons/button/Button";
 import Modal from "../Modal";
 import facetBrowserDummyData from "./facet-browser-dummy-data";
-import FacetTag from "../../facet-tag/FacetTag";
+import { Tag } from "../../tag/Tag";
 
 export type FacetBrowserProps = {
   title: string;
@@ -25,23 +25,28 @@ const FacetBrowser: React.FC<FacetBrowserProps> = ({
         <header className="facet-browser-header">
           <h3 className="text-header-h3">{title}</h3>
           {clearAll && (
-            <button className="facet-browser-clear-all-btn">{clearAll}</button>
+            <button className="facet-browser-clear-btn">{clearAll}</button>
           )}
         </header>
 
         {facetBrowserDummyData.map((facet) => (
-          <Disclosure key={facet.title} headline={facet.title}>
+          <Disclosure
+            fullWidth
+            classNames="disclosure--no-header-padding"
+            key={facet.title}
+            headline={facet.title}
+          >
             <div className="facet-browser-facets">
               {facet.tags.map((tag) => (
-                <FacetTag tag={tag} key={tag} />
+                <Tag facet key={tag} label={tag} />
               ))}
             </div>
-            <button className="facet-browser-show-more-btn">{showMore}</button>
+            <button className="facet-browser-more-btn">{showMore}</button>
           </Disclosure>
         ))}
 
         <Button
-          classNames="facet-browser-show-results-btn"
+          classNames="facet-browser-results-btn"
           label={showResults}
           disabled={false}
           collapsible
