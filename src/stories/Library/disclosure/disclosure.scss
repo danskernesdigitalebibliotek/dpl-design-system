@@ -84,9 +84,9 @@
   }
 
   &.disclosure--no-header-padding .disclosure__headline {
-    @extend %pl-32;
+    padding-left: $s-xl;
     @include breakpoint-s {
-      padding-left: 48px;
+      padding-left: $s-2xl;
     }
   }
 }
