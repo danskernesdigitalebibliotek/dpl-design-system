@@ -1,50 +1,43 @@
 .facet-browser {
   width: 100%;
-}
 
-.facet-browser-header {
-  min-height: 120px;
-  padding: 32px;
-  padding-bottom: 28px;
-  @include breakpoint-s {
-    min-height: 144px;
-    padding: 48px;
-    padding-bottom: 28px;
+  &__header {
+    min-height: 120px;
+    padding-left: $s-xl;
+    padding-top: $s-xl;
+    @include breakpoint-s {
+      min-height: 144px;
+      padding-left: $s-2xl;
+      padding-top: $s-2xl;
+    }
   }
-}
 
-.facet-browser-facets {
-  padding: 16px;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  @include breakpoint-s {
-    padding: 18px;
+  &__facet-group {
+    margin: $s-md;
+    display: flex;
+    gap: $s-sm;
+    flex-wrap: wrap;
   }
-}
 
-.facet-browser-clear-btn {
-  @extend %link-tag;
-  padding: 0;
-  padding-top: 12px;
-  cursor: pointer;
-}
-
-.facet-browser-more-btn {
-  @extend %link-tag;
-  font-size: 12px;
-  text-transform: uppercase;
-  display: block;
-  margin-left: auto;
-  padding-bottom: 28px;
-  padding-right: 16px;
-  cursor: pointer;
-
-  @include breakpoint-s {
-    padding-right: 42px;
+  &__clear-btn {
+    padding: 0;
+    margin-top: $s-sm;
   }
-}
 
-.facet-browser-results-btn {
-  margin: 50px auto 10px;
+  &__more-btn {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: block;
+    margin-left: auto;
+    margin-bottom: $s-xl;
+    margin-right: $s-md;
+
+    @include breakpoint-s {
+      margin-right: $s-2xl;
+    }
+  }
+
+  &__results-btn {
+    margin: $s-2xl auto $s-sm;
+  }
 }

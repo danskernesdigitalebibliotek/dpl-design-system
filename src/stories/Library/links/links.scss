@@ -1,4 +1,3 @@
-%link-tag,
 .link-tag {
   text-decoration: none;
   color: $c-text-primary-black;
@@ -8,7 +7,6 @@
   @extend %text-body-medium-regular-placeholder;
 }
 
-%link-tag::after,
 .link-tag::after {
   display: block;
   content: "";
@@ -19,7 +17,6 @@
   padding-bottom: 2px;
 }
 
-%link-tag:hover::after,
 .link-tag:hover::after {
   transform: scaleX(0);
   transform-origin: 100% 0%;
