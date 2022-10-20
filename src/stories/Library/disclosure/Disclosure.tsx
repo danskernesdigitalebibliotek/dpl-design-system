@@ -8,7 +8,7 @@ export type DisclosureProps = {
   icon?: "Various" | "Receipt" | "Create" | "Profile";
   withAvailability?: boolean;
   fullWidth?: boolean;
-  classNames?: string;
+  removeHeadlinePadding?: boolean;
 };
 
 export const Disclosure: React.FC<DisclosureProps> = ({
@@ -17,19 +17,21 @@ export const Disclosure: React.FC<DisclosureProps> = ({
   icon,
   withAvailability,
   fullWidth = false,
-  classNames,
+  removeHeadlinePadding,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <details
       className={clsx(
         "disclosure text-body-large",
-        fullWidth && "disclosure--full-width",
-        classNames
+        fullWidth && "disclosure--full-width"
       )}
     >
       <summary
-        className="disclosure__headline text-body-large"
+        className={clsx(
+          "disclosure__headline text-body-large",
+          removeHeadlinePadding && "disclosure__headline--no-padding"
+        )}
         onClick={() => {
           setIsOpen(!isOpen);
         }}
