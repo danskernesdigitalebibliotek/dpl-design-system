@@ -31,6 +31,13 @@
     @include breakpoint-s {
       padding-left: $s-xl;
     }
+
+    &.disclosure__headline--no-padding {
+      padding-left: $s-xl;
+      @include breakpoint-s {
+        padding-left: $s-2xl;
+      }
+    }
   }
 
   &__text {
@@ -80,13 +87,6 @@
 
     &-open {
       transform: scaleY(-1);
-    }
-  }
-
-  &.disclosure--no-header-padding .disclosure__headline {
-    padding-left: $s-xl;
-    @include breakpoint-s {
-      padding-left: $s-2xl;
     }
   }
 }

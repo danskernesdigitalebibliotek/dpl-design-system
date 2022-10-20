@@ -34,7 +34,7 @@ const FacetBrowser: React.FC<FacetBrowserProps> = ({
         {facetBrowserDummyData.map((facet) => (
           <Disclosure
             fullWidth
-            classNames="disclosure--no-header-padding"
+            removeHeadlinePadding
             key={facet.title}
             headline={facet.title}
           >
