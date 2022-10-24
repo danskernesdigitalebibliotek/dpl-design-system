@@ -9,16 +9,17 @@ interface ModalWrapperProps {
 }
 
 const Modal = ({ children, shownModal, classNames }: ModalWrapperProps) => {
-  const [shoudShowModal, setShouldShowModal] = useState(shownModal);
+  const [shouldShowModal, setShouldShowModal] = useState(shownModal);
 
   useEffect(() => setShouldShowModal(shownModal), [shownModal]);
 
-  const toggleModal = () => setShouldShowModal(!shoudShowModal);
+  const toggleModal = () => setShouldShowModal(!shouldShowModal);
 
-  if (!shoudShowModal) return <ModalFallbackButton toggleModal={toggleModal} />;
+  if (!shouldShowModal)
+    return <ModalFallbackButton toggleModal={toggleModal} />;
 
   return (
-    <div className={clsx("modal", shoudShowModal && "modal-show", classNames)}>
+    <div className={clsx("modal", shouldShowModal && "modal-show", classNames)}>
       <div className="modal__screen-reader-description" id="describemodal">
         Denne modal dækker sidens indhold, og er en demo
       </div>
