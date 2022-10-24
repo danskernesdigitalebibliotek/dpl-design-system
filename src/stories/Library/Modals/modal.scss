@@ -30,6 +30,10 @@
   @include breakpoint-m {
     padding: $s-4xl $s-7xl;
   }
+
+  &.modal--no-padding {
+    padding: 0;
+  }
 }
 
 %modal-padding,
@@ -59,10 +63,11 @@
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
-  background-color: hsla(0, 0%, 15%, 1);
+  background-color: hsla(0, 0%, 15%, 0.5);
 }
 
 .modal--no-padding {
