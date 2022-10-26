@@ -57,3 +57,9 @@ export const withoutImage = Template.bind({});
 withoutImage.args = {
   imageUrl: "",
 };
+
+export const withoutText = Template.bind({});
+withoutText.args = {
+  title: undefined,
+  imageUrl: "images/campaign_cover.jpg",
+};

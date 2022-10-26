@@ -16,6 +16,12 @@
     @include breakpoint-s {
       max-width: 30%;
     }
+
+    &.campaign__image--full-width {
+      @include breakpoint-s {
+        max-width: 100%;
+      }
+    }
   }
 
   &__title {
@@ -23,6 +29,10 @@
     margin: $s-lg;
     align-self: center;
     color: $c-text-primary-white;
+
+    &.campaign__title--none {
+      display: none;
+    }
   }
 }
 
