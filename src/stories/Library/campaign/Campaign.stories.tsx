@@ -53,13 +53,13 @@ Ellipsis.args = {
   ellipsis: true,
 };
 
-export const withoutImage = Template.bind({});
-withoutImage.args = {
+export const textOnly = Template.bind({});
+textOnly.args = {
   imageUrl: "",
 };
 
-export const withoutText = Template.bind({});
-withoutText.args = {
+export const imageOnly = Template.bind({});
+imageOnly.args = {
   title: undefined,
   imageUrl: "images/campaign_cover.jpg",
 };
