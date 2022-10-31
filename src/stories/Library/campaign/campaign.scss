@@ -20,6 +20,7 @@
     &.campaign__image--full-width {
       @include breakpoint-s {
         max-width: 100%;
+        min-width: 100%;
       }
     }
   }
