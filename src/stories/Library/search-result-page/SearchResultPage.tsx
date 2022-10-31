@@ -142,6 +142,48 @@ export const SearchResultPage = ({
               + Flere filtre
             </li>
           </ul>
+          <ul className="facet-line-selected">
+            <li className="facet-line-selected__item">
+              <span className="tag tag--small cursor-pointer">
+                Eventyr
+                <img
+                  className="tag-icon"
+                  src="icons/basic/icon-cross.svg"
+                  alt="close icon"
+                />
+              </span>
+            </li>
+            <li className="facet-line-selected__item">
+              <span className="tag tag--small cursor-pointer">
+                J. K. Rowling
+                <img
+                  className="tag-icon"
+                  src="icons/basic/icon-cross.svg"
+                  alt="close icon"
+                />
+              </span>
+            </li>
+            <li className="facet-line-selected__item">
+              <span className="tag tag--small cursor-pointer">
+                Harry Potter
+                <img
+                  className="tag-icon"
+                  src="icons/basic/icon-cross.svg"
+                  alt="close icon"
+                />
+              </span>
+            </li>
+            <li className="facet-line-selected__item">
+              <span className="tag tag--small cursor-pointer">
+                Skønlitteratur
+                <img
+                  className="tag-icon"
+                  src="icons/basic/icon-cross.svg"
+                  alt="close icon"
+                />
+              </span>
+            </li>
+          </ul>
           <div className="search-result-page__list my-32">
             {SearchResultList}
           </div>
