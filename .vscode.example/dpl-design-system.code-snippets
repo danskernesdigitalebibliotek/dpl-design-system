@@ -7,14 +7,13 @@
   // Placeholders with the same ids are connected.
   "Dpl-design-system functional component": {
     "scope": "typescriptreact",
-    "prefix": "fcdplreact",
+    "prefix": "fcdpldesign",
     "body": [
-      "import * as React from \"react\";",
       "import { FC } from \"react\";",
       "",
-      "export interface ${1:component}Props {}",
+      "export interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {}",
       "",
-      "const ${1:component}: FC<${1:component}Props> = ({}) => {",
+      "const ${1}: FC<${1}Props> = ({}) => {",
       "return (",
       "<>",
       "Hello",
@@ -22,7 +21,7 @@
       ");",
       "};",
       "",
-      "export default ${1:component};"
+      "export default ${1};"
     ],
     "description": "Creates a skeleton for a new functional component in dpl-design-system style"
   },

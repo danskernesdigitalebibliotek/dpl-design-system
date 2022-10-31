@@ -34,7 +34,7 @@ const FacetLine: FC<FacetLineProps> = ({ items }) => {
             <li className="facet-line__item">
               <Dropdown
                 ariaLabel="Choose periodical year"
-                list={terms}
+                list={[{ title }, ...terms]}
                 arrowIcon="chevron"
                 classNames="dropdown--grey-borders"
               />
