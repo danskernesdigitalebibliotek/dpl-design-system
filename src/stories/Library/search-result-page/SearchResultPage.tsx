@@ -3,6 +3,7 @@ import { SearchResultInfo } from "./SearchResultInfo";
 import ResultPager from "./ResultPager";
 import { SearchResultTitle } from "./SearchResultTitle";
 import { SearchResultZero } from "./SearchResultZero";
+import { Dropdown } from "../dropdown/Dropdown";
 
 export type SearchResultPageProps = {
   title: string;
@@ -118,6 +119,29 @@ export const SearchResultPage = ({
             linkName={linkName}
             linkTotalResults={linkTotalResults}
           />
+          <ul className="facet-line mt-48">
+            <li className="tag tag--outlined facet-line__item">
+              Skønlitteratur (96)
+            </li>
+            <li className="tag tag--outlined facet-line__item">
+              Faglitteratur (302)
+            </li>
+            <li className="tag tag--outlined facet-line__item">Film (28)</li>
+            <li className="tag tag--outlined facet-line__item">Spil (21)</li>
+
+            <li className="facet-line__item">
+              <Dropdown
+                ariaLabel="Choose periodical year"
+                list={[{ title: "Emne" }, { title: "2021" }, { title: "2020" }]}
+                arrowIcon="chevron"
+                classNames="dropdown--grey-borders"
+              />
+            </li>
+            <li className="tag tag--outlined facet-line__item">Musik (12)</li>
+            <li className="tag tag--outlined facet-line__item">
+              + Flere filtre
+            </li>
+          </ul>
           <div className="search-result-page__list my-32">
             {SearchResultList}
           </div>
