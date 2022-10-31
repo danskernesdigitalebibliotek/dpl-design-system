@@ -3,7 +3,8 @@ import { SearchResultInfo } from "./SearchResultInfo";
 import ResultPager from "./ResultPager";
 import { SearchResultTitle } from "./SearchResultTitle";
 import { SearchResultZero } from "./SearchResultZero";
-import { Dropdown } from "../dropdown/Dropdown";
+import FacetLine, { FacetLineFacetItem, FacetLineTermItem } from "./FacetLine";
+import FacetLineSelected from "./FacetLineSelected";
 
 export type SearchResultPageProps = {
   title: string;
@@ -89,6 +90,30 @@ const SearchResult = [
   },
 ];
 
+const facetLineItems = [
+  { title: "Skønlitteratur", type: "term", score: 96 },
+  { title: "Faglitteratur", type: "term", score: 302 },
+  { title: "Film", type: "term", score: 28 },
+  { title: "Spil", type: "term", score: 21 },
+  {
+    title: "Emne",
+    type: "facet",
+    terms: [
+      { title: "Efterår", type: "term", score: 96 },
+      { title: "Børn og Unge", type: "term", score: 302 },
+      { title: "Sundhed", type: "term", score: 28 },
+    ],
+  },
+  { title: "Musik", type: "term", score: 12 },
+] as (FacetLineTermItem | FacetLineFacetItem)[];
+
+const selectedTerms = [
+  "Eventyr",
+  "J. K. Rowling",
+  "Harry Potter",
+  "Skønlitteratur",
+];
+
 const SearchResultList = SearchResult.map((item) => {
   return <SearchResultItem {...item} />;
 });
@@ -119,71 +144,8 @@ export const SearchResultPage = ({
             linkName={linkName}
             linkTotalResults={linkTotalResults}
           />
-          <ul className="facet-line mt-48">
-            <li className="tag tag--outlined facet-line__item">
-              Skønlitteratur (96)
-            </li>
-            <li className="tag tag--outlined facet-line__item">
-              Faglitteratur (302)
-            </li>
-            <li className="tag tag--outlined facet-line__item">Film (28)</li>
-            <li className="tag tag--outlined facet-line__item">Spil (21)</li>
-
-            <li className="facet-line__item">
-              <Dropdown
-                ariaLabel="Choose periodical year"
-                list={[{ title: "Emne" }, { title: "2021" }, { title: "2020" }]}
-                arrowIcon="chevron"
-                classNames="dropdown--grey-borders"
-              />
-            </li>
-            <li className="tag tag--outlined facet-line__item">Musik (12)</li>
-            <li className="tag tag--outlined facet-line__item">
-              + Flere filtre
-            </li>
-          </ul>
-          <ul className="facet-line-selected">
-            <li className="facet-line-selected__item">
-              <span className="tag tag--small cursor-pointer">
-                Eventyr
-                <img
-                  className="tag-icon"
-                  src="icons/basic/icon-cross.svg"
-                  alt="close icon"
-                />
-              </span>
-            </li>
-            <li className="facet-line-selected__item">
-              <span className="tag tag--small cursor-pointer">
-                J. K. Rowling
-                <img
-                  className="tag-icon"
-                  src="icons/basic/icon-cross.svg"
-                  alt="close icon"
-                />
-              </span>
-            </li>
-            <li className="facet-line-selected__item">
-              <span className="tag tag--small cursor-pointer">
-                Harry Potter
-                <img
-                  className="tag-icon"
-                  src="icons/basic/icon-cross.svg"
-                  alt="close icon"
-                />
-              </span>
-            </li>
-            <li className="facet-line-selected__item">
-              <span className="tag tag--small cursor-pointer">
-                Skønlitteratur
-                <img
-                  className="tag-icon"
-                  src="icons/basic/icon-cross.svg"
-                  alt="close icon"
-                />
-              </span>
-            </li>
-          </ul>
+          <FacetLine items={facetLineItems} />
+          <FacetLineSelected items={selectedTerms} />
           <div className="search-result-page__list my-32">
             {SearchResultList}
           </div>
