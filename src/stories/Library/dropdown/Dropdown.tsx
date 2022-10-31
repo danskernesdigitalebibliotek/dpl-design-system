@@ -1,6 +1,6 @@
 export type DropdownItem = {
   title: string;
-  href: string;
+  href?: string;
 };
 
 export type DropdownProps = {
@@ -50,9 +50,9 @@ export const Dropdown: React.FC<DropdownProps> = ({
   return (
     <div className={`dropdown ${classNames || ""}`}>
       <select className="dropdown__select" aria-label={ariaLabel}>
-        {list.map((i, index) => (
-          <option key={index} className="dropdown__option" value={i.title}>
-            {i.title}
+        {list.map(({ title }, index) => (
+          <option key={index} className="dropdown__option" value={title}>
+            {title}
           </option>
         ))}
       </select>
