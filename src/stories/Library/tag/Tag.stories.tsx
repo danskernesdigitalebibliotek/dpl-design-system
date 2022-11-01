@@ -18,23 +18,25 @@ export default {
   },
 };
 
-const Template: ComponentStory<TagProps> = (args) => <TagComp {...args} />;
-
-export const Tag = Template.bind({});
+export const Tag: ComponentStory<TagProps> = (args) => (
+  <TagComp {...args}>Vi anbefaler</TagComp>
+);
 Tag.args = {
-  label: "Vi anbefaler",
-  removable: false,
+  size: "large",
+  hasBackground: true,
 };
 
-export const TagRemovable = Template.bind({});
+export const TagRemovable: ComponentStory<TagProps> = (args) => (
+  <TagComp {...args}>Litteratur</TagComp>
+);
 TagRemovable.args = {
-  label: "Litteratur",
-  removable: true,
+  showCloseIcon: true,
+  hasBackground: true,
 };
 
-export const facet = Template.bind({});
+export const facet: ComponentStory<TagProps> = (args) => (
+  <TagComp {...args}>Skønlitteratur (96)</TagComp>
+);
 facet.args = {
-  label: "Skønlitteratur (96)",
-  removable: false,
-  facet: true,
+  hasBackground: false,
 };

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { FC } from "react";
 import { Tag } from "../tag/Tag";
 import { FacetLineItem } from "./FacetLine";
