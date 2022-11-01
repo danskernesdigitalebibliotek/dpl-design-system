@@ -1,4 +1,3 @@
-import * as React from "react";
 import { FC } from "react";
 import { Dropdown } from "../dropdown/Dropdown";
 import { Tag } from "../tag/Tag";
