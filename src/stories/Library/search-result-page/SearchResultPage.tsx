@@ -3,7 +3,7 @@ import { SearchResultInfo } from "./SearchResultInfo";
 import ResultPager from "./ResultPager";
 import { SearchResultTitle } from "./SearchResultTitle";
 import { SearchResultZero } from "./SearchResultZero";
-import FacetLine, { FacetLineFacetItem, FacetLineTermItem } from "./FacetLine";
+import FacetLine, { FacetLineItem } from "./FacetLine";
 import FacetLineSelected from "./FacetLineSelected";
 
 export type SearchResultPageProps = {
@@ -91,28 +91,32 @@ const SearchResult = [
 ];
 
 const facetLineItems = [
-  { title: "Skønlitteratur", type: "term", score: 96 },
-  { title: "Faglitteratur", type: "term", score: 302 },
-  { title: "Film", type: "term", score: 28 },
-  { title: "Spil", type: "term", score: 21 },
+  { title: "fantasy", facet: "genreAndForm", type: "term", score: 96 },
   {
-    title: "Emne",
+    title: "Faglitteratur",
+    facet: "fictionNonfiction",
+    type: "term",
+    score: 302,
+  },
+  { title: "bog", facet: "materialType", type: "term", score: 28 },
+  { title: "Spil", facet: "workTypes", type: "term", score: 21 },
+  {
+    title: "emner",
     type: "facet",
     terms: [
-      { title: "Efterår", type: "term", score: 96 },
-      { title: "Børn og Unge", type: "term", score: 302 },
-      { title: "Sundhed", type: "term", score: 28 },
+      { title: "Børnebøger", facet: "emner", type: "term", score: 96 },
+      { title: "magi", facet: "emner", type: "term", score: 302 },
+      { title: "troldmænd", facet: "emner", type: "term", score: 28 },
     ],
   },
   { title: "Musik", type: "term", score: 12 },
-] as (FacetLineTermItem | FacetLineFacetItem)[];
+] as (FacetLineItem<"term"> | FacetLineItem<"facet">)[];
 
 const selectedTerms = [
-  "Eventyr",
-  "J. K. Rowling",
-  "Harry Potter",
-  "Skønlitteratur",
-];
+  { title: "magi", facet: "subjects", type: "term", score: 302 },
+  { title: "bog", facet: "materialType", type: "term", score: 28 },
+  { title: "Spil", facet: "workTypes", type: "term", score: 21 },
+] as FacetLineItem<"term">[];
 
 const SearchResultList = SearchResult.map((item) => {
   return <SearchResultItem {...item} />;

@@ -40,7 +40,7 @@ const FacetBrowser: React.FC<FacetBrowserProps> = ({
           >
             <div className="facet-browser__facet-group">
               {facet.tags.map((tag) => (
-                <Tag facet key={tag} label={tag} />
+                <Tag key={tag}>{tag}</Tag>
               ))}
             </div>
             <button className="link-tag cursor-pointer facet-browser__more-btn">
