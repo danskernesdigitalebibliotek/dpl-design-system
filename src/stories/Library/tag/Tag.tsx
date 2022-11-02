@@ -25,8 +25,8 @@ export const Tag = ({
       aria-pressed={selected}
       onClick={() => isClickable && setSelected(!selected)}
       className={clsx(
-        "tag tag--outlined",
-        (hasBackground || selected) && "tag--outlined-selected",
+        "tag",
+        hasBackground || selected ? "tag--outlined-selected" : "tag--outlined",
         usesCursor && "cursor-pointer",
         `tag--${size}`
       )}
