@@ -3,20 +3,10 @@
     display: inline-block;
     @extend %mr-8;
     @extend %mt-8;
-
-    .dropdown__select {
-      @extend %text-tags;
-      height: 100%;
-      padding: $s-sm $s-md;
-      min-width: 200px;
-    }
-    .dropdown__arrows {
-      height: 100%;
-    }
   }
 }
 
-.facet-line-selected {
+.facet-line-selected-terms {
   @extend %mt-16;
 
   &__item {
