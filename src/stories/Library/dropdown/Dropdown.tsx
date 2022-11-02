@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 export type DropdownItem = {
   title: string;
   href?: string;
@@ -9,6 +11,7 @@ export type DropdownProps = {
   ariaLabel: string;
   arrowIcon: "triangles" | "chevron";
   classNames?: string;
+  innerClassNames?: { select?: string; option?: string; arrowWrapper?: string };
 };
 
 export const Dropdown: React.FC<DropdownProps> = ({
@@ -16,6 +19,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   ariaLabel,
   list,
   classNames,
+  innerClassNames,
 }) => {
   const Icon = () => {
     if (arrowIcon === "triangles") {
@@ -48,13 +52,20 @@ export const Dropdown: React.FC<DropdownProps> = ({
     return null;
   };
 
+  const classes = {
+    root: clsx("dropdown", classNames),
+    select: clsx("dropdown__select", innerClassNames?.select),
+    option: clsx("dropdown__option", innerClassNames?.option),
+    arrowWrapper: clsx("dropdown__arrows", innerClassNames?.arrowWrapper),
+  };
+
   return (
-    <div className={`dropdown ${classNames || ""}`}>
-      <select className="dropdown__select" aria-label={ariaLabel}>
+    <div className={classes.root}>
+      <select className={classes.select} aria-label={ariaLabel}>
         {list.map(({ title, disabled }, index) => (
           <option
             key={index}
-            className="dropdown__option"
+            className={classes.option}
             value={title}
             disabled={disabled !== undefined ? disabled : false}
           >
@@ -62,7 +73,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           </option>
         ))}
       </select>
-      <div className="dropdown__arrows">
+      <div className={classes.arrowWrapper}>
         <Icon />
       </div>
     </div>

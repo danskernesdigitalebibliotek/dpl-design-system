@@ -34,6 +34,10 @@ const FacetLine: FC<FacetLineProps> = ({ items }) => {
                 list={[{ title }, ...terms]}
                 arrowIcon="chevron"
                 classNames="dropdown--grey-borders"
+                innerClassNames={{
+                  select: "dropdown__select--inline",
+                  arrowWrapper: "dropdown__arrows--inline ",
+                }}
               />
             </li>
           );
