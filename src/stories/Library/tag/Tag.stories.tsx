@@ -16,6 +16,20 @@ export default {
     },
     layout: "centered",
   },
+  argTypes: {
+    hasBackground: {
+      control: { type: "boolean" },
+      defaultValue: false,
+    },
+    showCloseIcon: {
+      control: { type: "boolean" },
+      defaultValue: false,
+    },
+    isClickable: {
+      control: { type: "boolean" },
+      defaultValue: true,
+    },
+  },
 };
 
 export const Tag: ComponentStory<TagProps> = (args) => (
