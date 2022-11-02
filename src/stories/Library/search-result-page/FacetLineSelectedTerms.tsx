@@ -6,11 +6,11 @@ export interface FacetLineSelectedProps {
   items: FacetLineItem<"term">[];
 }
 
-const FacetLineSelected: FC<FacetLineSelectedProps> = ({ items }) => {
+const FacetLineSelectedTerms: FC<FacetLineSelectedProps> = ({ items }) => {
   return (
-    <ul className="facet-line-selected">
+    <ul className="facet-line-selected-terms">
       {items.map(({ title }) => (
-        <li className="facet-line-selected__item">
+        <li className="facet-line-selected-terms__item">
           <Tag showCloseIcon hasBackground>
             {title}
           </Tag>
@@ -20,4 +20,4 @@ const FacetLineSelected: FC<FacetLineSelectedProps> = ({ items }) => {
   );
 };
 
-export default FacetLineSelected;
+export default FacetLineSelectedTerms;

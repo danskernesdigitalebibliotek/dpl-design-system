@@ -3,8 +3,8 @@ import { SearchResultInfo } from "./SearchResultInfo";
 import ResultPager from "./ResultPager";
 import { SearchResultTitle } from "./SearchResultTitle";
 import { SearchResultZero } from "./SearchResultZero";
-import FacetLine, { FacetLineItem } from "./FacetLine";
-import FacetLineSelected from "./FacetLineSelected";
+import FacetLine from "./FacetLine";
+import FacetLineSelected from "./FacetLineSelectedTerms";
 import data from "./SearchResultPageData";
 
 export type SearchResultPageProps = {
