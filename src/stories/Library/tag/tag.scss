@@ -2,8 +2,13 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: $c-global-secondary;
+  outline: 1px solid $c-global-tertiary-1;
+  padding: 8px 16px;
   @extend %text-tags;
+
+  &.tag--fill {
+    background-color: $c-global-secondary;
+  }
 
   &.tag--small {
     height: 32px;
@@ -13,17 +18,6 @@
   &.tag--large {
     height: 40px;
     padding: 0 16px;
-  }
-
-  &.tag--outlined {
-    background-color: transparent;
-    outline: 1px solid $c-global-tertiary-1;
-    padding: 8px 16px;
-    cursor: pointer;
-
-    &-selected {
-      background-color: #eee9e5;
-    }
   }
 }
 

@@ -26,7 +26,7 @@ export const Tag = ({
       onClick={() => isClickable && setSelected(!selected)}
       className={clsx(
         "tag",
-        hasBackground || selected ? "tag--outlined-selected" : "tag--outlined",
+        (hasBackground || selected) && "tag--fill",
         usesCursor && "cursor-pointer",
         `tag--${size}`
       )}
