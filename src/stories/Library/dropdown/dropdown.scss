@@ -52,3 +52,14 @@
   margin-top: 4px;
   transform: rotateZ(180deg);
 }
+
+.dropdown__select--inline {
+  @extend %text-tags;
+  height: 100%;
+  padding: $s-sm $s-md;
+  min-width: 200px;
+}
+
+.dropdown__arrows--inline {
+  height: 100%;
+}
