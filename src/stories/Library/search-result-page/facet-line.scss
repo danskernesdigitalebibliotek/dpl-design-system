@@ -23,15 +23,5 @@
     display: inline-block;
     @extend %mr-8;
     @extend %mt-8;
-
-    .dropdown__select {
-      @extend %text-tags;
-      height: 100%;
-      padding: $s-sm $s-md;
-      min-width: 100px;
-    }
-    .dropdown__arrows {
-      height: 100%;
-    }
   }
 }
