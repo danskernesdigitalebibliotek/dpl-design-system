@@ -31,3 +31,11 @@
     @extend %mt-8;
   }
 }
+
+.dpl-input__half-on-desktop {
+  width: 100%;
+
+  @include breakpoint-m {
+    width: 50%;
+  }
+}

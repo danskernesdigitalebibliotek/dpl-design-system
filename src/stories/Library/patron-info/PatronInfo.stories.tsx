@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import UserInfo from "./UserInfo";
+import PatronInfo from "./PatronInfo";
 
 export default {
   title: "Library / User info",
-  component: UserInfo,
+  component: PatronInfo,
   decorators: [withDesign],
   argTypes: {
     address: {
@@ -26,10 +26,10 @@ export default {
     },
   },
   parameters: {},
-} as ComponentMeta<typeof UserInfo>;
+} as ComponentMeta<typeof PatronInfo>;
 
-const Template: ComponentStory<typeof UserInfo> = (props) => (
-  <UserInfo {...props} />
+const Template: ComponentStory<typeof PatronInfo> = (props) => (
+  <PatronInfo {...props} />
 );
 
-export const UserInfoExample = Template.bind({});
+export const PatronInfoExample = Template.bind({});

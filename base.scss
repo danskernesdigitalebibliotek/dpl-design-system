@@ -21,7 +21,7 @@
 @import "./src/stories/Library/status-label/status-label";
 @import "./src/stories/Library/number/number";
 @import "./src/stories/Library/counter/counter";
-@import "./src/stories/Library/user-info/user-info";
+@import "./src/stories/Library/patron-info/patron-info";
 @import "./src/stories/Library/Forms/checkbox/checkbox";
 @import "./src/stories/Library/cover/cover";
 @import "./src/stories/Library/Forms/input/input";
@@ -37,7 +37,6 @@
 @import "./src/stories/Library/autosuggest-text/autosuggest-text";
 @import "./src/stories/Library/autosuggest-material/autosuggest-material";
 @import "./src/stories/Library/material-card/material-card";
-@import "./src/stories/Library/status/status";
 @import "./src/stories/Library/search-result-item/search-result-item";
 @import "./src/stories/Library/Lists/list-reservation/list-reservation";
 @import "./src/stories/Library/Lists/list-dashboard/list-dashboard";
@@ -70,6 +69,7 @@
 @import "./src/stories/Library/search-result-page/search-result-info";
 @import "./src/stories/Library/search-result-page/search-result-page";
 @import "./src/stories/Library/loan-list-page/loan-list-page";
+@import "./src/stories/Library/patron-page/patron-page";
 @import "./src/stories/Library/reservation-list-page/reservation-list-page";
 @import "./src/stories/Library/search-result-page/result-pager";
 @import "./src/stories/Library/search-result-page/search-result-title";
@@ -82,6 +82,7 @@
 @import "./src/stories/Library/Modals/modal-find-on-shelf/modal-find-on-shelf";
 @import "./src/stories/Library/campaign/campaign";
 @import "./src/stories/Library/Modals/modal-infomedia/infomedia";
+@import "./src/stories/Library/pincode-container/pincode-container";
 
 // Blocks
 @import "./src/stories/Blocks/footer/footer";
