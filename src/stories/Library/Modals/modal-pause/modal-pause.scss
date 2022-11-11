@@ -56,10 +56,16 @@ $modal-pause-container-width: 550px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 75px;
+    margin-bottom: $s-lg;
 
     @include breakpoint-s {
       margin-bottom: 0;
+    }
+
+    &:first-of-type {
+      @include breakpoint-s {
+        margin-right: $s-lg;
+      }
     }
   }
 
@@ -75,12 +81,5 @@ $modal-pause-container-width: 550px;
 
   [type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
-  }
-
-  .datepicker-toggle {
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    height: 19px;
   }
 }
