@@ -8,6 +8,14 @@
   }
 }
 
+.dropdown__desktop {
+  width: 100%;
+
+  @include breakpoint-m {
+    width: 50%;
+  }
+}
+
 .dropdown__select {
   appearance: none;
   -webkit-appearance: none;

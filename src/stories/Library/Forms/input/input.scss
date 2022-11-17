@@ -31,3 +31,11 @@
     @extend %mt-8;
   }
 }
+
+.input__desktop {
+  width: 100%;
+
+  @include breakpoint-m {
+    width: 50%;
+  }
+}

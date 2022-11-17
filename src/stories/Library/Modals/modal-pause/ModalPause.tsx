@@ -29,33 +29,29 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
       <div className="modal-pause__dropdowns mt-24">
         <div className="datepickers">
           <div className="datepicker">
-            <span className="datepicker-toggle">
-              <label htmlFor="startDate" className="text-body-medium-regular">
-                Startdato
-              </label>
-              <input
-                type="date"
-                name="startDate"
-                id="startDate"
-                className="datepicker-input"
-                aria-label="startDate"
-              />
-            </span>
+            <label htmlFor="startDate" className="text-body-medium-regular">
+              Startdato
+            </label>
+            <input
+              type="date"
+              name="startDate"
+              id="startDate"
+              className="datepicker-input"
+              aria-label="startDate"
+            />
           </div>
 
           <div className="datepicker">
-            <span className="datepicker-toggle">
-              <label htmlFor="startDate" className="text-body-medium-regular">
-                Slutdato
-              </label>
-              <input
-                type="date"
-                name="endDate"
-                id="endDate"
-                className="datepicker-input"
-                aria-label="endDate"
-              />
-            </span>
+            <label htmlFor="startDate" className="text-body-medium-regular">
+              Slutdato
+            </label>
+            <input
+              type="date"
+              name="endDate"
+              id="endDate"
+              className="datepicker-input"
+              aria-label="endDate"
+            />
           </div>
         </div>
       </div>

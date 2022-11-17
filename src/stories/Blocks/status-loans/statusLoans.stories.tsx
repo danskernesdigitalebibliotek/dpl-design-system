@@ -20,13 +20,6 @@ export default {
             { amount: 2, fullAmount: 10, title: "Lydbøger", outOf: "ud af" },
           ],
         },
-        {
-          title: "Reserveringer pr. måned",
-          statusBars: [
-            { amount: 3, fullAmount: 4, title: "Ebøger", outOf: "ud af" },
-            { amount: 2, fullAmount: 2, title: "Lydbøger", outOf: "ud af" },
-          ],
-        },
       ],
     },
     title: {
