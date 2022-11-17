@@ -29,8 +29,6 @@ $modal-pause-container-width: 550px;
 }
 
 .datepickers {
-  margin-bottom: 80px;
-
   @include breakpoint-s {
     display: flex;
     justify-content: space-between;
@@ -53,9 +51,9 @@ $modal-pause-container-width: 550px;
   }
 
   .datepicker {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin-bottom: $s-lg;
 
     @include breakpoint-s {
@@ -67,19 +65,5 @@ $modal-pause-container-width: 550px;
         margin-right: $s-lg;
       }
     }
-  }
-
-  [type="date"] {
-    background: $c-global-primary
-      url("https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png")
-      90% 50% no-repeat;
-  }
-
-  [type="date"]::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  [type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0;
   }
 }
