@@ -15,6 +15,14 @@ export const ListButton: React.FC<ListButtonProps> = ({
 }) => {
   return (
     <div className="dpl-list-buttons">
+      <div
+        className="dpl-list-buttons__screen-reader-description"
+        id="renew-multiple-modal"
+      >
+        This button opens a modal that covers the entire page and contains loans
+        with different due dates, if some of the loans in the modal are
+        renewable you can renew them
+      </div>
       <h2 className="dpl-list-buttons__header">
         {header}
         <div className="dpl-list-buttons__power">{number}</div>
@@ -32,7 +40,10 @@ export const ListButton: React.FC<ListButtonProps> = ({
             src="icons/collection/Various.svg"
           />
         </div>
-        <div className="dpl-list-buttons__buttons__button">
+        <div
+          className="dpl-list-buttons__buttons__button"
+          aria-describedby="renew-multiple-modal"
+        >
           <Button
             label={buttonLabel}
             buttonType="none"
