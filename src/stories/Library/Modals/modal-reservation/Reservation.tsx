@@ -11,6 +11,7 @@ interface ReservationProps {
   submitInfo: string;
   submitButton: string;
   state: "initial" | "success" | "error";
+  showPromoBar?: boolean;
 }
 
 const Reservation = ({
@@ -20,6 +21,7 @@ const Reservation = ({
   submitInfo,
   submitButton,
   state,
+  showPromoBar,
 }: ReservationProps) => {
   if (state === "success")
     return (
@@ -37,7 +39,11 @@ const Reservation = ({
     <Modal shownModal>
       <section className="reservation-modal">
         <ReservationHeader author={author} label={label} title={title} />
-        <ReservationForm submitInfo={submitInfo} submitButton={submitButton} />
+        <ReservationForm
+          submitInfo={submitInfo}
+          submitButton={submitButton}
+          showPromoBar={showPromoBar}
+        />
       </section>
     </Modal>
   );
