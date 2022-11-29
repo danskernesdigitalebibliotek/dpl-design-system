@@ -37,6 +37,10 @@ export default {
       name: "State for reservation",
       defaultValue: "initial",
     },
+    showPromoBar: {
+      name: "Show PromoBar",
+      defaultValue: false,
+    },
   },
 } as ComponentMeta<typeof Reservation>;
 
@@ -51,4 +55,14 @@ Modal.args = {
   author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
   submitInfo: "Vi har 8 eksemplarer og 21 står i kø",
   submitButton: "GODKEND RESERVERING",
+};
+
+export const WithPromoBar = Template.bind({});
+WithPromoBar.args = {
+  label: "bog",
+  title: "Stephen Hawking",
+  author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
+  submitInfo: "Vi har 8 eksemplarer og 21 står i kø",
+  submitButton: "GODKEND RESERVERING",
+  showPromoBar: true,
 };

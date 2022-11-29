@@ -1,14 +1,17 @@
 import { Button } from "../Buttons/button/Button";
+import PromoBar from "../promo-bar/PromoBar";
 import ReservationFormItem from "./ReservationFormItem";
 
 interface ReservationFormProps {
   submitInfo: string;
   submitButton: string;
+  showPromoBar?: boolean;
 }
 
 const ReservationForm = ({
   submitInfo,
   submitButton,
+  showPromoBar,
 }: ReservationFormProps) => {
   return (
     <div>
@@ -29,6 +32,13 @@ const ReservationForm = ({
           title="Udgave"
           text="Nyeste udgave"
         />
+        {showPromoBar && (
+          <PromoBar
+            type="info"
+            text="Spring køen over - Materialet findes i en anden udgave"
+            sticky
+          />
+        )}
         <ReservationFormItem
           icon="Location"
           title="Afhentes på"
