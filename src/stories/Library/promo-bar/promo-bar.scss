@@ -1,0 +1,16 @@
+.promo-bar {
+  min-height: $s-2xl;
+  background-color: $c-global-secondary;
+  display: flex;
+  align-items: center;
+  gap: $s-md;
+
+  &.promo-bar--sticky {
+    margin-top: -$s-sm;
+  }
+
+  &.promo-bar--dark {
+    color: $c-text-primary-white;
+    background-color: #5a5f63;
+  }
+}
