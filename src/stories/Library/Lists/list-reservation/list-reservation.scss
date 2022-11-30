@@ -34,25 +34,6 @@ $list-reservation-space-desktop: 24px;
   }
 }
 
-.list-reservation__note-mobile {
-  // To make it easy to click
-  min-height: 20px;
-  cursor: pointer;
-  background-color: transparent;
-  align-self: baseline;
-  border: 0;
-  display: block;
-  margin-top: 4px;
-  white-space: break-spaces;
-  text-decoration: underline;
-  @extend %text-small-caption;
-  @extend %color-secondary-gray;
-
-  @include breakpoint-s {
-    display: none;
-  }
-}
-
 .list-reservation__hidden-explanation {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -65,20 +46,33 @@ $list-reservation-space-desktop: 24px;
   // @include hide-visually;
 }
 
-.list-reservation__note-desktop {
+.list-reservation__note {
   // To make it easy to click
   min-height: 20px;
   cursor: pointer;
   background-color: transparent;
   align-self: baseline;
   border: 0;
-  display: none;
+  display: block;
+  margin-top: 4px;
+  white-space: break-spaces;
   text-decoration: underline;
   @extend %text-small-caption;
   @extend %color-secondary-gray;
+}
 
+.list-reservation__note--desktop {
+  @extend %text-body-small-regular;
+  display: none;
   @include breakpoint-s {
     display: block;
+  }
+}
+
+.list-reservation__note--mobile {
+  @extend %text-body-small-regular;
+  @include breakpoint-s {
+    display: none;
   }
 }
 
@@ -95,8 +89,6 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__about {
-  margin: 16px 0;
-
   p {
     margin-top: 2px;
   }
