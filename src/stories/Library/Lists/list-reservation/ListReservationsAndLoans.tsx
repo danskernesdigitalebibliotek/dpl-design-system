@@ -51,9 +51,8 @@ export const ListReservationsAndLoans = (
               type="button"
               aria-label="note about material"
               className={clsx(
-                "list-reservation__note-desktop",
-                cover.noteAsWarning && "color-signal-alert",
-                !cover.noteAsWarning && "color-secondary-gray"
+                "list-reservation__note list-reservation__note--desktop color-secondary-gray",
+                cover.noteAsWarning && "color-signal-alert"
               )}
             >
               {cover.noteLabel}
@@ -84,11 +83,10 @@ export const ListReservationsAndLoans = (
               <p className="text-small-caption">{statusNotes}</p>
               <a
                 href={cover.noteUrl}
-                className={`list-reservation__note list-reservation__note--mobile ${
-                  cover.noteAsWarning
-                    ? "color-signal-alert"
-                    : "color-secondary-gray"
-                }`}
+                className={clsx(
+                  "list-reservation__note list-reservation__note--mobile color-secondary-gray",
+                  cover.noteAsWarning && "color-signal-alert"
+                )}
               >
                 {cover.noteLabel}
               </a>
