@@ -27,20 +27,22 @@
 }
 
 .list-materials--disabled {
-  background-color: $c-global-secondary;
-  cursor: not-allowed;
+  .checkbox {
+    .checkbox__icon {
+      opacity: 0;
+    }
+    input {
+      display: none;
+    }
+  }
 }
 
 .list-materials__status {
-  display: none;
-
-  @include breakpoint-s {
-    display: flex;
-    margin-top: 0;
-    flex-direction: row;
-    align-items: center;
-    grid-gap: 16px;
-  }
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+  align-items: center;
+  grid-gap: 16px;
 
   .text-small-caption {
     color: $c-text-secondary-gray;

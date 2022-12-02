@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Counter, CounterProps } from "../../counter/Counter";
 import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
 import { Cover } from "../../cover/Cover";
@@ -49,11 +50,10 @@ export const ListReservationsAndLoans = (
             <button
               type="button"
               aria-label="note about material"
-              className={`list-reservation__note-desktop ${
-                cover.noteAsWarning
-                  ? "color-signal-alert"
-                  : "color-secondary-gray"
-              }`}
+              className={clsx(
+                "list-reservation__note list-reservation__note--desktop color-secondary-gray",
+                cover.noteAsWarning && "color-signal-alert"
+              )}
             >
               {cover.noteLabel}
             </button>
@@ -83,11 +83,10 @@ export const ListReservationsAndLoans = (
               <p className="text-small-caption">{statusNotes}</p>
               <a
                 href={cover.noteUrl}
-                className={`list-reservation__note-mobile ${
-                  cover.noteAsWarning
-                    ? "color-signal-alert"
-                    : "color-secondary-gray"
-                }`}
+                className={clsx(
+                  "list-reservation__note list-reservation__note--mobile color-secondary-gray",
+                  cover.noteAsWarning && "color-signal-alert"
+                )}
               >
                 {cover.noteLabel}
               </a>
