@@ -49,11 +49,11 @@ export const ListReservationsAndLoans = (
             <button
               type="button"
               aria-label="note about material"
-              className={`list-reservation__note list-reservation__note--desktop ${
-                cover.noteAsWarning
-                  ? "color-signal-alert"
-                  : "color-secondary-gray"
-              }`}
+              className={clsx(
+                "list-reservation__note-desktop",
+                cover.noteAsWarning && "color-signal-alert",
+                !cover.noteAsWarning && "color-secondary-gray"
+              )}
             >
               {cover.noteLabel}
             </button>
