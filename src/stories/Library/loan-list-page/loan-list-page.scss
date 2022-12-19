@@ -1,6 +1,7 @@
 .loan-list-page {
   background: $c-global-primary;
   padding: $s-md;
+  position: sticky;
 
   @include breakpoint-m {
     padding: $s-6xl;
