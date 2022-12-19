@@ -95,6 +95,9 @@ $list-reservation-space-desktop: 24px;
 
   @include breakpoint-s {
     margin-top: 0;
+    p {
+      font-size: 12px;
+    }
   }
 }
 
