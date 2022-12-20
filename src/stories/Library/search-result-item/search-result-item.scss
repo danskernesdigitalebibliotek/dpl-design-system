@@ -66,6 +66,14 @@
 .search-result-item__title {
   margin-top: 10px;
 
+  & > a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   @include breakpoint-s {
     margin-top: 16px;
   }

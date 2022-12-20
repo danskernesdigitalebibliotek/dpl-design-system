@@ -39,7 +39,9 @@ export const SearchResultItem = ({
           )}
         </div>
 
-        <h2 className="search-result-item__title text-header-h4">{title}</h2>
+        <h2 className="search-result-item__title text-header-h4">
+          <a href="">{title}</a>
+        </h2>
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
       </div>
       <div className="search-result-item__availability">
