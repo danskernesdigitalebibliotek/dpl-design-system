@@ -90,13 +90,13 @@ $list-reservation-space-desktop: 24px;
   p {
     margin-top: 2px;
     font-size: 14px;
-    margin-bottom: $s-md;
   }
 
   @include breakpoint-s {
     margin-top: 0;
     p {
       font-size: 12px;
+      margin-bottom: $s-md;
     }
   }
 }
