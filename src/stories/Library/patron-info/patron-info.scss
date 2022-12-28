@@ -13,3 +13,23 @@
     @extend %ml-32;
   }
 }
+
+.patron-buttons {
+  display: flex;
+  margin-top: 40px;
+  @extend %mt-32;
+
+  input[type="submit"] {
+    border: 1px solid $c-text-primary-black;
+    background-color: $c-text-primary-black;
+  }
+}
+
+.contact-info-flex {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint-s {
+    flex-direction: row;
+  }
+}
