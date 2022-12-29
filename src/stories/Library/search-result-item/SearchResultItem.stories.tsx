@@ -30,7 +30,6 @@ export default {
       control: { type: "text" },
       defaultValue: "2018",
     },
-
     horizontalTermLineData: {
       control: { type: "object" },
       defaultValue: {
@@ -44,6 +43,10 @@ export default {
         ],
       },
     },
+    availabilityLabels: {
+      control: { type: "null" },
+      defaultValue: 3,
+    },
   },
 } as ComponentMeta<typeof SearchResultItem>;
 
@@ -53,3 +56,11 @@ const Template: ComponentStory<typeof SearchResultItem> = (args) => {
 
 export const Item = Template.bind({});
 Item.args = {};
+
+export const ContentOverload = Template.bind({});
+ContentOverload.args = {
+  title:
+    "Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn",
+  author: "Sánchez Vegara, Amaia Arrazola, Sánchez Vegara, et al.",
+  availabilityLabels: 25,
+};

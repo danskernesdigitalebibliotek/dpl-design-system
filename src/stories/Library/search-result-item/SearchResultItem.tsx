@@ -12,6 +12,7 @@ export type SearchResultItemProps = {
   author: string;
   year: string;
   horizontalTermLineData?: HorizontalTermLineProps;
+  availabilityLabels: number;
 };
 
 export const SearchResultItem = ({
@@ -20,6 +21,7 @@ export const SearchResultItem = ({
   author,
   year,
   horizontalTermLineData,
+  availabilityLabels,
 }: SearchResultItemProps) => {
   return (
     <a href="/" className="search-result-item arrow arrow__hover--right-small">
@@ -43,27 +45,17 @@ export const SearchResultItem = ({
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
       </div>
       <div className="search-result-item__availability">
-        <AvailabilityLabel
-          manifestationType="Bog"
-          availability="Hjemme"
-          status="available"
-        />
-        <AvailabilityLabel
-          manifestationType="Ebog"
-          availability="Online"
-          status="available"
-        />
-
-        <AvailabilityLabel
-          manifestationType="Lydbog (cd-mp3)"
-          availability="Udlånt"
-          status="unavailable"
-        />
-        <AvailabilityLabel
-          manifestationType="Lydbog (net)"
-          availability="Online"
-          status="available"
-        />
+        {Array(availabilityLabels)
+          .fill(0)
+          .map(() => {
+            return (
+              <AvailabilityLabel
+                manifestationType="Lydbog (cd-mp3)"
+                availability="Hjemme"
+                status="available"
+              />
+            );
+          })}
       </div>
 
       <ArrowSmallRight />
