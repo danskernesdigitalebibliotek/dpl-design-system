@@ -8,7 +8,7 @@
   text-decoration: none;
 
   @include breakpoint-s {
-    height: 184px;
+    min-height: 184px;
     gap: 0;
     padding: 24px;
     grid-template-columns: min-content minmax(min-content, 407px) 1fr max-content;
