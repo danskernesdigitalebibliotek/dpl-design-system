@@ -67,6 +67,12 @@
   margin-top: 10px;
 
   @include breakpoint-s {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     margin-top: 16px;
+    max-width: 407px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
