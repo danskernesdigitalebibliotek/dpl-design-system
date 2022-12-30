@@ -1,0 +1,84 @@
+.recommender {
+  background-color: $c-global-tertiary-2;
+  // padding: $s-md;
+
+  @include breakpoint-m {
+    padding: $s-6xl;
+  }
+
+  h1 {
+    color: $c-text-primary-white;
+    text-align: center;
+    padding: $s-lg;
+
+    @include breakpoint-m {
+      padding-bottom: $s-6xl;
+    }
+  }
+}
+
+.recommender-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+
+  @include breakpoint-m {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+}
+
+.recommender__grid__material {
+  border: 1px solid $c-text-secondary-gray;
+  padding: 30px;
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 350px;
+
+  .button-favourite {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    .icon-favourite {
+      color: $c-text-primary-white;
+      stroke: $c-text-primary-white;
+      fill: none;
+
+      &--filled {
+        stroke: $c-text-primary-white;
+        color: $c-text-primary-white;
+        fill: $c-text-primary-white;
+      }
+    }
+  }
+
+  .cover-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  @include breakpoint-m {
+    &:last-of-type {
+      display: none;
+    }
+  }
+}
+
+.recommender__grid__material__text {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.recommender__grid__material__text__title {
+  @extend %text-body-medium-regular-placeholder;
+  color: $c-text-primary-white;
+}
+
+.recommender__grid__material__text__author {
+  @extend %text-body-medium-regular-placeholder;
+  color: $c-text-primary-white;
+  font-weight: 500;
+}
