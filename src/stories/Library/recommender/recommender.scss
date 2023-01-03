@@ -62,6 +62,7 @@
   }
 
   .recommender-material__meta__title {
+    all: unset;
     @extend %text-body-medium-regular-placeholder;
     color: $c-text-primary-white;
     overflow: hidden;

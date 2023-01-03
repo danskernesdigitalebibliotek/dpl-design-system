@@ -30,7 +30,7 @@ const Recommender: React.FC<RecommenderProps> = ({
                 />
               </div>
             </div>
-            <div className="recommender-material__cover-container ">
+            <div className="recommender-material__cover-container">
               <Cover
                 url="images/book_cover_3.jpg"
                 size="medium"
@@ -39,7 +39,7 @@ const Recommender: React.FC<RecommenderProps> = ({
               />
             </div>
             <div className="recommender-material__meta">
-              <h3 className="recommender-material__meta__title">{recTitle}</h3>
+              <a className="recommender-material__meta__title">{recTitle}</a>
               <div className="recommender-material__meta__author">
                 {authors}
               </div>
