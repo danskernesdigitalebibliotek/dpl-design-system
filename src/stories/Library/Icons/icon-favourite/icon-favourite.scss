@@ -11,3 +11,15 @@
     fill: $c-identity-primary;
   }
 }
+
+.icon-favourite--bright {
+  color: $c-text-primary-white;
+  stroke: $c-text-primary-white;
+  fill: none;
+}
+
+.icon-favourite--bright-filled {
+  stroke: $c-text-primary-white;
+  color: $c-text-primary-white;
+  fill: $c-text-primary-white;
+}
