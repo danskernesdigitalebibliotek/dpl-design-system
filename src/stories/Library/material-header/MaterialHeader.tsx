@@ -1,4 +1,4 @@
-import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
+import AvailabilityLabel from "../availability-label/AvailabilityLabel";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
 import { Button } from "../Buttons/button/Button";
 import { generateId } from "../horizontal-term-line/HorizontalTermLine";
