@@ -39,10 +39,8 @@ const Recommender: React.FC<RecommenderProps> = ({
               />
             </div>
             <div className="recommender-material__meta">
-              <a className="recommender-material__meta__title">{recTitle}</a>
-              <div className="recommender-material__meta__author">
-                {authors}
-              </div>
+              <a className="recommender-material__title">{recTitle}</a>
+              <div className="recommender-material__author">{authors}</div>
             </div>
           </li>
         ))}
