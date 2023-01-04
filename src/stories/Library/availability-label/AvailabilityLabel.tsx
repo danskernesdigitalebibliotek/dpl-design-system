@@ -2,7 +2,7 @@ import { AvailabilityLabelPropsType } from "../../availability-label/types";
 import { Pagefold } from "../pagefold/Pagefold";
 import { withAvailabilityProps } from "./abilityLabel.hoc";
 
-export const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
+const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
   manifestationType,
   availability,
   status,

@@ -1,5 +1,5 @@
-import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
 import { AvailabilityLabelPropsType } from "../../availability-label/types";
+import AvailabilityLabel from "../availability-label/AvailabilityLabel";
 import { Cover } from "../cover/Cover";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
