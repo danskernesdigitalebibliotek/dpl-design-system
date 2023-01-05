@@ -20,6 +20,10 @@ $list-reservation-space-desktop: 24px;
     height: 184px;
     padding: $list-reservation-space-desktop;
   }
+
+  &:hover {
+    filter: drop-shadow(0 4px 20px rgb(72 72 72 / 10%));
+  }
 }
 
 .list-reservation__material {
@@ -87,6 +91,15 @@ $list-reservation-space-desktop: 24px;
 .list-reservation__about {
   padding-left: 0;
 
+  & > button {
+    all: unset;
+    @extend %text-header-h4;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   p {
     margin-top: 2px;
     font-size: 14px;
@@ -110,6 +123,23 @@ $list-reservation-space-desktop: 24px;
 
   @include breakpoint-s {
     align-items: center;
+  }
+
+  // Hide arrow
+  > svg {
+    width: 35px;
+    visibility: hidden;
+    opacity: 0;
+    margin-right: 20px;
+  }
+  // Show arrow on hover
+  &:hover svg {
+    @include breakpoint-s {
+      visibility: visible;
+      opacity: 1;
+      align-self: center;
+      justify-self: end;
+    }
   }
 }
 
