@@ -1,4 +1,5 @@
 import { Button } from "../Buttons/button/Button";
+import InstantLoan from "../instant-loan/InstantLoan";
 import PromoBar from "../promo-bar/PromoBar";
 import ReservationFormItem from "./ReservationFormItem";
 
@@ -6,12 +7,24 @@ interface ReservationFormProps {
   submitInfo: string;
   submitButton: string;
   showPromoBar?: boolean;
+  showInstantLoan: boolean;
+  instantLoanTitle: string;
+  instantLoanSubTitle: string;
+  instantLoanUnderlineDescription: string;
+  instantLoanBranchButton: string;
+  instantLoanBranches: string[];
 }
 
 const ReservationForm = ({
   submitInfo,
   submitButton,
   showPromoBar,
+  showInstantLoan,
+  instantLoanTitle,
+  instantLoanSubTitle,
+  instantLoanUnderlineDescription,
+  instantLoanBranchButton,
+  instantLoanBranches,
 }: ReservationFormProps) => {
   return (
     <div>
@@ -59,6 +72,15 @@ const ReservationForm = ({
           title="Har ingen interesse efter"
           text="6 måneder"
         />
+        {showInstantLoan && (
+          <InstantLoan
+            title={instantLoanTitle}
+            subTitle={instantLoanSubTitle}
+            underlineDescription={instantLoanUnderlineDescription}
+            InstantLoanBranchButton={instantLoanBranchButton}
+            instantLoanBranches={instantLoanBranches}
+          />
+        )}
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
   manifestationType,
   availability,
   status,
+  quantity,
 }) => {
   const AvailabilityPagefold = withAvailabilityProps(Pagefold);
 
@@ -27,6 +28,12 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
       )}
       {!manifestationType && (
         <p className="text-label-normal ml-24 mr-8">{availability}</p>
+      )}
+      {quantity && (
+        <>
+          <div className="availability-label--divider ml-4" />
+          <p className="text-label-normal mx-8">{quantity} stk</p>
+        </>
       )}
     </AvailabilityPagefold>
   );
