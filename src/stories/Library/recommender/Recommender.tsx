@@ -1,6 +1,5 @@
 import { Cover } from "../cover/Cover";
 import { ReactComponent as SvgIcon } from "../Icons/icon-favourite/icon-favourite.svg";
-import { Links } from "../links/Links";
 
 export type RecommenderData = {
   title: string;
@@ -22,7 +21,7 @@ const Recommender: React.FC<RecommenderProps> = ({
     <div className={`recommender ${bright ? "recommender--bright" : ""}`}>
       <h2 className="recommender__title text-header-h1">{title}</h2>
       <div className="recommender__buttons">
-        <button type="button" className="button-link ">
+        <button type="button" className="button-link button-link--selected">
           Something similar
         </button>
         <button type="button" className="button-link ">
@@ -39,8 +38,12 @@ const Recommender: React.FC<RecommenderProps> = ({
             <div className="recommender-material__favourite">
               <div className="button-favourite button-favourite">
                 <SvgIcon
-                  className={`icon-favourite icon-favourite--bright ${
-                    filled ? "icon-favourite--bright-filled" : ""
+                  className={`icon-favourite icon-favourite${
+                    !bright ? "--bright" : ""
+                  } ${
+                    filled
+                      ? `icon-favourite--${!bright ? "bright-" : ""}filled`
+                      : ""
                   }`}
                 />
               </div>

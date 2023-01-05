@@ -10,6 +10,10 @@ export default {
       defaultValue:
         "Kunne du lide “Audrey Hepburn” og mangler du noget at læse?",
     },
+    bright: {
+      control: { type: "boolean" },
+      defaultValue: true,
+    },
     recommenderData: {
       control: "object",
       defaultValue: [
