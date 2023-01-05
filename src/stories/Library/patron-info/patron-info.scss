@@ -13,3 +13,17 @@
     @extend %ml-32;
   }
 }
+
+.patron-buttons {
+  display: flex;
+  @extend %mt-32;
+}
+
+.contact-info-flex {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint-s {
+    flex-direction: row;
+  }
+}
