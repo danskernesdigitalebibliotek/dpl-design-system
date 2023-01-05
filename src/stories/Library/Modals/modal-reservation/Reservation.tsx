@@ -12,6 +12,12 @@ interface ReservationProps {
   submitButton: string;
   state: "initial" | "success" | "error";
   showPromoBar?: boolean;
+  showInstantLoan: boolean;
+  instantLoanTitle: string;
+  instantLoanSubTitle: string;
+  instantLoanUnderlineDescription: string;
+  instantLoanBranchButton: string;
+  instantLoanBranches: string[];
 }
 
 const Reservation = ({
@@ -22,6 +28,12 @@ const Reservation = ({
   submitButton,
   state,
   showPromoBar,
+  showInstantLoan,
+  instantLoanTitle,
+  instantLoanSubTitle,
+  instantLoanUnderlineDescription,
+  instantLoanBranchButton,
+  instantLoanBranches,
 }: ReservationProps) => {
   if (state === "success")
     return (
@@ -43,6 +55,12 @@ const Reservation = ({
           submitInfo={submitInfo}
           submitButton={submitButton}
           showPromoBar={showPromoBar}
+          showInstantLoan={showInstantLoan}
+          instantLoanTitle={instantLoanTitle}
+          instantLoanSubTitle={instantLoanSubTitle}
+          instantLoanUnderlineDescription={instantLoanUnderlineDescription}
+          instantLoanBranchButton={instantLoanBranchButton}
+          instantLoanBranches={instantLoanBranches}
         />
       </section>
     </Modal>

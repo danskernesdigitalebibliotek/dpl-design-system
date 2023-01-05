@@ -41,6 +41,39 @@ export default {
       name: "Show PromoBar",
       defaultValue: false,
     },
+    showInstantLoan: {
+      name: "Show instant loan",
+      defaultValue: false,
+    },
+    instantLoanTitle: {
+      name: "Instant loan title",
+      control: { type: "text" },
+      defaultValue: "Hent bogen nu",
+    },
+    instantLoanSubTitle: {
+      name: "Instant loan subtitle",
+      control: { type: "text" },
+      defaultValue: "Spring køen over og hent bogen nu på",
+    },
+    instantLoanUnderlineDescription: {
+      name: "Instant loan underline description",
+      control: { type: "text" },
+      defaultValue: "Bogen er tilgængelig på disse biblioteker nær dig",
+    },
+    instantLoanBranchButton: {
+      name: "Instant loan branch button",
+      control: { type: "text" },
+      defaultValue: "Se på kort",
+    },
+    instantLoanBranches: {
+      name: "Instant loan branches",
+      control: "object",
+      defaultValue: [
+        "Blågaardens Bibliotek",
+        "Østerbro Bibliotek",
+        "Vesterbro Bibliotek",
+      ],
+    },
   },
 } as ComponentMeta<typeof Reservation>;
 
@@ -65,4 +98,14 @@ WithPromoBar.args = {
   submitInfo: "Vi har 8 eksemplarer og 21 står i kø",
   submitButton: "GODKEND RESERVERING",
   showPromoBar: true,
+};
+
+export const WithInstantLoan = Template.bind({});
+WithInstantLoan.args = {
+  label: "bog",
+  title: "Stephen Hawking",
+  author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
+  submitInfo: "Vi har 8 eksemplarer og 21 står i kø",
+  submitButton: "GODKEND RESERVERING",
+  showInstantLoan: true,
 };

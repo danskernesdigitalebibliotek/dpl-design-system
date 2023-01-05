@@ -1,0 +1,41 @@
+.instant-loan-summary {
+  background-color: $c-text-primary-white;
+  display: flex;
+  flex-direction: column;
+  gap: $s-lg;
+  @include breakpoint-s {
+    flex-direction: row;
+  }
+}
+
+.instant-loan-underline {
+  display: flex;
+  align-items: center;
+  gap: $s-xs;
+}
+
+.instant-loan-arrow {
+  width: $s-md;
+}
+
+// Flips arrow icon if parent details element has "open" attribute and the arrow img has the "instant-loan-arrow" class.
+details.instant-loan[open] .instant-loan-arrow {
+  transform: scaleY(-1);
+}
+
+.instant-loan-branches {
+  display: grid;
+  gap: 1px;
+}
+
+.instant-loan-branch {
+  background-color: $c-text-primary-white;
+  min-height: $s-4xl;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+
+  &__show-on-map {
+    justify-self: end;
+  }
+}
