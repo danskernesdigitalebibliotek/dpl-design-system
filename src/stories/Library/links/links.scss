@@ -21,3 +21,18 @@
   transform: scaleX(0);
   transform-origin: 100% 0%;
 }
+
+.button-link--selected {
+  @extend .link-tag;
+}
+
+.button-link {
+  // 3px corresponding to the height of the "after"-line, so the two are inline
+  margin-bottom: 3px;
+  text-decoration: none;
+  color: $c-text-primary-black;
+  display: inline-block;
+  width: fit-content;
+
+  @extend %text-body-medium-regular-placeholder;
+}

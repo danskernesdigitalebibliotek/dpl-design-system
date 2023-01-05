@@ -1,5 +1,16 @@
 .recommender {
   background-color: $c-global-tertiary-2;
+  color: $c-text-primary-white;
+  border-color: $c-text-secondary-gray;
+
+  @include breakpoint-m {
+    padding: $s-6xl;
+  }
+}
+.recommender--bright {
+  background-color: $c-global-primary;
+  color: $c-text-primary-black;
+  border-color: $c-global-tertiary-1;
 
   @include breakpoint-m {
     padding: $s-6xl;
@@ -7,13 +18,21 @@
 }
 
 .recommender__title {
-  color: $c-text-primary-white;
   text-align: center;
   padding: $s-lg;
 
   @include breakpoint-m {
     padding-bottom: $s-6xl;
   }
+}
+.recommender__title--left {
+  text-align: left;
+}
+
+.recommender__buttons {
+  display: flex;
+  justify-content: end;
+  margin-bottom: $s-md;
 }
 
 .recommender__grid {
@@ -39,44 +58,52 @@
       display: none;
     }
   }
+}
 
-  .recommender-material__favourite {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
+.recommender-material--bright {
+  border: 1px solid $c-global-tertiary-1;
+}
 
-  .recommender-material__cover-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 10px;
-  }
+.recommender-material__favourite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 
-  .recommender-material__meta {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    width: 100%;
-    padding-right: 10px;
-  }
+.recommender-material__cover-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
 
-  .recommender-material__title {
-    all: unset;
-    display: block;
-    @extend %text-body-medium-regular-placeholder;
-    color: $c-text-primary-white;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+.recommender-material__meta {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 100%;
+  padding-right: 10px;
+}
 
-  .recommender-material__author {
-    @extend %text-body-medium-regular-placeholder;
-    color: $c-text-primary-white;
-    font-weight: 500;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+.recommender-material__title {
+  @extend %text-body-medium-regular-placeholder;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
   }
+}
+
+.recommender-material__author {
+  @extend %text-body-medium-regular-placeholder;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: inherit;
 }

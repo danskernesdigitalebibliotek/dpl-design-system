@@ -1,5 +1,6 @@
 import { Cover } from "../cover/Cover";
 import { ReactComponent as SvgIcon } from "../Icons/icon-favourite/icon-favourite.svg";
+import { Links } from "../links/Links";
 
 export type RecommenderData = {
   title: string;
@@ -9,18 +10,32 @@ export type RecommenderData = {
 export type RecommenderProps = {
   recommenderData: RecommenderData[];
   title: string;
+  bright: boolean;
 };
 
 const Recommender: React.FC<RecommenderProps> = ({
   recommenderData,
   title,
+  bright,
 }) => {
   return (
-    <div className="recommender">
+    <div className={`recommender ${bright ? "recommender--bright" : ""}`}>
       <h2 className="recommender__title text-header-h1">{title}</h2>
+      <div className="recommender__buttons">
+        <button type="button" className="button-link ">
+          Something similar
+        </button>
+        <button type="button" className="button-link ">
+          By the same author
+        </button>
+      </div>
       <ul className="recommender__grid">
         {recommenderData.map(({ title: recTitle, filled, authors }) => (
-          <li className="recommender-material">
+          <li
+            className={`recommender-material ${
+              bright ? "`recommender-material--bright" : ""
+            }`}
+          >
             <div className="recommender-material__favourite">
               <div className="button-favourite button-favourite">
                 <SvgIcon
