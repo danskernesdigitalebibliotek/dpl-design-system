@@ -2,6 +2,7 @@ import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { SearchResultItem } from "./SearchResultItem";
+import { SearchResultItemSkeleton } from "./SearchResultItemSkeleton";
 
 export default {
   title: "Library / Search Result Item",
@@ -51,17 +52,20 @@ export default {
   },
 } as ComponentMeta<typeof SearchResultItem>;
 
-const Template: ComponentStory<typeof SearchResultItem> = (args) => {
+export const Item: ComponentStory<typeof SearchResultItem> = (args) => {
   return <SearchResultItem {...args} />;
 };
 
-export const Item = Template.bind({});
-Item.args = {};
-
-export const ContentOverload = Template.bind({});
+export const ContentOverload = Item.bind({});
 ContentOverload.args = {
   title:
     "En roman om Jon og hans breve til sin gravide kone, da han opholdt sig i en grotte hen over vinteren og forberedte hendes ankomst og de nye tider (dansk)",
   author: "Sánchez Vegara, Amaia Arrazola, Sánchez Vegara, et al.",
   availabilityLabels: 25,
+};
+
+export const SkeletonItem: ComponentStory<
+  typeof SearchResultItemSkeleton
+> = () => {
+  return <SearchResultItemSkeleton />;
 };

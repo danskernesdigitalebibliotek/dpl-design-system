@@ -1,0 +1,13 @@
+.search-result-item {
+  &.ssc {
+    grid-template-columns: min-content 1fr;
+  }
+  .ssc-square {
+    @extend %mr-16;
+    width: 100px;
+    height: 140px;
+  }
+  .ssc-head-line {
+    @extend %mt-16;
+  }
+}
