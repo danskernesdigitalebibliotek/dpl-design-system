@@ -1,4 +1,3 @@
-%dpl-input,
 .dpl-input {
   display: flex;
   flex-direction: column;
@@ -30,27 +29,5 @@
     color: $c-signal-alert;
     @extend %text-body-small-regular;
     @extend %mt-8;
-  }
-}
-
-.patron__input {
-  @extend %dpl-input;
-  @extend %text-body-medium-medium;
-
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
-
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
-}
-
-.patron__input--desktop {
-  width: 100%;
-
-  @include breakpoint-m {
-    width: 50%;
   }
 }
