@@ -1,3 +1,4 @@
+%dpl-input,
 .dpl-input {
   display: flex;
   flex-direction: column;
@@ -32,23 +33,21 @@
   }
 }
 
-input[type="text"] {
+.patron__input {
+  @extend %dpl-input;
   @extend %text-body-medium-medium;
-  @extend %pl-8;
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-  @extend %text-body-medium-medium;
-  @extend %pl-8;
-}
-
-.input__desktop {
+.patron__input--desktop {
   width: 100%;
 
   @include breakpoint-m {
