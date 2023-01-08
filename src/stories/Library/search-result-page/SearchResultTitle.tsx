@@ -16,6 +16,7 @@ export const SearchResultTitle = ({
   const classes = clsx(["text-header-h2", "mb-16", "search-result-title"], {
     "text-loading": isLoading,
   });
+  const total = totalResults.toLocaleString("da-Dk");
 
   if (zeroResult) {
     return <h1 className={classes}>Din søgning gav 0 resultater</h1>;
@@ -24,7 +25,7 @@ export const SearchResultTitle = ({
   return (
     <h1 className={classes}>
       {isLoading && `Viser resultater for “${title}”`}
-      {!isLoading && `Viser resultater for “${title}” (${totalResults})`}
+      {!isLoading && `Viser resultater for “${title}” (${total})`}
     </h1>
   );
 };
