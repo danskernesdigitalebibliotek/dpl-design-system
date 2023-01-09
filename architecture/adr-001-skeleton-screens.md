@@ -34,3 +34,10 @@ Because we use library where skeletons are implemented purely in CSS
 we also provide a solution which can be consumed in any technology
 already using the design system without any additional dependencies,
 client side or server side.
+
+### BEM rules when using Skeleton Screen Classes in dpl-design-system
+
+Because we want to use existing styling setup in conjunction
+with the Skeleton Screen Classes we sometimes need to ignore the existing
+BEM rules that we normally comply to.
+See eg. the [search result styling](../src/stories/Library/search-result-item/search-result-item-skeleton.scss).

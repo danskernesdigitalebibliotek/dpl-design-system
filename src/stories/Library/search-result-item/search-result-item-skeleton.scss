@@ -1,3 +1,7 @@
+// Since we are using the Skeleton Screen Css classes connected to the existing styling
+// we deliberately not follow the BEM naming convention here.
+/* stylelint-disable plugin/stylelint-bem-namics */
+
 .search-result-item {
   &.ssc {
     grid-template-columns: min-content 1fr;
@@ -11,3 +15,4 @@
     @extend %mt-16;
   }
 }
+/* stylelint-enable plugin/stylelint-bem-namics */
