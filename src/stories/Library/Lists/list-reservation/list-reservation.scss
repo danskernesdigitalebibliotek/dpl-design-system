@@ -92,19 +92,6 @@ $list-reservation-space-desktop: 24px;
   padding-left: 0;
   text-align: left;
 
-  & > button {
-    all: unset;
-    @extend %text-header-h4;
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-    }
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-
   p {
     margin-top: 2px;
     font-size: 14px;
@@ -117,6 +104,19 @@ $list-reservation-space-desktop: 24px;
       font-size: 12px;
       margin-bottom: 0;
     }
+  }
+}
+
+.list-reservation__header {
+  @extend %text-header-h4;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    text-decoration: underline;
   }
 }
 
