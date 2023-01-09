@@ -90,12 +90,17 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__about {
   padding-left: 0;
+  text-align: left;
 
   & > button {
     all: unset;
     @extend %text-header-h4;
+    cursor: pointer;
 
     &:hover {
+      text-decoration: underline;
+    }
+    &:focus {
       text-decoration: underline;
     }
   }
@@ -145,6 +150,7 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__counter {
   display: none;
+  margin: $s-xs;
 
   @include breakpoint-s {
     width: 92px;
