@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { Counter, CounterProps } from "../../counter/Counter";
 import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
 import { Cover } from "../../cover/Cover";
+import { ReactComponent as ArrowSmallRight } from "../../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 
 export type ListReservationsAndLoansProps = {
   cover: {
@@ -100,6 +101,7 @@ export const ListReservationsAndLoans = (
               <p className="text-body-medium-medium">Gebyr {fee},-</p>
             </div>
           ) : null}
+          <ArrowSmallRight />
         </div>
       </div>
     </div>
