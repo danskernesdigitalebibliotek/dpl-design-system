@@ -54,14 +54,15 @@
       opacity: 0;
       margin-right: 20px;
     }
+
     // Show arrow on hover
-  }
-  &:hover svg {
-    @include breakpoint-s {
-      visibility: visible;
-      opacity: 1;
-      align-self: center;
-      justify-self: end;
+    &:hover svg {
+      @include breakpoint-s {
+        visibility: visible;
+        opacity: 1;
+        align-self: center;
+        justify-self: end;
+      }
     }
   }
 }
