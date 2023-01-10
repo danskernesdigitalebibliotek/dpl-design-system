@@ -17,9 +17,9 @@
   &:hover {
     filter: drop-shadow(0 4px 20px rgb(72 72 72 / 10%));
   }
-
-  @include arrow();
 }
+
+@include arrow("search-result-item");
 
 .search-result-item__cover {
   grid-row: span 2;

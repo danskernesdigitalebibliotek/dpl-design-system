@@ -127,9 +127,9 @@ $list-reservation-space-desktop: 24px;
   @include breakpoint-s {
     align-items: center;
   }
-
-  @include arrow();
 }
+
+@include arrow("list-reservation__status");
 
 .list-reservation__counter {
   display: none;
