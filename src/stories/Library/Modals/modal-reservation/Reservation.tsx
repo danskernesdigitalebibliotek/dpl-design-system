@@ -16,7 +16,6 @@ interface ReservationProps {
   instantLoanTitle: string;
   instantLoanSubTitle: string;
   instantLoanUnderlineDescription: string;
-  instantLoanBranchButton: string;
   instantLoanBranches: string[];
 }
 
@@ -32,7 +31,6 @@ const Reservation = ({
   instantLoanTitle,
   instantLoanSubTitle,
   instantLoanUnderlineDescription,
-  instantLoanBranchButton,
   instantLoanBranches,
 }: ReservationProps) => {
   if (state === "success")
@@ -59,7 +57,6 @@ const Reservation = ({
           instantLoanTitle={instantLoanTitle}
           instantLoanSubTitle={instantLoanSubTitle}
           instantLoanUnderlineDescription={instantLoanUnderlineDescription}
-          instantLoanBranchButton={instantLoanBranchButton}
           instantLoanBranches={instantLoanBranches}
         />
       </section>

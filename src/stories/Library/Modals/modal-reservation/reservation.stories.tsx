@@ -60,11 +60,6 @@ export default {
       control: { type: "text" },
       defaultValue: "Bogen er tilgængelig på disse biblioteker nær dig",
     },
-    instantLoanBranchButton: {
-      name: "Instant loan branch button",
-      control: { type: "text" },
-      defaultValue: "Se på kort",
-    },
     instantLoanBranches: {
       name: "Instant loan branches",
       control: "object",

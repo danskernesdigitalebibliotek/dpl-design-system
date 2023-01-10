@@ -11,7 +11,6 @@ interface ReservationFormProps {
   instantLoanTitle: string;
   instantLoanSubTitle: string;
   instantLoanUnderlineDescription: string;
-  instantLoanBranchButton: string;
   instantLoanBranches: string[];
 }
 
@@ -23,7 +22,6 @@ const ReservationForm = ({
   instantLoanTitle,
   instantLoanSubTitle,
   instantLoanUnderlineDescription,
-  instantLoanBranchButton,
   instantLoanBranches,
 }: ReservationFormProps) => {
   return (
@@ -77,7 +75,6 @@ const ReservationForm = ({
             title={instantLoanTitle}
             subTitle={instantLoanSubTitle}
             underlineDescription={instantLoanUnderlineDescription}
-            InstantLoanBranchButton={instantLoanBranchButton}
             instantLoanBranches={instantLoanBranches}
           />
         )}

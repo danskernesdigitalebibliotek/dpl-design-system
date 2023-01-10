@@ -2,12 +2,11 @@ import AvailabilityLabel from "../availability-label/AvailabilityLabel";
 
 type InstantLoanBranchesProps = {
   branches: string[];
-  InstantLoanBranchButton: string;
 };
 
 const InstantLoanBranches: React.FunctionComponent<
   InstantLoanBranchesProps
-> = ({ branches, InstantLoanBranchButton }) => {
+> = ({ branches }) => {
   return (
     <ul className="instant-loan-branches">
       {branches.map((branch) => (
@@ -20,9 +19,6 @@ const InstantLoanBranches: React.FunctionComponent<
               status="available"
               quantity={8}
             />
-            <button className="link-tag text-small-caption instant-loan-branch__show-on-map">
-              {InstantLoanBranchButton}
-            </button>
           </div>
         </li>
       ))}
