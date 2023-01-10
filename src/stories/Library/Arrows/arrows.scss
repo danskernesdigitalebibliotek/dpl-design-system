@@ -45,7 +45,7 @@
 
 @mixin arrow() {
   // Hide arrow
-  > svg {
+  svg {
     width: 35px;
     visibility: hidden;
     opacity: 0;
