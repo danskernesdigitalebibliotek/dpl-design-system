@@ -1,18 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import InstantLoan from "./InstantLoan";
-
-export const instantLoanDefaultArgs = {
-  title: "Hent bogen nu",
-  subTitle: "Spring køen over og hent bogen nu på",
-  underlineDescription: "Bogen er tilgængelig på disse biblioteker nær dig",
-  branches: [
-    "Blågaardens Bibliotek",
-    "Østerbro Bibliotek",
-    "Vesterbro Bibliotek",
-  ],
-  showDisclosureContent: false,
-};
+import instantLoanDefaultArgs from "./instantLoanDefaultArgs";
 
 export default {
   title: "Library / InstantLoan",
