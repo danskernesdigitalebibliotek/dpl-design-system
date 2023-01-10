@@ -18,22 +18,7 @@
     filter: drop-shadow(0 4px 20px rgb(72 72 72 / 10%));
   }
 
-  // Hide arrow
-  > svg {
-    width: 35px;
-    visibility: hidden;
-    opacity: 0;
-    margin-right: 20px;
-  }
-  // Show arrow on hover
-  &:hover svg {
-    @include breakpoint-s {
-      visibility: visible;
-      opacity: 1;
-      align-self: center;
-      justify-self: end;
-    }
-  }
+  @include arrow();
 }
 
 .search-result-item__cover {

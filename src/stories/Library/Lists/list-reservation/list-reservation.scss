@@ -112,9 +112,7 @@ $list-reservation-space-desktop: 24px;
   padding: 0;
   cursor: pointer;
 
-  &:hover {
-    text-decoration: underline;
-  }
+  &:hover,
   &:focus {
     text-decoration: underline;
   }
@@ -130,22 +128,7 @@ $list-reservation-space-desktop: 24px;
     align-items: center;
   }
 
-  // Hide arrow
-  > svg {
-    width: 35px;
-    visibility: hidden;
-    opacity: 0;
-    margin-right: 20px;
-  }
-  // Show arrow on hover
-  &:hover svg {
-    @include breakpoint-s {
-      visibility: visible;
-      opacity: 1;
-      align-self: center;
-      justify-self: end;
-    }
-  }
+  @include arrow();
 }
 
 .list-reservation__counter {
