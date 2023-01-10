@@ -45,30 +45,6 @@ export default {
       name: "Show instant loan",
       defaultValue: false,
     },
-    instantLoanTitle: {
-      name: "Instant loan title",
-      control: { type: "text" },
-      defaultValue: "Hent bogen nu",
-    },
-    instantLoanSubTitle: {
-      name: "Instant loan subtitle",
-      control: { type: "text" },
-      defaultValue: "Spring køen over og hent bogen nu på",
-    },
-    instantLoanUnderlineDescription: {
-      name: "Instant loan underline description",
-      control: { type: "text" },
-      defaultValue: "Bogen er tilgængelig på disse biblioteker nær dig",
-    },
-    instantLoanBranches: {
-      name: "Instant loan branches",
-      control: "object",
-      defaultValue: [
-        "Blågaardens Bibliotek",
-        "Østerbro Bibliotek",
-        "Vesterbro Bibliotek",
-      ],
-    },
   },
 } as ComponentMeta<typeof Reservation>;
 
