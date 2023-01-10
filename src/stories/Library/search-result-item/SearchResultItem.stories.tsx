@@ -44,6 +44,7 @@ export default {
       },
     },
     availabilityLabels: {
+      // The control is disabled because we use stories to explore different availability label counts.
       control: { type: "null" },
       defaultValue: 3,
     },
