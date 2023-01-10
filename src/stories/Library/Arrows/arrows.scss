@@ -47,21 +47,24 @@
 /* stylelint-disable plugin/stylelint-bem-namics */
 @mixin arrow($className) {
   // Hide arrow
-  .#{$className} {
+  .#{$className} > {
     svg {
       width: 35px;
       visibility: hidden;
       opacity: 0;
       margin-right: 20px;
     }
-
-    // Show arrow on hover
-    &:hover svg {
-      @include breakpoint-s {
-        visibility: visible;
-        opacity: 1;
-        align-self: center;
-        justify-self: end;
+  }
+  // Show arrow on hover
+  .#{$className} {
+    &:hover {
+      svg {
+        @include breakpoint-s {
+          visibility: visible;
+          opacity: 1;
+          align-self: center;
+          justify-self: end;
+        }
       }
     }
   }
