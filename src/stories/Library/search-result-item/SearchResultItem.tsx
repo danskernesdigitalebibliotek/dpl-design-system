@@ -1,4 +1,5 @@
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
+import { AvailabilityLabelPropsType } from "../../availability-label/types";
 import { Cover } from "../cover/Cover";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
@@ -23,6 +24,13 @@ export const SearchResultItem = ({
   horizontalTermLineData,
   availabilityLabels,
 }: SearchResultItemProps) => {
+  const materialTypes: AvailabilityLabelPropsType["manifestationType"][] = [
+    "Bog",
+    "Ebog",
+    "Lydbog (net)",
+    "Lydbog (cd-mp3)",
+  ];
+
   return (
     <a href="/" className="search-result-item arrow arrow__hover--right-small">
       <div className="search-result-item__cover">
@@ -47,12 +55,14 @@ export const SearchResultItem = ({
       <div className="search-result-item__availability">
         {Array(availabilityLabels)
           .fill(0)
-          .map(() => {
+          .map((_value, index) => {
             return (
               <AvailabilityLabel
-                manifestationType="Lydbog (cd-mp3)"
+                manifestationType={
+                  index < 4 ? materialTypes[index] : materialTypes[index % 4]
+                }
                 availability="Hjemme"
-                status="available"
+                status={index % 2 === 0 ? "available" : "unavailable"}
               />
             );
           })}
