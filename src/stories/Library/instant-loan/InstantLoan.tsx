@@ -7,17 +7,19 @@ type InstantLoanProps = {
   title: string;
   subTitle: string;
   underlineDescription: string;
-  instantLoanBranches: string[];
+  branches: string[];
+  showDisclosureContent?: boolean;
 };
 
 const InstantLoan: React.FunctionComponent<InstantLoanProps> = ({
   title,
   subTitle,
   underlineDescription,
-  instantLoanBranches,
+  branches,
+  showDisclosureContent,
 }) => (
   <DisclosureControllable
-    showContent
+    showContent={showDisclosureContent}
     id="instant-loan"
     detailsClassName="instant-loan pagefold-parent--small"
     summaryClassName="instant-loan-summary cursor-pointer p-24"
@@ -29,7 +31,7 @@ const InstantLoan: React.FunctionComponent<InstantLoanProps> = ({
       />
     }
   >
-    <InstantLoanBranches branches={instantLoanBranches} />
+    <InstantLoanBranches branches={branches} />
   </DisclosureControllable>
 );
 
