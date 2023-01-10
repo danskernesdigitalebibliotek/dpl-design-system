@@ -18,8 +18,9 @@
   width: $s-md;
 }
 
-// Flips arrow icon if parent details element has "open" attribute and the arrow img has the "instant-loan-arrow" class.
-details.instant-loan[open] .instant-loan-arrow {
+// Flips arrow icon with class .instant-loan-arrow
+// based on the value of aria-expanded in .instant-loan-summary
+.instant-loan-summary[aria-expanded="true"] .instant-loan-arrow {
   transform: scaleY(-1);
 }
 
