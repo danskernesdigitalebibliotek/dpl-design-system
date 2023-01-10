@@ -43,6 +43,8 @@
   text-decoration: none;
 }
 
+/* BEM plugin does not support interpolation */
+/* stylelint-disable plugin/stylelint-bem-namics */
 @mixin arrow($className) {
   // Hide arrow
   .#{$className} {
@@ -53,13 +55,13 @@
       margin-right: 20px;
     }
     // Show arrow on hover
-    &:hover svg {
-      @include breakpoint-s {
-        visibility: visible;
-        opacity: 1;
-        align-self: center;
-        justify-self: end;
-      }
+  }
+  &:hover svg {
+    @include breakpoint-s {
+      visibility: visible;
+      opacity: 1;
+      align-self: center;
+      justify-self: end;
     }
   }
 }
