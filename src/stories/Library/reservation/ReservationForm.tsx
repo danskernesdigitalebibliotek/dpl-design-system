@@ -1,8 +1,8 @@
-import { instantLoanDefaultArgs } from "../instant-loan/InstantLoan.stories";
 import { Button } from "../Buttons/button/Button";
 import PromoBar from "../promo-bar/PromoBar";
 import ReservationFormItem from "./ReservationFormItem";
 import InstantLoan from "../instant-loan/InstantLoan";
+import instantLoanDefaultArgs from "../instant-loan/instantLoanDefaultArgs";
 
 interface ReservationFormProps {
   submitInfo: string;
