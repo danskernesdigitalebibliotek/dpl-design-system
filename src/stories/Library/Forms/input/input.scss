@@ -31,27 +31,3 @@
     @extend %mt-8;
   }
 }
-
-input[type="text"] {
-  @extend %text-body-medium-medium;
-  @extend %pl-8;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-  @extend %text-body-medium-medium;
-  @extend %pl-8;
-}
-
-.input__desktop {
-  width: 100%;
-
-  @include breakpoint-m {
-    width: 50%;
-  }
-}
