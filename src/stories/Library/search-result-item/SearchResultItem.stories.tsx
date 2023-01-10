@@ -61,7 +61,7 @@ Item.args = {};
 export const ContentOverload = Template.bind({});
 ContentOverload.args = {
   title:
-    "Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn Audrey Hepburn",
+    "En roman om Jon og hans breve til sin gravide kone, da han opholdt sig i en grotte hen over vinteren og forberedte hendes ankomst og de nye tider (dansk)",
   author: "Sánchez Vegara, Amaia Arrazola, Sánchez Vegara, et al.",
   availabilityLabels: 25,
 };
