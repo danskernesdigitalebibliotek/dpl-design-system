@@ -8,7 +8,7 @@ interface ReservationFormProps {
   submitInfo: string;
   submitButton: string;
   showPromoBar?: boolean;
-  showInstantLoan: boolean;
+  showInstantLoan?: boolean;
 }
 
 const ReservationForm = ({

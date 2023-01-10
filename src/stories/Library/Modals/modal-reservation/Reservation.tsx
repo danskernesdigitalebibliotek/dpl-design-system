@@ -12,7 +12,7 @@ interface ReservationProps {
   submitButton: string;
   state: "initial" | "success" | "error";
   showPromoBar?: boolean;
-  showInstantLoan: boolean;
+  showInstantLoan?: boolean;
 }
 
 const Reservation = ({
