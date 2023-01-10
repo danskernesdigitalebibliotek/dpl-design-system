@@ -34,3 +34,13 @@ const Template: ComponentStory<typeof SearchResultTitle> = (args) => {
 
 export const Item = Template.bind({});
 Item.args = {};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  isLoading: true,
+};
+
+export const ZeroResults = Template.bind({});
+ZeroResults.args = {
+  zeroResult: true,
+};
