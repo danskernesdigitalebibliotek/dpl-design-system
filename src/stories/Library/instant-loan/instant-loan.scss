@@ -1,3 +1,7 @@
+.instant-loan-arrow {
+  width: $s-md;
+}
+
 .instant-loan-summary {
   background-color: $c-text-primary-white;
   display: flex;
@@ -6,22 +10,19 @@
   @include breakpoint-s {
     flex-direction: row;
   }
+  // Flips arrow icon with class .instant-loan-arrow
+  // based on the value of aria-expanded in .instant-loan-summary
+  &[aria-expanded="true"] {
+    .instant-loan-arrow {
+      transform: scaleY(-1);
+    }
+  }
 }
 
 .instant-loan-underline {
   display: flex;
   align-items: center;
   gap: $s-xs;
-}
-
-.instant-loan-arrow {
-  width: $s-md;
-}
-
-// Flips arrow icon with class .instant-loan-arrow
-// based on the value of aria-expanded in .instant-loan-summary
-.instant-loan-summary[aria-expanded="true"] .instant-loan-arrow {
-  transform: scaleY(-1);
 }
 
 .instant-loan-branches {
