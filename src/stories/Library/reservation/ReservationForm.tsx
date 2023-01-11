@@ -2,7 +2,6 @@ import { Button } from "../Buttons/button/Button";
 import PromoBar from "../promo-bar/PromoBar";
 import ReservationFormItem from "./ReservationFormItem";
 import InstantLoan from "../instant-loan/InstantLoan";
-import instantLoanDefaultArgs from "../instant-loan/instantLoanDefaultArgs";
 
 interface ReservationFormProps {
   submitInfo: string;
@@ -63,7 +62,7 @@ const ReservationForm = ({
           title="Har ingen interesse efter"
           text="6 måneder"
         />
-        {showInstantLoan && <InstantLoan {...instantLoanDefaultArgs} />}
+        {showInstantLoan && <InstantLoan />}
       </div>
     </div>
   );
