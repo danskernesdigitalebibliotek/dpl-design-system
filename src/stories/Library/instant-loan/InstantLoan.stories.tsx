@@ -1,7 +1,6 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import InstantLoan from "./InstantLoan";
-import instantLoanDefaultArgs from "./instantLoanDefaultArgs";
 
 export default {
   title: "Library / InstantLoan",
@@ -42,10 +41,8 @@ const Template: ComponentStory<typeof InstantLoan> = (args) => {
 };
 
 export const InstantLoanClosed = Template.bind({});
-InstantLoanClosed.args = { ...instantLoanDefaultArgs };
 
 export const InstantLoanOpen = Template.bind({});
 InstantLoanOpen.args = {
-  ...instantLoanDefaultArgs,
   showDisclosureContent: true,
 };
