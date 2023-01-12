@@ -13,9 +13,18 @@ export const SearchResultTitle = ({
   zeroResult,
   isLoading = false,
 }: SearchResultTitleProps) => {
-  const classes = clsx(["text-header-h2", "mb-16", "search-result-title", "animate__animated", "animate__slide-in-down"], {
-    "text-loading": isLoading,
-  });
+  const classes = clsx(
+    [
+      "text-header-h2",
+      "mb-16",
+      "search-result-title",
+      "animate__animated",
+      "animate__slide-in-down",
+    ],
+    {
+      "text-loading": isLoading,
+    }
+  );
   const total = totalResults.toLocaleString("da-Dk");
 
   if (zeroResult) {
