@@ -9,8 +9,8 @@ import data from "./SearchResultPageData";
 
 export type SearchResultPageProps = {
   title: string;
-  currentResults: string;
-  totalResults: string;
+  currentResults: number;
+  totalResults: number;
   linkName: string;
   linkTotalResults: string;
   zeroResult: boolean;
@@ -38,7 +38,7 @@ export const SearchResultPage = ({
     <div className="search-result-page">
       <SearchResultTitle
         title={title}
-        totalResults={zeroResult ? "0" : totalResults}
+        totalResults={zeroResult ? 0 : totalResults}
         zeroResult={zeroResult}
       />
       {zeroResult ? (

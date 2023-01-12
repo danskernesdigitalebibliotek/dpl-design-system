@@ -1,4 +1,5 @@
 import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
+import { AvailabilityLabelPropsType } from "../../availability-label/types";
 import { Cover } from "../cover/Cover";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
@@ -13,6 +14,7 @@ export type SearchResultItemProps = {
   year: string;
   horizontalTermLineData?: HorizontalTermLineProps;
   animateClasses: string;
+  availabilityLabels: number;
 };
 
 export const SearchResultItem = ({
@@ -22,7 +24,15 @@ export const SearchResultItem = ({
   year,
   horizontalTermLineData,
   animateClasses,
+  availabilityLabels,
 }: SearchResultItemProps) => {
+  const materialTypes: AvailabilityLabelPropsType["manifestationType"][] = [
+    "Bog",
+    "Ebog",
+    "Lydbog (net)",
+    "Lydbog (cd-mp3)",
+  ];
+
   return (
     <a
       href="/"
@@ -44,31 +54,28 @@ export const SearchResultItem = ({
           )}
         </div>
 
-        <h2 className="search-result-item__title text-header-h4">{title}</h2>
+        <h2 className="search-result-item__title text-header-h4">
+          <a href="">{title}</a>
+        </h2>
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
       </div>
       <div className="search-result-item__availability">
-        <AvailabilityLabel
-          manifestationType="Bog"
-          availability="Hjemme"
-          status="available"
-        />
-        <AvailabilityLabel
-          manifestationType="Ebog"
-          availability="Online"
-          status="available"
-        />
-
-        <AvailabilityLabel
-          manifestationType="Lydbog (cd-mp3)"
-          availability="Udlånt"
-          status="unavailable"
-        />
-        <AvailabilityLabel
-          manifestationType="Lydbog (net)"
-          availability="Online"
-          status="available"
-        />
+        {/* We render the amount of availability labels defined by the story. */}
+        {Array(availabilityLabels)
+          .fill(0)
+          .map((_value, index) => {
+            return (
+              // To emulate a more realistic view, we render a mix of available & unavailable
+              // labels and cycle through different material types.
+              <AvailabilityLabel
+                manifestationType={
+                  index < 4 ? materialTypes[index] : materialTypes[index % 4]
+                }
+                availability="Hjemme"
+                status={index % 2 === 0 ? "available" : "unavailable"}
+              />
+            );
+          })}
       </div>
 
       <ArrowSmallRight />

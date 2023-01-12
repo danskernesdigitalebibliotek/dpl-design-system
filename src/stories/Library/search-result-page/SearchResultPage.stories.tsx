@@ -18,8 +18,8 @@ export default {
       defaultValue: "harry potter",
     },
     totalResults: {
-      control: { type: "text" },
-      defaultValue: "3.576",
+      control: { type: "number" },
+      defaultValue: 3576,
     },
     linkName: {
       control: { type: "text" },
@@ -30,8 +30,8 @@ export default {
       defaultValue: "8",
     },
     currentResults: {
-      control: { type: "text" },
-      defaultValue: "10",
+      control: { type: "number" },
+      defaultValue: 10,
     },
 
     zeroResult: {
