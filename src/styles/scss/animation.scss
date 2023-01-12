@@ -3,11 +3,11 @@
   --animate-delay: 1s;
   --animate-delay-x: 0.4s;
   --animate-repeat: 1;
-  --animate-timing-ease-out: cubic-bezier(0.26,0.34,0.49,0.98);
+  --animate-timing-ease-out: cubic-bezier(0.26, 0.34, 0.49, 0.98);
 }
 
 .animate__animated {
-  animation-duration: 1s;
+  animation-duration: 0.7s;
   animation-duration: var(--animate-duration);
   animation-fill-mode: both;
 }
@@ -63,6 +63,26 @@
 .animate__slide-in-down {
   animation-name: slide-in-down;
   animation-timing-function: var(--animate-timing-ease-out);
+}
+
+@keyframes slide-up-title {
+  from {
+    transform: translate3d(0, 70%, 0);
+    visibility: visible;
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.animate__slide-up-title {
+  background-color: #0f0;
+  animation-name: slide-up-title;
+  animation-timing-function: ease;
+  transform-origin: bottom;
+  clip-path: rectangle(0, 0, 100, 100);
 }
 
 @keyframes slide-in-right {

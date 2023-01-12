@@ -17,33 +17,29 @@ export const Counter = (props: CounterProps) => {
     return "#484848";
   }
 
-  const getBorderProgress = () => {
-    return "0";
-    setTimeout(() => {
-      return percentage;
-    }, 1000);
-  };
-
-  console.log(getBorderProgress());
-
-  const borderProgress = `radial-gradient(
-    closest-side,
-    var(--parent-bg-color) calc(100% - 3px),
-    transparent calc(100% - 2px),
-    transparent 0 100%
-  ),
-  conic-gradient(${getColor()} ${percentage}%, #DBDBDB 0)`;
+  const borderProgress = `--counter-percentage: ${percentage}`;
 
   return (
     <div
       role="progressbar"
-      style={{
-        background: borderProgress,
-        transition: `background 0.4s ease-out`,
-      }}
       className="counter"
       aria-label="counter showing time remaining "
     >
+      <svg
+        className="counter__circle"
+        viewBox="0 0 100 100"
+        style={{ borderProgress }}
+      >
+        <path
+          className="counter__circle--path-bg"
+          d="M 50 96 a 46 46 0 0 1 0 -92 46 46 0 0 1 0 92"
+        />
+        <path
+          className="counter__circle--path-stroke"
+          style={{ stroke: getColor() }}
+          d="M 50 96 a 46 46 0 0 1 0 -92 46 46 0 0 1 0 92"
+        />
+      </svg>
       {isReady ? (
         <img
           className="counter__icon"
