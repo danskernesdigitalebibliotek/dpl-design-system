@@ -16,8 +16,14 @@ export type SearchResultPageProps = {
   zeroResult: boolean;
 };
 
-const SearchResultList = data.searchResult.map((item) => {
-  return <SearchResultItem {...item} />;
+const SearchResultList = data.searchResult.map((item, index) => {
+  const searchResultItem = (
+    <SearchResultItem
+      {...item}
+      animateClasses={`animate__animated animate__slide-in-down animate__delay-${index}x`}
+    />
+  );
+  return searchResultItem;
 });
 
 export const SearchResultPage = ({

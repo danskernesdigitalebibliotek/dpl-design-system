@@ -25,7 +25,10 @@ export const ModalProfile: React.FC<ModalProfileProps> = ({
   profileNavLinks,
 }) => (
   <div className="modal-backdrop">
-    <Modal shownModal={showModal} classNames="modal-profile modal-right">
+    <Modal
+      shownModal={showModal}
+      classNames="modal-profile modal-right animate__animated animate__slide-in-right"
+    >
       <ModalHeader
         headerName={headerName}
         headerLinkHref={headerLinkHref}

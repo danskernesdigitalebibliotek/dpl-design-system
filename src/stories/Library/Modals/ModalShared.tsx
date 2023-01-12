@@ -36,7 +36,7 @@ export function ModalCloseButton({
     <ButtonUI
       describe={idAriaDescribedBy}
       onClick={toggleModal || (() => {})}
-      classes="modal-btn-close"
+      classes="modal-btn-close animate__animated animate__slide-in-down animate__delay-1s"
       ariaLabel="close modal"
       content={{
         kind: "ICON",

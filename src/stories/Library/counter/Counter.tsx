@@ -9,6 +9,7 @@ export type CounterProps = {
 export const Counter = (props: CounterProps) => {
   const { value, label, percentage, status, isReady } = props;
 
+
   function getColor() {
     if (status === "danger") return "#d5364a";
     if (status === "warning") return "#f7bf42";
@@ -16,6 +17,15 @@ export const Counter = (props: CounterProps) => {
     if (status === "neutral") return "#484848";
     return "#484848";
   }
+
+  const getBorderProgress = () => {
+    return "0";
+    setTimeout(() => {
+      return percentage;
+    }, 1000);
+  };
+
+  console.log(getBorderProgress());
 
   const borderProgress = `radial-gradient(
     closest-side,
@@ -28,7 +38,10 @@ export const Counter = (props: CounterProps) => {
   return (
     <div
       role="progressbar"
-      style={{ background: borderProgress }}
+      style={{
+        background: borderProgress,
+        transition: `background 0.4s ease-out`,
+      }}
       className="counter"
       aria-label="counter showing time remaining "
     >

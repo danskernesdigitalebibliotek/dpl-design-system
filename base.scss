@@ -96,5 +96,6 @@
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";
+@import "./src/styles/scss/animation";
 // Should be last to make it easier to overwrite.
 @import "./src/stories/Library/colors/color-classes";

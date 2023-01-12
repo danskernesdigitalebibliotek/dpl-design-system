@@ -1,6 +1,6 @@
 const typographyClasses = [
   {
-    className: "text-header-h1",
+    className: "text-header-h1 animate__animated animate__slide-in-down",
     title: "Title/Header 1",
   },
   {

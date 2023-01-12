@@ -27,7 +27,7 @@ export const ListReservationsAndLoans = (
   const { cover, isStacked, counter, statusLabel, statusNotes, fee } = props;
 
   return (
-    <div className="list-reservation-container">
+    <div className="list-reservation-container animate__animated animate__slide-in-down">
       <div
         className={`list-reservation ${
           isStacked && "list-reservation--stacked"

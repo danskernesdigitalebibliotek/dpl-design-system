@@ -12,6 +12,7 @@ export type SearchResultItemProps = {
   author: string;
   year: string;
   horizontalTermLineData?: HorizontalTermLineProps;
+  animateClasses: string;
 };
 
 export const SearchResultItem = ({
@@ -20,9 +21,13 @@ export const SearchResultItem = ({
   author,
   year,
   horizontalTermLineData,
+  animateClasses,
 }: SearchResultItemProps) => {
   return (
-    <a href="/" className="search-result-item arrow arrow__hover--right-small">
+    <a
+      href="/"
+      className={`search-result-item arrow arrow__hover--right-small, ${animateClasses}`}
+    >
       <div className="search-result-item__cover">
         <Cover
           url="images/book_cover_3.jpg"

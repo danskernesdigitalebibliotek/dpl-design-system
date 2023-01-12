@@ -147,6 +147,7 @@ $list-reservation-space-desktop: 24px;
   background-color: $c-text-primary-white;
   perspective: 500px;
   box-shadow: 0 4px 20px rgb(72 72 72 / 10%);
+  visibility: hidden;
 }
 
 .list-reservation--stacked {
@@ -156,6 +157,9 @@ $list-reservation-space-desktop: 24px;
     content: " ";
     transform: translateY(8px) scale(0.95);
     z-index: -1;
+    animation: slide-in-down;
+    animation-duration: 0.4s;
+    animation-delay: 0.7s;
   }
 
   &::before {
@@ -164,5 +168,8 @@ $list-reservation-space-desktop: 24px;
     content: " ";
     transform: translateY(16px) scale(0.9);
     z-index: -2;
+    animation: slide-in-down;
+    animation-duration: 0.3s;
+    animation-delay: 0.9s;
   }
 }
