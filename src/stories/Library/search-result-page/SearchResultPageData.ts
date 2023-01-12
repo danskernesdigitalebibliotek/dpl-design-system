@@ -9,6 +9,7 @@ const searchResult = [
     year: "2018",
     seriesNumber: "3",
     series: "Små mennesker, store drømme",
+    availabilityLabels: 1,
   },
   {
     coverUrl: "images/book_cover_2.jpg",
@@ -16,6 +17,7 @@ const searchResult = [
     title: "De uadskillelige",
     author: "Simone de Beauvoir",
     year: "2020",
+    availabilityLabels: 3,
   },
   {
     coverUrl: "images/book_cover_3.jpg",
@@ -23,6 +25,7 @@ const searchResult = [
     title: "Døgnkioskmennesket",
     author: "Sayaka Murata",
     year: "2019",
+    availabilityLabels: 4,
   },
   {
     coverUrl: "images/book_cover_4.jpg",
@@ -30,6 +33,7 @@ const searchResult = [
     title: "Testamente",
     author: "Nina Wähä (f. 1979)",
     year: "2019",
+    availabilityLabels: 3,
   },
   {
     coverUrl: "images/book_cover_5.jpg",
@@ -37,6 +41,7 @@ const searchResult = [
     title: "Sønnen (Norsk)",
     author: "Jo Nesbø",
     year: "2014",
+    availabilityLabels: 2,
   },
   {
     coverUrl: "images/book_cover_6.jpg",
@@ -44,6 +49,7 @@ const searchResult = [
     title: "Den bæredygtige stat",
     author: "Rasmus Willig, Anders Blok",
     year: "2020",
+    availabilityLabels: 2,
   },
   {
     coverUrl: "images/book_cover_7.jpg",
@@ -51,6 +57,7 @@ const searchResult = [
     title: "Den lille bog om dansk design - for børn og barnlige sjæle",
     author: "Marie Hugsted",
     year: "2018",
+    availabilityLabels: 2,
   },
   {
     coverUrl: "images/book_cover_8.jpg",
@@ -58,6 +65,7 @@ const searchResult = [
     title: "Den lille prins (Ved Henrik Ægidius)",
     author: "Antoine de Saint-Exupéry",
     year: "2016",
+    availabilityLabels: 2,
   },
   {
     coverUrl: "images/book_cover_9.jpg",
@@ -65,6 +73,7 @@ const searchResult = [
     title: "Yayoi Kusama",
     author: "",
     year: "2014",
+    availabilityLabels: 2,
   },
   {
     coverUrl: "images/book_cover_10.jpg",
@@ -72,6 +81,7 @@ const searchResult = [
     title: "Kvinde kend din historie - spejl dig i fortiden",
     author: "Gry Jexen",
     year: "2021",
+    availabilityLabels: 2,
   },
 ];
 
@@ -103,4 +113,8 @@ const selectedTerms = [
   { title: "Spil", facet: "workTypes", type: "term", score: 21 },
 ] as FacetLineItem<"term">[];
 
-export default { searchResult, facetLineItems, selectedTerms };
+export default {
+  searchResult,
+  facetLineItems,
+  selectedTerms,
+};

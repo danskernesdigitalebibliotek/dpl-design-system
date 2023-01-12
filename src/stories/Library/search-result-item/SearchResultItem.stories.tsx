@@ -30,7 +30,6 @@ export default {
       control: { type: "text" },
       defaultValue: "2018",
     },
-
     horizontalTermLineData: {
       control: { type: "object" },
       defaultValue: {
@@ -44,6 +43,11 @@ export default {
         ],
       },
     },
+    availabilityLabels: {
+      // The control is disabled because we use stories to explore different availability label counts.
+      control: { type: "null" },
+      defaultValue: 3,
+    },
   },
 } as ComponentMeta<typeof SearchResultItem>;
 
@@ -53,3 +57,11 @@ const Template: ComponentStory<typeof SearchResultItem> = (args) => {
 
 export const Item = Template.bind({});
 Item.args = {};
+
+export const ContentOverload = Template.bind({});
+ContentOverload.args = {
+  title:
+    "En roman om Jon og hans breve til sin gravide kone, da han opholdt sig i en grotte hen over vinteren og forberedte hendes ankomst og de nye tider (dansk)",
+  author: "Sánchez Vegara, Amaia Arrazola, Sánchez Vegara, et al.",
+  availabilityLabels: 25,
+};
