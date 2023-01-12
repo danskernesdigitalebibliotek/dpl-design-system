@@ -53,10 +53,13 @@ export const SearchResultItem = ({
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
       </div>
       <div className="search-result-item__availability">
+        {/* We render the amount of availability labels defined by the story. */}
         {Array(availabilityLabels)
           .fill(0)
           .map((_value, index) => {
             return (
+              // To emulate a more realistic view, we render a mix of available & unavailable
+              // labels and cycle through different material types.
               <AvailabilityLabel
                 manifestationType={
                   index < 4 ? materialTypes[index] : materialTypes[index % 4]
