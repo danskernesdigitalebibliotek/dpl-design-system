@@ -9,7 +9,6 @@ export type CounterProps = {
 export const Counter = (props: CounterProps) => {
   const { value, label, percentage, status, isReady } = props;
 
-
   function getColor() {
     if (status === "danger") return "#d5364a";
     if (status === "warning") return "#f7bf42";
