@@ -4,10 +4,11 @@ export type CounterProps = {
   label: string;
   status: "danger" | "warning" | "info" | "neutral";
   isReady: boolean;
+  animate: boolean;
 };
 
 export const Counter = (props: CounterProps) => {
-  const { value, label, percentage, status, isReady } = props;
+  const { value, label, percentage, status, isReady, animate } = props;
 
   function getColor() {
     if (status === "danger") return "#d5364a";
@@ -17,8 +18,6 @@ export const Counter = (props: CounterProps) => {
     return "#484848";
   }
 
-  const borderProgress = `--counter-percentage: ${percentage}`;
-
   return (
     <div
       role="progressbar"
@@ -26,9 +25,13 @@ export const Counter = (props: CounterProps) => {
       aria-label="counter showing time remaining "
     >
       <svg
-        className="counter__circle"
+        className={
+          animate
+            ? "counter__circle counter__circle--animate "
+            : "counter__circle "
+        }
         viewBox="0 0 100 100"
-        style={{ borderProgress }}
+        style={{ "--border-progress": `${percentage}%` }}
       >
         <path
           className="counter__circle--path-bg"

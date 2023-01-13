@@ -39,32 +39,48 @@
 }
 
 .counter__circle {
+  --border-progress: 100%;
+  --stroke-width: 3;
+  --stroke-dasharray: 288.5;
+  --stroke-dashoffset: calc(
+    calc((var(--stroke-dasharray) / 100) * calc(100% - var(--border-progress)))
+  );
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  stroke-width: 5;
-  stroke-dasharray: 288.5;
+  stroke-width: var(--stroke-width);
   stroke-linecap: round;
   fill: none;
 }
 
 .counter__circle .counter__circle--path-bg {
+  stroke-dasharray: var(--stroke-dasharray);
   stroke: $c-global-tertiary-1;
 }
 
 .counter__circle .counter__circle--path-stroke {
-  transform-origin: 50px 50px;
+  transform-origin: 50% 50%;
+  stroke-dasharray: var(--stroke-dasharray);
+  stroke-dashoffset: var(--stroke-dashoffset);
+  transform: rotate(540deg);
+}
+
+.counter__circle.counter__circle--animate .counter__circle--path-stroke {
   animation: pathStroke 1.75s ease, pathRotate 1.75s ease;
 }
 
 @keyframes pathStroke {
   0% {
-    stroke-dashoffset: 288.5;
+    stroke-dashoffset: var(--stroke-dasharray);
   }
-  100% {
+  60% {
     stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: var(--stroke-dashoffset);
   }
 }
 
@@ -72,7 +88,10 @@
   0% {
     transform: rotate(180deg);
   }
-  100% {
+  60% {
     transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(540deg);
   }
 }

@@ -17,9 +17,10 @@ const Template: ComponentStory<typeof Counter> = (args) => (
 export const Danger = Template.bind({});
 Danger.args = {
   value: 0,
-  percentage: 94,
+  percentage: 100,
   label: "dage",
   status: "danger",
+  animate: true,
 };
 
 export const Warning = Template.bind({});
@@ -28,6 +29,7 @@ Warning.args = {
   percentage: 40,
   label: "dage",
   status: "warning",
+  animate: true,
 };
 
 export const Info = Template.bind({});
@@ -36,6 +38,7 @@ Info.args = {
   percentage: 20,
   label: "dage",
   status: "info",
+  animate: false,
 };
 
 export const Ready = Template.bind({});
@@ -44,4 +47,5 @@ Ready.args = {
   label: "klar",
   status: "info",
   isReady: true,
+  animate: false,
 };
