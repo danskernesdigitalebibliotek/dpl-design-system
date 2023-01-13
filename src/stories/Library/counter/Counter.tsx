@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export type CounterProps = {
   value: number;
   percentage: number;
@@ -18,6 +20,10 @@ export const Counter = (props: CounterProps) => {
     return "#484848";
   }
 
+  const svgStyle: CSSProperties = {
+    ["--border-progress" as string]: `${percentage}%`,
+  };
+
   return (
     <div
       role="progressbar"
@@ -31,7 +37,7 @@ export const Counter = (props: CounterProps) => {
             : "counter__circle "
         }
         viewBox="0 0 100 100"
-        style={{ "--border-progress": `${percentage}%` }}
+        style={svgStyle}
       >
         <path
           className="counter__circle--path-bg"
