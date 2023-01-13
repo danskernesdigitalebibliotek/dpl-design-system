@@ -39,6 +39,7 @@ Item1.args = {
     percentage: 100,
     status: "danger",
     value: 0,
+    animate: false,
   },
   statusLabel: {
     label: "overskredet",
@@ -67,6 +68,7 @@ Item2.args = {
     percentage: 100,
     status: "danger",
     value: 0,
+    animate: false,
   },
   statusLabel: {
     label: "overskredet",
@@ -95,6 +97,7 @@ Item3.args = {
     percentage: 75,
     status: "warning",
     value: 7,
+    animate: false,
   },
   statusLabel: {
     label: "udløber snart",
@@ -123,6 +126,7 @@ Item4.args = {
     percentage: 60,
     status: "warning",
     value: 9,
+    animate: false,
   },
   statusLabel: undefined,
   statusNotes: "Afleveres 02.10.2021",
@@ -148,6 +152,7 @@ Item5.args = {
     percentage: 50,
     status: "neutral",
     value: 24,
+    animate: false,
   },
   statusLabel: undefined,
   statusNotes: "Afleveres 02.10.2021",
@@ -173,6 +178,7 @@ Item6.args = {
     percentage: 25,
     status: "neutral",
     value: 29,
+    animate: false,
   },
   statusLabel: undefined,
   statusNotes: "Afleveres 02.10.2021",

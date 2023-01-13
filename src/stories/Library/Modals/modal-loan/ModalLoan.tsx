@@ -164,6 +164,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
                 value={-2}
                 status="danger"
                 isReady={false}
+                animate={false}
               />
             </div>
           )}

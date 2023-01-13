@@ -72,6 +72,7 @@ export const ListReservationsAndLoans = (
                 value={counter.value}
                 status={counter.status}
                 isReady={counter.isReady}
+                animate={counter.animate}
               />
             )}
           </div>
