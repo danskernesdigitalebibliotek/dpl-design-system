@@ -25,6 +25,10 @@
     padding: 8px;
   }
 
+  &__notification-item .list-dashboard__arrow {
+    display: none;
+  }
+
   &__notification-item .number {
     min-width: 40px;
     width: 40px;
