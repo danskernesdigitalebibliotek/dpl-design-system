@@ -3,4 +3,10 @@
   border: transparent;
   padding: 0;
   margin: 0;
+
+  &:hover {
+    svg {
+      fill: black;
+    }
+  }
 }

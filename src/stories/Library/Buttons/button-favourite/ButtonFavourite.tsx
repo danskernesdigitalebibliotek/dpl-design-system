@@ -9,7 +9,11 @@ export const ButtonFavourite = ({ fill }: ButtonFavouriteProps) => {
     <button
       type="button"
       aria-label="Tilføj til favoritter"
-      className="button-favourite"
+      className={
+        fill
+          ? `button-favourite animate__animated animate__heartbeat`
+          : `button-favourite`
+      }
     >
       <IconFavourite fill={fill} />
     </button>
