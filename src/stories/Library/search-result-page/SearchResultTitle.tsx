@@ -19,7 +19,7 @@ export const SearchResultTitle = ({
       "mb-16",
       "search-result-title",
       "animate__animated",
-      "animate__slide-up-title",
+      "animate__page-title",
     ],
     {
       "text-loading": isLoading,

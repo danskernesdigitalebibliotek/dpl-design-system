@@ -65,24 +65,24 @@
   animation-timing-function: var(--animate-timing-ease-out);
 }
 
-@keyframes slide-up-title {
+@keyframes page-title {
   from {
-    transform: translate3d(0, 70%, 0);
+    transform: translateY(70%);
     visibility: visible;
     opacity: 0;
+    clip-path: inset(0 0 100% 0);
   }
 
   to {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
     opacity: 1;
+    clip-path: inset(0);
   }
 }
-.animate__slide-up-title {
-  background-color: #0f0;
-  animation-name: slide-up-title;
-  animation-timing-function: ease;
+.animate__page-title {
+  animation-name: page-title;
+  animation-timing-function: var(--animate-timing-ease-out);
   transform-origin: bottom;
-  clip-path: rectangle(0, 0, 100, 100);
 }
 
 @keyframes slide-in-right {
