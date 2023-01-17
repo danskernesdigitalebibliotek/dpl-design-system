@@ -49,7 +49,7 @@ Item.args = {
         url: "images/book_cover_3.jpg",
         animate: true,
         size: "medium",
-        tint: "60",
+        tint: "100",
       },
     },
     {
@@ -104,7 +104,7 @@ Item.args = {
         url: "images/book_cover_2.jpg",
         animate: true,
         size: "medium",
-        tint: "60",
+        tint: "100",
       },
     },
   ],

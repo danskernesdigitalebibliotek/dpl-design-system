@@ -52,7 +52,7 @@ CoverVisible.args = {};
 export const CoverNotVisible = Template.bind({});
 CoverNotVisible.args = {
   url: "",
-  tint: "60",
+  tint: "100",
   coverUrl: "",
 };
 
