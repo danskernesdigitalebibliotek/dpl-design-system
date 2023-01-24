@@ -10,8 +10,9 @@
 
   @include breakpoint-s {
     gap: 0;
-    padding: 24px;
-    grid-template-columns: min-content minmax(min-content, 407px) 1fr max-content;
+    column-gap: $s-lg;
+    padding: $s-lg;
+    grid-template-columns: $cover-width minmax(min-content, 407px) 1fr max-content;
   }
 
   &:hover {
@@ -26,7 +27,6 @@
 
   @include breakpoint-s {
     grid-row: auto;
-    margin-right: 24px;
   }
 }
 
