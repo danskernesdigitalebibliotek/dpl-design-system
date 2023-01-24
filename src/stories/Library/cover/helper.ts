@@ -11,5 +11,14 @@ export const tintClasses: TintClassesType = {
   "20": "bg-identity-tint-20",
 };
 
+type CoverTintsType = ("20" | "40" | "80" | "100" | "120")[];
+
+export const getCoverTint = (
+  index: number
+): "20" | "40" | "80" | "100" | "120" => {
+  const coverTints: CoverTintsType = ["20", "40", "80", "100", "120"];
+  const tintKey = index % coverTints.length;
+  return coverTints[tintKey];
+};
 
 export default {};

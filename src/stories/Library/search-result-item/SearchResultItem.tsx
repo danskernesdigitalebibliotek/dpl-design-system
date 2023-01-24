@@ -41,7 +41,7 @@ export const SearchResultItem = ({
           src="images/book_cover_3.jpg"
           size="small"
           animate={false}
-          tint="120"
+          tint={getCoverTint(tintIndex)}
         />
       </div>
       <div className="search-result-item__text">
