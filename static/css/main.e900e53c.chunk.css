@@ -3056,6 +3056,10 @@ dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
           transform: translateY(16px) scale(0.9);
   z-index: -2;
 }
+.list-reservation--stacked:hover {
+  -webkit-filter: none;
+          filter: none;
+}
 
 .list-dashboard {
   display: flex;
@@ -5685,4 +5689,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.e6201f36.chunk.css.map*/
+/*# sourceMappingURL=main.e900e53c.chunk.css.map*/
