@@ -15,9 +15,11 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
   overflow: scroll;
   margin: 0 24px;
   max-width: $MODAL_DETAILS_CONTAINER_WIDTH;
+  padding-bottom: $s-2xl;
 
   @include breakpoint-s {
     margin: 0 45px;
+    padding-bottom: 0;
   }
 }
 
