@@ -30,12 +30,12 @@
   // 3px corresponding to the height of the "after"-line, so the two are inline
   margin-bottom: 3px;
   text-decoration: none;
-  color: $c-text-primary-black;
   display: inline-block;
+  color: $c-text-primary-white;
   width: fit-content;
 
   @extend %text-body-medium-regular-placeholder;
 }
 .button-link--bright {
-  color: $c-text-primary-white;
+  color: $c-text-primary-black;
 }
