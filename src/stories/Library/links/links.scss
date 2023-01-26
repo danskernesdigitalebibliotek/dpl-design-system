@@ -1,41 +1,38 @@
-.link-tag {
-  text-decoration: none;
-  color: $c-text-primary-black;
-  display: inline-block;
-  width: fit-content;
+/* BEM plugin does not support interpolation */
+/* stylelint-disable plugin/stylelint-bem-namics */
+@mixin link($className) {
+  .#{$className} {
+    text-decoration: none;
+    color: $c-text-primary-black;
+    display: inline-block;
+    width: fit-content;
 
-  @extend %text-body-medium-regular-placeholder;
+    @extend %text-body-medium-regular-placeholder;
+  }
+  // Hide arrow
+  .#{$className}::after {
+    display: block;
+    content: "";
+    border-bottom: solid 1px;
+    transform: scaleX(1);
+    transition: transform 300ms ease-in-out;
+    transform-origin: 100% 50%;
+    padding-bottom: 2px;
+  }
+  // Show arrow on hover
+  .#{$className}:hover::after {
+    transform: scaleX(0);
+    transform-origin: 100% 0%;
+  }
 }
 
-.link-tag::after {
-  display: block;
-  content: "";
-  border-bottom: solid 1px;
-  transform: scaleX(1);
-  transition: transform 300ms ease-in-out;
-  transform-origin: 100% 50%;
-  padding-bottom: 2px;
-}
-
-.link-tag:hover::after {
-  transform: scaleX(0);
-  transform-origin: 100% 0%;
-}
-
-.button-link--selected {
-  @extend .link-tag;
-}
+@include link("link-tag");
+@include link("button-link");
 
 .button-link {
-  // 3px corresponding to the height of the "after"-line, so the two are inline
-  margin-bottom: 3px;
-  text-decoration: none;
-  display: inline-block;
   color: $c-text-primary-white;
-  width: fit-content;
-
-  @extend %text-body-medium-regular-placeholder;
 }
+
 .button-link--bright {
   color: $c-text-primary-black;
 }
