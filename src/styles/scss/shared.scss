@@ -95,3 +95,21 @@
 .cursor-pointer {
   cursor: pointer;
 }
+
+// When class is used on a block element it will show a loading ellipsis animation.
+.text-loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis 1.7s infinite;
+  -webkit-animation: ellipsis 1.7s infinite;
+  -moz-animation: ellipsis 1.7s infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}

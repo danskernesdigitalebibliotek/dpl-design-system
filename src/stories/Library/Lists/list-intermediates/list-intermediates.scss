@@ -1,0 +1,22 @@
+.intermediate-list-page {
+  background: $c-global-primary;
+  padding: $s-md;
+
+  @include breakpoint-m {
+    padding: $s-6xl;
+  }
+}
+
+.intermediate-list-bottom {
+  display: flex;
+  flex-direction: row;
+}
+.intermediate-list-bottom__paymenttypes {
+  flex: 1;
+}
+.intermediate-list-bottom__actions > p {
+  text-align: right;
+}
+.intermediate-list-bottom__actions > button {
+  margin-left: auto;
+}

@@ -41,6 +41,10 @@ export default {
       name: "Show PromoBar",
       defaultValue: false,
     },
+    showInstantLoan: {
+      name: "Show instant loan",
+      defaultValue: false,
+    },
   },
 } as ComponentMeta<typeof Reservation>;
 
@@ -65,4 +69,14 @@ WithPromoBar.args = {
   submitInfo: "Vi har 8 eksemplarer og 21 står i kø",
   submitButton: "GODKEND RESERVERING",
   showPromoBar: true,
+};
+
+export const WithInstantLoan = Template.bind({});
+WithInstantLoan.args = {
+  label: "bog",
+  title: "Stephen Hawking",
+  author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
+  submitInfo: "Vi har 8 eksemplarer og 21 står i kø",
+  submitButton: "GODKEND RESERVERING",
+  showInstantLoan: true,
 };

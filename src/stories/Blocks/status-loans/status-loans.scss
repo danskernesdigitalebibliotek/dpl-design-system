@@ -3,13 +3,6 @@
   flex-direction: column;
 
   @include breakpoint-s {
-    flex-direction: row;
     width: 50%;
   }
-}
-
-.dpl-status-loans__container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
 }

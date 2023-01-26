@@ -20,6 +20,10 @@ $list-reservation-space-desktop: 24px;
     height: 184px;
     padding: $list-reservation-space-desktop;
   }
+
+  &:hover {
+    filter: drop-shadow(0 4px 20px rgb(72 72 72 / 10%));
+  }
 }
 
 .list-reservation__material {
@@ -86,6 +90,7 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__about {
   padding-left: 0;
+  text-align: left;
 
   p {
     margin-top: 2px;
@@ -97,7 +102,19 @@ $list-reservation-space-desktop: 24px;
     margin-top: 0;
     p {
       font-size: 12px;
+      margin-bottom: 0;
     }
+  }
+}
+
+.list-reservation__header {
+  @extend %text-header-h4;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }
 
@@ -112,8 +129,11 @@ $list-reservation-space-desktop: 24px;
   }
 }
 
+@include arrow("list-reservation__status");
+
 .list-reservation__counter {
   display: none;
+  margin: $s-xs;
 
   @include breakpoint-s {
     width: 92px;

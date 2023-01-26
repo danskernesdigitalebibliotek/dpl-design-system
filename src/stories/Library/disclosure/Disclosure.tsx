@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { clsx } from "clsx";
-import { AvailabilityLabel } from "../availability-label/AvailabilityLabel";
+import AvailabilityLabel from "../availability-label/AvailabilityLabel";
 
 export type DisclosureProps = {
   headline: string;
