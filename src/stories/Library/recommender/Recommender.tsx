@@ -21,10 +21,18 @@ const Recommender: React.FC<RecommenderProps> = ({
     <div className={`recommender ${bright ? "recommender--bright" : ""}`}>
       <h2 className="recommender__title text-header-h1">{title}</h2>
       <div className="recommender__buttons">
-        <button type="button" className="button-link button-link--selected">
+        <button
+          type="button"
+          className={`button-link button-link--selected ${
+            bright ? "button-link--bright" : ""
+          }`}
+        >
           Something similar
         </button>
-        <button type="button" className="button-link ">
+        <button
+          type="button"
+          className={`button-link ${bright ? "button-link--bright" : ""}`}
+        >
           By the same author
         </button>
       </div>

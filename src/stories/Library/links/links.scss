@@ -36,3 +36,6 @@
 
   @extend %text-body-medium-regular-placeholder;
 }
+.button-link--bright {
+  color: $c-text-primary-white;
+}
