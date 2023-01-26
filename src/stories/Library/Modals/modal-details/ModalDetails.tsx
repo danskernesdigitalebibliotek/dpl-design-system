@@ -61,7 +61,7 @@ const materialCards: MaterialCardProps[] = [
       url: "images/book_cover_3.jpg",
       animate: true,
       size: "medium",
-      tint: "60",
+      tint: "100",
     },
   },
   {

@@ -73,10 +73,10 @@ const colorClasses: ColorClasses = [
         className: "bg-identity-tint-120",
       },
       {
-        className: "bg-identity-tint-80",
+        className: "bg-identity-tint-100",
       },
       {
-        className: "bg-identity-tint-60",
+        className: "bg-identity-tint-80",
       },
       {
         className: "bg-identity-tint-40",

@@ -4,7 +4,7 @@ export type CoverProps = {
   url: string;
   animate: boolean;
   size: "xsmall" | "small" | "medium" | "large" | "xlarge";
-  tint?: "20" | "40" | "60" | "80" | "120";
+  tint?: "20" | "40" | "80" | "100" | "120";
   coverUrl?: string;
   coverDescription?: string;
 };
@@ -18,8 +18,8 @@ export const Cover = (props: CoverProps) => {
   const tintClasses: TintClassesType = {
     default: "bg-identity-tint-120",
     "120": "bg-identity-tint-120",
+    "100": "bg-identity-tint-100",
     "80": "bg-identity-tint-80",
-    "60": "bg-identity-tint-60",
     "40": "bg-identity-tint-40",
     "20": "bg-identity-tint-20",
   };
