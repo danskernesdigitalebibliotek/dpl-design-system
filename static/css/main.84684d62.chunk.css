@@ -3352,7 +3352,6 @@ dl.list-description dd .link-tag {
   padding: 0;
 }
 
-.modal-loan__buttons--bottom,
 .modal-padding {
   padding: 24px;
 }
@@ -3604,12 +3603,20 @@ dl.list-description dd .link-tag {
   align-items: center;
   margin-top: 40px;
 }
+
 .modal-loan__buttons--bottom {
   position: fixed;
   left: 0;
   bottom: 0;
   right: 0;
   background-color: #f6f5f0;
+  padding: 16px;
+  min-width: 100%;
+}
+@media (min-width: 1024px) {
+  .modal-loan__buttons--bottom {
+    padding: 8px 215px;
+  }
 }
 
 .modal-login {
@@ -5689,4 +5696,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.e900e53c.chunk.css.map*/
+/*# sourceMappingURL=main.84684d62.chunk.css.map*/
