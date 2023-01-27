@@ -1,4 +1,54 @@
-@import "https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora&family=Noto+Sans+JP:wght@400;500&display=swap";
+@font-face {
+  font-family: "Gochi Hand";
+  src: url("/src/styles/fonts/gochi/GochiHand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lora";
+  src: url("/src/styles/fonts/lora/Lora-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/src/styles/fonts/noto-sans/NotoSans-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/src/styles/fonts/noto-sans/NotoSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/src/styles/fonts/noto-sans/NotoSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/src/styles/fonts/noto-sans/NotoSans-MediumItalic.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/src/styles/fonts/noto-sans/NotoSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/src/styles/fonts/noto-sans/NotoSans-BoldItalic.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
 
 // styleName: Desktop/H1;
 .text-header-h1 {
