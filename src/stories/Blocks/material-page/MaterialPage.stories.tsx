@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import MaterialPage from "./MaterialPage";
+import MaterialPageSkeleton from "./MaterialPageSkeleton";
 
 export default {
   title: "Blocks / Material Page",
@@ -44,3 +45,7 @@ Item.args = {
   description:
     "Stormandssønnen Arn får hos cisterciensermunkene i Sverige og Danmark den bedste uddannelse, der findes i middelalderens Europa. Men hans lærere aner, at han ikke er bestemt til at være klosterbroder og vil gøre bedre fyldest som Kristi strids... ",
 };
+
+export const SkeletonVersion: ComponentStory<
+  typeof MaterialPageSkeleton
+> = () => <MaterialPageSkeleton />;

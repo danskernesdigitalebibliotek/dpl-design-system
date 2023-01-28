@@ -1,0 +1,31 @@
+// Since we are using the Skeleton Screen Css classes connected to the existing styling
+// we deliberately not follow the BEM naming convention here.
+/* stylelint-disable plugin/stylelint-bem-namics */
+
+.material-page {
+  &.ssc {
+    .material-header {
+      &__cover {
+        .cover-container {
+          .ssc-square {
+            width: 300px;
+            height: 408px;
+          }
+        }
+      }
+      &__content {
+        height: 605px;
+      }
+      .ssc-square {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+
+  .skeleton-disclosure {
+    height: 100px;
+  }
+}
+
+/* stylelint-enable plugin/stylelint-bem-namics */
