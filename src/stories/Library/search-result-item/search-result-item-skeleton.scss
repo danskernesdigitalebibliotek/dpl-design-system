@@ -14,5 +14,11 @@
   .ssc-head-line {
     @extend %mt-16;
   }
+  @include breakpoint-s {
+    .ssc-wrapper {
+      width: 50%;
+    }
+  }
 }
+
 /* stylelint-enable plugin/stylelint-bem-namics */
