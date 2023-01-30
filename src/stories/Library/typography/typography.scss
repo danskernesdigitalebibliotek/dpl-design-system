@@ -1,53 +1,65 @@
+/* noto-sans-jp-regular - latin */
 @font-face {
-  font-family: "Gochi Hand";
-  src: url("/src/styles/fonts/gochi/GochiHand-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-display: swap;
+  font-family: "Noto Sans JP";
   font-style: normal;
+  font-weight: 400;
+  src: url("/src/styles/fonts/noto-sans-jp-v42-latin-regular.woff2")
+      format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("/src/styles/fonts/noto-sans-jp-v42-latin-regular.woff")
+      format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+/* noto-sans-jp-500 - latin */
 @font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/src/styles/fonts/noto-sans-jp-v42-latin-500.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("/src/styles/fonts/noto-sans-jp-v42-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-jp-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/src/styles/fonts/noto-sans-jp-v42-latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("/src/styles/fonts/noto-sans-jp-v42-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lora-regular - latin */
+@font-face {
+  font-display: swap;
   font-family: "Lora";
-  src: url("/src/styles/fonts/lora/Lora-Regular.ttf") format("truetype");
+  font-style: normal;
   font-weight: 400;
-  font-style: normal;
+  src: url("/src/styles/fonts/lora-v26-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("/src/styles/fonts/lora-v26-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+/* lora-italic - latin */
 @font-face {
-  font-family: "Noto Sans JP";
-  src: url("/src/styles/fonts/noto-sans/NotoSans-Regular.ttf")
-    format("truetype");
+  font-display: swap;
+  font-family: "Lora";
+  font-style: italic;
   font-weight: 400;
-  font-style: normal;
+  src: url("/src/styles/fonts/lora-v26-latin-italic.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("/src/styles/fonts/lora-v26-latin-italic.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+/* gochi-hand-regular - latin */
 @font-face {
-  font-family: "Noto Sans JP";
-  src: url("/src/styles/fonts/noto-sans/NotoSans-Italic.ttf") format("truetype");
+  font-display: swap;
+  font-family: "Gochi Hand";
+  font-style: normal;
   font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Noto Sans JP";
-  src: url("/src/styles/fonts/noto-sans/NotoSans-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Noto Sans JP";
-  src: url("/src/styles/fonts/noto-sans/NotoSans-MediumItalic.ttf")
-    format("truetype");
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Noto Sans JP";
-  src: url("/src/styles/fonts/noto-sans/NotoSans-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Noto Sans JP";
-  src: url("/src/styles/fonts/noto-sans/NotoSans-BoldItalic.ttf")
-    format("truetype");
-  font-weight: 700;
-  font-style: italic;
+  src: url("../fonts/gochi-hand-v19-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../fonts/gochi-hand-v19-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 // styleName: Desktop/H1;
