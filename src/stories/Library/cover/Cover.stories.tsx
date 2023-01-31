@@ -41,7 +41,10 @@ export default {
     coverUrl: "https://www.google.com",
     description: "/",
   },
-  parameters: {},
+  parameters: {
+    // Notifies Chromatic to pause the animations when they finish for the specific story.
+    chromatic: { pauseAnimationAtEnd: true },
+  },
 } as ComponentMeta<typeof Cover>;
 
 const Template: ComponentStory<typeof Cover> = (args) => <Cover {...args} />;
