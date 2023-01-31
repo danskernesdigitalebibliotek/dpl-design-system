@@ -23,7 +23,7 @@ const CoverImage: FC<CoverProps> = ({
         <img
           onError={() => setImageError(true)}
           className={clsx("cover-img", `cover-size--${size}`, {
-            "cover-animate": animate,
+            "cover-img__animate": animate,
           })}
           src={src}
           alt={description || ""}

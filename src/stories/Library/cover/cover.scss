@@ -9,10 +9,6 @@ $MATERIAL_LARGE_DESKTOP: 216px;
 $MATERIAL_XLARGE_MOBILE: 408px;
 $MATERIAL_XLARGE_DESKTOP: 408px;
 
-.cover-img {
-  object-fit: contain;
-}
-
 .cover-size {
   &--xsmall {
     border-radius: 3px;
@@ -73,10 +69,13 @@ $MATERIAL_XLARGE_DESKTOP: 408px;
   }
 }
 
-.cover-animate {
-  animation: 0.3s ease-out 0s 1 CoverFadeIn;
-}
+.cover-img {
+  object-fit: contain;
 
+  &.cover-img__animate {
+    animation: 0.3s ease-out 0s 1 CoverFadeIn;
+  }
+}
 // In this case we do not want to use kebab case
 @keyframes CoverFadeIn {
   /* stylelint-disable-line */
