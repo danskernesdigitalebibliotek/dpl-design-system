@@ -38,7 +38,7 @@ Item.args = {
       description: "Af Marie Hugsted",
       isLiked: false,
       cover: {
-        src: "images/book_cover_2.jpg",
+        src: "images/book_cover_7.jpg",
         animate: true,
         size: "medium",
         tint: "40",
