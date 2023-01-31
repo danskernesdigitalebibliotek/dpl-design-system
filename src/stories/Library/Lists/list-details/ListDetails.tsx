@@ -35,7 +35,6 @@ export const ListDetails: React.FC<ListDetailsProps> = ({
         <div className="list-details__menu">
           {menu && (
             <Dropdown
-              arialabelledby={id}
               ariaLabel={menu.ariaLabel}
               list={menu.list}
               arrowIcon="chevron"
