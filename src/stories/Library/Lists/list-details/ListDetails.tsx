@@ -19,6 +19,7 @@ export const ListDetails: React.FC<ListDetailsProps> = ({
   menu,
   link,
 }) => {
+  const id = "list-details-header";
   return (
     <div className="list-details">
       <div className="list-details__icon">
@@ -26,7 +27,7 @@ export const ListDetails: React.FC<ListDetailsProps> = ({
       </div>
       <div className="list-details__container">
         <div className="list-details__content">
-          <h3 id="list-details-header" className="text-header-h5">
+          <h3 id={id} className="text-header-h5">
             {title}
           </h3>
           <p className="text-small-caption">{date}</p>
@@ -34,7 +35,7 @@ export const ListDetails: React.FC<ListDetailsProps> = ({
         <div className="list-details__menu">
           {menu && (
             <Dropdown
-              arialabelledby="list-details-header"
+              arialabelledby={id}
               ariaLabel={menu.ariaLabel}
               list={menu.list}
               arrowIcon="chevron"
