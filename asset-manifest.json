@@ -4,9 +4,9 @@
     "0.7b0d9df7.iframe.bundle.js.map": "./0.7b0d9df7.iframe.bundle.js.map",
     "1.7e5fbb8d.iframe.bundle.js": "./1.7e5fbb8d.iframe.bundle.js",
     "2.89943a03.iframe.bundle.js": "./2.89943a03.iframe.bundle.js",
-    "main.css": "./static/css/main.84684d62.chunk.css",
-    "main.js": "./main.623ede21.iframe.bundle.js",
-    "main.css.map": "./static/css/main.84684d62.chunk.css.map",
+    "main.css": "./static/css/main.88defffa.chunk.css",
+    "main.js": "./main.3d24c1dc.iframe.bundle.js",
+    "main.css.map": "./static/css/main.88defffa.chunk.css.map",
     "runtime~main.js": "./runtime~main.0887b852.iframe.bundle.js",
     "vendors~main.js": "./vendors~main.8f40a06c.iframe.bundle.js",
     "vendors~main.js.map": "./vendors~main.8f40a06c.iframe.bundle.js.map",
@@ -23,6 +23,7 @@
     "6.758f92a1.iframe.bundle.js.LICENSE.txt": "./6.758f92a1.iframe.bundle.js.LICENSE.txt",
     "9.1e553722.iframe.bundle.js.LICENSE.txt": "./9.1e553722.iframe.bundle.js.LICENSE.txt",
     "iframe.html": "./iframe.html",
+    "static/media/base.css": "./static/media/noto-sans-jp-v42-latin-regular.cb4ce910.woff2",
     "static/media/icon-arrow-ui-large-left.7d951248.svg": "./static/media/icon-arrow-ui-large-left.7d951248.svg",
     "static/media/icon-arrow-ui-large-right.b4906622.svg": "./static/media/icon-arrow-ui-large-right.b4906622.svg",
     "static/media/icon-arrow-ui-small-left.2b55e017.svg": "./static/media/icon-arrow-ui-small-left.2b55e017.svg",
@@ -34,7 +35,7 @@
   "entrypoints": [
     "runtime~main.0887b852.iframe.bundle.js",
     "vendors~main.8f40a06c.iframe.bundle.js",
-    "static/css/main.84684d62.chunk.css",
-    "main.623ede21.iframe.bundle.js"
+    "static/css/main.88defffa.chunk.css",
+    "main.3d24c1dc.iframe.bundle.js"
   ]
 }

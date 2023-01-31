@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lora&family=Noto+Sans+JP:wght@400;500&display=swap);
 @charset "UTF-8";
 /* Box sizing rules */
 *,
@@ -313,6 +312,54 @@ input[type=reset] {
 
 /** Breakpoints **/
 /** Breakpoint mixin's **/
+/* noto-sans-jp-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../static/media/noto-sans-jp-v42-latin-regular.cb4ce910.woff2) format("woff2"), url(../../static/media/noto-sans-jp-v42-latin-regular.87b068ee.woff) format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-jp-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../../static/media/noto-sans-jp-v42-latin-500.3415ea69.woff2) format("woff2"), url(../../static/media/noto-sans-jp-v42-latin-500.8340fb2a.woff) format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-jp-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../static/media/noto-sans-jp-v42-latin-700.90e98f9f.woff2) format("woff2"), url(../../static/media/noto-sans-jp-v42-latin-700.830c7056.woff) format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lora-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../static/media/lora-v26-latin-regular.4450aa90.woff2) format("woff2"), url(../../static/media/lora-v26-latin-regular.5142a844.woff) format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lora-italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lora";
+  font-style: italic;
+  font-weight: 400;
+  src: url(../../static/media/lora-v26-latin-italic.a14785c5.woff2) format("woff2"), url(../../static/media/lora-v26-latin-italic.3084abf5.woff) format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* gochi-hand-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Gochi Hand";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../static/media/gochi-hand-v19-latin-regular.f8a78ae5.woff2) format("woff2"), url(../../static/media/gochi-hand-v19-latin-regular.f8f16a0f.woff) format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 .text-header-h1 {
   font-family: Lora, serif;
   font-style: normal;
@@ -5696,4 +5743,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.84684d62.chunk.css.map*/
+/*# sourceMappingURL=main.88defffa.chunk.css.map*/
