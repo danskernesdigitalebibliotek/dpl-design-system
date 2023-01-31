@@ -11,6 +11,7 @@ export type DropdownProps = {
   ariaLabel: string;
   arrowIcon: "triangles" | "chevron";
   classNames?: string;
+  arialabelledby?: string;
   innerClassNames?: { select?: string; option?: string; arrowWrapper?: string };
 };
 
@@ -20,6 +21,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   list,
   classNames,
   innerClassNames,
+  arialabelledby,
 }) => {
   const Icon = () => {
     if (arrowIcon === "triangles") {
@@ -61,7 +63,11 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <div className={classes.root}>
-      <select className={classes.select} aria-label={ariaLabel}>
+      <select
+        aria-labelledby={arialabelledby}
+        className={classes.select}
+        aria-label={ariaLabel}
+      >
         {list.map(({ title, disabled }, index) => (
           <option
             key={index}
