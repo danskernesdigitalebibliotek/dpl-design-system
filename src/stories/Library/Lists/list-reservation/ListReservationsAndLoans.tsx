@@ -36,7 +36,7 @@ export const ListReservationsAndLoans = (
       >
         <div className="list-reservation__material">
           <div>
-            <Cover size="small" animate src={cover.image} tint="20" />
+            <Cover size="small" animate src={cover.image} />
           </div>
           <div className="list-reservation__information">
             <div>

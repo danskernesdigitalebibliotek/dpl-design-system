@@ -29,7 +29,7 @@ export const AutosuggestMaterial: React.FC<AutosuggestMaterialProps> = ({
               <li className="autosuggest__material">
                 <div className="autosuggest__material__content">
                   <div className="autosuggest__cover">
-                    <Cover size="xsmall" animate src={item.cover} tint="20" />
+                    <Cover size="xsmall" animate src={item.cover} />
                   </div>
                   <div className="autosuggest__info">
                     <div className="text-body-medium-medium autosuggest__title">
