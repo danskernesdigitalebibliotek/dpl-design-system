@@ -1,4 +1,4 @@
-import { Cover } from "../cover/Cover";
+import Cover from "../cover/Cover";
 
 type InstantLoanSummaryProps = {
   title: string;
@@ -14,7 +14,7 @@ const InstantLoanSummary: React.FunctionComponent<InstantLoanSummaryProps> = ({
   <>
     <div className="pagefold-triangle--small" />
     <Cover
-      url="images/book_cover_3.jpg"
+      src="images/book_cover_3.jpg"
       size="small"
       animate={false}
       tint="120"

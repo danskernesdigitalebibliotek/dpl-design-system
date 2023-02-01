@@ -24,7 +24,7 @@ Item.args = {
       description: "Simone de Beauvoir",
       isLiked: false,
       cover: {
-        url: "images/book_cover_1.jpg",
+        src: "images/book_cover_1.jpg",
         animate: true,
         size: "medium",
         tint: "80",
@@ -35,7 +35,7 @@ Item.args = {
       description: "Af Marie Hugsted",
       isLiked: false,
       cover: {
-        url: "images/book_cover_2.jpg",
+        src: "images/book_cover_2.jpg",
         animate: true,
         size: "medium",
         tint: "40",
@@ -46,7 +46,7 @@ Item.args = {
       description: "Isabel Sánchez Vegara",
       isLiked: true,
       cover: {
-        url: "images/book_cover_3.jpg",
+        src: "images/book_cover_3.jpg",
         animate: true,
         size: "medium",
         tint: "100",
@@ -57,7 +57,7 @@ Item.args = {
       description: "Sayaka Murata",
       isLiked: false,
       cover: {
-        url: "images/book_cover_4.jpg",
+        src: "images/book_cover_4.jpg",
         animate: true,
         size: "medium",
         tint: "120",
@@ -68,7 +68,7 @@ Item.args = {
       description: "Søren Rasmussen",
       isLiked: false,
       cover: {
-        url: "images/book_cover_5.jpg",
+        src: "images/book_cover_5.jpg",
         animate: true,
         size: "medium",
         tint: "20",
@@ -79,7 +79,7 @@ Item.args = {
       description: "Af Anton M. Berg",
       isLiked: false,
       cover: {
-        url: "images/book_cover_6.jpg",
+        src: "images/book_cover_6.jpg",
         animate: true,
         size: "medium",
         tint: "80",
@@ -90,7 +90,7 @@ Item.args = {
       description: "Simone de Beauvoir",
       isLiked: false,
       cover: {
-        url: "images/book_cover_1.jpg",
+        src: "images/book_cover_1.jpg",
         animate: true,
         size: "medium",
         tint: "40",
@@ -101,7 +101,7 @@ Item.args = {
       description: "Af Marie Hugsted",
       isLiked: false,
       cover: {
-        url: "images/book_cover_2.jpg",
+        src: "images/book_cover_2.jpg",
         animate: true,
         size: "medium",
         tint: "100",
