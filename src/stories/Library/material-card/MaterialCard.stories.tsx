@@ -32,7 +32,6 @@ MaterialSmall.args = {
     src: "images/book_cover_5.jpg",
     animate: false,
     size: "small",
-    tint: "80",
   },
 };
 
@@ -45,6 +44,5 @@ MaterialLarge.args = {
     src: "images/book_cover_5.jpg",
     animate: false,
     size: "medium",
-    tint: "120",
   },
 };

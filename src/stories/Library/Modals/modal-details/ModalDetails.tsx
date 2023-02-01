@@ -109,12 +109,7 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
     <div className="modal-details__container">
       <div className="modal-details__header">
         <div className="modal-details__cover">
-          <Cover
-            size="large"
-            src="images/book_cover_large_1.jpg"
-            animate
-            tint="20"
-          />
+          <Cover size="large" src="images/book_cover_large_1.jpg" animate />
         </div>
         <div className="modal-details__material">
           <div className="modal-details__tags">
