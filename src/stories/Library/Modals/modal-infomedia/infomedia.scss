@@ -4,3 +4,7 @@
   object-fit: contain;
   height: $s-lg;
 }
+
+.infomedia-article > * + * {
+  margin-top: 1em;
+}
