@@ -6,7 +6,7 @@ import {
   ListDetails,
   ListDetailsProps,
 } from "../../Lists/list-details/ListDetails";
-import { Cover } from "../../cover/Cover";
+import Cover from "../../cover/Cover";
 import { WarningStatus } from "../../warning-status/WarningStatus";
 import { StatusLabel } from "../../status-label/StatusLabel";
 import { Button } from "../../Buttons/button/Button";
@@ -36,7 +36,7 @@ const materialCards: MaterialCardProps[] = [
     description: "Simone de Beauvoir",
     isLiked: false,
     cover: {
-      url: "images/book_cover_1.jpg",
+      src: "images/book_cover_1.jpg",
       animate: true,
       size: "medium",
       tint: "80",
@@ -47,7 +47,7 @@ const materialCards: MaterialCardProps[] = [
     description: "Af Marie Hugsted",
     isLiked: false,
     cover: {
-      url: "images/book_cover_2.jpg",
+      src: "images/book_cover_2.jpg",
       animate: true,
       size: "medium",
       tint: "40",
@@ -58,7 +58,7 @@ const materialCards: MaterialCardProps[] = [
     description: "Isabel Sánchez Vegara",
     isLiked: true,
     cover: {
-      url: "images/book_cover_3.jpg",
+      src: "images/book_cover_3.jpg",
       animate: true,
       size: "medium",
       tint: "100",
@@ -69,7 +69,7 @@ const materialCards: MaterialCardProps[] = [
     description: "Sayaka Murata",
     isLiked: false,
     cover: {
-      url: "images/book_cover_4.jpg",
+      src: "images/book_cover_4.jpg",
       animate: true,
       size: "medium",
       tint: "120",
@@ -109,7 +109,12 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
     <div className="modal-details__container">
       <div className="modal-details__header">
         <div className="modal-details__cover">
-          <Cover size="large" url="images/book_cover_large_1.jpg" animate />
+          <Cover
+            size="large"
+            src="images/book_cover_large_1.jpg"
+            animate
+            tint="20"
+          />
         </div>
         <div className="modal-details__material">
           <div className="modal-details__tags">

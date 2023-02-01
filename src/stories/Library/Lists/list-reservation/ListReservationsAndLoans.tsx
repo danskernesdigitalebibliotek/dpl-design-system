@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Counter, CounterProps } from "../../counter/Counter";
 import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
-import { Cover } from "../../cover/Cover";
+import Cover from "../../cover/Cover";
 import { ReactComponent as ArrowSmallRight } from "../../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 
 export type ListReservationsAndLoansProps = {
@@ -36,7 +36,7 @@ export const ListReservationsAndLoans = (
       >
         <div className="list-reservation__material">
           <div>
-            <Cover size="small" animate url={cover.image} />
+            <Cover size="small" animate src={cover.image} tint="20" />
           </div>
           <div className="list-reservation__information">
             <div>

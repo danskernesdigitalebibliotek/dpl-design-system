@@ -2,7 +2,7 @@ import AvailabilityLabel from "../availability-label/AvailabilityLabel";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
 import { Button } from "../Buttons/button/Button";
 import { generateId } from "../horizontal-term-line/HorizontalTermLine";
-import { Cover } from "../cover/Cover";
+import Cover from "../cover/Cover";
 import MaterialHeaderText from "./MaterialHeaderText";
 import MaterialPeriodicalSelect from "./MaterialPeriodicalSelect";
 
@@ -51,7 +51,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
     <header className="material-header">
       <div className="material-header__cover">
         <Cover
-          url="images/book_cover_3_large.jpeg"
+          src="images/book_cover_3_large.jpeg"
           size="xlarge"
           tint="120"
           animate

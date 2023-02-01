@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 
-import { Cover } from "./Cover";
+import Cover from "./Cover";
 
 export default {
   title: "Library / Cover",
@@ -24,22 +24,22 @@ export default {
       name: "Cover URL",
       control: "text",
     },
-    coverDescription: {
+    description: {
       name: "Cover description",
       control: "text",
     },
-    url: {
-      name: "Cover URL",
+    src: {
+      name: "Image src",
       control: "text",
     },
   },
   args: {
     size: "small",
     animate: false,
-    url: "images/book_cover_3.jpg",
+    src: "images/book_cover_3.jpg",
     tint: "120",
     coverUrl: "https://www.google.com",
-    coverDescription: "/",
+    description: "/",
   },
   parameters: {},
 } as ComponentMeta<typeof Cover>;
@@ -51,7 +51,7 @@ CoverVisible.args = {};
 
 export const CoverNotVisible = Template.bind({});
 CoverNotVisible.args = {
-  url: "",
+  src: "",
   tint: "100",
   coverUrl: "",
 };
@@ -69,5 +69,12 @@ CoverLinked.args = {
   size: "small",
   tint: "80",
   coverUrl: "/",
-  coverDescription: "Cover of Audrey Hepburn",
+  description: "Cover of Audrey Hepburn",
+};
+
+export const SrcNotWork = Template.bind({});
+SrcNotWork.args = {
+  src: "abe",
+  tint: "100",
+  coverUrl: "",
 };

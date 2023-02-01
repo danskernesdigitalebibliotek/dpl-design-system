@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ButtonUI } from "../Buttons/button-ui/ButtonUI";
-import { Cover, CoverProps } from "../cover/Cover";
+import Cover from "../cover/Cover";
+import { CoverProps } from "../cover/types";
 
 export type MaterialCardProps = {
   title: string;

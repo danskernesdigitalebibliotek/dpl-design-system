@@ -1,11 +1,12 @@
 import { AvailabilityLabelPropsType } from "../../availability-label/types";
 import AvailabilityLabel from "../availability-label/AvailabilityLabel";
-import { Cover } from "../cover/Cover";
+import Cover from "../cover/Cover";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
 import HorizontalTermLine, {
   HorizontalTermLineProps,
 } from "../horizontal-term-line/HorizontalTermLine";
+import { getCoverTint } from "../cover/helper";
 
 export type SearchResultItemProps = {
   heartFill?: boolean;
@@ -14,6 +15,7 @@ export type SearchResultItemProps = {
   year: string;
   horizontalTermLineData?: HorizontalTermLineProps;
   availabilityLabels: number;
+  tintIndex: number;
 };
 
 export const SearchResultItem = ({
@@ -23,6 +25,7 @@ export const SearchResultItem = ({
   year,
   horizontalTermLineData,
   availabilityLabels,
+  tintIndex,
 }: SearchResultItemProps) => {
   const materialTypes: AvailabilityLabelPropsType["manifestationType"][] = [
     "Bog",
@@ -35,7 +38,7 @@ export const SearchResultItem = ({
     <a href="/" className="search-result-item arrow arrow__hover--right-small">
       <div className="search-result-item__cover">
         <Cover
-          url="images/book_cover_3.jpg"
+          src="images/book_cover_3.jpg"
           size="small"
           animate={false}
           tint="120"
