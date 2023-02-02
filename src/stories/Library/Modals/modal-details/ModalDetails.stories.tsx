@@ -13,8 +13,6 @@ export default {
       type: "figma",
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2146%3A13292",
     },
-    // Notifies Chromatic to pause the animations when they finish for the specific story.
-    chromatic: { pauseAnimationAtEnd: true },
   },
 } as ComponentMeta<typeof ModalDetails>;
 

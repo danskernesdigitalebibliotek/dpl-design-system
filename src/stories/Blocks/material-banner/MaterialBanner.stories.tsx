@@ -7,10 +7,7 @@ export default {
   component: MaterialBanner,
   decorators: [withDesign],
   argTypes: {},
-  parameters: {
-    // Notifies Chromatic to pause the animations when they finish for the specific story.
-    chromatic: { pauseAnimationAtEnd: true },
-  },
+  parameters: {},
 } as ComponentMeta<typeof MaterialBanner>;
 
 const Template: ComponentStory<typeof MaterialBanner> = (args) => (
