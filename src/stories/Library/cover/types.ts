@@ -5,4 +5,5 @@ export type CoverProps = {
   tint?: "20" | "40" | "80" | "100" | "120";
   coverUrl?: string;
   description?: string;
+  shadow?: boolean;
 };
