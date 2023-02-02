@@ -11,8 +11,6 @@ export default {
       type: "figma",
       url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=416%3A12503",
     },
-    // Notifies Chromatic to pause the animations when they finish for the specific story.
-    chromatic: { pauseAnimationAtEnd: true },
   },
   argTypes: {
     title: {
