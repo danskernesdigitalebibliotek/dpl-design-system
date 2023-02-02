@@ -1,37 +1,28 @@
 import clsx from "clsx";
-import { FC, useState } from "react";
-import { tintClasses } from "./helper";
+import { FC } from "react";
 import { CoverProps } from "./types";
 
-const CoverImage: FC<CoverProps> = ({
-  src,
-  size,
-  description,
-  tint,
-  animate,
-}) => {
-  const [imageLoaded, setImageLoaded] = useState<boolean | null>(null);
-  return (
-    <div
-      className={clsx(
-        "cover",
-        `cover--size-${size}`,
-        `cover--aspect-${size}`,
-        imageLoaded || tintClasses[tint || "default"]
-      )}
-    >
-      {src && (
-        <img
-          onLoad={() => setImageLoaded(true)}
-          className={clsx("cover__img", {
-            "cover__img--animate": animate,
-          })}
-          src={src}
-          alt={description || ""}
-        />
-      )}
-    </div>
-  );
+type CoverState = {
+  setImageLoaded?: () => void;
 };
 
+const CoverImage: FC<CoverProps & CoverState> = ({
+  src,
+  description,
+  animate,
+  setImageLoaded,
+}) => (
+  <img
+    onLoad={setImageLoaded}
+    className={clsx(
+      "cover__img",
+      {
+        "cover__img--animate": animate,
+      },
+      { "cover__img--shadow": shadow }
+    )}
+    src={src}
+    alt={description || ""}
+  />
+);
 export default CoverImage;
