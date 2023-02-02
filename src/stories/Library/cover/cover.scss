@@ -10,7 +10,7 @@ $MATERIAL_XLARGE_MOBILE: 408px;
 $MATERIAL_XLARGE_DESKTOP: 408px;
 
 .cover--size {
-  &xsmall {
+  &-xsmall {
     border-radius: 3px;
     height: $MATERIAL_XSMALL_MOBILE;
     @include breakpoint-s {

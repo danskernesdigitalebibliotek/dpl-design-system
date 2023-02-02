@@ -11,6 +11,7 @@ const CoverImage: FC<CoverProps & CoverState> = ({
   description,
   animate,
   setImageLoaded,
+  shadow,
 }) => (
   <img
     onLoad={setImageLoaded}

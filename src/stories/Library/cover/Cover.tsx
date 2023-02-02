@@ -11,6 +11,7 @@ const Cover: FC<CoverProps> = ({
   tint,
   coverUrl,
   description,
+  shadow,
 }) => {
   const [imageLoaded, setImageLoaded] = useState<boolean | null>(null);
 
@@ -35,6 +36,7 @@ const Cover: FC<CoverProps> = ({
           size={size}
           animate={animate}
           tint={tint}
+          shadow={shadow}
         />
       </a>
     );
@@ -42,7 +44,15 @@ const Cover: FC<CoverProps> = ({
 
   return (
     <div className={classes.wrapper}>
-      <CoverImage src={src} size={size} animate={animate} tint={tint} />
+      <CoverImage
+        setImageLoaded={() => setImageLoaded(true)}
+        src={src}
+        description={description}
+        size={size}
+        animate={animate}
+        tint={tint}
+        shadow={shadow}
+      />
     </div>
   );
 };
