@@ -10,20 +10,21 @@ const CoverImage: FC<CoverProps> = ({
   tint,
   animate,
 }) => {
-  const [imageError, setImageError] = useState<boolean | null>(null);
+  const [imageLoaded, setImageLoaded] = useState<boolean | null>(null);
   return (
     <div
       className={clsx(
-        (!src || imageError) && `cover-size--${size}`,
-        (!src || imageError) && `cover-aspect--${size}`,
-        (!src || imageError) && tintClasses[tint || "default"]
+        "cover",
+        `cover--size-${size}`,
+        `cover--aspect-${size}`,
+        imageLoaded || tintClasses[tint || "default"]
       )}
     >
       {src && (
         <img
-          onError={() => setImageError(true)}
-          className={clsx("cover-img", `cover-size--${size}`, {
-            "cover-img__animate": animate,
+          onLoad={() => setImageLoaded(true)}
+          className={clsx("cover__img", {
+            "cover__img--animate": animate,
           })}
           src={src}
           alt={description || ""}

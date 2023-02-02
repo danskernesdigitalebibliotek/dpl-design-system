@@ -9,8 +9,8 @@ $MATERIAL_LARGE_DESKTOP: 216px;
 $MATERIAL_XLARGE_MOBILE: 408px;
 $MATERIAL_XLARGE_DESKTOP: 408px;
 
-.cover-size {
-  &--xsmall {
+.cover--size {
+  &xsmall {
     border-radius: 3px;
     height: $MATERIAL_XSMALL_MOBILE;
     @include breakpoint-s {
@@ -18,28 +18,28 @@ $MATERIAL_XLARGE_DESKTOP: 408px;
     }
   }
 
-  &--small {
+  &-small {
     height: $MATERIAL_SMALL_MOBILE;
     @include breakpoint-s {
       height: $MATERIAL_SMALL_DESKTOP;
     }
   }
 
-  &--medium {
+  &-medium {
     height: $MATERIAL_LARGE_MOBILE;
     @include breakpoint-s {
       height: $MATERIAL_LARGE_DESKTOP;
     }
   }
 
-  &--large {
+  &-large {
     height: $MATERIAL_LARGE_MOBILE;
     @include breakpoint-s {
       height: $MATERIAL_LARGE_DESKTOP;
     }
   }
 
-  &--xlarge {
+  &-xlarge {
     height: $MATERIAL_XLARGE_MOBILE;
     @include breakpoint-s {
       height: $MATERIAL_XLARGE_DESKTOP;
@@ -47,33 +47,43 @@ $MATERIAL_XLARGE_DESKTOP: 408px;
   }
 }
 
-.cover-aspect {
-  &--xsmall {
+.cover--aspect {
+  &-xsmall {
     aspect-ratio: 0.69;
   }
 
-  &--small {
+  &-small {
     aspect-ratio: 0.69;
   }
 
-  &--medium {
+  &-medium {
     aspect-ratio: 0.69;
   }
 
-  &--large {
+  &-large {
     aspect-ratio: 0.79;
   }
 
-  &--xlarge {
+  &-xlarge {
     aspect-ratio: 0.79;
   }
 }
 
-.cover-img {
+a.cover {
+  display: block;
+}
+
+.cover__img {
+  height: 100%;
+  margin: 0 auto;
   object-fit: contain;
 
-  &.cover-img__animate {
+  &.cover__img--animate {
     animation: 0.3s ease-out 0s 1 CoverFadeIn;
+  }
+
+  &.cover__img--shadow {
+    box-shadow: 0 4px 40px rgb(0 0 0 / 15%);
   }
 }
 // In this case we do not want to use kebab case
