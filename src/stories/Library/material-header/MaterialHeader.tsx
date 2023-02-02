@@ -55,6 +55,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
           size="xlarge"
           tint="120"
           animate
+          shadow
         />
       </div>
       <div className="material-header__content">

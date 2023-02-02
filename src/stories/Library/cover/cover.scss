@@ -83,7 +83,7 @@ a.cover {
   }
 
   &.cover__img--shadow {
-    box-shadow: 0 4px 40px rgb(0 0 0 / 15%);
+    filter: drop-shadow(0 4px 40px rgb(0 0 0 / 15%));
   }
 }
 // In this case we do not want to use kebab case

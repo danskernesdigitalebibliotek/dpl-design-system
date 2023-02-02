@@ -20,10 +20,6 @@
     @include breakpoint-m {
       padding: 0;
     }
-
-    .cover__img {
-      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
-    }
   }
 
   &__content {
