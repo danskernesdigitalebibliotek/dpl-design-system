@@ -23,6 +23,7 @@
 
   &__material {
     width: 100%;
+    overflow: hidden;
     padding: 7px 0;
 
     &:last-child {
@@ -40,8 +41,7 @@
 
     &__content {
       display: flex;
-      flex-direction: row;
-      flex-flow: nowrap;
+      flex-flow: row nowrap;
       gap: 15px;
       width: 95%;
     }
