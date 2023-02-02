@@ -3,7 +3,7 @@
   padding: 16px;
 
   @include breakpoint-m {
-    padding: 157px;
+    padding: $s-4xl 157px $s-2xl;
   }
 
   &__list {
