@@ -8,7 +8,7 @@
 
   @include breakpoint-s {
     min-height: 184px;
-    grid-template-columns: $cover-width minmax(0, 634px) 1fr;
+    grid-template-columns: min-content minmax(0, 634px) 1fr;
     grid-template-rows: 40px auto;
     column-gap: $s-lg;
   }

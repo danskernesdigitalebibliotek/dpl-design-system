@@ -1,20 +1,35 @@
+import clsx from "clsx";
+import { FC, useState } from "react";
 import CoverImage from "./CoverImage";
+import { tintClasses } from "./helper";
 import { CoverProps } from "./types";
 
-const Cover = ({
+const Cover: FC<CoverProps> = ({
   size,
   animate,
   src,
   tint,
   coverUrl,
   description,
-}: CoverProps) => {
+}) => {
+  const [imageLoaded, setImageLoaded] = useState<boolean | null>(null);
+
+  const classes = {
+    wrapper: clsx(
+      "cover",
+      `cover--size-${size}`,
+      `cover--aspect-${size}`,
+      imageLoaded || tintClasses[tint || "default"]
+    ),
+  };
+
   if (coverUrl && description) {
     // Images inside links must have an non-empty alt text to meet accessibility requirements.
     // Only render the cover as a link if we have both an url and a description.
     return (
-      <a href={coverUrl}>
+      <a className={classes.wrapper} href={coverUrl}>
         <CoverImage
+          setImageLoaded={() => setImageLoaded(true)}
           src={src}
           description={description}
           size={size}
@@ -25,7 +40,11 @@ const Cover = ({
     );
   }
 
-  return <CoverImage src={src} size={size} animate={animate} tint={tint} />;
+  return (
+    <div className={classes.wrapper}>
+      <CoverImage src={src} size={size} animate={animate} tint={tint} />
+    </div>
+  );
 };
 
 export default Cover;
