@@ -51,7 +51,7 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({
           </svg>
         </ButtonUI>
       </div>
-      <div className="material-card__cover mt-8">
+      <div className="material-card__cover">
         <Cover {...cover} />
       </div>
       <div className="material-card__texts">
