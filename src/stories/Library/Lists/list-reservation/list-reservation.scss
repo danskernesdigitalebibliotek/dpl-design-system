@@ -124,21 +124,19 @@ $list-reservation-space-desktop: 24px;
   align-items: flex-end;
   grid-template-columns: auto 1fr auto;
 
-  @include breakpoint-s {
-    align-items: center;
-  }
-}
-
-@include arrow("list-reservation__status");
-
-.list-reservation__status {
   svg {
     display: none;
     @include breakpoint-s {
       display: flex;
     }
   }
+
+  @include breakpoint-s {
+    align-items: center;
+  }
 }
+
+@include arrow("list-reservation__status");
 
 .list-reservation__counter {
   display: none;
