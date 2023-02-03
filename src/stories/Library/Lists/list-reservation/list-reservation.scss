@@ -131,6 +131,15 @@ $list-reservation-space-desktop: 24px;
 
 @include arrow("list-reservation__status");
 
+.list-reservation__status {
+  svg {
+    display: none;
+    @include breakpoint-s {
+      display: flex;
+    }
+  }
+}
+
 .list-reservation__counter {
   display: none;
   margin: $s-xs;
