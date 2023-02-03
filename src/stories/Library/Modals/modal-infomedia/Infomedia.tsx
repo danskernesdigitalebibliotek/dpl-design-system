@@ -10,7 +10,7 @@ export const Infomedia = (props: InfomediaProps) => {
   const { title, text, showModal } = props;
   return (
     <Modal shownModal={showModal} classNames="">
-      <article>
+      <article className="infomedia-article">
         <img
           className="infomedia-logo"
           src="icons/logo/infomedia-logo.svg"

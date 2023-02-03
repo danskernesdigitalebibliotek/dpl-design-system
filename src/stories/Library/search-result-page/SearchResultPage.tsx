@@ -16,8 +16,8 @@ export type SearchResultPageProps = {
   zeroResult: boolean;
 };
 
-const SearchResultList = data.searchResult.map((item) => {
-  return <SearchResultItem {...item} />;
+const SearchResultList = data.searchResult.map((item, i) => {
+  return <SearchResultItem {...item} tintIndex={i} />;
 });
 
 export const SearchResultPage = ({

@@ -83,14 +83,14 @@
   background-color: var(--tint-color-40);
 }
 
-%bg-identity-tint-60,
-.bg-identity-tint-60 {
-  background-color: var(--tint-color-60);
-}
-
 %bg-identity-tint-80,
 .bg-identity-tint-80 {
   background-color: var(--tint-color-80);
+}
+
+%bg-identity-tint-100,
+.bg-identity-tint-100 {
+  background-color: var(--tint-color-100);
 }
 
 %bg-identity-tint-120,

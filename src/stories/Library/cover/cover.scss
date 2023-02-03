@@ -9,75 +9,86 @@ $MATERIAL_LARGE_DESKTOP: 216px;
 $MATERIAL_XLARGE_MOBILE: 408px;
 $MATERIAL_XLARGE_DESKTOP: 408px;
 
-.cover-container {
-  display: flex;
-}
-
-.cover {
-  display: inline-block;
-  overflow: hidden;
-
-  > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &--xsmall {
-    aspect-ratio: 0.69;
-    height: $MATERIAL_XSMALL_MOBILE;
+.cover--size {
+  &-xsmall {
     border-radius: 3px;
-
+    height: $MATERIAL_XSMALL_MOBILE;
     @include breakpoint-s {
       height: $MATERIAL_XSMALL_DESKTOP;
     }
   }
 
-  &--small {
-    aspect-ratio: 0.69;
+  &-small {
     height: $MATERIAL_SMALL_MOBILE;
-
     @include breakpoint-s {
       height: $MATERIAL_SMALL_DESKTOP;
     }
   }
 
-  &--medium {
-    aspect-ratio: 0.69;
+  &-medium {
     height: $MATERIAL_LARGE_MOBILE;
-
     @include breakpoint-s {
       height: $MATERIAL_LARGE_DESKTOP;
     }
   }
 
-  &--large {
-    aspect-ratio: 0.79;
+  &-large {
     height: $MATERIAL_LARGE_MOBILE;
-
     @include breakpoint-s {
       height: $MATERIAL_LARGE_DESKTOP;
     }
   }
 
-  &--xlarge {
-    aspect-ratio: 0.79;
+  &-xlarge {
     height: $MATERIAL_XLARGE_MOBILE;
-
     @include breakpoint-s {
       height: $MATERIAL_XLARGE_DESKTOP;
     }
   }
 }
 
-.cover__animate {
-  > img {
-    animation: 0.3s ease-out 0s 1 CoverFadeIn;
+.cover--aspect {
+  &-xsmall {
+    aspect-ratio: 0.69;
+  }
+
+  &-small {
+    aspect-ratio: 0.69;
+  }
+
+  &-medium {
+    aspect-ratio: 0.69;
+  }
+
+  &-large {
+    aspect-ratio: 0.79;
+  }
+
+  &-xlarge {
+    aspect-ratio: 0.79;
   }
 }
 
+a.cover {
+  display: block;
+}
+
+.cover__img {
+  height: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+
+  &.cover__img--animate {
+    animation: 0.3s ease-out 0s 1 CoverFadeIn;
+  }
+
+  &.cover__img--shadow {
+    filter: drop-shadow(0 4px 40px rgb(0 0 0 / 15%));
+  }
+}
 // In this case we do not want to use kebab case
-@keyframes CoverFadeIn { /* stylelint-disable-line */
+@keyframes CoverFadeIn {
+  /* stylelint-disable-line */
   0% {
     opacity: 0;
     transform: scale(1.05) translateY(5px);

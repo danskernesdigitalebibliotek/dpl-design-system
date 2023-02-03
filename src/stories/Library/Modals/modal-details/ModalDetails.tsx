@@ -3,7 +3,7 @@ import {
   ListDetails,
   ListDetailsProps,
 } from "../../Lists/list-details/ListDetails";
-import { Cover } from "../../cover/Cover";
+import Cover from "../../cover/Cover";
 import { WarningStatus } from "../../warning-status/WarningStatus";
 import { StatusLabel } from "../../status-label/StatusLabel";
 import { Button } from "../../Buttons/button/Button";
@@ -61,7 +61,7 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
     <div className="modal-details__container">
       <div className="modal-details__header">
         <div className="modal-details__cover">
-          <Cover size="large" url="images/book_cover_large_1.jpg" animate />
+          <Cover size="large" src="images/book_cover_large_1.jpg" animate />
         </div>
         <div className="modal-details__material">
           <div className="modal-details__tags">

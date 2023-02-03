@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 
-import { AvailabilityLabel } from "./AvailabilityLabel";
+import AvailabilityLabel from "./AvailabilityLabel";
 
 export default {
   title: "Library / Availability Label",

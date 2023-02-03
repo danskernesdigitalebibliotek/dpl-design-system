@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { AvailabilityLabel } from "../../Library/availability-label/AvailabilityLabel";
+import AvailabilityLabel from "../../Library/availability-label/AvailabilityLabel";
 import { Button } from "../../Library/Buttons/button/Button";
 import ListDescription, {
   ListData,
 } from "../../Library/Lists/list-description/ListDescription";
-import { Cover } from "../../Library/cover/Cover";
+import Cover from "../../Library/cover/Cover";
 
 export type MaterialMainfestationItemProps = {
   title: string;
@@ -31,7 +31,7 @@ export const MaterialMainfestationItem = ({
       </div>
       <div className="material-manifestation-item__cover">
         <Cover
-          url="images/book_cover_3.jpg"
+          src="images/book_cover_3.jpg"
           size="small"
           animate={false}
           tint="120"

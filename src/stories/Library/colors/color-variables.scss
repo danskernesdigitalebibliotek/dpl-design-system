@@ -28,8 +28,8 @@ $c-signal-alert: #d5364a;
     var(--identity-color-l);
   --tint-color-20: hsl(var(--identity-color), 0.2);
   --tint-color-40: hsl(var(--identity-color), 0.4);
-  --tint-color-60: hsl(var(--identity-color), 0.6);
   --tint-color-80: hsl(var(--identity-color), 0.8);
+  --tint-color-100: hsl(var(--identity-color), 1);
   --tint-color-120: hsl(
     var(--identity-color-h),
     calc(var(--identity-color-s) - 1%),

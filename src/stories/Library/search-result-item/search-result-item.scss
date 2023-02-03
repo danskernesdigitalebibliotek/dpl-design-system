@@ -10,7 +10,8 @@
 
   @include breakpoint-s {
     gap: 0;
-    padding: 24px;
+    column-gap: $s-lg;
+    padding: $s-lg;
     grid-template-columns: min-content minmax(min-content, 407px) 1fr max-content;
   }
 
@@ -26,7 +27,6 @@
 
   @include breakpoint-s {
     grid-row: auto;
-    margin-right: 24px;
   }
 }
 
@@ -39,7 +39,6 @@
 
   @include breakpoint-s {
     grid-column: 3;
-    margin-left: 90px;
   }
 }
 
@@ -60,6 +59,11 @@
   }
 
   @include breakpoint-s {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     margin-top: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

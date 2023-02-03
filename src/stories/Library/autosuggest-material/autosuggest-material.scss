@@ -12,16 +12,18 @@
   &__materials {
     display: flex;
     flex-direction: column;
+    margin: 0 15px;
 
     @include breakpoint-m {
-      flex-flow: nowrap;
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       justify-content: center;
     }
   }
 
   &__material {
     width: 100%;
+    overflow: hidden;
     padding: 7px 0;
 
     &:last-child {
@@ -37,21 +39,12 @@
       background-color: $c-global-secondary;
     }
 
-    @include breakpoint-m {
-      width: 33.3%;
-    }
-
     &__content {
-      flex-flow: nowrap;
       display: flex;
-      flex-direction: row;
+      flex-flow: row nowrap;
+      gap: 15px;
       width: 95%;
     }
-  }
-
-  &__cover {
-    margin: 0 15px;
-    box-shadow: 0 4px 40px rgb(0 0 0 / 15%);
   }
 
   &__info {

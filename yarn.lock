@@ -13910,6 +13910,11 @@ sisteransi@^1.0.5:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
+skeleton-screen-css@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/skeleton-screen-css/-/skeleton-screen-css-1.1.0.tgz#27f7566164a0229a6f51427bc9f15dba3e2166a0"
+  integrity sha512-lk5fHivmKKvK1g+VbvPgW5vro2aNwAIzTiF3RTKhv35e/p8MscVlkcziDY5kqCNWrFGF3fUL8f0djg6mMRtGDQ==
+
 slash@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"

@@ -1,17 +1,20 @@
 import { Button } from "../Buttons/button/Button";
 import PromoBar from "../promo-bar/PromoBar";
 import ReservationFormItem from "./ReservationFormItem";
+import InstantLoan from "../instant-loan/InstantLoan";
 
 interface ReservationFormProps {
   submitInfo: string;
   submitButton: string;
   showPromoBar?: boolean;
+  showInstantLoan?: boolean;
 }
 
 const ReservationForm = ({
   submitInfo,
   submitButton,
   showPromoBar,
+  showInstantLoan,
 }: ReservationFormProps) => {
   return (
     <div>
@@ -59,6 +62,7 @@ const ReservationForm = ({
           title="Har ingen interesse efter"
           text="6 måneder"
         />
+        {showInstantLoan && <InstantLoan />}
       </div>
     </div>
   );

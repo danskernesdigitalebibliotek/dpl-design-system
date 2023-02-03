@@ -12,6 +12,7 @@ interface ReservationProps {
   submitButton: string;
   state: "initial" | "success" | "error";
   showPromoBar?: boolean;
+  showInstantLoan?: boolean;
 }
 
 const Reservation = ({
@@ -22,6 +23,7 @@ const Reservation = ({
   submitButton,
   state,
   showPromoBar,
+  showInstantLoan,
 }: ReservationProps) => {
   if (state === "success")
     return (
@@ -43,6 +45,7 @@ const Reservation = ({
           submitInfo={submitInfo}
           submitButton={submitButton}
           showPromoBar={showPromoBar}
+          showInstantLoan={showInstantLoan}
         />
       </section>
     </Modal>

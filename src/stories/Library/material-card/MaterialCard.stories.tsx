@@ -29,7 +29,7 @@ MaterialSmall.args = {
   description: "Experiment with photosynthesis",
   isLiked: false,
   cover: {
-    url: "images/book_cover_5.jpg",
+    src: "images/book_cover_5.jpg",
     animate: false,
     size: "small",
   },
@@ -41,7 +41,7 @@ MaterialLarge.args = {
   description: "Experiment with photosynthesis",
   isLiked: true,
   cover: {
-    url: "images/book_cover_5.jpg",
+    src: "images/book_cover_5.jpg",
     animate: false,
     size: "medium",
   },

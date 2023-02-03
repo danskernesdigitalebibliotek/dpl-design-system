@@ -193,4 +193,8 @@ $list-reservation-space-desktop: 24px;
     transform: translateY(16px) scale(0.9);
     z-index: -2;
   }
+
+  &:hover {
+    filter: none;
+  }
 }
