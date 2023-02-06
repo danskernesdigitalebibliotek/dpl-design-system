@@ -32,6 +32,11 @@ $MODAL_TEXT_CONTAINER_WIDTH: 550px;
   width: 100%;
   background-color: $c-global-primary;
   filter: drop-shadow(4px 0 20px rgb(72 72 72 / 10%));
+
+  @include breakpoint-s {
+    bottom: 100px;
+    width: calc(100vw - 200px);
+  }
 }
 
 .modal-text__buttons-inner {

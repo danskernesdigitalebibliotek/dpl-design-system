@@ -43,6 +43,13 @@
   transition: 0.3s;
   z-index: 2;
 
+  &.modal-btn-close--offset {
+    @include breakpoint-s {
+      top: 100px;
+      right: 100px;
+    }
+  }
+
   @include breakpoint-s {
     padding: 34px;
   }
