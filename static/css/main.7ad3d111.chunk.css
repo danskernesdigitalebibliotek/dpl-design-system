@@ -4334,7 +4334,7 @@ dl.list-description dd .link-tag {
 }
 @media (min-width: 1024px) {
   .search-result-page {
-    padding: 157px;
+    padding: 80px 157px 44px;
   }
 }
 .search-result-page__list {
@@ -5749,4 +5749,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.787b3d56.chunk.css.map*/
+/*# sourceMappingURL=main.7ad3d111.chunk.css.map*/
