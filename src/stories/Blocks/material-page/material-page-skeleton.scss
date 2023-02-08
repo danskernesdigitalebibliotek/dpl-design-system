@@ -1,10 +1,15 @@
 // Since we are using the Skeleton Screen Css classes connected to the existing styling
 // we deliberately not follow the BEM naming convention here.
 /* stylelint-disable plugin/stylelint-bem-namics */
+/* stylelint-disable max-nesting-depth */
 
 .material-page {
   &.ssc {
     .material-header {
+      .ssc-square {
+        height: 30px;
+        width: 30px;
+      }
       &__cover {
         .cover-container {
           .ssc-square {
@@ -16,10 +21,6 @@
       &__content {
         height: 605px;
       }
-      .ssc-square {
-        height: 30px;
-        width: 30px;
-      }
     }
   }
 
@@ -29,3 +30,4 @@
 }
 
 /* stylelint-enable plugin/stylelint-bem-namics */
+/* stylelint-enable max-nesting-depth */

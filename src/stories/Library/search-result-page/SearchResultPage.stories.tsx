@@ -1,6 +1,7 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { SearchResultPage } from "./SearchResultPage";
+import { SearchResultPageSkeleton } from "./SearchResultPageSkeleton";
 
 export default {
   title: "Blocks / Search Result Page",
@@ -44,6 +45,11 @@ export default {
 const Template: ComponentStory<typeof SearchResultPage> = (args) => {
   return <SearchResultPage {...args} />;
 };
-
 export const Item = Template.bind({});
-Item.args = {};
+
+const SkeletonTemplate: ComponentStory<typeof SearchResultPageSkeleton> = (
+  args
+) => {
+  return <SearchResultPageSkeleton {...args} />;
+};
+export const SkeletonVersion = SkeletonTemplate.bind({});

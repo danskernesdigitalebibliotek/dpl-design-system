@@ -1,0 +1,15 @@
+.search-result-page__skeleton-facet-line {
+  &--mobile {
+    display: block;
+    @include breakpoint-s {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+    @include breakpoint-s {
+      display: block;
+    }
+  }
+}
