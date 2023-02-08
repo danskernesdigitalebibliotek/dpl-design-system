@@ -1,12 +1,15 @@
 import clsx from "clsx";
 import { FC } from "react";
-import { CoverProps } from "./types";
 
 type CoverState = {
+  src: string;
+  description?: string;
+  animate: boolean;
   setImageLoaded?: () => void;
+  shadow?: boolean;
 };
 
-const CoverImage: FC<CoverProps & CoverState> = ({
+const CoverImage: FC<CoverState> = ({
   src,
   description,
   animate,

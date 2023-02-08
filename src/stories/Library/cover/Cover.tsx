@@ -2,7 +2,16 @@ import clsx from "clsx";
 import { FC, useState } from "react";
 import CoverImage from "./CoverImage";
 import { tintClasses } from "./helper";
-import { CoverProps } from "./types";
+
+export type CoverProps = {
+  src: string;
+  animate: boolean;
+  size: "xsmall" | "small" | "medium" | "large" | "xlarge";
+  tint?: "20" | "40" | "80" | "100" | "120";
+  coverUrl?: string;
+  description?: string;
+  shadow?: boolean;
+};
 
 const Cover: FC<CoverProps> = ({
   size,
@@ -29,30 +38,30 @@ const Cover: FC<CoverProps> = ({
     // Only render the cover as a link if we have both an url and a description.
     return (
       <a className={classes.wrapper} href={coverUrl}>
-        <CoverImage
-          setImageLoaded={() => setImageLoaded(true)}
-          src={src}
-          description={description}
-          size={size}
-          animate={animate}
-          tint={tint}
-          shadow={shadow}
-        />
+        {src && (
+          <CoverImage
+            setImageLoaded={() => setImageLoaded(true)}
+            src={src}
+            description={description}
+            animate={animate}
+            shadow={shadow}
+          />
+        )}
       </a>
     );
   }
 
   return (
     <div className={classes.wrapper}>
-      <CoverImage
-        setImageLoaded={() => setImageLoaded(true)}
-        src={src}
-        description={description}
-        size={size}
-        animate={animate}
-        tint={tint}
-        shadow={shadow}
-      />
+      {src && (
+        <CoverImage
+          setImageLoaded={() => setImageLoaded(true)}
+          src={src}
+          description={description}
+          animate={animate}
+          shadow={shadow}
+        />
+      )}
     </div>
   );
 };
