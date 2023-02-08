@@ -377,6 +377,31 @@
   }
 }
 
+//styleName: Desktop/Small Text - Caption Bold;
+%text-small-caption-bold,
+.text-small-caption-bold {
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: left;
+
+  @include breakpoint-s {
+    line-height: 160%;
+  }
+
+  @include breakpoint-m {
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  @include breakpoint-xl {
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+
 //styleName: Desktop/Label;
 %text-label,
 .text-label {

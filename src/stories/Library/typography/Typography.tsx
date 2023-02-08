@@ -52,6 +52,10 @@ const typographyClasses = [
     title: "Small Text / Caption",
   },
   {
+    className: "text-small-caption-bold",
+    title: "Small Text / Caption Bold",
+  },
+  {
     className: "text-label",
     title: "Desktop / Label",
   },
