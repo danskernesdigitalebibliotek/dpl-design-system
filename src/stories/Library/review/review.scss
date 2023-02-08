@@ -24,6 +24,7 @@
 
   &__headline {
     color: $c-text-secondary-gray;
+    @extend %text-small-caption-bold;
   }
 
   &__body {
