@@ -35,50 +35,12 @@
   }
 }
 
-.modal-btn-close {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 22.5px;
-  transition: 0.3s;
-  z-index: 2;
-
-  &.modal-btn-close--offset {
-    @include breakpoint-s {
-      top: 100px;
-      right: 100px;
-    }
-  }
-
-  @include breakpoint-s {
-    padding: 34px;
-  }
-
-  &:hover {
-    transform: rotateZ(90deg);
-  }
-
-  & > img {
-    width: 11.5px;
-
-    @include breakpoint-s {
-      width: 19.5px;
-    }
-  }
-}
-
 :root {
   --parent-bg-color: #fff;
 }
 
 .uppercase {
   text-transform: uppercase;
-}
-
-.modal-btn-fallback {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
 }
 
 .noselect {
