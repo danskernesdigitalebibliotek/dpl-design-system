@@ -6,9 +6,15 @@ interface ModalWrapperProps {
   shownModal: boolean;
   children?: React.ReactNode;
   classNames?: string;
+  orientation?: "right";
 }
 
-const Modal = ({ children, shownModal, classNames }: ModalWrapperProps) => {
+const Modal = ({
+  children,
+  shownModal,
+  classNames,
+  orientation,
+}: ModalWrapperProps) => {
   const [shouldShowModal, setShouldShowModal] = useState(shownModal);
 
   useEffect(() => setShouldShowModal(shownModal), [shownModal]);
@@ -29,7 +35,7 @@ const Modal = ({ children, shownModal, classNames }: ModalWrapperProps) => {
         <ModalCloseButton
           idAriaDescribedBy="describemodal"
           toggleModal={toggleModal}
-          classNames={classNames}
+          orientation={orientation}
         />
         {children}
       </div>

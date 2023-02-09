@@ -19,7 +19,11 @@ const FacetBrowser: React.FC<FacetBrowserProps> = ({
   showMore,
   showResults,
 }) => (
-  <Modal shownModal={showModal} classNames="modal-right modal--no-padding">
+  <Modal
+    shownModal={showModal}
+    classNames="modal-right modal--no-padding"
+    orientation="right"
+  >
     <section className="facet-browser">
       <header className="facet-browser__header">
         <h3 className="text-header-h3">{title}</h3>

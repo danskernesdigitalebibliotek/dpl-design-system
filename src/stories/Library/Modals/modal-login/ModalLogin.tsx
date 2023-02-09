@@ -12,6 +12,7 @@ export const ModalLogin: React.FC<ModalLoginProps> = ({ showModal }) => (
     <Modal
       shownModal={showModal}
       classNames="modal-login modal-right modal-padding"
+      orientation="right"
     >
       <div className="modal-login__container">
         <Button

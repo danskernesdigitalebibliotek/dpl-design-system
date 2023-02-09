@@ -24,7 +24,11 @@ export const ModalProfile: React.FC<ModalProfileProps> = ({
   notifications,
   profileNavLinks,
 }) => (
-  <Modal shownModal={showModal} classNames="modal-profile modal-right">
+  <Modal
+    shownModal={showModal}
+    classNames="modal-profile modal-right"
+    orientation="right"
+  >
     <ModalHeader
       headerName={headerName}
       headerLinkHref={headerLinkHref}
