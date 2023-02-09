@@ -15,4 +15,13 @@
     flex-wrap: wrap;
     gap: $s-sm;
   }
+
+  &__expand {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &--expanded {
+      transform: scaleY(-1);
+    }
+  }
 }

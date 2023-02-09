@@ -85,8 +85,15 @@
       margin-right: $s-xl;
     }
 
-    &-open {
+    // This is for DisclosureControllable because it's not a details element. and can't use the [open] attribute.
+    &--expanded {
+      transition: transform 0.3s ease-in-out;
       transform: scaleY(-1);
     }
   }
+}
+
+.disclosure[open] .disclosure__expand {
+  transition: transform 0.3s ease-in-out;
+  transform: scaleY(-1);
 }
