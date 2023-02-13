@@ -3380,8 +3380,7 @@ dl.list-description dd .link-tag {
   opacity: 0;
   display: none;
   transition: opacity 0.3s;
-  min-height: 100vh;
-  height: 100%;
+  height: 100vh;
   overflow: scroll;
 }
 .modal__screen-reader-description {
@@ -3392,6 +3391,13 @@ dl.list-description dd .link-tag {
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  .modal {
+    height: calc(100vh - 200px);
+    width: calc(100vw - 200px);
+    margin: 100px 0 0 100px;
+  }
 }
 @media (min-width: 1024px) {
   .modal {
@@ -3422,6 +3428,8 @@ dl.list-description dd .link-tag {
   right: 0;
   max-width: 560px;
   width: 100%;
+  height: 100vh;
+  margin: 0;
 }
 
 .modal-backdrop {
@@ -3437,6 +3445,44 @@ dl.list-description dd .link-tag {
 
 .modal--no-padding {
   padding: 0;
+}
+
+.modal-btn-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 22.5px;
+  transition: 0.3s;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .modal-btn-close.modal-btn-close--offset {
+    top: 100px;
+    right: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .modal-btn-close {
+    padding: 34px;
+  }
+}
+.modal-btn-close:hover {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+.modal-btn-close > img {
+  width: 11.5px;
+}
+@media (min-width: 768px) {
+  .modal-btn-close > img {
+    width: 19.5px;
+  }
+}
+
+.modal-btn-fallback {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
 }
 
 .modal-details {
@@ -3658,14 +3704,16 @@ dl.list-description dd .link-tag {
   position: fixed;
   left: 0;
   bottom: 0;
-  right: 0;
+  width: 100vw;
   background-color: #f6f5f0;
   padding: 16px;
-  min-width: 100%;
 }
 @media (min-width: 1024px) {
   .modal-loan__buttons--bottom {
     padding: 8px 215px;
+    bottom: 100px;
+    left: 100px;
+    width: calc(100vw - 200px);
   }
 }
 
@@ -3748,6 +3796,12 @@ dl.list-description dd .link-tag {
   background-color: #f6f5f0;
   -webkit-filter: drop-shadow(4px 0 20px rgba(72, 72, 72, 0.1));
           filter: drop-shadow(4px 0 20px rgba(72, 72, 72, 0.1));
+}
+@media (min-width: 768px) {
+  .modal-text__buttons {
+    bottom: 100px;
+    width: calc(100vw - 200px);
+  }
 }
 
 .modal-text__buttons-inner {
@@ -5177,7 +5231,7 @@ dl.list-description dd .link-tag {
 }
 @media (min-width: 768px) {
   .material-banner__cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1440px) {
@@ -5356,44 +5410,12 @@ dl.list-description dd .link-tag {
   }
 }
 
-.modal-btn-close {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 22.5px;
-  transition: 0.3s;
-  z-index: 2;
-}
-@media (min-width: 768px) {
-  .modal-btn-close {
-    padding: 34px;
-  }
-}
-.modal-btn-close:hover {
-  -webkit-transform: rotateZ(90deg);
-          transform: rotateZ(90deg);
-}
-.modal-btn-close > img {
-  width: 11.5px;
-}
-@media (min-width: 768px) {
-  .modal-btn-close > img {
-    width: 19.5px;
-  }
-}
-
 :root {
   --parent-bg-color: #fff;
 }
 
 .uppercase {
   text-transform: uppercase;
-}
-
-.modal-btn-fallback {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
 }
 
 .noselect {
@@ -5749,4 +5771,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.7ad3d111.chunk.css.map*/
+/*# sourceMappingURL=main.d88248f9.chunk.css.map*/
