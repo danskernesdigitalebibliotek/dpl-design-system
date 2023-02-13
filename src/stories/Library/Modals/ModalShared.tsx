@@ -28,15 +28,19 @@ export function ModalFallbackButton({
 export function ModalCloseButton({
   toggleModal,
   idAriaDescribedBy,
+  orientation,
 }: {
   toggleModal: void | (() => void);
   idAriaDescribedBy: string;
+  orientation?: "right";
 }) {
   return (
     <ButtonUI
       describe={idAriaDescribedBy}
       onClick={toggleModal || (() => {})}
-      classes="modal-btn-close"
+      classes={`modal-btn-close ${
+        !orientation ? "modal-btn-close--offset" : ""
+      }`}
       ariaLabel="close modal"
       content={{
         kind: "ICON",

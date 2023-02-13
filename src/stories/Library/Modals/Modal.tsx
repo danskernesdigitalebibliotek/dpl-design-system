@@ -6,9 +6,15 @@ interface ModalWrapperProps {
   shownModal: boolean;
   children?: React.ReactNode;
   classNames?: string;
+  orientation?: "right";
 }
 
-const Modal = ({ children, shownModal, classNames }: ModalWrapperProps) => {
+const Modal = ({
+  children,
+  shownModal,
+  classNames,
+  orientation,
+}: ModalWrapperProps) => {
   const [shouldShowModal, setShouldShowModal] = useState(shownModal);
 
   useEffect(() => setShouldShowModal(shownModal), [shownModal]);
@@ -19,15 +25,20 @@ const Modal = ({ children, shownModal, classNames }: ModalWrapperProps) => {
     return <ModalFallbackButton toggleModal={toggleModal} />;
 
   return (
-    <div className={clsx("modal", shouldShowModal && "modal-show", classNames)}>
-      <div className="modal__screen-reader-description" id="describemodal">
-        Denne modal dækker sidens indhold, og er en demo
+    <div className="modal-backdrop">
+      <div
+        className={clsx("modal", shouldShowModal && "modal-show", classNames)}
+      >
+        <div className="modal__screen-reader-description" id="describemodal">
+          Denne modal dækker sidens indhold, og er en demo
+        </div>
+        <ModalCloseButton
+          idAriaDescribedBy="describemodal"
+          toggleModal={toggleModal}
+          orientation={orientation}
+        />
+        {children}
       </div>
-      <ModalCloseButton
-        idAriaDescribedBy="describemodal"
-        toggleModal={toggleModal}
-      />
-      {children}
     </div>
   );
 };

@@ -48,12 +48,14 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
   position: fixed;
   left: 0;
   bottom: 0;
-  right: 0;
+  width: 100vw;
   background-color: $c-global-primary;
   padding: $s-md;
-  min-width: 100%;
 
   @include breakpoint-m {
     padding: $s-sm $s-7xl;
+    bottom: 100px;
+    left: 100px;
+    width: calc(100vw - 200px);
   }
 }
