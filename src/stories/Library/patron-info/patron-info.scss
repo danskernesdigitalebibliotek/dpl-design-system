@@ -4,12 +4,12 @@
   @extend %pb-32;
 
   &__label {
-    @extend %text-body-medium-medium;
+    @extend %text-body-large;
     @extend %ml-32;
     @extend %pt-32;
   }
   &__text {
-    @extend %text-body-medium-regular-placeholder;
+    @extend %text-body-medium-medium;
     @extend %ml-32;
   }
 }
@@ -25,6 +25,14 @@
 
   @include breakpoint-s {
     flex-direction: row;
+  }
+}
+
+.patron-page {
+  width: 100%;
+
+  @include breakpoint-s {
+    width: 75%;
   }
 }
 
@@ -74,6 +82,10 @@
 
 .patron__input--desktop {
   width: 100%;
+
+  &:first-of-type {
+    margin-right: $s-lg;
+  }
 
   @include breakpoint-m {
     width: 50%;
