@@ -84,7 +84,9 @@
   width: 100%;
 
   &:first-of-type {
-    margin-right: $s-lg;
+    @include breakpoint-s {
+      margin-right: $s-lg;
+    }
   }
 
   @include breakpoint-m {
