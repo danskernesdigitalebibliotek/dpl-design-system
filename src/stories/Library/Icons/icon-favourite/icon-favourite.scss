@@ -2,9 +2,25 @@
   cursor: pointer;
   height: 24px;
   width: 24px;
+  color: $c-text-primary-black;
+  stroke: $c-text-primary-black;
+  fill: none;
 
   &--filled {
     color: $c-identity-primary;
+    stroke: $c-identity-primary;
     fill: $c-identity-primary;
   }
+}
+
+.icon-favourite--bright {
+  color: $c-text-primary-white;
+  stroke: $c-text-primary-white;
+  fill: none;
+}
+
+.icon-favourite--bright-filled {
+  stroke: $c-text-primary-white;
+  color: $c-text-primary-white;
+  fill: $c-text-primary-white;
 }
