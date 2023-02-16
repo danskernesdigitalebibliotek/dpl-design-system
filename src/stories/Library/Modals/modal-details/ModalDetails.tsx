@@ -1,7 +1,4 @@
 import React from "react";
-import { MaterialBanner } from "../../../Blocks/material-banner/MaterialBanner";
-import { MaterialCardProps } from "../../material-card/MaterialCard";
-import { LinkFilter } from "../../link-filters/LinkFilters";
 import {
   ListDetails,
   ListDetailsProps,
@@ -14,6 +11,17 @@ import Modal from "../Modal";
 
 const listDetails: Array<ListDetailsProps> = [
   {
+    menu: {
+      ariaLabel: "dropdown",
+      arrowIcon: "chevron",
+      list: [
+        {
+          href: "",
+          title: "Default state",
+        },
+      ],
+    },
+    reservationPlace: "Hylde 3",
     title: "Afleveres",
     date: "31.11.21",
     icon: "icons/collection/Loans.svg",
@@ -30,68 +38,10 @@ const listDetails: Array<ListDetailsProps> = [
   },
 ];
 
-const materialCards: MaterialCardProps[] = [
-  {
-    title: "De uadskillelige",
-    description: "Simone de Beauvoir",
-    isLiked: false,
-    cover: {
-      src: "images/book_cover_1.jpg",
-      animate: true,
-      size: "medium",
-      tint: "80",
-    },
-  },
-  {
-    title: "Den lille bog om dansk design",
-    description: "Af Marie Hugsted",
-    isLiked: false,
-    cover: {
-      src: "images/book_cover_2.jpg",
-      animate: true,
-      size: "medium",
-      tint: "40",
-    },
-  },
-  {
-    title: "Audrey Hepburn",
-    description: "Isabel Sánchez Vegara",
-    isLiked: true,
-    cover: {
-      src: "images/book_cover_3.jpg",
-      animate: true,
-      size: "medium",
-      tint: "100",
-    },
-  },
-  {
-    title: "Døgnkioskmennesket",
-    description: "Sayaka Murata",
-    isLiked: false,
-    cover: {
-      src: "images/book_cover_4.jpg",
-      animate: true,
-      size: "medium",
-      tint: "120",
-    },
-  },
-];
-
-const linksFilters: LinkFilter[] = [
-  {
-    title: "Noget der ligner",
-    href: "/",
-    counter: "4",
-  },
-  {
-    title: "Af samme forfatter",
-    href: "/",
-    counter: "4",
-  },
-];
-
 export type ModalDetailsProps = {
   title: string;
+  cancelText: string;
+  saveText: string;
   author: string;
   type: string;
   showWarning: boolean;
@@ -104,6 +54,8 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
   type,
   showModal,
   showWarning,
+  saveText,
+  cancelText,
 }) => (
   <Modal shownModal={showModal} classNames="modal-details">
     <div className="modal-details__container">
@@ -120,7 +72,7 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
           <p className="text-body-medium-regular">{author}</p>
         </div>
       </div>
-      <div className="modal-details__buttons">
+      <div className="modal-details__buttons modal-details__buttons--hide-on-mobile">
         <Button
           buttonType="default"
           label="forny dit lån"
@@ -143,16 +95,28 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({
           <ListDetails key={index} {...detail} />
         ))}
       </div>
-    </div>
-    <div className="modal-details__banner">
-      <MaterialBanner
-        title="Andre materialer"
-        body=""
-        linkFilters={linksFilters}
-        covers={materialCards}
-        showBodyText={false}
-        showLinkfilters
-      />
+      <div className="modal-details__buttons modal-details__buttons--bottom">
+        <button type="button" className="link-tag mx-16">
+          {cancelText}
+        </button>
+        <button
+          type="button"
+          className="btn-primary btn-filled btn-small arrow__hover--right-small "
+        >
+          {saveText}
+        </button>
+      </div>
+      <div className="modal-details__buttons">
+        <Button
+          buttonType="default"
+          label="forny dit lån"
+          classNames="modal-details__buttons__full-width"
+          size="small"
+          variant="filled"
+          disabled={false}
+          collapsible
+        />
+      </div>
     </div>
   </Modal>
 );

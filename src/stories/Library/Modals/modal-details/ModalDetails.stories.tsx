@@ -27,4 +27,6 @@ Item.args = {
   type: "bog",
   showWarning: true,
   showModal: true,
+  saveText: "Gem",
+  cancelText: "Annuller",
 };
