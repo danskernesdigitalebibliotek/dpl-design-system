@@ -1,4 +1,4 @@
-import { Cover } from "../cover/Cover";
+import Cover from "../cover/Cover";
 import { ReactComponent as SvgIcon } from "../Icons/icon-favourite/icon-favourite.svg";
 
 export type RecommenderData = {
@@ -58,7 +58,7 @@ const Recommender: React.FC<RecommenderProps> = ({
             </div>
             <div className="recommender-material__cover-container">
               <Cover
-                url="images/book_cover_3.jpg"
+                src="images/book_cover_3.jpg"
                 size="medium"
                 animate={false}
                 tint="120"
