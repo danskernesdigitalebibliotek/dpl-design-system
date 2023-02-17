@@ -6,28 +6,19 @@
 .material-page {
   &.ssc {
     .material-header {
-      .ssc-square {
-        height: 30px;
-        width: 30px;
-      }
       &__cover {
-        .cover-container {
-          .ssc-square {
-            width: 300px;
-            height: 408px;
-          }
+        .ssc-square {
+          width: 300px;
         }
       }
       &__content {
         height: 605px;
+        // Favorite icon.
+        .ssc-square {
+          height: 30px;
+          width: 30px;
+        }
       }
     }
   }
-
-  .skeleton-disclosure {
-    height: 100px;
-  }
 }
-
-/* stylelint-enable plugin/stylelint-bem-namics */
-/* stylelint-enable max-nesting-depth */
