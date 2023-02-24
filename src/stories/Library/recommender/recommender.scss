@@ -33,6 +33,7 @@
     display: flex;
     justify-content: end;
     margin-bottom: $s-md;
+    gap: $s-md;
   }
 
   &__grid {
