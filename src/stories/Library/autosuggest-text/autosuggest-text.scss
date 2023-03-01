@@ -12,13 +12,16 @@
   }
 
   &__text {
-    height: 40px;
     display: flex;
     align-items: center;
 
-    &:hover {
-      background-color: $c-global-secondary;
-      cursor: pointer;
+    @include breakpoint-m {
+      height: 40px;
+
+      &:hover {
+        background-color: $c-global-secondary;
+        cursor: pointer;
+      }
     }
 
     &--highlight {
