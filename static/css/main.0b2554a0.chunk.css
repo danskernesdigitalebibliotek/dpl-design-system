@@ -4310,9 +4310,15 @@ dl.list-description dd .link-tag {
 }
 @media (min-width: 1024px) {
   .material-header {
+    min-height: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .material-header {
+    min-height: 650px;
   }
 }
 .material-header .button-favourite {
@@ -6067,4 +6073,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.6249c4fc.chunk.css.map*/
+/*# sourceMappingURL=main.0b2554a0.chunk.css.map*/
