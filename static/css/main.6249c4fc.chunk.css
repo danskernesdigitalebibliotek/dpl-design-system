@@ -68,6 +68,7 @@ button,
 input[type=button],
 input[type=submit],
 input[type=reset] {
+  padding: 0;
   border: inherit;
   background-color: inherit;
 }
@@ -4511,7 +4512,18 @@ dl.list-description dd .link-tag {
     margin-right: 32px;
   }
 }
-.disclosure__expand-open {
+.disclosure__expand--expanded {
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.disclosure[open] .disclosure__expand {
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
 }
@@ -4532,6 +4544,16 @@ dl.list-description dd .link-tag {
   flex-wrap: wrap;
   grid-gap: 8px;
   gap: 8px;
+}
+.horizontal-term-line__expand {
+  cursor: pointer;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.horizontal-term-line__expand--expanded {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
 }
 
 /* This is a placeholder file for future styling */
@@ -4933,6 +4955,8 @@ dl.list-description dd .link-tag {
   display: flex;
   justify-content: end;
   margin-bottom: 16px;
+  grid-gap: 16px;
+  gap: 16px;
 }
 .recommender__grid {
   display: grid;
@@ -6043,4 +6067,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.26e114fe.chunk.css.map*/
+/*# sourceMappingURL=main.6249c4fc.chunk.css.map*/
