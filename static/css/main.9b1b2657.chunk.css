@@ -2745,19 +2745,22 @@ a.cover {
 .availability-label--unselected {
   border: 1px solid #dbdbdb;
 }
-.availability-label--divider {
+.availability-label__divider {
   height: 14px;
   width: 1px;
   background-color: #dbdbdb;
 }
-.availability-label--check {
+.availability-label__check {
   width: 14px;
   position: absolute;
   left: 5px;
   display: none;
 }
-.availability-label--check.selected {
+.availability-label__check.selected {
   display: inline-block;
+}
+.availability-label__text {
+  margin-bottom: 0px !important;
 }
 
 .avatar {
@@ -6073,4 +6076,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.0b2554a0.chunk.css.map*/
+/*# sourceMappingURL=main.9b1b2657.chunk.css.map*/
