@@ -18,6 +18,8 @@
     @include breakpoint-m {
       height: 40px;
 
+      // We don't want the hover effect to take effect on phones, as iPhones have a known
+      // bug that requires users to double click in order to get past hover to click.
       &:hover {
         background-color: $c-global-secondary;
         cursor: pointer;
