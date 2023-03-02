@@ -19,7 +19,7 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
       />
       {manifestationType && (
         <>
-          <p className="text-label-semibold ml-24">
+          <p className="availability-label__text text-label-semibold ml-24">
             {manifestationType.toUpperCase()}
           </p>
           <div className="availability-label--divider ml-4" />
@@ -27,12 +27,16 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
         </>
       )}
       {!manifestationType && (
-        <p className="text-label-normal ml-24 mr-8">{availability}</p>
+        <p className="availability-label__text text-label-normal ml-24 mr-8">
+          {availability}
+        </p>
       )}
       {quantity && (
         <>
           <div className="availability-label--divider ml-4" />
-          <p className="text-label-normal mx-8">{quantity} stk</p>
+          <p className="availability-label__text text-label-normal mx-8">
+            {quantity} stk
+          </p>
         </>
       )}
     </AvailabilityPagefold>

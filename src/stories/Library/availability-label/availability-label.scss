@@ -33,7 +33,7 @@
     }
   }
 
-  & p {
+  &__text {
     // We need to make sure that accessibility tools don't add a bottom margin to
     // this text, as it would then be unreadable, hidden. We can do this as there
     // is no paragraph of text following this text inside availability labels.
