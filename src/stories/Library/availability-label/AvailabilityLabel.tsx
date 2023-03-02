@@ -13,7 +13,7 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
   return (
     <AvailabilityPagefold status={status}>
       <img
-        className={`availability-label--check ${status}`}
+        className={`availability-label__check ${status}`}
         src="icons/collection/Check.svg"
         alt="check-icon"
       />
@@ -22,7 +22,7 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
           <p className="availability-label__text text-label-semibold ml-24">
             {manifestationType.toUpperCase()}
           </p>
-          <div className="availability-label--divider ml-4" />
+          <div className="availability-label__divider ml-4" />
           <p className="text-label-normal ml-4 mr-8">{availability}</p>
         </>
       )}
@@ -33,7 +33,7 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
       )}
       {quantity && (
         <>
-          <div className="availability-label--divider ml-4" />
+          <div className="availability-label__divider ml-4" />
           <p className="availability-label__text text-label-normal mx-8">
             {quantity} stk
           </p>
