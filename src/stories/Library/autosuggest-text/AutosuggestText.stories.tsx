@@ -69,3 +69,11 @@ TextSuggestionWithCategory.args = {
   items: ["Item one", "Item two"],
   categoryText: "Author",
 };
+export const MultipleLineTextSuggestion = Template.bind({});
+MultipleLineTextSuggestion.args = {
+  items: [
+    "Lorem ipsum hal de pretty clanging scales, because seldom they have seemed seven over the top (work)",
+    "Lorem ipsum hal de pretty clanging scales, because seldom they have seemed seven over the top (work)",
+    "Author Name (author)",
+  ],
+};
