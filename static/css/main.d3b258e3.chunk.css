@@ -2482,11 +2482,11 @@ dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
   }
 }
 .cover--size-xlarge {
-  height: 408px;
+  height: 284px;
 }
 @media (min-width: 768px) {
   .cover--size-xlarge {
-    height: 408px;
+    height: 460px;
   }
 }
 
@@ -6076,4 +6076,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.9b1b2657.chunk.css.map*/
+/*# sourceMappingURL=main.d3b258e3.chunk.css.map*/
