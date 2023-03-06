@@ -2,9 +2,14 @@
   border-bottom: 1px solid $c-global-tertiary-1;
   padding-bottom: 56px;
   @include breakpoint-m {
+    min-height: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 0;
+  }
+
+  @include breakpoint-l {
+    min-height: 650px;
   }
 
   .button-favourite {

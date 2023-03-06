@@ -16,13 +16,13 @@
     border: 1px solid $c-global-tertiary-1;
   }
 
-  &--divider {
+  &__divider {
     height: 14px;
     width: 1px;
     background-color: $c-global-tertiary-1;
   }
 
-  &--check {
+  &__check {
     width: 14px;
     position: absolute;
     left: 5px;
@@ -31,5 +31,12 @@
     &.selected {
       display: inline-block;
     }
+  }
+
+  &__text {
+    // We need to make sure that accessibility tools don't add a bottom margin to
+    // this text, as it would then be unreadable, hidden. We can do this as there
+    // is no paragraph of text following this text inside availability labels.
+    margin-bottom: 0px !important;
   }
 }

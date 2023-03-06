@@ -47,6 +47,11 @@ const list = [
     title: "Læs dig gennem Danmark",
     href: "/",
   },
+  {
+    title:
+      "En mega lang titel skal helst have ellipsis en mega lang titel skal helst have ellipsis en mega lang titel skal helst have ellipsis en mega lang titel skal helst have ellipsis en mega lang titel skal helst have ellipsis en mega lang titel skal helst have ellipsis",
+    href: "/",
+  },
 ];
 
 export const Dropdown = Template.bind({});

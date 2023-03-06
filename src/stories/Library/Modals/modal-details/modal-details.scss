@@ -13,22 +13,23 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
 .modal-details__container {
   width: 100%;
   overflow: scroll;
-  margin: 0 24px;
-  max-width: $MODAL_DETAILS_CONTAINER_WIDTH;
+  max-width: 100%;
+  padding-bottom: $s-2xl;
 
   @include breakpoint-s {
     margin: 0 45px;
+    padding-bottom: 0;
   }
 }
 
 .modal-details__header {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
   @include breakpoint-s {
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
     padding-top: 96px;
     width: 80%;
   }
@@ -71,9 +72,34 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-details__buttons {
-  display: flex;
-  justify-content: flex-end;
   margin-top: 40px;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint-s {
+    display: none;
+  }
+}
+
+.modal-details__buttons--bottom {
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.modal-details__buttons--hide-on-mobile {
+  display: none;
+  @include breakpoint-s {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.modal-details__buttons__full-width {
+  @include breakpoint-s {
+    width: 100%;
+  }
 }
 
 .modal-details__warning {

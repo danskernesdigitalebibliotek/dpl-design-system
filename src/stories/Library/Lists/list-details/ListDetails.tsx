@@ -3,6 +3,7 @@ import { Links } from "../../links/Links";
 
 export type ListDetailsProps = {
   title: string;
+  reservationPlace?: string;
   date: string;
   icon: string;
   menu?: DropdownProps;
@@ -17,6 +18,7 @@ export const ListDetails: React.FC<ListDetailsProps> = ({
   date,
   icon,
   menu,
+  reservationPlace,
   link,
 }) => {
   return (
@@ -25,21 +27,24 @@ export const ListDetails: React.FC<ListDetailsProps> = ({
         <img src={icon} alt="arrow accent" />
       </div>
       <div className="list-details__container">
-        <div className="list-details__content">
-          <p className="text-header-h5">{title}</p>
+        <div>
+          <h3 className="text-header-h5">{title}</h3>
+          {reservationPlace && (
+            <p className="text-small-caption">{reservationPlace}</p>
+          )}
           <p className="text-small-caption">{date}</p>
         </div>
-        <div className="list-details__menu">
-          {menu && (
+        {menu && (
+          <div className="list-details__dropdown">
             <Dropdown
               ariaLabel={menu.ariaLabel}
               list={menu.list}
               arrowIcon="chevron"
             />
-          )}
-          {link && <Links href={link.url} linkText={link.label} />}
-        </div>
+          </div>
+        )}
       </div>
+      {link && <Links href={link.url} linkText={link.label} />}
     </div>
   );
 };

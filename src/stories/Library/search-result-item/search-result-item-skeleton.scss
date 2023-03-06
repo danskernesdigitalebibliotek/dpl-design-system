@@ -7,12 +7,16 @@
     grid-template-columns: min-content 1fr;
   }
   .ssc-square {
-    @extend %mr-16;
-    width: 100px;
-    height: 140px;
+    width: 95px;
   }
   .ssc-head-line {
     @extend %mt-16;
   }
+  @include breakpoint-s {
+    .ssc-wrapper {
+      width: 50%;
+    }
+  }
 }
+
 /* stylelint-enable plugin/stylelint-bem-namics */
