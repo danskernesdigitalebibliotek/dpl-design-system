@@ -504,7 +504,7 @@ input[type=reset] {
   }
 }
 
-.dpl-pause-reservation-component__flex__text, .dpl-list-empty,
+.dpl-pause-reservation-component__flex__text, .dpl-list-empty, .dpl-patron-info__label,
 .text-body-large {
   font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
@@ -514,25 +514,25 @@ input[type=reset] {
   text-align: left;
 }
 @media (min-width: 768px) {
-  .dpl-pause-reservation-component__flex__text, .dpl-list-empty,
+  .dpl-pause-reservation-component__flex__text, .dpl-list-empty, .dpl-patron-info__label,
 .text-body-large {
     line-height: 160%;
   }
 }
 @media (min-width: 1024px) {
-  .dpl-pause-reservation-component__flex__text, .dpl-list-empty,
+  .dpl-pause-reservation-component__flex__text, .dpl-list-empty, .dpl-patron-info__label,
 .text-body-large {
     font-size: 18px;
   }
 }
 @media (min-width: 1920px) {
-  .dpl-pause-reservation-component__flex__text, .dpl-list-empty,
+  .dpl-pause-reservation-component__flex__text, .dpl-list-empty, .dpl-patron-info__label,
 .text-body-large {
     font-size: 20px;
   }
 }
 
-.header__menu-search-input, .recommender-material__author, .recommender-material__title, .accordion__body a, .dpl-list-buttons__power, .dpl-patron-info__text, .dropdown__option, .link-filters__counter, .link-filters__tag, .button-link, .link-tag,
+.header__menu-search-input, .recommender-material__author, .recommender-material__title, .accordion__body a, .dpl-list-buttons__power, .dropdown__option, .link-filters__counter, .link-filters__tag, .button-link, .link-tag,
 .text-body-medium-regular {
   font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
@@ -543,25 +543,25 @@ input[type=reset] {
   color: #484848;
 }
 @media (min-width: 768px) {
-  .header__menu-search-input, .recommender-material__author, .recommender-material__title, .accordion__body a, .dpl-list-buttons__power, .dpl-patron-info__text, .dropdown__option, .link-filters__counter, .link-filters__tag, .button-link, .link-tag,
+  .header__menu-search-input, .recommender-material__author, .recommender-material__title, .accordion__body a, .dpl-list-buttons__power, .dropdown__option, .link-filters__counter, .link-filters__tag, .button-link, .link-tag,
 .text-body-medium-regular {
     line-height: 160%;
   }
 }
 @media (min-width: 1024px) {
-  .header__menu-search-input, .recommender-material__author, .recommender-material__title, .accordion__body a, .dpl-list-buttons__power, .dpl-patron-info__text, .dropdown__option, .link-filters__counter, .link-filters__tag, .button-link, .link-tag,
+  .header__menu-search-input, .recommender-material__author, .recommender-material__title, .accordion__body a, .dpl-list-buttons__power, .dropdown__option, .link-filters__counter, .link-filters__tag, .button-link, .link-tag,
 .text-body-medium-regular {
     font-size: 16px;
   }
 }
 @media (min-width: 1920px) {
-  .header__menu-search-input, .recommender-material__author, .recommender-material__title, .accordion__body a, .dpl-list-buttons__power, .dpl-patron-info__text, .dropdown__option, .link-filters__counter, .link-filters__tag, .button-link, .link-tag,
+  .header__menu-search-input, .recommender-material__author, .recommender-material__title, .accordion__body a, .dpl-list-buttons__power, .dropdown__option, .link-filters__counter, .link-filters__tag, .button-link, .link-tag,
 .text-body-medium-regular {
     font-size: 18px;
   }
 }
 
-.dpl-pause-reservation-component__flex__badge, .dpl-list-buttons, .dpl-input label, .patron__input label, .patron__input, .dpl-patron-info__label, .number,
+.dpl-pause-reservation-component__flex__badge, .dpl-list-buttons, .dpl-input label, .patron__input label, .patron__input, .dpl-patron-info__text, .number,
 .text-body-medium-medium {
   font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
@@ -571,13 +571,13 @@ input[type=reset] {
   text-align: left;
 }
 @media (min-width: 1024px) {
-  .dpl-pause-reservation-component__flex__badge, .dpl-list-buttons, .dpl-input label, .patron__input label, .patron__input, .dpl-patron-info__label, .number,
+  .dpl-pause-reservation-component__flex__badge, .dpl-list-buttons, .dpl-input label, .patron__input label, .patron__input, .dpl-patron-info__text, .number,
 .text-body-medium-medium {
     font-size: 16px;
   }
 }
 @media (min-width: 1920px) {
-  .dpl-pause-reservation-component__flex__badge, .dpl-list-buttons, .dpl-input label, .patron__input label, .patron__input, .dpl-patron-info__label, .number,
+  .dpl-pause-reservation-component__flex__badge, .dpl-list-buttons, .dpl-input label, .patron__input label, .patron__input, .dpl-patron-info__text, .number,
 .text-body-medium-medium {
     font-size: 18px;
   }
@@ -2306,6 +2306,15 @@ dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
   }
 }
 
+.patron-page-info {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .patron-page-info {
+    width: 75%;
+  }
+}
+
 .patron__input {
   display: flex;
   flex-direction: column;
@@ -2339,6 +2348,11 @@ dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
 
 .patron__input--desktop {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .patron__input--desktop:first-of-type {
+    margin-right: 24px;
+  }
 }
 @media (min-width: 1024px) {
   .patron__input--desktop {
@@ -3413,6 +3427,7 @@ dl.list-description dd .link-tag {
   justify-content: center;
   align-items: center;
   border: 1px dotted #484848;
+  text-align: left;
 }
 .dpl-list-empty__links {
   display: flex;
@@ -6076,4 +6091,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.d3b258e3.chunk.css.map*/
+/*# sourceMappingURL=main.376ddfe0.chunk.css.map*/
