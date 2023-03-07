@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import { LinkButton } from "./LinkButton";
 
 export default {
-  title: "Library / Links / button link",
+  title: "Library / Links / LinkButton",
   component: LinkButton,
   decorators: [withDesign],
   argTypes: {
@@ -19,14 +19,17 @@ export default {
     },
     buttonType: {
       control: {
-        type: "select",
-        options: ["none", "default", "external-link"],
+        type: "radio",
       },
     },
     variant: {
       control: {
-        type: "select",
-        options: ["outline", "filled"],
+        type: "radio",
+      },
+    },
+    size: {
+      control: {
+        type: "radio",
       },
     },
   },
@@ -43,8 +46,16 @@ const Template: ComponentStory<typeof LinkButton> = (args) => (
   <LinkButton {...args} />
 );
 
-export const Default = Template.bind({});
-Default.args = {
+export const External = Template.bind({});
+External.args = {
+  href: "https://www.google.dk",
+  text: "external link",
+  buttonType: "external-link",
+  size: "medium",
+};
+
+export const ExternalFilled = Template.bind({});
+ExternalFilled.args = {
   href: "https://www.google.dk",
   text: "external link",
   buttonType: "external-link",
