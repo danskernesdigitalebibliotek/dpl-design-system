@@ -38,9 +38,9 @@ export const MaterialMainfestationItem = ({
         />
       </div>
       <div className="material-manifestation-item__text">
-        <h2 className="material-manifestation-item__title text-header-h4">
+        <h3 className="material-manifestation-item__title text-header-h4">
           {title}
-        </h2>
+        </h3>
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
         <div
           className={`material-manifestation-item__details ${
