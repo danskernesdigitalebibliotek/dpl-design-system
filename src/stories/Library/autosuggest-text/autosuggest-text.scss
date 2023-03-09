@@ -14,10 +14,9 @@
   &__text {
     display: flex;
     align-items: center;
+    min-height: 40px;
 
     @include breakpoint-m {
-      height: 40px;
-
       // Because the main autosuggest is a prominent feature we don't want the hover
       // effect to take effect on phones, as iPhones have a known bug that requires
       // users to double click in order to get past hover to register a click.
@@ -27,6 +26,10 @@
         background-color: $c-global-secondary;
         cursor: pointer;
       }
+    }
+
+    @include breakpoint-l {
+      height: 40px;
     }
 
     &--highlight {
