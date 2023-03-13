@@ -29,12 +29,12 @@ export default {
         {
           title: "Ella Fitzgerald",
           authors: "Af Isabel Sánchez Vegara",
-          filled: false,
+          filled: true,
         },
         {
           title: "Ella Fitzgerald",
           authors: "Af Isabel Sánchez Vegara",
-          filled: false,
+          filled: true,
         },
       ],
     },
