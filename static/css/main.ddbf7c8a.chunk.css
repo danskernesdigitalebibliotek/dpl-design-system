@@ -2804,13 +2804,20 @@ a.cover {
   }
 }
 .autosuggest__text {
-  height: 40px;
   display: flex;
   align-items: center;
+  min-height: 40px;
 }
-.autosuggest__text:hover {
-  background-color: #eee9e5;
-  cursor: pointer;
+@media (min-width: 1024px) {
+  .autosuggest__text:hover {
+    background-color: #eee9e5;
+    cursor: pointer;
+  }
+}
+@media (min-width: 1440px) {
+  .autosuggest__text {
+    height: 40px;
+  }
 }
 .autosuggest__text--highlight {
   background-color: #eee9e5;
@@ -2845,9 +2852,11 @@ a.cover {
 .autosuggest__material:last-child {
   margin-bottom: 0;
 }
-.autosuggest__material:hover {
-  background-color: #eee9e5;
-  cursor: pointer;
+@media (min-width: 1024px) {
+  .autosuggest__material:hover {
+    background-color: #eee9e5;
+    cursor: pointer;
+  }
 }
 .autosuggest__material--highlight {
   background-color: #eee9e5;
@@ -6091,4 +6100,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.376ddfe0.chunk.css.map*/
+/*# sourceMappingURL=main.ddbf7c8a.chunk.css.map*/
