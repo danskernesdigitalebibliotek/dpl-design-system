@@ -8,17 +8,28 @@
   z-index: 1;
 
   @include breakpoint-m {
-    padding-top: 16px;
+    padding-top: $s-md;
   }
 
   &__text {
-    height: 40px;
     display: flex;
     align-items: center;
+    min-height: 40px;
 
-    &:hover {
-      background-color: $c-global-secondary;
-      cursor: pointer;
+    @include breakpoint-m {
+      // Because the main autosuggest is a prominent feature we don't want the hover
+      // effect to take effect on phones, as iPhones have a known bug that requires
+      // users to double click in order to get past hover to register a click.
+      // For reference, go to https://github.com/common-voice/common-voice/issues/424
+      // or google "iphone hover issue".
+      &:hover {
+        background-color: $c-global-secondary;
+        cursor: pointer;
+      }
+    }
+
+    @include breakpoint-l {
+      height: 40px;
     }
 
     &--highlight {
