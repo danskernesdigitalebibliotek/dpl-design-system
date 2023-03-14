@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { clsx } from "clsx";
 import AvailabilityLabel from "../availability-label/AvailabilityLabel";
+import Heading, { HeadingLevelType } from "../heading/Heading";
 
 export type DisclosureProps = {
   headline: string;
@@ -9,6 +10,7 @@ export type DisclosureProps = {
   withAvailability?: boolean;
   fullWidth?: boolean;
   removeHeadlinePadding?: boolean;
+  headingLevel?: HeadingLevelType;
 };
 
 export const Disclosure: React.FC<DisclosureProps> = ({
@@ -18,6 +20,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({
   withAvailability,
   fullWidth = false,
   removeHeadlinePadding,
+  headingLevel,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -45,13 +48,14 @@ export const Disclosure: React.FC<DisclosureProps> = ({
             />
           </div>
         )}
-        <h2
+        <Heading
+          level={headingLevel || "h2"}
           className={`text-body-large disclosure__text ${
             withAvailability ? "disclosure__text--shorter" : ""
           }`}
         >
           {headline}
-        </h2>
+        </Heading>
         {withAvailability && (
           <AvailabilityLabel availability="Hjemme" status="available" />
         )}
