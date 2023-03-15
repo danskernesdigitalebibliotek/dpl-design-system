@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import { LinkButton } from "./LinkButton";
 
 export default {
-  title: "Library / Links / Linkbutton",
+  title: "Library / Buttons / Link Button",
   component: LinkButton,
   decorators: [withDesign],
   argTypes: {
