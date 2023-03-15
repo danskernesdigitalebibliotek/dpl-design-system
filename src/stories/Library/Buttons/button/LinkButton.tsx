@@ -1,12 +1,12 @@
 import clsx from "clsx";
-import { ButtonIcon } from "../Buttons/button/ButtonIcon";
+import { ButtonIcon } from "./ButtonIcon";
 import {
   ButtonSize,
   ButtonType,
   ButtonVariant,
   getSize,
   getVariant,
-} from "../Buttons/button/helper";
+} from "./helper";
 
 export type LinkButtonProps = {
   href: string;
