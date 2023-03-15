@@ -5125,6 +5125,11 @@ dl.list-description dd .link-tag {
   align-items: center;
 }
 
+.scroll-lock-background {
+  overflow: "hidden";
+  height: "100vh";
+}
+
 .footer .footer__mobile {
   display: block;
 }
@@ -6100,4 +6105,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.ddbf7c8a.chunk.css.map*/
+/*# sourceMappingURL=main.b00e9119.chunk.css.map*/
