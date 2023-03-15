@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import { LinkButton } from "./LinkButton";
 
 export default {
-  title: "Library / Links / LinkButton",
+  title: "Library / Links / Linkbutton",
   component: LinkButton,
   decorators: [withDesign],
   argTypes: {
@@ -36,7 +36,7 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2%3A4",
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1400%3A5720&t=AFapWF57SlCwQ8ME-4",
     },
     layout: "centered",
   },
