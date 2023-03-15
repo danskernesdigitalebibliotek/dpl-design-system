@@ -41,7 +41,7 @@ export const LinkButton = ({
       )}
     >
       {text}
-      <ButtonIcon buttonType={buttonType} variant={variant} />
+      <ButtonIcon buttonType={buttonType} />
     </a>
   );
 };
