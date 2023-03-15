@@ -43,11 +43,7 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
     >
       {`${label} ${buttonType === "search" ? "(6)" : ""}`}
-      <ButtonIcon
-        collapsible={collapsible}
-        buttonType={buttonType}
-        variant={variant}
-      />
+      <ButtonIcon collapsible={collapsible} buttonType={buttonType} />
     </button>
   );
 };
