@@ -40,8 +40,10 @@
   }
 
   &__text {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    @include breakpoint-m {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
 }
