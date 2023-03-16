@@ -6,15 +6,16 @@
   right: 0;
   top: calc(100% + 1px);
   z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: $s-md;
 
-  @include breakpoint-m {
-    padding-top: $s-md;
-  }
-
-  &__text {
+  &__text-item {
+    min-height: 40px;
+    width: 100%;
     display: flex;
     align-items: center;
-    min-height: 40px;
 
     @include breakpoint-m {
       // Because the main autosuggest is a prominent feature we don't want the hover
@@ -30,10 +31,17 @@
 
     @include breakpoint-l {
       height: 40px;
+      padding-right: $s-lg;
     }
 
     &--highlight {
       background-color: $c-global-secondary;
     }
+  }
+
+  &__text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
