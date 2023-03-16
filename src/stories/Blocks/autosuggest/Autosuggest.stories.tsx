@@ -1,21 +1,25 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { AutosuggestText } from "../autosuggest-text/AutosuggestText";
-import {
-  AutosuggestMaterial,
-  AutosuggestMaterialProps,
-} from "./AutosuggestMaterial";
-import materialSuggestions from "./material-suggestions";
+import materialSuggestions from "../../Library/autosuggest-material/material-suggestions";
+import { Autosuggest, AutosuggestProps } from "./Autosuggest";
 
 export default {
-  title: "Library / Autosuggest - Material",
-  component: AutosuggestMaterial,
+  title: "Blocks / Autosuggest",
+  component: Autosuggest,
   decorators: [withDesign],
   argTypes: {
-    materialSuggestions: {
-      name: "Material suggestions",
+    textProps: {
+      name: "Text props",
+      defaultValue: {
+        textSuggestions: ["Item one", "Item two"],
+        categoryText: "ebook",
+      },
+      control: { type: "object" },
+    },
+    materialProps: {
+      name: "Material props",
       defaultValue: materialSuggestions,
-      control: { type: "array" },
+      control: { type: "object" },
     },
   },
   parameters: {
@@ -24,15 +28,14 @@ export default {
       url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4709%3A24976",
     },
   },
-} as ComponentMeta<typeof AutosuggestMaterial>;
+};
 
-const Template: ComponentStory<typeof AutosuggestMaterial> = (
-  args: AutosuggestMaterialProps
+const Template: ComponentStory<typeof Autosuggest> = (
+  args: AutosuggestProps
 ) => (
-  // Apart from AutosuggestMaterial, everything else is here just for the story
-  // context. AutosuggestMaterial style is directly dependent on the header,
-  // search field, and AutosuggestText styling.
-  // If you find out this context no longer represents reality, please adjust it.
+  // Apart from <Autosuggest />, everything else is here just for the story
+  // context. The autosuggest styling is directly dependent on the header component,
+  // Please keep up to date with Header.tsx
   <header className="header" style={{ height: "144px" }}>
     <div className="header__logo-desktop">
       <p className="text-body-medium-regular">Context</p>
@@ -53,10 +56,7 @@ const Template: ComponentStory<typeof AutosuggestMaterial> = (
             src="icons/basic/icon-search.svg"
             alt="search icon"
           />
-          <ul className="autosuggest pb-16">
-            <AutosuggestText textSuggestions={["I am a contextual item"]} />
-            <AutosuggestMaterial {...args} />
-          </ul>
+          <Autosuggest {...args} />
         </div>
       </div>
     </div>
@@ -66,4 +66,4 @@ const Template: ComponentStory<typeof AutosuggestMaterial> = (
   </header>
 );
 
-export const MaterialSuggestion = Template.bind({});
+export const Default = Template.bind({});

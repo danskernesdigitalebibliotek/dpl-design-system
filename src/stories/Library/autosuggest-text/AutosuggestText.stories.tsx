@@ -8,8 +8,8 @@ export default {
   component: AutosuggestText,
   decorators: [withDesign],
   argTypes: {
-    items: {
-      name: "Items",
+    textSuggestions: {
+      name: "Text suggestions",
       defaultValue: ["Item one", "Item two"],
       control: { type: "array" },
     },
@@ -52,7 +52,9 @@ const Template: ComponentStory<typeof AutosuggestText> = (
             src="icons/basic/icon-search.svg"
             alt="search icon"
           />
-          <AutosuggestText {...args} />
+          <ul className="autosuggest pb-16">
+            <AutosuggestText {...args} />
+          </ul>
         </div>
       </div>
     </div>
@@ -66,12 +68,12 @@ export const TextSuggestion = Template.bind({});
 
 export const TextSuggestionWithCategory = Template.bind({});
 TextSuggestionWithCategory.args = {
-  items: ["Item one", "Item two"],
+  textSuggestions: ["Item one", "Item two"],
   categoryText: "Author",
 };
 export const MultipleLineTextSuggestion = Template.bind({});
 MultipleLineTextSuggestion.args = {
-  items: [
+  textSuggestions: [
     "Lorem ipsum hal de pretty clanging scales, because seldom they have seemed seven over the top (work)",
     "Lorem ipsum hal de pretty clanging scales, because seldom they have seemed seven over the top (work)",
     "Author Name (author)",

@@ -1,7 +1,7 @@
 import Cover from "../cover/Cover";
 
 export type AutosuggestMaterialProps = {
-  items: {
+  materialSuggestions: {
     cover: string;
     title: string;
     author: string;
@@ -10,18 +10,12 @@ export type AutosuggestMaterialProps = {
 };
 
 export const AutosuggestMaterial: React.FC<AutosuggestMaterialProps> = ({
-  items,
+  materialSuggestions,
 }) => {
   return (
-    <ul className="autosuggest pb-16">
-      {/* The contextual item needs to be up to date with AutosuggestText.tsx as it imitates it. */}
-      <li className="autosuggest__text-item text-body-medium-regular px-24">
-        <p className="autosuggest__text text-body-medium-regular">
-          I am a contextual item
-        </p>
-      </li>
+    <>
       <li className="autosuggest__divider" />
-      {items.map((item) => {
+      {materialSuggestions.map((item) => {
         return (
           <li className="autosuggest__material-item">
             <div className="autosuggest__material-card">
@@ -36,6 +30,6 @@ export const AutosuggestMaterial: React.FC<AutosuggestMaterialProps> = ({
           </li>
         );
       })}
-    </ul>
+    </>
   );
 };
