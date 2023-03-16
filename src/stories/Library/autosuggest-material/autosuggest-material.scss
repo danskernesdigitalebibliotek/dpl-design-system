@@ -5,32 +5,21 @@
     height: 1px;
     border: 0;
     border-top: 1px solid $c-global-tertiary-1;
-    margin: 20px 0;
+    margin: $s-md 0;
     padding: 0;
   }
 
-  &__materials {
-    display: flex;
-    flex-direction: column;
-    margin: 0 15px;
-
-    @include breakpoint-m {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      justify-content: center;
-    }
-  }
-
-  &__material {
+  &__material-item {
     width: 100%;
-    overflow: hidden;
-    padding: 7px 0;
+    overflow: visible;
+    padding: $s-sm $s-md;
 
     &:last-child {
       margin-bottom: 0;
     }
 
     @include breakpoint-m {
+      width: calc(100% / 3);
       // Because the main autosuggest is a prominent feature we don't want the hover
       // effect to take effect on phones, as iPhones have a known bug that requires
       // users to double click in order to get past hover to register a click.
@@ -43,13 +32,13 @@
     &--highlight {
       background-color: $c-global-secondary;
     }
+  }
 
-    &__content {
-      display: flex;
-      flex-flow: row nowrap;
-      gap: 15px;
-      width: 95%;
-    }
+  &__material-card {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+    width: 95%;
   }
 
   &__info {
