@@ -10,7 +10,7 @@ type HeadingProps = {
 
 const Heading: React.FunctionComponent<HeadingProps> = ({
   children,
-  level,
+  level = "h2",
   className,
 }) => {
   const HeadingTag = level as keyof JSX.IntrinsicElements;
