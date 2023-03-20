@@ -1,4 +1,4 @@
-import { Disclosure } from "../../disclosure/Disclosure";
+import Disclosure from "../../disclosure/Disclosure";
 import { Button } from "../../Buttons/button/Button";
 import Modal from "../Modal";
 import facetBrowserDummyData from "./facet-browser-dummy-data";

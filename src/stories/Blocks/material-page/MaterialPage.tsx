@@ -1,4 +1,4 @@
-import { Disclosure } from "../../Library/disclosure/Disclosure";
+import Disclosure from "../../Library/disclosure/Disclosure";
 import { generateId } from "../../Library/horizontal-term-line/HorizontalTermLine";
 import ListDescription, {
   ListData,

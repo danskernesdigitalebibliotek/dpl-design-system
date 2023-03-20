@@ -13,7 +13,7 @@ export type DisclosureProps = {
   headingLevel: HeadingLevelType;
 };
 
-export const Disclosure: React.FC<DisclosureProps> = ({
+const Disclosure: React.FC<DisclosureProps> = ({
   headline,
   children,
   icon,

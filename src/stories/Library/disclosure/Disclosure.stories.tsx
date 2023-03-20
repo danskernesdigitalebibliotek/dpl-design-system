@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { Disclosure, DisclosureProps } from "./Disclosure";
+import Disclosure, { DisclosureProps } from "./Disclosure";
 
 export default {
   title: "Library / Disclosure",
