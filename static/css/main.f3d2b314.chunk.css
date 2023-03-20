@@ -5337,6 +5337,7 @@ dl.list-description dd .link-tag {
   height: 100%;
   display: flex;
   align-items: center;
+  color: #000;
 }
 
 .header__menu-profile,
@@ -5707,7 +5708,6 @@ dl.list-description dd .link-tag {
 }
 
 .hide-linkstyle {
-  color: inherit;
   text-decoration: inherit;
 }
 
@@ -6105,4 +6105,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.b00e9119.chunk.css.map*/
+/*# sourceMappingURL=main.f3d2b314.chunk.css.map*/
