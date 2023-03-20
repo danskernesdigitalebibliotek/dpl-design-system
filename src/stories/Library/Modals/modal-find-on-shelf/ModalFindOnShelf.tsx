@@ -63,6 +63,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
       {branchesArray.map((branchKey) => {
         return (
           <Disclosure
+            headingLevel="h2"
             withAvailability
             fullWidth
             headline="Bibliotek fliale navn"
