@@ -11,7 +11,7 @@ export default {
       options: ["h2", "h3", "h4", "h5"],
     },
     className: {
-      name: "Heading classNames",
+      name: "Heading class names",
       control: "text",
     },
     children: {
