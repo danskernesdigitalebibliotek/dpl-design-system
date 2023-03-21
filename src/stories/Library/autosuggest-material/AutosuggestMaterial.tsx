@@ -14,7 +14,6 @@ export const AutosuggestMaterial: React.FC<AutosuggestMaterialProps> = ({
 }) => {
   return (
     <>
-      <li className="autosuggest__divider" />
       {materialSuggestions.map((item) => {
         return (
           <li className="autosuggest__material-item">

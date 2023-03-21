@@ -20,7 +20,6 @@ export const Autosuggest: React.FC<AutosuggestProps> = ({
     <ul className="autosuggest pb-16">
       <AutosuggestText textSuggestions={textProps.textSuggestions} />
       <AutosuggestMaterial materialSuggestions={materialProps} />
-      <li className="autosuggest__divider" />
       <AutosuggestText
         textSuggestions={textProps.textSuggestions}
         categoryText={textProps.categoryText}
