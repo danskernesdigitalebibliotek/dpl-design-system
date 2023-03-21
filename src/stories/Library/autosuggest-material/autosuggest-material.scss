@@ -23,6 +23,43 @@
     }
   }
 
+  // Autosuggest dividers on phones:
+  // - between text suggestions & material suggestions
+  &__text-item + &__material-item {
+    border-top: 1px solid $c-global-tertiary-1;
+    margin-top: $s-md;
+    padding-top: $s-md;
+
+    @include breakpoint-m {
+      border: none;
+      margin: 0;
+    }
+  }
+  // - between material suggestions & text suggestions
+  &__material-item + &__text-item {
+    border-top: 1px solid $c-global-tertiary-1;
+    margin-top: $s-md;
+    padding-top: $s-md;
+
+    @include breakpoint-m {
+      border: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+
+  // Autosuggest dividers on desktop:
+  // - both dividers are rendered if both types of suggestions are present
+  &__text-item ~ &__material-item {
+    @include breakpoint-m {
+      border-top: 1px solid $c-global-tertiary-1;
+      border-bottom: 1px solid $c-global-tertiary-1;
+      margin: $s-md 0;
+      padding-top: $s-md;
+      padding-bottom: $s-md;
+    }
+  }
+
   &__material-card {
     display: flex;
     flex-flow: row nowrap;
