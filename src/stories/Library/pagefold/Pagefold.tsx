@@ -8,19 +8,21 @@ export type PagefoldProps = {
   children?: React.ReactNode;
   className?: string;
   compProps?: React.ComponentPropsWithoutRef<"div">;
+  status?: "selected" | "available" | "unavailable";
+  button?: boolean;
 };
 
-export const Pagefold: React.FC<PagefoldProps> = (props) => {
-  const {
-    isInheriting,
-    isAContainer,
-    size,
-    type,
-    children,
-    className,
-    compProps,
-  } = props;
-
+export const Pagefold: React.FC<PagefoldProps> = ({
+  isInheriting,
+  isAContainer,
+  size,
+  type,
+  children,
+  className,
+  compProps,
+  status,
+  button,
+}) => {
   const baseClass = `pagefold-triangle--${size}`;
 
   const classes = {
@@ -36,10 +38,30 @@ export const Pagefold: React.FC<PagefoldProps> = (props) => {
     ),
   };
 
-  return (
+  if (button) {
+    return (
+      <button
+        type="button"
+        aria-pressed={status === "selected"}
+        className={classes.wrapper}
+      >
+        <div className={classes.triangle} />
+        {children}
+      </button>
+    );
+  }
+
+  if (compProps) {
     <div className={classes.wrapper} {...compProps}>
       <div className={classes.triangle} />
       {children}
-    </div>
+    </div>;
+  }
+
+  return (
+    <a className={classes.wrapper}>
+      <div className={classes.triangle} />
+      {children}
+    </a>
   );
 };

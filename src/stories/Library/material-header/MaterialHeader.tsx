@@ -11,26 +11,31 @@ const listOfAvailabilityLabels = [
     manifestationType: "Bog",
     availability: "Hjemme",
     status: "selected",
+    button: true,
   } as const,
   {
     manifestationType: "Bog",
     availability: "Hjemme",
     status: "available",
+    button: true,
   } as const,
   {
     manifestationType: "Bog",
     availability: "Hjemme",
     status: "available",
+    button: true,
   } as const,
   {
     manifestationType: "Bog",
     availability: "Hjemme",
     status: "available",
+    button: true,
   } as const,
   {
     manifestationType: "Bog",
     availability: "Hjemme",
     status: "available",
+    button: true,
   } as const,
 ].map((item, index) => <AvailabilityLabel {...item} key={generateId(index)} />);
 

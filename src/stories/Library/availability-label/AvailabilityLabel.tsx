@@ -7,15 +7,16 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
   availability,
   status,
   quantity,
+  button,
 }) => {
   const AvailabilityPagefold = withAvailabilityProps(Pagefold);
 
   return (
-    <AvailabilityPagefold status={status}>
+    <AvailabilityPagefold status={status} button={button}>
       <img
         className={`availability-label__check ${status}`}
         src="icons/collection/Check.svg"
-        alt="check-icon"
+        alt=""
       />
       {manifestationType && (
         <>

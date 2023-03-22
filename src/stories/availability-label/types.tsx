@@ -3,4 +3,5 @@ export type AvailabilityLabelPropsType = {
   availability: "Hjemme" | "Online" | "Udlånt";
   status: "available" | "unavailable" | "selected";
   quantity?: number;
+  button?: boolean;
 };
