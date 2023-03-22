@@ -28,7 +28,7 @@
   &__text-item + &__material-item {
     border-top: 1px solid $c-global-tertiary-1;
     margin-top: $s-md;
-    padding-top: $s-md;
+    padding-top: $s-lg;
 
     @include breakpoint-m {
       border: none;
@@ -54,9 +54,9 @@
     @include breakpoint-m {
       border-top: 1px solid $c-global-tertiary-1;
       border-bottom: 1px solid $c-global-tertiary-1;
-      margin: $s-md 0;
-      padding-top: $s-md;
-      padding-bottom: $s-md;
+      margin: $s-lg 0;
+      padding-top: $s-lg;
+      padding-bottom: $s-lg;
     }
   }
 
