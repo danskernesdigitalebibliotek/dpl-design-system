@@ -12,6 +12,7 @@ const Cover: FC<CoverProps> = ({
   coverUrl,
   description,
   shadow,
+  ariaLabel = "Link to the material",
 }) => {
   const [imageLoaded, setImageLoaded] = useState<boolean | null>(null);
 
@@ -28,7 +29,7 @@ const Cover: FC<CoverProps> = ({
     // Images inside links must have an non-empty alt text to meet accessibility requirements.
     // Only render the cover as a link if we have both an url and a description.
     return (
-      <a className={classes.wrapper} href={coverUrl}>
+      <a className={classes.wrapper} href={coverUrl} aria-label={ariaLabel}>
         <CoverImage
           setImageLoaded={() => setImageLoaded(true)}
           src={src}
