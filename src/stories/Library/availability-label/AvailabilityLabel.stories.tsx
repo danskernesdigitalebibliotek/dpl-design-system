@@ -11,17 +11,25 @@ export default {
     manifestationType: {
       name: "Manifestation Type",
       options: ["Bog", "Ebog", "Lydbog (net)", "Lydbog (cd-mp3)", undefined],
-      control: { disable: true },
+      control: "radio",
     },
     availability: {
       name: "Availability",
       options: ["Hjemme", "Online", "Udlånt"],
-      control: { disable: true },
+      control: "radio",
     },
     status: {
       name: "Status",
       options: ["available", "unavailable", "selected"],
-      control: { disable: true },
+      control: "radio",
+    },
+    quantity: {
+      name: "Quantity",
+      control: "number",
+    },
+    button: {
+      name: "Button",
+      control: "boolean",
     },
   },
   parameters: {},
@@ -36,6 +44,7 @@ Available.args = {
   manifestationType: "Bog",
   availability: "Hjemme",
   status: "available",
+  button: true,
 };
 
 export const Selected = Template.bind({});
@@ -43,6 +52,7 @@ Selected.args = {
   manifestationType: "Ebog",
   availability: "Online",
   status: "selected",
+  button: true,
 };
 
 export const Unavailable = Template.bind({});
@@ -50,6 +60,7 @@ Unavailable.args = {
   manifestationType: "Lydbog (cd-mp3)",
   availability: "Udlånt",
   status: "unavailable",
+  button: true,
 };
 
 export const WithoutManifestationType = Template.bind({});
@@ -58,4 +69,5 @@ WithoutManifestationType.args = {
   manifestationType: undefined,
   availability: "Udlånt",
   status: "unavailable",
+  button: true,
 };
