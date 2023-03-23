@@ -7,22 +7,20 @@ import {
   AutosuggestTextProps,
 } from "../../Library/autosuggest-text/AutosuggestText";
 
-export type AutosuggestProps = {
-  textProps: AutosuggestTextProps;
-  materialProps: AutosuggestMaterialProps["materialSuggestions"];
-};
+export type AutosuggestProps = AutosuggestTextProps & AutosuggestMaterialProps;
 
 export const Autosuggest: React.FC<AutosuggestProps> = ({
-  textProps,
-  materialProps,
+  textSuggestions,
+  categoryText,
+  materialSuggestions,
 }) => {
   return (
     <ul className="autosuggest pb-16">
-      <AutosuggestText textSuggestions={textProps.textSuggestions} />
-      <AutosuggestMaterial materialSuggestions={materialProps} />
+      <AutosuggestText textSuggestions={textSuggestions} />
+      <AutosuggestMaterial materialSuggestions={materialSuggestions} />
       <AutosuggestText
-        textSuggestions={textProps.textSuggestions}
-        categoryText={textProps.categoryText}
+        textSuggestions={textSuggestions}
+        categoryText={categoryText}
       />
     </ul>
   );

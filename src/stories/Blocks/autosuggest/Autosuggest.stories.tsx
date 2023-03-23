@@ -1,26 +1,16 @@
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import materialSuggestions from "../../Library/autosuggest-material/material-suggestions";
 import { Autosuggest, AutosuggestProps } from "./Autosuggest";
+import AutosuggestMaterialStories from "../../Library/autosuggest-material/AutosuggestMaterial.stories";
+import AutosuggestTextStories from "../../Library/autosuggest-text/AutosuggestText.stories";
 
 export default {
   title: "Blocks / Autosuggest",
   component: Autosuggest,
   decorators: [withDesign],
   argTypes: {
-    textProps: {
-      name: "Text props",
-      defaultValue: {
-        textSuggestions: ["Item one", "Item two"],
-        categoryText: "ebook",
-      },
-      control: { type: "object" },
-    },
-    materialProps: {
-      name: "Material props",
-      defaultValue: materialSuggestions,
-      control: { type: "object" },
-    },
+    ...AutosuggestMaterialStories.argTypes,
+    ...AutosuggestTextStories.argTypes,
   },
   parameters: {
     design: {
