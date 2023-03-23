@@ -27,7 +27,7 @@
   // - between text suggestions & material suggestions
   &__text-item + &__material-item {
     border-top: 1px solid $c-global-tertiary-1;
-    margin-top: $s-md;
+    margin-top: $s-lg;
     padding-top: $s-lg;
 
     @include breakpoint-m {
