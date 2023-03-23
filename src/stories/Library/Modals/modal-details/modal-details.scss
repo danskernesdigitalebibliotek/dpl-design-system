@@ -12,12 +12,12 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
 
 .modal-details__container {
   width: 100%;
-  overflow: scroll;
+  overflow: auto;
   max-width: 100%;
   padding-bottom: $s-2xl;
 
   @include breakpoint-s {
-    margin: 0 45px;
+    margin: 0;
     padding-bottom: 0;
   }
 }
@@ -56,8 +56,8 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
   margin-bottom: 16px;
 }
 
-/* 
-  We disable stylelint here since -webkit-box 
+/*
+  We disable stylelint here since -webkit-box
   uses ellipsis for truncating which we need.
   https://caniuse.com/?search=line-clamp
 */
