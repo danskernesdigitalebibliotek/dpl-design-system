@@ -10,7 +10,7 @@ export default {
   argTypes: {
     textSuggestions: {
       name: "Text suggestions",
-      defaultValue: ["Item one", "Item two"],
+      defaultValue: ["Item one (author)", "Item two (work)"],
       control: { type: "array" },
     },
     categoryText: {
@@ -30,52 +30,25 @@ export default {
 const Template: ComponentStory<typeof AutosuggestText> = (
   args: AutosuggestTextProps
 ) => (
-  // apart from SuggestText, everything else is here just for the story context
-  // SuggestText style is directly dependent on the header and search field styling
-  <header className="header" style={{ height: "144px" }}>
-    <div className="header__logo-desktop">
-      <p className="text-body-medium-regular">Context</p>
-    </div>
-    <div className="header__menu">
-      <nav className="header__menu-first">
-        <p className="text-body-medium-regular">Context</p>
-      </nav>
-      <div className="header__menu-second">
-        <div className="header__menu-search">
-          <input
-            className="header__menu-search-input text-body-medium-regular"
-            type="text"
-            placeholder="This field is here just for context."
-          />
-          <img
-            className="header__menu-search-icon"
-            src="icons/basic/icon-search.svg"
-            alt="search icon"
-          />
-          <ul className="autosuggest pb-16">
-            <AutosuggestText {...args} />
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div className="header__clock">
-      <p className="text-body-medium-regular">Context</p>
-    </div>
-  </header>
+  <div className="header__menu-search">
+    <ul className="autosuggest pb-16">
+      <AutosuggestText {...args} />
+    </ul>
+  </div>
 );
 
-export const TextSuggestion = Template.bind({});
+export const Default = Template.bind({});
 
-export const TextSuggestionWithCategory = Template.bind({});
-TextSuggestionWithCategory.args = {
+export const MultipleLines = Template.bind({});
+MultipleLines.args = {
+  textSuggestions: [
+    "Lorem ipsum hal de pretty clanging scales, because seldom they have seemed seven over the top lorem ipsum hal de pretty clanging scales, because seldom they have seemed seven over the top lorem ipsum hal de pretty clanging scales, because seldom they have seemed (work)",
+    "Item two (work)",
+  ],
+};
+
+export const WithCategoryTag = Template.bind({});
+WithCategoryTag.args = {
   textSuggestions: ["Item one", "Item two"],
   categoryText: "Author",
-};
-export const MultipleLineTextSuggestion = Template.bind({});
-MultipleLineTextSuggestion.args = {
-  textSuggestions: [
-    "Lorem ipsum hal de pretty clanging scales, because seldom they have seemed seven over the top (work)",
-    "Lorem ipsum hal de pretty clanging scales, because seldom they have seemed seven over the top (work)",
-    "Author Name (author)",
-  ],
 };
