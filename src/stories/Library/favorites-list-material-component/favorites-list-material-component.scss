@@ -21,13 +21,15 @@
     text-align: center;
     padding: $s-lg;
 
+    &--left {
+      text-align: left;
+    }
+
     @include breakpoint-m {
       padding-bottom: $s-6xl;
     }
   }
-  &__title--left {
-    text-align: left;
-  }
+
 
   &__buttons {
     display: flex;
