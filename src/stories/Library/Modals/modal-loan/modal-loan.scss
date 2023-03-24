@@ -37,7 +37,7 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-loan__list-materials--bottom-buttons-visible {
-  padding-bottom: 75px;
+  padding-bottom: #{$s-75}px;
 }
 
 .modal-loan__buttons {
