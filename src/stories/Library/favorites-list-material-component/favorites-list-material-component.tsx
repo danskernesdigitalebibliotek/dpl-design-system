@@ -11,7 +11,7 @@ export type RecommenderProps = {
   title: string;
   bright: boolean;
 };
-// TODO: Create a method for this, as well as for recommender to apply brigt classes if available.
+
 const FavoritesListMaterialComponent: React.FC<RecommenderProps> = ({
   recommenderData,
   title,
