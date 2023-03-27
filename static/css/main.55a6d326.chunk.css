@@ -3520,7 +3520,7 @@ dl.list-description dd .link-tag {
   display: none;
   transition: opacity 0.3s;
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
 }
 .modal__screen-reader-description {
   position: absolute;
@@ -3636,13 +3636,13 @@ dl.list-description dd .link-tag {
 
 .modal-details__container {
   width: 100%;
-  overflow: scroll;
+  overflow: auto;
   max-width: 100%;
   padding-bottom: 44px;
 }
 @media (min-width: 768px) {
   .modal-details__container {
-    margin: 0 45px;
+    margin: 0;
     padding-bottom: 0;
   }
 }
@@ -3685,8 +3685,8 @@ dl.list-description dd .link-tag {
   margin-bottom: 16px;
 }
 
-/* 
-  We disable stylelint here since -webkit-box 
+/*
+  We disable stylelint here since -webkit-box
   uses ellipsis for truncating which we need.
   https://caniuse.com/?search=line-clamp
 */
@@ -3859,6 +3859,10 @@ dl.list-description dd .link-tag {
 .modal-loan__list-materials {
   display: grid;
   grid-row-gap: 8px;
+}
+
+.modal-loan__list-materials--bottom-buttons-visible {
+  padding-bottom: 75px;
 }
 
 .modal-loan__buttons {
@@ -6105,4 +6109,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.f3d2b314.chunk.css.map*/
+/*# sourceMappingURL=main.55a6d326.chunk.css.map*/
