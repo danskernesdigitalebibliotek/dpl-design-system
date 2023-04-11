@@ -49,7 +49,7 @@
 
 .favorites-list-mc-material {
   border: 1px solid $c-text-secondary-gray;
-  padding: #{$s-30}px;
+  padding: #{$s-xl}px;
   display: flex;
   width: 100%;
   position: relative;
@@ -61,23 +61,23 @@
 
   &__favourite {
     position: absolute;
-    top: #{$s-10}px;
-    right: #{$s-10}px;
+    top: #{$s-sm}px;
+    right: #{$s-sm}px;
   }
 
   &__cover-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: #{$s-10}px;
+    margin-top: #{$s-sm}px;
   }
 
   &__meta {
     position: absolute;
-    left: #{$s-10}px;
-    bottom: #{$s-10}px;
+    left: #{$s-sm}px;
+    bottom: #{$s-sm}px;
     width: 100%;
-    padding-right: #{$s-10}px;
+    padding-right: #{$s-sm}px;
   }
 
   &__title {
