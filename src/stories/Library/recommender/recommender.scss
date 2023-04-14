@@ -8,7 +8,7 @@
     color: $c-text-primary-black;
     border-color: $c-global-tertiary-1;
   }
-
+  /* stylelint-disable max-nesting-depth */
   &--triple-desktop {
     @include breakpoint-m {
       .recommender-material {
