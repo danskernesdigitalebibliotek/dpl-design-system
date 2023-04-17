@@ -8,7 +8,7 @@ import HorizontalTermLine, {
 } from "../horizontal-term-line/HorizontalTermLine";
 import { getCoverTint } from "../cover/helper";
 
-export type SearchResultItemProps = {
+export type CardListItemProps = {
   heartFill?: boolean;
   title: string;
   author: string;
@@ -18,7 +18,7 @@ export type SearchResultItemProps = {
   tintIndex: number;
 };
 
-export const SearchResultItem = ({
+export const CardListItem = ({
   heartFill,
   title,
   author,
@@ -26,7 +26,7 @@ export const SearchResultItem = ({
   horizontalTermLineData,
   availabilityLabels,
   tintIndex,
-}: SearchResultItemProps) => {
+}: CardListItemProps) => {
   const materialTypes: AvailabilityLabelPropsType["manifestationType"][] = [
     "Bog",
     "Ebog",
@@ -35,8 +35,8 @@ export const SearchResultItem = ({
   ];
 
   return (
-    <a href="/" className="search-result-item arrow arrow__hover--right-small">
-      <div className="search-result-item__cover">
+    <a href="/" className="card-list-item arrow arrow__hover--right-small">
+      <div className="card-list-item__cover">
         <Cover
           src="images/book_cover_3.jpg"
           size="small"
@@ -44,20 +44,20 @@ export const SearchResultItem = ({
           tint={getCoverTint(tintIndex)}
         />
       </div>
-      <div className="search-result-item__text">
-        <div className="search-result-item__meta">
+      <div className="card-list-item__text">
+        <div className="card-list-item__meta">
           <ButtonFavourite fill={heartFill} />
           {horizontalTermLineData && (
             <HorizontalTermLine {...horizontalTermLineData} />
           )}
         </div>
 
-        <h2 className="search-result-item__title text-header-h4 mb-4">
+        <h2 className="card-list-item__title text-header-h4 mb-4">
           <a href="">{title}</a>
         </h2>
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
       </div>
-      <div className="search-result-item__availability">
+      <div className="card-list-item__availability">
         {/* We render the amount of availability labels defined by the story. */}
         {Array(availabilityLabels)
           .fill(0)

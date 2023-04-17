@@ -1,5 +1,5 @@
 import { SearchResultTitle } from "./SearchResultTitle";
-import { SearchResultItemSkeleton } from "../search-result-item/SearchResultItemSkeleton";
+import { CardListItemSkeleton } from "../card-list-item/CardListItemSkeleton";
 
 export type SearchResultPageSkeletonProps = {
   title: string;
@@ -35,19 +35,19 @@ export const SearchResultPageSkeleton = ({
       </div>
       <ul className="search-result-page__list my-32">
         <li>
-          <SearchResultItemSkeleton />
+          <CardListItemSkeleton />
         </li>
         <li>
-          <SearchResultItemSkeleton />
+          <CardListItemSkeleton />
         </li>
         <li>
-          <SearchResultItemSkeleton />
+          <CardListItemSkeleton />
         </li>
         <li>
-          <SearchResultItemSkeleton />
+          <CardListItemSkeleton />
         </li>
         <li>
-          <SearchResultItemSkeleton />
+          <CardListItemSkeleton />
         </li>
       </ul>
     </div>

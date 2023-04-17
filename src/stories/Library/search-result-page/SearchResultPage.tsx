@@ -1,4 +1,4 @@
-import { SearchResultItem } from "../search-result-item/SearchResultItem";
+import { CardListItem } from "../card-list-item/CardListItem";
 import { SearchResultInfo } from "./SearchResultInfo";
 import ResultPager from "./ResultPager";
 import { SearchResultTitle } from "./SearchResultTitle";
@@ -17,7 +17,7 @@ export type SearchResultPageProps = {
 };
 
 const SearchResultList = data.searchResult.map((item, i) => {
-  return <SearchResultItem {...item} tintIndex={i} />;
+  return <CardListItem {...item} tintIndex={i} />;
 });
 
 export const SearchResultPage = ({
