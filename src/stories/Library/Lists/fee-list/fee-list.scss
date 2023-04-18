@@ -1,4 +1,4 @@
-.intermediate-list-page {
+.fee-list-page {
   background: $c-global-primary;
   padding: $s-md;
 
@@ -7,16 +7,16 @@
   }
 }
 
-.intermediate-list-bottom {
+.fee-list-bottom {
   display: flex;
   flex-direction: row;
 }
-.intermediate-list-bottom__paymenttypes {
+.fee-list-bottom__paymenttypes {
   flex: 1;
 }
-.intermediate-list-bottom__actions > p {
+.fee-list-bottom__actions > p {
   text-align: right;
 }
-.intermediate-list-bottom__actions > button {
+.fee-list-bottom__actions > button {
   margin-left: auto;
 }
