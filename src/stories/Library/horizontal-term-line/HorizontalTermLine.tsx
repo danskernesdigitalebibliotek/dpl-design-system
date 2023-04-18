@@ -1,5 +1,5 @@
-import clsx from "clsx";
 import { useState } from "react";
+import ButtonExpand from "../Buttons/button/button-expand/ButtonExpand";
 
 export interface HorizontalTermLineList {
   url: string;
@@ -45,19 +45,7 @@ const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
       ))}
 
       {showMoreButton && (
-        <button
-          type="button"
-          onClick={() => setShowMore(!showMore)}
-          aria-label="Expand More"
-        >
-          <img
-            className={clsx("horizontal-term-line__expand", {
-              "horizontal-term-line__expand--expanded": showMore,
-            })}
-            src="icons/collection/ExpandMore.svg"
-            alt=""
-          />
-        </button>
+        <ButtonExpand showMore={showMore} setShowMore={setShowMore} />
       )}
     </div>
   );
