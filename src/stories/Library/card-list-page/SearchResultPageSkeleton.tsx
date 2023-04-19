@@ -14,26 +14,26 @@ export const SearchResultPageSkeleton = ({
   title,
 }: SearchResultPageSkeletonProps) => {
   return (
-    <div className="search-result-page">
+    <div className="card-list-page">
       <SearchResultTitle
         title={title}
         totalResults={0}
         zeroResult={false}
         isLoading
       />
-      <div className="search-result-page__skeleton-facet-line--mobile">
+      <div className="card-list-page__skeleton-facet-line--mobile">
         <div className="ssc mt-48">
           <div className="ssc-head-line mb" />
           <div className="ssc-head-line mb" />
           <div className="ssc-head-line mb" />
         </div>
       </div>
-      <div className="search-result-page__skeleton-facet-line--desktop">
+      <div className="card-list-page__skeleton-facet-line--desktop">
         <div className="ssc mt-48">
           <div className="ssc-head-line mb" />
         </div>
       </div>
-      <ul className="search-result-page__list my-32">
+      <ul className="card-list-page__list my-32">
         <li>
           <CardListItemSkeleton />
         </li>

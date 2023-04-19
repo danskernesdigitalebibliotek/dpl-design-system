@@ -29,7 +29,7 @@ export const SearchResultPage = ({
   zeroResult,
 }: SearchResultPageProps) => {
   return (
-    <div className="search-result-page">
+    <div className="card-list-page">
       <SearchResultTitle
         title={title}
         totalResults={zeroResult ? 0 : totalResults}
@@ -48,9 +48,7 @@ export const SearchResultPage = ({
           />
           <FacetLine items={data.facetLineItems} />
           <FacetLineSelected items={data.selectedTerms} />
-          <div className="search-result-page__list my-32">
-            {SearchResultList}
-          </div>
+          <div className="card-list-page__list my-32">{SearchResultList}</div>
           <ResultPager
             currentResults={currentResults}
             totalResults={totalResults}
