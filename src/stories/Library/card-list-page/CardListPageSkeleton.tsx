@@ -1,7 +1,7 @@
 import { SearchResultTitle } from "./SearchResultTitle";
 import { CardListItemSkeleton } from "../card-list-item/CardListItemSkeleton";
 
-export type SearchResultPageSkeletonProps = {
+export type CardListPageSkeletonProps = {
   title: string;
   currentResults: number;
   totalResults: number;
@@ -10,9 +10,7 @@ export type SearchResultPageSkeletonProps = {
   zeroResult: boolean;
 };
 
-export const SearchResultPageSkeleton = ({
-  title,
-}: SearchResultPageSkeletonProps) => {
+export const CardListPageSkeleton = ({ title }: CardListPageSkeletonProps) => {
   return (
     <div className="card-list-page">
       <SearchResultTitle
