@@ -59,7 +59,7 @@
   }
 
   // set all buttons to the full width
-  &__button button {
+  &__button > * {
     width: 100%;
     @include breakpoint-m {
       width: 346px;
