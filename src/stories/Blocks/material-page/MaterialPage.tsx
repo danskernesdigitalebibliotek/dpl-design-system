@@ -1,4 +1,4 @@
-import { Disclosure } from "../../Library/disclosure/Disclosure";
+import Disclosure from "../../Library/disclosure/Disclosure";
 import { generateId } from "../../Library/horizontal-term-line/HorizontalTermLine";
 import ListDescription, {
   ListData,
@@ -34,7 +34,7 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
         ctaText={ctaText}
       />
       <MaterialDescription description={description} />
-      <Disclosure headline="Udgaver (2)" icon="Various">
+      <Disclosure headline="Udgaver (2)" icon="Various" headingLevel="h2">
         {amountOfRenders.map((item) => {
           return (
             <MaterialMainfestationItem
@@ -47,10 +47,10 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
           );
         })}
       </Disclosure>
-      <Disclosure headline="Detaljer" icon="Receipt">
+      <Disclosure headline="Detaljer" icon="Receipt" headingLevel="h2">
         <ListDescription data={fakeData as ListData} className="pl-80 pb-48" />
       </Disclosure>
-      <Disclosure headline="Anmeldelser" icon="Create">
+      <Disclosure headline="Anmeldelser" icon="Create" headingLevel="h2">
         <Review
           numberOfReviews={1}
           meta="Meta headline"

@@ -31,10 +31,10 @@ const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
 
   return (
     <div className="text-small-caption horizontal-term-line">
-      <p className="text-label-bold">
+      <h3 className="text-label-bold">
         {`${title}`}{" "}
         {subTitle && <span className="text-small-caption">{subTitle} </span>}
-      </p>
+      </h3>
 
       {itemsToShow.map((link, index) => (
         <span key={generateId(index)}>

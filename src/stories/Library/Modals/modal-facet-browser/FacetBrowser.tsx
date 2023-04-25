@@ -1,4 +1,4 @@
-import { Disclosure } from "../../disclosure/Disclosure";
+import Disclosure from "../../disclosure/Disclosure";
 import { Button } from "../../Buttons/button/Button";
 import Modal from "../Modal";
 import facetBrowserDummyData from "./facet-browser-dummy-data";
@@ -26,7 +26,7 @@ const FacetBrowser: React.FC<FacetBrowserProps> = ({
   >
     <section className="facet-browser">
       <header className="facet-browser__header">
-        <h3 className="text-header-h3">{title}</h3>
+        <h2 className="text-header-h3">{title}</h2>
         {clearAll && (
           <button className="link-tag cursor-pointer facet-browser__clear-btn">
             {clearAll}
@@ -40,6 +40,7 @@ const FacetBrowser: React.FC<FacetBrowserProps> = ({
           removeHeadlinePadding
           key={facet.title}
           headline={facet.title}
+          headingLevel="h3"
         >
           <div className="facet-browser__facet-group">
             {facet.tags.map((tag) => (

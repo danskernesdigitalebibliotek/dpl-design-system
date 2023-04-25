@@ -90,10 +90,13 @@
 @import "./src/stories/Library/Lists/list-intermediates/list-intermediates";
 @import "./src/stories/Library/instant-loan/instant-loan";
 @import "./src/stories/Library/scroll-lock-background/scroll-lock-background";
+
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";
 @import "./src/stories/Library/autosuggest-text/autosuggest-text";
 @import "./src/stories/Library/autosuggest-material/autosuggest-material";
+@import "./src/stories/Library/favorites-list-material-component/favorites-list-material-component";
+
 
 // Blocks
 @import "./src/stories/Blocks/footer/footer";

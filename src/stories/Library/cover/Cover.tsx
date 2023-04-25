@@ -29,7 +29,13 @@ const Cover: FC<CoverProps> = ({
     // Images inside links must have an non-empty alt text to meet accessibility requirements.
     // Only render the cover as a link if we have both an url and a description.
     return (
-      <a className={classes.wrapper} href={coverUrl} aria-label={ariaLabel}>
+      <a
+        className={classes.wrapper}
+        href={coverUrl}
+        aria-label={ariaLabel}
+        aria-labelledby="cover labelled by"
+        title="cover title text"
+      >
         <CoverImage
           setImageLoaded={() => setImageLoaded(true)}
           src={src}

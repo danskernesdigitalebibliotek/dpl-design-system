@@ -20,7 +20,7 @@
   display: none;
   transition: opacity 0.3s;
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
 
   &__screen-reader-description {
     @include hide-visually;

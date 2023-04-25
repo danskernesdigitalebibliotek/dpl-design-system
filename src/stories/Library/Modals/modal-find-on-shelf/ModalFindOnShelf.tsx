@@ -1,4 +1,4 @@
-import { Disclosure } from "../../disclosure/Disclosure";
+import Disclosure from "../../disclosure/Disclosure";
 import ListFindOnShelf from "../../Lists/list-find-on-shelf/ListFindOnShelf";
 import Modal from "../Modal";
 import { Dropdown } from "../../dropdown/Dropdown";
@@ -63,6 +63,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
       {branchesArray.map((branchKey) => {
         return (
           <Disclosure
+            headingLevel="h2"
             withAvailability
             fullWidth
             headline="Bibliotek fliale navn"

@@ -36,6 +36,10 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
   grid-row-gap: 8px;
 }
 
+.modal-loan__list-materials--bottom-buttons-visible {
+  padding-bottom: #{$s-75}px;
+}
+
 .modal-loan__buttons {
   display: flex;
   grid-gap: 24px;
