@@ -59,13 +59,10 @@ export const Default = Template.bind({});
 
 export const TwoItems = Template.bind({});
 TwoItems.args = {
-  materialSuggestions: [
-    autosuggestMaterialSuggestions[0],
-    autosuggestMaterialSuggestions[1],
-  ],
+  materialSuggestions: autosuggestMaterialSuggestions.slice(0, 2),
 };
 
 export const SingleItem = Template.bind({});
 SingleItem.args = {
-  materialSuggestions: [autosuggestMaterialSuggestions[0]],
+  materialSuggestions: autosuggestMaterialSuggestions.slice(0, 1),
 };
