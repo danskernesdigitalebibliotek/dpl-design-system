@@ -1,20 +1,9 @@
 .autosuggest {
-  background-color: $c-global-primary;
-  outline: 1px solid $c-global-tertiary-1;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: calc(100% + 1px);
-  z-index: 1;
-
-  @include breakpoint-m {
-    padding-top: $s-md;
-  }
-
-  &__text {
+  &__text-item {
+    min-height: 40px;
+    width: 100%;
     display: flex;
     align-items: center;
-    min-height: 40px;
 
     @include breakpoint-m {
       // Because the main autosuggest is a prominent feature we don't want the hover
@@ -30,10 +19,19 @@
 
     @include breakpoint-l {
       height: 40px;
+      padding-right: $s-lg;
     }
 
     &--highlight {
       background-color: $c-global-secondary;
+    }
+  }
+
+  &__text {
+    @include breakpoint-m {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 }
