@@ -18,6 +18,18 @@
       }
     }
 
+    &.autosuggest__material-item--two {
+      @include breakpoint-m {
+        width: calc(100% / 2);
+      }
+    }
+
+    &.autosuggest__material-item--one {
+      @include breakpoint-m {
+        width: 100%;
+      }
+    }
+
     &--highlight {
       background-color: $c-global-secondary;
     }
