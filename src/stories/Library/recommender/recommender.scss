@@ -3,15 +3,23 @@
   color: $c-text-primary-white;
   border-color: $c-text-secondary-gray;
 
-  @include breakpoint-m {
-    padding: $s-6xl;
-  }
-
   &--bright {
     background-color: $c-global-primary;
     color: $c-text-primary-black;
     border-color: $c-global-tertiary-1;
+  }
+  /* stylelint-disable max-nesting-depth */
+  &--triple-desktop {
+    @include breakpoint-m {
+      .recommender-material {
+        &:last-of-type {
+          display: none;
+        }
+      }
+    }
+  }
 
+  &--padding-desktop {
     @include breakpoint-m {
       padding: $s-6xl;
     }
@@ -25,15 +33,32 @@
       padding-bottom: $s-6xl;
     }
   }
-  &__title--left {
+
+  &__left-title {
     text-align: left;
+    padding-left: $s-md;
+
+    @include breakpoint-m {
+      padding-left: $s-4xl;
+    }
   }
 
   &__buttons {
     display: flex;
     justify-content: end;
     margin-bottom: $s-md;
+    margin-right: $s-md;
     gap: $s-md;
+  }
+
+  &__triple-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+
+    @include breakpoint-m {
+      grid-template-columns: 33.33% 33.33% 33.33%;
+    }
   }
 
   &__grid {
@@ -42,7 +67,7 @@
     grid-template-rows: 50% 50%;
 
     @include breakpoint-m {
-      grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-template-columns: 25% 25% 25% 25%;
     }
   }
 }
@@ -54,12 +79,6 @@
   width: 100%;
   position: relative;
   height: 350px;
-
-  @include breakpoint-m {
-    &:last-of-type {
-      display: none;
-    }
-  }
 
   &--bright {
     border: 1px solid $c-global-tertiary-1;

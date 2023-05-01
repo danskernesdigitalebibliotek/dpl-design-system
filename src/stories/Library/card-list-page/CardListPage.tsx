@@ -1,13 +1,13 @@
-import { SearchResultItem } from "../search-result-item/SearchResultItem";
+import { CardListItem } from "../card-list-item/CardListItem";
 import { SearchResultInfo } from "./SearchResultInfo";
 import ResultPager from "./ResultPager";
 import { SearchResultTitle } from "./SearchResultTitle";
 import { SearchResultZero } from "./SearchResultZero";
 import FacetLine from "./FacetLine";
 import FacetLineSelected from "./FacetLineSelectedTerms";
-import data from "./SearchResultPageData";
+import data from "./CardListPageData";
 
-export type SearchResultPageProps = {
+export type CardListPageProps = {
   title: string;
   currentResults: number;
   totalResults: number;
@@ -17,19 +17,19 @@ export type SearchResultPageProps = {
 };
 
 const SearchResultList = data.searchResult.map((item, i) => {
-  return <SearchResultItem {...item} tintIndex={i} />;
+  return <CardListItem {...item} tintIndex={i} />;
 });
 
-export const SearchResultPage = ({
+export const CardListPage = ({
   title,
   linkName,
   linkTotalResults,
   currentResults,
   totalResults,
   zeroResult,
-}: SearchResultPageProps) => {
+}: CardListPageProps) => {
   return (
-    <div className="search-result-page">
+    <div className="card-list-page">
       <SearchResultTitle
         title={title}
         totalResults={zeroResult ? 0 : totalResults}
@@ -48,9 +48,7 @@ export const SearchResultPage = ({
           />
           <FacetLine items={data.facetLineItems} />
           <FacetLineSelected items={data.selectedTerms} />
-          <div className="search-result-page__list my-32">
-            {SearchResultList}
-          </div>
+          <div className="card-list-page__list my-32">{SearchResultList}</div>
           <ResultPager
             currentResults={currentResults}
             totalResults={totalResults}

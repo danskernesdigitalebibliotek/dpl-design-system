@@ -40,4 +40,4 @@ client side or server side.
 Because we want to use existing styling setup in conjunction
 with the Skeleton Screen Classes we sometimes need to ignore the existing
 BEM rules that we normally comply to.
-See eg. the [search result styling](../src/stories/Library/search-result-item/search-result-item-skeleton.scss).
+See eg. the [search result styling](../src/stories/Library/card-list-item/card-list-item-skeleton.scss).

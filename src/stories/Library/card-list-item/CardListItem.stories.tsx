@@ -1,12 +1,11 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-
-import { SearchResultItem } from "./SearchResultItem";
-import { SearchResultItemSkeleton } from "./SearchResultItemSkeleton";
+import { CardListItem } from "./CardListItem";
+import { CardListItemSkeleton } from "./CardListItemSkeleton";
 
 export default {
-  title: "Library / Search Result Item",
-  component: SearchResultItem,
+  title: "Library / Card List Item",
+  component: CardListItem,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -50,10 +49,10 @@ export default {
       defaultValue: 3,
     },
   },
-} as ComponentMeta<typeof SearchResultItem>;
+} as ComponentMeta<typeof CardListItem>;
 
-export const Item: ComponentStory<typeof SearchResultItem> = (args) => {
-  return <SearchResultItem {...args} />;
+export const Item: ComponentStory<typeof CardListItem> = (args) => {
+  return <CardListItem {...args} />;
 };
 
 export const ContentOverload = Item.bind({});
@@ -64,8 +63,6 @@ ContentOverload.args = {
   availabilityLabels: 25,
 };
 
-export const SkeletonItem: ComponentStory<
-  typeof SearchResultItemSkeleton
-> = () => {
-  return <SearchResultItemSkeleton />;
+export const SkeletonItem: ComponentStory<typeof CardListItemSkeleton> = () => {
+  return <CardListItemSkeleton />;
 };

@@ -12,6 +12,7 @@ const Cover: FC<CoverProps> = ({
   coverUrl,
   description,
   shadow,
+  ariaLabel = "Link to the material",
 }) => {
   const [imageLoaded, setImageLoaded] = useState<boolean | null>(null);
 
@@ -31,7 +32,7 @@ const Cover: FC<CoverProps> = ({
       <a
         className={classes.wrapper}
         href={coverUrl}
-        aria-label="cover aria label"
+        aria-label={ariaLabel}
         aria-labelledby="cover labelled by"
         title="cover title text"
       >
