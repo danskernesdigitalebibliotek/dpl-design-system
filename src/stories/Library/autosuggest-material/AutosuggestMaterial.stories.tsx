@@ -5,7 +5,7 @@ import {
   AutosuggestMaterialProps,
 } from "./AutosuggestMaterial";
 
-const autosuggestMaterialSuggestions = [
+export const autosuggestMaterialSuggestions = [
   {
     cover: "images/book_cover_1.jpg",
     title: "De uadskillelige",
@@ -35,6 +35,11 @@ export default {
       name: "Material suggestions",
       defaultValue: autosuggestMaterialSuggestions,
       control: { type: "array" },
+    },
+    classes: {
+      name: "Classes",
+      defaultValue: undefined,
+      control: { type: "text" },
     },
   },
   parameters: {
