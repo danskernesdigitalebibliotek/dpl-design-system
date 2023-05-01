@@ -2703,6 +2703,20 @@ a.cover {
   outline: #000 5px auto;
 }
 
+.button-expand {
+  cursor: pointer;
+  align-self: center;
+}
+.button-expand__image {
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.button-expand__image.button-expand__image--expanded {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
 .warning-bar {
   display: flex;
   align-items: center;
@@ -4465,7 +4479,7 @@ dl.list-description dd .link-tag {
 
 .horizontal-term-line {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
   white-space: nowrap;
   grid-gap: 8px;
@@ -4473,22 +4487,6 @@ dl.list-description dd .link-tag {
 }
 .horizontal-term-line * {
   font-size: 12px;
-}
-.horizontal-term-line__list {
-  display: flex;
-  flex-wrap: wrap;
-  grid-gap: 8px;
-  gap: 8px;
-}
-.horizontal-term-line__expand {
-  cursor: pointer;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-.horizontal-term-line__expand--expanded {
-  -webkit-transform: scaleY(-1);
-          transform: scaleY(-1);
 }
 
 /* This is a placeholder file for future styling */
@@ -6240,4 +6238,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.83567379.chunk.css.map*/
+/*# sourceMappingURL=main.15bd7b94.chunk.css.map*/
