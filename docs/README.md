@@ -1,37 +1,3 @@
-<!-- markdownlint-disable-next-line first-line-h1 -->
-![https://detdigitalefolkebibliotek.dk/sites/default/files/ddf_logo_rgb_blue_web.png](https://detdigitalefolkebibliotek.dk/sites/default/files/ddf_logo_rgb_blue_web.png)
-
-<!-- markdownlint-disable -->
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [DPL Design System](#dpl-design-system)
-  - [Requirements](#requirements)
-    - [Manual requirements](#manual-requirements)
-  - [Installation](#installation)
-    - [Installation outside docker](#installation-outside-docker)
-  - [Development](#development)
-    - [Development without docker](#development-without-docker)
-  - [Usage](#usage)
-    - [NPM package](#npm-package)
-  - [Deployment and releases](#deployment-and-releases)
-    - [Tagged releases](#tagged-releases)
-      - [Usage: npm package](#usage-npm-package)
-      - [Usage: Release file](#usage-release-file)
-    - [Branch releases](#branch-releases)
-      - [Usage: npm package](#usage-npm-package-1)
-      - [Usage: Release file](#usage-release-file-1)
-  - [Storybook](#storybook)
-  - [Chromatic](#chromatic)
-    - [What is Storybook](#what-is-storybook)
-      - [How to use](#how-to-use)
-      - [Addons](#addons)
-      - [Important to notice](#important-to-notice)
-        - [Internal classes](#internal-classes)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<!-- markdownlint-enable -->
-
 # DPL Design System
 
 DPL Design System is a library of UI components that should be used as a common

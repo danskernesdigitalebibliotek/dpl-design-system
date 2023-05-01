@@ -1,3 +1,6 @@
+<!-- markdownlint-disable-next-line first-line-h1 -->
+![https://detdigitalefolkebibliotek.dk/sites/default/files/ddf_logo_rgb_blue_web.png](https://detdigitalefolkebibliotek.dk/sites/default/files/ddf_logo_rgb_blue_web.png)
+
 # DPL Design System
 
 DPL Design System is a library of UI components that should be used as a common
