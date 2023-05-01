@@ -2,7 +2,7 @@
 // we deliberately not follow the BEM naming convention here.
 /* stylelint-disable plugin/stylelint-bem-namics */
 
-.search-result-item {
+.card-list-item {
   &.ssc {
     grid-template-columns: min-content 1fr;
   }
