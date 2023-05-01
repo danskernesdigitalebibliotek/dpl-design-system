@@ -1,10 +1,9 @@
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 import { Autosuggest, AutosuggestProps } from "./Autosuggest";
-import AutosuggestMaterialStories, {
-  autosuggestMaterialSuggestions,
-} from "../../Library/autosuggest-material/AutosuggestMaterial.stories";
+import AutosuggestMaterialStories from "../../Library/autosuggest-material/AutosuggestMaterial.stories";
 import AutosuggestTextStories from "../../Library/autosuggest-text/AutosuggestText.stories";
+import { autosuggestMaterialSuggestions } from "../../Library/autosuggest-material/helper";
 
 export default {
   title: "Blocks / Autosuggest",
