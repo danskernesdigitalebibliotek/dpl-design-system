@@ -1,7 +1,9 @@
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 import { Autosuggest, AutosuggestProps } from "./Autosuggest";
-import AutosuggestMaterialStories from "../../Library/autosuggest-material/AutosuggestMaterial.stories";
+import AutosuggestMaterialStories, {
+  autosuggestMaterialSuggestions,
+} from "../../Library/autosuggest-material/AutosuggestMaterial.stories";
 import AutosuggestTextStories from "../../Library/autosuggest-text/AutosuggestText.stories";
 
 export default {
@@ -57,3 +59,25 @@ const Template: ComponentStory<typeof Autosuggest> = (
 );
 
 export const Default = Template.bind({});
+
+const getStoryArguments = (suggestions: number) => {
+  return {
+    ...AutosuggestTextStories.argTypes,
+    materialSuggestions: {
+      ...{ ...AutosuggestMaterialStories.argTypes?.materialSuggestions },
+      defaultValue: autosuggestMaterialSuggestions.slice(0, suggestions),
+    },
+    classes: {
+      ...{ ...AutosuggestMaterialStories.argTypes?.classes },
+      defaultValue: `autosuggest__material-item--${
+        suggestions === 2 ? "two" : ""
+      }${suggestions === 1 ? "one" : ""}`,
+    },
+  };
+};
+
+export const TwoMaterials = Template.bind({});
+TwoMaterials.argTypes = getStoryArguments(2);
+
+export const OneMaterial = Template.bind({});
+OneMaterial.argTypes = getStoryArguments(1);
