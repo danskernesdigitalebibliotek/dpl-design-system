@@ -2931,6 +2931,7 @@ a.cover {
     margin-top: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-height: 30px;
   }
 }
 
@@ -6238,4 +6239,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.15bd7b94.chunk.css.map*/
+/*# sourceMappingURL=main.6155d118.chunk.css.map*/
