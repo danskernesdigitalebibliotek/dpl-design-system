@@ -60,11 +60,11 @@ const Recommender: React.FC<RecommenderProps> = ({
       >
         {recommenderData.map(({ title: recTitle, filled, authors }) => (
           <li
-            className={`recommender-material ${
-              bright ? "`recommender-material--bright" : ""
+            className={`simple-material ${
+              bright ? "`simple-material--bright" : ""
             }`}
           >
-            <div className="recommender-material__favourite">
+            <div className="simple-material__favourite">
               <div className="button-favourite button-favourite">
                 <SvgIcon
                   className={`icon-favourite icon-favourite${
@@ -77,7 +77,7 @@ const Recommender: React.FC<RecommenderProps> = ({
                 />
               </div>
             </div>
-            <div className="recommender-material__cover-container">
+            <div className="simple-material__cover-container">
               <Cover
                 src="images/book_cover_3.jpg"
                 size="medium"
@@ -85,9 +85,9 @@ const Recommender: React.FC<RecommenderProps> = ({
                 tint="120"
               />
             </div>
-            <div className="recommender-material__meta">
-              <a className="recommender-material__title">{recTitle}</a>
-              <div className="recommender-material__author">{authors}</div>
+            <div className="simple-material__meta">
+              <a className="simple-material__title">{recTitle}</a>
+              <div className="simple-material__author">{authors}</div>
             </div>
           </li>
         ))}

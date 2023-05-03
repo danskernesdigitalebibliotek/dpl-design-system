@@ -11,7 +11,7 @@
   /* stylelint-disable max-nesting-depth */
   &--triple-desktop {
     @include breakpoint-m {
-      .recommender-material {
+      .simple-material {
         &:last-of-type {
           display: none;
         }
@@ -72,7 +72,7 @@
   }
 }
 
-.recommender-material {
+.simple-material {
   border: 1px solid $c-text-secondary-gray;
   padding: 30px;
   display: flex;
