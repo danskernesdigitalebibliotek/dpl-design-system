@@ -18,7 +18,7 @@ export const AutosuggestMaterial: React.FC<AutosuggestMaterialProps> = ({
         return (
           <li className="autosuggest__material-item">
             <div className="autosuggest__material-card">
-              <Cover size="xsmall" animate src={item.cover} shadow />
+              <Cover size="xsmall" animate src={item.cover} />
               <div className="autosuggest__info">
                 <div className="text-body-medium-medium autosuggest__title">
                   {item.title}

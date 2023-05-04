@@ -1,65 +1,50 @@
 import clsx from "clsx";
-import { FC, useState } from "react";
-import CoverImage from "./CoverImage";
-import { tintClasses } from "./helper";
-import { CoverProps } from "./types";
 
-const Cover: FC<CoverProps> = ({
-  size,
-  animate,
-  src,
-  tint,
-  coverUrl,
-  description,
-  shadow,
-  ariaLabel = "Link to the material",
-}) => {
-  const [imageLoaded, setImageLoaded] = useState<boolean | null>(null);
+export type CoverProps = {
+  src: string;
+  animate: boolean;
+  size: "xsmall" | "small" | "medium" | "large" | "xlarge";
+  tint?: "20" | "40" | "80" | "100" | "120";
+  coverUrl?: string;
+  description?: string;
+};
 
-  const classes = {
-    wrapper: clsx(
-      "cover",
-      `cover--size-${size}`,
-      `cover--aspect-${size}`,
-      imageLoaded || tintClasses[tint || "default"]
-    ),
+const Cover = (props: CoverProps) => {
+  const { size, animate, src, tint, coverUrl, description } = props;
+
+  type TintClassesType = {
+    [key: string]: string;
+  };
+  const tintClasses: TintClassesType = {
+    default: "bg-identity-tint-120",
+    "120": "bg-identity-tint-120",
+    "100": "bg-identity-tint-100",
+    "80": "bg-identity-tint-80",
+    "40": "bg-identity-tint-40",
+    "20": "bg-identity-tint-20",
   };
 
-  if (coverUrl && description) {
-    // Images inside links must have an non-empty alt text to meet accessibility requirements.
-    // Only render the cover as a link if we have both an url and a description.
-    return (
-      <a
-        className={classes.wrapper}
-        href={coverUrl}
-        aria-label={ariaLabel}
-        aria-labelledby="cover labelled by"
-        title="cover title text"
-      >
-        <CoverImage
-          setImageLoaded={() => setImageLoaded(true)}
-          src={src}
-          description={description}
-          size={size}
-          animate={animate}
-          tint={tint}
-          shadow={shadow}
-        />
-      </a>
-    );
-  }
+  const classes = {
+    wrapper: clsx(`cover cover--${size}`, tintClasses[tint || "default"], {
+      cover__animate: animate,
+    }),
+  };
+
+  const materialCover = src && <img src={src} alt={description || ""} />;
 
   return (
-    <div className={classes.wrapper}>
-      <CoverImage
-        setImageLoaded={() => setImageLoaded(true)}
-        src={src}
-        description={description}
-        size={size}
-        animate={animate}
-        tint={tint}
-        shadow={shadow}
-      />
+    <div className="cover-container">
+      {/**
+       * Images inside links must have an non-empty alt text to meet accessibility requirements.
+       * Only render the cover as a link if we have both an url and a description.
+       */}
+      {coverUrl && description ? (
+        <a href={coverUrl} className={classes.wrapper}>
+          {materialCover}
+        </a>
+      ) : (
+        <span className={classes.wrapper}>{materialCover}</span>
+      )}
     </div>
   );
 };

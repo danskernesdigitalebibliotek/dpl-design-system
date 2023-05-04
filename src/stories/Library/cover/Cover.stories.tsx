@@ -1,6 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-
 import Cover from "./Cover";
 
 export default {
@@ -70,11 +69,4 @@ CoverLinked.args = {
   tint: "80",
   coverUrl: "/",
   description: "Cover of Audrey Hepburn",
-};
-
-export const SrcNotWork = Template.bind({});
-SrcNotWork.args = {
-  src: "abe",
-  tint: "100",
-  coverUrl: "",
 };
