@@ -1,6 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-
 import { ListMaterials } from "./ListMaterials";
 
 export default {
@@ -30,14 +29,12 @@ const Template: ComponentStory<typeof ListMaterials> = (args) => (
 
 export const Item = Template.bind({});
 Item.args = {
+  year: "2001",
   title: "Audrey Hepburn",
-  author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
+  author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
+  statusMessage: "The item cannot be renewed further",
   isChecked: true,
-  canBeRenewed: true,
-  statusDelivery: {
-    label: "AFLEVERES 20.11.21",
-    status: "neutral",
-  },
+  disabled: true,
   statusMaterialType: {
     label: "bog",
     status: "outline",
