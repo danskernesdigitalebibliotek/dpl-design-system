@@ -1,5 +1,6 @@
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
+import clsx from "clsx";
 import { Autosuggest, AutosuggestProps } from "./Autosuggest";
 import AutosuggestMaterialStories from "../../Library/autosuggest-material/AutosuggestMaterial.stories";
 import AutosuggestTextStories from "../../Library/autosuggest-text/AutosuggestText.stories";
@@ -68,9 +69,10 @@ const getStoryArguments = (suggestions: number) => {
     },
     classes: {
       ...{ ...AutosuggestMaterialStories.argTypes?.classes },
-      defaultValue: `autosuggest__material-item--${
-        suggestions === 2 ? "two" : ""
-      }${suggestions === 1 ? "one" : ""}`,
+      defaultValue: clsx({
+        "autosuggest__material-item--two": suggestions === 2,
+        "autosuggest__material-item--one": suggestions === 1,
+      }),
     },
   };
 };
