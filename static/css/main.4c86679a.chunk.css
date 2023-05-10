@@ -5103,6 +5103,16 @@ dl.list-description dd .link-tag {
     cursor: pointer;
   }
 }
+@media (min-width: 1024px) {
+  .autosuggest__material-item.autosuggest__material-item--two {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .autosuggest__material-item.autosuggest__material-item--one {
+    width: 100%;
+  }
+}
 .autosuggest__material-item--highlight {
   background-color: #eee9e5;
 }
@@ -6239,4 +6249,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.6155d118.chunk.css.map*/
+/*# sourceMappingURL=main.4c86679a.chunk.css.map*/
