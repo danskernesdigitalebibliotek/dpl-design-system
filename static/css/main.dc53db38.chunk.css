@@ -4169,9 +4169,6 @@ dl.list-description dd .link-tag {
 
 /* stylelint-disable plugin/stylelint-bem-namics */
 /* stylelint-disable max-nesting-depth */
-.material-page.ssc .material-header__cover .ssc-square {
-  width: 300px;
-}
 .material-page.ssc .material-header__content {
   height: 605px;
 }
@@ -6249,4 +6246,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.262e03bd.chunk.css.map*/
+/*# sourceMappingURL=main.dc53db38.chunk.css.map*/
