@@ -676,7 +676,7 @@ input[type=reset] {
   }
 }
 
-dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
+.list-materials__status__note-mobile, .list-materials__status__note-desktop, dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
 .text-small-caption {
   font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
@@ -686,20 +686,20 @@ dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
   text-align: left;
 }
 @media (min-width: 768px) {
-  dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
+  .list-materials__status__note-mobile, .list-materials__status__note-desktop, dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
 .text-small-caption {
     line-height: 160%;
   }
 }
 @media (min-width: 1024px) {
-  dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
+  .list-materials__status__note-mobile, .list-materials__status__note-desktop, dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
 .text-small-caption {
     font-size: 12px;
     line-height: 120%;
   }
 }
 @media (min-width: 1920px) {
-  dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
+  .list-materials__status__note-mobile, .list-materials__status__note-desktop, dl.list-description dd .link-tag, dl.list-description, .list-reservation__note,
 .text-small-caption {
     font-size: 14px;
     line-height: 130%;
@@ -3318,8 +3318,23 @@ dl.list-description dd .link-tag {
   align-items: center;
   grid-gap: 16px;
 }
-.list-materials__status .text-small-caption {
-  color: #484848;
+
+.list-materials__status__note-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .list-materials__status__note-desktop {
+    display: flex;
+  }
+}
+
+.list-materials__status__note-mobile {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .list-materials__status__note-mobile {
+    display: none;
+  }
 }
 
 .list-materials__content-status {
@@ -6246,4 +6261,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.dc53db38.chunk.css.map*/
+/*# sourceMappingURL=main.45e51a95.chunk.css.map*/
