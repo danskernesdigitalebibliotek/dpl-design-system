@@ -1,6 +1,5 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-
 import { ModalLoan } from "./ModalLoan";
 
 export default {
