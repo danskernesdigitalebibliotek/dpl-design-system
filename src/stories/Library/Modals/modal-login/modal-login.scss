@@ -1,6 +1,11 @@
 .modal-login {
-  flex-direction: column;
-  place-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &--authenticated {
+    align-items: baseline;
+  }
 
   &__container {
     display: grid;
