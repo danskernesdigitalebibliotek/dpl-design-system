@@ -52,7 +52,7 @@ export const CardListItem = ({
           )}
         </div>
 
-        <h2 className="card-list-item__title text-header-h4 mb-4">
+        <h2 className="card-list-item__title text-header-h4">
           <a href="">{title}</a>
         </h2>
         <p className="text-small-caption">{`Af ${author} (${year})`}</p>
