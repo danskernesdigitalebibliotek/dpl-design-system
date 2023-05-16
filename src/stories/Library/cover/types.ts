@@ -6,4 +6,5 @@ export type CoverProps = {
   coverUrl?: string;
   description?: string;
   shadow?: boolean;
+  ariaLabel?: string;
 };

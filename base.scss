@@ -32,14 +32,13 @@
 @import "./src/stories/Library/Icons/icon-favourite/icon-favourite";
 @import "./src/stories/Library/Buttons/button-favourite/button-favourite";
 @import "./src/stories/Library/Buttons/icon-button/icon-button";
+@import "./src/stories/Library/Buttons/button/button-expand/button-expand";
 @import "./src/stories/Library/warning-status/warning-status";
 @import "./src/stories/Library/availability-label/availability-label";
 @import "./src/stories/Library/avatar/avatar";
-@import "./src/stories/Library/autosuggest-text/autosuggest-text";
-@import "./src/stories/Library/autosuggest-material/autosuggest-material";
 @import "./src/stories/Library/material-card/material-card";
-@import "./src/stories/Library/search-result-item/search-result-item";
-@import "./src/stories/Library/search-result-item/search-result-item-skeleton";
+@import "./src/stories/Library/card-list-item/card-list-item";
+@import "./src/stories/Library/card-list-item/card-list-item-skeleton";
 @import "./src/stories/Library/Lists/list-reservation/list-reservation";
 @import "./src/stories/Library/Lists/list-dashboard/list-dashboard";
 @import "./src/stories/Library/Lists/list-description/list-description";
@@ -69,16 +68,16 @@
 @import "./src/stories/Library/material-description/material-description";
 @import "./src/stories/Library/disclosure/disclosure";
 @import "./src/stories/Library/horizontal-term-line/horizontal-term-line";
-@import "./src/stories/Library/search-result-page/search-result-info";
-@import "./src/stories/Library/search-result-page/search-result-page";
-@import "./src/stories/Library/search-result-page/search-result-page-skeleton";
+@import "./src/stories/Library/card-list-page/search-result-info";
+@import "./src/stories/Library/card-list-page/card-list-page";
+@import "./src/stories/Library/card-list-page/card-list-page-skeleton";
 @import "./src/stories/Library/loan-list-page/loan-list-page";
 @import "./src/stories/Library/patron-page/patron-page";
 @import "./src/stories/Library/reservation-list-page/reservation-list-page";
-@import "./src/stories/Library/search-result-page/result-pager";
-@import "./src/stories/Library/search-result-page/search-result-title";
-@import "./src/stories/Library/search-result-page/search-result-zero";
-@import "./src/stories/Library/search-result-page/facet-line";
+@import "./src/stories/Library/card-list-page/result-pager";
+@import "./src/stories/Library/card-list-page/search-result-title";
+@import "./src/stories/Library/card-list-page/search-result-zero";
+@import "./src/stories/Library/card-list-page/facet-line";
 @import "./src/stories/Library/review/review";
 @import "./src/stories/Library/shadows/shadows";
 @import "./src/stories/Library/boxed-text/boxed-text";
@@ -88,11 +87,15 @@
 @import "./src/stories/Library/Modals/modal-infomedia/infomedia";
 @import "./src/stories/Library/pincode-container/pincode-container";
 @import "./src/stories/Library/promo-bar/promo-bar";
-@import "./src/stories/Library/recommender/recommender";
+@import "./src/stories/Library/recommenders/recommenders";
 @import "./src/stories/Library/Lists/fee-list/fee-list";
 @import "./src/stories/Library/instant-loan/instant-loan";
 @import "./src/stories/Library/scroll-lock-background/scroll-lock-background";
-@import "./src/stories/Library/favorites-list-material-component/favorites-list-material-component";
+
+// Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
+@import "./src/stories/Blocks/autosuggest/autosuggest";
+@import "./src/stories/Library/autosuggest-text/autosuggest-text";
+@import "./src/stories/Library/autosuggest-material/autosuggest-material";
 
 // Blocks
 @import "./src/stories/Blocks/footer/footer";

@@ -1,0 +1,12 @@
+.button-expand {
+  cursor: pointer;
+  align-self: center;
+
+  &__image {
+    transition: transform 0.3s ease-in-out;
+
+    &.button-expand__image--expanded {
+      transform: scaleY(-1);
+    }
+  }
+}

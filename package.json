@@ -23,8 +23,7 @@
     "chromatic": "npx chromatic --exit-zero-on-changes",
     "lint": "concurrently 'yarn:js:lint' 'yarn:css:lint'",
     "lint:markdown": "markdownlint-cli2",
-    "lint:markdown:fix": "markdownlint-cli2-fix",
-    "build:doc": "doctoc README.md"
+    "lint:markdown:fix": "markdownlint-cli2-fix"
   },
   "browserslist": {
     "production": [
@@ -61,7 +60,6 @@
     "chokidar-cli": "^3.0.0",
     "clsx": "^1.1.1",
     "concurrently": "^7.2.2",
-    "doctoc": "^2.2.0",
     "eslint": "^8.19.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
