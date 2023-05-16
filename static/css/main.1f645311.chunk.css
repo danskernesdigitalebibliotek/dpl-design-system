@@ -3819,8 +3819,12 @@ dl.list-description dd .link-tag {
 }
 
 .modal-login {
-  flex-direction: column;
-  place-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.modal-login--authenticated {
+  align-items: baseline;
 }
 .modal-login__container {
   display: grid;
@@ -6165,4 +6169,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.b513aa82.chunk.css.map*/
+/*# sourceMappingURL=main.1f645311.chunk.css.map*/
