@@ -38,7 +38,10 @@ export const ModalProfile: React.FC<ModalProfileProps> = ({
         />
         <div className="modal-profile__notifications">
           {notifications.map((item, index) => (
-            <div key={index} className="modal-profile__notification-item mx-32">
+            <div
+              key={index}
+              className="modal-profile__notification-item mx-32 mt-32"
+            >
               <ListDashboard
                 title={item.title}
                 number={item.number}
