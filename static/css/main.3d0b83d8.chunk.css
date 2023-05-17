@@ -4985,30 +4985,30 @@ dl.list-description dd .link-tag {
   color: inherit;
 }
 
-.intermediate-list-page {
+.fee-list-page {
   background: #f6f5f0;
   padding: 16px;
 }
 @media (min-width: 1024px) {
-  .intermediate-list-page {
+  .fee-list-page {
     padding: 112px;
   }
 }
 
-.intermediate-list-bottom {
+.fee-list-bottom {
   display: flex;
   flex-direction: row;
 }
 
-.intermediate-list-bottom__paymenttypes {
+.fee-list-bottom__paymenttypes {
   flex: 1 1;
 }
 
-.intermediate-list-bottom__actions > p {
+.fee-list-bottom__actions > p {
   text-align: right;
 }
 
-.intermediate-list-bottom__actions > button {
+.fee-list-bottom__actions > button {
   margin-left: auto;
 }
 
@@ -6169,4 +6169,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.1f645311.chunk.css.map*/
+/*# sourceMappingURL=main.3d0b83d8.chunk.css.map*/
