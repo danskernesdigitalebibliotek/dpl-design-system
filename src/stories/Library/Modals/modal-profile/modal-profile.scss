@@ -2,7 +2,7 @@
   padding: 0; // reset padding from default .modal class
   flex-direction: column;
 
-  &__notifications {
+  &__notifications:has[div] {
     border-bottom: 1px solid $c-global-tertiary-1;
 
     padding: 32px;
@@ -37,15 +37,6 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 32px;
-
-    @include breakpoint-s {
-      padding: {
-        top: 40px;
-        right: 80px;
-        bottom: 40px;
-        left: 80px;
-      }
-    }
   }
 
   &__links .link-filters {
@@ -55,12 +46,15 @@
   }
 
   &__btn-logout {
-    button {
-      width: 100%;
-    }
+    margin: 0 32px;
 
     @include breakpoint-s {
-      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        width: 200px;
+      }
     }
   }
 }
