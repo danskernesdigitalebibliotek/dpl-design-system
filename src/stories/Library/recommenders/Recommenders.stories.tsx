@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Recommender from "./Recommender";
+import Recommender from "./Recommenders";
 
 export default {
   title: "Library / Recommender",

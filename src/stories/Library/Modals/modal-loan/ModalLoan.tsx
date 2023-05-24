@@ -1,8 +1,7 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Button } from "../../Buttons/button/Button";
 import { Checkbox } from "../../Forms/checkbox/Checkbox";
 import { Counter } from "../../counter/Counter";
-import { LinkFilters } from "../../link-filters/LinkFilters";
 import {
   ListMaterials,
   ListMaterialsProps,
@@ -19,56 +18,48 @@ const listExpired: LoanMaterials = [
   {
     list: [
       {
+        year: "2001",
         title: "Audrey Hepburn",
-        author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
-        isChecked: false,
-        canBeRenewed: true,
-        statusDelivery: {
-          label: "AFLEVERES 20.11.21",
-          status: "danger",
-        },
+        author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
+        statusMessage: "The item cannot be renewed further",
+        isChecked: true,
+        disabled: true,
         statusMaterialType: {
           label: "bog",
           status: "outline",
         },
       },
       {
+        year: "2001",
         title: "Audrey Hepburn",
-        author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
-        isChecked: false,
-        canBeRenewed: true,
-        statusDelivery: {
-          label: "AFLEVERES 20.11.21",
-          status: "danger",
-        },
+        author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
+        statusMessage: "The item cannot be renewed further",
+        isChecked: true,
+        disabled: false,
         statusMaterialType: {
           label: "bog",
           status: "outline",
         },
       },
       {
+        year: "2001",
         title: "Audrey Hepburn",
-        author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
-        isChecked: false,
-        canBeRenewed: true,
-        statusDelivery: {
-          label: "AFLEVERES 20.11.21",
-          status: "danger",
-        },
+        author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
+        statusMessage: "The item cannot be renewed further",
+        isChecked: true,
+        disabled: true,
         statusMaterialType: {
           label: "bog",
           status: "outline",
         },
       },
       {
+        year: "2001",
         title: "Audrey Hepburn",
-        author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
-        isChecked: false,
-        canBeRenewed: false,
-        statusDelivery: {
-          label: "AFLEVERES 20.11.21",
-          status: "danger",
-        },
+        author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
+        statusMessage: "The item cannot be renewed further",
+        isChecked: true,
+        disabled: true,
         statusMaterialType: {
           label: "bog",
           status: "outline",
@@ -80,36 +71,14 @@ const listExpired: LoanMaterials = [
 
 const listExpiresSoon: LoanMaterials = [
   {
-    materialType: "lån",
     list: [
       {
+        year: "2001",
         title: "Audrey Hepburn",
-        author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
-        isChecked: false,
-        canBeRenewed: true,
-        statusDelivery: {
-          label: "AFLEVERES 20.11.21",
-          status: "warning",
-        },
-        statusMaterialType: {
-          label: "bog",
-          status: "outline",
-        },
-      },
-    ],
-  },
-  {
-    materialType: "digitale lån",
-    list: [
-      {
-        title: "Audrey Hepburn",
-        author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
+        author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
+        statusMessage: "The item cannot be renewed further",
         isChecked: true,
-        canBeRenewed: true,
-        statusDelivery: {
-          label: "UDLØBER 20.11.21",
-          status: "warning",
-        },
+        disabled: true,
         statusMaterialType: {
           label: "bog",
           status: "outline",
@@ -138,16 +107,6 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
   const isExpired = showExpired;
   const loanList = isExpired ? listExpired : listExpiresSoon;
 
-  const countRenewable = useMemo(() => {
-    let total = 0;
-    loanList.forEach((loans) =>
-      loans.list.forEach((material) => {
-        if (material.canBeRenewed) total += 1;
-      })
-    );
-    return total;
-  }, [loanList]);
-
   const handleToggleAll = () => {
     setChecked(!isAllChecked);
   };
@@ -161,7 +120,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
               <Counter
                 label="dage"
                 percentage={100}
-                value={-2}
+                value={0}
                 status="danger"
                 isReady={false}
               />
@@ -192,7 +151,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
             />
             <Button
               buttonType="default"
-              label={`Forny mulige (${countRenewable})`}
+              label="Forny mulige (2)"
               size="small"
               variant="filled"
               disabled={false}
@@ -201,32 +160,15 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
           </div>
         )}
         <ul className="modal-loan__list-container">
-          {loanList.map(({ materialType, list }) => (
+          {loanList.map(({ list }) => (
             <li className="modal-loan__list">
-              {materialType && (
-                <div className="modal-loan__count">
-                  <LinkFilters
-                    filters={[
-                      {
-                        title: materialType,
-                        counter: `${list.length}`,
-                        href: "/",
-                      },
-                    ]}
-                  />
-                </div>
-              )}
               <ul className="modal-loan__list-materials">
                 {list.map((listItem, index) => (
                   <li>
                     <ListMaterials
                       key={`${index}-${isAllChecked}`}
                       {...listItem}
-                      isChecked={
-                        listItem.canBeRenewed
-                          ? listItem.isChecked || isAllChecked
-                          : false
-                      }
+                      isChecked={listItem.isChecked}
                     />
                   </li>
                 ))}
@@ -244,7 +186,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
             />
             <Button
               buttonType="default"
-              label={`Forny mulige (${countRenewable})`}
+              label="Forny mulige (2)"
               size="small"
               variant="filled"
               disabled={false}

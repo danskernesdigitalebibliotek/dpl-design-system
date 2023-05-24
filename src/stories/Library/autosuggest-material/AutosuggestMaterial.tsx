@@ -7,16 +7,18 @@ export type AutosuggestMaterialProps = {
     author: string;
     year: string;
   }[];
+  classes?: string;
 };
 
 export const AutosuggestMaterial: React.FC<AutosuggestMaterialProps> = ({
   materialSuggestions,
+  classes,
 }) => {
   return (
     <>
       {materialSuggestions.map((item) => {
         return (
-          <li className="autosuggest__material-item">
+          <li className={`autosuggest__material-item ${classes || ""}`}>
             <div className="autosuggest__material-card">
               <Cover size="xsmall" animate src={item.cover} shadow />
               <div className="autosuggest__info">

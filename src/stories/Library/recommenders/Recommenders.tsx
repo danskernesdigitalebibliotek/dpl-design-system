@@ -10,36 +10,61 @@ export type RecommenderProps = {
   recommenderData: RecommenderData[];
   title: string;
   bright: boolean;
+  padding: boolean;
+  titleLeft: boolean;
+  triple: boolean;
 };
 
-const FavoritesListMaterialComponent: React.FC<RecommenderProps> = ({
+const Recommender: React.FC<RecommenderProps> = ({
   recommenderData,
   title,
   bright,
+  padding,
+  titleLeft,
+  triple,
 }) => {
   return (
     <div
-      className={`favorites-list-mc ${
-        bright ? "favorites-list-mc--bright" : ""
+      className={`recommender ${padding ? "recommender--padding-desktop" : ""}
+        ${triple ? "recommender--triple-desktop " : ""} ${
+        bright ? "recommender--bright" : ""
       }`}
     >
-      <h3 className="text-header-h3 recommender__title--left">{title}</h3>
-      <div className="favorites-list-mc__buttons">
+      <h2
+        className={`${
+          titleLeft ? "recommender__left-title" : "recommender__title"
+        } text-header-h1`}
+      >
+        {title}
+      </h2>
+      <div className="recommender__buttons">
+        <button
+          type="button"
+          className={`button-link button-link--selected ${
+            bright ? "button-link--bright" : ""
+          }`}
+        >
+          Something similar
+        </button>
         <button
           type="button"
           className={`button-link ${bright ? "button-link--bright" : ""}`}
         >
-          Gå til dine favoritter
+          By the same author
         </button>
       </div>
-      <ul className="favorites-list-mc__grid">
+      <ul
+        className={`${
+          triple ? "recommender__triple-grid" : "recommender__grid"
+        }`}
+      >
         {recommenderData.map(({ title: recTitle, filled, authors }) => (
           <li
-            className={`favorites-list-mc-material ${
-              bright ? "`favorites-list-mc-material--bright" : ""
+            className={`simple-material ${
+              bright ? "`simple-material--bright" : ""
             }`}
           >
-            <div className="favorites-list-mc-material__favourite">
+            <div className="simple-material__favourite">
               <div className="button-favourite button-favourite">
                 <SvgIcon
                   className={`icon-favourite icon-favourite${
@@ -52,7 +77,7 @@ const FavoritesListMaterialComponent: React.FC<RecommenderProps> = ({
                 />
               </div>
             </div>
-            <div className="favorites-list-mc-material__cover-container">
+            <div className="simple-material__cover-container">
               <Cover
                 src="images/book_cover_3.jpg"
                 size="medium"
@@ -60,11 +85,9 @@ const FavoritesListMaterialComponent: React.FC<RecommenderProps> = ({
                 tint="120"
               />
             </div>
-            <div className="favorites-list-mc-material__meta">
-              <a className="favorites-list-mc-material__title">{recTitle}</a>
-              <div className="favorites-list-mc-material__author">
-                {authors}
-              </div>
+            <div className="simple-material__meta">
+              <a className="simple-material__title">{recTitle}</a>
+              <div className="simple-material__author">{authors}</div>
             </div>
           </li>
         ))}
@@ -73,4 +96,4 @@ const FavoritesListMaterialComponent: React.FC<RecommenderProps> = ({
   );
 };
 
-export default FavoritesListMaterialComponent;
+export default Recommender;

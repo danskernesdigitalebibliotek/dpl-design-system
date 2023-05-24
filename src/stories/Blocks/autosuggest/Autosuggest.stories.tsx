@@ -1,8 +1,10 @@
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
+import clsx from "clsx";
 import { Autosuggest, AutosuggestProps } from "./Autosuggest";
 import AutosuggestMaterialStories from "../../Library/autosuggest-material/AutosuggestMaterial.stories";
 import AutosuggestTextStories from "../../Library/autosuggest-text/AutosuggestText.stories";
+import { autosuggestMaterialSuggestions } from "../../Library/autosuggest-material/helper";
 
 export default {
   title: "Blocks / Autosuggest",
@@ -57,3 +59,26 @@ const Template: ComponentStory<typeof Autosuggest> = (
 );
 
 export const Default = Template.bind({});
+
+const getStoryArguments = (suggestions: number) => {
+  return {
+    ...AutosuggestTextStories.argTypes,
+    materialSuggestions: {
+      ...{ ...AutosuggestMaterialStories.argTypes?.materialSuggestions },
+      defaultValue: autosuggestMaterialSuggestions.slice(0, suggestions),
+    },
+    classes: {
+      ...{ ...AutosuggestMaterialStories.argTypes?.classes },
+      defaultValue: clsx({
+        "autosuggest__material-item--two": suggestions === 2,
+        "autosuggest__material-item--one": suggestions === 1,
+      }),
+    },
+  };
+};
+
+export const TwoMaterials = Template.bind({});
+TwoMaterials.argTypes = getStoryArguments(2);
+
+export const OneMaterial = Template.bind({});
+OneMaterial.argTypes = getStoryArguments(1);
