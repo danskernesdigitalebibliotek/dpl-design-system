@@ -4552,6 +4552,18 @@ dl.list-description dd .link-tag {
   }
 }
 
+.dashboard-page {
+  background: #f6f5f0;
+  padding: 16px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+@media (min-width: 1024px) {
+  .dashboard-page {
+    padding: 112px;
+  }
+}
+
 .dpl-patron-page {
   background: #f6f5f0;
   padding: 16px;
@@ -6169,4 +6181,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.0100146b.chunk.css.map*/
+/*# sourceMappingURL=main.294b5bba.chunk.css.map*/
