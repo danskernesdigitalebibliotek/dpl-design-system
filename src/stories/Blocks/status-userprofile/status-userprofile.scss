@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   column-gap: 25px;
+  align-items: unset;
 
   @include breakpoint-s {
+    align-items: baseline;
     flex-direction: row;
     row-gap: 25px;
   }

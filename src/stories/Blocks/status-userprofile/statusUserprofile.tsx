@@ -35,7 +35,7 @@ export const StatusUserprofile = (props: StatusUserprofileProps) => {
             </div>
           ))
         ) : (
-          <ListEmpty text="Du har i øjebilkket 0 fysiske lån" />
+          <ListEmpty text="Du har i øjeblikket 0 fysiske lån" />
         )}
       </div>
       <div className="status-userprofile__column">
