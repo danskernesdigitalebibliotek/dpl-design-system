@@ -3356,7 +3356,6 @@ dl.list-description dd .link-tag {
 }
 
 .dpl-list-empty {
-  height: 100%;
   width: 100%;
   background-color: transparent;
   display: flex;
@@ -5667,9 +5666,11 @@ dl.list-description dd .link-tag {
   grid-column-gap: 25px;
   -webkit-column-gap: 25px;
           column-gap: 25px;
+  align-items: unset;
 }
 @media (min-width: 768px) {
   .status-userprofile {
+    align-items: baseline;
     flex-direction: row;
     grid-row-gap: 25px;
     row-gap: 25px;
@@ -6181,4 +6182,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.294b5bba.chunk.css.map*/
+/*# sourceMappingURL=main.07ba4311.chunk.css.map*/
