@@ -11,10 +11,10 @@ export const ModalLogin: React.FC<ModalLoginProps> = ({ showModal }) => (
   <div className="modal-backdrop">
     <Modal
       shownModal={showModal}
-      classNames="modal-login modal-right modal-padding"
+      classNames="modal-login modal-login--anonymous  modal-right modal-padding"
       orientation="right"
     >
-      <div className="modal-login__container">
+      <>
         <Button
           buttonType="default"
           size="large"
@@ -26,9 +26,9 @@ export const ModalLogin: React.FC<ModalLoginProps> = ({ showModal }) => (
         <Links
           href="/"
           linkText="Opret profil"
-          classNames="color-secondary-gray modal-login__btn-create-profile"
+          classNames="color-secondary-gray modal-login__btn-create-profile mt-32"
         />
-      </div>
+      </>
     </Modal>
   </div>
 );

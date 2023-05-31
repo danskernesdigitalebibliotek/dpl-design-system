@@ -2,15 +2,21 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  justify-content: flex-start;
 
   &--authenticated {
     align-items: baseline;
   }
 
+  &--anonymous {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__container {
-    display: grid;
-    place-content: center;
-    row-gap: 28px;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   &__btn-create-profile {
