@@ -3821,15 +3821,19 @@ dl.list-description dd .link-tag {
   width: 100%;
   display: flex;
   justify-content: center;
+  justify-content: flex-start;
 }
 .modal-login--authenticated {
   align-items: baseline;
 }
+.modal-login--anonymous {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .modal-login__container {
-  display: grid;
-  place-content: center;
-  grid-row-gap: 28px;
-  row-gap: 28px;
+  justify-content: flex-start;
+  width: 100%;
 }
 .modal-login__btn-create-profile {
   justify-self: center;
@@ -3987,12 +3991,12 @@ dl.list-description dd .link-tag {
   padding: 0;
   flex-direction: column;
 }
-.modal-profile__notifications {
+.modal-profile__notifications:has[div] {
   border-bottom: 1px solid #dbdbdb;
   padding: 32px;
 }
 @media (min-width: 768px) {
-  .modal-profile__notifications {
+  .modal-profile__notifications:has[div] {
     padding-top: 40px;
     padding-right: 80px;
     padding-bottom: 40px;
@@ -4017,26 +4021,22 @@ dl.list-description dd .link-tag {
   justify-content: space-between;
   padding: 32px;
 }
-@media (min-width: 768px) {
-  .modal-profile__container {
-    padding-top: 40px;
-    padding-right: 80px;
-    padding-bottom: 40px;
-    padding-left: 80px;
-  }
-}
 .modal-profile__links .link-filters {
   display: flex;
   flex-direction: column;
   grid-row-gap: 24px;
   row-gap: 24px;
 }
-.modal-profile__btn-logout button {
-  width: 100%;
+.modal-profile__btn-logout {
+  margin: 0 32px;
 }
 @media (min-width: 768px) {
   .modal-profile__btn-logout {
-    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .modal-profile__btn-logout a {
+    width: 200px;
   }
 }
 
@@ -6182,4 +6182,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.07ba4311.chunk.css.map*/
+/*# sourceMappingURL=main.21d6a7a2.chunk.css.map*/
