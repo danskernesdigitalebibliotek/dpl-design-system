@@ -3755,6 +3755,7 @@ dl.list-description dd .link-tag {
 .modal-loan {
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .modal-loan__container {
@@ -6182,4 +6183,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.21d6a7a2.chunk.css.map*/
+/*# sourceMappingURL=main.56b63250.chunk.css.map*/
