@@ -49,14 +49,14 @@ $pagefold-map: (
     position: absolute;
     top: 0;
     left: 0;
+  }
 
-    &--success {
-      background-color: $c-signal-success;
-    }
+  .pagefold-triangle--success {
+    background-color: $c-signal-success;
+  }
 
-    &--alert {
-      background-color: $c-signal-alert;
-    }
+  .pagefold-triangle--alert {
+    background-color: $c-signal-alert;
   }
 }
 /* stylelint-enable plugin/stylelint-bem-namics */
