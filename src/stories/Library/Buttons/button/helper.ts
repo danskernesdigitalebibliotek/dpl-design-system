@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { PageFoldType } from "../../pagefold/types";
 
 export type ButtonType = "none" | "default" | "external-link" | "search";
 export type ButtonVariant = "outline" | "filled";
@@ -26,8 +27,6 @@ export const getPagefoldClasses = ({
   type,
   className,
 }: PageFoldType) => {
-  const baseClass = `pagefold-triangle--${size}`;
-
   return {
     wrapper: clsx(
       `pagefold-parent--${size}`,
@@ -35,8 +34,8 @@ export const getPagefoldClasses = ({
       className
     ),
     triangle: clsx(
-      { [`${baseClass}--${type}`]: type },
       `pagefold-triangle--${size}`,
+      { [`pagefold-triangle--${type}`]: type },
       { "pagefold-inherit-parent": isInheriting }
     ),
   };
