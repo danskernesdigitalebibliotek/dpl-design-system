@@ -1,16 +1,12 @@
 import { getPagefoldClasses } from "../Buttons/button/helper";
+import { PageFoldType } from "./types";
 
-export type PagefoldProps = {
-  isInheriting: boolean;
-  isAContainer: boolean;
-  size: "none" | "xsmall" | "small" | "medium" | "large" | "xlarge";
-  type?: "success" | "alert";
-  children?: React.ReactNode;
-  className?: string;
+type PagefoldProps = PageFoldType & {
   compProps?: React.ComponentPropsWithoutRef<"div">;
+  children?: React.ReactNode;
 };
 
-export const Pagefold: React.FC<PagefoldProps> = (props) => {
+const Pagefold: React.FC<PagefoldProps> = (props) => {
   const {
     isInheriting,
     isAContainer,
@@ -36,3 +32,5 @@ export const Pagefold: React.FC<PagefoldProps> = (props) => {
     </div>
   );
 };
+
+export default Pagefold;

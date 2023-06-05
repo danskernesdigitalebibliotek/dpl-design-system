@@ -1,13 +1,8 @@
+import { PageFoldType } from "../../pagefold/types";
 import { getPagefoldClasses } from "../button/helper";
 
-type Props = {
-  isInheriting: boolean;
-  isAContainer: boolean;
-  size: "none" | "xsmall" | "small" | "medium" | "large" | "xlarge";
-  type?: "success" | "alert";
+type PageFoldButtonProps = PageFoldType & {
   children?: React.ReactNode;
-  className?: string;
-  status?: "selected" | "available" | "unavailable";
 };
 
 const PageFoldButton = ({
@@ -18,7 +13,7 @@ const PageFoldButton = ({
   children,
   className,
   status,
-}: Props) => {
+}: PageFoldButtonProps) => {
   const classes = getPagefoldClasses({
     isInheriting,
     isAContainer,
