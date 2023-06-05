@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { getPagefoldClasses } from "../Buttons/button/helper";
 
 export type PagefoldProps = {
   isInheriting: boolean;
@@ -8,60 +8,31 @@ export type PagefoldProps = {
   children?: React.ReactNode;
   className?: string;
   compProps?: React.ComponentPropsWithoutRef<"div">;
-  status?: "selected" | "available" | "unavailable";
-  button?: boolean;
 };
 
-export const Pagefold: React.FC<PagefoldProps> = ({
-  isInheriting,
-  isAContainer,
-  size,
-  type,
-  children,
-  className,
-  compProps,
-  status,
-  button,
-}) => {
-  const baseClass = `pagefold-triangle--${size}`;
+export const Pagefold: React.FC<PagefoldProps> = (props) => {
+  const {
+    isInheriting,
+    isAContainer,
+    size,
+    type,
+    children,
+    className,
+    compProps,
+  } = props;
 
-  const classes = {
-    wrapper: clsx(
-      `pagefold-parent--${size}`,
-      { "internal-pagefold-parent": isAContainer },
-      className
-    ),
-    triangle: clsx(
-      { [`${baseClass}--${type}`]: type },
-      `pagefold-triangle--${size}`,
-      { "pagefold-inherit-parent": isInheriting }
-    ),
-  };
+  const classes = getPagefoldClasses({
+    isInheriting,
+    isAContainer,
+    size,
+    type,
+    className,
+  });
 
-  if (button) {
-    return (
-      <button
-        type="button"
-        aria-pressed={status === "selected"}
-        className={classes.wrapper}
-      >
-        <div className={classes.triangle} />
-        {children}
-      </button>
-    );
-  }
-
-  if (compProps) {
+  return (
     <div className={classes.wrapper} {...compProps}>
       <div className={classes.triangle} />
       {children}
-    </div>;
-  }
-
-  return (
-    <a className={classes.wrapper}>
-      <div className={classes.triangle} />
-      {children}
-    </a>
+    </div>
   );
 };

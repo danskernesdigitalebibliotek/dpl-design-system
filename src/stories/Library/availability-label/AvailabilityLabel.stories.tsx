@@ -44,7 +44,7 @@ Available.args = {
   manifestationType: "Bog",
   availability: "Hjemme",
   status: "available",
-  button: true,
+  button: false,
 };
 
 export const Selected = Template.bind({});
@@ -52,7 +52,7 @@ Selected.args = {
   manifestationType: "Ebog",
   availability: "Online",
   status: "selected",
-  button: true,
+  button: false,
 };
 
 export const Unavailable = Template.bind({});
@@ -60,7 +60,7 @@ Unavailable.args = {
   manifestationType: "Lydbog (cd-mp3)",
   availability: "Udlånt",
   status: "unavailable",
-  button: true,
+  button: false,
 };
 
 export const WithoutManifestationType = Template.bind({});
@@ -69,5 +69,13 @@ WithoutManifestationType.args = {
   manifestationType: undefined,
   availability: "Udlånt",
   status: "unavailable",
+  button: false,
+};
+
+export const PageFoldButton = Template.bind({});
+PageFoldButton.args = {
+  manifestationType: "Bog",
+  availability: "Hjemme",
+  status: "available",
   button: true,
 };
