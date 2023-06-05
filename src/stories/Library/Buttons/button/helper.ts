@@ -5,7 +5,7 @@ export type ButtonType = "none" | "default" | "external-link" | "search";
 export type ButtonVariant = "outline" | "filled";
 export type ButtonSize = "xsmall" | "small" | "medium" | "large" | "xlarge";
 
-export const getSize = (size: ButtonSize) => {
+export const getSize = (size: ButtonSize): string => {
   if (size === "xlarge") return "btn-xlarge";
   if (size === "large") return "btn-large";
   if (size === "medium") return "btn-medium";
@@ -14,7 +14,7 @@ export const getSize = (size: ButtonSize) => {
   return "";
 };
 
-export const getVariant = (variant: ButtonVariant) => {
+export const getVariant = (variant: ButtonVariant): string => {
   if (variant === "filled") return "btn-filled";
   if (variant === "outline") return "btn-outline";
   return "";
@@ -26,7 +26,7 @@ export const getPagefoldClasses = ({
   size,
   type,
   className,
-}: PageFoldType) => {
+}: PageFoldType): { wrapper: string; triangle: string } => {
   return {
     wrapper: clsx(
       `pagefold-parent--${size}`,
