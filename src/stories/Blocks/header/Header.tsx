@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-
 import { Logo } from "../../Library/logo/Logo";
-import { Pagefold } from "../../Library/pagefold/Pagefold";
+import Pagefold from "../../Library/pagefold/Pagefold";
 
 export type HeaderProps = {
   signedIn: boolean;

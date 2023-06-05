@@ -1,6 +1,6 @@
 import { AvailabilityLabelPropsType } from "../../availability-label/types";
 import PageFoldButton from "../Buttons/page-fold-button/PageFoldButton";
-import { Pagefold } from "../pagefold/Pagefold";
+import Pagefold from "../pagefold/Pagefold";
 import { withAvailabilityProps } from "./abilityLabel.hoc";
 
 const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({

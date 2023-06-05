@@ -25,13 +25,7 @@ export const getPagefoldClasses = ({
   size,
   type,
   className,
-}: {
-  isInheriting: boolean;
-  isAContainer: boolean;
-  size: "none" | "xsmall" | "small" | "medium" | "large" | "xlarge";
-  type?: "success" | "alert";
-  className?: string;
-}) => {
+}: PageFoldType) => {
   const baseClass = `pagefold-triangle--${size}`;
 
   return {
