@@ -1,8 +1,11 @@
+import { AvailabilityStatusType } from "../../availability-label/types";
+import { ButtonSize } from "../Buttons/button/types";
+
 export type PageFoldType = {
   isInheriting: boolean;
   isAContainer: boolean;
-  size: "none" | "xsmall" | "small" | "medium" | "large" | "xlarge";
+  size: ButtonSize;
   type?: "success" | "alert";
   className?: string;
-  status?: "selected" | "available" | "unavailable";
+  status?: AvailabilityStatusType;
 };

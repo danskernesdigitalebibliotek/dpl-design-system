@@ -1,9 +1,6 @@
 import clsx from "clsx";
 import { PageFoldType } from "../../pagefold/types";
-
-export type ButtonType = "none" | "default" | "external-link" | "search";
-export type ButtonVariant = "outline" | "filled";
-export type ButtonSize = "xsmall" | "small" | "medium" | "large" | "xlarge";
+import { ButtonSize, ButtonVariant } from "./types";
 
 export const getSize = (size: ButtonSize): string => {
   if (size === "xlarge") return "btn-xlarge";
