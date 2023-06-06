@@ -51,12 +51,14 @@ $pagefold-map: (
     left: 0;
   }
 
-  .pagefold-triangle--success {
-    background-color: $c-signal-success;
-  }
+  .pagefold-triangle {
+    &--success {
+      background-color: $c-signal-success;
+    }
 
-  .pagefold-triangle--alert {
-    background-color: $c-signal-alert;
+    &--alert {
+      background-color: $c-signal-alert;
+    }
   }
 }
 /* stylelint-enable plugin/stylelint-bem-namics */
