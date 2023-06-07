@@ -1953,10 +1953,11 @@ input[type=reset] {
   top: 0;
   left: 0;
 }
-.pagefold-triangle--none--success {
+
+.pagefold-triangle--success {
   background-color: #068802;
 }
-.pagefold-triangle--none--alert {
+.pagefold-triangle--alert {
   background-color: #d5364a;
 }
 
@@ -1982,10 +1983,11 @@ input[type=reset] {
   top: 0;
   left: 0;
 }
-.pagefold-triangle--xsmall--success {
+
+.pagefold-triangle--success {
   background-color: #068802;
 }
-.pagefold-triangle--xsmall--alert {
+.pagefold-triangle--alert {
   background-color: #d5364a;
 }
 
@@ -2011,10 +2013,11 @@ input[type=reset] {
   top: 0;
   left: 0;
 }
-.pagefold-triangle--small--success {
+
+.pagefold-triangle--success {
   background-color: #068802;
 }
-.pagefold-triangle--small--alert {
+.pagefold-triangle--alert {
   background-color: #d5364a;
 }
 
@@ -2042,10 +2045,11 @@ input[type=reset] {
   top: 0;
   left: 0;
 }
-.pagefold-triangle--medium--success {
+
+.pagefold-triangle--success {
   background-color: #068802;
 }
-.pagefold-triangle--medium--alert {
+.pagefold-triangle--alert {
   background-color: #d5364a;
 }
 
@@ -2071,10 +2075,11 @@ input[type=reset] {
   top: 0;
   left: 0;
 }
-.pagefold-triangle--large--success {
+
+.pagefold-triangle--success {
   background-color: #068802;
 }
-.pagefold-triangle--large--alert {
+.pagefold-triangle--alert {
   background-color: #d5364a;
 }
 
@@ -2100,10 +2105,11 @@ input[type=reset] {
   top: 0;
   left: 0;
 }
-.pagefold-triangle--xlarge--success {
+
+.pagefold-triangle--success {
   background-color: #068802;
 }
-.pagefold-triangle--xlarge--alert {
+.pagefold-triangle--alert {
   background-color: #d5364a;
 }
 
@@ -6183,4 +6189,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.56b63250.chunk.css.map*/
+/*# sourceMappingURL=main.b36067c7.chunk.css.map*/
