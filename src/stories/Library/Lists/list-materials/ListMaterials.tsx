@@ -42,7 +42,7 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
             <div className="list-materials__content-status">
               <StatusLabel {...statusMaterialType} />
             </div>
-            <p className="text-header-h5 mt-8">{title}</p>
+            <p className="list-materials__content__header mt-8">{title}</p>
             <p className="text-small-caption">
               {author} ({year})
             </p>
@@ -87,7 +87,7 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
             <div className="list-materials__content-status">
               <div className="status-label status-label--outline">Bog</div>
             </div>
-            <p className="text-header-h5 mt-8">{title}</p>
+            <p className="list-materials__content__header mt-8">{title}</p>
             <p className="text-small-caption">
               {author} ({year})
             </p>

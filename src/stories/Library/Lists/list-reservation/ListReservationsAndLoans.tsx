@@ -44,7 +44,9 @@ export const ListReservationsAndLoans = (
             </div>
             <div className="list-reservation__about">
               <button className="list-reservation__header">
-                {cover.title}
+                <span className="list-reservation__header__text">
+                  {cover.title}
+                </span>
               </button>
               <p className="text-small-caption color-secondary-gray">
                 {cover.description}
