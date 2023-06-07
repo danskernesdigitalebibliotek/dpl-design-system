@@ -3,11 +3,12 @@ import { Links, LinksProps } from "../../links/Links";
 interface ListEmptyProps {
   text: string;
   links?: LinksProps[];
+  className: string;
 }
 
-const ListEmpty = ({ text, links }: ListEmptyProps) => {
+const ListEmpty = ({ text, links, className }: ListEmptyProps) => {
   return (
-    <div className="dpl-list-empty">
+    <div className={`dpl-list-empty ${className}`}>
       {text}
       {links && (
         <div className="dpl-list-empty__links">
