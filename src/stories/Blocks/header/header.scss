@@ -192,6 +192,9 @@
 .header__button {
   height: 56px;
   width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @include breakpoint-s {
     height: 70px;
@@ -200,12 +203,14 @@
 }
 
 // The kebab casing conflicts with our naming convention.
-#header__overlay.visible { /* stylelint-disable-line */
+#header__overlay.visible {
+  /* stylelint-disable-line */
   display: grid;
 }
 
 // The kebab casing conflicts with our naming convention.
-#header__overlay { /* stylelint-disable-line */
+#header__overlay {
+  /* stylelint-disable-line */
   display: none;
   z-index: 5;
   position: fixed;
@@ -239,7 +244,8 @@
 }
 
 // The kebab casing conflicts with our naming convention.
-#header__menu--close { /* stylelint-disable-line */
+#header__menu--close {
+  /* stylelint-disable-line */
   position: fixed;
   padding: 30px;
 }
