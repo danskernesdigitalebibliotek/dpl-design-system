@@ -1,4 +1,4 @@
-import { Pagefold } from "../../Library/pagefold/Pagefold";
+import Pagefold from "../../Library/pagefold/Pagefold";
 import { Accordion } from "../../Library/accordion/Accordion";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
 import { Logo } from "../../Library/logo/Logo";

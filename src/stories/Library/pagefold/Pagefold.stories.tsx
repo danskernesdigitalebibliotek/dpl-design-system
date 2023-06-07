@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { Pagefold as PagefoldComp } from "./Pagefold";
+import PagefoldComp from "./Pagefold";
 
 export default {
   title: "Library / Pagefold",

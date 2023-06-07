@@ -1,5 +1,6 @@
 import { AvailabilityLabelPropsType } from "../../availability-label/types";
-import { Pagefold } from "../pagefold/Pagefold";
+import PageFoldButton from "../Buttons/page-fold-button/PageFoldButton";
+import Pagefold from "../pagefold/Pagefold";
 import { withAvailabilityProps } from "./abilityLabel.hoc";
 
 const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
@@ -7,15 +8,14 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
   availability,
   status,
   quantity,
+  button,
 }) => {
-  const AvailabilityPagefold = withAvailabilityProps(Pagefold);
-
-  return (
-    <AvailabilityPagefold status={status}>
+  const content = (
+    <>
       <img
         className={`availability-label__check ${status}`}
         src="icons/collection/Check.svg"
-        alt="check-icon"
+        alt=""
       />
       {manifestationType && (
         <>
@@ -39,8 +39,21 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
           </p>
         </>
       )}
-    </AvailabilityPagefold>
+    </>
   );
+
+  const AvailabilityPagefold = withAvailabilityProps(Pagefold);
+  const AvailabilityPagefoldButton = withAvailabilityProps(PageFoldButton);
+
+  if (button) {
+    return (
+      <AvailabilityPagefoldButton status={status}>
+        {content}
+      </AvailabilityPagefoldButton>
+    );
+  }
+
+  return <AvailabilityPagefold status={status}>{content}</AvailabilityPagefold>;
 };
 
 export default AvailabilityLabel;

@@ -49,7 +49,9 @@ $pagefold-map: (
     position: absolute;
     top: 0;
     left: 0;
+  }
 
+  .pagefold-triangle {
     &--success {
       background-color: $c-signal-success;
     }
