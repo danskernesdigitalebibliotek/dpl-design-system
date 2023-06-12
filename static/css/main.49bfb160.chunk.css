@@ -2212,11 +2212,16 @@ input[type=reset] {
 
 .status-label {
   height: 24px;
-  padding: 0 16px;
+  padding: 0 4px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-size: 10px;
+}
+@media (min-width: 768px) {
+  .status-label {
+    padding: 0 16px;
+  }
 }
 .status-label--danger {
   background-color: #d5364a;
@@ -3836,6 +3841,7 @@ dl.list-description dd .link-tag {
 
 .modal-login {
   display: flex;
+  width: 100%;
   justify-content: center;
   justify-content: flex-start;
 }
@@ -4570,8 +4576,7 @@ dl.list-description dd .link-tag {
 .dashboard-page {
   background: #f6f5f0;
   padding: 16px;
-  position: -webkit-sticky;
-  position: sticky;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .dashboard-page {
@@ -6199,4 +6204,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.410331c6.chunk.css.map*/
+/*# sourceMappingURL=main.49bfb160.chunk.css.map*/
