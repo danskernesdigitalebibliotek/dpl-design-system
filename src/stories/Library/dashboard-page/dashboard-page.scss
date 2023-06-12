@@ -1,7 +1,7 @@
 .dashboard-page {
   background: $c-global-primary;
   padding: $s-md;
-  position: sticky;
+  position: relative;
 
   @include breakpoint-m {
     padding: $s-6xl;
