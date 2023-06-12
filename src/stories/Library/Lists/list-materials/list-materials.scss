@@ -26,6 +26,11 @@
   flex: 1;
 }
 
+.list-materials__content__header {
+  @extend %ellipsis-two-lines;
+  @extend %text-header-h5;
+}
+
 .list-materials--disabled {
   .checkbox {
     .checkbox__icon {

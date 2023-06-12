@@ -152,6 +152,7 @@
 }
 
 //styleName: Desktop/H5;
+%text-header-h5,
 .text-header-h5 {
   font-family: Lora, serif;
   font-size: 20px;
@@ -434,4 +435,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+}
+
+%ellipsis-two-lines,
+.ellipsis-two-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

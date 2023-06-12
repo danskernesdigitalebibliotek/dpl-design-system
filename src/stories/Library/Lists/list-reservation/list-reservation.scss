@@ -118,6 +118,10 @@ $list-reservation-space-desktop: 24px;
   }
 }
 
+.list-reservation__header__text {
+  @extend %ellipsis-two-lines;
+}
+
 .list-reservation__status {
   height: 100%;
   display: grid;
