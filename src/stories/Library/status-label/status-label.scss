@@ -1,10 +1,14 @@
 .status-label {
   height: 24px;
-  padding: 0 16px;
+  padding: 0 4px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-size: 10px;
+
+  @include breakpoint-s {
+    padding: 0 16px;
+  }
 
   &--danger {
     @extend %text-button-placeholder;
