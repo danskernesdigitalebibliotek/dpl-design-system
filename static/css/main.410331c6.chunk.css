@@ -456,6 +456,7 @@ input[type=reset] {
   }
 }
 
+.list-materials__content__header,
 .text-header-h5 {
   font-family: Lora, serif;
   font-size: 20px;
@@ -763,6 +764,15 @@ input[type=reset] {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+}
+
+.list-materials__content__header, .list-reservation__header__text,
+.ellipsis-two-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* BEM plugin does not support interpolation */
@@ -3825,7 +3835,6 @@ dl.list-description dd .link-tag {
 }
 
 .modal-login {
-  width: 100%;
   display: flex;
   justify-content: center;
   justify-content: flex-start;
@@ -5525,6 +5534,9 @@ dl.list-description dd .link-tag {
 .header__button {
   height: 56px;
   width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .header__button {
@@ -5687,8 +5699,6 @@ dl.list-description dd .link-tag {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
-  grid-row-gap: 16px;
-  row-gap: 16px;
 }
 
 .material-manifestation-item {
@@ -6189,4 +6199,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.b36067c7.chunk.css.map*/
+/*# sourceMappingURL=main.410331c6.chunk.css.map*/
