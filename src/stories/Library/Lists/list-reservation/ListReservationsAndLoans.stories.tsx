@@ -23,8 +23,9 @@ export const Item1 = Template.bind({});
 Item1.args = {
   cover: {
     type: "bog",
-    title: "Mennesket i naturen",
-    description: "Af Anton M. Berg (2020)",
+    title:
+      "Den utrolige historie om den kæmpestore pære (eller beretningen om, hvordan Jeronimus Bjergstrøm Severin Olsen blev genindsat i sit retmæssige embede som Solbys borgmester til glæde for alle byens indbyggere på nær én)",
+    description: "Af Jakob Martin Strid ",
     image: "images/book_cover_5.jpg",
     url: "",
     noteLabel: "Du pålægges et gebyr, når materialet afleveres",

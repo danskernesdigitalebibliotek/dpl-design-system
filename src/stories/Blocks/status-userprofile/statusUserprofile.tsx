@@ -35,7 +35,10 @@ export const StatusUserprofile = (props: StatusUserprofileProps) => {
             </div>
           ))
         ) : (
-          <ListEmpty text="Du har i øjeblikket 0 fysiske lån" />
+          <ListEmpty
+            className="mt-16"
+            text="Du har i øjeblikket 0 fysiske lån"
+          />
         )}
       </div>
       <div className="status-userprofile__column">
@@ -57,7 +60,10 @@ export const StatusUserprofile = (props: StatusUserprofileProps) => {
             </div>
           ))
         ) : (
-          <ListEmpty text="Du har i øjebilkket 0 reserveringer" />
+          <ListEmpty
+            className="mt-16"
+            text="Du har i øjebilkket 0 reserveringer"
+          />
         )}
       </div>
     </div>
