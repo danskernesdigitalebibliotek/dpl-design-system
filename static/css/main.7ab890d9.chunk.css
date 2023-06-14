@@ -3781,7 +3781,6 @@ dl.list-description dd .link-tag {
 
 .modal-loan__container {
   max-width: 1000px;
-  width: 100%;
   overflow: scroll;
 }
 
@@ -3798,6 +3797,7 @@ dl.list-description dd .link-tag {
 .modal-loan__list {
   position: relative;
   margin-top: 24px;
+  padding-bottom: 10px;
 }
 
 .modal-loan__count {
@@ -3815,6 +3815,7 @@ dl.list-description dd .link-tag {
 }
 
 .modal-loan__buttons {
+  background-color: #f6f5f0;
   display: flex;
   grid-gap: 24px;
   justify-content: flex-end;
@@ -3824,18 +3825,16 @@ dl.list-description dd .link-tag {
 
 .modal-loan__buttons--bottom {
   position: fixed;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 100vw;
-  background-color: #f6f5f0;
   padding: 16px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .modal-loan__buttons--bottom {
-    padding: 8px 215px;
+    padding: 24px 215px 24px 0;
     bottom: 100px;
+    right: 100px;
     left: 100px;
-    width: calc(100vw - 200px);
   }
 }
 
@@ -4608,6 +4607,11 @@ dl.list-description dd .link-tag {
   text-align: center;
   margin-top: 24px;
   margin-bottom: 16px;
+}
+
+.result-pager--margin-bottom {
+  margin-bottom: 80px;
+  margin-top: 0px;
 }
 
 .result-pager > .btn-primary {
@@ -6204,4 +6208,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.49bfb160.chunk.css.map*/
+/*# sourceMappingURL=main.7ab890d9.chunk.css.map*/
