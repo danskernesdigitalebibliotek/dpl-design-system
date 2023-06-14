@@ -35,6 +35,7 @@ $MODAL_TEXT_CONTAINER_WIDTH: 550px;
 
   @include breakpoint-s {
     bottom: 100px;
+    width: calc(100vw - 200px);
   }
 }
 
