@@ -28,7 +28,7 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
   };
 
   return (
-    <ul className="modal-loan__list-materials">
+    <>
       <li>
         <div
           className={`list-materials ${
@@ -108,6 +108,6 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
           </div>
         </div>
       </li>
-    </ul>
+    </>
   );
 };
