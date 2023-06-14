@@ -8,7 +8,6 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
 
 .modal-loan__container {
   max-width: $MODAL_LOAN_CONTAINER_WIDTH;
-  width: 100%;
   overflow: scroll;
 }
 
@@ -25,6 +24,7 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
 .modal-loan__list {
   position: relative;
   margin-top: 24px;
+  padding-bottom: 10px;
 }
 
 .modal-loan__count {
@@ -50,17 +50,16 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-loan__buttons--bottom {
+  background: transparent;
   position: fixed;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 100vw;
-  background-color: $c-global-primary;
   padding: $s-md;
 
-  @include breakpoint-m {
-    padding: $s-sm $s-7xl;
+  @include breakpoint-s {
+    padding: $s-lg $s-7xl $s-lg 0;
     bottom: 100px;
+    right: 100px;
     left: 100px;
-    width: calc(100vw - 200px);
   }
 }
