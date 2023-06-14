@@ -42,6 +42,7 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-loan__buttons {
+  background-color: $c-global-primary;
   display: flex;
   grid-gap: 24px;
   justify-content: flex-end;
@@ -50,7 +51,6 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-loan__buttons--bottom {
-  background: transparent;
   position: fixed;
   right: 0;
   bottom: 0;

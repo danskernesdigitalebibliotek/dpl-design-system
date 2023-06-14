@@ -8,6 +8,7 @@ import {
 } from "../../Lists/list-materials/ListMaterials";
 import { WarningStatus } from "../../warning-status/WarningStatus";
 import Modal from "../Modal";
+import ResultPager from "../../card-list-page/ResultPager";
 
 type LoanMaterials = Array<{
   materialType?: string;
@@ -113,88 +114,91 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
   };
 
   return (
-    <Modal shownModal={showModal} classNames="modal-loan">
-      <div className="modal-loan__container">
-        <div className="modal-loan__header">
+    <Modal shownModal={showModal}>
+      <div className="modal-loan">
+        <div className="modal-loan__container">
+          <div className="modal-loan__header">
+            {isExpired && (
+              <div className="mr-32">
+                <Counter
+                  label="dage"
+                  percentage={100}
+                  value={0}
+                  status="danger"
+                  isReady={false}
+                />
+              </div>
+            )}
+            <div>
+              <h2 className="modal-loan__title text-header-h2">{title}</h2>
+              <p className="text-body-medium-regular color-secondary-gray mt-4">
+                {description}
+              </p>
+            </div>
+          </div>
           {isExpired && (
-            <div className="mr-32">
-              <Counter
-                label="dage"
-                percentage={100}
-                value={0}
-                status="danger"
-                isReady={false}
+            <div className="modal-loan__warning mt-48 mb-48">
+              <WarningStatus
+                url="/"
+                description="Afleveringsdatoen for lånet er overskredet, derfor pålægges du et gebyr, når materialet afleveres"
               />
             </div>
           )}
-          <div>
-            <h2 className="modal-loan__title text-header-h2">{title}</h2>
-            <p className="text-body-medium-regular color-secondary-gray mt-4">
-              {description}
-            </p>
-          </div>
-        </div>
-        {isExpired && (
-          <div className="modal-loan__warning mt-48 mb-48">
-            <WarningStatus
-              url="/"
-              description="Afleveringsdatoen for lånet er overskredet, derfor pålægges du et gebyr, når materialet afleveres"
-            />
-          </div>
-        )}
-        {buttonsUpTop && (
-          <div className="modal-loan__buttons">
-            <Checkbox
-              hiddenLabel={false}
-              isChecked={isAllChecked}
-              callback={handleToggleAll}
-              label="Vælg alle med mulighed for fornyelse"
-            />
-            <Button
-              buttonType="default"
-              label="Forny mulige (2)"
-              size="small"
-              variant="filled"
-              disabled={false}
-              collapsible
-            />
-          </div>
-        )}
-        <ul className="modal-loan__list-container">
-          {loanList.map(({ list }) => (
-            <li className="modal-loan__list">
-              <ul className="modal-loan__list-materials">
+          {buttonsUpTop && (
+            <div className="modal-loan__buttons">
+              <Checkbox
+                hiddenLabel={false}
+                isChecked={isAllChecked}
+                callback={handleToggleAll}
+                label="Vælg alle med mulighed for fornyelse"
+              />
+              <Button
+                buttonType="default"
+                label="Forny mulige (2)"
+                size="small"
+                variant="filled"
+                disabled={false}
+                collapsible
+              />
+            </div>
+          )}
+          <ul className="modal-loan__list-materials">
+            {loanList.map(({ list }) => (
+              <>
                 {list.map((listItem, index) => (
-                  <li>
-                    <ListMaterials
-                      key={`${index}-${isAllChecked}`}
-                      {...listItem}
-                      isChecked={listItem.isChecked}
-                    />
-                  </li>
+                  <ListMaterials
+                    key={`${index}-${isAllChecked}`}
+                    {...listItem}
+                    isChecked={listItem.isChecked}
+                  />
                 ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-        {!buttonsUpTop && (
-          <div className="modal-loan__buttons modal-loan__buttons--bottom">
-            <Checkbox
-              hiddenLabel={false}
-              isChecked={isAllChecked}
-              callback={handleToggleAll}
-              label="Vælg alle med mulighed for fornyelse"
-            />
-            <Button
-              buttonType="default"
-              label="Forny mulige (2)"
-              size="small"
-              variant="filled"
-              disabled={false}
-              collapsible
-            />
-          </div>
-        )}
+              </>
+            ))}
+          </ul>
+          <ResultPager
+            currentResults={1}
+            totalResults={2}
+            classNames="result-pager--margin-bottom"
+          />
+          {!buttonsUpTop && (
+            <div className="modal-loan__buttons modal-loan__buttons--bottom">
+              <Checkbox
+                hiddenLabel={false}
+                isChecked={isAllChecked}
+                callback={handleToggleAll}
+                label="Vælg alle med mulighed for fornyelse"
+              />
+              <Button
+                buttonType="default"
+                label="Forny mulige (2)"
+                size="small"
+                variant="filled"
+                disabled={false}
+                collapsible
+              />
+            </div>
+          )}
+        </div>
       </div>
     </Modal>
   );
