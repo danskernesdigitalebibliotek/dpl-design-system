@@ -24,7 +24,9 @@ export default {
 } as ComponentMeta<typeof ListMaterials>;
 
 const Template: ComponentStory<typeof ListMaterials> = (args) => (
-  <ListMaterials {...args} />
+  <ul>
+    <ListMaterials {...args} />
+  </ul>
 );
 
 export const Item = Template.bind({});
