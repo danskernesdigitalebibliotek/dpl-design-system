@@ -3,7 +3,7 @@ import { Button } from "../Buttons/button/Button";
 interface ResultPagerProps {
   currentResults: number;
   totalResults: number;
-  classNames: string;
+  classNames?: string;
 }
 
 const ResultPager = ({
