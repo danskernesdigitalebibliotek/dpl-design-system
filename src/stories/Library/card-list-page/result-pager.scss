@@ -17,6 +17,11 @@
 
   @include breakpoint-s {
     max-width: 253px;
+  }
+}
+
+.result-pager--margin-bottom > .btn-primary {
+  @include breakpoint-s {
     margin-bottom: 90px;
   }
 }
