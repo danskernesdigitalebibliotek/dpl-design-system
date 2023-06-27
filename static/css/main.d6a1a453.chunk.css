@@ -3817,17 +3817,25 @@ dl.list-description dd .link-tag {
 .modal-loan__buttons {
   background-color: #f6f5f0;
   display: flex;
-  grid-gap: 24px;
   justify-content: flex-end;
-  align-items: center;
   margin-top: 40px;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .modal-loan__buttons {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .modal-loan__buttons--bottom {
   position: fixed;
   right: 0;
   bottom: 0;
+  left: 0;
   padding: 16px;
+  margin-bottom: 0px;
 }
 @media (min-width: 768px) {
   .modal-loan__buttons--bottom {
@@ -4610,7 +4618,7 @@ dl.list-description dd .link-tag {
 }
 
 .result-pager--margin-bottom {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   margin-top: 0px;
 }
 
@@ -4621,6 +4629,12 @@ dl.list-description dd .link-tag {
 @media (min-width: 768px) {
   .result-pager > .btn-primary {
     max-width: 253px;
+  }
+}
+
+@media (min-width: 768px) {
+  .result-pager--margin-bottom > .btn-primary {
+    margin-bottom: 90px;
   }
 }
 
@@ -6208,4 +6222,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.7ab890d9.chunk.css.map*/
+/*# sourceMappingURL=main.d6a1a453.chunk.css.map*/
