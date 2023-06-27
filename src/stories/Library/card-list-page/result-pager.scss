@@ -7,7 +7,7 @@
 }
 
 .result-pager--margin-bottom {
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   margin-top: 0px;
 }
 // Override button css (Center + Width)
@@ -17,5 +17,11 @@
 
   @include breakpoint-s {
     max-width: 253px;
+  }
+}
+
+.result-pager--margin-bottom > .btn-primary {
+  @include breakpoint-s {
+    margin-bottom: 90px;
   }
 }

@@ -44,17 +44,24 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
 .modal-loan__buttons {
   background-color: $c-global-primary;
   display: flex;
-  grid-gap: 24px;
   justify-content: flex-end;
-  align-items: center;
   margin-top: 40px;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  @include breakpoint-s {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .modal-loan__buttons--bottom {
   position: fixed;
   right: 0;
   bottom: 0;
+  left: 0;
   padding: $s-md;
+  margin-bottom: 0px;
 
   @include breakpoint-s {
     padding: $s-lg $s-7xl $s-lg 0;
