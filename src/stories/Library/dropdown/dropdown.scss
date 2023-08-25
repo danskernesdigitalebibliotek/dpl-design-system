@@ -33,6 +33,11 @@
   white-space: nowrap;
 
   @extend %text-button-placeholder;
+
+  &:focus {
+    outline: none;
+    border-color: $c-text-primary-black;
+  }
 }
 
 .dropdown__option {
