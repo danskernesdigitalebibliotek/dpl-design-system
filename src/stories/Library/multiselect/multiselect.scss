@@ -58,13 +58,15 @@
 
   &__checkbox {
     position: absolute;
-    right: 4px;
+    right: $s-sm;
     top: 0px;
   }
-}
 
-// to be deleted
-.fake-box {
-  width: 260px;
-  height: 260px;
+  &__caption {
+    @extend %text-small-caption;
+    width: 100%;
+    height: $s-lg;
+    margin-bottom: $s-sm;
+    padding-top: $s-xs;
+  }
 }

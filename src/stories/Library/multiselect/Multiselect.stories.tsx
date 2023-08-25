@@ -19,6 +19,12 @@ export default {
         type: "boolean",
       },
     },
+    withCaption: {
+      defaultValue: false,
+      control: {
+        type: "boolean",
+      },
+    },
   },
   parameters: {
     design: {
@@ -30,9 +36,7 @@ export default {
 } as ComponentMeta<typeof MultiselectComp>;
 
 const Template: ComponentStory<typeof MultiselectComp> = (args) => (
-  <div className="fake-box">
-    <MultiselectComp {...args} />
-  </div>
+  <MultiselectComp {...args} />
 );
 
 export const Multiselect = Template.bind({});
