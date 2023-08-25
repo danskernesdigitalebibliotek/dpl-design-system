@@ -2,13 +2,13 @@ import { Checkbox } from "../Forms/checkbox/Checkbox";
 
 export type MultiselectProps = {
   options: string[];
-  isOpen: boolean;
+  isOpen?: boolean;
   withCaption?: boolean;
 };
 
 export const Multiselect: React.FC<MultiselectProps> = ({
   options,
-  isOpen,
+  isOpen = false,
   withCaption,
 }) => {
   return (

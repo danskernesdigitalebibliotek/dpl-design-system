@@ -1,0 +1,102 @@
+import React from "react";
+import Pagefold from "../../Library/pagefold/Pagefold";
+import { Links } from "../../Library/links/Links";
+import { InputWithDropdown } from "../../Library/input-with-dropdown/InputWithDropdown";
+import { Multiselect } from "../../Library/multiselect/Multiselect";
+import { Button } from "../../Library/Buttons/button/Button";
+
+export interface AdvancedSearchProps {
+  inputPlaceholder: string;
+  inputAmount: number;
+  cqlPreviewText: string;
+}
+
+export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
+  inputPlaceholder,
+  inputAmount,
+  cqlPreviewText,
+}) => {
+  return (
+    <div className="advanced-search">
+      <h1 className="text-header-h2 advanced-search__title">
+        Avanceret søgning
+      </h1>
+      <section className="input-and-preview mb-48">
+        <div className="input-and-preview__input">
+          <InputWithDropdown inputPlaceholder={inputPlaceholder} />
+          {Array(inputAmount - 1)
+            .fill(0)
+            .map(() => {
+              return (
+                <>
+                  <div className="advanced-search__clauses">
+                    <button className="advanced-search__clause focus-styling">
+                      AND
+                    </button>
+                    <button className="advanced-search__clause advanced-search__clause--grey focus-styling">
+                      OR
+                    </button>
+                    <button className="advanced-search__clause advanced-search__clause--grey focus-styling">
+                      NOT
+                    </button>
+                  </div>
+                  <InputWithDropdown inputPlaceholder={inputPlaceholder} />
+                </>
+              );
+            })}
+          <button className="advanced-search__clauses">
+            <img
+              className="mr-8"
+              src="icons/collection/PlusButton.svg"
+              alt="Plus button icon"
+            />
+            Tilføj ny linje
+          </button>
+        </div>
+        <Pagefold
+          size="large"
+          isInheriting
+          isAContainer={false}
+          className="input-and-preview__preview"
+        >
+          <h3 className="text-body-medium-medium mb-24">CQL søgestreng</h3>
+          <p className="text-body-medium-regular mb-32">{cqlPreviewText}</p>
+          <footer>
+            <button className="link-tag mr-16">Nulstil</button>
+            <button className="link-tag mr-16">Kopier streng</button>
+            <Links href="/" linkText="Rediger CQL" classNames="link-tag" />
+          </footer>
+        </Pagefold>
+      </section>
+      <section className="advanced-search__filters">
+        {Array(3)
+          .fill(0)
+          .map((item, index) => {
+            return (
+              <div className="advanced-search__filter">
+                <Multiselect
+                  options={["Item 1", "Item 2", "Item 3"]}
+                  withCaption
+                  isOpen={index === 0}
+                  key={`${item}${index}`}
+                />
+              </div>
+            );
+          })}
+      </section>
+      <footer className="advanced-search_footer">
+        <Button
+          size="xlarge"
+          label="Search"
+          buttonType="none"
+          variant="filled"
+          collapsible={false}
+          disabled={false}
+          classNames="advanced-search__button"
+        />
+      </footer>
+    </div>
+  );
+};
+
+export default {};
