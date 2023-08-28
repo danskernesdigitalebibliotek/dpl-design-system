@@ -4,6 +4,10 @@ import { Links } from "../../Library/links/Links";
 import { InputWithDropdown } from "../../Library/input-with-dropdown/InputWithDropdown";
 import { Multiselect } from "../../Library/multiselect/Multiselect";
 import { Button } from "../../Library/Buttons/button/Button";
+import InputPreview from "../../Library/input-preview/InputPreview";
+import data from "../../Library/card-list-page/CardListPageData";
+import { CardListItem } from "../../Library/card-list-item/CardListItem";
+import ResultPager from "../../Library/card-list-page/ResultPager";
 
 export interface AdvancedSearchProps {
   inputPlaceholder: string;
@@ -21,7 +25,7 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
       <h1 className="text-header-h2 advanced-search__title">
         Avanceret søgning
       </h1>
-      <section className="input-and-preview mb-48">
+      <section className="input-and-preview">
         <div className="input-and-preview__input">
           <InputWithDropdown inputPlaceholder={inputPlaceholder} />
           {Array(inputAmount - 1)
@@ -73,17 +77,17 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
           .fill(0)
           .map((item, index) => {
             return (
-              <div className="advanced-search__filter">
+              <div className="advanced-search__filter" key={`${item}${index}`}>
                 <Multiselect
                   options={["Item 1", "Item 2", "Item 3"]}
                   withCaption
                   isOpen={index === 0}
-                  key={`${item}${index}`}
                 />
               </div>
             );
           })}
       </section>
+      <InputPreview cqlPreviewText={cqlPreviewText} isMobile />
       <footer className="advanced-search_footer">
         <Button
           size="xlarge"
@@ -95,6 +99,19 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
           classNames="advanced-search__button"
         />
       </footer>
+      <div className="advanced-search__divider" />
+      <section>
+        <h2 className="text-header-h2 advanced-search__title">
+          Viser materialer (20)
+        </h2>
+        <button className="link-tag mb-16">Link til søgninget</button>
+        <div className="card-list-page__list my-32">
+          {data.searchResult.map((item, i) => {
+            return <CardListItem {...item} tintIndex={i} />;
+          })}
+        </div>
+        <ResultPager currentResults={10} totalResults={20} />
+      </section>
     </div>
   );
 };
