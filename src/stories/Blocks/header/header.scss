@@ -4,6 +4,11 @@
   display: grid;
   grid-template-columns: 1fr;
   background-color: $c-global-primary;
+  position: sticky;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  z-index: 5000;
 
   @include breakpoint-s {
     grid-template-columns: 1fr 105px;
@@ -203,12 +208,14 @@
 }
 
 // The kebab casing conflicts with our naming convention.
-#header__overlay.visible { /* stylelint-disable-line */
+#header__overlay.visible {
+  /* stylelint-disable-line */
   display: grid;
 }
 
 // The kebab casing conflicts with our naming convention.
-#header__overlay { /* stylelint-disable-line */
+#header__overlay {
+  /* stylelint-disable-line */
   display: none;
   z-index: 5;
   position: fixed;
@@ -242,7 +249,8 @@
 }
 
 // The kebab casing conflicts with our naming convention.
-#header__menu--close { /* stylelint-disable-line */
+#header__menu--close {
+  /* stylelint-disable-line */
   position: fixed;
   padding: 30px;
 }

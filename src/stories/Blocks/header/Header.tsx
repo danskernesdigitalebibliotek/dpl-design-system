@@ -36,11 +36,12 @@ export const Header = (props: HeaderProps) => {
   const { signedIn, haveNotification, username, inputPlaceholder } = props;
 
   useEffect(() => {
-    require("./initheader");
+    require("./header-toggle");
+    require("./header-sticky");
   }, []);
 
   return (
-    <div>
+    <>
       <header className="header">
         <div className="header__logo-desktop">
           <a className="header__logo-desktop-link" href="/">
@@ -161,7 +162,7 @@ export const Header = (props: HeaderProps) => {
         </div>
         <div className="header__overlay-backdrop" />
       </div>
-    </div>
+    </>
   );
 };
 
