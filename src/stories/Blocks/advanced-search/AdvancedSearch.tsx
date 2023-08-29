@@ -67,13 +67,15 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
               isAContainer={false}
               className="input-and-preview__preview"
             >
-              <h3 className="text-body-medium-medium mb-24">CQL søgestreng</h3>
+              <div className="text-body-medium-medium mb-24">
+                CQL søgestreng
+              </div>
               <p className="text-body-medium-regular mb-32">{cqlPreviewText}</p>
-              <footer>
+              <section>
                 <button className="link-tag mr-16">Nulstil</button>
                 <button className="link-tag mr-16">Kopier streng</button>
                 <Links href="/" linkText="Rediger CQL" classNames="link-tag" />
-              </footer>
+              </section>
             </Pagefold>
           </div>
           <section className="advanced-search__filters">
