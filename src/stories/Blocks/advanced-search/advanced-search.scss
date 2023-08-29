@@ -59,13 +59,30 @@
 
   &__footer {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include breakpoint-s {
+      flex-direction: row;
+    }
   }
 
-  &__button {
-    margin-left: auto;
+  &__back-button {
+    align-self: center;
+    margin-bottom: $s-lg;
+
+    @include breakpoint-s {
+      align-self: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__search-button {
     width: 100%;
 
     @include breakpoint-s {
+      margin-left: $s-lg;
       width: 266px;
     }
   }
@@ -73,12 +90,18 @@
   &__divider {
     height: 1px;
     background-color: $c-global-tertiary-1;
-    margin: $s-lg 0;
+    margin: $s-2xl 0;
     width: 100%;
+  }
 
-    @include breakpoint-m {
-      margin: $s-2xl 0px;
-    }
+  &__cql-input {
+    @extend %text-body-medium-regular-placeholder;
+    border: solid 1px $c-global-tertiary-1;
+    width: 100%;
+    margin-bottom: 46px;
+    padding: $s-md;
+    resize: none;
+    background-color: $c-global-primary;
   }
 }
 

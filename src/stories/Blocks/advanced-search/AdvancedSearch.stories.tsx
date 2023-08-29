@@ -26,6 +26,11 @@ export default {
         "title = harry potter AND subtitle = and the philosophers stone",
       control: { type: "text" },
     },
+    isCqlSearch: {
+      name: "Is CQL search?",
+      defaultValue: false,
+      control: { type: "boolean" },
+    },
   },
   parameters: {
     design: {
@@ -40,3 +45,8 @@ const Template: ComponentStory<typeof AdvancedSearchComp> = (
 ) => <AdvancedSearchComp {...args} />;
 
 export const AdvancedSearch = Template.bind({});
+
+export const CqlSearch = Template.bind({});
+CqlSearch.args = {
+  isCqlSearch: true,
+};

@@ -46,7 +46,7 @@
     right: $s-sm;
 
     @include breakpoint-s {
-      margin: 0 $s-md;
+      margin: 0 $s-md $s-lg $s-md;
       position: relative;
     }
   }
