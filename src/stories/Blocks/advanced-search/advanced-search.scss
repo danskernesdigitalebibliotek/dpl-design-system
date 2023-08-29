@@ -133,6 +133,7 @@
       padding: $s-2xl $s-xl;
     }
     @include breakpoint-l {
+      padding: $s-xl 48px $s-xl 64px;
       width: 420px;
       min-width: 420px;
       display: flex;
