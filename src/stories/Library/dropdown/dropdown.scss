@@ -75,6 +75,13 @@
   min-width: 200px;
 }
 
+.dropdown__select--inline-body-font {
+  @extend %text-body-medium-regular-placeholder;
+  height: 100%;
+  padding: $s-sm $s-md;
+  min-width: 200px;
+}
+
 .dropdown__arrows--inline {
   height: 100%;
 }

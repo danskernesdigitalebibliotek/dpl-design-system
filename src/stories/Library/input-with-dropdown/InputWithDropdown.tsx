@@ -24,8 +24,8 @@ export const InputWithDropdown: React.FC<InputWithDropdownProps> = ({
         arrowIcon="chevron"
         classNames="dropdown--grey-borders input-with-dropdown__dropdown"
         innerClassNames={{
-          select: "dropdown__select--inline focus-styling",
-          arrowWrapper: "dropdown__arrows--inline ",
+          select: "dropdown__select--inline-body-font focus-styling",
+          arrowWrapper: "dropdown__arrows--inline",
         }}
       />
       <button>
