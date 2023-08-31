@@ -86,7 +86,7 @@
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended-scss": "^6.0.0",
     "stylelint-prettier": "^2.0.0",
-    "stylelint-scss": "^4.2.0",
+    "stylelint-scss": "^5.1.0",
     "typescript": "^4.7.4",
     "web-vitals": "^1.0.1"
   },
