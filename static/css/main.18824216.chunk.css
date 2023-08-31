@@ -3160,13 +3160,13 @@ a.cover {
   content: " ";
   -webkit-transform: translateY(8px) scale(0.95);
           transform: translateY(8px) scale(0.95);
-  z-index: -1;
+  z-index: -5;
 }
 .list-reservation--stacked::before {
   content: " ";
   -webkit-transform: translateY(16px) scale(0.9);
           transform: translateY(16px) scale(0.9);
-  z-index: -2;
+  z-index: -10;
 }
 .list-reservation--stacked:hover {
   -webkit-filter: none;
@@ -3524,7 +3524,7 @@ dl.list-description dd .link-tag {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 5;
+  z-index: 20;
   top: 0;
   left: 0;
   background-color: hsla(0deg, 0%, 15%, 0.5);
@@ -3540,7 +3540,7 @@ dl.list-description dd .link-tag {
   right: 0;
   padding: 22.5px;
   transition: 0.3s;
-  z-index: 2;
+  z-index: 15;
 }
 @media (min-width: 768px) {
   .modal-btn-close.modal-btn-close--offset {
@@ -3704,7 +3704,7 @@ dl.list-description dd .link-tag {
   right: 0;
   padding: 34px;
   transition: 0.3s;
-  z-index: 2;
+  z-index: 10;
 }
 .modal-details__close:hover {
   -webkit-transform: rotateZ(90deg);
@@ -5117,7 +5117,7 @@ dl.list-description dd .link-tag {
   left: 0;
   right: 0;
   top: calc(100% + 1px);
-  z-index: 1;
+  z-index: 5;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -5362,6 +5362,12 @@ dl.list-description dd .link-tag {
   display: grid;
   grid-template-columns: 1fr;
   background-color: #f6f5f0;
+  position: -webkit-sticky;
+  position: sticky;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  z-index: 20;
 }
 @media (min-width: 768px) {
   .header {
@@ -5568,13 +5574,15 @@ dl.list-description dd .link-tag {
   }
 }
 
-#header__overlay.visible { /* stylelint-disable-line */
+#header__overlay.visible {
+  /* stylelint-disable-line */
   display: grid;
 }
 
-#header__overlay { /* stylelint-disable-line */
+#header__overlay {
+  /* stylelint-disable-line */
   display: none;
-  z-index: 5;
+  z-index: 20;
   position: fixed;
   top: 0;
   left: 0;
@@ -5606,7 +5614,8 @@ dl.list-description dd .link-tag {
   margin-bottom: 8px;
 }
 
-#header__menu--close { /* stylelint-disable-line */
+#header__menu--close {
+  /* stylelint-disable-line */
   position: fixed;
   padding: 30px;
 }
@@ -6222,4 +6231,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.d6a1a453.chunk.css.map*/
+/*# sourceMappingURL=main.18824216.chunk.css.map*/
