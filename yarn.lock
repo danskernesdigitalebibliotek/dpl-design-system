@@ -1636,10 +1636,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@namics/stylelint-bem@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@namics/stylelint-bem/-/stylelint-bem-7.0.0.tgz#58dafcb1be601c3f77267493faf6e17f3bf0d1fb"
-  integrity sha512-XimlWZbCotBQbwB5YwcB5d7HNhoY4YBWyfoMbDcEuUWOCEmXDbfwsSDJR+cytm+/Z+lDVRnHd+iM01AaF0+R4A==
+"@namics/stylelint-bem@^8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@namics/stylelint-bem/-/stylelint-bem-8.1.0.tgz#5a5950eff7ef224871db165fa54a734ba8b7b965"
+  integrity sha512-lVK6mqAD1WjKwtXW4pZ/V7T3TM3WFG+aqYtAxqYLp7et3Rm5Tu3JoXYhA63HE4t467XOJTK+K2foIzYz42j69w==
   dependencies:
     css-selector-classes "0.1.2"
     postcss-resolve-nested-selector "0.1.1"
