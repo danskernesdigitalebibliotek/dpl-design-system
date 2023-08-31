@@ -1,19 +1,25 @@
 window.addEventListener("DOMContentLoaded", () => {
   let scrollDirection = "up";
   let lastScrollY = window.scrollY;
-  // Get the starting position of the header
-  const initialHeaderYposition = document.querySelector("header").offsetTop;
-  // Tweak the header position when it's down by this amount.
-  const headerDownTopPositionOffset = 5;
-  const waitPxBeforeScroll = 5;
+  const headerOffsetTop = document.querySelector("header").offsetTop;
 
-  const updateScrollDirection = () => {
+  const updateStickyHeader = ({
+    // If you want to set a custom starting position for the header.
+    initialHeaderYposition = null,
+    // Tweak the header position when it's down by this amount.
+    headerDownTopPositionOffset = 5,
+    // Wait this many pixels before showing/hiding the header.
+    waitPx = 5,
+  }) => {
+    // Get the starting position of the header
+    const headerYStartPosition = initialHeaderYposition ?? headerOffsetTop;
+
     const { scrollY } = window;
     // Detect if we are going up or down.
     const direction = scrollY > lastScrollY ? "down" : "up";
     if (
       direction !== scrollDirection &&
-      Math.abs(scrollY - lastScrollY) > waitPxBeforeScroll
+      Math.abs(scrollY - lastScrollY) > waitPx
     ) {
       scrollDirection = direction;
     }
@@ -27,11 +33,9 @@ window.addEventListener("DOMContentLoaded", () => {
         "header"
       ).style.top = `-${headerDownTopPosition}px`;
     } else {
-      document.querySelector(
-        "header"
-      ).style.top = `${initialHeaderYposition}px`;
+      document.querySelector("header").style.top = `${headerYStartPosition}px`;
     }
   };
 
-  window.addEventListener("scroll", updateScrollDirection);
+  window.addEventListener("scroll", updateStickyHeader);
 });
