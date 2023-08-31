@@ -19,8 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const direction = scrollY > lastScrollY ? "down" : "up";
     if (
       direction !== scrollDirection &&
-      (scrollY - lastScrollY > waitPxBeforeScroll ||
-        scrollY - lastScrollY < -waitPxBeforeScroll)
+      Math.abs(scrollY - lastScrollY) > waitPxBeforeScroll
     ) {
       scrollDirection = direction;
     }
