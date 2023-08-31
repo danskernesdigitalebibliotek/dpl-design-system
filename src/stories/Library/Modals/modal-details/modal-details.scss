@@ -123,7 +123,7 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
   right: 0;
   padding: 34px;
   transition: 0.3s;
-  z-index: 2;
+  z-index: $z-10;
 
   &:hover {
     transform: rotateZ(90deg);

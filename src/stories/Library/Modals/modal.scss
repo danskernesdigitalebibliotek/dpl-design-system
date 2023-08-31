@@ -71,7 +71,7 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 5;
+  z-index: $z-20;
   top: 0;
   left: 0;
   background-color: hsla(0, 0%, 15%, 0.5);
@@ -87,7 +87,7 @@
   right: 0;
   padding: 22.5px;
   transition: 0.3s;
-  z-index: 2;
+  z-index: $z-15;
 
   &.modal-btn-close--offset {
     @include breakpoint-s {

@@ -185,7 +185,7 @@ $list-reservation-space-desktop: 24px;
 
     content: " ";
     transform: translateY(8px) scale(0.95);
-    z-index: -1;
+    z-index: $-z-5;
   }
 
   &::before {
@@ -193,7 +193,7 @@ $list-reservation-space-desktop: 24px;
 
     content: " ";
     transform: translateY(16px) scale(0.9);
-    z-index: -2;
+    z-index: $-z-10;
   }
 
   &:hover {
