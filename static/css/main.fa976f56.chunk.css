@@ -2589,6 +2589,8 @@ a.cover {
 .dpl-input {
   display: flex;
   flex-direction: column;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
 }
 .dpl-input label {
   color: #484848;
@@ -2608,6 +2610,14 @@ a.cover {
 }
 .dpl-input__validation {
   color: #d5364a;
+}
+.dpl-input input::-webkit-outer-spin-button,
+.dpl-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.dpl-input input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .dpl-list-buttons {
@@ -6231,4 +6241,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.18824216.chunk.css.map*/
+/*# sourceMappingURL=main.fa976f56.chunk.css.map*/
