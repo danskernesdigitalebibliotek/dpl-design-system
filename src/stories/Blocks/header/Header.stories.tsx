@@ -20,6 +20,9 @@ export default {
     inputPlaceholder: {
       defaultValue: "Søg blandt bibliotekets materialer",
     },
+    openDropdown: {
+      defaultValue: false,
+    },
   },
   parameters: {
     design: {
