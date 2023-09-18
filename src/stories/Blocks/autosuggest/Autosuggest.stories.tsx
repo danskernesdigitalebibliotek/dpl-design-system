@@ -48,6 +48,11 @@ const Template: ComponentStory<typeof Autosuggest> = (
             src="icons/basic/icon-search.svg"
             alt="search icon"
           />
+          <img
+            className="header__menu-dropdown-icon"
+            src="icons/collection/ExpandMore.svg"
+            alt="expand dropdown icon"
+          />
           <Autosuggest {...args} />
         </div>
       </div>
