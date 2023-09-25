@@ -1,6 +1,10 @@
 name: Deployment
 
-on: push
+on:
+  push:
+    branches-ignore:
+      # Dependabot does not have permissions to create releases
+      - 'dependabot/**'
 
 jobs:
   deploy_release:
