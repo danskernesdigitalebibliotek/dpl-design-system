@@ -71,6 +71,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: Install problem matcher
-        uses: xt0rted/markdownlint-problem-matcher@v1
+        uses: xt0rted/markdownlint-problem-matcher@v2
       - name: Lint markdown
         run: yarn lint:markdown
