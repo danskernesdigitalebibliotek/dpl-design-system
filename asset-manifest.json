@@ -4,12 +4,12 @@
     "0.7b0d9df7.iframe.bundle.js.map": "./0.7b0d9df7.iframe.bundle.js.map",
     "1.7e5fbb8d.iframe.bundle.js": "./1.7e5fbb8d.iframe.bundle.js",
     "2.89943a03.iframe.bundle.js": "./2.89943a03.iframe.bundle.js",
-    "main.css": "./static/css/main.fa976f56.chunk.css",
-    "main.js": "./main.34deab90.iframe.bundle.js",
-    "main.css.map": "./static/css/main.fa976f56.chunk.css.map",
+    "main.css": "./static/css/main.8593b9bf.chunk.css",
+    "main.js": "./main.cbe69d15.iframe.bundle.js",
+    "main.css.map": "./static/css/main.8593b9bf.chunk.css.map",
     "runtime~main.js": "./runtime~main.0887b852.iframe.bundle.js",
-    "vendors~main.js": "./vendors~main.8f40a06c.iframe.bundle.js",
-    "vendors~main.js.map": "./vendors~main.8f40a06c.iframe.bundle.js.map",
+    "vendors~main.js": "./vendors~main.1da00afd.iframe.bundle.js",
+    "vendors~main.js.map": "./vendors~main.1da00afd.iframe.bundle.js.map",
     "6.758f92a1.iframe.bundle.js": "./6.758f92a1.iframe.bundle.js",
     "6.758f92a1.iframe.bundle.js.map": "./6.758f92a1.iframe.bundle.js.map",
     "7.15129502.iframe.bundle.js": "./7.15129502.iframe.bundle.js",
@@ -30,12 +30,12 @@
     "static/media/icon-arrow-ui-small-right.svg": "./static/media/icon-arrow-ui-small-right.f9b2df75.svg",
     "static/media/icon-external-link.9383ca1f.svg": "./static/media/icon-external-link.9383ca1f.svg",
     "static/media/icon-favourite.svg": "./static/media/icon-favourite.439569a6.svg",
-    "vendors~main.8f40a06c.iframe.bundle.js.LICENSE.txt": "./vendors~main.8f40a06c.iframe.bundle.js.LICENSE.txt"
+    "vendors~main.1da00afd.iframe.bundle.js.LICENSE.txt": "./vendors~main.1da00afd.iframe.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
     "runtime~main.0887b852.iframe.bundle.js",
-    "vendors~main.8f40a06c.iframe.bundle.js",
-    "static/css/main.fa976f56.chunk.css",
-    "main.34deab90.iframe.bundle.js"
+    "vendors~main.1da00afd.iframe.bundle.js",
+    "static/css/main.8593b9bf.chunk.css",
+    "main.cbe69d15.iframe.bundle.js"
   ]
 }
