@@ -18,7 +18,7 @@ export const Multiselect: React.FC<MultiselectProps> = ({
       )}
       <div className="multiselect">
         <div className="multiselect__selected">
-          Item 1, Item 2, Item 3, Item 4
+          Mulighed 1, Mulighed 2, Mulighed 3, Mulighed 4
         </div>
         <div className="multiselect__opener">
           <img

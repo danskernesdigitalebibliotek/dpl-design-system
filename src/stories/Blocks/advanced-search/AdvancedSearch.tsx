@@ -39,13 +39,13 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
                     <>
                       <div className="advanced-search__clauses">
                         <button className="advanced-search__clause focus-styling">
-                          AND
+                          OG
                         </button>
                         <button className="advanced-search__clause advanced-search__clause--grey focus-styling">
-                          OR
+                          ELLER
                         </button>
                         <button className="advanced-search__clause advanced-search__clause--grey focus-styling">
-                          NOT
+                          IKKE
                         </button>
                       </div>
                       <InputWithDropdown inputPlaceholder={inputPlaceholder} />
@@ -88,7 +88,7 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
                     key={`${item}${index}`}
                   >
                     <Multiselect
-                      options={["Item 1", "Item 2", "Item 3"]}
+                      options={["Mulighed 1", "Mulighed 2", "Mulighed 3"]}
                       withCaption
                       isOpen={index === 0}
                     />
@@ -115,7 +115,7 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
         )}
         <Button
           size="xlarge"
-          label="Search"
+          label="Søg"
           buttonType="none"
           variant="filled"
           collapsible={false}
