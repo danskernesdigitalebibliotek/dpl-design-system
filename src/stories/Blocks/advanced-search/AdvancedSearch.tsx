@@ -24,7 +24,7 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
 }) => {
   return (
     <div className="advanced-search">
-      <h1 className="text-header-h2 advanced-search__title">
+      <h1 className="text-header-h2 advanced-search__title capitalize-first">
         {isCqlSearch ? "CQL søgning" : "Avanceret søgning"}
       </h1>
       {!isCqlSearch && (
@@ -67,13 +67,17 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
               isAContainer={false}
               className="input-and-preview__preview"
             >
-              <div className="text-body-medium-medium mb-24">
+              <div className="text-body-medium-medium mb-24 capitalize-first">
                 CQL søgestreng
               </div>
               <p className="text-body-medium-regular mb-32">{cqlPreviewText}</p>
               <section>
-                <button className="link-tag mr-16">Nulstil</button>
-                <button className="link-tag mr-16">Kopier streng</button>
+                <button className="link-tag mr-16 capitalize-first">
+                  Nulstil
+                </button>
+                <button className="link-tag mr-16 capitalize-first">
+                  Kopier streng
+                </button>
                 <Links href="/" linkText="Rediger CQL" classNames="link-tag" />
               </section>
             </Pagefold>
@@ -125,7 +129,7 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
       </footer>
       <div className="advanced-search__divider" />
       <section>
-        <h2 className="text-header-h2 advanced-search__title">
+        <h2 className="text-header-h2 advanced-search__title capitalize-first">
           Viser materialer (20)
         </h2>
         <button className="link-tag mb-16">Link til søgninget</button>

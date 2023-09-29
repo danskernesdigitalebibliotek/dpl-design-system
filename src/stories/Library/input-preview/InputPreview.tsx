@@ -20,12 +20,20 @@ const InputPreview: React.FC<InputPreviewProps> = ({
         "input-and-preview__preview--mobile": isMobile,
       })}
     >
-      <h3 className="text-body-medium-medium mb-24">CQL søgestreng</h3>
+      <h3 className="text-body-medium-medium mb-24 capitalize-first">
+        CQL søgestreng
+      </h3>
       <p className="text-body-medium-regular mb-32">{cqlPreviewText}</p>
       <footer>
-        <button className="link-tag mr-16">Nulstil</button>
-        <button className="link-tag mr-16">Kopier streng</button>
-        <Links href="/" linkText="Rediger CQL" classNames="link-tag" />
+        <button className="link-tag mr-16 capitalize-first">Nulstil</button>
+        <button className="link-tag mr-16 capitalize-first">
+          Kopier streng
+        </button>
+        <Links
+          href="/"
+          linkText="Rediger CQL capitalize-first"
+          classNames="link-tag"
+        />
       </footer>
     </Pagefold>
   );
