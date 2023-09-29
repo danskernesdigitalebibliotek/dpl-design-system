@@ -29,11 +29,7 @@ const InputPreview: React.FC<InputPreviewProps> = ({
         <button className="link-tag mr-16 capitalize-first">
           Kopier streng
         </button>
-        <Links
-          href="/"
-          linkText="Rediger CQL capitalize-first"
-          classNames="link-tag"
-        />
+        <Links href="/" linkText="Rediger CQL" classNames="link-tag" />
       </footer>
     </Pagefold>
   );
