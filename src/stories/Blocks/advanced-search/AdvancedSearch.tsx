@@ -1,6 +1,4 @@
 import React from "react";
-import Pagefold from "../../Library/pagefold/Pagefold";
-import { Links } from "../../Library/links/Links";
 import { InputWithDropdown } from "../../Library/input-with-dropdown/InputWithDropdown";
 import { Multiselect } from "../../Library/multiselect/Multiselect";
 import { Button } from "../../Library/Buttons/button/Button";
@@ -61,26 +59,7 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
                 Tilføj ny linje
               </button>
             </div>
-            <Pagefold
-              size="large"
-              isInheriting
-              isAContainer={false}
-              className="input-and-preview__preview"
-            >
-              <div className="text-body-medium-medium mb-24 capitalize-first">
-                CQL søgestreng
-              </div>
-              <p className="text-body-medium-regular mb-32">{cqlPreviewText}</p>
-              <section>
-                <button className="link-tag mr-16 capitalize-first">
-                  Nulstil
-                </button>
-                <button className="link-tag mr-16 capitalize-first">
-                  Kopier streng
-                </button>
-                <Links href="/" linkText="Rediger CQL" classNames="link-tag" />
-              </section>
-            </Pagefold>
+            <InputPreview cqlPreviewText={cqlPreviewText} />
           </div>
           <section className="advanced-search__filters">
             {Array(3)
