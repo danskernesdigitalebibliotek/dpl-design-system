@@ -176,7 +176,44 @@
 
 .header__menu-search-icon {
   position: absolute;
-  right: 24px;
+  right: $s-3xl;
+}
+
+.header__menu-dropdown {
+  @extend %text-body-medium-regular-placeholder;
+  position: absolute;
+  right: 0;
+  top: 58px;
+  background-color: $c-global-primary;
+  padding: $s-xs 0;
+  outline: $c-global-tertiary-1 solid 1px;
+  z-index: 2;
+
+  @include breakpoint-s {
+    padding: $s-sm 0;
+    right: 0;
+    top: 72px;
+  }
+}
+
+.header__menu-dropdown-item {
+  width: 100%;
+  padding: $s-xs $s-2xl;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $c-global-secondary;
+  }
+}
+
+.header__menu-dropdown-item--highlighted {
+  background-color: $c-global-secondary;
+}
+
+.header__menu-dropdown-icon {
+  position: absolute;
+  cursor: pointer;
+  right: $s-lg;
 }
 
 .header__clock {

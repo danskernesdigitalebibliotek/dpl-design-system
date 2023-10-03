@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Logo } from "../../Library/logo/Logo";
 import Pagefold from "../../Library/pagefold/Pagefold";
 
@@ -7,6 +7,7 @@ export type HeaderProps = {
   haveNotification: boolean;
   username: string;
   inputPlaceholder: string;
+  openDropdown: boolean;
 };
 
 const list = [
@@ -33,7 +34,14 @@ const list = [
 ];
 
 export const Header = (props: HeaderProps) => {
-  const { signedIn, haveNotification, username, inputPlaceholder } = props;
+  const {
+    signedIn,
+    haveNotification,
+    username,
+    inputPlaceholder,
+    openDropdown,
+  } = props;
+  const [isDropdownOpen, setIsDropdownOpen] = useState(openDropdown);
 
   useEffect(() => {
     require("./header-toggle");
@@ -124,6 +132,21 @@ export const Header = (props: HeaderProps) => {
                   alt="search icon"
                 />
               </form>
+              <img
+                className="header__menu-dropdown-icon"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                src="icons/collection/ExpandMore.svg"
+                alt="expand dropdown icon"
+              />
+              {isDropdownOpen && (
+                <div className="header__menu-dropdown">
+                  <ul>
+                    <li className="header__menu-dropdown-item">
+                      Avanceret søgning
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>

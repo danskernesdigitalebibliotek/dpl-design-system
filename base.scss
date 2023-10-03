@@ -93,6 +93,8 @@
 @import "./src/stories/Library/Lists/fee-list/fee-list";
 @import "./src/stories/Library/instant-loan/instant-loan";
 @import "./src/stories/Library/scroll-lock-background/scroll-lock-background";
+@import "./src/stories/Library/multiselect/multiselect";
+@import "./src/stories/Library/input-with-dropdown/input-with-dropdown";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";
@@ -106,6 +108,7 @@
 @import "./src/stories/Blocks/status-loans/status-loans";
 @import "./src/stories/Blocks/status-userprofile/status-userprofile";
 @import "./src/stories/Blocks/material-manifestation-item/material-manifestation-item";
+@import "./src/stories/Blocks/advanced-search/advanced-search";
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";

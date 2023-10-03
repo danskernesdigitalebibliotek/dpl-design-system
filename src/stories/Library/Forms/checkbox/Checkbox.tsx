@@ -9,6 +9,7 @@ export type CheckboxProps = {
   validation?: string;
   callback?: (isChecked: boolean) => void;
   hiddenLabel: boolean;
+  classNames?: string;
 };
 
 export const Checkbox: React.FC<CheckboxProps> = ({
@@ -20,6 +21,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   callback,
   validation,
   hiddenLabel = false,
+  classNames,
 }) => {
   const checkboxId = useRef(`checkbox_id__${Math.random()}`);
   const [checked, setChecked] = useState(isChecked);
@@ -32,7 +34,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   };
 
   return (
-    <div className="checkbox">
+    <div className={`checkbox ${classNames || ""}`}>
       <input
         id={checkboxId.current}
         className="checkbox__input"

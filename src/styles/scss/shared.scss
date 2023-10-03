@@ -81,3 +81,22 @@
     width: 1.25em;
   }
 }
+
+.focus-styling {
+  &:focus {
+    outline: none;
+    border: 1px solid $c-text-primary-black;
+  }
+  &__input {
+    &:focus {
+      outline: none;
+      border: 1px solid $c-text-primary-black;
+      background-color: $c-text-primary-white;
+    }
+  }
+}
+
+.inline-icon {
+  display: inline;
+  margin: 0 0 -5px 5px;
+}

@@ -33,6 +33,11 @@
   white-space: nowrap;
 
   @extend %text-button-placeholder;
+
+  &:focus {
+    outline: none;
+    border-color: $c-text-primary-black;
+  }
 }
 
 .dropdown__option {
@@ -67,6 +72,13 @@
   @extend %text-tags;
   height: 100%;
   padding: $s-sm $s-md;
+  min-width: 200px;
+}
+
+.dropdown__select--inline-body-font {
+  @extend %text-body-medium-regular-placeholder;
+  height: 100%;
+  padding: $s-sm $s-3xl $s-sm $s-md;
   min-width: 200px;
 }
 
