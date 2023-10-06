@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   font-size: 10px;
+  line-height: 11px; //keep text inside when it is wrapped
 
   @include breakpoint-s {
     padding: 0 16px;

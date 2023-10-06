@@ -12,6 +12,7 @@
     &:hover {
       .list-dashboard__arrow {
         visibility: visible;
+        display: block;
       }
     }
   }
@@ -37,6 +38,7 @@
 }
 
 .list-dashboard__arrow {
+  display: none;
   visibility: hidden;
   margin-left: auto;
   width: 90px; // Avoids extending beyond the edge of the box.
