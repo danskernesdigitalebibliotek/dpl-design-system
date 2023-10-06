@@ -12,7 +12,6 @@
     &:hover {
       .list-dashboard__arrow {
         visibility: visible;
-        display: block;
       }
     }
   }
@@ -42,4 +41,8 @@
   visibility: hidden;
   margin-left: auto;
   width: 90px; // Avoids extending beyond the edge of the box.
+
+  @include breakpoint-s {
+    display: block;
+  }
 }
