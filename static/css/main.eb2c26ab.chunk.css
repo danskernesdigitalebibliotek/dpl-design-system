@@ -5688,7 +5688,7 @@ dl.list-description dd .link-tag {
   background-color: #f6f5f0;
   padding: 4px 0;
   outline: #dbdbdb solid 1px;
-  z-index: 2;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .header__menu-dropdown {
@@ -6568,4 +6568,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.f1cac5f9.chunk.css.map*/
+/*# sourceMappingURL=main.eb2c26ab.chunk.css.map*/
