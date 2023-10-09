@@ -187,7 +187,7 @@
   background-color: $c-global-primary;
   padding: $s-xs 0;
   outline: $c-global-tertiary-1 solid 1px;
-  z-index: 2;
+  z-index: $z-10;
 
   @include breakpoint-s {
     padding: $s-sm 0;
