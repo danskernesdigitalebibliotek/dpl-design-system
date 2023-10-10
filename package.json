@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^6.0.1",
-    "@namics/stylelint-bem": "^7.0.0",
+    "@namics/stylelint-bem": "^9.0.0",
     "@storybook/addon-a11y": "^6.5.9",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
