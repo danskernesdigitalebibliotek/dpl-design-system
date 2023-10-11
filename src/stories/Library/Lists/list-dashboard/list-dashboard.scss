@@ -37,7 +37,12 @@
 }
 
 .list-dashboard__arrow {
+  display: none;
   visibility: hidden;
   margin-left: auto;
   width: 90px; // Avoids extending beyond the edge of the box.
+
+  @include breakpoint-s {
+    display: block;
+  }
 }
