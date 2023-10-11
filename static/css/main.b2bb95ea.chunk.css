@@ -2227,6 +2227,7 @@ input[type=reset] {
   justify-content: center;
   align-items: center;
   font-size: 10px;
+  line-height: 11px;
 }
 @media (min-width: 768px) {
   .status-label {
@@ -3231,9 +3232,15 @@ a.cover {
 }
 
 .list-dashboard__arrow {
+  display: none;
   visibility: hidden;
   margin-left: auto;
   width: 90px;
+}
+@media (min-width: 768px) {
+  .list-dashboard__arrow {
+    display: block;
+  }
 }
 
 dl.list-description {
@@ -6568,4 +6575,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.eb2c26ab.chunk.css.map*/
+/*# sourceMappingURL=main.b2bb95ea.chunk.css.map*/
