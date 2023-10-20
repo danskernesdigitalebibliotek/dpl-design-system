@@ -78,7 +78,6 @@
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.1.0",
     "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3",
     "sass": "^1.69.3",
     "skeleton-screen-css": "^1.1.0",
     "storybook-addon-designs": "^6.2.1",
@@ -87,8 +86,7 @@
     "stylelint-config-recommended-scss": "^8.0.0",
     "stylelint-prettier": "^2.0.0",
     "stylelint-scss": "^5.2.1",
-    "typescript": "^4.7.4",
-    "web-vitals": "^1.0.1"
+    "typescript": "^4.7.4"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
