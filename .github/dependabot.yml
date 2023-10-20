@@ -17,3 +17,7 @@ updates:
       timezone: Europe/Copenhagen
     labels:
       - dependencies
+    groups:
+      storybook:
+        patterns:
+          - "@storybook/*"
