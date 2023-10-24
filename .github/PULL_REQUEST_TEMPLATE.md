@@ -10,12 +10,6 @@ Please include a short description of the suggested change and the reasoning beh
 
 If your change affects the user interface you should include a screenshot of the result with the pull request.
 
-#### Checklist
-
-- [ ] My complies with [our coding guidelines](../docs/code_guidelines.md).
-- [ ] My code passes our static analysis suite. If not then I have added a comment explaining why this change should be exempt from the code standards and process.
-- [ ] My code passes our continuous integration process. If not then I have added a comment explaining why this change should be exempt from the code standards and process.
-
 #### Additional comments or questions
 
 If you have any further comments or questions for the reviewer them please add them here.
