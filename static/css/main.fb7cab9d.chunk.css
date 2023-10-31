@@ -3202,9 +3202,15 @@ a.cover {
   padding: 16px;
   text-decoration: none;
 }
+.list-dashboard .status-label {
+  margin-left: auto;
+}
 @media (min-width: 768px) {
   .list-dashboard {
     padding: 16px 24px;
+  }
+  .list-dashboard .status-label {
+    margin-left: unset;
   }
   .list-dashboard:hover .list-dashboard__arrow {
     visibility: visible;
@@ -6575,4 +6581,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.b2bb95ea.chunk.css.map*/
+/*# sourceMappingURL=main.fb7cab9d.chunk.css.map*/
