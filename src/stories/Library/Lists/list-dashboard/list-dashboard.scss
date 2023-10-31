@@ -6,8 +6,16 @@
   padding: 16px;
   text-decoration: none;
 
+  & .status-label {
+    margin-left: auto;
+  }
+
   @include breakpoint-s {
     padding: 16px 24px;
+
+    & .status-label {
+      margin-left: unset;
+    }
 
     &:hover {
       .list-dashboard__arrow {
