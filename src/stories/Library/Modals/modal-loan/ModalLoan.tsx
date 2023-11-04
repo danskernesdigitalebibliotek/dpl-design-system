@@ -145,7 +145,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
             </div>
           )}
           {buttonsUpTop && (
-            <div className="modal-loan__buttons">
+            <div className="button-box">
               <Checkbox
                 hiddenLabel={false}
                 isChecked={isAllChecked}
@@ -181,7 +181,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
             classNames="result-pager--margin-bottom"
           />
           {!buttonsUpTop && (
-            <div className="modal-loan__buttons modal-loan__buttons--bottom">
+            <div className="button-box button-box--sticky-bottom">
               <Checkbox
                 hiddenLabel={false}
                 isChecked={isAllChecked}
