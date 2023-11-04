@@ -34,6 +34,12 @@
   }
 }
 
+.hide-on-desktop {
+  @include breakpoint-s {
+    display: none;
+  }
+}
+
 :root {
   --parent-bg-color: #fff;
 }
