@@ -1,14 +1,14 @@
-import ToggleButton from "../Buttons/toggle-button/ToggleButton";
-
 export type PauseReservationProps = {
   isChecked: boolean;
-  text: string;
+  isPausedtext: string;
+  pauseText: string;
   dates: string;
 };
 
 export const PauseReservation = ({
   isChecked,
-  text,
+  pauseText,
+  isPausedtext,
   dates,
 }: PauseReservationProps) => {
   return (
@@ -19,7 +19,7 @@ export const PauseReservation = ({
           <img src="icons/collection/Reservations.svg" alt="" />
         </div>
         <div className="dpl-pause-reservation-component__flex__text">
-          {text}
+          {isChecked ? isPausedtext : pauseText}
         </div>
         {isChecked && (
           <span
@@ -30,7 +30,9 @@ export const PauseReservation = ({
           </span>
         )}
         <div className="dpl-pause-reservation-component__flex__button">
-          <ToggleButton isChecked={isChecked} />
+          <button type="button" className="btn-primary btn-filled btn-small">
+            Indstillinger
+          </button>
         </div>
       </div>
     </div>

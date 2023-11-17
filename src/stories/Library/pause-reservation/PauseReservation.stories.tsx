@@ -10,9 +10,13 @@ export default {
     isChecked: {
       defaultValue: true,
     },
-    text: {
+    pauseText: {
       control: "text",
       defaultValue: "Sæt fysiske reserveringer på pause",
+    },
+    isPausedtext: {
+      control: "text",
+      defaultValue: "Dine fysiske reserveringer er på pause",
     },
     dates: {
       control: "text",
