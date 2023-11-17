@@ -19,6 +19,8 @@ $c-btn-border-disabled: $c-global-tertiary-2;
   border: 1px solid $c-btn-border-active;
   cursor: pointer;
   white-space: nowrap;
+  transition: background-color 0.4s ease-in-out, color 0.2s ease-in-out,
+    opacity 0.4s ease-in-out;
 
   @extend %text-button-placeholder;
 
@@ -32,6 +34,7 @@ $c-btn-border-disabled: $c-global-tertiary-2;
     border: 1px solid $c-btn-border-disabled;
     color: $c-btn-border-disabled;
     fill: $c-btn-border-disabled;
+    cursor: not-allowed;
 
     .arrow__body {
       stroke: $c-btn-border-disabled;
@@ -68,12 +71,21 @@ $c-btn-border-disabled: $c-global-tertiary-2;
   padding: 0 24px;
 }
 
-.btn-filled {
+.btn-filled:not([disabled]) {
   background-color: $c-text-primary-black;
   color: $c-text-primary-white;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .btn-outline {
   background-color: transparent;
   color: $c-text-primary-black;
+
+  &:not([disabled]):hover {
+    background-color: $c-text-primary-black;
+    color: $c-text-primary-white;
+  }
 }
