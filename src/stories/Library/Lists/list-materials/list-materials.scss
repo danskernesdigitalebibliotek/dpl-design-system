@@ -1,12 +1,11 @@
 .list-materials {
   display: flex;
-  min-height: 72px;
+  min-height: 96px;
   padding: 16px;
   background-color: $c-text-primary-white;
   justify-content: space-between;
 
   @include breakpoint-s {
-    height: 96px;
     padding: 16px 32px;
     align-items: center;
     flex-direction: row;
@@ -78,5 +77,16 @@
 .list-materials__content-status-label {
   @include breakpoint-s {
     display: none;
+  }
+}
+
+.list-materials__arrow {
+  margin-left: $s-xl;
+  margin-right: $s-md;
+  cursor: pointer;
+  display: none;
+
+  @include breakpoint-s {
+    display: block;
   }
 }

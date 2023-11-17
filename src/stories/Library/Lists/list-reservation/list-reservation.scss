@@ -27,7 +27,7 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__material {
-  height: 100%;
+  min-height: 120px;
   display: flex;
   align-items: center;
 }
@@ -155,10 +155,10 @@ $list-reservation-space-desktop: 24px;
 .list-reservation__deadline {
   display: inline-grid;
   grid-row-gap: 8px;
-  margin-left: 88px;
+  margin-left: 2px;
 
   @include breakpoint-s {
-    margin-left: 32px;
+    margin-left: 15px;
   }
 }
 
