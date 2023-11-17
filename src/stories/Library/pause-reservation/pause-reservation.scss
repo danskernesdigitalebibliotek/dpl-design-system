@@ -17,6 +17,12 @@
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+    justify-content: center;
+    gap: $s-sm;
+
+    @include breakpoint-xs {
+      justify-content: start;
+    }
 
     &__reservation-icon {
       justify-content: center;
@@ -27,28 +33,22 @@
 
     &__text {
       @extend %text-body-large;
-      @extend %pl-8;
     }
 
     &__badge {
       background-color: $c-global-primary;
-      @extend %pl-8;
-      @extend %pr-8;
-      @extend %pt-4;
-      @extend %pb-4;
+      padding: $s-xs $s-sm;
       @extend %text-body-medium-medium;
-      margin-left: 32px;
-
-      @include breakpoint-s {
-        margin-left: 8px;
-      }
     }
 
     &__button {
       display: flex;
       flex: 1;
-      justify-content: flex-end;
-      @extend %ml-8;
+      justify-content: center;
+
+      @include breakpoint-xs {
+        justify-content: flex-end;
+      }
     }
   }
 }
