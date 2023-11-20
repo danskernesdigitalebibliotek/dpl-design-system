@@ -1151,12 +1151,10 @@ input[type=reset] {
   padding-right: 4px;
 }
 
-.dpl-pause-reservation-component__flex__badge,
 .pb-4 {
   padding-bottom: 4px;
 }
 
-.dpl-pause-reservation-component__flex__badge,
 .pt-4 {
   padding-top: 4px;
 }
@@ -1175,7 +1173,6 @@ input[type=reset] {
   margin-bottom: 8px;
 }
 
-.dpl-pause-reservation-component__flex__button,
 .ml-8 {
   margin-left: 8px;
 }
@@ -1208,12 +1205,10 @@ input[type=reset] {
   padding-bottom: 8px;
 }
 
-.dpl-pause-reservation-component__flex__badge, .dpl-pause-reservation-component__flex__text,
 .pl-8 {
   padding-left: 8px;
 }
 
-.dpl-pause-reservation-component__flex__badge,
 .pr-8 {
   padding-right: 8px;
 }
@@ -4278,6 +4273,14 @@ dl.list-description dd .link-tag {
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
+  justify-content: center;
+  grid-gap: 8px;
+  gap: 8px;
+}
+@media (min-width: 375px) {
+  .dpl-pause-reservation-component__flex {
+    justify-content: start;
+  }
 }
 .dpl-pause-reservation-component__flex__reservation-icon {
   justify-content: center;
@@ -4289,17 +4292,17 @@ dl.list-description dd .link-tag {
 }
 .dpl-pause-reservation-component__flex__badge {
   background-color: #f6f5f0;
-  margin-left: 32px;
-}
-@media (min-width: 768px) {
-  .dpl-pause-reservation-component__flex__badge {
-    margin-left: 8px;
-  }
+  padding: 4px 8px;
 }
 .dpl-pause-reservation-component__flex__button {
   display: flex;
   flex: 1 1;
-  justify-content: flex-end;
+  justify-content: center;
+}
+@media (min-width: 375px) {
+  .dpl-pause-reservation-component__flex__button {
+    justify-content: flex-end;
+  }
 }
 
 .material-header {
@@ -6597,4 +6600,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.8d9ad4ab.chunk.css.map*/
+/*# sourceMappingURL=main.e6681ab0.chunk.css.map*/
