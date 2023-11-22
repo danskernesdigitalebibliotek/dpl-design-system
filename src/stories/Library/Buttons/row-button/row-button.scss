@@ -1,0 +1,20 @@
+.row-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.row-button {
+  height: 40px;
+  background-color: $c-global-secondary;
+  padding: 9px $s-md;
+  display: flex;
+  align-items: center;
+
+  & + .row-button {
+    margin-left: $s-sm;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
