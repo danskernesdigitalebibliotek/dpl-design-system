@@ -1,5 +1,5 @@
 import { FC } from "react";
-import RowButton from "../Buttons/row-button/RowButton";
+import RowButtons from "../Buttons/row-button/RowButtons";
 import ArrowLink from "../links/arrow-link/ArrowLink";
 
 type ArticleHeaderProps = {
@@ -29,7 +29,7 @@ const ArticleHeader: FC<ArticleHeaderProps> = ({
         </a>
         <span className="article-header__date">{date}</span>
       </p>
-      <RowButton labels={["Netmedier", "Licenser", "This is hiddden"]} />
+      <RowButtons labels={["Netmedier", "Licenser", "This is hiddden"]} />
     </header>
   );
 };

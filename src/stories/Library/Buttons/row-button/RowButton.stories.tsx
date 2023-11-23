@@ -7,8 +7,8 @@ export default {
   component: RowButton,
   decorators: [withDesign],
   argTypes: {
-    labels: {
-      defaultValue: ["Netmedier"],
+    label: {
+      defaultValue: "Netmedier",
     },
   },
   parameters: {
@@ -25,13 +25,3 @@ const Template: ComponentStory<typeof RowButton> = (args) => (
 );
 
 export const Default = Template.bind({});
-
-export const TwoButtons = Template.bind({});
-TwoButtons.args = {
-  labels: ["Netmedier", "Licenser"],
-};
-
-export const ThreeAndMoreButtons = Template.bind({});
-ThreeAndMoreButtons.args = {
-  labels: ["Netmedier", "Licenser", "This is hiddden"],
-};
