@@ -27,7 +27,7 @@ const ArticleHeader: FC<ArticleHeaderProps> = ({
         <a href="/">
           <span className="link-tag text-body-small-regular">{author}</span>
         </a>
-        <span className="article-header__info__date">{date}</span>
+        <span className="article-header__date">{date}</span>
       </p>
       <RowButton labels={["Netmedier", "Licenser", "This is hiddden"]} />
     </header>
