@@ -1,0 +1,59 @@
+.link-with-icon {
+  background-color: $c-global-primary;
+  padding: $s-md $s-lg;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid $c-global-tertiary-1;
+  line-height: 160%;
+  width: 100%;
+
+  > svg {
+    display: block;
+    width: 35px;
+    margin-left: auto;
+    visibility: hidden;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & + .link-with-icon {
+    margin-top: 0;
+  }
+
+  @include breakpoint-s {
+    padding: $s-lg $s-xl;
+    &:hover > svg {
+      visibility: visible;
+    }
+  }
+
+  &.arrow__hover--right-small {
+    .arrow__body,
+    .arrow__head {
+      transition: none;
+    }
+  }
+}
+
+.link-icon {
+  margin-right: $s-md;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.rotate-180 {
+    transform: rotate(180deg);
+  }
+}
