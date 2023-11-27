@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -rf ./build
 mkdir ./build
 mkdir ./build/js
 cp -r ./public/icons ./build/icons
