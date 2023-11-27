@@ -1,7 +1,7 @@
 .dpl-list-buttons {
   display: flex;
   justify-content: space-between;
-  @extend %text-body-medium-medium;
+  @include typography($typo__body-medium);
 }
 
 .dpl-list-buttons__header {
@@ -18,7 +18,7 @@
   height: 30px;
   vertical-align: super;
   font-size: 12px;
-  @extend %text-body-medium-regular-placeholder;
+  @include typography($typo__body);
 }
 
 .dpl-list-buttons__buttons {
@@ -28,14 +28,14 @@
 }
 
 .dpl-list-buttons__buttons__button {
-  @extend %ml-32;
+  margin-left: $s-xl;
   display: flex;
 }
 
 .dpl-list-buttons__buttons__button--hide-on-mobile {
   display: none;
 
-  @include breakpoint-s {
+  @include media-query__small {
     display: flex;
   }
 }

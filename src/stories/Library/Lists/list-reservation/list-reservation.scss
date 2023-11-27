@@ -1,28 +1,28 @@
-$list-reservation-space-mobile: 16px;
-$list-reservation-space-desktop: 24px;
+$list-reservation-space-mobile: $s-md;
+$list-reservation-space-desktop: $s-lg;
 
 .list-reservation-container {
   position: relative;
 }
 
 .list-reservation {
-  background-color: $c-text-primary-white;
+  background-color: $color__text-primary-white;
   border: 0;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+  box-shadow: 0 $s-xs 20px rgb(0 0 0 / 10%);
   position: relative;
   padding: $list-reservation-space-mobile;
 
-  @include breakpoint-s {
+  @include media-query__small {
     grid-template-columns: 1fr 1fr;
     height: 184px;
     padding: $list-reservation-space-desktop;
   }
 
   &:hover {
-    filter: drop-shadow(0 4px 20px rgb(72 72 72 / 10%));
+    filter: drop-shadow(0 $s-xs 20px rgb(72 72 72 / 10%));
   }
 }
 
@@ -52,25 +52,25 @@ $list-reservation-space-desktop: 24px;
   align-self: baseline;
   border: 0;
   display: block;
-  margin-top: 4px;
+  margin-top: $s-xs;
   white-space: break-spaces;
   text-decoration: underline;
   padding-left: 0;
-  @extend %text-small-caption;
+  @include typography($typo__small-caption);
   @extend %color-secondary-gray;
 }
 
 .list-reservation__note--desktop {
-  @extend %text-body-small-regular;
+  @include typography($typo__body-small);
   display: none;
-  @include breakpoint-s {
+  @include media-query__small {
     display: block;
   }
 }
 
 .list-reservation__note--mobile {
-  @extend %text-body-small-regular;
-  @include breakpoint-s {
+  @include typography($typo__body-small);
+  @include media-query__small {
     display: none;
   }
 }
@@ -83,7 +83,7 @@ $list-reservation-space-desktop: 24px;
   align-items: baseline;
   justify-content: space-between;
 
-  @include breakpoint-s {
+  @include media-query__small {
     margin-left: $list-reservation-space-desktop;
   }
 }
@@ -98,7 +98,7 @@ $list-reservation-space-desktop: 24px;
     margin-bottom: $s-md;
   }
 
-  @include breakpoint-s {
+  @include media-query__small {
     margin-top: 0;
     p {
       font-size: 12px;
@@ -108,7 +108,8 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__header {
-  @extend %text-header-h4;
+  @include typography($typo__h4);
+
   padding: 0;
   cursor: pointer;
 
@@ -119,7 +120,7 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__header__text {
-  @extend %ellipsis-two-lines;
+  @extend %text-ellipsis-two-lines;
 }
 
 .list-reservation__status {
@@ -130,12 +131,12 @@ $list-reservation-space-desktop: 24px;
 
   svg {
     display: none;
-    @include breakpoint-s {
+    @include media-query__small {
       display: flex;
     }
   }
 
-  @include breakpoint-s {
+  @include media-query__small {
     align-items: center;
   }
 }
@@ -146,7 +147,7 @@ $list-reservation-space-desktop: 24px;
   display: none;
   margin: $s-xs;
 
-  @include breakpoint-s {
+  @include media-query__small {
     width: 92px;
     display: block;
   }
@@ -154,11 +155,11 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__deadline {
   display: inline-grid;
-  grid-row-gap: 8px;
+  grid-row-gap: $s-sm;
   margin-left: 88px;
 
-  @include breakpoint-s {
-    margin-left: 32px;
+  @include media-query__small {
+    margin-left: $s-xl;
   }
 }
 
@@ -174,9 +175,9 @@ $list-reservation-space-desktop: 24px;
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: $c-text-primary-white;
+  background-color: $color__text-primary-white;
   perspective: 500px;
-  box-shadow: 0 4px 20px rgb(72 72 72 / 10%);
+  box-shadow: 0 $s-xs 20px rgb(72 72 72 / 10%);
 }
 
 .list-reservation--stacked {

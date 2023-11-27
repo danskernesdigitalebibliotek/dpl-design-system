@@ -1,432 +1,85 @@
-// Since we host the fonts ourselves, they may need to be updated in the future
-// We use this online open source tool to retrieve fonts & their css definition: https://gwfh.mranftl.com/fonts
-/* noto-sans-jp-regular - latin */
-@font-face {
-  font-display: swap;
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/noto-sans-jp-v42-latin-regular.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("../fonts/noto-sans-jp-v42-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* noto-sans-jp-500 - latin */
-@font-face {
-  font-display: swap;
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/noto-sans-jp-v42-latin-500.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("../fonts/noto-sans-jp-v42-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* noto-sans-jp-700 - latin */
-@font-face {
-  font-display: swap;
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/noto-sans-jp-v42-latin-700.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("../fonts/noto-sans-jp-v42-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* lora-regular - latin */
-@font-face {
-  font-display: swap;
-  font-family: "Lora";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/lora-v26-latin-regular.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("../fonts/lora-v26-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* lora-italic - latin */
-@font-face {
-  font-display: swap;
-  font-family: "Lora";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/lora-v26-latin-italic.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("../fonts/lora-v26-latin-italic.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* gochi-hand-regular - latin */
-@font-face {
-  font-display: swap;
-  font-family: "Gochi Hand";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/gochi-hand-v19-latin-regular.woff2") format("woff2"),
-    /* Chrome 36+, Opera 23+, Firefox 39+ */
-      url("../fonts/gochi-hand-v19-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-// styleName: Desktop/H1;
 .text-header-h1 {
-  font-family: Lora, serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 40px;
-  text-align: left;
-
-  @include breakpoint-s {
-    line-height: 120%;
-  }
-
-  @include breakpoint-m {
-    font-size: 52px;
-  }
-
-  @include breakpoint-xl {
-    font-size: 58px;
-  }
+  @include typography($typo__h1);
 }
 
-//styleName: Desktop/H2;
 .text-header-h2 {
-  font-family: Lora, serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 32px;
-  text-align: left;
-
-  @include breakpoint-s {
-    line-height: 120%;
-  }
-
-  @include breakpoint-m {
-    font-size: 42px;
-  }
-
-  @include breakpoint-xl {
-    font-size: 44px;
-  }
+  @include typography($typo__h2);
 }
 
-//styleName: Desktop/H3;
 .text-header-h3 {
-  font-family: Lora, serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 32px;
-  text-align: left;
-
-  @include breakpoint-s {
-    line-height: 120%;
-  }
-
-  @include breakpoint-m {
-    font-size: 32px;
-  }
-
-  @include breakpoint-xl {
-    font-size: 34px;
-  }
+  @include typography($typo__h3);
 }
 
-//styleName: Desktop/H4;
-%text-header-h4,
 .text-header-h4 {
-  font-family: Lora, serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: left;
-
-  @include breakpoint-s {
-    line-height: 120%;
-  }
-
-  @include breakpoint-m {
-    font-size: 24px;
-  }
-
-  @include breakpoint-xl {
-    font-size: 26px;
-  }
+  @include typography($typo__h4);
 }
 
-//styleName: Desktop/H5;
-%text-header-h5,
 .text-header-h5 {
-  font-family: Lora, serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0;
-  text-align: left;
+  @include typography($typo__h5);
 }
 
-//styleName: Desktop/Subtitle;
 .text-subtitle {
-  font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 32px;
-  text-align: left;
-
-  @include breakpoint-s {
-    line-height: 160%;
-  }
-
-  @include breakpoint-m {
-    font-size: 24px;
-  }
-
-  @include breakpoint-xl {
-    font-size: 26px;
-  }
+  @include typography($typo__subtitle);
 }
 
-//styleName: Desktop/Accent;
 .text-accent {
-  font-family: "Gochi Hand", cursive;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 120%;
-  text-align: left;
-
-  @include breakpoint-xl {
-    font-size: 26px;
-  }
+  @include typography($typo__accent);
 }
 
-// styleName: Desktop/Body Copy - L
-%text-body-large,
 .text-body-large {
-  font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 42px;
-  text-align: left;
-
-  @include breakpoint-s {
-    line-height: 160%;
-  }
-
-  @include breakpoint-m {
-    font-size: 18px;
-  }
-
-  @include breakpoint-xl {
-    font-size: 20px;
-  }
+  @include typography($typo__body-large);
 }
 
-//styleName: Desktop/Body Copy - M - regular;
-%text-body-medium-regular-placeholder,
 .text-body-medium-regular {
-  font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 32px;
-  text-align: left;
-  color: $c-text-secondary-gray;
-
-  @include breakpoint-s {
-    line-height: 160%;
-  }
-
-  @include breakpoint-m {
-    font-size: 16px;
-  }
-
-  @include breakpoint-xl {
-    font-size: 18px;
-  }
+  @include typography($typo__body);
 }
 
-//styleName: Desktop/Body Copy - M - medium;
-%text-body-medium-medium,
 .text-body-medium-medium {
-  font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 160%;
-  text-align: left;
-
-  @include breakpoint-m {
-    font-size: 16px;
-  }
-
-  @include breakpoint-xl {
-    font-size: 18px;
-  }
+  @include typography($typo__body-medium);
 }
 
-//styleName: Desktop/Body Copy - S - regular;
-%text-body-small-regular,
-.text-body-small-regular {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0;
-  text-align: left;
-}
-
-//styleName: Desktop/Body Copy - S - medium;
-%text-body-small-medium,
+.text-body-small-regular,
 .text-body-small-medium {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0;
-  text-align: left;
+  @include typography($typo__body-small);
 }
 
-// Using the placeholder selector, recommended by this rule
-// https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-extend-no-missing-placeholder/README.md
-//styleName: Desktop/Button text;
-%text-button-placeholder,
+.text-body-small-medium {
+  @include typography($typo__body-small);
+}
+
 .text-button {
-  font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  text-align: left;
-  text-transform: uppercase;
-
-  @include breakpoint-s {
-    line-height: 120%;
-  }
-
-  @include breakpoint-xl {
-    font-size: 16px;
-    line-height: 19px;
-  }
+  @include typography($typo__button);
 }
 
-//styleName: Desktop/Links;
-%text-links-placeholder,
 .text-links {
-  font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  text-align: left;
-
-  @include breakpoint-s {
-    line-height: 150%;
-  }
-
-  @include breakpoint-xl {
-    font-size: 16px;
-  }
+  @include typography($typo__links);
 }
 
-//styleName: Desktop/Tags;
-%text-tags,
 .text-tags {
-  font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 120%;
-  letter-spacing: 0.02em;
-  text-align: left;
-  text-transform: uppercase;
-
-  @include breakpoint-s {
-    line-height: 120%;
-  }
-
-  @include breakpoint-xl {
-    font-size: 14px;
-  }
+  @include typography($typo__tags);
 }
 
-//styleName: Desktop/Small Text - Caption;
-%text-small-caption,
 .text-small-caption {
-  font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 16px;
-  text-align: left;
-
-  @include breakpoint-s {
-    line-height: 160%;
-  }
-
-  @include breakpoint-m {
-    font-size: 12px;
-    line-height: 120%;
-  }
-
-  @include breakpoint-xl {
-    font-size: 14px;
-    line-height: 130%;
-  }
+  @include typography($typo__small-caption);
 }
 
-//styleName: Desktop/Small Text - Caption Bold;
-%text-small-caption-bold,
 .text-small-caption-bold {
-  font-family: "Noto Sans JP", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 16px;
-  text-align: left;
-
-  @include breakpoint-s {
-    line-height: 160%;
-  }
-
-  @include breakpoint-m {
-    font-size: 12px;
-    line-height: 120%;
-  }
-
-  @include breakpoint-xl {
-    font-size: 14px;
-    line-height: 130%;
-  }
+  @include typography($typo__small-caption);
+  font-weight: bold;
 }
 
-//styleName: Desktop/Label;
-%text-label,
-.text-label {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 10px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  text-align: left;
-}
-
+.text-label,
 .text-label-normal {
-  @extend %text-label;
-
-  font-weight: 400;
+  @include typography($typo__label);
 }
 
 .text-label-semibold {
-  @extend %text-label;
+  @include typography($typo__label);
   font-weight: 500;
 }
 
 .text-label-bold {
-  @extend %text-label;
+  @include typography($typo__label);
   font-weight: 700;
 }
 
@@ -437,7 +90,7 @@
   max-width: 100%;
 }
 
-%ellipsis-two-lines,
+%text-ellipsis-two-lines,
 .ellipsis-two-lines {
   display: -webkit-box;
   -webkit-line-clamp: 2;

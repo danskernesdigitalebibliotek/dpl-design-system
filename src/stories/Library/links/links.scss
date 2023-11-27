@@ -3,11 +3,11 @@
 @mixin link($className) {
   .#{$className} {
     text-decoration: none;
-    color: $c-text-primary-black;
+    color: $color__text-primary-black;
     display: inline-block;
     width: fit-content;
 
-    @extend %text-body-medium-regular-placeholder;
+    @include typography($typo__body);
   }
   // Hide arrow
   .#{$className}::after {
@@ -30,9 +30,9 @@
 @include link("button-link");
 
 .button-link {
-  color: $c-text-primary-white;
+  color: $color__text-primary-white;
 }
 
 .button-link--bright {
-  color: $c-text-primary-black;
+  color: $color__text-primary-black;
 }

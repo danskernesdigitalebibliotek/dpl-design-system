@@ -1,12 +1,12 @@
 .button-box {
-  background-color: $c-global-primary;
+  background-color: $color__global-primary;
   display: flex;
   justify-content: flex-end;
-  margin-top: 40px;
+  margin-top: $s-odd-40;
   flex-direction: column;
   margin-bottom: 10px;
 
-  @include breakpoint-s {
+  @include media-query__small {
     align-items: center;
     flex-direction: row;
   }
@@ -21,10 +21,10 @@
   margin-bottom: 0px;
   z-index: $z-20;
 
-  @include breakpoint-s {
+  @include media-query__small {
     padding: $s-lg $s-7xl $s-lg 0;
-    bottom: 100px;
-    right: 100px;
-    left: 100px;
+    bottom: $s-5xl;
+    right: $s-5xl;
+    left: $s-5xl;
   }
 }

@@ -28,14 +28,14 @@
   @include hide-visually;
 
   &--on-desktop {
-    @include breakpoint-s {
+    @include media-query__name("small") {
       @include hide-visually;
     }
   }
 }
 
 .hide-on-desktop {
-  @include breakpoint-s {
+  @include media-query__name("small") {
     display: none;
   }
 }
@@ -91,13 +91,13 @@
 .focus-styling {
   &:focus {
     outline: none;
-    border: 1px solid $c-text-primary-black;
+    border: 1px solid $color__text-primary-black;
   }
   &__input {
     &:focus {
       outline: none;
-      border: 1px solid $c-text-primary-black;
-      background-color: $c-text-primary-white;
+      border: 1px solid $color__text-primary-black;
+      background-color: $color__text-primary-white;
     }
   }
 }

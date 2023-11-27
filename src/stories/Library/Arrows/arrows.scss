@@ -59,7 +59,7 @@
   .#{$className} {
     &:hover {
       svg {
-        @include breakpoint-s {
+        @include media-query__small {
           visibility: visible;
           opacity: 1;
           align-self: center;

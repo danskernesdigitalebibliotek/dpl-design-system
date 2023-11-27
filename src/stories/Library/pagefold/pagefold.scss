@@ -45,7 +45,7 @@ $pagefold-map: (
   .pagefold-triangle--#{$size} {
     width: #{$triangle-width}px;
     height: #{$triangle-width}px;
-    background-color: $c-identity-primary;
+    background-color: $color__identity-primary;
     position: absolute;
     top: 0;
     left: 0;
@@ -53,11 +53,11 @@ $pagefold-map: (
 
   .pagefold-triangle {
     &--success {
-      background-color: $c-signal-success;
+      background-color: $color__signal-success;
     }
 
     &--alert {
-      background-color: $c-signal-alert;
+      background-color: $color__signal-alert;
     }
   }
 }

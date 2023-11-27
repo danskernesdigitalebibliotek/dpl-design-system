@@ -13,35 +13,35 @@ $MATERIAL_XLARGE_DESKTOP: 460px;
   &-xsmall {
     border-radius: 3px;
     height: $MATERIAL_XSMALL_MOBILE;
-    @include breakpoint-s {
+    @include media-query__small {
       height: $MATERIAL_XSMALL_DESKTOP;
     }
   }
 
   &-small {
     height: $MATERIAL_SMALL_MOBILE;
-    @include breakpoint-s {
+    @include media-query__small {
       height: $MATERIAL_SMALL_DESKTOP;
     }
   }
 
   &-medium {
     height: $MATERIAL_LARGE_MOBILE;
-    @include breakpoint-s {
+    @include media-query__small {
       height: $MATERIAL_LARGE_DESKTOP;
     }
   }
 
   &-large {
     height: $MATERIAL_LARGE_MOBILE;
-    @include breakpoint-s {
+    @include media-query__small {
       height: $MATERIAL_LARGE_DESKTOP;
     }
   }
 
   &-xlarge {
     height: $MATERIAL_XLARGE_MOBILE;
-    @include breakpoint-s {
+    @include media-query__small {
       height: $MATERIAL_XLARGE_DESKTOP;
     }
   }
@@ -83,7 +83,7 @@ a.cover {
   }
 
   &.cover__img--shadow {
-    filter: drop-shadow(0 4px 40px rgb(0 0 0 / 15%));
+    filter: drop-shadow(0 $s-xs $s-odd-40 rgb(0 0 0 / 15%));
   }
 }
 // In this case we do not want to use kebab case

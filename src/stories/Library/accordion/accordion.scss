@@ -1,5 +1,5 @@
 .accordion {
-  background-color: $c-global-secondary;
+  background-color: $color__global-secondary;
 }
 
 .accordion__button-arrow {
@@ -8,7 +8,7 @@
 }
 
 .accordion__button {
-  color: $c-text-primary-black;
+  color: $color__text-primary-black;
   border-width: 0;
   border-color: transparent;
   border-radius: 0;
@@ -20,10 +20,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid $c-global-tertiary-1;
+  border-top: 1px solid $color__global-tertiary-1;
 
   &[aria-expanded="true"] {
-    border-bottom: 1px solid $c-global-tertiary-1;
+    border-bottom: 1px solid $color__global-tertiary-1;
 
     .accordion__button-arrow {
       transform: rotateZ(0deg);
@@ -36,7 +36,7 @@
 }
 
 .accordion__header {
-  height: 60px;
+  height: $s-3xl;
 
   button:focus {
     outline: -webkit-focus-ring-color auto 5px;
@@ -47,11 +47,11 @@
   display: grid;
 
   a {
-    line-height: 32px;
-    padding-left: #{$s-48}px;
+    line-height: $s-xl;
+    padding-left: $s-2xl;
     text-decoration: none;
 
-    @extend %text-body-medium-regular-placeholder;
+    @include typography($typo__body);
   }
 
   &[hidden] {
@@ -61,10 +61,10 @@
 
 .accordion__row:last-child {
   .accordion__button {
-    border-bottom: 1px solid $c-global-tertiary-1;
+    border-bottom: 1px solid $color__global-tertiary-1;
   }
 
   .accordion__body {
-    border-bottom: 1px solid $c-global-tertiary-1;
+    border-bottom: 1px solid $color__global-tertiary-1;
   }
 }

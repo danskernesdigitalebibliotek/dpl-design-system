@@ -1,0 +1,78 @@
+/* BEM plugin does not support interpolation */
+/* stylelint-disable plugin/stylelint-bem-namics */
+$legacy_spacings: (
+  4: $s-xs,
+  8: $s-sm,
+  16: $s-md,
+  24: $s-lg,
+  32: $s-xl,
+  44: $s-2xl,
+  60: $s-3xl,
+  80: $s-4xl,
+  100: $s-5xl,
+  112: $s-6xl,
+  215: $s-7xl,
+);
+
+@each $key, $space in $legacy_spacings {
+  .m-#{$key} {
+    margin: $space;
+  }
+
+  .mx-#{$key} {
+    margin-left: $space;
+    margin-right: $space;
+  }
+
+  .my-#{$key} {
+    margin-top: $space;
+    margin-bottom: $space;
+  }
+
+  .ml-#{$key} {
+    margin-left: $space;
+  }
+
+  .mr-#{$key} {
+    margin-right: $space;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $space;
+  }
+
+  .mt-#{$key} {
+    margin-top: $space;
+  }
+
+  .p-#{$key} {
+    padding: $space;
+  }
+
+  .px-#{$key} {
+    padding-left: $space;
+    padding-right: $space;
+  }
+
+  .py-#{$key} {
+    padding-top: $space;
+    padding-bottom: $space;
+  }
+
+  .pl-#{$key} {
+    padding-left: $space;
+  }
+
+  .pr-#{$key} {
+    padding-right: $space;
+  }
+
+  .pb-#{$key} {
+    padding-bottom: $space;
+  }
+
+  .pt-#{$key} {
+    padding-top: $space;
+  }
+}
+/* stylelint-enable plugin/stylelint-bem-namics */

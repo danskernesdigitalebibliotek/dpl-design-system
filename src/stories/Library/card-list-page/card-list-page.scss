@@ -1,13 +1,13 @@
 .card-list-page {
-  background: $c-global-primary;
-  padding: 16px;
+  background: $color__global-primary;
+  padding: $s-md;
 
-  @include breakpoint-m {
-    padding: $s-4xl 157px $s-2xl;
+  @include media-query__medium {
+    padding: $s-4xl $s-odd-157 $s-2xl;
   }
 
   &__list {
     display: grid;
-    gap: 16px;
+    gap: $s-md;
   }
 }

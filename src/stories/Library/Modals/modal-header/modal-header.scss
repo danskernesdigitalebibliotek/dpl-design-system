@@ -4,9 +4,9 @@
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   row-gap: 12px;
-  column-gap: 24px;
-  padding: 32px;
-  border-bottom: 1px solid $c-global-tertiary-1;
+  column-gap: $s-lg;
+  padding: $s-xl;
+  border-bottom: 1px solid $color__global-tertiary-1;
 
   &__avatar {
     grid-area: avatar;
@@ -25,15 +25,15 @@
     grid-area: link;
   }
 
-  @include breakpoint-s {
+  @include media-query__small {
     grid-template-areas: "avatar name" "avatar link";
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     padding: {
-      top: 40px;
-      right: 80px;
-      bottom: 40px;
-      left: 80px;
+      top: $s-odd-40;
+      right: $s-4xl;
+      bottom: $s-odd-40;
+      left: $s-4xl;
     }
   }
 }

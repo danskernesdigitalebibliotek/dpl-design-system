@@ -4,7 +4,7 @@
   padding: $s-4xl $s-xl;
   position: relative;
 
-  @include breakpoint-s {
+  @include media-query__small {
     padding: $s-4xl $s-7xl;
   }
 
@@ -13,7 +13,7 @@
     left: $s-md;
     top: $s-sm;
 
-    @include breakpoint-s {
+    @include media-query__small {
       left: $s-2xl;
       top: $s-lg;
     }
@@ -21,7 +21,7 @@
 
   &__title,
   &__subtitle {
-    @include breakpoint-s {
+    @include media-query__small {
       max-width: 897px;
     }
   }

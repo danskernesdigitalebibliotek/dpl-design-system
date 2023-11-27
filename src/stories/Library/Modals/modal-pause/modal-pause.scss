@@ -6,12 +6,12 @@ $modal-pause-container-width: 550px;
 }
 
 .modal-pause__container {
-  margin: 0 24px;
+  margin: 0 $s-lg;
   padding-top: 96px;
   max-width: $modal-pause-container-width;
   width: 100%;
 
-  @include breakpoint-s {
+  @include media-query__small {
     margin: 0 45px;
   }
 }
@@ -29,22 +29,22 @@ $modal-pause-container-width: 550px;
 }
 
 .datepickers {
-  @include breakpoint-s {
+  @include media-query__small {
     display: flex;
     justify-content: space-between;
   }
 
   input {
-    border: 1px solid $c-global-tertiary-1;
+    border: 1px solid $color__global-tertiary-1;
     box-sizing: border-box;
-    background-color: $c-global-primary;
+    background-color: $color__global-primary;
     min-width: 100%;
     height: 50px;
     padding: 0 10px;
-    color: $c-text-secondary-gray;
-    @extend %text-button-placeholder;
+    color: $color__text-secondary-gray;
+    @include typography($typo__button);
 
-    @include breakpoint-s {
+    @include media-query__small {
       min-width: 250px;
       padding: 0 20px;
     }
@@ -56,12 +56,12 @@ $modal-pause-container-width: 550px;
     width: 100%;
     margin-bottom: $s-lg;
 
-    @include breakpoint-s {
+    @include media-query__small {
       margin-bottom: 0;
     }
 
     &:first-of-type {
-      @include breakpoint-s {
+      @include media-query__small {
         margin-right: $s-lg;
       }
     }

@@ -10,9 +10,9 @@
     width: 95px;
   }
   .ssc-head-line {
-    @extend %mt-16;
+    margin-top: $s-md;
   }
-  @include breakpoint-s {
+  @include media-query__small {
     .ssc-wrapper {
       width: 50%;
     }

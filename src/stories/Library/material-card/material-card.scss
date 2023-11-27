@@ -1,5 +1,5 @@
 .material-card {
-  padding: 16px;
+  padding: $s-md;
   max-width: 500px;
   text-decoration: none;
   height: 100%;
@@ -15,21 +15,21 @@
   justify-content: center;
 
   .cover {
-    margin-top: 8px;
+    margin-top: $s-sm;
   }
 }
 
 .material-card__texts {
-  margin-top: 16px;
+  margin-top: $s-md;
   display: grid;
 
-  @include breakpoint-s {
-    margin-top: 32px;
+  @include media-query__small {
+    margin-top: $s-xl;
   }
 }
 
 .material-card__description {
-  @extend %text-body-small-regular;
+  @include typography($typo__body-small);
 
   white-space: nowrap;
   overflow: hidden;
@@ -38,5 +38,5 @@
 }
 
 .material-card__title {
-  @extend %text-body-small-medium;
+  @include typography($typo__body-small);
 }

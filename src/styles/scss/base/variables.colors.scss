@@ -1,0 +1,50 @@
+// Global colors
+$color__global-primary: #f6f5f0;
+$color__global-secondary: #eee9e5;
+$color__global-tertiary-1: #dbdbdb;
+$color__global-tertiary-2: #707070;
+$color__identity-primary: hsl(
+  var(--identity-color-h),
+  var(--identity-color-s),
+  var(--identity-color-l),
+  1
+);
+
+$color__text-primary-white: #fff;
+$color__text-primary-black: #000;
+$color__text-secondary-gray: #484848;
+
+$color__signal-success: #068802;
+$color__signal-aware: #f7bf42;
+$color__signal-alert: #d5364a;
+
+// *** CSS variables for identity color tints ***
+:root {
+  // Identity color tones
+  --identity-color-h: 145;
+  --identity-color-s: 22%;
+  --identity-color-l: 35%;
+  --identity-color: var(--identity-color-h), var(--identity-color-s),
+    var(--identity-color-l);
+  --tint-color-20: hsl(var(--identity-color), 0.2);
+  --tint-color-40: hsl(var(--identity-color), 0.4);
+  --tint-color-80: hsl(var(--identity-color), 0.8);
+  --tint-color-100: hsl(var(--identity-color), 1);
+  --tint-color-120: hsl(
+    var(--identity-color-h),
+    calc(var(--identity-color-s) - 1%),
+    calc(var(--identity-color-l) - 8%)
+  );
+
+  // Global colors
+  --c-global-primary: $color__global-primary;
+  --c-global-secondary: $color__global-secondary;
+  --c-global-tertiary-1: $color__global-tertiary-1;
+  --c-global-tertiary-2: $color__global-tertiary-2;
+  --c-text-primary-white: $color__text-primary-white;
+  --c-text-primary-black: $color__text-primary-black;
+  --c-text-secondary-gray: $color__text-secondary-gray;
+  --c-signal-success: $color__signal-success;
+  --c-signal-aware: $color__signal-aware;
+  --c-signal-alert: $color__signal-alert;
+}

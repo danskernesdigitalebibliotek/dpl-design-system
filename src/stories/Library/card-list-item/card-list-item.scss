@@ -1,14 +1,14 @@
 .card-list-item {
   background-color: #fff;
-  padding: 16px 24px;
+  padding: $s-md $s-lg;
   display: grid;
   grid-template-columns: min-content 1fr;
-  gap: 22px 16px;
+  gap: 22px $s-md;
   cursor: pointer;
   text-decoration: none;
   min-height: 184px;
 
-  @include breakpoint-s {
+  @include media-query__small {
     gap: 0;
     column-gap: $s-lg;
     padding: $s-lg;
@@ -16,7 +16,7 @@
   }
 
   &:hover {
-    filter: drop-shadow(0 4px 20px rgb(72 72 72 / 10%));
+    filter: drop-shadow(0 $s-xs 20px rgb(72 72 72 / 10%));
   }
 }
 
@@ -25,7 +25,7 @@
 .card-list-item__cover {
   grid-row: span 2;
 
-  @include breakpoint-s {
+  @include media-query__small {
     grid-row: auto;
   }
 }
@@ -37,7 +37,7 @@
   flex-wrap: wrap;
   gap: 6px;
 
-  @include breakpoint-s {
+  @include media-query__small {
     grid-column: 3;
   }
 }
@@ -58,11 +58,11 @@
     }
   }
 
-  @include breakpoint-s {
+  @include media-query__small {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    margin-top: 16px;
+    margin-top: $s-md;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: calc(120% + 2px);

@@ -1,13 +1,13 @@
-$c-btn-border-active: $c-text-primary-black;
-$c-btn-border-disabled: $c-global-tertiary-2;
+$color__btn-border-active: $color__text-primary-black;
+$color__btn-border-disabled: $color__global-tertiary-2;
 
 .btn-icon {
-  margin-left: 16px;
+  margin-left: $s-md;
   color: inherit;
 }
 
 .btn-collapsible {
-  margin-left: 16px;
+  margin-left: $s-md;
   display: none;
 }
 
@@ -16,13 +16,13 @@ $c-btn-border-disabled: $c-global-tertiary-2;
   align-items: center;
   justify-content: center;
   border-radius: 0;
-  border: 1px solid $c-btn-border-active;
+  border: 1px solid $color__btn-border-active;
   cursor: pointer;
   white-space: nowrap;
   transition: background-color 0.4s ease-in-out, color 0.2s ease-in-out,
     opacity 0.4s ease-in-out;
 
-  @extend %text-button-placeholder;
+  @include typography($typo__button);
 
   &:hover {
     .btn-collapsible {
@@ -31,49 +31,49 @@ $c-btn-border-disabled: $c-global-tertiary-2;
   }
 
   &[disabled] {
-    border: 1px solid $c-btn-border-disabled;
-    color: $c-btn-border-disabled;
-    fill: $c-btn-border-disabled;
+    border: 1px solid $color__btn-border-disabled;
+    color: $color__btn-border-disabled;
+    fill: $color__btn-border-disabled;
     cursor: not-allowed;
 
     .arrow__body {
-      stroke: $c-btn-border-disabled;
+      stroke: $color__btn-border-disabled;
     }
 
     .arrow__head {
-      fill: $c-btn-border-disabled;
+      fill: $color__btn-border-disabled;
     }
   }
 }
 
 .btn-xlarge {
-  height: 48px;
-  padding: 8px 86px;
+  height: $s-odd-48;
+  padding: $s-sm 86px;
 }
 
 .btn-large {
-  height: 48px;
+  height: $s-odd-48;
   padding: 0 86px;
 }
 
 .btn-medium {
-  height: 48px;
-  padding: 0 48px;
+  height: $s-odd-48;
+  padding: 0 $s-odd-48;
 }
 
 .btn-small {
-  height: 40px;
-  padding: 0 32px;
+  height: $s-odd-40;
+  padding: 0 $s-xl;
 }
 
 .btn-xsmall {
-  height: 32px;
-  padding: 0 24px;
+  height: $s-xl;
+  padding: 0 $s-lg;
 }
 
 .btn-filled:not([disabled]) {
-  background-color: $c-text-primary-black;
-  color: $c-text-primary-white;
+  background-color: $color__text-primary-black;
+  color: $color__text-primary-white;
 
   &:hover {
     opacity: 0.7;
@@ -82,10 +82,10 @@ $c-btn-border-disabled: $c-global-tertiary-2;
 
 .btn-outline {
   background-color: transparent;
-  color: $c-text-primary-black;
+  color: $color__text-primary-black;
 
   &:not([disabled]):hover {
-    background-color: $c-text-primary-black;
-    color: $c-text-primary-white;
+    background-color: $color__text-primary-black;
+    color: $color__text-primary-white;
   }
 }
