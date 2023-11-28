@@ -14,9 +14,6 @@ export default {
       defaultValue:
         "Jesper Stein har begået en hudløst ærlig og tankevækkende skildring af en skilsmisseramt familie. En selvbiografisk roman, som har ramt læserne  i hjertet.",
     },
-    library: {
-      defaultValue: "Af biblioteksformidler på Hovedbiblioteket",
-    },
     author: {
       defaultValue: "Lene Kuhlmann Frandsen",
     },

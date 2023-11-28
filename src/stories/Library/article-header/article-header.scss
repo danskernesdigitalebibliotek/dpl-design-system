@@ -7,32 +7,44 @@
   @include breakpoint-s {
     padding: $s-4xl $s-7xl;
   }
+}
 
-  &__back-link {
-    position: absolute;
-    left: $s-md;
-    top: $s-sm;
+.article-header__back-link {
+  position: absolute;
+  left: $s-md;
+  top: $s-sm;
 
-    @include breakpoint-s {
-      left: $s-2xl;
-      top: $s-lg;
-    }
+  @include breakpoint-s {
+    left: $s-2xl;
+    top: $s-lg;
   }
+}
 
-  &__title,
-  &__subtitle {
-    @include breakpoint-s {
-      max-width: 897px;
-    }
-  }
+.article-header__title {
+  @extend %text-header-h1;
+}
 
-  &__info {
-    display: flex;
-    align-items: baseline;
-    gap: $s-xs;
-  }
+.article-header__subtitle {
+  @extend %text-subtitle;
+}
 
-  &__date {
-    margin-left: $s-xs;
+.article-header__title,
+.article-header__subtitle {
+  @include breakpoint-s {
+    max-width: 897px;
   }
+}
+
+.article-header__info {
+  @extend %text-body-small-regular;
+}
+
+.article-header__author {
+  @extend %link-tag;
+  @extend %text-body-small-regular;
+  margin-left: $s-xs;
+}
+
+.article-header__date {
+  margin-left: $s-sm;
 }
