@@ -1,6 +1,7 @@
 /* BEM plugin does not support interpolation */
 /* stylelint-disable plugin/stylelint-bem-namics */
 @mixin link($className) {
+  %#{$className},
   .#{$className} {
     text-decoration: none;
     color: $c-text-primary-black;
@@ -10,6 +11,7 @@
     @extend %text-body-medium-regular-placeholder;
   }
   // Hide arrow
+  %#{$className}::after,
   .#{$className}::after {
     display: block;
     content: "";
@@ -20,6 +22,7 @@
     padding-bottom: 2px;
   }
   // Show arrow on hover
+  %#{$className}:hover::after,
   .#{$className}:hover::after {
     transform: scaleX(0);
     transform-origin: 100% 0%;
