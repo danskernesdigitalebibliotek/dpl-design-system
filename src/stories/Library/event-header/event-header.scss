@@ -1,0 +1,77 @@
+.event-header {
+  @include container(medium);
+  border-bottom: 1px solid $c-global-tertiary-1;
+  display: grid;
+  gap: $s-lg;
+  padding-bottom: $s-2xl;
+  @include breakpoint-s {
+    grid-template-columns: 2fr 1fr;
+    gap: 0;
+    padding-bottom: 0;
+  }
+}
+
+.event-header__content,
+.event-header__visual {
+  padding: 0 $s-md;
+  @include breakpoint-s {
+    padding: $s-2xl;
+  }
+}
+
+.event-header__extra-padding {
+  padding: 0 $s-3xl;
+  @include breakpoint-s {
+    padding: 0;
+  }
+}
+
+.event-header__tag {
+  margin: $s-md 0;
+  @include breakpoint-s {
+    margin: $s-lg 0;
+  }
+}
+
+.event-header__date {
+  @extend %text-header-h4;
+  display: block;
+  margin-bottom: $s-md;
+  @include breakpoint-s {
+    margin-bottom: $s-sm;
+  }
+}
+
+.event-header__title {
+  @extend %text-header-h1;
+  margin-bottom: $s-xl;
+  @include breakpoint-s {
+    margin-bottom: $s-5xl;
+  }
+}
+
+.event-header__button {
+  width: 100%;
+  @include breakpoint-s {
+    width: auto;
+  }
+}
+
+.event-header__visual {
+  @include breakpoint-s {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-right: 1px solid $c-global-tertiary-1;
+  }
+}
+
+.event-header__image {
+  width: 100%;
+}
+
+.event-header__image-info {
+  @extend %text-small-caption;
+  margin-top: $s-md;
+  display: flex;
+  justify-content: space-between;
+}
