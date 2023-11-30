@@ -1,6 +1,7 @@
 @import "./src/styles/scss/reset";
 @import "./src/stories/Library/colors/color-variables";
 @import "./src/styles/scss/skeleton";
+@import "./src/styles/scss/container";
 
 // The imports below are not advised to be moved around, because
 // they cross-reference various defined variables between each other.
