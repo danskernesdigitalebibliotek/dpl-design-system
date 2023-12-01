@@ -14,7 +14,7 @@ const EventHeader: FC<EventHeaderProps> = ({ title, date, image }) => {
       <section className="event-header__content">
         <div className="event-header__extra-padding">
           <Tag hasBackground className="event-header__tag">
-            UDSTILLING
+            udstilling
           </Tag>
           <time className="event-header__date">{date}</time>
           <h1 className="event-header__title">{title}</h1>
