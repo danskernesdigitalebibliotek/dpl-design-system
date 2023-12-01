@@ -2225,7 +2225,7 @@ input[type=reset] {
 }
 
 .status-label {
-  height: 24px;
+  min-height: 28px;
   padding: 0 4px;
   display: inline-flex;
   justify-content: center;
@@ -3023,7 +3023,7 @@ a.cover {
 }
 
 .list-reservation__material {
-  height: 100%;
+  min-height: 120px;
   display: flex;
   align-items: center;
 }
@@ -3157,11 +3157,11 @@ a.cover {
 .list-reservation__deadline {
   display: inline-grid;
   grid-row-gap: 8px;
-  margin-left: 88px;
+  margin-left: 2px;
 }
 @media (min-width: 768px) {
   .list-reservation__deadline {
-    margin-left: 32px;
+    margin-left: 15px;
   }
 }
 
@@ -3336,14 +3336,13 @@ dl.list-description dd .link-tag {
 
 .list-materials {
   display: flex;
-  min-height: 72px;
+  min-height: 96px;
   padding: 16px;
   background-color: #fff;
   justify-content: space-between;
 }
 @media (min-width: 768px) {
   .list-materials {
-    height: 96px;
     padding: 16px 32px;
     align-items: center;
     flex-direction: row;
@@ -3410,6 +3409,18 @@ dl.list-description dd .link-tag {
 @media (min-width: 768px) {
   .list-materials__content-status-label {
     display: none;
+  }
+}
+
+.list-materials__arrow {
+  margin-left: 32px;
+  margin-right: 16px;
+  cursor: pointer;
+  display: none;
+}
+@media (min-width: 768px) {
+  .list-materials__arrow {
+    display: block;
   }
 }
 
@@ -6600,4 +6611,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.e6681ab0.chunk.css.map*/
+/*# sourceMappingURL=main.d5a911ad.chunk.css.map*/
