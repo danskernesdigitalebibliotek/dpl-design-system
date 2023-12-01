@@ -5,9 +5,10 @@ import { Button } from "../Buttons/button/Button";
 type EventHeaderProps = {
   title: string;
   date: string;
+  image: string;
 };
 
-const EventHeader: FC<EventHeaderProps> = ({ title, date }) => {
+const EventHeader: FC<EventHeaderProps> = ({ title, date, image }) => {
   return (
     <header className="event-header">
       <section className="event-header__content">
@@ -31,11 +32,11 @@ const EventHeader: FC<EventHeaderProps> = ({ title, date }) => {
       <section className="event-header__visual">
         <img
           className="event-header__image"
-          src="/images/event_image.jpg"
-          alt=""
+          src={image}
+          alt="Event description"
         />
         <div className="event-header__image-info">
-          <span>Photo by Smith on Unsplash </span>
+          <span>Photo by Unsplash </span>
           <span>©2021</span>
         </div>
       </section>
