@@ -12,13 +12,11 @@ const EventHeader: FC<EventHeaderProps> = ({ title, date, image }) => {
   return (
     <header className="event-header">
       <section className="event-header__content">
-        <div className="event-header__extra-padding">
-          <Tag hasBackground className="event-header__tag">
-            udstilling
-          </Tag>
-          <time className="event-header__date">{date}</time>
-          <h1 className="event-header__title">{title}</h1>
-        </div>
+        <Tag hasBackground className="event-header__tag">
+          Udstilling
+        </Tag>
+        <time className="event-header__date">{date}</time>
+        <h1 className="event-header__title">{title}</h1>
         <a
           href="/"
           className="btn-primary btn-filled btn-large event-header__button"
