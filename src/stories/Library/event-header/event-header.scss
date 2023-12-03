@@ -52,6 +52,7 @@
 
 .event-header__button {
   width: 100%;
+  text-decoration: none;
   @include breakpoint-s {
     width: auto;
   }
