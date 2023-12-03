@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { Tag } from "../tag/Tag";
-import { Button } from "../Buttons/button/Button";
 
 type EventHeaderProps = {
   title: string;
@@ -19,15 +18,12 @@ const EventHeader: FC<EventHeaderProps> = ({ title, date, image }) => {
           <time className="event-header__date">{date}</time>
           <h1 className="event-header__title">{title}</h1>
         </div>
-        <Button
-          classNames="event-header__button"
-          label="Køb billet"
-          buttonType="none"
-          disabled={false}
-          collapsible={false}
-          size="large"
-          variant="filled"
-        />
+        <a
+          href="/"
+          className="btn-primary btn-filled btn-large event-header__button"
+        >
+          Køb billet
+        </a>
       </section>
       <section className="event-header__visual">
         <img
