@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Tag } from "../tag/Tag";
+import ImageCredited from "../image-credited/ImageCredited";
 
 type EventHeaderProps = {
   title: string;
@@ -26,15 +27,11 @@ const EventHeader: FC<EventHeaderProps> = ({ title, date, image }) => {
         </a>
       </section>
       <section className="event-header__visual">
-        <img
-          className="event-header__image"
+        <ImageCredited
           src={image}
-          alt="Event description"
+          description="Photo by Unsplash"
+          year="©2021"
         />
-        <div className="event-header__image-info">
-          <span>Photo by Unsplash </span>
-          <span>©2021</span>
-        </div>
       </section>
     </header>
   );

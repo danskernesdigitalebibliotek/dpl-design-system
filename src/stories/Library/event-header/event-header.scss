@@ -65,14 +65,3 @@
     border-right: 1px solid $c-global-tertiary-1;
   }
 }
-
-.event-header__image {
-  width: 100%;
-}
-
-.event-header__image-info {
-  @extend %text-small-caption;
-  margin-top: $s-md;
-  display: flex;
-  justify-content: space-between;
-}
