@@ -1,0 +1,50 @@
+.article-header {
+  display: grid;
+  gap: $s-xl;
+  padding: $s-4xl $s-xl;
+  position: relative;
+
+  @include breakpoint-s {
+    padding: $s-4xl $s-7xl;
+  }
+}
+
+.article-header__back-link {
+  position: absolute;
+  left: $s-md;
+  top: $s-sm;
+
+  @include breakpoint-s {
+    left: $s-2xl;
+    top: $s-lg;
+  }
+}
+
+.article-header__title {
+  @extend %text-header-h1;
+}
+
+.article-header__subtitle {
+  @extend %text-subtitle;
+}
+
+.article-header__title,
+.article-header__subtitle {
+  @include breakpoint-s {
+    max-width: 897px;
+  }
+}
+
+.article-header__info {
+  @extend %text-body-small-regular;
+}
+
+.article-header__author {
+  @extend %link-tag;
+  @extend %text-body-small-regular;
+  margin-left: $s-xs;
+}
+
+.article-header__date {
+  margin-left: $s-sm;
+}
