@@ -15,6 +15,17 @@
   max-width: 100%;
 }
 
+%text-inline-link {
+  text-decoration: underline solid black;
+  text-underline-offset: 0.3em;
+  transition: text-underline-offset 0.1s ease-in-out;
+
+  &:hover {
+    color: $color__text-primary-black;
+    text-underline-offset: 0.2em;
+  }
+}
+
 %link-tag {
   @include typography($typo__body-placeholder);
 
