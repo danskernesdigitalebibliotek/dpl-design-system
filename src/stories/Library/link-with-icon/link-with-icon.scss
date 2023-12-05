@@ -1,20 +1,13 @@
 .link-with-icon {
+  @extend %text-body-medium-regular-placeholder;
+  line-height: 160%;
   background-color: $c-global-primary;
   padding: $s-md $s-lg;
   display: flex;
   align-items: center;
   text-decoration: none;
   border: 1px solid $c-global-tertiary-1;
-  line-height: 160%;
   width: 100%;
-  @include container(medium);
-
-  > svg {
-    display: block;
-    width: 35px;
-    margin-left: auto;
-    visibility: hidden;
-  }
 
   &:first-child {
     margin-top: 0;
@@ -28,33 +21,29 @@
     margin-top: 0;
   }
 
+  @include container(medium);
   @include breakpoint-s {
     padding: $s-lg $s-xl;
-    &:hover > svg {
-      visibility: visible;
-    }
-  }
-
-  &.arrow__hover--right-small {
-    .arrow__body,
-    .arrow__head {
-      transition: none;
-    }
   }
 }
 
-.link-icon {
+@include arrow("link-with-icon");
+
+.link-with-icon__arrow {
+  margin-left: auto;
+}
+
+.link-with-icon__icon {
   margin-right: $s-md;
-  height: 40px;
-  width: 40px;
+  background-color: $c-identity-primary;
   min-width: 40px;
   min-height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  &.rotate-180 {
-    transform: rotate(180deg);
-  }
+.link-with-icon__icon--rotate-180 {
+  transform: rotate(180deg);
 }
