@@ -29,23 +29,20 @@ export const LinkWithIcon = ({ href, linkText, linkType }: LinksProps) => {
   const { target, icon, folder } = linkTypeAttributes[linkType];
 
   const linkIconClass = clsx({
-    "rotate-180": linkType === "internal",
+    "link-with-icon__icon--rotate-180": linkType === "internal",
   });
 
   return (
     <a
       href={href}
       target={target}
-      rel={target === "_blank" ? "noopener noreferrer" : undefined}
-      className={clsx(
-        "link-with-icon text-body-medium-regular arrow__hover--right-small"
-      )}
+      className={clsx("link-with-icon arrow__hover--right-small")}
     >
-      <div className={clsx("link-icon bg-identity-primary", linkIconClass)}>
+      <div className={clsx("link-with-icon__icon", linkIconClass)}>
         <img className="invert" src={`icons/${folder}/${icon}.svg`} alt="" />
       </div>
       {linkText}
-      <ArrowSmallRight />
+      <ArrowSmallRight className="link-with-icon__arrow" />
     </a>
   );
 };
