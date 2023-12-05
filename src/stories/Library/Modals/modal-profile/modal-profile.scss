@@ -3,26 +3,26 @@
   flex-direction: column;
 
   &__notifications:has[div] {
-    border-bottom: 1px solid $c-global-tertiary-1;
+    border-bottom: 1px solid $color__global-tertiary-1;
 
-    padding: 32px;
+    padding: $s-xl;
 
-    @include breakpoint-s {
+    @include media-query__small {
       padding: {
         top: 40px;
-        right: 80px;
+        right: $s-4xl;
         bottom: 40px;
-        left: 80px;
+        left: $s-4xl;
       }
     }
   }
 
   &__notification-item {
-    margin-bottom: 8px;
+    margin-bottom: $s-sm;
   }
 
   &__notification-item .list-dashboard {
-    padding: 8px;
+    padding: $s-sm;
   }
 
   &__notification-item .number {
@@ -36,19 +36,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 32px;
+    padding: $s-xl;
   }
 
   &__links .link-filters {
     display: flex;
     flex-direction: column;
-    row-gap: 24px;
+    row-gap: $s-lg;
   }
 
   &__btn-logout {
-    margin: 0 32px;
+    margin: 0 $s-xl;
 
-    @include breakpoint-s {
+    @include media-query__small {
       display: flex;
       justify-content: flex-end;
 

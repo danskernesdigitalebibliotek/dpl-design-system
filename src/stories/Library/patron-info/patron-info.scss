@@ -1,29 +1,29 @@
 .dpl-patron-info {
-  @extend %color-secondary-gray;
-  @extend %bg-global-secondary;
-  @extend %pb-32;
+  color: $color__text-secondary-gray;
+  background-color: $color__global-secondary;
+  padding-bottom: $s-xl;
 
   &__label {
-    @extend %text-body-large;
-    @extend %ml-32;
-    @extend %pt-32;
+    @include typography($typo__body-large);
+    margin-left: $s-xl;
+    padding-top: $s-xl;
   }
   &__text {
-    @extend %text-body-medium-medium;
-    @extend %ml-32;
+    @include typography($typo__body-medium);
+    margin-left: $s-xl;
   }
 }
 
 .patron-buttons {
   display: flex;
-  @extend %mt-32;
+  margin-top: $s-xl;
 }
 
 .contact-info-flex {
   display: flex;
   flex-direction: column;
 
-  @include breakpoint-s {
+  @include media-query__small {
     flex-direction: row;
   }
 }
@@ -31,7 +31,7 @@
 .patron-page-info {
   width: 100%;
 
-  @include breakpoint-s {
+  @include media-query__small {
     width: 75%;
   }
 }
@@ -39,35 +39,35 @@
 .patron__input {
   display: flex;
   flex-direction: column;
-  @extend %text-body-medium-medium;
+  @include typography($typo__body-medium);
 
   label {
-    @extend %text-body-medium-medium;
-    color: $c-text-secondary-gray;
+    @include typography($typo__body-medium);
+    color: $color__text-secondary-gray;
   }
 
   input {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid $c-global-tertiary-1;
+    border-bottom: 1px solid $color__global-tertiary-1;
     height: 40px;
 
     &:focus {
-      border-bottom-color: $c-text-primary-black;
+      border-bottom-color: $color__text-primary-black;
       outline: none;
     }
   }
 
   &__description {
-    color: $c-text-secondary-gray;
-    @extend %text-body-small-regular;
-    @extend %mt-8;
+    color: $color__text-secondary-gray;
+    @include typography($typo__body-small);
+    margin-top: $s-sm;
   }
 
   &__validation {
-    color: $c-signal-alert;
-    @extend %text-body-small-regular;
-    @extend %mt-8;
+    color: $color__signal-alert;
+    @include typography($typo__body-small);
+    margin-top: $s-sm;
   }
 
   input::-webkit-outer-spin-button,
@@ -84,12 +84,12 @@
   width: 100%;
 
   &:first-of-type {
-    @include breakpoint-s {
+    @include media-query__small {
       margin-right: $s-lg;
     }
   }
 
-  @include breakpoint-m {
+  @include media-query__medium {
     width: 50%;
   }
 }

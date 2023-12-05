@@ -1,9 +1,9 @@
 .campaign {
-  background-color: $c-global-tertiary-2;
+  background-color: $color__global-tertiary-2;
   display: grid;
   grid-template-rows: 150px auto;
 
-  @include breakpoint-s {
+  @include media-query__small {
     height: 150px;
     display: flex;
   }
@@ -13,12 +13,12 @@
     width: 100%;
     object-fit: cover;
 
-    @include breakpoint-s {
+    @include media-query__small {
       max-width: 30%;
     }
 
     &.campaign__image--full-width {
-      @include breakpoint-s {
+      @include media-query__small {
         max-width: 100%;
         min-width: 100%;
       }
@@ -26,10 +26,11 @@
   }
 
   &__title {
-    @extend %text-header-h4;
+    @include typography($typo__h4);
+
     margin: $s-lg;
     align-self: center;
-    color: $c-text-primary-white;
+    color: $color__text-primary-white;
 
     &.campaign__title--none {
       display: none;
@@ -38,7 +39,7 @@
 }
 
 .campaign--reverse {
-  @include breakpoint-s {
+  @include media-query__small {
     flex-direction: row-reverse;
   }
 }

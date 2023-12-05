@@ -1,10 +1,10 @@
 .dpl-pause-reservation-component {
-  background-color: $c-global-secondary;
+  background-color: $color__global-secondary;
   min-height: 72px;
   position: relative;
   display: flex;
   align-items: center;
-  @extend %p-16;
+  padding: $s-md;
   @extend %pagefold-parent--medium;
 
   &__pagefold {
@@ -20,25 +20,25 @@
     justify-content: center;
     gap: $s-sm;
 
-    @include breakpoint-xs {
+    @include media-query__x-small {
       justify-content: start;
     }
 
     &__reservation-icon {
       justify-content: center;
-      @include breakpoint-s {
+      @include media-query__small {
         padding-left: 48px;
       }
     }
 
     &__text {
-      @extend %text-body-large;
+      @include typography($typo__body-large);
     }
 
     &__badge {
-      background-color: $c-global-primary;
+      background-color: $color__global-primary;
       padding: $s-xs $s-sm;
-      @extend %text-body-medium-medium;
+      @include typography($typo__body-medium);
     }
 
     &__button {
@@ -46,7 +46,7 @@
       flex: 1;
       justify-content: center;
 
-      @include breakpoint-xs {
+      @include media-query__x-small {
         justify-content: flex-end;
       }
     }

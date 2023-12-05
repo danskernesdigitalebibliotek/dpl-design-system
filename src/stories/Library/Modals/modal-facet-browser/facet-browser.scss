@@ -5,7 +5,7 @@
     min-height: 120px;
     padding-left: $s-xl;
     padding-top: $s-xl;
-    @include breakpoint-s {
+    @include media-query__small {
       min-height: 144px;
       padding-left: $s-2xl;
       padding-top: $s-2xl;
@@ -32,7 +32,7 @@
     margin-bottom: $s-xl;
     margin-right: $s-md;
 
-    @include breakpoint-s {
+    @include media-query__small {
       margin-right: $s-2xl;
     }
   }

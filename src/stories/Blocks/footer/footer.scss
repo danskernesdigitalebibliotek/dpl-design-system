@@ -7,7 +7,7 @@
     display: none;
   }
 
-  @include breakpoint-s {
+  @include media-query__small {
     .footer__mobile {
       display: none;
     }
@@ -37,10 +37,10 @@
   }
 
   .internal-pagefold-parent {
-    background-color: $c-global-secondary;
+    background-color: $color__global-secondary;
 
-    @include breakpoint-m {
-      padding: 56px 100px 24px;
+    @include media-query__medium {
+      padding: 56px $s-5xl $s-lg;
     }
   }
 }
@@ -56,15 +56,15 @@
   width: 82px;
 
   .dropdown__select {
-    background-color: $c-global-secondary;
-    height: 32px;
+    background-color: $color__global-secondary;
+    height: $s-xl;
     padding: 0 12px;
     min-width: 82px;
   }
 
   .dropdown__arrows {
-    height: 32px;
-    width: 32px;
+    height: $s-xl;
+    width: $s-xl;
   }
 }
 
@@ -78,16 +78,16 @@
   display: flex;
 
   li {
-    padding-bottom: 16px;
+    padding-bottom: $s-md;
   }
 
-  @include breakpoint-s {
+  @include media-query__small {
     li {
       padding-bottom: 0;
     }
 
     a {
-      padding-right: 24px;
+      padding-right: $s-lg;
     }
 
     a:last-child {
@@ -100,33 +100,33 @@
   display: flex;
 
   a {
-    padding-right: 24px;
+    padding-right: $s-lg;
   }
 }
 
 // Separator
 .footer__separator {
-  border-bottom: 1px solid $c-global-tertiary-1;
-  margin: #{$s-24}px 0;
+  border-bottom: 1px solid $color__global-tertiary-1;
+  margin: $s-lg 0;
 }
 
 // Separator mobile tweaks
 .footer__mobile .footer__separator {
-  margin: #{$s-24}px -50px;
+  margin: $s-lg (-50px);
 }
 
 // Link tweaks
 .footer__column-link {
-  margin-top: #{$s-16}px;
+  margin-top: $s-md;
 }
 
 .footer__site-info-link {
   text-decoration: none;
-  @extend %text-links-placeholder;
+  @include typography($typo__links);
 }
 
 .footer__column-phone {
-  color: $c-text-primary-black;
+  color: $color__text-primary-black;
   text-decoration: none;
 }
 

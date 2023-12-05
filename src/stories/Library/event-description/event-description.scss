@@ -1,7 +1,9 @@
 .event-description {
-  @include container(medium);
   padding: $s-md;
-  @include breakpoint-s {
+  max-width: $layout__max-width;
+  margin: 0 auto;
+
+  @include media-query__small {
     padding: $s-xl $s-4xl;
     display: grid;
     column-gap: $s-xl;
@@ -10,21 +12,22 @@
 }
 
 .event-description__title {
-  @extend %text-header-h4;
+  @include typography($typo__h4);
   margin-bottom: $s-md;
 
-  @include breakpoint-s {
+  @include media-query__small {
     grid-column: 1 / -1;
     margin-bottom: $s-lg;
   }
 }
 
 .event-description__description {
-  @extend %text-body-large;
+  @include typography($typo__body-large);
+
   line-height: 24px;
   margin-bottom: $s-md;
 
-  @include breakpoint-s {
+  @include media-query__small {
     line-height: 32px;
   }
 }
@@ -32,7 +35,7 @@
 .event-description__links {
   margin-bottom: $s-2xl;
 
-  @include breakpoint-s {
+  @include media-query__small {
     margin-bottom: 0;
   }
 }
