@@ -1,0 +1,50 @@
+.event-description {
+  @include container(medium);
+  padding: $s-md;
+  @include breakpoint-s {
+    padding: $s-xl $s-4xl;
+    display: grid;
+    column-gap: $s-xl;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "title title"
+      "description info"
+      "links links";
+  }
+}
+
+.event-description__title {
+  grid-area: title;
+  @extend %text-header-h4;
+  margin-bottom: $s-md;
+
+  @include breakpoint-s {
+    margin-bottom: $s-lg;
+  }
+}
+
+.event-description__description {
+  grid-area: description;
+  @extend %text-body-large;
+  line-height: 24px;
+  margin-bottom: $s-md;
+
+  @include breakpoint-s {
+    margin-bottom: 0;
+    line-height: 32px;
+  }
+}
+
+.event-description__links {
+  grid-area: links;
+  margin-bottom: $s-2xl;
+
+  @include breakpoint-s {
+    margin-bottom: 0;
+    margin-top: $s-md;
+  }
+}
+
+.event-description__info {
+  grid-area: info;
+}
