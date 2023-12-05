@@ -1,17 +1,17 @@
 import clsx from "clsx";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
-import { IconTypes, LinkTypes } from "./LinkTypes";
+import { IconType, LinkType } from "./LinkTypes";
 
 export type LinksProps = {
   href: string;
   linkText: string;
-  linkType: LinkTypes;
+  linkType: LinkType;
 };
 
 const linkTypeAttributes: {
-  [key in LinkTypes]: {
+  [key in LinkType]: {
     target: "_self" | "_blank";
-    icon: IconTypes;
+    icon: IconType;
     folder: "basic" | "collection";
   };
 } = {
