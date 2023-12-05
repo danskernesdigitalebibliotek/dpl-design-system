@@ -1,6 +1,6 @@
-export type LinkTypes = "internal" | "external" | "download" | "search";
+export type LinkType = "internal" | "external" | "download" | "search";
 
-export type IconTypes =
+export type IconType =
   | "ArrowBack"
   | "icon-external-link"
   | "Ebook"
