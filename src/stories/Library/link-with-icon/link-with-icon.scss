@@ -3,8 +3,10 @@
   line-height: 160%;
   background-color: $c-global-primary;
   padding: $s-md $s-lg;
-  display: flex;
+  display: grid;
+  grid-template-columns: 40px auto max-content;
   align-items: center;
+  gap: $s-md;
   text-decoration: none;
   border: 1px solid $c-global-tertiary-1;
   width: 100%;
@@ -29,12 +31,7 @@
 
 @include arrow("link-with-icon");
 
-.link-with-icon__arrow {
-  margin-left: auto;
-}
-
 .link-with-icon__icon {
-  margin-right: $s-md;
   background-color: $c-identity-primary;
   min-width: 40px;
   min-height: 40px;
