@@ -1,0 +1,10 @@
+.image-credited__img {
+  width: 100%;
+}
+
+.image-credited__info {
+  @extend %text-small-caption;
+  margin-top: $s-md;
+  display: flex;
+  justify-content: space-between;
+}

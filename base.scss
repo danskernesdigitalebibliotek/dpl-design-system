@@ -1,6 +1,7 @@
 @import "./src/styles/scss/reset";
 @import "./src/stories/Library/colors/color-variables";
 @import "./src/styles/scss/skeleton";
+@import "./src/styles/scss/container";
 
 // The imports below are not advised to be moved around, because
 // they cross-reference various defined variables between each other.
@@ -100,6 +101,8 @@
 @import "./src/stories/Library/Buttons/row-button/row-button";
 @import "./src/stories/Library/Buttons/row-button/row-buttons";
 @import "./src/stories/Library/article-header/article-header";
+@import "./src/stories/Library/event-header/event-header";
+@import "./src/stories/Library/image-credited/image-credited";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";
@@ -115,6 +118,7 @@
 @import "./src/stories/Blocks/material-manifestation-item/material-manifestation-item";
 @import "./src/stories/Blocks/advanced-search/advanced-search";
 @import "./src/stories/Blocks/article/article";
+@import "./src/stories/Blocks/event-page/event-page";
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";
