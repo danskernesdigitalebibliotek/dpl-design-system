@@ -1,10 +1,10 @@
 .event-header {
   @include container(medium);
-  border-bottom: 1px solid $c-global-tertiary-1;
+  border-bottom: 1px solid $color__global-tertiary-1;
   display: grid;
   gap: $s-lg;
   padding-bottom: $s-2xl;
-  @include breakpoint-s {
+  @include media-query__small {
     grid-template-columns: 2fr 1fr;
     gap: 0;
     padding-bottom: 0;
@@ -14,7 +14,7 @@
 .event-header__content,
 .event-header__visual {
   padding: 0 $s-md;
-  @include breakpoint-s {
+  @include media-query__small {
     padding: $s-2xl;
   }
 }
@@ -28,7 +28,7 @@
     ". title  ."
     "btn btn btn";
 
-  @include breakpoint-s {
+  @include media-query__small {
     grid-template-columns: 1fr;
   }
 }
@@ -37,26 +37,26 @@
   grid-area: tag;
   width: max-content;
   margin: $s-md 0;
-  @include breakpoint-s {
+  @include media-query__small {
     margin: $s-lg 0;
   }
 }
 
 .event-header__date {
   grid-area: date;
-  @extend %text-header-h4;
+  @include typography($typo__h4);
   display: block;
   margin-bottom: $s-md;
-  @include breakpoint-s {
+  @include media-query__small {
     margin-bottom: $s-sm;
   }
 }
 
 .event-header__title {
   grid-area: title;
-  @extend %text-header-h1;
+  @include typography($typo__h1);
   margin-bottom: $s-xl;
-  @include breakpoint-s {
+  @include media-query__small {
     margin-bottom: $s-5xl;
   }
 }
@@ -65,15 +65,15 @@
   grid-area: btn;
   width: 100%;
   text-decoration: none;
-  @include breakpoint-s {
+  @include media-query__small {
     width: auto;
   }
 }
 
 .event-header__visual {
-  @include breakpoint-s {
+  @include media-query__small {
     grid-column: 1/2;
     grid-row: 1/2;
-    border-right: 1px solid $c-global-tertiary-1;
+    border-right: 1px solid $color__global-tertiary-1;
   }
 }

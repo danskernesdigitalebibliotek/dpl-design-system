@@ -1,28 +1,28 @@
 .header {
-  border: 1px solid $c-global-tertiary-1;
+  border: 1px solid $color__global-tertiary-1;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  background-color: $c-global-primary;
+  background-color: $color__global-primary;
   position: sticky;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
   z-index: $z-20;
 
-  @include breakpoint-s {
+  @include media-query__small {
     grid-template-columns: 1fr 105px;
   }
 
-  @include breakpoint-m {
+  @include media-query__medium {
     grid-template-columns: 250px 1fr 105px;
   }
 }
 
 .header__logo-desktop {
   display: none;
-  border-right: 1px solid $c-global-tertiary-1;
-  @include breakpoint-m {
+  border-right: 1px solid $color__global-tertiary-1;
+  @include media-query__medium {
     display: block;
   }
 }
@@ -41,13 +41,13 @@
 }
 
 .header__menu-first {
-  border-bottom: 1px solid $c-global-tertiary-1;
+  border-bottom: 1px solid $color__global-tertiary-1;
   display: grid;
   grid-template-columns: 1fr auto auto;
 }
 
 .header__menu-navigation-logo {
-  margin-left: 16px;
+  margin-left: $s-md;
   display: flex;
   align-items: center;
 }
@@ -55,7 +55,7 @@
 .header__menu-navigation {
   display: none;
 
-  @include breakpoint-m {
+  @include media-query__medium {
     display: flex;
     padding: 0 12px;
     height: 100%;
@@ -65,13 +65,13 @@
 .header__menu-navigation-mobile {
   display: flex;
 
-  @include breakpoint-s {
+  @include media-query__small {
     .pagefold-triangle-small {
       display: none;
     }
   }
 
-  @include breakpoint-m {
+  @include media-query__medium {
     display: none;
   }
 }
@@ -80,7 +80,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid $c-global-tertiary-1;
+  border-right: 1px solid $color__global-tertiary-1;
 }
 
 .header__menu-navigation-item:hover {
@@ -93,13 +93,13 @@
   height: 100%;
   display: flex;
   align-items: center;
-  color: $c-text-primary-black;
+  color: $color__text-primary-black;
 }
 
 .header__menu-profile,
 .header__menu-bookmarked {
   position: relative;
-  border-left: 1px solid $c-global-tertiary-1;
+  border-left: 1px solid $color__global-tertiary-1;
 
   a {
     width: 100%;
@@ -117,20 +117,20 @@
     text-overflow: ellipsis;
     overflow: hidden;
     width: 100%;
-    padding: 0 4px;
+    padding: 0 $s-xs;
     text-align: center;
   }
 
-  @include breakpoint-s {
+  @include media-query__small {
     span {
-      bottom: 4px;
+      bottom: $s-xs;
     }
   }
 
   .header__notification {
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: $s-sm;
+    height: $s-sm;
     border-radius: 100%;
     transform: translateX(10px) translateY(-12px);
   }
@@ -148,20 +148,21 @@
 }
 
 .header__menu-search-input {
+  @include typography($typo__body-placeholder);
+
   width: 100%;
   height: 100%;
-  padding: 0 24px;
+  padding: 0 $s-lg;
   border: 0 solid transparent;
   background-color: transparent;
   font-size: 16px;
-  @extend %text-body-medium-regular-placeholder;
 
   ::placeholder {
-    color: $c-text-secondary-gray;
+    color: $color__text-secondary-gray;
   }
 
   &:focus {
-    background-color: $c-text-primary-white;
+    background-color: $color__text-primary-white;
     border: 0 solid transparent;
     outline: none;
   }
@@ -180,16 +181,16 @@
 }
 
 .header__menu-dropdown {
-  @extend %text-body-medium-regular-placeholder;
+  @include typography($typo__body-placeholder);
   position: absolute;
   right: 0;
   top: 58px;
-  background-color: $c-global-primary;
+  background-color: $color__global-primary;
   padding: $s-xs 0;
-  outline: $c-global-tertiary-1 solid 1px;
+  outline: $color__global-tertiary-1 solid 1px;
   z-index: $z-10;
 
-  @include breakpoint-s {
+  @include media-query__small {
     padding: $s-sm 0;
     right: 0;
     top: 72px;
@@ -202,12 +203,12 @@
   cursor: pointer;
 
   &:hover {
-    background-color: $c-global-secondary;
+    background-color: $color__global-secondary;
   }
 }
 
 .header__menu-dropdown-item--highlighted {
-  background-color: $c-global-secondary;
+  background-color: $color__global-secondary;
 }
 
 .header__menu-dropdown-icon {
@@ -217,10 +218,10 @@
 }
 
 .header__clock {
-  border-left: 1px solid $c-global-tertiary-1;
+  border-left: 1px solid $color__global-tertiary-1;
   display: none;
 
-  @include breakpoint-s {
+  @include media-query__small {
     display: block;
   }
 }
@@ -232,13 +233,13 @@
 }
 
 .header__button {
-  height: 56px;
-  width: 56px;
+  height: $s-odd-56;
+  width: $s-odd-56;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @include breakpoint-s {
+  @include media-query__small {
     height: 70px;
     width: 70px;
   }
@@ -262,13 +263,13 @@
   height: 100vh;
   grid-template-columns: 384px 1fr;
 
-  @include breakpoint-s {
+  @include media-query__small {
     grid-template-columns: 384px 1fr;
   }
 }
 
 .header__overlay-main {
-  background-color: $c-global-primary;
+  background-color: $color__global-primary;
 }
 
 .header__overlay-backdrop {
@@ -278,11 +279,11 @@
 
 .header__overlay-menu {
   margin-top: 96px;
-  margin-left: 56px;
+  margin-left: $s-odd-56;
 }
 
 .header__overlay-menu-item {
-  margin-bottom: 8px;
+  margin-bottom: $s-sm;
 }
 
 // The kebab casing conflicts with our naming convention.

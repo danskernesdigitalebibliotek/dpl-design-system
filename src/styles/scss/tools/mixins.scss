@@ -1,0 +1,174 @@
+// Hide element visually but not from screen readers.
+// https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/
+// ---
+// The class is intentionally called .hide-visually and not .visually-hidden.
+// Drupal which is a known consumer of the design system also has a
+// .visually-hidden class where the implementation is a bit different.
+// To avoid any conflicts we call our class something else.
+// //https://git.drupalcode.org/project/drupal/-/blob/9.2.x/core/modules/system/css/components/hidden.module.css#L18-33
+@mixin hide-visually {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+@mixin container($size) {
+  margin: 0 auto;
+  @if $size == small {
+    max-width: 768px;
+  } @else if $size == medium {
+    max-width: 1024px;
+  } @else if $size == large {
+    max-width: 1440px;
+  }
+}
+
+// Add styling, that only shows svg arrow when hovering.
+// ---
+// @todo - this needs to be cleaned up, as it currently targets all SVGs.
+// It is also a problem that we need to do the $icon-container, which can be
+// fixed by actually adding a class to the svg - or, a common wrapper class.
+@mixin showSvgOnHover($icon-container: "") {
+  // stylelint-disable-next-line plugin/stylelint-bem-namics
+  #{$icon-container} > svg {
+    visibility: hidden;
+    opacity: 0;
+    margin-right: 40px;
+    align-self: center;
+
+    transition: opacity 0.5s ease-in-out;
+
+    @include media-query__small("max-width") {
+      display: none;
+    }
+  }
+
+  // stylelint-disable-next-line plugin/stylelint-bem-namics
+  &:hover #{$icon-container} > svg {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// Set styling across breakpoints, with possibility to exclude.
+// Example usage of this mixin, where margin-top is excluded:
+// @include map-styling($map, 'margin-top');
+// ---
+// @param {map} $map.
+// @param {options} $options - List of options. Supports:
+//    - excludes : list - List of properties to ignore
+@mixin map-styling($map, $options: ()) {
+  $excludes: if(
+    map_has_key($options, "excludes"),
+    map_get($options, "excludes"),
+    ()
+  );
+
+  @each $breakpoint-name, $map-values in $map {
+    $map-inner: map_get($map, $breakpoint-name);
+
+    @include media-query__name($breakpoint-name) {
+      @each $property, $value in $map-inner {
+        @if not(index($excludes, $property)) {
+          #{$property}: $value;
+        }
+      }
+    }
+  }
+}
+
+// Set styling for a font variant, across breakpoints.
+// @see mixin map-styling().
+// Example usage of this mixin:
+// @include typography($font__h4, 'line-height');
+// ---
+// @param {map} $font - See available maps in _variables.typography.scss ($font__VARIANT).
+// @param {options} $options - List of options. Supports:
+//    - excludes : list - List of properties to ignore
+@mixin typography($font, $options: ()) {
+  $excludes: if(
+    map_has_key($options, "excludes"),
+    map_get($options, "excludes"),
+    ()
+  );
+
+  @include map-styling(
+    $font,
+    (
+      excludes: $excludes,
+    )
+  );
+}
+
+// Create media query, based on PX value.
+// If you want to go by names (e.g. "medium"), use media-query__name().
+@mixin media-query($breakpoint, $definition: "min-width") {
+  // If we're meassuring by max-width, we want to remove a
+  // pixel as the variables are the max width of the device.
+  @if ($definition == "max-width") {
+    $breakpoint: $breakpoint - 1;
+  }
+
+  @media screen and ($definition: $breakpoint) {
+    @content;
+  }
+}
+
+// Trigger media query, by using name as a parameter.
+// Useful if you have the breakpoint name as a variable,
+// as you cant use variables in mixin include names.
+// ---
+// @param {string} $breakpoint-name — E.g. 'mobile'.
+@mixin media-query__name($breakpoint-name, $definition: "min-width") {
+  // We're going mobile-first, so no MQ necessary here.
+  @if ($breakpoint-name == "mobile") {
+    @content;
+  } @else {
+    $breakpoint: map_get($breakpoints, $breakpoint-name);
+
+    @include media-query($breakpoint, $definition) {
+      @content;
+    }
+  }
+}
+
+// Defining explicit aliases for media queries, for editor auto-complete.
+@mixin media-query__x-small($definition: "min-width") {
+  @include media-query__name("x-small", $definition) {
+    @content;
+  }
+}
+
+@mixin media-query__small($definition: "min-width") {
+  @include media-query__name("small", $definition) {
+    @content;
+  }
+}
+
+@mixin media-query__medium($definition: "min-width") {
+  @include media-query__name("medium", $definition) {
+    @content;
+  }
+}
+
+@mixin media-query__large($definition: "min-width") {
+  @include media-query__name("large", $definition) {
+    @content;
+  }
+}
+
+@mixin media-query__x-large($definition: "min-width") {
+  @include media-query__name("x-large", $definition) {
+    @content;
+  }
+}
+
+@mixin media-query__xx-large($definition: "min-width") {
+  @include media-query__name("xx-large", $definition) {
+    @content;
+  }
+}

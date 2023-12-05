@@ -1,34 +1,34 @@
 .autosuggest {
   &__text-item {
-    min-height: 40px;
+    min-height: $s-odd-40;
     width: 100%;
     display: flex;
     align-items: center;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       // Because the main autosuggest is a prominent feature we don't want the hover
       // effect to take effect on phones, as iPhones have a known bug that requires
       // users to double click in order to get past hover to register a click.
       // For reference, go to https://github.com/common-voice/common-voice/issues/424
       // or google "iphone hover issue".
       &:hover {
-        background-color: $c-global-secondary;
+        background-color: $color__global-secondary;
         cursor: pointer;
       }
     }
 
-    @include breakpoint-l {
-      height: 40px;
+    @include media-query__large {
+      height: $s-odd-40;
       padding-right: $s-lg;
     }
 
     &--highlight {
-      background-color: $c-global-secondary;
+      background-color: $color__global-secondary;
     }
   }
 
   &__text {
-    @include breakpoint-m {
+    @include media-query__medium {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;

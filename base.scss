@@ -1,24 +1,21 @@
 @import "./src/styles/scss/reset";
-@import "./src/stories/Library/colors/color-variables";
 @import "./src/styles/scss/skeleton";
-@import "./src/styles/scss/container";
+@import "./src/styles/scss/tools";
 
 // The imports below are not advised to be moved around, because
 // they cross-reference various defined variables between each other.
 
+// Legacy - utility classes and other stuff that needs to be cleaned later.
+@import "./src/styles/scss/legacy";
+
 // Library
-@import "./src/stories/Library/breakpoints/breakpoints";
-@import "./src/stories/Library/typography/typography";
 @import "./src/stories/Library/links/links";
 @import "./src/stories/Library/link-filters/link-filters";
 @import "./src/stories/Library/Arrows/arrows";
 @import "./src/stories/Library/Buttons/button/buttons";
 @import "./src/stories/Library/Buttons/button-ui/buttons-ui";
-@import "./src/stories/Library/layout/spacing";
-@import "./src/stories/Library/layout/z-index";
 @import "./src/stories/Library/tag/tag";
 @import "./src/stories/Library/logo/logo";
-@import "./src/stories/Library/pagefold/pagefold";
 @import "./src/stories/Library/dropdown/dropdown";
 @import "./src/stories/Library/breadcrumb/breadcrumb";
 @import "./src/stories/Library/status-label/status-label";
@@ -122,5 +119,3 @@
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";
-// Should be last to make it easier to overwrite.
-@import "./src/stories/Library/colors/color-classes";

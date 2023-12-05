@@ -1,12 +1,12 @@
 $shadows: "low"
-    "0px 0px 1px hsla(0deg, 0%, 0%, 0.03),  0 1px 4px hsla(0deg, 0%, 0%, 0.1), 1px 0px 2px hsla(0deg, 0%, 0%, 0.03)",
+    "0px 0px 1px hsla(0deg, 0%, 0%, 0.03),  0 1px $s-xs hsla(0deg, 0%, 0%, 0.1), 1px 0px 2px hsla(0deg, 0%, 0%, 0.03)",
   "medium"
-    "0px 0px 3px hsla(0deg, 0%, 0%, 0.03),  0 1px 16px hsla(0deg, 0%, 0%, 0.1), 3px 0px 6px hsla(0deg, 0%, 0%, 0.03)",
+    "0px 0px 3px hsla(0deg, 0%, 0%, 0.03),  0 1px $s-md hsla(0deg, 0%, 0%, 0.1), 3px 0px 6px hsla(0deg, 0%, 0%, 0.03)",
   "high"
-    "0px 0px 3px hsla(0deg, 0%, 0%, 0.04),  0 1px 16px hsla(0deg, 0%, 0%, 0.2), 6px 0px 24px hsla(0deg, 0%, 0%, 0.06)";
+    "0px 0px 3px hsla(0deg, 0%, 0%, 0.04),  0 1px $s-md hsla(0deg, 0%, 0%, 0.2), 6px 0px  $s-lg hsla(0deg, 0%, 0%, 0.06)";
 
 /* BEM plugin does not support interpolation */
-/* stylelint-disable plugin/stylelint-bem-namics */
+// stylelint-disable plugin/stylelint-bem-namics
 @each $name, $shadow in $shadows {
   .shadow-#{$name} {
     box-shadow: #{$shadow};
@@ -19,4 +19,4 @@ $shadows: "low"
     }
   }
 }
-/* stylelint-enable plugin/stylelint-bem-namics */
+// stylelint-enable plugin/stylelint-bem-namics

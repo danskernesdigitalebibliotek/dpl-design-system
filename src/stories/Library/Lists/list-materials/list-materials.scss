@@ -2,10 +2,10 @@
   display: flex;
   min-height: 96px;
   padding: 16px;
-  background-color: $c-text-primary-white;
+  background-color: $color__text-primary-white;
   justify-content: space-between;
 
-  @include breakpoint-s {
+  @include media-query__small {
     padding: 16px 32px;
     align-items: center;
     flex-direction: row;
@@ -26,8 +26,8 @@
 }
 
 .list-materials__content__header {
-  @extend %ellipsis-two-lines;
-  @extend %text-header-h5;
+  @extend %text-ellipsis-two-lines;
+  @include typography($typo__h5);
 }
 
 .list-materials--disabled {
@@ -50,16 +50,16 @@
 }
 
 .list-materials__status__note-desktop {
-  @extend %text-small-caption;
+  @include typography($typo__small-caption);
   display: none;
-  @include breakpoint-s {
+  @include media-query__small {
     display: flex;
   }
 }
 .list-materials__status__note-mobile {
-  @extend %text-small-caption;
+  @include typography($typo__small-caption);
   display: flex;
-  @include breakpoint-s {
+  @include media-query__small {
     display: none;
   }
 }
@@ -68,14 +68,14 @@
   display: inline-flex;
   gap: 8;
 
-  @include breakpoint-s {
+  @include media-query__small {
     display: flex;
     flex-direction: row;
   }
 }
 
 .list-materials__content-status-label {
-  @include breakpoint-s {
+  @include media-query__small {
     display: none;
   }
 }
@@ -86,7 +86,7 @@
   cursor: pointer;
   display: none;
 
-  @include breakpoint-s {
+  @include media-query__small {
     display: block;
   }
 }

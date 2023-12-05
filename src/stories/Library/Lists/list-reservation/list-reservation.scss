@@ -6,7 +6,9 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation {
-  background-color: $c-text-primary-white;
+  @include showSvgOnHover(".list-reservation__status");
+
+  background-color: $color__text-primary-white;
   border: 0;
   width: 100%;
   display: grid;
@@ -15,7 +17,7 @@ $list-reservation-space-desktop: 24px;
   position: relative;
   padding: $list-reservation-space-mobile;
 
-  @include breakpoint-s {
+  @include media-query__small {
     grid-template-columns: 1fr 1fr;
     height: 184px;
     padding: $list-reservation-space-desktop;
@@ -45,6 +47,8 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__note {
+  @include typography($typo__small-caption);
+
   // To make it easy to click
   min-height: 20px;
   cursor: pointer;
@@ -56,21 +60,17 @@ $list-reservation-space-desktop: 24px;
   white-space: break-spaces;
   text-decoration: underline;
   padding-left: 0;
-  @extend %text-small-caption;
-  @extend %color-secondary-gray;
 }
 
 .list-reservation__note--desktop {
-  @extend %text-body-small-regular;
   display: none;
-  @include breakpoint-s {
+  @include media-query__small {
     display: block;
   }
 }
 
 .list-reservation__note--mobile {
-  @extend %text-body-small-regular;
-  @include breakpoint-s {
+  @include media-query__small {
     display: none;
   }
 }
@@ -83,7 +83,7 @@ $list-reservation-space-desktop: 24px;
   align-items: baseline;
   justify-content: space-between;
 
-  @include breakpoint-s {
+  @include media-query__small {
     margin-left: $list-reservation-space-desktop;
   }
 }
@@ -98,7 +98,7 @@ $list-reservation-space-desktop: 24px;
     margin-bottom: $s-md;
   }
 
-  @include breakpoint-s {
+  @include media-query__small {
     margin-top: 0;
     p {
       font-size: 12px;
@@ -108,7 +108,7 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__header {
-  @extend %text-header-h4;
+  @include typography($typo__h4);
   padding: 0;
   cursor: pointer;
 
@@ -119,7 +119,7 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__header__text {
-  @extend %ellipsis-two-lines;
+  @extend %text-ellipsis-two-lines;
 }
 
 .list-reservation__status {
@@ -128,25 +128,16 @@ $list-reservation-space-desktop: 24px;
   align-items: flex-end;
   grid-template-columns: auto 1fr auto;
 
-  svg {
-    display: none;
-    @include breakpoint-s {
-      display: flex;
-    }
-  }
-
-  @include breakpoint-s {
+  @include media-query__small {
     align-items: center;
   }
 }
-
-@include arrow("list-reservation__status");
 
 .list-reservation__counter {
   display: none;
   margin: $s-xs;
 
-  @include breakpoint-s {
+  @include media-query__small {
     width: 92px;
     display: block;
   }
@@ -157,7 +148,7 @@ $list-reservation-space-desktop: 24px;
   grid-row-gap: 8px;
   margin-left: 2px;
 
-  @include breakpoint-s {
+  @include media-query__small {
     margin-left: 15px;
   }
 }
@@ -174,7 +165,7 @@ $list-reservation-space-desktop: 24px;
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: $c-text-primary-white;
+  background-color: $color__text-primary-white;
   perspective: 500px;
   box-shadow: 0 4px 20px rgb(72 72 72 / 10%);
 }

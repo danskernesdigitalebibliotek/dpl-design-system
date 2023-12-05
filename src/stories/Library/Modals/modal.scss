@@ -1,20 +1,9 @@
-// Should be in shared.scss, but since shared is loaded later than modal.scss, we temporarily need to have a copy here
-@mixin hide-visually {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-
 .modal {
   padding: $s-md;
   // This color is inherited by the <Counter /> component.
   --parent-bg-color: #f6f5f0;
 
-  background-color: $c-global-primary;
+  background-color: $color__global-primary;
   position: relative;
   opacity: 0;
   display: none;
@@ -26,13 +15,13 @@
     @include hide-visually;
   }
 
-  @include breakpoint-s {
+  @include media-query__small {
     height: calc(100vh - 200px);
     width: calc(100vw - 200px);
-    margin: 100px 0 0 100px;
+    margin: $s-5xl 0 0 $s-5xl;
   }
 
-  @include breakpoint-m {
+  @include media-query__medium {
     padding: $s-4xl $s-7xl;
   }
 
@@ -90,14 +79,14 @@
   z-index: $z-15;
 
   &.modal-btn-close--offset {
-    @include breakpoint-s {
-      top: 100px;
-      right: 100px;
+    @include media-query__small {
+      top: $s-5xl;
+      right: $s-5xl;
     }
   }
 
-  @include breakpoint-s {
-    padding: 34px;
+  @include media-query__small {
+    padding: $s-odd-34;
   }
 
   &:hover {
@@ -107,7 +96,7 @@
   & > img {
     width: 11.5px;
 
-    @include breakpoint-s {
+    @include media-query__small {
       width: 19.5px;
     }
   }

@@ -1,14 +1,14 @@
 .material-header {
-  border-bottom: 1px solid $c-global-tertiary-1;
-  padding-bottom: 56px;
-  @include breakpoint-m {
+  border-bottom: 1px solid $color__global-tertiary-1;
+  padding-bottom: $s-odd-56;
+  @include media-query__medium {
     min-height: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 0;
   }
 
-  @include breakpoint-l {
+  @include media-query__large {
     min-height: 650px;
   }
 
@@ -22,19 +22,19 @@
     display: grid;
     place-content: center;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       padding: 0;
     }
   }
 
   &__content {
-    padding: 16px;
+    padding: $s-md;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       padding: $s-4xl $s-2xl $s-4xl $s-7xl;
       grid-column: 1/2;
       grid-row: 1/2;
-      border-right: 1px solid $c-global-tertiary-1;
+      border-right: 1px solid $color__global-tertiary-1;
     }
 
     & > h1 {
@@ -45,8 +45,8 @@
   // spaceing for availability-label
   &__availability-label {
     margin-top: 38px;
-    margin-bottom: 48px;
-    margin-bottom: 56px;
+    margin-bottom: $s-odd-48;
+    margin-bottom: $s-odd-56;
     display: flex;
     align-content: center;
     flex-wrap: wrap;
@@ -55,13 +55,13 @@
 
   // Spacing between buttons
   &__button > * + * {
-    margin-top: 8px;
+    margin-top: $s-sm;
   }
 
   // set all buttons to the full width
   &__button > * {
     width: 100%;
-    @include breakpoint-m {
+    @include media-query__medium {
       width: 346px;
       max-width: 346px;
     }

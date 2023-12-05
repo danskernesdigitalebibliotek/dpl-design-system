@@ -5,8 +5,8 @@
   line-height: 18px;
   text-align: left;
 
-  @include breakpoint-m {
-    font-size: 24px;
+  @include media-query__medium {
+    font-size: $s-lg;
     line-height: 27px;
   }
 }

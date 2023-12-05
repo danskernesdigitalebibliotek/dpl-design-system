@@ -2,22 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: $s-md;
 
-  @include breakpoint-s {
-    padding: 16px 32px;
+  @include media-query__small {
+    padding: $s-md $s-xl;
   }
 }
 
 .warning-bar__icon {
-  margin-right: 16px;
+  margin-right: $s-md;
 }
 
 .warning-bar__left {
   display: flex;
   align-items: start;
 
-  @include breakpoint-s {
+  @include media-query__small {
     align-items: center;
   }
 }
@@ -28,9 +28,9 @@
 }
 
 .warning-bar__owes {
-  margin-right: 8px;
+  margin-right: $s-sm;
 
-  @include breakpoint-s {
-    margin-right: 24px;
+  @include media-query__small {
+    margin-right: $s-lg;
   }
 }

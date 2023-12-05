@@ -1,33 +1,33 @@
 .number {
-  min-width: 40px;
-  width: 40px;
-  height: 40px;
+  min-width: $s-odd-40;
+  width: $s-odd-40;
+  height: $s-odd-40;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid transparent;
   border-radius: 100%;
-  @extend %text-body-medium-medium;
+  @include typography($typo__body-medium);
 
-  @include breakpoint-s {
-    min-width: 56px;
-    width: 56px;
-    height: 56px;
+  @include media-query__small {
+    min-width: $s-odd-56;
+    width: $s-odd-56;
+    height: $s-odd-56;
   }
 
   &--danger {
-    border-color: $c-signal-alert;
+    border-color: $color__signal-alert;
   }
 
   &--warning {
-    border-color: $c-signal-aware;
+    border-color: $color__signal-aware;
   }
 
   &--info {
-    border-color: $c-signal-success;
+    border-color: $color__signal-success;
   }
 
   &--neutral {
-    border-color: $c-text-secondary-gray;
+    border-color: $color__text-secondary-gray;
   }
 }

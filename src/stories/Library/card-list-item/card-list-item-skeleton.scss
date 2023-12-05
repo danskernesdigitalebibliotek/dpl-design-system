@@ -1,6 +1,5 @@
 // Since we are using the Skeleton Screen Css classes connected to the existing styling
 // we deliberately not follow the BEM naming convention here.
-/* stylelint-disable plugin/stylelint-bem-namics */
 
 .card-list-item {
   &.ssc {
@@ -10,13 +9,11 @@
     width: 95px;
   }
   .ssc-head-line {
-    @extend %mt-16;
+    margin-top: $s-md;
   }
-  @include breakpoint-s {
+  @include media-query__small {
     .ssc-wrapper {
       width: 50%;
     }
   }
 }
-
-/* stylelint-enable plugin/stylelint-bem-namics */

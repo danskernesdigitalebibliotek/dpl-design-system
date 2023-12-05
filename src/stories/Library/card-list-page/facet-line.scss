@@ -1,17 +1,10 @@
-.facet-line {
-  &__item {
-    display: inline-block;
-    @extend %mr-8;
-    @extend %mt-8;
-  }
+.facet-line-selected-terms__item,
+.facet-line__item {
+  display: inline-block;
+  margin-right: $s-sm;
+  margin-top: $s-md;
 }
 
 .facet-line-selected-terms {
-  @extend %mt-16;
-
-  &__item {
-    display: inline-block;
-    @extend %mr-8;
-    @extend %mt-8;
-  }
+  margin-top: $s-md;
 }

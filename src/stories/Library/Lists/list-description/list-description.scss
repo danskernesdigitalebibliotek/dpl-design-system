@@ -1,7 +1,7 @@
 dl.list-description {
-  @extend %text-small-caption;
+  @include typography($typo__small-caption);
 
-  color: $c-text-secondary-gray;
+  color: $color__text-secondary-gray;
   display: flex;
   flex-flow: column;
 
@@ -12,19 +12,19 @@ dl.list-description {
 
   dt {
     flex-basis: 18%;
-    padding: 2px 4px;
+    padding: 2px $s-xs;
   }
 
   dd {
     flex-basis: 72%;
     flex-grow: 1;
     margin: 0;
-    padding: 2px 4px;
+    padding: 2px $s-xs;
 
+    // @todo clean up.
     .link-tag {
-      @extend %text-small-caption;
-
-      color: $c-text-primary-black;
+      @include typography($typo__small-caption);
+      color: $color__text-primary-black;
     }
   }
 }
