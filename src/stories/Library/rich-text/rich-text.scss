@@ -1,0 +1,29 @@
+.rich-text {
+  @include typography($typo__body-placeholder);
+
+  ul > li {
+    $_dash-width: 21px;
+    $_dash-width--wide: 33px;
+    $_padding: $s-sm;
+
+    position: relative;
+    padding-left: $_dash-width + $_padding;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: $_dash-width;
+      height: 1px;
+      left: 0;
+      background-color: black;
+    }
+  }
+
+  h2 {
+    @include typography($typo__h3);
+  }
+
+  h3 {
+    @include typography($typo__h4);
+  }
+}
