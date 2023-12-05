@@ -53,11 +53,16 @@ const LinkWithIconListComponentTemplate: ComponentStory<
     />
     <LinkWithIcon
       href="/search?q=storybook"
-      linkText="Search Link"
+      linkText="Search Link at /search"
+      linkType="search"
+    />
+    <LinkWithIcon
+      href="/advanced-search?q=storybook"
+      linkText="Search Link at /advanced-search"
       linkType="search"
     />
   </div>
 );
 
 export const LinkList = LinkWithIconListComponentTemplate.bind({});
-LinkList.decorators = [(Story) => <div>{Story()}</div>];
+LinkList.decorators = [(Story) => Story()];
