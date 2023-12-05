@@ -3,11 +3,11 @@
 }
 
 .instant-loan-summary {
-  background-color: $c-text-primary-white;
+  background-color: $color__text-primary-white;
   display: flex;
   flex-direction: column;
   gap: $s-lg;
-  @include breakpoint-s {
+  @include media-query__small {
     flex-direction: row;
   }
   // Flips arrow icon with class .instant-loan-arrow
@@ -31,7 +31,7 @@
 }
 
 .instant-loan-branch {
-  background-color: $c-text-primary-white;
+  background-color: $color__text-primary-white;
   min-height: $s-4xl;
   display: grid;
   grid-template-columns: 1fr max-content 1fr;

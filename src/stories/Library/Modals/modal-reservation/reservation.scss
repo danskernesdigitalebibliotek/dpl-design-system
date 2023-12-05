@@ -1,5 +1,5 @@
 .reservation-modal {
-  background-color: $c-global-primary;
+  background-color: $color__global-primary;
   width: 100%;
 }
 
@@ -17,23 +17,23 @@
   display: flex;
   flex-direction: column;
   margin-bottom: $s-md;
-  @include breakpoint-s {
+  @include media-query__small {
     flex-direction: row;
   }
 }
 
 .reservation-modal-description {
   margin-top: $s-lg;
-  @include breakpoint-s {
+  @include media-query__small {
     margin-left: 42px;
   }
 }
 
 .reservation-modal-tag {
-  @extend %text-tags;
-  @extend %px-16;
-  @extend %py-4;
-  border: 1px solid $c-global-tertiary-1;
+  @include typography($typo__tags);
+  padding: $s-xs $s-md;
+
+  border: 1px solid $color__global-tertiary-1;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -44,9 +44,9 @@
   flex-direction: column;
   align-items: center;
   gap: $s-md;
-  @extend %mb-24;
+  margin-bottom: $s-lg;
 
-  @include breakpoint-s {
+  @include media-query__small {
     justify-content: end;
     flex-direction: row;
   }
@@ -62,8 +62,9 @@
   display: flex;
   align-items: center;
   min-height: 96px;
-  gap: 35px;
-  @extend %px-35;
+  gap: $s-xl;
+  padding-left: $s-xl;
+  padding-right: $s-xl;
 }
 
 .reservation-modal-list-item-text {
@@ -80,7 +81,7 @@
   justify-content: center;
 
   &__content {
-    @include breakpoint-m {
+    @include media-query__medium {
       width: 45%;
     }
   }

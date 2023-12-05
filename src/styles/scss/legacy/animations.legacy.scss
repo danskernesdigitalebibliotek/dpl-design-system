@@ -1,0 +1,12 @@
+// Remove all animations and transitions for people that prefer not to see them.
+// @todo this has to be re-visited, as using * is really bad performance.
+// Instead, we should consider setting a `has-animations` class on the body,
+// using JS, that we can listen for when adding animations.
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

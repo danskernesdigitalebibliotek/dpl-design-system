@@ -1,9 +1,9 @@
 .loan-list-page {
-  background: $c-global-primary;
+  background: $color__global-primary;
   padding: $s-md $s-md $s-4xl $s-md;
   position: sticky;
 
-  @include breakpoint-m {
+  @include media-query__medium {
     padding: $s-6xl;
   }
 }

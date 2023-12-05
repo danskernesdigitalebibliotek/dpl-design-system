@@ -3,15 +3,15 @@
   align-items: center;
   background: #fff;
   position: relative;
-  padding: 16px;
+  padding: $s-md;
   text-decoration: none;
 
   & .status-label {
     margin-left: auto;
   }
 
-  @include breakpoint-s {
-    padding: 16px 24px;
+  @include media-query__small {
+    padding: $s-md $s-lg;
 
     & .status-label {
       margin-left: unset;
@@ -26,11 +26,11 @@
 }
 
 .list-dashboard__title {
-  margin-left: 8px;
-  margin-right: 16px;
+  margin-left: $s-sm;
+  margin-right: $s-md;
 
-  @include breakpoint-s {
-    margin-left: 24px;
+  @include media-query__small {
+    margin-left: $s-lg;
   }
 }
 
@@ -38,8 +38,8 @@
   position: absolute;
   top: -4px;
   right: -4px;
-  width: 8px;
-  height: 8px;
+  width: $s-sm;
+  height: $s-sm;
   background: #d63649;
   border-radius: 100%;
 }
@@ -50,7 +50,7 @@
   margin-left: auto;
   width: 90px; // Avoids extending beyond the edge of the box.
 
-  @include breakpoint-s {
+  @include media-query__small {
     display: block;
   }
 }

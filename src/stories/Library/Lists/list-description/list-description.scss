@@ -1,7 +1,8 @@
 dl.list-description {
-  @extend %text-small-caption;
+  @include typography($typo__small-caption);
+
   max-width: 420px;
-  color: $c-text-secondary-gray;
+  color: $color__text-secondary-gray;
 
   .list-description__item {
     display: grid;
@@ -10,20 +11,21 @@ dl.list-description {
 
   .list-description__key,
   .list-description__value {
-    padding: 2px 4px;
+    padding: 2px $s-xs;
   }
 
   .list-description__value {
     display: grid;
-    @include breakpoint-s {
+    @include media-query__small() {
       display: flex;
       flex-wrap: wrap;
       gap: $s-sm;
     }
   }
   .link-tag {
-    @extend %text-small-caption;
-    color: $c-text-primary-black;
+    @include typography($typo__small-caption);
+
+    color: $color__text-primary-black;
   }
 }
 
@@ -42,7 +44,7 @@ dl.list-description.list-description--event {
     font-weight: bold;
   }
 
-  @include breakpoint-s {
+  @include media-query__small() {
     grid-template-columns: 1fr;
     gap: $s-xs;
 

@@ -3,10 +3,10 @@
   cursor: pointer;
 
   &--selected {
-    fill: $c-global-tertiary-2;
+    fill: $color__global-tertiary-2;
   }
 
   &.dpl-icon-button:focus {
-    outline: $c-text-primary-black 5px auto;
+    outline: $color__text-primary-black 5px auto;
   }
 }

@@ -6,15 +6,17 @@
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-}
 
-.counter__value {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: $font__body;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0;
+}
+
+.counter__value {
+  line-height: 1em;
   text-align: center;
 
   img {
@@ -23,12 +25,9 @@
 }
 
 .counter__label {
-  font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
   line-height: 19px;
-  letter-spacing: 0;
   text-align: center;
   text-transform: capitalize;
 }

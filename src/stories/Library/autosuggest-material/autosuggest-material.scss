@@ -7,53 +7,53 @@
       margin-bottom: 0;
     }
 
-    @include breakpoint-m {
+    @include media-query__medium {
       width: calc(100% / 3);
       // Because the main autosuggest is a prominent feature we don't want the hover
       // effect to take effect on phones, as iPhones have a known bug that requires
       // users to double click in order to get past hover to register a click.
       &:hover {
-        background-color: $c-global-secondary;
+        background-color: $color__global-secondary;
         cursor: pointer;
       }
     }
 
     &.autosuggest__material-item--two {
-      @include breakpoint-m {
+      @include media-query__medium {
         width: calc(100% / 2);
       }
     }
 
     &.autosuggest__material-item--one {
-      @include breakpoint-m {
+      @include media-query__medium {
         width: 100%;
       }
     }
 
     &--highlight {
-      background-color: $c-global-secondary;
+      background-color: $color__global-secondary;
     }
   }
 
   // Autosuggest dividers on phones:
   // - between text suggestions & material suggestions
   &__text-item + &__material-item {
-    border-top: 1px solid $c-global-tertiary-1;
+    border-top: 1px solid $color__global-tertiary-1;
     margin-top: $s-lg;
     padding-top: $s-lg;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       border: none;
       margin: 0;
     }
   }
   // - between material suggestions & text suggestions
   &__material-item + &__text-item {
-    border-top: 1px solid $c-global-tertiary-1;
+    border-top: 1px solid $color__global-tertiary-1;
     margin-top: $s-md;
     padding-top: $s-md;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       border: none;
       padding-top: 0;
       margin-top: 0;
@@ -63,9 +63,9 @@
   // Autosuggest dividers on desktop:
   // - both dividers are rendered if both types of suggestions are present
   &__text-item ~ &__material-item {
-    @include breakpoint-m {
-      border-top: 1px solid $c-global-tertiary-1;
-      border-bottom: 1px solid $c-global-tertiary-1;
+    @include media-query__medium {
+      border-top: 1px solid $color__global-tertiary-1;
+      border-bottom: 1px solid $color__global-tertiary-1;
       margin: $s-lg 0;
       padding-top: $s-lg;
       padding-bottom: $s-lg;
@@ -89,16 +89,16 @@
   }
 
   &__title {
-    color: $c-text-secondary-gray;
-    line-height: 24px;
+    color: $color__text-secondary-gray;
+    line-height: $s-lg;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
   }
 
   &__author {
-    color: $c-text-primary-black;
-    line-height: 24px;
+    color: $color__text-primary-black;
+    line-height: $s-lg;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

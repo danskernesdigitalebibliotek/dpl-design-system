@@ -1,0 +1,25 @@
+$s-xs: 4px;
+$s-sm: 8px;
+$s-md: 16px;
+$s-lg: 24px;
+$s-xl: 32px;
+$s-2xl: 44px;
+$s-3xl: 60px;
+$s-4xl: 80px;
+$s-5xl: 100px;
+$s-6xl: 112px;
+$s-7xl: 215px;
+
+$spacings: (
+  xs: $s-xs,
+  sm: $s-sm,
+  md: $s-md,
+  lg: $s-lg,
+  xl: $s-xl,
+  2xl: $s-2xl,
+  3xl: $s-3xl,
+  4xl: $s-4xl,
+  5xl: $s-5xl,
+  6xl: $s-6xl,
+  7xl: $s-7xl,
+);

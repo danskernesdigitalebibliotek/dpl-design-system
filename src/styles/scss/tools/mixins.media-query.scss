@@ -1,0 +1,72 @@
+/** Create media query, based on unit (e.g. PX) value.
+ *
+ * If you want to go by names (e.g. "medium"), use media-query__name().
+ */
+@mixin media-query($breakpoint, $definition: "min-width") {
+  // If we're meassuring by max-width, we want to remove a
+  // pixel as the variables are the max width of the device.
+  @if ($definition == "max-width") {
+    $breakpoint: $breakpoint - 1;
+  }
+
+  @media screen and ($definition: $breakpoint) {
+    @content;
+  }
+}
+
+/** Trigger media query, by using name as a parameter.
+ *
+ * Useful if you have the breakpoint name as a variable, as you cant use
+ * variables in mixin include names.
+ *
+ * @param {string} $breakpoint-name — E.g. 'mobile'.
+ */
+@mixin media-query__name($breakpoint-name, $definition: "min-width") {
+  // We're going mobile-first, so no MQ necessary here.
+  @if ($breakpoint-name == "mobile") {
+    @content;
+  } @else {
+    $breakpoint: map_get($breakpoints, $breakpoint-name);
+
+    @include media-query($breakpoint, $definition) {
+      @content;
+    }
+  }
+}
+
+// Defining explicit aliases for media queries, for editor auto-complete.
+@mixin media-query__x-small($definition: "min-width") {
+  @include media-query__name("x-small", $definition) {
+    @content;
+  }
+}
+
+@mixin media-query__small($definition: "min-width") {
+  @include media-query__name("small", $definition) {
+    @content;
+  }
+}
+
+@mixin media-query__medium($definition: "min-width") {
+  @include media-query__name("medium", $definition) {
+    @content;
+  }
+}
+
+@mixin media-query__large($definition: "min-width") {
+  @include media-query__name("large", $definition) {
+    @content;
+  }
+}
+
+@mixin media-query__x-large($definition: "min-width") {
+  @include media-query__name("x-large", $definition) {
+    @content;
+  }
+}
+
+@mixin media-query__xx-large($definition: "min-width") {
+  @include media-query__name("xx-large", $definition) {
+    @content;
+  }
+}

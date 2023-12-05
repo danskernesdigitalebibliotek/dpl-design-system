@@ -2,15 +2,15 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include breakpoint-m {
+  @include media-query__medium {
     flex-wrap: nowrap;
 
     .dpl-input:first-of-type {
-      margin-right: 8px;
+      margin-right: $s-sm;
     }
 
     .dpl-input:last-of-type {
-      margin-left: 8px;
+      margin-left: $s-sm;
     }
   }
 }
