@@ -1,0 +1,54 @@
+name: Release on PR changes
+
+on:
+  pull_request:
+
+jobs:
+  deploy_release:
+    name: "Deploy release"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - run: yarn install --frozen-lockfile
+
+      - name: Building
+        run: yarn css:build
+
+      - name: Bundling assets
+        run: ./bundle.sh
+
+      - name: Set release name
+        id: resolve-release-vars
+        run: |
+          RELEASE=$(echo ${{ github.event.pull_request.head.ref }})
+          TAG_NAME=$(echo "branch-${RELEASE}")
+          echo "TAG_NAME=$TAG_NAME" >> "$GITHUB_ENV"
+          echo "DIST_FILENAME=dist-${{ github.event.pull_request.head.ref }}-${{ github.sha }}.zip" >> "$GITHUB_ENV"
+
+      - name: Rename assets
+        run: |
+          mv dist.zip $DIST_FILENAME
+
+      - name: Delete existing releases
+        uses: dev-drprasad/delete-tag-and-release@v1.0
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
+      - name: Create or update tag
+        uses: EndBug/latest-tag@latest
+        with:
+          ref: ${{ env.TAG_NAME }}
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          prerelease: true
+          tag_name: ${{ env.TAG_NAME }}
+          files: ${{ env.DIST_FILENAME }}
+
+

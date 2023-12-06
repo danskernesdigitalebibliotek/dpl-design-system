@@ -29,5 +29,4 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          prerelease: ${{ startsWith(github.ref_name, 'branch-') }}
           files: dist-${{ github.ref_name }}-${{ github.sha }}.zip
