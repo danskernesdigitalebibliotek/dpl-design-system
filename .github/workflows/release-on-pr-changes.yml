@@ -1,9 +1,7 @@
-name: Release on tag
+name: Release on PR changes
 
 on:
-  push:
-    tags:
-      - "*"
+  pull_request:
 
 jobs:
   deploy_release:
@@ -24,9 +22,18 @@ jobs:
 
       - name: Rename assets
         run: |
-          mv dist.zip dist-${{ github.ref_name }}-${{ github.sha }}.zip
+          mv dist.zip dist-${{ github.event.pull_request.head.ref }}-${{ github.sha }}.zip
+
+      - name: Delete existing releases
+        uses: dev-drprasad/delete-tag-and-release@v1.0
+        with:
+          tag_name: ${{ github.event.pull_request.head.ref }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          files: dist-${{ github.ref_name }}-${{ github.sha }}.zip
+          prerelease: true
+          files: dist-${{ github.event.pull_request.head.ref }}-${{ github.sha }}.zip
+
+
