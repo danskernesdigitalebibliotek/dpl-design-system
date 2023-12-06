@@ -1,0 +1,28 @@
+name: Deployment
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+
+jobs:
+  deploy_release:
+    name: "Deploy release"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - run: yarn install --frozen-lockfile
+
+      - name: Building
+        run: yarn css:build
+
+      - name: Bundling assets
+        run: ./bundle.sh
+
+      - name: Release with tag
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist.zip
