@@ -17,3 +17,4 @@ jobs:
         uses: mathieudutour/github-tag-action@v6.1
         with:
           custom_tag: ${{ github.event.pull_request.head.ref  }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
