@@ -15,7 +15,7 @@
 
 .warning-bar__left {
   display: flex;
-  align-items: start;
+  align-items: center;
 
   @include breakpoint-s {
     align-items: center;
