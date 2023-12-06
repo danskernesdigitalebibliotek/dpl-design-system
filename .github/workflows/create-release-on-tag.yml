@@ -1,0 +1,70 @@
+name: Create release on tag
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  create_release_on_tag:
+    name: "Create release on tag"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set release variables
+        id: resolve-release-vars
+        run: |
+          RELEASE_NAME=${{ github.ref_name }}
+          RELEASE_SHA=${{ github.sha }}
+          echo "RELEASE_NAME=$RELEASE_NAME" >> "$GITHUB_ENV"
+          echo "RELEASE_SHA=$RELEASE_SHA" >> "$GITHUB_ENV"
+          echo "NPM_VERSION=${RELEASE_NAME}-${RELEASE_SHA}" >> "$GITHUB_ENV"
+          echo "DIST_FILENAME=dist-$RELEASE_NAME-$RELEASE_SHA.zip" >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - run: yarn install --frozen-lockfile
+
+      - name: Building
+        run: yarn css:build
+
+      - name: Bundling assets
+        run: ./bundle.sh
+        env:
+          VERSION: ${{ env.RELEASE_NAME }}-${{ env.RELEASE_SHA }}
+
+      - name: Rename assets
+        run: |
+          mv dist.zip ${{ env.DIST_FILENAME }}
+
+      - name: Create release
+        id: create-release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ env.DIST_FILENAME }}
+
+      - name: Adding summary
+        run: |
+          echo "Release created 🚀😎 at: ${{ steps.create-release.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Modify package.json for local context
+        # Values in package.json must match the current GitHub repository to
+        # publish to it.
+        run: |
+          npm exec -- json -I -f package.json -e "this.name='@$GITHUB_REPOSITORY'"
+          npm exec -- json -I -f package.json -e "this.repository='https://github.com/$GITHUB_REPOSITORY'"
+
+      - name: Release NPM package
+        # The latest tag follows tagged versions to follow NPM conventions.
+        run: |
+          npm version ${{ env.NPM_VERSION }} --no-git-tag-version
+          cat package.json
+          npm publish --tag latest
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Adding summary
+        run: |
+          echo "Npm package created 🚀. Version: ${{ env.NPM_VERSION }}" >> $GITHUB_STEP_SUMMARY
+
