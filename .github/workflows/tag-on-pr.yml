@@ -13,13 +13,6 @@ jobs:
       - name: Mikdebug
         run: echo ${{ github.event.pull_request.head.ref }}
 
-      # - name: Tumdidum
-      #   uses: mathieudutour/github-tag-action@v6.1
-      #   with:
-      #     custom_tag: ${{ github.event.pull_request.head.ref  }}
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Tumdidum 2
-
       - name: Push Git Tag
         run: |
           TAG=$(echo ${{ github.event.pull_request.head.ref  }})
