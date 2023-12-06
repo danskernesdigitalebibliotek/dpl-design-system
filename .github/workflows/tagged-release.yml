@@ -22,7 +22,11 @@ jobs:
       - name: Bundling assets
         run: ./bundle.sh
 
+      - name: Rename assets
+        run: |
+          mv dist.zip dist-${{ github.ref }}-${{ github.sha }}.zip
+
       - name: Release with tag
         uses: softprops/action-gh-release@v1
         with:
-          files: dist.zip
+          files: dist-${{ github.ref }}-${{ github.sha }}.zip
