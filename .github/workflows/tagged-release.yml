@@ -24,9 +24,9 @@ jobs:
 
       - name: Rename assets
         run: |
-          mv dist.zip dist-${{ github.ref }}-${{ github.sha }}.zip
+          mv dist.zip dist-${{ github.ref_name }}-${{ github.sha }}.zip
 
       - name: Release with tag
         uses: softprops/action-gh-release@v1
         with:
-          files: dist-${{ github.ref }}-${{ github.sha }}.zip
+          files: dist-${{ github.ref_name }}-${{ github.sha }}.zip
