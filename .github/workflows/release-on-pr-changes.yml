@@ -39,6 +39,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           prerelease: true
+          tag_name: ${{ github.event.pull_request.head.ref }}
           files: dist-${{ github.event.pull_request.head.ref }}-${{ github.sha }}.zip
 
 
