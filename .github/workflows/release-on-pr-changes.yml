@@ -8,6 +8,25 @@ jobs:
     name: "Deploy release"
     runs-on: ubuntu-latest
     steps:
+      - name: Set release variables
+        id: resolve-release-vars
+        run: |
+          RELEASE_BRANCH=${{ github.event.pull_request.head.ref }}
+          RELEASE_SHA=${{ github.event.pull_request.head.sha }}
+          TAG_NAME=$(echo "branch-${RELEASE_BRANCH}")
+          echo "RELEASE_BRANCH=$RELEASE_BRANCH" >> "$GITHUB_ENV"
+          echo "RELEASE_SHA=$RELEASE_SHA" >> "$GITHUB_ENV"
+          echo "TAG_NAME=$TAG_NAME" >> "$GITHUB_ENV"
+          echo "DIST_FILENAME=dist-$RELEASE_BRANCH-$RELEASE_SHA.zip" >> "$GITHUB_ENV"
+
+      # Checkout the HEAD of the PR branch to get the latest commit message.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Get release description
+        run: |
+          echo "RELEASE_DESCRIPTION=$(git show -s --format=%s)" >> "$GITHUB_ENV"
+
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -19,14 +38,8 @@ jobs:
 
       - name: Bundling assets
         run: ./bundle.sh
-
-      - name: Set release name
-        id: resolve-release-vars
-        run: |
-          RELEASE=$(echo ${{ github.event.pull_request.head.ref }})
-          TAG_NAME=$(echo "branch-${RELEASE}")
-          echo "TAG_NAME=$TAG_NAME" >> "$GITHUB_ENV"
-          echo "DIST_FILENAME=dist-${{ github.event.pull_request.head.ref }}-${{ github.sha }}.zip" >> "$GITHUB_ENV"
+        env:
+          VERSION: ${{ env.TAG_NAME }}-${{ env.RELEASE_SHA }}
 
       - name: Rename assets
         run: |
@@ -45,10 +58,15 @@ jobs:
           ref: ${{ env.TAG_NAME }}
 
       - name: Create release
+        id: create-release
         uses: softprops/action-gh-release@v1
         with:
           prerelease: true
+          target_commitish: ${{ env.RELEASE_SHA }}
           tag_name: ${{ env.TAG_NAME }}
+          body: ${{ env.RELEASE_DESCRIPTION }}
           files: ${{ env.DIST_FILENAME }}
 
-
+      - name: Adding summary
+        run: |
+          echo "Release created 🚀😎 at: ${{ steps.create-release.outputs.url }}" >> $GITHUB_STEP_SUMMARY
