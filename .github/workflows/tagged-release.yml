@@ -1,9 +1,8 @@
 name: Deployment
 
 on:
-  push:
-    tags:
-      - "*.*.*"
+  release:
+    types: [published]
 
 jobs:
   deploy_release:
