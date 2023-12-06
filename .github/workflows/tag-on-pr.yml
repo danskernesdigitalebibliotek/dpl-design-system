@@ -1,0 +1,15 @@
+name: Tag on PR
+
+on:
+  pull_request:
+
+jobs:
+  create_tag_on_pr_changes:
+    name: "Create tag on PR changes"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tumdidum
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          custom_tag: ${{ github.ref_name }}
