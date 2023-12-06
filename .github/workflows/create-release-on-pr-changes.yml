@@ -1,0 +1,91 @@
+name: Create release on PR changes
+
+on:
+  pull_request:
+
+jobs:
+  create_release_on_pr_changes:
+    name: "Create release on PR changes"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set release variables
+        id: resolve-release-vars
+        run: |
+          RELEASE_BRANCH=${{ github.event.pull_request.head.ref }}
+          RELEASE_SHA=${{ github.event.pull_request.head.sha }}
+          TAG_NAME=$(echo "branch-${RELEASE_BRANCH}")
+          echo "RELEASE_BRANCH=$RELEASE_BRANCH" >> "$GITHUB_ENV"
+          echo "RELEASE_SHA=$RELEASE_SHA" >> "$GITHUB_ENV"
+          echo "TAG_NAME=$TAG_NAME" >> "$GITHUB_ENV"
+          echo "NPM_VERSION=0.0.0-${TAG_NAME}-${RELEASE_SHA}" >> "$GITHUB_ENV"
+          echo "DIST_FILENAME=dist-$RELEASE_BRANCH-$RELEASE_SHA.zip" >> "$GITHUB_ENV"
+
+      # Checkout the HEAD of the PR branch to get the latest commit message.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Get release description
+        run: |
+          echo "RELEASE_DESCRIPTION=$(git show -s --format=%s)" >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - run: yarn install --frozen-lockfile
+
+      - name: Building
+        run: yarn css:build
+
+      - name: Bundling assets
+        run: ./bundle.sh
+        env:
+          VERSION: ${{ env.TAG_NAME }}-${{ env.RELEASE_SHA }}
+
+      - name: Rename assets
+        run: |
+          mv dist.zip $DIST_FILENAME
+
+      - name: Delete existing releases
+        uses: dev-drprasad/delete-tag-and-release@v1.0
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
+      - name: Create or update tag
+        uses: EndBug/latest-tag@latest
+        with:
+          ref: ${{ env.TAG_NAME }}
+
+      - name: Create release
+        id: create-release
+        uses: softprops/action-gh-release@v1
+        with:
+          prerelease: true
+          target_commitish: ${{ env.RELEASE_SHA }}
+          tag_name: ${{ env.TAG_NAME }}
+          body: ${{ env.RELEASE_DESCRIPTION }}
+          files: ${{ env.DIST_FILENAME }}
+
+      - name: Adding summary
+        run: |
+          echo "Release created 🚀😎 at: ${{ steps.create-release.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Release NPM package
+        # Version 0.0.0-SHA is a schema that supports semantic versioning but
+        # should sink below proper versions.
+        # Output package.json to provide insight and help debugging
+        # Using branch names as tags allows other projects to track unreleased
+        # development.
+        run: |
+          npm version ${{ env.NPM_VERSION }} --no-git-tag-version
+          echo ${{ env.TAG_NAME }}
+          cat package.json
+          npm publish --tag ${{ env.TAG_NAME }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Adding summary
+        run: |
+          echo "Npm package created 🚀. Version: ${{ env.NPM_VERSION }}" >> $GITHUB_STEP_SUMMARY
