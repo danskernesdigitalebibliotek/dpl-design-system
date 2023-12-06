@@ -1,30 +1,54 @@
 dl.list-description {
   @extend %text-small-caption;
-
+  max-width: 420px;
   color: $c-text-secondary-gray;
-  display: flex;
-  flex-flow: column;
-
-  & > div {
-    display: flex;
-    flex-flow: row wrap;
+  // Todo: This "> div" selector should be removed and instead use the class .list-description__item in the markup in dpl-react project
+  & > div,
+  .list-description__item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 
-  dt {
-    flex-basis: 18%;
+  dt,
+  dd {
     padding: 2px 4px;
   }
 
   dd {
-    flex-basis: 72%;
-    flex-grow: 1;
-    margin: 0;
-    padding: 2px 4px;
+    display: grid;
+    @include breakpoint-s {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $s-sm;
+    }
+  }
+  .link-tag {
+    @extend %text-small-caption;
+    color: $c-text-primary-black;
+  }
+}
 
-    .link-tag {
-      @extend %text-small-caption;
+dl.list-description.list-description--event {
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $s-md;
+  align-items: start;
 
-      color: $c-text-primary-black;
+  .list-description__item {
+    grid-template-columns: 1fr;
+  }
+
+  dd {
+    font-weight: bold;
+  }
+
+  @include breakpoint-s {
+    grid-template-columns: 1fr;
+    gap: $s-xs;
+
+    .list-description__item {
+      grid-template-columns: 1fr 2fr;
     }
   }
 }
