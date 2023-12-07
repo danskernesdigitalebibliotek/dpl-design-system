@@ -2,24 +2,18 @@ dl.list-description {
   @extend %text-small-caption;
   max-width: 420px;
   color: $c-text-secondary-gray;
-  // Todo: all the html selectors below should be deleted when the markup is updated in dpl-react project
-  & > div, // see Todo above
+
   .list-description__item {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
 
   .list-description__key,
-  .list-description__value,
-  dt, // see Todo above
-  dd // see Todo above
-  {
+  .list-description__value {
     padding: 2px 4px;
   }
 
-  .list-description__value,
-  dd // see Todo above
-  {
+  .list-description__value {
     display: grid;
     @include breakpoint-s {
       display: flex;
@@ -44,9 +38,7 @@ dl.list-description.list-description--event {
     grid-template-columns: 1fr;
   }
 
-  .list-description__value,
-  dd // see Todo above
-  {
+  .list-description__value {
     font-weight: bold;
   }
 
