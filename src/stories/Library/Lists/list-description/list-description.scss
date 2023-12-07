@@ -2,19 +2,24 @@ dl.list-description {
   @extend %text-small-caption;
   max-width: 420px;
   color: $c-text-secondary-gray;
-  // Todo: This "> div" selector should be removed and instead use the class .list-description__item in the markup in dpl-react project
-  & > div,
+  // Todo: all the html selectors below should be deleted when the markup is updated in dpl-react project
+  & > div, // see Todo above
   .list-description__item {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
 
-  dt,
-  dd {
+  .list-description__key,
+  .list-description__value,
+  dt, // see Todo above
+  dd // see Todo above
+  {
     padding: 2px 4px;
   }
 
-  dd {
+  .list-description__value,
+  dd // see Todo above
+  {
     display: grid;
     @include breakpoint-s {
       display: flex;
@@ -39,7 +44,9 @@ dl.list-description.list-description--event {
     grid-template-columns: 1fr;
   }
 
-  dd {
+  .list-description__value,
+  dd // see Todo above
+  {
     font-weight: bold;
   }
 

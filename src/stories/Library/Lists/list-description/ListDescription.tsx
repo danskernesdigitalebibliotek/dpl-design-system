@@ -15,8 +15,8 @@ const ListDescription: React.FC<{ data: ListData; className?: string }> = ({
         const { value, type } = data[key as keyof ListData];
         return (
           <div className="list-description__item" key={generateId(index)}>
-            <dt>{key}:</dt>
-            <dd>
+            <dt className="list-description__key">{key}:</dt>
+            <dd className="list-description__value">
               {value.map((val) => (
                 <Fragment key={val}>
                   {type === "standard" && <span>{val}</span>}
