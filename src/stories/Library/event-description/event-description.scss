@@ -1,0 +1,38 @@
+.event-description {
+  @include container(medium);
+  padding: $s-md;
+  @include breakpoint-s {
+    padding: $s-xl $s-4xl;
+    display: grid;
+    column-gap: $s-xl;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.event-description__title {
+  @extend %text-header-h4;
+  margin-bottom: $s-md;
+
+  @include breakpoint-s {
+    grid-column: 1 / -1;
+    margin-bottom: $s-lg;
+  }
+}
+
+.event-description__description {
+  @extend %text-body-large;
+  line-height: 24px;
+  margin-bottom: $s-md;
+
+  @include breakpoint-s {
+    line-height: 32px;
+  }
+}
+
+.event-description__links {
+  margin-bottom: $s-2xl;
+
+  @include breakpoint-s {
+    margin-bottom: 0;
+  }
+}

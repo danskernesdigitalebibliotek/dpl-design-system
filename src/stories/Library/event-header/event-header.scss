@@ -20,6 +20,7 @@
 }
 
 .event-header__content {
+  padding-top: $s-md;
   display: grid;
   grid-template-columns: $s-3xl 1fr $s-3xl;
   grid-template-areas:
@@ -29,6 +30,7 @@
     "btn btn btn";
 
   @include breakpoint-s {
+    padding-top: $s-3xl;
     grid-template-columns: 1fr;
   }
 }
@@ -36,9 +38,9 @@
 .event-header__tag {
   grid-area: tag;
   width: max-content;
-  margin: $s-md 0;
+  margin-bottom: $s-md;
   @include breakpoint-s {
-    margin: $s-lg 0;
+    margin-bottom: $s-lg;
   }
 }
 
