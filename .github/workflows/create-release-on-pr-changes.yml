@@ -1,7 +1,10 @@
 name: Create release on PR changes
 
 on:
-  pull_request:
+  push:
+    branches-ignore:
+      # Dependabot does not have permissions to create releases
+      - 'dependabot/**'
 
 jobs:
   create_release_on_pr_changes:
@@ -11,8 +14,8 @@ jobs:
       - name: Set release variables
         id: resolve-release-vars
         run: |
-          RELEASE_BRANCH=${{ github.event.pull_request.head.ref }}
-          RELEASE_SHA=${{ github.event.pull_request.head.sha }}
+          RELEASE_BRANCH=$(echo ${GITHUB_REF#refs/heads/})
+          RELEASE_SHA=${{ github.sha }}
           TAG_NAME=$(echo "branch-${RELEASE_BRANCH}")
           echo "RELEASE_BRANCH=$RELEASE_BRANCH" >> "$GITHUB_ENV"
           echo "RELEASE_SHA=$RELEASE_SHA" >> "$GITHUB_ENV"
