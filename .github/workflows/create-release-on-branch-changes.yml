@@ -13,6 +13,11 @@ jobs:
     steps:
       - name: Set release variables
         id: resolve-release-vars
+        # Version 0.0.0-SHA is a schema that supports semantic versioning but
+        # should sink below proper versions.
+        # Output package.json to provide insight and help debugging
+        # Using branch names as tags allows other projects to track unreleased
+        # development.
         run: |
           RELEASE_BRANCH=$(echo ${GITHUB_REF#refs/heads/})
           RELEASE_SHA=${{ github.sha }}
@@ -20,11 +25,6 @@ jobs:
           echo "RELEASE_BRANCH=$RELEASE_BRANCH" >> "$GITHUB_ENV"
           echo "RELEASE_SHA=$RELEASE_SHA" >> "$GITHUB_ENV"
           echo "TAG_NAME=$TAG_NAME" >> "$GITHUB_ENV"
-        # Version 0.0.0-SHA is a schema that supports semantic versioning but
-        # should sink below proper versions.
-        # Output package.json to provide insight and help debugging
-        # Using branch names as tags allows other projects to track unreleased
-        # development.
           echo "NPM_VERSION=0.0.0-${RELEASE_SHA}" >> "$GITHUB_ENV"
           echo "DIST_FILENAME=dist-$RELEASE_BRANCH.zip" >> "$GITHUB_ENV"
 
@@ -94,7 +94,4 @@ jobs:
 
       - name: Adding summary
         run: |
-          echo "<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 28 28" fill="none" data-package-type="NPM" class="mr-2">
-<path d="M25.9434 0H2.05656C0.920751 0 0 0.920751 0 2.05656V25.9434C0 27.0792 0.920751 28 2.05656 28H25.9434C27.0792 28 28 27.0792 28 25.9434V2.05656C28 0.920751 27.0792 0 25.9434 0Z" fill="#CB0000"></path>
-<path d="M5.96399 22.3652H14.0463L14.0565 10.2624H18.0874L18.0771 22.3755H22.1182L22.1285 6.2315L5.98455 6.21094L5.96399 22.3652Z" fill="white"></path>
-</svg> Npm package created 🚀. Version: ${{ env.NPM_VERSION }}" >> $GITHUB_STEP_SUMMARY
+          echo "Npm package created 🚀. Version: ${{ env.NPM_VERSION }}" >> $GITHUB_STEP_SUMMARY
