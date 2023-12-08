@@ -1,0 +1,78 @@
+.flatpickr-calendar {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  color: $c-text-primary-black;
+  padding: $s-md !important;
+  width: fit-content !important;
+
+  & * {
+    font-weight: 500 !important;
+  }
+
+  & .flatpickr-months {
+    & .flatpickr-month {
+      order: -1;
+      display: flex;
+      padding-left: 5px;
+
+      & .flatpickr-current-month {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 0;
+        left: 0;
+        width: auto;
+        font-size: 14px;
+        line-height: 100%;
+        color: $c-text-primary-black;
+
+        & select {
+          appearance: none;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 $s-xs;
+        }
+
+        & .numInputWrapper {
+          width: 7ch;
+          display: flex;
+          height: 30px;
+        }
+      }
+    }
+
+    & .flatpickr-prev-month,
+    & .flatpickr-next-month {
+      position: relative;
+      height: auto;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      & svg {
+        stroke: $c-text-primary-black;
+      }
+    }
+  }
+
+  & .flatpickr-innerContainer {
+    & .flatpickr-weekdays {
+      height: auto;
+      padding: 20px 0;
+    }
+  }
+  & .flatpickr-days {
+    & .flatpickr-day {
+      &.prevMonthDay,
+      &.nextMonthDay {
+        color: rgba(57, 57, 57, 0.7);
+        font-weight: 400 !important;
+      }
+    }
+  }
+}
