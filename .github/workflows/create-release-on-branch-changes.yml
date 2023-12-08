@@ -1,4 +1,4 @@
-name: Create release on PR changes
+name: Create release on branch changes
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
       - 'dependabot/**'
 
 jobs:
-  create_release_on_pr_changes:
-    name: "Create release on PR changes"
+  create_release_on_branch_changes:
+    name: "Create release on branch changes"
     runs-on: ubuntu-latest
     steps:
       - name: Set release variables
