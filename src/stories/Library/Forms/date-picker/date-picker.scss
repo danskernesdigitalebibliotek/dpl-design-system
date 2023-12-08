@@ -10,10 +10,6 @@
     border: 1px solid $c-global-tertiary-1;
   }
 
-  & .flatpickr-calendar * {
-    font-family: "Noto Sans JP", sans-serif;
-  }
-
   &__input {
     @extend %text-button-placeholder;
     width: 100%;
