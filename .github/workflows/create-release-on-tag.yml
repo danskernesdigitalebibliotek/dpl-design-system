@@ -20,6 +20,11 @@ jobs:
           echo "NPM_VERSION=${RELEASE_NAME}-${RELEASE_SHA}" >> "$GITHUB_ENV"
           echo "DIST_FILENAME=dist-$RELEASE_NAME-$RELEASE_SHA.zip" >> "$GITHUB_ENV"
 
+     # Validate/parse version tag.
+     # If it is not a version tag it is ok, we just need to know it.
+      - uses: nowsprinting/check-version-format-action@v3
+        id: version
+
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -49,6 +54,7 @@ jobs:
           echo "Release created 🚀😎 at: ${{ steps.create-release.outputs.url }}" >> $GITHUB_STEP_SUMMARY
 
       - name: Modify package.json for local context
+        if: steps.version.outputs.is_valid == 'true'
         # Values in package.json must match the current GitHub repository to
         # publish to it.
         run: |
@@ -56,6 +62,7 @@ jobs:
           npm exec -- json -I -f package.json -e "this.repository='https://github.com/$GITHUB_REPOSITORY'"
 
       - name: Release NPM package
+        if: steps.version.outputs.is_valid == 'true'
         # The latest tag follows tagged versions to follow NPM conventions.
         run: |
           npm version ${{ env.NPM_VERSION }} --no-git-tag-version
@@ -64,7 +71,13 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Adding summary
+      - name: If created add NPM created summary
+        if: steps.version.outputs.is_valid == 'true'
         run: |
           echo "Npm package created 🚀. Version: ${{ env.NPM_VERSION }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: If created add NPM NOT created summary
+        if: steps.version.outputs.is_valid != 'true'
+        run: |
+          echo "No npm package created... Just so you know it." >> $GITHUB_STEP_SUMMARY
 
