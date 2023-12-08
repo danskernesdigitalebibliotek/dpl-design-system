@@ -17,8 +17,13 @@ jobs:
           echo "RELEASE_BRANCH=$RELEASE_BRANCH" >> "$GITHUB_ENV"
           echo "RELEASE_SHA=$RELEASE_SHA" >> "$GITHUB_ENV"
           echo "TAG_NAME=$TAG_NAME" >> "$GITHUB_ENV"
-          echo "NPM_VERSION=0.0.0-${TAG_NAME}-${RELEASE_SHA}" >> "$GITHUB_ENV"
-          echo "DIST_FILENAME=dist-$RELEASE_BRANCH-$RELEASE_SHA.zip" >> "$GITHUB_ENV"
+        # Version 0.0.0-SHA is a schema that supports semantic versioning but
+        # should sink below proper versions.
+        # Output package.json to provide insight and help debugging
+        # Using branch names as tags allows other projects to track unreleased
+        # development.
+          echo "NPM_VERSION=0.0.0-${RELEASE_SHA}" >> "$GITHUB_ENV"
+          echo "DIST_FILENAME=dist-$RELEASE_BRANCH.zip" >> "$GITHUB_ENV"
 
       # Checkout the HEAD of the PR branch to get the latest commit message.
       - uses: actions/checkout@v4
@@ -76,11 +81,6 @@ jobs:
           echo "Release created 🚀😎 at: ${{ steps.create-release.outputs.url }}" >> $GITHUB_STEP_SUMMARY
 
       - name: Release NPM package
-        # Version 0.0.0-SHA is a schema that supports semantic versioning but
-        # should sink below proper versions.
-        # Output package.json to provide insight and help debugging
-        # Using branch names as tags allows other projects to track unreleased
-        # development.
         run: |
           npm version ${{ env.NPM_VERSION }} --no-git-tag-version
           echo ${{ env.TAG_NAME }}
