@@ -10,6 +10,11 @@ const fakeData: ListData = {
   Omfang: { value: ["795 sider"], type: "standard" },
   Forlag: { value: ["Rosinante"], type: "standard" },
   Målgruppe: { value: ["Voksenmateriale"], type: "standard" },
+  Pris: {
+    value: ["Standard: 65 kr.", "Børn: Gratis"],
+    type: "standard",
+    layout: "column",
+  },
 };
 
 export default fakeData;
