@@ -76,8 +76,11 @@ export default {
     listDescriptionData: {
       defaultValue: {
         Tid: { value: ["19:30 — 21:00"], type: "standard" },
-        Standard: { value: ["65 kr."], type: "standard" },
-        Børn: { value: ["Gratis"], type: "standard" },
+        Pris: {
+          value: ["Standard: 65 kr.", "Børn: Gratis"],
+          type: "standard",
+          layout: "column",
+        },
         Sted: {
           value: [
             "Hovedbibliotek",
