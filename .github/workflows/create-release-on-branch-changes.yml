@@ -20,13 +20,14 @@ jobs:
         # development.
         run: |
           RELEASE_BRANCH=$(echo ${GITHUB_REF#refs/heads/})
+          RELEASE_BRANCH_SLUGGED=$(echo $RELEASE_BRANCH | sed -E -e 's/[^[:alnum:]]+/-/g' -e 's/^-+|-+$//g' | tr '[:upper:]' '[:lower:]')
           RELEASE_SHA=${{ github.sha }}
           TAG_NAME=$(echo "branch-${RELEASE_BRANCH}")
           echo "RELEASE_BRANCH=$RELEASE_BRANCH" >> "$GITHUB_ENV"
           echo "RELEASE_SHA=$RELEASE_SHA" >> "$GITHUB_ENV"
           echo "TAG_NAME=$TAG_NAME" >> "$GITHUB_ENV"
           echo "NPM_VERSION=0.0.0-${RELEASE_SHA}" >> "$GITHUB_ENV"
-          echo "DIST_FILENAME=dist-$RELEASE_BRANCH.zip" >> "$GITHUB_ENV"
+          echo "DIST_FILENAME=dist-${RELEASE_BRANCH_SLUGGED}.zip" >> "$GITHUB_ENV"
 
       # Checkout the HEAD of the PR branch to get the latest commit message.
       - uses: actions/checkout@v4
