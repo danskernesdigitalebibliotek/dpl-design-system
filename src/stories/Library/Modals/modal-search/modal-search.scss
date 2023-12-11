@@ -6,12 +6,12 @@ $MODAL_SEARCH_CONTAINER_WIDTH: 550px;
 }
 
 .modal-search__container {
-  margin: 0 24px;
+  margin: 0 $s-lg;
   padding-top: 96px;
   max-width: $MODAL_SEARCH_CONTAINER_WIDTH;
   width: 100%;
 
-  @include breakpoint-s {
+  @include media-query__small {
     margin: 0 45px;
   }
 }

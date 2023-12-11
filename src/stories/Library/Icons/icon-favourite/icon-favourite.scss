@@ -1,26 +1,26 @@
 .icon-favourite {
   cursor: pointer;
-  height: 24px;
-  width: 24px;
-  color: $c-text-primary-black;
-  stroke: $c-text-primary-black;
+  height: $s-lg;
+  width: $s-lg;
+  color: $color__text-primary-black;
+  stroke: $color__text-primary-black;
   fill: none;
 
   &--filled {
-    color: $c-identity-primary;
-    stroke: $c-identity-primary;
-    fill: $c-identity-primary;
+    color: $color__identity-primary;
+    stroke: $color__identity-primary;
+    fill: $color__identity-primary;
   }
 }
 
 .icon-favourite--bright {
-  color: $c-text-primary-white;
-  stroke: $c-text-primary-white;
+  color: $color__text-primary-white;
+  stroke: $color__text-primary-white;
   fill: none;
 }
 
 .icon-favourite--bright-filled {
-  stroke: $c-text-primary-white;
-  color: $c-text-primary-white;
-  fill: $c-text-primary-white;
+  stroke: $color__text-primary-white;
+  color: $color__text-primary-white;
+  fill: $color__text-primary-white;
 }

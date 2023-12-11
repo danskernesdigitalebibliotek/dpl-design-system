@@ -5,21 +5,21 @@
   align-items: center;
   width: auto;
   height: 25px;
-  background-color: $c-global-primary;
+  background-color: $color__global-primary;
   white-space: nowrap;
 
   &--selected {
-    border: 1px solid $c-text-primary-black;
+    border: 1px solid $color__text-primary-black;
   }
 
   &--unselected {
-    border: 1px solid $c-global-tertiary-1;
+    border: 1px solid $color__global-tertiary-1;
   }
 
   &__divider {
     height: 14px;
     width: 1px;
-    background-color: $c-global-tertiary-1;
+    background-color: $color__global-tertiary-1;
   }
 
   &__check {

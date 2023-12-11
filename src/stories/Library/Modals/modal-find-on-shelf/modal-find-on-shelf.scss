@@ -3,14 +3,14 @@
   overflow-y: scroll;
   align-items: flex-start;
 
-  @include breakpoint-m {
+  @include media-query__medium {
     padding: $s-4xl $s-7xl;
   }
 
   &__headline {
     margin: 0 $s-md $s-2xl $s-md;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       margin: 0 $s-md 96px 0;
     }
   }
@@ -18,7 +18,7 @@
   &__caption {
     margin: 0 0 $s-md $s-md;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       margin: 0 0 $s-sm 0;
     }
   }
@@ -29,7 +29,7 @@
     width: 100%;
     margin: 0 0 $s-2xl 0;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       flex-direction: row;
       gap: $s-lg;
       max-width: 800px;

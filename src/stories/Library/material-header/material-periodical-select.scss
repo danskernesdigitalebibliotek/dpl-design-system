@@ -2,13 +2,13 @@ $icon-position: 10px;
 
 .material-periodical {
   display: flex;
-  gap: 24px;
+  gap: $s-lg;
   margin-bottom: 48px;
 }
 
 .material-periodical-select {
   display: flex;
-  gap: 8px;
+  gap: $s-sm;
 
   &__border-container {
     position: relative;

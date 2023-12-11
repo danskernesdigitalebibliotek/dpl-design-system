@@ -3,7 +3,7 @@
 }
 
 .image-credited__info {
-  @extend %text-small-caption;
+  @include typography($typo__small-caption);
   margin-top: $s-md;
   display: flex;
   justify-content: space-between;

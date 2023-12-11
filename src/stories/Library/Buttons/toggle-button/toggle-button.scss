@@ -1,7 +1,7 @@
 .dpl-toggle-button {
   border-radius: 34px;
-  width: 44px;
-  height: 24px;
+  width: $s-2xl;
+  height: $s-lg;
   position: relative;
   border: 0px;
   cursor: pointer;
@@ -18,7 +18,7 @@
   }
 
   &--inactive {
-    background-color: $c-global-tertiary-2;
+    background-color: $color__global-tertiary-2;
 
     &::before {
       left: 2px;
@@ -26,7 +26,7 @@
   }
 
   &--active {
-    background-color: $c-signal-success;
+    background-color: $color__signal-success;
 
     &::before {
       right: 2px;

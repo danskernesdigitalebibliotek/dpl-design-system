@@ -4,16 +4,16 @@
   }
 
   .text-links {
-    color: $c-text-secondary-gray;
+    color: $color__text-secondary-gray;
     margin-bottom: -4px;
-    @extend %text-links-placeholder;
+    @include typography($typo__links);
   }
 
   .arrow__body {
-    stroke: $c-text-secondary-gray;
+    stroke: $color__text-secondary-gray;
   }
 
   .arrow__head {
-    fill: $c-text-secondary-gray;
+    fill: $color__text-secondary-gray;
   }
 }
