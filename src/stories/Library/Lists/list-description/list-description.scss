@@ -21,6 +21,11 @@ dl.list-description {
       gap: $s-sm;
     }
   }
+
+  .list-description__value--column {
+    flex-direction: column;
+  }
+
   .link-tag {
     @extend %text-small-caption;
     color: $c-text-primary-black;
