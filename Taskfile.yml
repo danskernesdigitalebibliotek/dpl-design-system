@@ -64,13 +64,15 @@ tasks:
     cmds:
       - task dev:cli -- yarn chromatic
 
+  dev:format:
+    summary: Auto-fix linting errors
+    cmds:
+      - task dev:cli -- yarn format
+
   dev:lint:
     summary: Run linters
     cmds:
-      - task dev:cli -- yarn js:eslint
-      - task dev:cli -- yarn js:lint
-      - task dev:cli -- yarn css:stylelint
-      - task dev:cli -- yarn lint:markdown
+      - task dev:cli -- yarn lint
 
   dev:chromatic:
     summary:  Run Chromatic for visual test
