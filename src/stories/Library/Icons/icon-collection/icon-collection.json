@@ -298,5 +298,13 @@
   {
     "title": "Plus circle",
     "fileName": "PlusButton.svg"
+  },
+  {
+    "title": "Search Books",
+    "fileName": "SearchBooks.svg"
+  },
+  {
+    "title": "Internal Link",
+    "fileName": "InternalLink.svg"
   }
 ]

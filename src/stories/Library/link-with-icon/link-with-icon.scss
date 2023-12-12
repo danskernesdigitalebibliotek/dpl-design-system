@@ -1,0 +1,46 @@
+.link-with-icon {
+  @extend %text-body-medium-regular-placeholder;
+  line-height: 160%;
+  background-color: $c-global-primary;
+  padding: $s-md $s-lg;
+  display: grid;
+  grid-template-columns: 40px auto max-content;
+  align-items: center;
+  gap: $s-md;
+  text-decoration: none;
+  border: 1px solid $c-global-tertiary-1;
+  width: 100%;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & + .link-with-icon {
+    margin-top: 0;
+  }
+
+  @include container(medium);
+  @include breakpoint-s {
+    padding: $s-lg $s-xl;
+  }
+}
+
+@include arrow("link-with-icon");
+
+.link-with-icon__icon {
+  background-color: $c-identity-primary;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-with-icon__icon--rotate-180 {
+  transform: rotate(180deg);
+}
