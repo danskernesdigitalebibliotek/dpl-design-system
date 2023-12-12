@@ -58,4 +58,9 @@
   @include typography($typo__body-small);
 }
 
+%identity-placeholder {
+  background-color: var(--tint-color-120);
+  border: $s-2xl solid $color__identity-primary;
+}
+
 // stylelint-enable plugin/stylelint-bem-namics
