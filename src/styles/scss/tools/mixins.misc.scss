@@ -1,16 +1,12 @@
-// Hide element visually but not from screen readers.
-// https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/
-// ---
-// The class is intentionally called .hide-visually and not .visually-hidden.
-// Drupal which is a known consumer of the design system also has a
-// .visually-hidden class where the implementation is a bit different.
-// To avoid any conflicts we call our class something else.
-// //https://git.drupalcode.org/project/drupal/-/blob/9.2.x/core/modules/system/css/components/hidden.module.css#L18-33
 /**
+ * Hide element visually but not from screen readers.
  *
- *
- *
- *
+ * https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/
+ * The class is intentionally called .hide-visually and not .visually-hidden.
+ * Drupal which is a known consumer of the design system also has a
+ * .visually-hidden class where the implementation is a bit different.
+ * To avoid any conflicts we call our class something else.
+ * https://git.drupalcode.org/project/drupal/-/blob/9.2.x/core/modules/system/css/components/hidden.module.css#L18-33
  */
 @mixin hide-visually {
   position: absolute;

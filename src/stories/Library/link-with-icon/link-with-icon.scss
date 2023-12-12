@@ -1,15 +1,19 @@
 .link-with-icon {
-  @extend %text-body-medium-regular-placeholder;
-  line-height: 160%;
-  background-color: $c-global-primary;
+  @include typography($typo__body-placeholder);
+  @include show-svg-on-hover();
+
+  background-color: $color__global-primary;
   padding: $s-md $s-lg;
   display: grid;
   grid-template-columns: 40px auto max-content;
   align-items: center;
   gap: $s-md;
   text-decoration: none;
-  border: 1px solid $c-global-tertiary-1;
+  border: 1px solid $color__global-tertiary-1;
   width: 100%;
+  max-width: $layout__max-width;
+  margin-left: auto;
+  margin-right: auto;
 
   &:first-child {
     margin-top: 0;
@@ -23,16 +27,13 @@
     margin-top: 0;
   }
 
-  @include container(medium);
-  @include breakpoint-s {
+  @include media-query__small {
     padding: $s-lg $s-xl;
   }
 }
 
-@include arrow("link-with-icon");
-
 .link-with-icon__icon {
-  background-color: $c-identity-primary;
+  background-color: $color__identity-primary;
   min-width: 40px;
   min-height: 40px;
   border-radius: 50%;
