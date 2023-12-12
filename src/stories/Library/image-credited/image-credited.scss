@@ -8,3 +8,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.image-credited__no-image {
+  aspect-ratio: 16 / 9;
+  @extend %identity-placeholder;
+}
