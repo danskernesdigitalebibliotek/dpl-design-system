@@ -14,6 +14,7 @@ const DateCalendar = () => {
     const options: Partial<BaseOptions> = {
       inline: true,
       animate: false,
+      mode: "range",
     };
 
     if (node !== null) {
