@@ -6,6 +6,11 @@
   padding: $s-md !important;
   width: fit-content !important;
 
+  &.inline {
+    box-shadow: none;
+    border-radius: 0;
+  }
+
   & * {
     font-weight: 500 !important;
   }
@@ -51,6 +56,7 @@
       align-items: center;
 
       &:hover {
+        // inherited by flatpickr
         background: rgba(0, 0, 0, 0.05);
       }
 
@@ -68,6 +74,9 @@
   }
   & .flatpickr-days {
     & .flatpickr-day {
+      display: flex;
+      align-items: center;
+
       &.prevMonthDay,
       &.nextMonthDay {
         color: rgba(57, 57, 57, 0.7);
