@@ -22,7 +22,8 @@ const DateCalendar = () => {
     }
   }, []);
 
-  return <input type="text" ref={calendar} />;
+  // An input is required for flatpickr to work, but we don't want to show it in the story
+  return <input ref={calendar} type="text" className="hide-visually" />;
 };
 
 export default DateCalendar;
