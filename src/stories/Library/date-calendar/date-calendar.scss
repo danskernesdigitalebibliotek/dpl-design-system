@@ -1,3 +1,6 @@
+// flatpickr does not use BEM naming convention, so we have to disable stylelint for this file
+/* stylelint-disable */
+
 .flatpickr-calendar {
   font-family: "Noto Sans JP";
   font-style: normal;
