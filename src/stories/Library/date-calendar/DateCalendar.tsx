@@ -27,6 +27,7 @@ const DateCalendar = () => {
     <input
       ref={calendar}
       title="Hidden field"
+      aria-label="Hidden field"
       type="text"
       className="hide-visually"
     />
