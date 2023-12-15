@@ -5,10 +5,7 @@
   @include typography($typo__rich-text-body);
 
   // Setting a max-width to increase readability for sentences.
-  max-width: $layout__max-width--text;
-  margin: auto;
-  padding-left: $layout__page-padding;
-  padding-right: $layout__page-padding;
+  @include layout-container($layout__max-width--text);
 
   a {
     @extend %text-inline-link;
