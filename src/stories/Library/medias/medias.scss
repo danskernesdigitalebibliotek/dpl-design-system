@@ -13,12 +13,7 @@ $_medias-breakpoint: 550px;
 }
 
 .medias--single {
-  max-width: $layout__max-width--single-media;
-  margin: auto;
-
-  .medias__item {
-    padding: 0 $s-md;
-  }
+  @include layout-container($layout__max-width--single-media, 0);
 }
 
 @include media-query($_medias-breakpoint) {
@@ -55,9 +50,7 @@ $_medias-breakpoint: 550px;
 }
 
 .medias--multiple {
-  max-width: $layout__max-width--multiple-medias;
-  //max-width: 900px;
-  margin: auto;
+  @include layout-container($layout__max-width--multiple-medias, 0);
 
   .medias__item--last {
     img {

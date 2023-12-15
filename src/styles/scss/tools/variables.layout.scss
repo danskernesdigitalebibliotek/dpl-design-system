@@ -5,3 +5,7 @@ $layout__max-width--large: 1440px;
 $layout__max-width--text: 780px;
 $layout__max-width--single-media: 896px;
 $layout__max-width--multiple-medias: 1240px;
+
+// Some elements should not go out to the edge of the screen on small screens.
+// This is the padding that is always shown on the left and right.
+$layout__page-padding: $s-xl;

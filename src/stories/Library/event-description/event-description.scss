@@ -1,4 +1,5 @@
 .event-description {
+  // @todo use @include layout-container instead here.
   padding: $s-md;
   max-width: $layout__max-width;
   margin: 0 auto;
