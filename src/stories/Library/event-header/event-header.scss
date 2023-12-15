@@ -1,4 +1,5 @@
 .event-header {
+  // @todo use @include layout-container instead here.
   max-width: $layout__max-width;
   margin: 0 auto;
 
