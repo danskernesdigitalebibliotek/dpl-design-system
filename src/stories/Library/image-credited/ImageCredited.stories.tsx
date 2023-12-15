@@ -38,3 +38,7 @@ const Template: ComponentStory<typeof ImageCredited> = (args) => (
 );
 
 export const Default = Template.bind({});
+export const withOutImage = Template.bind({});
+withOutImage.args = {
+  src: "",
+};

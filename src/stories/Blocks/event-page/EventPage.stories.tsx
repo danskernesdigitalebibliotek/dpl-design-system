@@ -109,3 +109,7 @@ export default {
 const Template: ComponentStory<typeof Event> = (args) => <Event {...args} />;
 
 export const Default = Template.bind({});
+export const withOutImage = Template.bind({});
+withOutImage.args = {
+  image: "",
+};

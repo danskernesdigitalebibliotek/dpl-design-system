@@ -18,11 +18,17 @@ const ImageCredited: FC<ImageCreditedProps> = ({
 }) => {
   return (
     <figure className={clsx("image-credited", className)}>
-      <img src={src} className="image-credited__img" alt={alt} />
-      <div className="image-credited__info">
-        <span>{description}</span>
-        <span>{year}</span>
-      </div>
+      {src ? (
+        <>
+          <img src={src} className="image-credited__img" alt={alt} />
+          <figcaption className="image-credited__info">
+            <span>{description}</span>
+            <span>{year}</span>
+          </figcaption>
+        </>
+      ) : (
+        <div className="image-credited__no-image" />
+      )}
     </figure>
   );
 };
