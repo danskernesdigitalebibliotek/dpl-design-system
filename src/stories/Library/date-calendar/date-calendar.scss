@@ -1,6 +1,11 @@
 // flatpickr does not use BEM naming convention, so we have to disable stylelint for this file
 /* stylelint-disable */
 
+//// Color variables
+$primary-gray: rgba(57, 57, 57, 0.7);
+// inherited by flatpickr
+$hover-background: rgba(0, 0, 0, 0.05);
+
 .flatpickr-calendar {
   font-family: "Noto Sans JP";
   font-style: normal;
@@ -59,8 +64,7 @@
       align-items: center;
 
       &:hover {
-        // inherited by flatpickr
-        background: rgba(0, 0, 0, 0.05);
+        background: $hover-background;
       }
 
       & svg {
@@ -82,7 +86,7 @@
 
       &.prevMonthDay,
       &.nextMonthDay {
-        color: rgba(57, 57, 57, 0.7);
+        color: $primary-gray;
         font-weight: 400 !important;
       }
     }
