@@ -1049,6 +1049,7 @@ input[type=reset] {
   cursor: pointer;
   white-space: nowrap;
   transition: background-color 0.4s ease-in-out, color 0.2s ease-in-out, opacity 0.4s ease-in-out;
+  text-decoration: none;
 }
 .btn-primary:hover .btn-collapsible {
   display: block;
@@ -2800,7 +2801,7 @@ a.cover {
 
 .warning-bar__left {
   display: flex;
-  align-items: start;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .warning-bar__left {
@@ -3847,7 +3848,7 @@ dl.list-description dd .link-tag {
 }
 
 .modal-loan__container {
-  max-width: 1000px;
+  width: 100%;
   overflow: scroll;
 }
 
@@ -5081,6 +5082,8 @@ dl.list-description dd .link-tag {
 .fee-list-page {
   background: #f6f5f0;
   padding: 16px;
+  position: relative;
+  z-index: 0;
 }
 @media (min-width: 1024px) {
   .fee-list-page {
@@ -6701,4 +6704,4 @@ border-primary-white {
 /*# sourceMappingURL=base.css.map */
 
 
-/*# sourceMappingURL=main.835c8763.chunk.css.map*/
+/*# sourceMappingURL=main.85c2e46f.chunk.css.map*/
