@@ -1,6 +1,8 @@
 .fee-list-page {
   background: $c-global-primary;
   padding: $s-md;
+  position: relative;
+  z-index: 0;
 
   @include breakpoint-m {
     padding: $s-6xl;

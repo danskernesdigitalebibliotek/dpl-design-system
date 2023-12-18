@@ -1,5 +1,3 @@
-$MODAL_LOAN_CONTAINER_WIDTH: 1000px;
-
 .modal-loan {
   flex-direction: column;
   align-items: center;
@@ -7,7 +5,7 @@ $MODAL_LOAN_CONTAINER_WIDTH: 1000px;
 }
 
 .modal-loan__container {
-  max-width: $MODAL_LOAN_CONTAINER_WIDTH;
+  width: 100%;
   overflow: scroll;
 }
 

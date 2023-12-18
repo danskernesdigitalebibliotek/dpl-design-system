@@ -21,6 +21,7 @@ $c-btn-border-disabled: $c-global-tertiary-2;
   white-space: nowrap;
   transition: background-color 0.4s ease-in-out, color 0.2s ease-in-out,
     opacity 0.4s ease-in-out;
+  text-decoration: none;
 
   @extend %text-button-placeholder;
 
