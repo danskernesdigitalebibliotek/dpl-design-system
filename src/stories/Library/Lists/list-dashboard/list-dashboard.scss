@@ -50,7 +50,8 @@
   margin-left: auto;
   width: 90px; // Avoids extending beyond the edge of the box.
 
-  @include breakpoint-s {
+  // Arrow takes too much space on small screens
+  @include breakpoint-l {
     display: block;
   }
 }
