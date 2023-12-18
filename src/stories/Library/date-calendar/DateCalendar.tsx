@@ -15,6 +15,7 @@ const DateCalendar = () => {
       inline: true,
       animate: false,
       mode: "range",
+      defaultDate: ["2024-01-01", "2024-01-10"],
     };
 
     if (node !== null) {

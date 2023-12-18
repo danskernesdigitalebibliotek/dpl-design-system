@@ -6,7 +6,12 @@ export default {
   title: "Library / Forms / DatePicker",
   component: DatePicker,
   decorators: [withDesign],
-  argTypes: {},
+  argTypes: {
+    locale: {
+      options: ["en", "da"],
+      defaultValue: "en",
+    },
+  },
   parameters: {
     design: {
       type: "figma",
@@ -16,6 +21,8 @@ export default {
   },
 } as ComponentMeta<typeof DatePicker>;
 
-const Template: ComponentStory<typeof DatePicker> = () => <DatePicker />;
+const Template: ComponentStory<typeof DatePicker> = (args) => (
+  <DatePicker {...args} />
+);
 
 export const Default = Template.bind({});
