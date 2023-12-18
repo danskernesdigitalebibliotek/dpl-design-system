@@ -5,6 +5,8 @@
 $primary-gray: rgba(57, 57, 57, 0.7);
 // inherited by flatpickr
 $hover-background: rgba(0, 0, 0, 0.05);
+// we do not currently have a good color for this in the design system
+$selected-date-background: rgb(0, 105, 255);
 
 .flatpickr-calendar {
   font-family: "Noto Sans JP";
@@ -84,8 +86,19 @@ $hover-background: rgba(0, 0, 0, 0.05);
       display: flex;
       align-items: center;
 
-      &.prevMonthDay,
-      &.nextMonthDay {
+      &.selected {
+        background-color: $selected-date-background;
+        border-color: $selected-date-background;
+      }
+
+      &.selected.startRange + .endRange:not(:nth-child(7n + 1)),
+      &.startRange.startRange + .endRange:not(:nth-child(7n + 1)),
+      &.endRange.startRange + .endRange:not(:nth-child(7n + 1)) {
+        box-shadow: -10px 0 0 $selected-date-background;
+      }
+
+      &.prevMonthDay:not(.endRange):not(.startRange),
+      &.nextMonthDay:not(.endRange):not(.startRange) {
         color: $primary-gray;
         font-weight: 400 !important;
       }
