@@ -9,12 +9,22 @@
 }
 
 .modal-cta__buttons {
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal-cta__link {
   display: flex;
   justify-content: center;
   margin-top: $s-md;
+}
+
+.modal-cta__button {
+  padding: 0;
+  width: 100%;
+  @include media-query__medium {
+    padding: 0 86px;
+    width: auto;
+  }
 }
