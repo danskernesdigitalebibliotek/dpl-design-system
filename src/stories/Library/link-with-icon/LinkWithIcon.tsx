@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { ReactComponent as ArrowLargeRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
+import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { IconType, LinkType } from "./LinkTypes";
 
 export type LinksProps = {
@@ -36,13 +36,13 @@ export const LinkWithIcon = ({ href, linkText, linkType }: LinksProps) => {
     <a
       href={href}
       target={target}
-      className={clsx("link-with-icon arrow__hover--right-large")}
+      className={clsx("link-with-icon arrow__hover--right-small")}
     >
       <div className={clsx("link-with-icon__icon", linkIconClass)}>
         <img className="invert" src={`icons/${folder}/${icon}.svg`} alt="" />
       </div>
       {linkText}
-      <ArrowLargeRight />
+      <ArrowSmallRight />
     </a>
   );
 };
