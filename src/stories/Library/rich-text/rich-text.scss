@@ -3,8 +3,6 @@
 // we will target HTML tags instead.
 .rich-text {
   @include typography($typo__rich-text-body);
-
-  // Setting a max-width to increase readability for sentences.
   @include layout-container($layout__max-width--text);
 
   a {
@@ -31,6 +29,7 @@
     position: relative;
     padding-left: $_dash-width + $s-md;
     padding-bottom: $s-lg;
+    box-sizing: border-box;
 
     &::before {
       position: absolute;
@@ -73,5 +72,54 @@
       counter-increment: list;
       content: counter(list) ".";
     }
+  }
+
+  table {
+    // There is no perfect way of making tables responsive.
+    // A quick fix, is to make the text smaller on smaller screens.
+    @include media-query__small("max-width") {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+
+    table-layout: fixed;
+    max-width: 100%;
+    width: 100%;
+
+    // CKEditor also *can* set inline widths and heights.
+    // We want to disable this.
+    &[style] {
+      min-width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  table,
+  th,
+  td {
+    border-collapse: collapse;
+    border: 1px solid $color__global-tertiary-2;
+    padding: $s-xs $s-sm;
+    box-sizing: border-box;
+  }
+
+  thead {
+    background-color: $color__global-tertiary-2;
+    color: $color__text-primary-white;
+  }
+
+  tbody {
+    tr {
+      background-color: $color__global-primary;
+    }
+
+    tr:nth-child(2n) {
+      background-color: $color__global-secondary;
+    }
+  }
+
+  th {
+    text-align: left;
+    font-weight: bold;
   }
 }

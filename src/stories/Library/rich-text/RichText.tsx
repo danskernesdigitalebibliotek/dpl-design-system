@@ -45,6 +45,32 @@ export const RichText = () => {
         </li>
         <li>Bagginses?</li>
       </ol>
+      <table>
+        <thead>
+          <tr>
+            <th>Entry Header</th>
+            <th>Entry Header</th>
+            <th>Entry Header</th>
+            <th>Entry Header</th>
+            <th>Entry Header</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Entry First Line</td>
+            <td>Entry First Line that is particularly long</td>
+            <td>Entry First Line that is particularly long</td>
+            <td>Entry First Line</td>
+            <td>Entry First Line</td>
+          </tr>
+          <tr>
+            <td>Entry Line</td>
+            <td>Entry Line</td>
+            <td>Entry Line</td>
+            <td>Entry Line</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };
