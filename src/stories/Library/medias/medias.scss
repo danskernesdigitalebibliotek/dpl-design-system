@@ -1,5 +1,9 @@
 $_medias-breakpoint: 550px;
 
+.medias {
+  @include layout-container($layout__max-width--single-media, 0);
+}
+
 .medias__item {
   width: 100%;
   box-sizing: border-box;
@@ -10,10 +14,6 @@ $_medias-breakpoint: 550px;
     aspect-ratio: 33 / 25;
     object-fit: cover;
   }
-}
-
-.medias--single {
-  @include layout-container($layout__max-width--single-media, 0);
 }
 
 @include media-query($_medias-breakpoint) {
