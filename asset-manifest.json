@@ -4,9 +4,9 @@
     "0.e672e4eb.iframe.bundle.js.map": "./0.e672e4eb.iframe.bundle.js.map",
     "1.3e0d30ce.iframe.bundle.js": "./1.3e0d30ce.iframe.bundle.js",
     "2.b82fafb0.iframe.bundle.js": "./2.b82fafb0.iframe.bundle.js",
-    "main.css": "./static/css/main.85c2e46f.chunk.css",
-    "main.js": "./main.9942f499.iframe.bundle.js",
-    "main.css.map": "./static/css/main.85c2e46f.chunk.css.map",
+    "main.css": "./static/css/main.cbc30c57.chunk.css",
+    "main.js": "./main.32353893.iframe.bundle.js",
+    "main.css.map": "./static/css/main.cbc30c57.chunk.css.map",
     "runtime~main.js": "./runtime~main.6c6b7827.iframe.bundle.js",
     "vendors~main.js": "./vendors~main.d576653f.iframe.bundle.js",
     "vendors~main.js.map": "./vendors~main.d576653f.iframe.bundle.js.map",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "runtime~main.6c6b7827.iframe.bundle.js",
     "vendors~main.d576653f.iframe.bundle.js",
-    "static/css/main.85c2e46f.chunk.css",
-    "main.9942f499.iframe.bundle.js"
+    "static/css/main.cbc30c57.chunk.css",
+    "main.32353893.iframe.bundle.js"
   ]
 }
