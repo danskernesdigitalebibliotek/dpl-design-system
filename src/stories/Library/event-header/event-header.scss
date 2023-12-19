@@ -1,8 +1,5 @@
 .event-header {
-  // @todo use @include layout-container instead here.
-  max-width: $layout__max-width;
-  margin: 0 auto;
-
+  @include layout-container;
   border-bottom: 1px solid $color__global-tertiary-1;
   display: grid;
   gap: $s-lg;
