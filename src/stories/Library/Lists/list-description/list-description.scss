@@ -1,30 +1,60 @@
 dl.list-description {
-  @extend %text-small-caption;
+  @include typography($typo__small-caption);
 
-  color: $c-text-secondary-gray;
-  display: flex;
-  flex-flow: column;
+  max-width: 420px;
+  color: $color__text-secondary-gray;
 
-  & > div {
-    display: flex;
-    flex-flow: row wrap;
+  .list-description__item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 
-  dt {
-    flex-basis: 18%;
-    padding: 2px 4px;
+  .list-description__key,
+  .list-description__value {
+    padding: 2px $s-xs;
   }
 
-  dd {
-    flex-basis: 72%;
-    flex-grow: 1;
-    margin: 0;
-    padding: 2px 4px;
+  .list-description__value {
+    display: grid;
+    @include media-query__small() {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $s-sm;
+    }
+  }
 
-    .link-tag {
-      @extend %text-small-caption;
+  .list-description__value--column {
+    flex-direction: column;
+  }
 
-      color: $c-text-primary-black;
+  .link-tag {
+    @include typography($typo__small-caption);
+
+    color: $color__text-primary-black;
+  }
+}
+
+dl.list-description.list-description--event {
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $s-md;
+  align-items: start;
+
+  .list-description__item {
+    grid-template-columns: 1fr;
+  }
+
+  .list-description__value {
+    font-weight: bold;
+  }
+
+  @include media-query__small() {
+    grid-template-columns: 1fr;
+    gap: $s-xs;
+
+    .list-description__item {
+      grid-template-columns: 1fr 2fr;
     }
   }
 }

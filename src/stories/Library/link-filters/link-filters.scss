@@ -1,6 +1,6 @@
 .link-filters {
   display: flex;
-  grid-column-gap: 24px;
+  grid-column-gap: $s-lg;
 }
 
 .link-filters__tag-wrapper:last-child {
@@ -9,10 +9,8 @@
 }
 
 .link-filters__tag {
-  @extend %text-body-medium-regular-placeholder;
+  @include typography($typo__body-small);
 
-  font-size: 14px;
-  line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
   padding-bottom: 0;
@@ -27,12 +25,11 @@
 }
 
 .link-filters__counter {
-  font-size: 14px;
-  line-height: 18px;
+  @include typography($typo__body-small);
+
   position: relative;
   top: -8px;
-  padding-left: 8px;
-  @extend %text-body-medium-regular-placeholder;
+  padding-left: $s-sm;
 }
 
 .link-filters__tag:active {

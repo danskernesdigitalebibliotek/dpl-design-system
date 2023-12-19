@@ -9,7 +9,7 @@
   }
 
   &__meta {
-    color: $c-text-secondary-gray;
+    color: $color__text-secondary-gray;
   }
 
   &__heart {
@@ -23,12 +23,13 @@
   }
 
   &__headline {
-    color: $c-text-secondary-gray;
-    @extend %text-small-caption-bold;
+    color: $color__text-secondary-gray;
+    @include typography($typo__small-caption);
+    font-weight: 700;
   }
 
   &__body {
     max-width: 545px;
-    color: $c-text-secondary-gray;
+    color: $color__text-secondary-gray;
   }
 }

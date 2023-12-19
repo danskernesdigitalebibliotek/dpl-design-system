@@ -1,10 +1,10 @@
 .find-on-shelf {
-  background-color: $c-global-secondary;
+  background-color: $color__global-secondary;
 
   &__header-row {
     display: none;
 
-    @include breakpoint-s {
+    @include media-query__small {
       display: flex;
       height: $s-xl;
       align-items: center;
@@ -17,7 +17,7 @@
   }
 
   &__item-count-header {
-    @include breakpoint-s {
+    @include media-query__small {
       margin-left: auto;
     }
   }
@@ -25,11 +25,11 @@
   &__row {
     display: flex;
     flex-direction: column;
-    border-top: solid 1px $c-global-primary;
+    border-top: solid 1px $color__global-primary;
     padding: $s-lg $s-md;
     gap: $s-md;
 
-    @include breakpoint-s {
+    @include media-query__small {
       padding: 0 $s-xl 0 $s-xl;
       flex-direction: row;
       min-height: 110px;
@@ -41,7 +41,7 @@
   &__material-text {
     max-width: 600px;
 
-    @include breakpoint-s {
+    @include media-query__small {
       // Both width and min-width need to be here to prevent flex shrink & stretch.
       width: 404px;
       min-width: 404px;
@@ -49,7 +49,7 @@
   }
 
   &__item-count-text {
-    @include breakpoint-s {
+    @include media-query__small {
       margin-left: auto;
       overflow-y: visible;
     }

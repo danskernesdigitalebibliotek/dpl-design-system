@@ -3,8 +3,8 @@
   padding-top: $s-3xl;
   padding-bottom: $s-2xl;
 
-  & > h2.text-header-h4 {
-    font-size: $s-lg;
+  > h2.text-header-h4 {
+    font-size: 24px;
   }
 
   &__content {
@@ -12,7 +12,7 @@
     line-height: 160%;
   }
 
-  @include breakpoint-m {
+  @include media-query__medium {
     padding-top: $s-4xl;
     padding-left: $s-7xl;
     padding-bottom: $s-5xl;

@@ -1,6 +1,6 @@
 .material-page {
   padding-bottom: $s-2xl;
-  @include breakpoint-s {
+  @include media-query__small {
     padding-bottom: $s-6xl;
   }
 }

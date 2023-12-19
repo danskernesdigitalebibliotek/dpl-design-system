@@ -16,14 +16,16 @@
     "css:lint": "concurrently 'yarn:css:stylelint' 'yarn:css:prettier -- --check' --raw",
     "css:lint:watch": "chokidar 'src/**/*.scss' -c 'yarn css:lint'",
     "css:format": "concurrently 'yarn:css:stylelint -- --fix' 'yarn:css:prettier -- --write' --max-processes 1 --raw",
-    "css:build": "sass base.scss:src/styles/css/base.css",
+    "css:build": "sass base.scss:src/styles/css/base.css --style compressed",
     "css:watch": "yarn css:build -- --watch",
+    "markdown:lint": "markdownlint-cli2",
+    "markdown:format": "markdownlint-cli2-fix",
     "watch": "concurrently 'yarn:js:lint:watch' 'yarn:css:lint:watch'",
-    "dev": "concurrently --raw \"yarn storybook\" \"yarn css:watch\" \"yarn watch\"",
+    "dev": "concurrently --raw 'yarn storybook' 'yarn css:watch' 'yarn watch'",
     "chromatic": "npx chromatic --exit-zero-on-changes",
-    "lint": "concurrently 'yarn:js:lint' 'yarn:css:lint'",
-    "lint:markdown": "markdownlint-cli2",
-    "lint:markdown:fix": "markdownlint-cli2-fix"
+    "lint": "concurrently 'yarn:js:lint' 'yarn:css:lint' 'yarn:markdown:lint'",
+    "format": "concurrently 'yarn:js:format' 'yarn:css:format' 'yarn:markdown:format'"
+
   },
   "browserslist": {
     "production": [

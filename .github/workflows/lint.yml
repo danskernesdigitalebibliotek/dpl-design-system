@@ -7,7 +7,8 @@ on:
       - main
 
 jobs:
-  css_stylelint:
+  css-lint:
+    name: CSS Linter
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,10 +17,11 @@ jobs:
           node-version-file: '.nvmrc'
       - run: yarn install --frozen-lockfile
 
-      - name: Run Stylelint
-        run: yarn css:stylelint -- -f github
+      - name: Run css:lint
+        run: yarn css:lint
 
-  js_eslint:
+  js-lint:
+    name: JS Linter
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,49 +30,19 @@ jobs:
           node-version-file: '.nvmrc'
       - run: yarn install --frozen-lockfile
 
-      - name: Run eslint
-        run: yarn js:eslint
+      - name: Run js:lint
+        run: yarn js:lint
 
-  css_prettier:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-
-      - run: yarn install --frozen-lockfile
-
-      - name: Run Prettier
-        run: yarn css:prettier -- --check
-
-  js_prettier:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-
-      - run: yarn install --frozen-lockfile
-
-      - name: Run Prettier
-        run: yarn js:prettier -- --check
-
-  markdownlint:
-    name: Lint markdown
+  markdown-linkt:
+    name: Markdown Linter
     if: '!github.event.deleted'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
-          cache: 'yarn'
-      - name: Install Dependencies
-        run: yarn install
-      - name: Install problem matcher
-        uses: xt0rted/markdownlint-problem-matcher@v2
-      - name: Lint markdown
-        run: yarn lint:markdown
+      - run: yarn install --frozen-lockfile
+
+      - name: Run markdown:lint
+        run: yarn markdown:lint

@@ -1,0 +1,77 @@
+// This component is used for WYSIWYG content.
+// E.g. we cannot control classes of the underlying elements, so in this case
+// we will target HTML tags instead.
+.rich-text {
+  @include typography($typo__rich-text-body);
+
+  // Setting a max-width to increase readability for sentences.
+  @include layout-container($layout__max-width--text);
+
+  a {
+    @extend %text-inline-link;
+  }
+
+  h2 {
+    @include typography($typo__h3);
+  }
+
+  h3 {
+    @include typography($typo__h4);
+  }
+
+  > * {
+    margin-bottom: $s-md;
+  }
+
+  ol > li,
+  ul > li {
+    $_dash-width: 21px;
+    $_dash-width--wide: 33px;
+
+    position: relative;
+    padding-left: $_dash-width + $s-md;
+    padding-bottom: $s-lg;
+
+    &::before {
+      position: absolute;
+      top: 0.8em;
+      left: 0;
+      width: $_dash-width;
+      text-align: center;
+    }
+
+    @include media-query__medium {
+      padding-left: $_dash-width--wide + $s-lg;
+
+      &::before {
+        width: $_dash-width--wide;
+      }
+    }
+  }
+
+  ul > li::before {
+    content: "";
+    height: 1px;
+    background-color: black;
+  }
+
+  ol {
+    counter-reset: list;
+
+    > li::before {
+      @include typography(
+        $typo__h4,
+        (
+          excludes: (
+            line-height,
+          ),
+        )
+      );
+
+      font-weight: normal;
+      line-height: 0;
+      counter-increment: list;
+      content: counter(list) ".";
+    }
+  }
+}
