@@ -1,0 +1,51 @@
+// A width (horizontal) unit - e.g. setting max-width, centering, and making
+// sure there is padding on mobile.
+// stylelint-disable plugin/stylelint-bem-namics -- Stylelint doesnt understand placeholders in this context.
+%layout__w-unit,
+.layout__w-unit {
+  @include layout-container();
+
+  &--no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--small {
+    @include layout-container($layout__max-width--small);
+  }
+
+  &--large {
+    @include layout-container($layout__max-width--large);
+  }
+}
+
+// A height (vertical) unit - e.g. setting the space that is between elements.
+%layout__h-unit,
+.layout__h-unit {
+  // These units are taken loosely from the figma design, as no specifics
+  // are defined.
+  $_spacing: $s-lg;
+  $_spacing--small: $s-md;
+  $_spacing--large: $s-xl;
+
+  margin-top: $_spacing;
+  margin-bottom: $_spacing;
+
+  &--small {
+    margin-top: $_spacing--small;
+    margin-bottom: $_spacing--small;
+  }
+
+  &--large {
+    margin-top: $_spacing--large;
+    margin-bottom: $_spacing--large;
+  }
+}
+
+// A combination of both height and width (vertical and horizontal) units.
+%layout__unit,
+.layout__unit {
+  @extend %layout__h-unit;
+  @extend %layout__w-unit;
+}
+// stylelint-enable plugin/stylelint-bem-namics
