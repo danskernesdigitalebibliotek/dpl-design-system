@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    border: 1px solid $c-global-tertiary-1;
+    border: 1px solid $color__global-tertiary-1;
   }
 
   &__input {
@@ -26,7 +26,7 @@
     width: 44px;
     min-width: 44px;
     height: 48px;
-    border-left: 1px solid $c-global-tertiary-1;
+    border-left: 1px solid $color__global-tertiary-1;
     display: flex;
     align-items: center;
     cursor: pointer;
