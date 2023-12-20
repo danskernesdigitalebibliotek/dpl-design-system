@@ -12,7 +12,7 @@ $selected-date-background: rgb(0, 105, 255);
   font-family: "Noto Sans JP";
   font-style: normal;
   font-weight: 500;
-  color: $c-text-primary-black;
+  color: $color__text-primary-black;
   padding: $s-md !important;
   width: fit-content !important;
 
@@ -40,7 +40,7 @@ $selected-date-background: rgb(0, 105, 255);
         width: auto;
         font-size: 14px;
         line-height: 100%;
-        color: $c-text-primary-black;
+        color: $color__text-primary-black;
 
         & select {
           appearance: none;
@@ -70,7 +70,7 @@ $selected-date-background: rgb(0, 105, 255);
       }
 
       & svg {
-        stroke: $c-text-primary-black;
+        stroke: $color__text-primary-black;
       }
     }
   }
