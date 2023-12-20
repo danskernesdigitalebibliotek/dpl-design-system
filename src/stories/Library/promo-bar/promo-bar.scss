@@ -1,6 +1,6 @@
 .promo-bar {
   min-height: $s-2xl;
-  background-color: $c-global-secondary;
+  background-color: $color__global-secondary;
   display: flex;
   align-items: center;
   gap: $s-md;
@@ -10,7 +10,7 @@
   }
 
   &.promo-bar--dark {
-    color: $c-text-primary-white;
+    color: $color__text-primary-white;
     background-color: #5a5f63;
   }
 }

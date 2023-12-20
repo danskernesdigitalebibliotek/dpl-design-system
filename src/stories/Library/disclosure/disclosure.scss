@@ -1,13 +1,13 @@
 .disclosure {
   width: auto;
-  border: solid 1px $c-global-tertiary-1;
+  border: solid 1px $color__global-tertiary-1;
   border-top: none;
 
   &:first-of-type {
-    border-top: solid 1px $c-global-tertiary-1;
+    border-top: solid 1px $color__global-tertiary-1;
   }
 
-  @include breakpoint-s {
+  @include media-query__small {
     margin: 0 133px;
   }
 
@@ -15,7 +15,7 @@
     width: 100%;
     margin: 0;
 
-    @include breakpoint-s {
+    @include media-query__small {
       margin: 0;
     }
   }
@@ -28,13 +28,13 @@
     cursor: pointer;
     padding-left: $s-md;
 
-    @include breakpoint-s {
+    @include media-query__small {
       padding-left: $s-xl;
     }
 
     &.disclosure__headline--no-padding {
       padding-left: $s-xl;
-      @include breakpoint-s {
+      @include media-query__small {
         padding-left: $s-2xl;
       }
     }
@@ -46,14 +46,14 @@
     max-height: 84px;
     overflow-y: hidden;
 
-    @include breakpoint-s {
+    @include media-query__small {
       width: 685px;
     }
 
     &--shorter {
       width: 197px;
 
-      @include breakpoint-s {
+      @include media-query__small {
         width: 404px;
       }
     }
@@ -67,7 +67,7 @@
     justify-content: center;
     margin-right: $s-md;
 
-    @include breakpoint-s {
+    @include media-query__small {
       margin-left: -#{$s-sm};
       margin-right: $s-lg;
     }
@@ -81,7 +81,7 @@
     margin-left: auto;
     margin-right: $s-md;
 
-    @include breakpoint-s {
+    @include media-query__small {
       margin-right: $s-xl;
     }
 

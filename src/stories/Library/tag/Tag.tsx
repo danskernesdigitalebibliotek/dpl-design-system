@@ -8,6 +8,7 @@ type TagProps = {
   hasBackground?: boolean;
   showCloseIcon?: boolean;
   isClickable?: boolean;
+  className?: string;
 };
 
 export const Tag = ({
@@ -17,6 +18,7 @@ export const Tag = ({
   usesCursor = true,
   showCloseIcon = false,
   isClickable = true,
+  className,
 }: TagProps) => {
   const [selected, setSelected] = useState(false);
 
@@ -28,7 +30,8 @@ export const Tag = ({
         "tag",
         (hasBackground || selected) && "tag--fill",
         usesCursor && "cursor-pointer",
-        `tag--${size}`
+        `tag--${size}`,
+        className
       )}
     >
       {children}

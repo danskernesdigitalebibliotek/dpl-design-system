@@ -36,6 +36,7 @@ export const ModalCTA: React.FC<ModalCTAProps> = ({ title, showModal }) => (
           label="Annuller fornyelse"
           disabled={false}
           collapsible
+          classNames="modal-cta__button"
         />
         <div className="modal-cta__link">
           <Links

@@ -11,7 +11,7 @@
 .checkbox__label {
   user-select: none;
   cursor: pointer;
-  padding: 6px 8px 6px 0;
+  padding: 6px $s-sm 6px 0;
   overflow: hidden;
   transition: all 0.3s ease;
   display: flex;
@@ -28,9 +28,9 @@
   flex: 0 0 18px;
   width: 18px;
   height: 18px;
-  border-radius: 4px;
+  border-radius: $s-xs;
   transform: scale(1);
-  border: 1px solid $c-global-tertiary-2;
+  border: 1px solid $color__global-tertiary-2;
   transition: all 0.3s ease;
 }
 
@@ -40,18 +40,18 @@
   left: 2px;
   fill: none;
   stroke: #fff;
-  stroke-dasharray: 16px;
-  stroke-dashoffset: 16px;
+  stroke-dasharray: $s-md;
+  stroke-dashoffset: $s-md;
   transition: all 0.3s ease;
   transform: translate3d(0, 0, 0);
 }
 
 .checkbox__label .checkbox__text {
-  padding-left: 8px;
+  padding-left: $s-sm;
   line-height: 18px;
 
   &--validation {
-    color: $c-signal-alert;
+    color: $color__signal-alert;
   }
 
   &--hide-visually {
@@ -68,13 +68,13 @@
 }
 
 .checkbox__label:hover .checkbox__icon:first-of-type {
-  border-color: $c-text-secondary-gray;
+  border-color: $color__text-secondary-gray;
 }
 
 /* stylelint-disable selector-max-compound-selectors */
 .checkbox__input:checked + .checkbox__label .checkbox__icon:first-of-type {
-  background: $c-text-secondary-gray;
-  border-color: $c-text-secondary-gray;
+  background: $color__text-secondary-gray;
+  border-color: $color__text-secondary-gray;
   animation: zoom-in-out 0.3s ease;
 
   svg {
@@ -85,7 +85,7 @@
 .checkbox__input:focus + .checkbox__label {
   // TODO: Determine a proper design for elements in focus.
   // This is a temporary solution to make it easier to test keyboard navigation.
-  outline: solid 1px $c-text-secondary-gray;
+  outline: solid 1px $color__text-secondary-gray;
   outline-offset: 0;
 }
 

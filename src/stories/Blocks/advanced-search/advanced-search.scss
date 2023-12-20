@@ -2,9 +2,9 @@
   width: 100%;
   padding: 40px $s-md;
 
-  background-color: $c-global-primary;
+  background-color: $color__global-primary;
 
-  @include breakpoint-m {
+  @include media-query__medium {
     width: 100%;
     padding: $s-4xl 157px 64px 157px;
   }
@@ -12,19 +12,19 @@
   &__title {
     margin-bottom: $s-xl;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       margin-bottom: 48px;
     }
   }
 
   &__clauses {
-    @extend %text-button-placeholder;
+    @include typography($typo__button);
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 0 0 $s-md $s-xl;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       margin: 0 0 $s-lg $s-xl;
     }
   }
@@ -32,10 +32,10 @@
   &__clause {
     display: inline-block;
     margin-right: $s-xl;
-    color: $c-text-primary-black;
+    color: $color__text-primary-black;
 
     &.advanced-search__clause--grey {
-      color: $c-global-tertiary-2;
+      color: $color__global-tertiary-2;
     }
   }
 
@@ -51,7 +51,7 @@
   &__filter {
     width: 100%;
 
-    @include breakpoint-s {
+    @include media-query__small {
       width: 260px;
       margin-right: $s-lg;
     }
@@ -63,7 +63,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    @include breakpoint-s {
+    @include media-query__small {
       flex-direction: row;
     }
   }
@@ -72,7 +72,7 @@
     align-self: center;
     margin-bottom: $s-lg;
 
-    @include breakpoint-s {
+    @include media-query__small {
       align-self: center;
       margin-bottom: 0;
     }
@@ -81,7 +81,7 @@
   &__search-button {
     width: 100%;
 
-    @include breakpoint-s {
+    @include media-query__small {
       margin-left: $s-lg;
       width: 266px;
     }
@@ -89,19 +89,19 @@
 
   &__divider {
     height: 1px;
-    background-color: $c-global-tertiary-1;
+    background-color: $color__global-tertiary-1;
     margin: $s-2xl 0;
     width: 100%;
   }
 
   &__cql-input {
-    @extend %text-body-medium-regular-placeholder;
-    border: solid 1px $c-global-tertiary-1;
+    @include typography($typo__body-placeholder);
+    border: solid 1px $color__global-tertiary-1;
     width: 100%;
     margin-bottom: 46px;
     padding: $s-md;
     resize: none;
-    background-color: $c-global-primary;
+    background-color: $color__global-primary;
   }
 }
 
@@ -113,7 +113,7 @@
   &__input {
     width: 100%;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       padding-right: $s-4xl;
       margin-bottom: 48px;
     }
@@ -121,18 +121,18 @@
 
   &__preview {
     padding: $s-xl 48px $s-xl 64px;
-    background-color: $c-global-secondary;
+    background-color: $color__global-secondary;
     flex-direction: column;
     align-self: flex-start;
     display: none;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       display: flex;
       width: 300px;
       min-width: 300px;
       padding: $s-2xl $s-xl;
     }
-    @include breakpoint-l {
+    @include media-query__large {
       padding: $s-xl 48px $s-xl 64px;
       width: 420px;
       min-width: 420px;
@@ -144,7 +144,7 @@
       width: 100%;
       margin-bottom: 48px;
 
-      @include breakpoint-m {
+      @include media-query__medium {
         display: none;
       }
     }

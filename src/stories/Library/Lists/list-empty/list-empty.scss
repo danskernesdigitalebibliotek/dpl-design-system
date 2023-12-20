@@ -5,13 +5,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px dotted $c-text-secondary-gray;
+  border: 1px dotted $color__text-secondary-gray;
   text-align: left;
-  @extend %color-secondary-gray;
-  @extend %p-4;
-  @extend %pt-48;
-  @extend %pb-48;
-  @extend %text-body-large;
+  color: $color__text-secondary-gray;
+  padding: 48px $s-xs;
+
+  @include typography($typo__body-large);
 
   &__links {
     display: flex;

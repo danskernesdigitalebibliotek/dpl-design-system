@@ -2,22 +2,22 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid $c-global-tertiary-1;
-  padding: 8px 16px;
-  @extend %text-tags;
+  border: 1px solid $color__global-tertiary-1;
+  padding: $s-sm $s-md;
+  @include typography($typo__tags);
 
   &.tag--fill {
-    background-color: $c-global-secondary;
+    background-color: $color__global-secondary;
   }
 
   &.tag--small {
-    height: 32px;
-    padding: 0 8px;
+    height: $s-xl;
+    padding: 0 $s-sm;
   }
 
   &.tag--large {
     height: 40px;
-    padding: 0 16px;
+    padding: 0 $s-md;
   }
 }
 

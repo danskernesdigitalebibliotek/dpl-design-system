@@ -16,12 +16,12 @@
 
 .modal-loan__list-container {
   display: grid;
-  grid-row-gap: 100px;
+  grid-row-gap: $s-5xl;
 }
 
 .modal-loan__list {
   position: relative;
-  margin-top: 24px;
+  margin-top: $s-lg;
   padding-bottom: 10px;
 }
 
@@ -32,9 +32,9 @@
 
 .modal-loan__list-materials {
   display: grid;
-  grid-row-gap: 8px;
+  grid-row-gap: $s-sm;
 }
 
 .modal-loan__list-materials--bottom-buttons-visible {
-  padding-bottom: #{$s-75}px;
+  padding-bottom: $s-4xl;
 }

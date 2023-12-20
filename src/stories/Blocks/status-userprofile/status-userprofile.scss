@@ -4,7 +4,7 @@
   column-gap: 25px;
   align-items: unset;
 
-  @include breakpoint-s {
+  @include media-query__small {
     align-items: baseline;
     flex-direction: row;
     row-gap: 25px;

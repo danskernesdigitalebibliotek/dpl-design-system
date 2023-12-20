@@ -3,14 +3,14 @@
   flex-direction: column;
 
   label {
-    @extend %text-body-medium-medium;
-    color: $c-text-secondary-gray;
+    @include typography($typo__body-medium);
+    color: $color__text-secondary-gray;
   }
 
   input {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid $c-global-tertiary-1;
+    border-bottom: 1px solid $color__global-tertiary-1;
     height: 40px;
 
     &:focus {
@@ -20,15 +20,15 @@
   }
 
   &__description {
-    color: $c-text-secondary-gray;
-    @extend %text-body-small-regular;
-    @extend %mt-8;
+    color: $color__text-secondary-gray;
+    @include typography($typo__body-small);
+    margin-top: $s-md;
   }
 
   &__validation {
-    color: $c-signal-alert;
-    @extend %text-body-small-regular;
-    @extend %mt-8;
+    color: $color__signal-alert;
+    @include typography($typo__body-small);
+    margin-top: $s-md;
   }
 
   /* Chrome, Safari, Edge, Opera */

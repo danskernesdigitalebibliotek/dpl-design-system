@@ -1,0 +1,42 @@
+.event-description {
+  // @todo use @include layout-container instead here.
+  padding: $s-md;
+  max-width: $layout__max-width;
+  margin: 0 auto;
+
+  @include media-query__small {
+    padding: $s-xl $s-4xl;
+    display: grid;
+    column-gap: $s-xl;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.event-description__title {
+  @include typography($typo__h4);
+  margin-bottom: $s-md;
+
+  @include media-query__small {
+    grid-column: 1 / -1;
+    margin-bottom: $s-lg;
+  }
+}
+
+.event-description__description {
+  @include typography($typo__body-large);
+
+  line-height: 24px;
+  margin-bottom: $s-md;
+
+  @include media-query__small {
+    line-height: 32px;
+  }
+}
+
+.event-description__links {
+  margin-bottom: $s-2xl;
+
+  @include media-query__small {
+    margin-bottom: 0;
+  }
+}

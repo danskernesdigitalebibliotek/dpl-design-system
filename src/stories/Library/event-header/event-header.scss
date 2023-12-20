@@ -1,0 +1,87 @@
+.event-header {
+  // @todo use @include layout-container instead here.
+  max-width: $layout__max-width;
+  margin: 0 auto;
+
+  border-bottom: 1px solid $color__global-tertiary-1;
+  display: grid;
+  gap: $s-lg;
+  padding-bottom: $s-2xl;
+  @include media-query__small {
+    grid-template-columns: 2fr 1fr;
+    gap: 0;
+    padding-bottom: 0;
+  }
+}
+
+.event-header__content,
+.event-header__visual {
+  padding: 0 $s-md;
+  @include media-query__small {
+    padding: $s-2xl;
+  }
+}
+
+.event-header__content {
+  padding-top: $s-md;
+  display: grid;
+  grid-template-columns: $s-3xl 1fr $s-3xl;
+  grid-template-areas:
+    ". tag  ."
+    ". date  ."
+    ". title  ."
+    "btn btn btn";
+
+  @include media-query__small {
+    padding-top: $s-3xl;
+    grid-template-columns: 1fr;
+  }
+}
+
+.event-header__tag {
+  grid-area: tag;
+  width: max-content;
+  margin-bottom: $s-md;
+  @include media-query__small {
+    margin-bottom: $s-lg;
+  }
+}
+
+.event-header__date {
+  @include typography($typo__h4);
+
+  grid-area: date;
+  display: block;
+  margin-bottom: $s-md;
+  @include media-query__small {
+    margin-bottom: $s-sm;
+  }
+}
+
+.event-header__title {
+  @include typography($typo__h1);
+
+  grid-area: title;
+  margin-bottom: $s-xl;
+
+  @include media-query__small {
+    margin-bottom: $s-5xl;
+  }
+}
+
+.event-header__button {
+  grid-area: btn;
+  width: 100%;
+  text-decoration: none;
+  @include media-query__small {
+    width: auto;
+  }
+}
+
+.event-header__visual {
+  @include media-query__small {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-right: 1px solid $color__global-tertiary-1;
+  }
+}

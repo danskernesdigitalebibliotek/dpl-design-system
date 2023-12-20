@@ -1,16 +1,16 @@
 .recommender {
-  background-color: $c-global-tertiary-2;
-  color: $c-text-primary-white;
-  border-color: $c-text-secondary-gray;
+  background-color: $color__global-tertiary-2;
+  color: $color__text-primary-white;
+  border-color: $color__text-secondary-gray;
 
   &--bright {
-    background-color: $c-global-primary;
-    color: $c-text-primary-black;
-    border-color: $c-global-tertiary-1;
+    background-color: $color__global-primary;
+    color: $color__text-primary-black;
+    border-color: $color__global-tertiary-1;
   }
   /* stylelint-disable max-nesting-depth */
   &--triple-desktop {
-    @include breakpoint-m {
+    @include media-query__medium {
       .simple-material {
         &:last-of-type {
           display: none;
@@ -20,7 +20,7 @@
   }
 
   &--padding-desktop {
-    @include breakpoint-m {
+    @include media-query__medium {
       padding: $s-6xl;
     }
   }
@@ -29,7 +29,7 @@
     text-align: center;
     padding: $s-lg;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       padding-bottom: $s-6xl;
     }
   }
@@ -38,7 +38,7 @@
     text-align: left;
     padding-left: $s-md;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       padding-left: $s-4xl;
     }
   }
@@ -56,7 +56,7 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       grid-template-columns: 33.33% 33.33% 33.33%;
     }
   }
@@ -66,14 +66,14 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
 
-    @include breakpoint-m {
+    @include media-query__medium {
       grid-template-columns: 25% 25% 25% 25%;
     }
   }
 }
 
 .simple-material {
-  border: 1px solid $c-text-secondary-gray;
+  border: 1px solid $color__text-secondary-gray;
   padding: 30px;
   display: flex;
   width: 100%;
@@ -81,7 +81,7 @@
   height: 350px;
 
   &--bright {
-    border: 1px solid $c-global-tertiary-1;
+    border: 1px solid $color__global-tertiary-1;
   }
 
   &__favourite {
@@ -106,7 +106,7 @@
   }
 
   &__title {
-    @extend %text-body-medium-regular-placeholder;
+    @include typography($typo__body-placeholder);
     text-decoration: none;
     display: block;
     overflow: hidden;
@@ -120,7 +120,7 @@
   }
 
   &__author {
-    @extend %text-body-medium-regular-placeholder;
+    @include typography($typo__body-placeholder);
     font-weight: 500;
     overflow: hidden;
     white-space: nowrap;
