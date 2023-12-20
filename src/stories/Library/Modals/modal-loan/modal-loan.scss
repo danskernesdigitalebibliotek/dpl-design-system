@@ -6,7 +6,7 @@
 
 .modal-loan__container {
   width: 100%;
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 .modal-loan__header {
