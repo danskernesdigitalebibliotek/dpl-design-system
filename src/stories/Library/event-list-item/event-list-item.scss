@@ -1,16 +1,25 @@
 .event-list-item {
   @include show-svg-on-hover();
-
   text-decoration: none;
   display: grid;
   padding: $s-lg;
-  row-gap: $s-md;
-  max-width: $layout__max-width;
   background-color: #fcfcfc;
   margin: 0 auto;
+  grid-template-areas:
+    "image"
+    "content";
+  grid-template-rows: auto;
+  row-gap: $s-md;
+  max-width: $layout__max-width;
+
+  > svg {
+    display: none;
+  }
 }
+
 .event-list-item__image-container {
   @extend %identity-placeholder-pseudo;
+  grid-area: image;
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -31,52 +40,56 @@
 .event-list-item__content {
   @include typography($typo__body-medium);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "tag date"
+    "title title"
+    "description description"
+    "location schedule";
+  row-gap: $s-sm;
 }
 
 .event-list-item__tag {
+  grid-area: tag;
+  @include typography($typo__small-caption);
   width: max-content;
-  margin-bottom: calc($s-sm * 1.5);
-  grid-column: 1;
 }
 
 .event-list-item__date {
+  grid-area: date;
   @include typography($typo__small-caption);
-  grid-column: 2;
   text-align: right;
 }
 
 .event-list-item__title {
+  grid-area: title;
   @include typography($typo__h4);
   @extend %text-truncate;
   margin-bottom: $s-sm;
-  grid-column: 1/ -1;
 }
 
 .event-list-item__description {
+  grid-area: description;
   @include typography($typo__small-caption);
   @extend %text-ellipsis-two-lines;
   -webkit-line-clamp: 3;
-  grid-column: 1 / -1;
   margin-bottom: $s-xl;
 }
 
 .event-list-item__location-wrapper {
-  @include typography($typo__small-caption);
-  grid-column: 1;
-  grid-row: 4;
-  align-self: end;
+  grid-area: location;
   display: flex;
+  align-items: flex-end;
   flex-wrap: wrap;
   gap: $s-xs;
 }
+
 .event-list-item__location {
-  @include typography($typo__small-caption);
   @extend %link-tag;
+  @include typography($typo__small-caption);
 }
+
 .event-list-item__schedule {
-  grid-column: 2;
-  grid-row: 4;
+  grid-area: schedule;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -88,67 +101,76 @@
 
 @include media-query__small {
   .event-list-item {
-    grid-template-columns: 222px 1fr max-content;
+    grid-template-areas: "image content";
+    grid-template-columns: 222px 1fr;
     gap: $s-2xl;
   }
-  .event-list-item__image-wrapper {
-    max-width: 222px;
-  }
+
   .event-list-item__content {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 30px 30px 40px auto 1fr;
-    width: 100%;
-    align-items: center;
+    grid-area: content;
+    grid-template-columns: 1fr 1fr $s-2xl max-content;
+    grid-template-areas:
+      "tag tag . schedule"
+      "date date . schedule"
+      "title title . schedule"
+      "description description . schedule"
+      "location location . schedule";
   }
+  .event-list-item__image-container {
+    max-width: 222px;
+    grid-area: image;
+  }
+
   .event-list-item__tag {
-    grid-column: 1;
-    grid-row: 1;
     margin-bottom: unset;
+    grid-area: tag;
   }
+
   .event-list-item__date {
-    grid-column: 1 / span 3;
-    grid-row: 2;
     text-align: initial;
     align-self: end;
   }
 
   .event-list-item__title {
-    grid-column: 1 / span 3;
-    grid-row: 3;
     margin-bottom: unset;
+    grid-area: title;
   }
+
   .event-list-item__description {
-    grid-column: 1 / span 3;
-    grid-row: 4;
     margin-bottom: unset;
     -webkit-line-clamp: 2;
+    grid-area: description;
   }
+
   .event-list-item__schedule {
-    grid-column: 4;
-    grid-row: 1/-1;
     align-self: center;
     margin-bottom: $s-md;
     align-items: flex-start;
+    grid-area: schedule;
   }
+
   .event-list-item__location-wrapper {
-    grid-column: 1 / span 3;
-    grid-row: 5;
     margin-top: $s-md;
   }
+
   .event-list-item__time {
     grid-column: 4;
-    grid-row: 3;
   }
+
   .event-list-item__pricing {
     grid-column: 4;
-    grid-row: 4;
   }
 }
 
-.event-list-item > svg {
-  display: none;
+@include media-query__medium {
+  .event-list-item {
+    grid-template-areas: "image content arrow";
+    grid-template-columns: 222px 1fr max-content;
+    gap: $s-2xl;
+  }
 
-  @include media-query__medium {
+  .event-list-item > svg {
+    grid-area: arrow;
     display: initial;
   }
 }
