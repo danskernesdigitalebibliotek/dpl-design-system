@@ -1,3 +1,4 @@
+// EventListItem.tsx
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import { Tag } from "../tag/Tag";
 
@@ -8,11 +9,11 @@ export type EventListItemProps = {
   date: string;
   time: string;
   location: string;
-  price: number;
+  price: string;
   href: string;
 };
 
-export const EventListItem = ({
+export const EventListItem: React.FC<EventListItemProps> = ({
   image,
   title,
   description,
@@ -21,7 +22,7 @@ export const EventListItem = ({
   location,
   price,
   href,
-}: EventListItemProps) => {
+}) => {
   return (
     <a href={href} className="event-list-item arrow__hover--right-small">
       <div className="event-list-item__image-container">
@@ -34,10 +35,12 @@ export const EventListItem = ({
         <p className="event-list-item__date">{date}</p>
         <h3 className="event-list-item__title">{title}</h3>
         <p className="event-list-item__description">{description}</p>
-        <p className="event-list-item__location">{location}</p>
+        <div className="event-list-item__location-wrapper">
+          <p className="event-list-item__location">{location}</p>
+        </div>
         <div className="event-list-item__schedule">
           <time className="event-list-item__time">{time}</time>
-          <p className="event-list-item__pricing">{price} KR</p>
+          <p className="event-list-item__pricing">{price}</p>
         </div>
       </div>
       <ArrowSmallRight />

@@ -35,7 +35,7 @@ export default {
       control: { type: "text" },
     },
     price: {
-      defaultValue: 80,
+      defaultValue: "80 KR",
       control: { type: "number" },
     },
     href: {
