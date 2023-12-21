@@ -3,7 +3,7 @@ import EventList from "./EventList";
 import eventListData from "./EventListData";
 
 export default {
-  title: "Blocks / Event List",
+  title: "Library / Event List",
   component: EventList,
   parameters: {
     design: {

@@ -1,4 +1,4 @@
-import { EventListItemProps } from "../../Library/event-list-item/EventListItem";
+import { EventListItemProps } from "../event-list-item/EventListItem";
 
 const eventListData: EventListItemProps[] = [
   {

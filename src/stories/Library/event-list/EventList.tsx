@@ -1,7 +1,7 @@
 import {
   EventListItem,
   EventListItemProps,
-} from "../../Library/event-list-item/EventListItem";
+} from "../event-list-item/EventListItem";
 
 type EventListProps = {
   events: EventListItemProps[];
