@@ -1,7 +1,7 @@
 .event-list {
   max-width: $layout__max-width;
   margin: 0 auto;
-  padding: 0 $s-md;
+  padding: $s-xl $s-md;
 }
 .event-list__item {
   list-style: none;
