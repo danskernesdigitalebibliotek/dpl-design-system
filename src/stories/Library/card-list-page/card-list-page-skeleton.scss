@@ -1,14 +1,14 @@
 .card-list-page__skeleton-facet-line {
   &--mobile {
     display: block;
-    @include breakpoint-s {
+    @include media-query__small {
       display: none;
     }
   }
 
   &--desktop {
     display: none;
-    @include breakpoint-s {
+    @include media-query__small {
       display: block;
     }
   }

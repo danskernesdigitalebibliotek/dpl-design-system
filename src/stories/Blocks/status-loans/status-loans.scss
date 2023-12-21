@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  @include breakpoint-s {
+  @include media-query__small {
     width: 50%;
   }
 }

@@ -1,0 +1,75 @@
+$font__title: "Lora", serif;
+$font__body: "Noto Sans JP", sans-serif;
+$font__accent: "Gochi Hand", cursive;
+$font__weight--normal: 400;
+$font__weight--semi-bold: 500;
+$font__weight--bold: 700;
+
+// Since we host the fonts ourselves, they may need to be updated in the future
+// We use this online open source tool to retrieve fonts & their css definition:
+// https://gwfh.mranftl.com/fonts
+/* noto-sans-jp-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/noto-sans-jp-v42-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../fonts/noto-sans-jp-v42-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* noto-sans-jp-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/noto-sans-jp-v42-latin-500.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../fonts/noto-sans-jp-v42-latin-500.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* noto-sans-jp-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/noto-sans-jp-v42-latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../fonts/noto-sans-jp-v42-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lora-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lora-v26-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../fonts/lora-v26-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lora-italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Lora";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/lora-v26-latin-italic.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../fonts/lora-v26-latin-italic.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* gochi-hand-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Gochi Hand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/gochi-hand-v19-latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+      url("../fonts/gochi-hand-v19-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

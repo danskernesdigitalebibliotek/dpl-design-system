@@ -49,6 +49,7 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img {
+  height: auto;
   max-width: 100%;
   display: block;
 }
@@ -69,14 +70,4 @@ input[type="reset"] {
   padding: 0;
   border: inherit;
   background-color: inherit;
-}
-
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }

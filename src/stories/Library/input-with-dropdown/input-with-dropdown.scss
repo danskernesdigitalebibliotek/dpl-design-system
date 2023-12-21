@@ -6,22 +6,22 @@
   margin-bottom: $s-md;
   padding-right: 48px;
 
-  @include breakpoint-s {
+  @include media-query__small {
     margin-bottom: $s-lg;
     flex-direction: row;
-    padding-right: 0px;
+    padding-right: 0;
     height: 48px;
   }
 
-  @include breakpoint-m {
+  @include media-query__medium {
     margin-bottom: $s-lg;
   }
 
   &__input {
-    @extend %text-body-small-regular;
+    @include typography($typo__body-small);
     width: 100%;
     min-height: 48px;
-    border: 1px solid $c-global-tertiary-1;
+    border: 1px solid $color__global-tertiary-1;
     padding-left: $s-md;
     background-color: transparent;
   }
@@ -32,7 +32,7 @@
     min-height: 48px;
     margin-top: -1px;
 
-    @include breakpoint-s {
+    @include media-query__small {
       width: 200px;
       margin: 0 0 0 -1px;
     }
@@ -45,7 +45,7 @@
     top: 12px;
     right: $s-sm;
 
-    @include breakpoint-s {
+    @include media-query__small {
       margin: 0 $s-md $s-lg $s-md;
       position: relative;
     }

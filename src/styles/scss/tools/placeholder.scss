@@ -1,0 +1,70 @@
+// stylelint-disable plugin/stylelint-bem-namics
+%text-ellipsis-two-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+%text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+%text-inline-link {
+  text-decoration: underline solid black;
+  text-underline-offset: 0.3em;
+  transition: text-underline-offset 0.1s ease-in-out;
+
+  &:hover {
+    color: $color__text-primary-black;
+    text-underline-offset: 0.2em;
+  }
+}
+
+%link-tag {
+  @include typography($typo__body-placeholder);
+
+  text-decoration: none;
+  color: $color__text-primary-black;
+  display: inline-block;
+  width: fit-content;
+
+  // Hide arrow
+  &::after {
+    display: block;
+    content: "";
+    border-bottom: solid 1px;
+    transform: scaleX(1);
+    transition: transform 300ms ease-in-out;
+    transform-origin: 100% 50%;
+    padding-bottom: 2px;
+  }
+
+  // Show arrow on hover
+  &:hover::after {
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+  }
+}
+
+%button-link {
+  @extend %link-tag;
+
+  @include typography($typo__body-small);
+}
+
+%identity-placeholder {
+  background-color: var(--tint-color-120);
+  border: $s-lg solid $color__identity-primary;
+
+  @include media-query__small {
+    border: $s-2xl solid $color__identity-primary;
+  }
+}
+
+// stylelint-enable plugin/stylelint-bem-namics
