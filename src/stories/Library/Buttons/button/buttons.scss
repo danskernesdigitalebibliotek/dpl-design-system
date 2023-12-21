@@ -1,5 +1,6 @@
 $color__btn-border-active: $color__text-primary-black;
 $color__btn-border-disabled: $color__global-tertiary-2;
+$color__btn-filled-hover: $color__text-secondary-gray;
 
 .btn-icon {
   margin-left: $s-md;
@@ -25,10 +26,16 @@ $color__btn-border-disabled: $color__global-tertiary-2;
 
   @include typography($typo__button);
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     .btn-collapsible {
       display: block;
     }
+  }
+
+  &:focus-visible {
+    outline: 2px solid black;
+    box-shadow: inset 0 0 0 3px white;
   }
 
   &[disabled] {
@@ -76,8 +83,10 @@ $color__btn-border-disabled: $color__global-tertiary-2;
   background-color: $color__text-primary-black;
   color: $color__text-primary-white;
 
-  &:hover {
-    opacity: 0.7;
+  &:hover,
+  &:focus-visible {
+    background-color: $color__btn-filled-hover;
+    border-color: $color__btn-filled-hover;
   }
 }
 
@@ -85,7 +94,8 @@ $color__btn-border-disabled: $color__global-tertiary-2;
   background-color: transparent;
   color: $color__text-primary-black;
 
-  &:not([disabled]):hover {
+  &:not([disabled]):hover,
+  &:not([disabled]):focus-visible {
     background-color: $color__text-primary-black;
     color: $color__text-primary-white;
   }
