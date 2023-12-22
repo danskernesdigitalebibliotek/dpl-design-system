@@ -1,0 +1,109 @@
+// Layout width variables
+// we can move these variables to a separate file if you think this way is bad,
+// sane goes for the mixins.
+// but since its' all to do with the layout specifically i wouldn't mind
+// keeping things that are related to each other in the same file.
+
+$layout__max-width--small: 768px;
+$layout__max-width: 1024px;
+$layout__max-width--large: 1440px;
+
+$layout__max-width--text: 780px;
+$layout__max-width--single-media: 896px;
+$layout__max-width--multiple-medias: 1240px;
+
+// Context-specific spacing variables if something changes down the line.
+$_layout-width: $layout__max-width;
+$_layout-width--small: $layout__max-width--small;
+$_layout-width--large: $layout__max-width--large;
+
+$_layout-padding: $s-md;
+$_layout-padding--small: $s-sm;
+$_layout-padding--large: $s-lg;
+
+$_layout-spacing: $s-lg;
+$_layout-spacing--small: $s-md;
+$_layout-spacing--large: $s-xl;
+
+// Mixin for layout container
+@mixin layout-container(
+  $max-width: $_layout-width,
+  $padding: $_layout-padding
+) {
+  max-width: $max-width;
+  margin: auto;
+  padding-left: $padding;
+  padding-right: $padding;
+  box-sizing: border-box;
+}
+
+// Mixin for vertical spacing
+@mixin vertical-spacing($top: $_layout-spacing, $bottom: $_layout-spacing) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+.layout__width {
+  @include layout-container;
+
+  &--small {
+    @include layout-container($max-width: $_layout-width--small);
+  }
+
+  &--large {
+    @include layout-container($max-width: $_layout-width--large);
+  }
+}
+
+.layout__padding {
+  padding-left: $_layout-padding;
+  padding-right: $_layout-padding;
+
+  &--none {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--small {
+    padding-left: $_layout-padding--small;
+    padding-right: $_layout-padding--small;
+  }
+
+  &--large {
+    padding-left: $_layout-padding--large;
+    padding-right: $_layout-padding--large;
+  }
+}
+
+// Vertical spacing management using context-specific variables
+.layout__vertical-spacing {
+  @include vertical-spacing;
+
+  &--small {
+    @include vertical-spacing(
+      $top: $_layout-spacing--small,
+      $bottom: $_layout-spacing--small
+    );
+  }
+
+  &--large {
+    @include vertical-spacing(
+      $top: $_layout-spacing--large,
+      $bottom: $_layout-spacing--large
+    );
+  }
+}
+
+// An example of a section/element that requires breakpoint modifications.
+.layout__special-section-or-BEM-name {
+  @include layout-container;
+  @include vertical-spacing;
+
+  @include media-query__small() {
+    @include layout-container($padding: $_layout-padding--large);
+    @include vertical-spacing(
+      $top: $_layout-spacing--large,
+      $bottom: $_layout-spacing--large
+    );
+  }
+}
