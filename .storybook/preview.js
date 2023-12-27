@@ -1,4 +1,5 @@
 export const parameters = {
+  layout: "fullscreen",
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
@@ -13,6 +14,6 @@ export const parameters = {
     // Set the viewport widths that Chromatic tests with globally.
     // 400 lies between our screen-xs & screen-s variables.
     // 1200 is the chromatic viewport we were using as default before adding an extra one for phones.
-    viewports: [400, 1200]
+    viewports: [400, 1200],
   },
 };
