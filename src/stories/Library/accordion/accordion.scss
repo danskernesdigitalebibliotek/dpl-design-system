@@ -38,8 +38,8 @@
 .accordion__header {
   height: $s-3xl;
 
-  button:focus {
-    outline: -webkit-focus-ring-color auto 5px;
+  button {
+    @extend %default-focus-visible;
   }
 }
 
