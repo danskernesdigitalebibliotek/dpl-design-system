@@ -12,6 +12,7 @@ export default {
       type: "figma",
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=656%3A5407",
     },
+    layout: "centered",
   },
   argTypes: {
     fill: {

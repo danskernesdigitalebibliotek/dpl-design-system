@@ -4,7 +4,9 @@ import ButtonExpand, { ButtonExpandProps } from "./ButtonExpand";
 export default {
   title: "Library / Buttons / Button Expand",
   component: ButtonExpand,
-  parameters: {},
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     showMore: {
       control: {

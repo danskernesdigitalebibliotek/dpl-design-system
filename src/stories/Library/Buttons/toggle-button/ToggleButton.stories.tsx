@@ -11,6 +11,7 @@ export default {
       type: "figma",
       url: "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=607%3A35282",
     },
+    layout: "centered",
   },
   argTypes: {
     isChecked: {

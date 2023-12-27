@@ -7,7 +7,9 @@ export default {
   component: StatusLabel,
   decorators: [withDesign],
   argTypes: {},
-  parameters: {},
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof StatusLabel>;
 
 const Template: ComponentStory<typeof StatusLabel> = (args) => (
