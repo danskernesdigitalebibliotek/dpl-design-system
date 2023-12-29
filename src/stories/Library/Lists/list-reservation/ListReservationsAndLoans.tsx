@@ -103,7 +103,9 @@ export const ListReservationsAndLoans = (
               <p className="text-body-medium-medium">Gebyr {fee},-</p>
             </div>
           ) : null}
-          <ArrowSmallRight />
+          <button type="button" className="arrow-button">
+            <ArrowSmallRight />
+          </button>
         </div>
       </div>
     </div>
