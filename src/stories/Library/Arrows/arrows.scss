@@ -42,3 +42,11 @@
 .arrow__link {
   text-decoration: none;
 }
+
+.arrow-button {
+  width: 101px;
+
+  @include media-query__small {
+    display: none;
+  }
+}
