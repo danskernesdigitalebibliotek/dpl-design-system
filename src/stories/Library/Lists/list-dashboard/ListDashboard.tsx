@@ -34,7 +34,9 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
       </span>
       {label && <StatusLabel label={label.label} status={label.status} />}
       {showDot && <div className="list-dashboard__dot" />}
-      <ArrowSmallRight className="list-dashboard__arrow" />
+      <div className="list-dashboard__arrow">
+        <ArrowSmallRight />
+      </div>
     </a>
   );
 };
