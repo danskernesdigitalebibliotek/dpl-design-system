@@ -10,7 +10,7 @@ export const Counter = (props: CounterProps) => {
   const { value, label, percentage, status, isReady } = props;
 
   function getColor() {
-    if (status === "danger") return "#d5364a";
+    if (status === "danger") return "#d22d43";
     if (status === "warning") return "#f7bf42";
     if (status === "info") return "#068802";
     if (status === "neutral") return "#484848";
