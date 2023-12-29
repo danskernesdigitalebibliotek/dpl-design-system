@@ -17,7 +17,7 @@ export default {
       type: "figma",
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=7605%3A54868&mode=design&t=MoXpQuI4TAXRxRDe-1",
     },
-    layout: "fullscreen",
+    layout: "padded",
   },
 } as ComponentMeta<typeof DatePicker>;
 

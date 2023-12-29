@@ -9,7 +9,7 @@ export default {
       type: "figma",
       url: "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=1239%3A66855",
     },
-    layout: "fullscreen",
+    layout: "padded",
   },
   argTypes: {
     amount: {

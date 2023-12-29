@@ -15,6 +15,7 @@ export default {
       type: "figma",
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1357%3A9754",
     },
+    layout: "padded",
   },
   argTypes: {
     list: {

@@ -19,6 +19,7 @@ export default {
       type: "figma",
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=274%3A6642",
     },
+    layout: "padded",
   },
 };
 

@@ -36,7 +36,9 @@ export default {
       },
     },
   },
-  parameters: {},
+  parameters: {
+    layout: "centered",
+  },
 } as ComponentMeta<typeof Checkbox>;
 
 const Template: ComponentStory<typeof Checkbox> = (args) => (
