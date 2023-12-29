@@ -67,4 +67,10 @@
   }
 }
 
+%default-focus-visible {
+  &:focus-visible {
+    outline: 2px solid $color__text-primary-black;
+  }
+}
+
 // stylelint-enable plugin/stylelint-bem-namics
