@@ -25,7 +25,6 @@
     "chromatic": "npx chromatic --exit-zero-on-changes",
     "lint": "concurrently 'yarn:js:lint' 'yarn:css:lint' 'yarn:markdown:lint'",
     "format": "concurrently 'yarn:js:format' 'yarn:css:format' 'yarn:markdown:format'"
-
   },
   "browserslist": {
     "production": [
@@ -53,7 +52,7 @@
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.5.1",
     "@types/jest": "^29.5.11",
-    "@types/node": "^16.0.0",
+    "@types/node": "^20.10.5",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
