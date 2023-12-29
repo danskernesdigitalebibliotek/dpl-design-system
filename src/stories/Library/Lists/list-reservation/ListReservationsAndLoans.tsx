@@ -103,7 +103,11 @@ export const ListReservationsAndLoans = (
               <p className="text-body-medium-medium">Gebyr {fee},-</p>
             </div>
           ) : null}
-          <button type="button" className="arrow-button">
+          <button
+            type="button"
+            className="arrow-button"
+            aria-label="see reservation"
+          >
             <ArrowSmallRight />
           </button>
         </div>
