@@ -126,7 +126,7 @@ $list-reservation-space-desktop: 24px;
   height: 100%;
   display: grid;
   align-items: flex-end;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr max-content;
 
   @include media-query__small {
     align-items: center;
