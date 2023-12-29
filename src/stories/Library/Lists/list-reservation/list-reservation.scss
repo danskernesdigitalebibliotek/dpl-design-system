@@ -17,6 +17,7 @@ $list-reservation-space-desktop: 24px;
   box-shadow: 0 $s-xs 20px rgb(0 0 0 / 10%);
   position: relative;
   padding: $list-reservation-space-mobile;
+  cursor: pointer;
 
   @include media-query__small {
     grid-template-columns: 1fr 1fr;
