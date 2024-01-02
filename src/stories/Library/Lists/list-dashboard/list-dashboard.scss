@@ -43,4 +43,9 @@
 .list-dashboard__arrow {
   margin-left: auto;
   width: 90px; // Avoids extending beyond the edge of the box.
+  display: inline-block;
+
+  @include media-query__small("max-width") {
+    display: none;
+  }
 }
