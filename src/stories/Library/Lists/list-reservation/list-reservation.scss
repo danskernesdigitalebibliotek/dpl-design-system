@@ -7,6 +7,7 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation {
   @include show-svg-on-hover(".list-reservation__status");
+  @include show-svg-on-hover(".arrow-button");
 
   background-color: $color__text-primary-white;
   border: 0;
@@ -16,6 +17,7 @@ $list-reservation-space-desktop: 24px;
   box-shadow: 0 $s-xs 20px rgb(0 0 0 / 10%);
   position: relative;
   padding: $list-reservation-space-mobile;
+  cursor: pointer;
 
   @include media-query__small {
     grid-template-columns: 1fr 1fr;
@@ -126,7 +128,7 @@ $list-reservation-space-desktop: 24px;
   height: 100%;
   display: grid;
   align-items: flex-end;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr max-content;
 
   @include media-query__small {
     align-items: center;

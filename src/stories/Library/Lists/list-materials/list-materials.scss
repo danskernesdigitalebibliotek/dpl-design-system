@@ -1,4 +1,6 @@
 .list-materials {
+  @include show-svg-on-hover(".list-dashboard__arrow");
+
   display: flex;
   min-height: 96px;
   padding: $s-md;
