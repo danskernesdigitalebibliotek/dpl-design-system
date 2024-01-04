@@ -102,8 +102,8 @@
 }
 
 .border-secondary-gray {
-  border: 1px solid $color__text-secondary-gray;
-  stroke: $color__text-secondary-gray;
+  border: 1px solid $color__global-grey;
+  stroke: $color__global-grey;
 }
 
 // Only used internally for bg-color in Colors comp.
@@ -116,7 +116,7 @@
 }
 
 .bg-color-secondary-gray {
-  background-color: $color__text-secondary-gray;
+  background-color: $color__global-grey;
 }
 
 // *** Signal colors ***

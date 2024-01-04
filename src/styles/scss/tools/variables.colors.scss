@@ -5,6 +5,7 @@ $color__global-tertiary-1: #dbdbdb;
 $color__global-tertiary-2: #707070;
 $color__global-white: #fff;
 $color__global-black: #000;
+$color__global-grey: #484848;
 $color__identity-primary: hsl(
   var(--identity-color-h),
   var(--identity-color-s),
@@ -14,7 +15,7 @@ $color__identity-primary: hsl(
 
 $color__text-primary-white: $color__global-white;
 $color__text-primary-black: $color__global-black;
-$color__text-secondary-gray: #484848;
+$color__text-secondary-gray: $color__global-grey;
 
 $color__signal-success: #068802;
 $color__signal-aware: #f7bf42;

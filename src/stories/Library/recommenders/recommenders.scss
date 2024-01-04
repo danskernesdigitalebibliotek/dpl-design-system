@@ -1,7 +1,7 @@
 .recommender {
   background-color: $color__global-tertiary-2;
   color: $color__text-primary-white;
-  border-color: $color__text-secondary-gray;
+  border-color: $color__global-grey;
 
   &--bright {
     background-color: $color__global-primary;
@@ -73,7 +73,7 @@
 }
 
 .simple-material {
-  border: 1px solid $color__text-secondary-gray;
+  border: 1px solid $color__global-grey;
   padding: 30px;
   display: flex;
   width: 100%;

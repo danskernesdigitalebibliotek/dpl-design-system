@@ -68,13 +68,13 @@
 }
 
 .checkbox__label:hover .checkbox__icon:first-of-type {
-  border-color: $color__text-secondary-gray;
+  border-color: $color__global-grey;
 }
 
 /* stylelint-disable selector-max-compound-selectors */
 .checkbox__input:checked + .checkbox__label .checkbox__icon:first-of-type {
-  background: $color__text-secondary-gray;
-  border-color: $color__text-secondary-gray;
+  background: $color__global-grey;
+  border-color: $color__global-grey;
   animation: zoom-in-out 0.3s ease;
 
   svg {
@@ -85,7 +85,7 @@
 .checkbox__input:focus + .checkbox__label {
   // TODO: Determine a proper design for elements in focus.
   // This is a temporary solution to make it easier to test keyboard navigation.
-  outline: solid 1px $color__text-secondary-gray;
+  outline: solid 1px $color__global-grey;
   outline-offset: 0;
 }
 
