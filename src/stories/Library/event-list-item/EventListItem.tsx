@@ -4,6 +4,7 @@ import { Tag } from "../tag/Tag";
 
 export type EventListItemProps = {
   image: string;
+  tagText: string;
   title: string;
   description: string;
   date: string;
@@ -15,6 +16,7 @@ export type EventListItemProps = {
 
 export const EventListItem: React.FC<EventListItemProps> = ({
   image,
+  tagText,
   title,
   description,
   date,
@@ -30,7 +32,7 @@ export const EventListItem: React.FC<EventListItemProps> = ({
       </div>
       <div className="event-list-item__content">
         <Tag hasBackground className="event-list-item__tag">
-          foredrag
+          {tagText}
         </Tag>
         <p className="event-list-item__date">{date}</p>
         <h2 className="event-list-item__title">{title}</h2>

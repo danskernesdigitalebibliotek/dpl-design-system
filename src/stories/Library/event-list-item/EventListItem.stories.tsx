@@ -13,6 +13,10 @@ export default {
 
       control: { type: "text" },
     },
+    tagText: {
+      defaultValue: "Foredrag",
+      control: { type: "text" },
+    },
     title: {
       defaultValue: "Ny indsamling til Læs for livet",
       control: { type: "text" },
