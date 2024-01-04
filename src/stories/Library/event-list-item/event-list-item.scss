@@ -70,8 +70,7 @@
 .event-list-item__description {
   grid-area: description;
   @include typography($typo__small-caption);
-  @extend %text-ellipsis-two-lines;
-  -webkit-line-clamp: 3;
+  @include text-ellipsis-truncation(3);
   margin-bottom: $s-xl;
 }
 

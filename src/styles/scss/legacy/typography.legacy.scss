@@ -89,5 +89,5 @@
 }
 
 .ellipsis-two-lines {
-  @extend %text-ellipsis-two-lines;
+  @include text-ellipsis-truncation(2);
 }
