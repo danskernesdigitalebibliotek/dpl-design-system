@@ -55,3 +55,7 @@
   padding-right: $padding;
   box-sizing: border-box;
 }
+
+@mixin vertical-spacing {
+  margin-bottom: $s-2xl;
+}

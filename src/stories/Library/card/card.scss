@@ -1,0 +1,108 @@
+.card {
+  $_card-mobile-peek: 50px;
+
+  position: relative;
+  width: 200px;
+  max-width: 100%;
+  word-break: break-word;
+
+  .slider & {
+    // We dont want the max-width to be 100%, as we want peek-effect on mobile.
+    max-width: calc(100vw - #{$_card-mobile-peek});
+  }
+
+  @include media-query__name($breakpoint__large-card) {
+    width: 440px;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.card__media {
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
+  background-color: var(--tint-color-120);
+  margin-bottom: $s-sm;
+}
+
+.card--has-image {
+  // This is necessary to get object-fit to work.
+  * {
+    height: 100%;
+  }
+}
+
+.card--has-no-image {
+  @extend %identity-pagefold;
+
+  .card__media {
+    @extend %identity-placeholder;
+  }
+}
+
+.card__placeholder-text {
+  @include typography($typo__card-placeholder);
+  @extend %identity-placeholder-inner-padding;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+
+  align-items: end;
+  color: $color__text-primary-white;
+}
+
+.card[data-variant="large"] {
+  width: 327px;
+
+  @include media-query__name($breakpoint__large-card) {
+    width: 551px;
+  }
+
+  .card__media {
+    // Odd aspect ratio, taken from the design.
+    aspect-ratio: 551/312;
+  }
+}
+
+.card__tags {
+  display: flex;
+  margin-bottom: $s-sm;
+}
+
+.card__tag {
+  @include typography($typo__byline-tags);
+}
+
+// Placing spacing and spacer line between tags.
+.card__tag + .card__tag {
+  position: relative;
+  margin-left: $s-sm;
+  padding-left: $s-sm;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $s-xs;
+    bottom: $s-xs;
+    left: 0;
+    width: 1px;
+    background-color: $color__text-primary-black;
+  }
+}
+
+.card__tag--type {
+  color: $color__text-inactive;
+}
+
+.card__title {
+  @include typography($typo__h3);
+}

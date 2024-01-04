@@ -1,0 +1,52 @@
+.slider {
+  @include vertical-spacing;
+}
+
+.slider__header {
+  @include layout-container;
+
+  display: flex;
+  margin-bottom: $s-lg;
+}
+
+.slider__title {
+  @extend %title-underline;
+  @include typography($typo__h2);
+
+  display: flex;
+}
+
+.slider__controls {
+  display: none;
+  flex-direction: column;
+  flex-grow: 1;
+  align-content: end;
+
+  @include media-query__small {
+    display: flex;
+  }
+}
+
+.slider__control {
+  width: 115px;
+  max-width: 100%;
+  margin-left: auto;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+
+  &[disabled] {
+    opacity: 0;
+    width: 0;
+  }
+}
+
+.slider__item {
+  width: fit-content !important;
+  margin-right: 5%;
+
+  // For some reason, all no-image cards in the slider should be pulled
+  // up higher than the image ones.
+  .card--has-image {
+    margin-top: $s-xl;
+  }
+}

@@ -13,9 +13,15 @@ $color__identity-primary: hsl(
   1
 );
 
+$color__page-bg: $color__global-primary;
+
 $color__text-primary-white: $color__global-white;
 $color__text-primary-black: $color__global-black;
 $color__text-secondary-gray: $color__global-grey;
+$color__text-primary-white: #fff;
+$color__text-primary-black: #000;
+$color__text-secondary-gray: #484848;
+$color__text-inactive: $color__global-tertiary-2;
 
 $color__signal-success: #068802;
 $color__signal-aware: #f7bf42;
