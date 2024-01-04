@@ -19,7 +19,7 @@
 }
 
 :root {
-  --parent-bg-color: #fff;
+  --parent-bg-color: $color__global-white;
 }
 
 .uppercase {
@@ -76,7 +76,7 @@
     &:focus {
       outline: none;
       border: 1px solid $color__text-primary-black;
-      background-color: $color__text-primary-white;
+      background-color: $color__global-white;
     }
   }
 }

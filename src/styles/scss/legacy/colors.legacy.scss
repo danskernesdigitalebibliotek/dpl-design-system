@@ -92,8 +92,8 @@
 }
 
 .border-primary-white {
-  border: 1px solid $color__text-primary-white;
-  stroke: $color__text-primary-white;
+  border: 1px solid $color__global-white;
+  stroke: $color__global-white;
 }
 
 .border-primary-black {
@@ -108,7 +108,7 @@
 
 // Only used internally for bg-color in Colors comp.
 .bg-color-primary-white {
-  background-color: $color__text-primary-white;
+  background-color: $color__global-white;
 }
 
 .bg-color-primary-black {

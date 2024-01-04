@@ -3,7 +3,7 @@
   text-decoration: none;
   display: grid;
   padding: $s-lg;
-  background-color: #fcfcfc;
+  background-color: $color__global-white;
   margin: 0 auto;
   grid-template-areas:
     "image"
@@ -137,7 +137,7 @@
 
   .event-list-item__description {
     margin-bottom: unset;
-    -webkit-line-clamp: 2;
+    @include text-ellipsis-truncation(2);
     grid-area: description;
   }
 

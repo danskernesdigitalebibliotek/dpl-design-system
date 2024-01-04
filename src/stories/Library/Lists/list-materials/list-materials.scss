@@ -4,7 +4,7 @@
   display: flex;
   min-height: 96px;
   padding: $s-md;
-  background-color: $color__text-primary-white;
+  background-color: $color__global-white;
   justify-content: space-between;
 
   @include media-query__small {
