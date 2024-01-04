@@ -97,8 +97,8 @@
 }
 
 .border-primary-black {
-  border: 1px solid $color__text-primary-black;
-  stroke: $color__text-primary-black;
+  border: 1px solid $color__global-black;
+  stroke: $color__global-black;
 }
 
 .border-secondary-gray {
@@ -112,7 +112,7 @@
 }
 
 .bg-color-primary-black {
-  background-color: $color__text-primary-black;
+  background-color: $color__global-black;
 }
 
 .bg-color-secondary-gray {

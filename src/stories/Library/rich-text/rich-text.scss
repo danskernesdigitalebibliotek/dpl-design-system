@@ -51,7 +51,7 @@
   ul > li::before {
     content: "";
     height: 1px;
-    background-color: black;
+    background-color: $color__global-black;
   }
 
   ol {

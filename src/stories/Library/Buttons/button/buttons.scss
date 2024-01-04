@@ -1,4 +1,4 @@
-$color__btn-border-active: $color__text-primary-black;
+$color__btn-border-active: $color__global-black;
 $color__btn-border-disabled: $color__global-tertiary-2;
 $color__btn-filled-hover: $color__text-secondary-gray;
 
@@ -80,7 +80,7 @@ $color__btn-filled-hover: $color__text-secondary-gray;
 }
 
 .btn-filled:not([disabled]) {
-  background-color: $color__text-primary-black;
+  background-color: $color__global-black;
   color: $color__text-primary-white;
 
   &:hover,
@@ -96,7 +96,7 @@ $color__btn-filled-hover: $color__text-secondary-gray;
 
   &:not([disabled]):hover,
   &:not([disabled]):focus-visible {
-    background-color: $color__text-primary-black;
+    background-color: $color__global-black;
     color: $color__text-primary-white;
   }
 }

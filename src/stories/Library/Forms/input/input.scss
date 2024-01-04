@@ -14,7 +14,7 @@
     height: 40px;
 
     &:focus {
-      border-bottom-color: #000;
+      border-bottom-color: $color__global-black;
       outline: none;
     }
   }
