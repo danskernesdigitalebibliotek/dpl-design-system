@@ -26,7 +26,6 @@
  * fixed by actually adding a class to the svg - or, a common wrapper class.
  */
 @mixin show-svg-on-hover($icon-container: "") {
-  // stylelint-disable-next-line plugin/stylelint-bem-namics
   #{$icon-container} > svg {
     visibility: hidden;
     opacity: 0;
@@ -40,7 +39,6 @@
     }
   }
 
-  // stylelint-disable-next-line plugin/stylelint-bem-namics
   &:hover #{$icon-container} > svg {
     visibility: visible;
     opacity: 1;

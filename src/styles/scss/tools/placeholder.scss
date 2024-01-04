@@ -1,4 +1,12 @@
-// stylelint-disable plugin/stylelint-bem-namics
+%text-ellipsis-two-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
 %text-truncate {
   white-space: nowrap;
   overflow: hidden;
@@ -81,4 +89,3 @@
   }
 }
 
-// stylelint-enable plugin/stylelint-bem-namics

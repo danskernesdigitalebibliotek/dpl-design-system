@@ -12,7 +12,7 @@
     "js:lint:watch": "chokidar './src/**/*.{js,jsx,ts,tsx}' -c 'yarn js:lint'",
     "js:format": "concurrently 'yarn:js:eslint -- --fix' 'yarn:js:prettier -- --write' --max-processes 1 --raw",
     "css:stylelint": "stylelint 'src/**/*.scss'",
-    "css:prettier": "prettier 'src/styles/**/*.scss'",
+    "css:prettier": "prettier 'src/**/*.scss'",
     "css:lint": "concurrently 'yarn:css:stylelint' 'yarn:css:prettier -- --check' --raw",
     "css:lint:watch": "chokidar 'src/**/*.scss' -c 'yarn css:lint'",
     "css:format": "concurrently 'yarn:css:stylelint -- --fix' 'yarn:css:prettier -- --write' --max-processes 1 --raw",
@@ -41,7 +41,6 @@
   },
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^6.0.1",
-    "@namics/stylelint-bem": "^7.0.0",
     "@storybook/addon-a11y": "^6.5.9",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
