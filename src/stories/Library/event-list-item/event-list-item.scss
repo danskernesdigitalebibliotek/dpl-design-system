@@ -11,6 +11,14 @@
   grid-template-rows: auto;
   row-gap: $s-md;
   max-width: $layout__max-width;
+
+  // Extending display none, as mixin show-svg-on-hover
+  // is only working up to __small breakpoint
+  @include media-query__medium("max-width") {
+    > svg {
+      display: none;
+    }
+  }
 }
 
 .event-list-item__image-container {
@@ -166,6 +174,5 @@
 
   .event-list-item > svg {
     grid-area: arrow;
-    display: initial;
   }
 }
