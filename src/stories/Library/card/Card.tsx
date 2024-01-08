@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react";
 import clsx from "clsx";
 
 type CardProps = {
-  variant: string;
+  variant?: string;
   typeTag?: string;
   dateTag?: string;
   title?: string;

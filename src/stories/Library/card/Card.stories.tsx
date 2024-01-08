@@ -51,6 +51,7 @@ export default {
 const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
 const XLarge = Template.bind({});
+
 XLarge.args = {
   variant: "x-large",
 };
@@ -72,4 +73,35 @@ LargeNoImage.args = {
   image: undefined,
 };
 
-export { XLarge, XLargeNoImage, Large, LargeNoImage };
+const Medium = Template.bind({});
+Medium.args = {
+  variant: "medium",
+};
+
+const MediumNoImage = Template.bind({});
+MediumNoImage.args = {
+  variant: "medium",
+  image: undefined,
+};
+
+const Small = Template.bind({});
+Small.args = {
+  variant: "small",
+};
+
+const SmallNoImage = Template.bind({});
+SmallNoImage.args = {
+  variant: "small",
+  image: undefined,
+};
+
+export {
+  XLarge,
+  XLargeNoImage,
+  Large,
+  LargeNoImage,
+  Medium,
+  MediumNoImage,
+  Small,
+  SmallNoImage,
+};

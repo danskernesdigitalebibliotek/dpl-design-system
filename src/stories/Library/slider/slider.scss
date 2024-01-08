@@ -36,17 +36,39 @@
 
   &[disabled] {
     opacity: 0;
-    width: 0;
   }
 }
 
 .slider__item {
+  $_card-mobile-peek: 50px;
+
   width: fit-content !important;
   margin-right: 5%;
+
+  .card {
+    // We dont want the max-width to be 100%, as we want peek-effect on mobile.
+    max-width: calc(100vw - #{$_card-mobile-peek});
+  }
 
   // For some reason, all no-image cards in the slider should be pulled
   // up higher than the image ones.
   .card--has-image {
     margin-top: $s-xl;
+  }
+
+  // The slider follows a very specific card pattern:
+  // 1: large, 2: x-large, 3: medium, 4: small - repeating.
+  @for $i from 1 through 4 {
+    &:nth-child(4n + #{$i}) .card {
+      @if $i == 1 {
+        @extend %card-variant--large;
+      } @else if $i == 2 {
+        @extend %card-variant--x-large;
+      } @else if $i == 3 {
+        @extend %card-variant--medium;
+      } @else if $i == 4 {
+        @extend %card-variant--small;
+      }
+    }
   }
 }

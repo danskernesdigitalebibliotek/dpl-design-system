@@ -29,35 +29,44 @@ export default {
 
 const Template: ComponentStory<typeof Slider> = (args) => <Slider {...args} />;
 
-const title = "Bøger som har gjort en forskel for romanens udvikling";
-const typeTag = "Arrangement";
-const dateTag = "06 Dec 2022";
 const imageUrl =
   "https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=2815&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const image = <ImageCredited src={imageUrl} />;
-const placeholderText = "Stine Pilgaard vinder De Gyldne Laurbær";
 
-const cardLarge = (
+const card = (
   <Card
-    variant="large"
-    title={title}
-    typeTag={typeTag}
-    dateTag={dateTag}
+    title="Bøger som har gjort en forskel for romanens udvikling"
+    typeTag="Nyhed"
+    dateTag="06 Dec 2022"
     image={image}
   />
 );
 
-const cardLargeNoImage = (
+const cardNoImage = (
   <Card
-    variant="large"
-    title={title}
-    typeTag={typeTag}
-    dateTag={dateTag}
-    placeholderText={placeholderText}
+    title="Fars legestue, hver onsdag"
+    typeTag="Arrangement"
+    dateTag="06 Okt - 28 Dec 2022"
+    placeholderText="Fri leg for alle aldre"
   />
 );
 
 export const Many = Template.bind({});
 Many.args = {
-  items: [cardLarge, cardLargeNoImage, cardLarge, cardLargeNoImage],
+  items: [
+    card,
+    cardNoImage,
+    card,
+    cardNoImage,
+    cardNoImage,
+    card,
+    cardNoImage,
+    card,
+    card,
+    cardNoImage,
+    card,
+    cardNoImage,
+    card,
+    card,
+  ],
 };

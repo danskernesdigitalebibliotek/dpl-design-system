@@ -1,12 +1,3 @@
-%text-ellipsis-two-lines {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: left;
-}
-
 %text-truncate {
   white-space: nowrap;
   overflow: hidden;
@@ -122,6 +113,7 @@
 
   &::before {
     content: "";
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -136,4 +128,3 @@
     }
   }
 }
-

@@ -291,6 +291,10 @@ $typo__byline-tags: (
     ),
 );
 
+$typo__byline-tags--small: (
+  mobile: map_get($typo__byline-tags, "mobile"),
+);
+
 $typo__rich-text-body: (
   mobile: (
     font-family: $font__body,
@@ -317,5 +321,19 @@ $typo__card-placeholder: (
   #{$breakpoint__large-card}: (
       font-size: 42px,
       line-height: 46px,
+    ),
+);
+
+$typo__card-placeholder--small: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 20px,
+    line-height: 24px,
+  ),
+  #{$breakpoint__large-card}: (
+      font-size: 28px,
+      line-height: 32px,
     ),
 );
