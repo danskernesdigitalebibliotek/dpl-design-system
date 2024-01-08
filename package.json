@@ -18,6 +18,7 @@
     "css:format": "concurrently 'yarn:css:stylelint -- --fix' 'yarn:css:prettier -- --write' --max-processes 1 --raw",
     "css:build": "sass base.scss:src/styles/css/base.css --style compressed",
     "css:watch": "yarn css:build -- --watch",
+    "build": "concurrently 'yarn:css:build' --raw",
     "markdown:lint": "markdownlint-cli2",
     "markdown:format": "markdownlint-cli2-fix",
     "watch": "concurrently 'yarn:js:lint:watch' 'yarn:css:lint:watch'",
