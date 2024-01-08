@@ -26,7 +26,6 @@ export const EventListItem: React.FC<EventListItemProps> = ({
 }) => {
   // Hardcoded placeholders for datetime
   // These are calculated in the corresponding template in the CMS
-  const placeholderDate = "2023-03-10"; // ISO format date
   const placeholderDateTime = "2023-03-10T15:00"; // ISO format date and time
 
   return (
@@ -38,9 +37,7 @@ export const EventListItem: React.FC<EventListItemProps> = ({
         <Tag hasBackground className="event-list-item__tag">
           {tagText}
         </Tag>
-        <time className="event-list-item__date" dateTime={placeholderDate}>
-          {date}
-        </time>
+        <div className="event-list-item__date">{date}</div>
         <h2 className="event-list-item__title">{title}</h2>
         <p className="event-list-item__description">{description}</p>
         <div className="event-list-item__location-wrapper">
