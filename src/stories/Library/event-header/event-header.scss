@@ -24,7 +24,7 @@
   display: grid;
   grid-template-columns: $s-3xl 1fr $s-3xl;
   grid-template-areas:
-    ". tag  ."
+    ". tags  tags"
     ". date  ."
     ". title  ."
     "btn btn btn";
@@ -35,9 +35,11 @@
   }
 }
 
-.event-header__tag {
-  grid-area: tag;
-  width: max-content;
+.event-header__tags {
+  grid-area: tags;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-bottom: $s-md;
   @include media-query__small {
     margin-bottom: $s-lg;
