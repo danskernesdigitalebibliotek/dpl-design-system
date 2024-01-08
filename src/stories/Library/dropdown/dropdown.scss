@@ -34,10 +34,8 @@
 
   @include typography($typo__button);
 
-  &:focus {
-    outline: none;
-    border-color: $color__text-primary-black;
-  }
+  // Chromeium based browsers will trigger focus when opening the dropdown
+  @extend %default-focus-visible;
 }
 
 .dropdown__option {

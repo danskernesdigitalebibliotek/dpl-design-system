@@ -1,4 +1,6 @@
 .list-dashboard {
+  @include show-svg-on-hover(".list-dashboard__arrow");
+
   display: flex;
   align-items: center;
   background: #fff;
@@ -15,12 +17,6 @@
 
     & .status-label {
       margin-left: unset;
-    }
-
-    &:hover {
-      .list-dashboard__arrow {
-        visibility: visible;
-      }
     }
   }
 }
@@ -45,12 +41,11 @@
 }
 
 .list-dashboard__arrow {
-  display: none;
-  visibility: hidden;
   margin-left: auto;
   width: 90px; // Avoids extending beyond the edge of the box.
+  display: inline-block;
 
-  @include media-query__small {
-    display: block;
+  @include media-query__small("max-width") {
+    display: none;
   }
 }

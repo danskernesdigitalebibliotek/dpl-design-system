@@ -42,3 +42,9 @@
 .arrow__link {
   text-decoration: none;
 }
+
+.arrow-button {
+  // This width mimics what the expanded svg width. The class is intended to be
+  // used when the arrow needs to be within a button so they look the same.
+  width: 101px;
+}

@@ -6,7 +6,5 @@
     fill: $color__global-tertiary-2;
   }
 
-  &.dpl-icon-button:focus {
-    outline: $color__text-primary-black 5px auto;
-  }
+  @extend %default-focus-visible;
 }

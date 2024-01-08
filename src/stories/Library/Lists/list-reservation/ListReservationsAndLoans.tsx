@@ -30,9 +30,9 @@ export const ListReservationsAndLoans = (
   return (
     <div className="list-reservation-container">
       <div
-        className={`list-reservation ${
-          isStacked && "list-reservation--stacked"
-        }`}
+        className={clsx("list-reservation arrow arrow__hover--right-small", [
+          { "list-reservation--stacked": isStacked },
+        ])}
       >
         <div className="list-reservation__material">
           <div>
@@ -103,7 +103,13 @@ export const ListReservationsAndLoans = (
               <p className="text-body-medium-medium">Gebyr {fee},-</p>
             </div>
           ) : null}
-          <ArrowSmallRight />
+          <button
+            type="button"
+            className="arrow-button"
+            aria-label="see reservation"
+          >
+            <ArrowSmallRight />
+          </button>
         </div>
       </div>
     </div>
