@@ -5,7 +5,26 @@ $font__weight--normal: 400;
 $font__weight--semi-bold: 500;
 $font__weight--bold: 700;
 
+/* 
+  Font Definitions:
+  Fonts are self-hosted to ensure performance and control over rendering.
+  Current font generation was done using Font Squirrel 
+  (https://www.fontsquirrel.com/), using the 'Optimal' setting. 
+  
+  Should fonts need to be update in the future, consider either: 
+  - Reusing Font Squirrel again for similar file size and rendering quality. 
+    Match existing settings for consistency.
+  - Using Google Web Fonts Helper (https://gwfh.mranftl.com/fonts) 
+    for ease of version tracking and broader format support.
+    The latter would make it possible to check if we are using a different 
+    versions and potentially track changes to a changelog.
+  - IMPORTANT: Remember that fonts are preloaded in the cms. If you change 
+    the font name, you will need to update the preload script in the cms.
+*/
+
+/* Font-Face Declarations */
 /* noto-sans--regular -  */
+
 @font-face {
   font-display: swap;
   font-family: "Noto Sans";
