@@ -60,10 +60,10 @@
 
 %identity-placeholder {
   background-color: var(--tint-color-120);
-  border: $s-lg solid $color__identity-primary;
+  border: $s-lg solid var(--tint-color-100);
 
   @include media-query__small {
-    border: $s-2xl solid $color__identity-primary;
+    border-width: $s-2xl;
   }
 }
 

@@ -1,3 +1,12 @@
+.logo {
+  img {
+    display: none;
+    @include media-query__small {
+      display: block;
+    }
+  }
+}
+
 .logo-fallback {
   @include typography($typo__body-small);
 }
@@ -8,4 +17,10 @@
 
 .logo-fallback__text-libraries {
   font-weight: 300;
+}
+
+.logo-fallback--has-image {
+  @include media-query__small {
+    display: none;
+  }
 }
