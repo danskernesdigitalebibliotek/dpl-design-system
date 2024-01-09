@@ -35,3 +35,103 @@ $layout__edge-spacing: $s-md;
   margin-top: $top;
   margin-bottom: $bottom;
 }
+
+// ########## Avoid using utilities as described in documentation ############
+
+// Utility classes for vertical spacing adjustments
+.layout__vertical-spacing {
+  @include vertical-spacing;
+
+  &--small {
+    @include vertical-spacing(
+      $_vertical-spacing--small,
+      $_vertical-spacing--small
+    );
+  }
+  &--medium {
+    @include vertical-spacing(
+      $_vertical-spacing--medium,
+      $_vertical-spacing--medium
+    );
+  }
+  &--large {
+    @include vertical-spacing(
+      $_vertical-spacing--large,
+      $_vertical-spacing--large
+    );
+  }
+  &--x-large {
+    @include vertical-spacing(
+      $_vertical-spacing--x-large,
+      $_vertical-spacing--x-large
+    );
+  }
+}
+
+// Utility classes for max-width adjustments
+.layout__max-width {
+  @include layout-container($padding: 0);
+
+  &--x-small {
+    @include layout-container(
+      $max-width: $layout__max-width--x-small,
+      $padding: 0
+    );
+  }
+  &--small {
+    @include layout-container(
+      $max-width: $layout__max-width--small,
+      $padding: 0
+    );
+  }
+  &--medium {
+    @include layout-container(
+      $max-width: $layout__max-width--medium,
+      $padding: 0
+    );
+  }
+  &--large {
+    @include layout-container(
+      $max-width: $layout__max-width--large,
+      $padding: 0
+    );
+  }
+  &--x-large {
+    @include layout-container(
+      $max-width: $layout__max-width--x-large,
+      $padding: 0
+    );
+  }
+  &--xx-large {
+    @include layout-container(
+      $max-width: $layout__max-width--xx-large,
+      $padding: 0
+    );
+  }
+}
+
+// Utility classes for edge-spacing (padding) adjustments
+.layout__edge-spacing {
+  padding-left: $s-md;
+  padding-right: $s-md;
+
+  &--small {
+    padding-left: $s-sm;
+    padding-right: $s-sm;
+  }
+
+  &--medium {
+    padding-left: $s-md;
+    padding-right: $s-md;
+  }
+
+  &--large {
+    padding-left: $s-lg;
+    padding-right: $s-lg;
+  }
+
+  &--x-large {
+    padding-left: $s-xl;
+    padding-right: $s-xl;
+  }
+}
