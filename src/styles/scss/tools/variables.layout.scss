@@ -1,10 +1,10 @@
-$layout__max-width: 1024px;
+// Layout max-width variables aligned with breakpoints
+$layout__max-width--x-small: 375px;
 $layout__max-width--small: 768px;
+$layout__max-width--medium: 1024px;
 $layout__max-width--large: 1440px;
-
-$layout__max-width--text: 780px;
-$layout__max-width--single-media: 896px;
-$layout__max-width--multiple-medias: 1240px;
+$layout__max-width--x-large: 1920px;
+$layout__max-width--xx-large: 2200px;
 
 // Some elements should not go out to the edge of the screen on small screens.
 // This is the padding that is always shown on the left and right.

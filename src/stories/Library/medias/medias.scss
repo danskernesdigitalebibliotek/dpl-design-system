@@ -1,4 +1,6 @@
 $_medias-breakpoint: 550px;
+$_max-width-single-media: 896px;
+$_max-width-multiple-medias: 1240px;
 
 .medias__item {
   width: 100%;
@@ -13,7 +15,7 @@ $_medias-breakpoint: 550px;
 }
 
 .medias--single {
-  @include layout-container($layout__max-width--single-media, 0);
+  @include layout-container($_max-width-single-media, 0);
 }
 
 @include media-query($_medias-breakpoint) {
@@ -50,7 +52,7 @@ $_medias-breakpoint: 550px;
 }
 
 .medias--multiple {
-  @include layout-container($layout__max-width--multiple-medias, 0);
+  @include layout-container($_max-width-multiple-medias, 0);
 
   .medias__item--last {
     img {
