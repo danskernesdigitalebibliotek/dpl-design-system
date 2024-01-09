@@ -6,6 +6,32 @@ $layout__max-width--large: 1440px;
 $layout__max-width--x-large: 1920px;
 $layout__max-width--xx-large: 2200px;
 
-// Some elements should not go out to the edge of the screen on small screens.
-// This is the padding that is always shown on the left and right.
-$layout__page-padding: $s-md;
+// Variables specifically for managing the vertical space between elements
+$_vertical-spacing--small: $s-sm;
+$_vertical-spacing--medium: $s-md;
+$_vertical-spacing--large: $s-lg;
+$_vertical-spacing--x-large: $s-xl;
+
+// Edge spacing for containers, ensures edge spacing for mobile or tablet.
+$layout__edge-spacing: $s-md;
+
+// Mixin for controlling max-width and edge-spacing(padding) of an element
+@mixin layout-container(
+  $max-width: $layout__max-width--medium,
+  $padding: $layout__edge-spacing
+) {
+  max-width: $max-width;
+  margin: auto;
+  padding-left: $padding;
+  padding-right: $padding;
+  box-sizing: border-box;
+}
+
+// Mixin for controlling vertical spacing(margin) of an element
+@mixin vertical-spacing(
+  $top: $_vertical-spacing--large,
+  $bottom: $_vertical-spacing--large
+) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}

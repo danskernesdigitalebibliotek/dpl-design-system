@@ -44,18 +44,3 @@
     opacity: 1;
   }
 }
-
-@mixin layout-container(
-  $max-width: $layout__max-width,
-  $padding: $layout__page-padding
-) {
-  max-width: $max-width;
-  margin: auto;
-  padding-left: $padding;
-  padding-right: $padding;
-  box-sizing: border-box;
-}
-
-@mixin vertical-spacing {
-  margin-bottom: $s-2xl;
-}
