@@ -1,7 +1,6 @@
 .event-list {
-  max-width: $layout__max-width;
-  margin: 0 auto;
-  padding: $s-xl $s-md;
+  @include layout-container;
+  @include vertical-spacing(0, $s-xl);
 }
 .event-list__item {
   list-style: none;
