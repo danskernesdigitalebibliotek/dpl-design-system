@@ -3,7 +3,7 @@
   height: $s-lg;
   width: $s-lg;
   color: $color__text-primary-black;
-  stroke: $color__text-primary-black;
+  stroke: $color__global-black;
   fill: none;
 
   &--filled {
@@ -14,13 +14,13 @@
 }
 
 .icon-favourite--bright {
-  color: $color__text-primary-white;
-  stroke: $color__text-primary-white;
+  color: $color__global-white;
+  stroke: $color__global-white;
   fill: none;
 }
 
 .icon-favourite--bright-filled {
-  stroke: $color__text-primary-white;
-  color: $color__text-primary-white;
-  fill: $color__text-primary-white;
+  stroke: $color__global-white;
+  color: $color__global-white;
+  fill: $color__global-white;
 }

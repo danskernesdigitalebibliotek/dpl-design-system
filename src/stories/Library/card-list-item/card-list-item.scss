@@ -1,7 +1,7 @@
 .card-list-item {
   @include show-svg-on-hover;
 
-  background-color: #fff;
+  background-color: $color__global-white;
   padding: $s-md $s-lg;
   display: grid;
   grid-template-columns: min-content 1fr;

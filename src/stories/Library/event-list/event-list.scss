@@ -1,0 +1,9 @@
+.event-list {
+  max-width: $layout__max-width;
+  margin: 0 auto;
+  padding: $s-xl $s-md;
+}
+.event-list__item {
+  list-style: none;
+  margin-bottom: $s-md;
+}

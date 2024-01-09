@@ -16,10 +16,6 @@
 .warning-bar__left {
   display: flex;
   align-items: center;
-
-  @include media-query__small {
-    align-items: center;
-  }
 }
 
 .warning-bar__right {

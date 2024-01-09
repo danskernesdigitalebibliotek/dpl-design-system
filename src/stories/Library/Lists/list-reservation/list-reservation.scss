@@ -9,7 +9,7 @@ $list-reservation-space-desktop: 24px;
   @include show-svg-on-hover(".list-reservation__status");
   @include show-svg-on-hover(".arrow-button");
 
-  background-color: $color__text-primary-white;
+  background-color: $color__global-white;
   border: 0;
   width: 100%;
   display: grid;
@@ -121,7 +121,7 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__header__text {
-  @extend %text-ellipsis-two-lines;
+  @include text-ellipsis-truncation;
 }
 
 .list-reservation__status {
@@ -167,7 +167,7 @@ $list-reservation-space-desktop: 24px;
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: $color__text-primary-white;
+  background-color: $color__global-white;
   perspective: 500px;
   box-shadow: 0 $s-xs 20px rgb(72 72 72 / 10%);
 }

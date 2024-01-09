@@ -86,7 +86,7 @@
 
 .header__menu-navigation-item:hover {
   border-top: 1px solid transparent; // to prevent jumping
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid $color__global-black;
 }
 
 .header__menu-navigation-link {
@@ -162,7 +162,7 @@
   }
 
   &:focus {
-    background-color: $color__text-primary-white;
+    background-color: $color__global-white;
     border: 0 solid transparent;
     outline: none;
   }
@@ -273,7 +273,7 @@
 }
 
 .header__overlay-backdrop {
-  background-color: #000;
+  background-color: $color__global-black;
   opacity: 0.6;
 }
 

@@ -1,0 +1,10 @@
+.event-list-page {
+  background-color: $color__global-primary;
+}
+
+.event-list-page__heading {
+  @include layout-container($layout__max-width, $s-md);
+  @include typography($typo__h2);
+  margin-bottom: $s-xl;
+  padding-top: $s-xl;
+}
