@@ -3,7 +3,7 @@ import EventHeader from "../../Library/event-header/EventHeader";
 import EventDescription, {
   EventDescriptionProps,
 } from "../../Library/event-description/EventDescription";
-import EventParagraphs from "../../Library/event-paragraphs/EventParagraphs";
+import { RichTextEvent } from "../../Library/rich-text/RichText";
 
 type EventPageProps = {
   title: string;
@@ -29,7 +29,7 @@ const EventPage: FC<EventPageProps> = ({
         horizontalTermLineData={horizontalTermLineData}
         listDescriptionData={listDescriptionData}
       />
-      <EventParagraphs />
+      <RichTextEvent />
     </article>
   );
 };
