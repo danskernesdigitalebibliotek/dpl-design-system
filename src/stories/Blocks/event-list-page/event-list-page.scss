@@ -3,8 +3,8 @@
 }
 
 .event-list-page__heading {
-  @include layout-container($layout__max-width, $s-md);
+  @include layout-container;
   @include typography($typo__h2);
-  margin-bottom: $s-xl;
+  @include vertical-spacing(0, $s-xl);
   padding-top: $s-xl;
 }

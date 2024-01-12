@@ -10,7 +10,7 @@
     "content";
   grid-template-rows: auto;
   row-gap: $s-md;
-  max-width: $layout__max-width;
+  @include layout-container($padding: $s-lg);
 
   // Extending display none, as mixin show-svg-on-hover
   // is only working up to __small breakpoint
