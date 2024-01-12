@@ -121,7 +121,7 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__header__text {
-  @include text-ellipsis-truncation;
+  @include text-ellipsis-truncation(2);
 }
 
 .list-reservation__status {

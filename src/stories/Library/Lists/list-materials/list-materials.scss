@@ -28,7 +28,7 @@
 }
 
 .list-materials__content__header {
-  @include text-ellipsis-truncation;
+  @include text-ellipsis-truncation();
   @include typography($typo__h5);
 }
 

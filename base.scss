@@ -1,6 +1,6 @@
+@import "./src/styles/scss/tools";
 @import "./src/styles/scss/reset";
 @import "./src/styles/scss/skeleton";
-@import "./src/styles/scss/tools";
 
 // Legacy - utility classes and other stuff that needs to be cleaned later.
 @import "./src/styles/scss/legacy";
@@ -106,6 +106,8 @@
 @import "./src/stories/Library/rich-text/rich-text";
 @import "./src/stories/Library/medias/medias";
 @import "./src/stories/Library/event-paragraphs/event-paragraphs";
+@import "./src/stories/Library/slider/slider";
+@import "./src/stories/Library/card/card";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";

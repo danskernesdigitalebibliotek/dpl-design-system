@@ -278,6 +278,23 @@ $typo__label: (
   ),
 );
 
+$typo__byline-tags: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 14px,
+    line-height: 24px,
+  ),
+  #{$breakpoint__large-card}: (
+      font-size: 20px,
+    ),
+);
+
+$typo__byline-tags--small: (
+  mobile: map_get($typo__byline-tags, "mobile"),
+);
+
 $typo__rich-text-body: (
   mobile: (
     font-family: $font__body,
@@ -291,4 +308,32 @@ $typo__rich-text-body: (
     font-size: 18px,
     line-height: 32px,
   ),
+);
+
+$typo__card-placeholder: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 16px,
+    line-height: 20px,
+  ),
+  #{$breakpoint__large-card}: (
+      font-size: 42px,
+      line-height: 46px,
+    ),
+);
+
+$typo__card-placeholder--small: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 20px,
+    line-height: 24px,
+  ),
+  #{$breakpoint__large-card}: (
+      font-size: 28px,
+      line-height: 32px,
+    ),
 );

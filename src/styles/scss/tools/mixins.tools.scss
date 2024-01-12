@@ -33,7 +33,7 @@
  *
  * @see mixin map-styling().
  * Example usage of this mixin, where line-height is excluded:
- * @iinclude typography($font__h4, (excludes: ('line-height'));
+ * @include typography($font__h4, (excludes: ('line-height'));
  *
  * @param {map} $font. See available maps in _variables.typography.scss.
  * @param {options} $options - List of options. Supports:
@@ -57,7 +57,7 @@
 /**
  * Applies text ellipsis styling with a customizable number of lines.
  *
- * This mixin applies text ellipsis using the -webkit-line-clamp property, 
+ * This mixin applies text ellipsis using the -webkit-line-clamp property,
  * The default number of lines is 2, but can be customized as needed.
  *
  * @param {number} $lines - The number of lines to display Default is 2.
