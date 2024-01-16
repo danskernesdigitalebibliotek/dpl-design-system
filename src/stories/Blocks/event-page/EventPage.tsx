@@ -3,7 +3,7 @@ import EventHeader from "../../Library/event-header/EventHeader";
 import EventDescription, {
   EventDescriptionProps,
 } from "../../Library/event-description/EventDescription";
-import EventParagraphs from "../../Library/event-paragraphs/EventParagraphs";
+import { EventParagraphs } from "../../Library/paragraphs/Paragraphs";
 
 type EventPageProps = {
   title: string;
