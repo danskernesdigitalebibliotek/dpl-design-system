@@ -24,6 +24,12 @@ export default {
       description: "Toggle image position",
     },
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=434-6424&mode=design&t=ADgZ8H4KNumis8iG-4",
+    },
+  },
 } as ComponentMeta<typeof Recommendation>;
 
 const Template: ComponentStory<typeof Recommendation> = (args) => (
