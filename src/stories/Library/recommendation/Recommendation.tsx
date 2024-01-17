@@ -24,14 +24,17 @@ export const Recommendation: React.FC<RecommendationProps> = ({
   return (
     <a
       href={href}
-      className={clsx("recommendation", positionImageRight && "reversed")}
+      className={clsx(
+        "recommendation",
+        positionImageRight && "recommendation--reversed"
+      )}
     >
-      <div className="recommendation-material">
+      <div className="recommendation__material">
         <RecommendedMaterial {...recommendedMaterialProps} />
       </div>
-      <div className="recommendation-texts arrow__hover--right-small">
-        <h3 className="recommendation-title">{title}</h3>
-        <p className="recommendation-description">{description}</p>
+      <div className="recommendation__texts arrow__hover--right-small">
+        <h3 className="recommendation__title">{title}</h3>
+        <p className="recommendation__description">{description}</p>
         <ArrowSmallRight />
       </div>
     </a>
