@@ -10,10 +10,9 @@ export default {
   // We disable the isChecked control, since it is not possible to
   // get the states from the React component to work with Storybook controls.
   argTypes: {
-    isLiked: {
-      control: {
-        disable: true,
-      },
+    favoriteFill: {
+      control: "boolean",
+      defaultValue: true,
     },
   },
   parameters: {

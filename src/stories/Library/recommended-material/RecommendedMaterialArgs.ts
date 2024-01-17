@@ -4,7 +4,7 @@ const recommendedMaterialArgs: RecommendedMaterialProps = {
   author: "Pia Deges",
   publicationYear: "2019",
   description: "Børnenes naturhobbybog",
-  isLiked: false,
+  favoriteFill: false,
   src: "images/book_cover_6.jpg",
   alt: "book cover",
 };
