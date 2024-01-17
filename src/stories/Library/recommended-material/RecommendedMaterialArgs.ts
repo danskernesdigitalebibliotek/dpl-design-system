@@ -5,6 +5,7 @@ const recommendedMaterialArgs: RecommendedMaterialProps = {
   publicationYear: "2019",
   description: "Børnenes naturhobbybog",
   favoriteFill: false,
+  coverUrl: "#",
   src: "images/book_cover_6.jpg",
   alt: "book cover",
 };
