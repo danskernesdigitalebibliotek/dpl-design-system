@@ -1,7 +1,7 @@
 /* #########################################################################
- * IMPORTANT NOTE: 
+ * IMPORTANT NOTE:
  * Make sure to read the Project Layout documentation before
- * modifying or using this file. The guide contains information on the mixins, 
+ * modifying or using this file. The guide contains information on the mixins,
  * utilities, best practices, and usage examples.
  * Documentation can be found at: [layout-documentation.md](..docs/layout-documentation.md)
  * ######################################################################### */
@@ -13,6 +13,7 @@ $layout__max-width--medium: 1024px;
 $layout__max-width--large: 1440px;
 $layout__max-width--x-large: 1920px;
 $layout__max-width--xx-large: 2200px;
+$layout__max-width--event-description: 886px;
 
 // Variables specifically for managing the vertical space between elements
 $_vertical-spacing--small: $s-sm;

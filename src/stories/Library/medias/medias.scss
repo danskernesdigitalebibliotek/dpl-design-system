@@ -16,6 +16,7 @@ $_max-width-multiple-medias: 1240px;
 
 .medias--single {
   @include layout-container($_max-width-single-media, 0);
+  @include vertical-spacing;
 }
 
 @include media-query($_medias-breakpoint) {
@@ -53,6 +54,7 @@ $_max-width-multiple-medias: 1240px;
 
 .medias--multiple {
   @include layout-container($_max-width-multiple-medias, 0);
+  @include vertical-spacing;
 
   .medias__item--last {
     img {

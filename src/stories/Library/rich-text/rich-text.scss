@@ -6,6 +6,7 @@ $_max-width-rich-text: 780px;
 .rich-text {
   @include typography($typo__rich-text-body);
   @include layout-container($_max-width-rich-text);
+  @include vertical-spacing;
 
   a {
     @extend %text-inline-link;

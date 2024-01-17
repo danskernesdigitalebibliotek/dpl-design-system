@@ -1,11 +1,12 @@
 .article-header {
+  @include layout-container;
+  @include vertical-spacing;
   display: grid;
   gap: $s-xl;
-  padding: $s-4xl $s-xl;
   position: relative;
 
   @include media-query__small {
-    padding: $s-4xl $s-7xl;
+    margin-bottom: $s-4xl;
   }
 }
 

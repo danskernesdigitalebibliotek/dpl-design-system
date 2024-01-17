@@ -1,5 +1,9 @@
-.video-embed {
+.video-embed-paragraph {
+  @include layout-container;
   @include vertical-spacing;
+}
+
+.video-embed {
   position: relative;
   overflow: hidden;
   width: 100%;
