@@ -69,7 +69,7 @@ CoverLinked.args = {
   size: "small",
   tint: "80",
   coverUrl: "/",
-  description: "Cover of Audrey Hepburn",
+  alt: "Cover of Audrey Hepburn",
 };
 
 export const SrcNotWork = Template.bind({});
