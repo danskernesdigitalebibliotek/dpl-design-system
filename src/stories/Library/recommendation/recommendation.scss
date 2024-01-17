@@ -10,9 +10,11 @@ $_recommendation-max-width: 896px;
   gap: $s-xl;
   padding-top: $s-xl;
   padding-bottom: $s-xl;
-  text-decoration: none;
 }
 
+.recommendation__texts {
+  text-decoration: none;
+}
 .recommendation__title {
   @include typography($typo__h2);
   word-wrap: break-word;

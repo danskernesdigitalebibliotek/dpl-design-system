@@ -22,8 +22,7 @@ export const Recommendation: React.FC<RecommendationProps> = ({
   positionImageRight = false,
 }) => {
   return (
-    <a
-      href={href}
+    <div
       className={clsx(
         "recommendation",
         positionImageRight && "recommendation--reversed"
@@ -32,11 +31,14 @@ export const Recommendation: React.FC<RecommendationProps> = ({
       <div className="recommendation__material">
         <RecommendedMaterial {...recommendedMaterialProps} />
       </div>
-      <div className="recommendation__texts arrow__hover--right-small">
+      <a
+        href={href}
+        className="recommendation__texts arrow__hover--right-small"
+      >
         <h3 className="recommendation__title">{title}</h3>
         <p className="recommendation__description">{description}</p>
         <ArrowSmallRight />
-      </div>
-    </a>
+      </a>
+    </div>
   );
 };
