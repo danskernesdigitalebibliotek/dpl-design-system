@@ -12,9 +12,9 @@ const EventHeader: FC<EventHeaderProps> = ({ title, date, image }) => {
   return (
     <header className="event-header">
       <section className="event-header__content">
-        <Tag hasBackground className="event-header__tag">
-          Udstilling
-        </Tag>
+        <div className="event-header__tags">
+          <Tag hasBackground>Udstilling</Tag>
+        </div>
         <time className="event-header__date">{date}</time>
         <h1 className="event-header__title">{title}</h1>
         <a
