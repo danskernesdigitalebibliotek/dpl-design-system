@@ -27,7 +27,10 @@ const CoverImage: FC<CoverProps & CoverState> = ({
         {
           "cover__img--animate": animate,
         },
-        { "cover__img--shadow": shadow }
+        {
+          "cover__img--shadow": shadow,
+          "cover__img--shadow-medium": shadow === "medium",
+        }
       )}
       src={src}
       alt={alt || ""}
