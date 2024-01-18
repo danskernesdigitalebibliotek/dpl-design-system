@@ -6,6 +6,9 @@ window.addEventListener("load", () => {
     spaceBetween: "5%",
     freeMode: true,
     centeredSlidesBounds: false,
+    a11y: {
+      slideRole: "listitem",
+    },
     navigation: {
       nextEl: ".swiper-next",
       prevEl: ".swiper-prev",
