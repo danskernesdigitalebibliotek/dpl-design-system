@@ -1,0 +1,129 @@
+// The gap we want between the items.
+// The reason we need to define it explicity is because we need it for a
+// wrapper margin hack.
+$_card-grid-gap: $s-lg;
+
+.card-grid {
+  @include layout-container("none");
+}
+
+.card-grid__header {
+  @include layout-container();
+
+  display: flex;
+  align-items: center;
+}
+
+.card-grid__title {
+  @extend %title-underline--narrow;
+  @include typography($typo__h2);
+
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: $_card-grid-gap * 2;
+}
+
+.card-grid__link,
+.card-grid__link > a {
+  @include typography($typo__links);
+  margin-bottom: $_card-grid-gap * 2;
+}
+
+.card-grid__items-wrapper {
+  // As we're using percentage values, we cannot use gap: $s-lg, as the whole
+  // flex container will expand beyond the parent.
+  // Instead, we put padding-left on each item, and then we pull the container
+  // back here, negating the first row.
+  // This is not something you can do directly on a display: flex container,
+  // so instead we have to use this ugly items-wrapper.
+  margin-left: -$_card-grid-gap;
+}
+
+.card-grid__items {
+  .card-grid--count-4 &,
+  .card-grid--count-5 &,
+  .card-grid--count-6 & {
+    justify-content: end;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-grid__item {
+  // See card-grid__items-wrapper.
+  padding-left: $_card-grid-gap;
+  padding-bottom: $_card-grid-gap;
+
+  // Which card variants to disply in each position.
+  // Luckily, these also count on mobile.
+  $_card-patterns: (
+    1: "x-large",
+    2: "small",
+    3: "small",
+    4: "medium",
+    5: "small",
+    6: "large",
+  );
+
+  // The card widths on the smallest (mobile) screen.
+  $_card-widths--small: (
+    "x-large": 100%,
+    "small": 50%,
+    "medium": 50%,
+    "large": 100%,
+  );
+
+  // The card widths on the medium (tablet) screen.
+  // The values look very magic, and that's also what they are :)
+  // However, the first row (XL+Small+Small+Medium) should be 100%.
+  $_card-widths--medium: (
+    "x-large": 35%,
+    "small": 20%,
+    "medium": 25%,
+    "large": 40%,
+  );
+
+  // The card widths on the largest (desktop) screen.
+  $_card-widths--large: (
+    "x-large": 45%,
+    "small": 15%,
+    "medium": 25%,
+    "large": 40%,
+  );
+
+  @each $key, $name in $_card-patterns {
+    // The design is very specific about the masonry design. See the sizes
+    // defined in the arrays above, which we loop through here.
+    &:nth-child(#{$key}) {
+      width: map_get($_card-widths--small, $name);
+
+      @include media-query__small {
+        width: map_get($_card-widths--medium, $name);
+      }
+
+      @include media-query__large {
+        width: map_get($_card-widths--large, $name);
+      }
+
+      .card {
+        @extend %card-variant--#{$name};
+        width: 100%;
+
+        // Specifically for the 'small' card variant, it has such a small
+        // placeholder box, that there is no space for the text, on larger
+        // screens. On smaller screens, it takes up 50% of the page, so
+        // there, there is plenty of space.
+        // stylelint-disable max-nesting-depth -- I know it's awful nesting, but i have no choice.
+        @if ($name == "small") {
+          @include media-query__small {
+            .card__placeholder-text {
+              font-size: 0;
+            }
+          }
+        }
+        // stylelint-enable max-nesting-depth
+      }
+    }
+  }
+}
