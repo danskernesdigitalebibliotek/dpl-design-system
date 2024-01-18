@@ -6,15 +6,17 @@ type VideoEmbedProps = {
 
 const VideoEmbed: FC<VideoEmbedProps> = ({ src }) => {
   return (
-    <div className="video-embed">
-      <iframe
-        src={src}
-        title="VideoEmbed"
-        width="auto"
-        height="auto"
-        allowFullScreen
-      />
-    </div>
+    <section className="paragraph">
+      <div className="video-embed">
+        <iframe
+          src={src}
+          title="VideoEmbed"
+          width="auto"
+          height="auto"
+          allowFullScreen
+        />
+      </div>
+    </section>
   );
 };
 
