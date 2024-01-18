@@ -1,0 +1,4 @@
+.paragraph {
+  @include layout-container;
+  @include vertical-spacing;
+}
