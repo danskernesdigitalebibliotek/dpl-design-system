@@ -1,52 +1,36 @@
 # How to Implement Show More/Less Functionality
 
-To integrate a "Show More/Less" feature, follow these steps.
-This feature is useful for lists where you want
-to initially display a limited number of items and give users
-the option to view more.
+The "Show More/Less" feature allows you to display a limited number of list items initially, with an option for users to expand the list to view more items. Follow these steps to implement this feature effectively:
 
 ## HTML Structure
 
-First, organize your HTML elements as follows:
+Structure your HTML elements as follows for implementing the "Show More/Less" feature:
 
-- **Toggle Button**: Include a button with the `data-show-more-button`
-attribute. This is what users will interact with.
-- **ARIA Expanded**: Include the `aria-expanded="false"` attribute
-on the button to indicate whether the additional content
-is currently expanded or collapsed.
-- **ARIA Controls**: Implement an `<ul>` or `<ol>` element assigned
-with the `id` attribute `show-more-item-list`. This element will encompass
-the list items. Additionally, include a toggle button with the attribute `aria-controls="show-more-item-list`.
-This attribute explicitly links the button to the list,
-enhancing the accessibility and interactivity of the content.
-- **List Items**: Apply the `data-show-more-item` attribute
-to each item you want to toggle.
-- **Show More Text (Optional)**: Include the `data-show-more-text`
-attribute on the button to specify the text that should be displayed
-when there is more content to be shown.
-- **Show Less Text (Optional)**: Include the `data-show-more-hide-text`
-attribute on the button to specify the text that should
-be displayed when there is less content to be shown.
-- **Initial Visible Items (Optional)**: Optionally include an
-element with `data-show-more-initial-visible-items` attribute to dynamically
-set the number of items visible initially. If not set, it defaults to 2.
+- **List Element**: Use an `<ul>` or `<ol>` element with the `data-show-more-list` attribute. This element will contain both the list items and the toggle button.
+- **List Items**: Assign the `data-show-more-item` attribute to each list item that you want to show or hide.
+- **Toggle Button**: Place a button within the list element with the `data-show-more-button` attribute. This button is used by users to toggle the visibility of list items.
+- **ARIA Expanded**: Add the `aria-expanded="false"` attribute to the button to indicate the current state (expanded or collapsed) of the additional content.
+- **Show More Text (Optional)**: Use the `data-show-more-text` attribute on the button to specify the text displayed when there's more content to show.
+- **Show Less Text (Optional)**: Use the `data-show-more-hide-text` attribute on the button to specify the text displayed when the list is in its collapsed state.
+- **Initial Visible Items (Optional)**: Set the initial number of visible items with the `data-show-more-initial-visible-items` attribute. It defaults to 2 if not set.
+
+### Example HTML Markup
 
 ```html
-<ul id="show-more-item-list">
+<ul data-show-more-list>
   <li data-show-more-item>Item 1</li>
   <li data-show-more-item>Item 2</li>
-  <!-- all items after this are hidden by default  -->
+  <!-- additional items are hidden by default -->
   <li data-show-more-item>Item 3</li>
+  <button
+    class="cursor-pointer"
+    aria-expanded="false"
+    data-show-more-button
+    data-show-more-text="Show more"
+    data-show-more-hide-text="Show less"
+    data-show-more-initial-visible-items="2"
+  >
+    Show more
+  </button>
 </ul>
-<button
-  class="cursor-pointer"
-  aria-controls="show-more-item-list"
-  aria-expanded="false"
-  data-show-more-button
-  data-show-more-text="Custom Show more"
-  data-show-more-hide-text="Custom Show less"
-  data-show-more-initial-visible-items="3"
->
-  Show more
-</button>
-```
+``````
