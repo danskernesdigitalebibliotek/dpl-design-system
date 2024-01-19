@@ -56,7 +56,7 @@ export const Header = (props: HeaderProps) => {
             <Logo
               fallback={false}
               libraryName="Hjørring"
-              altText="Logo image of libary"
+              altText="PromoTitle image of libary"
             />
           </a>
         </div>
@@ -84,7 +84,7 @@ export const Header = (props: HeaderProps) => {
                   <Logo
                     fallback
                     libraryName="Lyngby-Taarbæk"
-                    altText="Logo image of libary"
+                    altText="PromoTitle image of libary"
                   />
                 </div>
               </div>
