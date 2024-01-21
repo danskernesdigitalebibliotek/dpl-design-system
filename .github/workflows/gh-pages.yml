@@ -5,6 +5,12 @@ on:
     branches:
       - develop
 
+# Detect if this action is already running, and cancel it.
+# This most likely happened because a second push has been made to a branch.
+concurrency:
+  group: ${{ github.repository_id }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   github-pages:
     runs-on: ubuntu-latest

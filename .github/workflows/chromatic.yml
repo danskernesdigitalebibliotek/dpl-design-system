@@ -1,9 +1,28 @@
 name: "Chromatic"
 
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [ready_for_review, opened, synchronize]
+
+# Detect if this action is already running, and cancel it.
+# This most likely happened because a second push has been made to a branch.
+concurrency:
+  group: ${{ github.repository_id }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   chromatic-deployment:
+
+    # Don't run action if the pull request is a draft.
+    # This is an expensive job to run, so we only want to run it when the
+    # PR is actually ready to be reviewed.
+    if: ${{ github.event.pull_request.draft == false }}
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

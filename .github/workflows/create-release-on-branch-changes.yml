@@ -6,6 +6,12 @@ on:
       # Dependabot does not have permissions to create releases
       - 'dependabot/**'
 
+# Detect if this action is already running, and cancel it.
+# This most likely happened because a second push has been made to a branch.
+concurrency:
+  group: ${{ github.repository_id }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   create_release_on_branch_changes:
     name: "Create release on branch changes"
