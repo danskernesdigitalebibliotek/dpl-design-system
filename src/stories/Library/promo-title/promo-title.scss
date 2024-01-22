@@ -1,0 +1,8 @@
+.promo-title {
+  @extend %title-underline;
+  @include typography($typo__h2);
+
+  &.promo-title--narrow {
+    @extend %title-underline--narrow;
+  }
+}

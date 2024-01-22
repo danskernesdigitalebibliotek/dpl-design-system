@@ -12,12 +12,13 @@
     "js:lint:watch": "chokidar './src/**/*.{js,jsx,ts,tsx}' -c 'yarn js:lint'",
     "js:format": "concurrently 'yarn:js:eslint -- --fix' 'yarn:js:prettier -- --write' --max-processes 1 --raw",
     "css:stylelint": "stylelint 'src/**/*.scss'",
-    "css:prettier": "prettier 'src/styles/**/*.scss'",
+    "css:prettier": "prettier 'src/**/*.scss'",
     "css:lint": "concurrently 'yarn:css:stylelint' 'yarn:css:prettier -- --check' --raw",
     "css:lint:watch": "chokidar 'src/**/*.scss' -c 'yarn css:lint'",
     "css:format": "concurrently 'yarn:css:stylelint -- --fix' 'yarn:css:prettier -- --write' --max-processes 1 --raw",
     "css:build": "sass base.scss:src/styles/css/base.css --style compressed",
     "css:watch": "yarn css:build -- --watch",
+    "build": "concurrently 'yarn:css:build' --raw",
     "markdown:lint": "markdownlint-cli2",
     "markdown:format": "markdownlint-cli2-fix",
     "watch": "concurrently 'yarn:js:lint:watch' 'yarn:css:lint:watch'",
@@ -25,7 +26,6 @@
     "chromatic": "npx chromatic --exit-zero-on-changes",
     "lint": "concurrently 'yarn:js:lint' 'yarn:css:lint' 'yarn:markdown:lint'",
     "format": "concurrently 'yarn:js:format' 'yarn:css:format' 'yarn:markdown:format'"
-
   },
   "browserslist": {
     "production": [
@@ -41,7 +41,6 @@
   },
   "devDependencies": {
     "@chanzuckerberg/axe-storybook-testing": "^6.0.1",
-    "@namics/stylelint-bem": "^7.0.0",
     "@storybook/addon-a11y": "^6.5.9",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
@@ -56,6 +55,7 @@
     "@types/node": "^16.0.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@whitespace/storybook-addon-html": "^5.0.0",
@@ -81,6 +81,7 @@
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.1.0",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-scripts": "^4.0.3",
     "sass": "^1.70.0",
     "skeleton-screen-css": "^1.1.0",

@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import Article from "./Article";
 
 export default {
-  title: "Blocks / Article",
+  title: "Blocks / Article page",
   component: Article,
   decorators: [withDesign],
   argTypes: {

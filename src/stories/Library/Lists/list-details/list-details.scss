@@ -3,7 +3,7 @@
   align-items: center;
   min-height: 72px;
   padding: $s-md;
-  background-color: $color__text-primary-white;
+  background-color: $color__global-white;
 
   @include media-query__small {
     height: 96px;

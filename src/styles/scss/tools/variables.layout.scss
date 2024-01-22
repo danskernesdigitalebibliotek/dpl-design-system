@@ -1,11 +1,146 @@
-$layout__max-width: 1024px;
+/* #########################################################################
+ * IMPORTANT NOTE:
+ * Make sure to read the Project Layout documentation before
+ * modifying or using this file. The guide contains information on the mixins,
+ * utilities, best practices, and usage examples.
+ * Documentation can be found at: [layout-documentation.md](..docs/layout-documentation.md)
+ * ######################################################################### */
+
+// Layout max-width variables aligned with breakpoints
+$layout__max-width--x-small: 375px;
 $layout__max-width--small: 768px;
+$layout__max-width--medium: 1024px;
 $layout__max-width--large: 1440px;
+$layout__max-width--x-large: 1920px;
+$layout__max-width--xx-large: 2200px;
+$layout__max-width--event-description: 886px;
 
-$layout__max-width--text: 780px;
-$layout__max-width--single-media: 896px;
-$layout__max-width--multiple-medias: 1240px;
+// Variables specifically for managing the vertical space between elements
+$_vertical-spacing--small: $s-sm;
+$_vertical-spacing--medium: $s-md;
+$_vertical-spacing--large: $s-lg;
+$_vertical-spacing--x-large: $s-xl;
 
-// Some elements should not go out to the edge of the screen on small screens.
-// This is the padding that is always shown on the left and right.
-$layout__page-padding: $s-xl;
+// Edge spacing for containers, ensures edge spacing for mobile or tablet.
+$layout__edge-spacing: $s-md;
+
+// Mixin for controlling max-width and edge-spacing(padding) of an element
+@mixin layout-container(
+  $max-width: $layout__max-width--medium,
+  $padding: $layout__edge-spacing
+) {
+  max-width: $max-width;
+  margin: auto;
+  padding-left: $padding;
+  padding-right: $padding;
+  box-sizing: border-box;
+}
+
+// Mixin for controlling vertical spacing(margin) of an element
+@mixin vertical-spacing(
+  $top: $_vertical-spacing--large,
+  $bottom: $_vertical-spacing--large
+) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+// ########## Avoid using utilities as described in documentation ############
+
+// Utility classes for vertical spacing adjustments
+.layout__vertical-spacing {
+  @include vertical-spacing;
+
+  &--small {
+    @include vertical-spacing(
+      $_vertical-spacing--small,
+      $_vertical-spacing--small
+    );
+  }
+  &--medium {
+    @include vertical-spacing(
+      $_vertical-spacing--medium,
+      $_vertical-spacing--medium
+    );
+  }
+  &--large {
+    @include vertical-spacing(
+      $_vertical-spacing--large,
+      $_vertical-spacing--large
+    );
+  }
+  &--x-large {
+    @include vertical-spacing(
+      $_vertical-spacing--x-large,
+      $_vertical-spacing--x-large
+    );
+  }
+}
+
+// Utility classes for max-width adjustments
+.layout__max-width {
+  @include layout-container($padding: 0);
+
+  &--x-small {
+    @include layout-container(
+      $max-width: $layout__max-width--x-small,
+      $padding: 0
+    );
+  }
+  &--small {
+    @include layout-container(
+      $max-width: $layout__max-width--small,
+      $padding: 0
+    );
+  }
+  &--medium {
+    @include layout-container(
+      $max-width: $layout__max-width--medium,
+      $padding: 0
+    );
+  }
+  &--large {
+    @include layout-container(
+      $max-width: $layout__max-width--large,
+      $padding: 0
+    );
+  }
+  &--x-large {
+    @include layout-container(
+      $max-width: $layout__max-width--x-large,
+      $padding: 0
+    );
+  }
+  &--xx-large {
+    @include layout-container(
+      $max-width: $layout__max-width--xx-large,
+      $padding: 0
+    );
+  }
+}
+
+// Utility classes for edge-spacing (padding) adjustments
+.layout__edge-spacing {
+  padding-left: $s-md;
+  padding-right: $s-md;
+
+  &--small {
+    padding-left: $s-sm;
+    padding-right: $s-sm;
+  }
+
+  &--medium {
+    padding-left: $s-md;
+    padding-right: $s-md;
+  }
+
+  &--large {
+    padding-left: $s-lg;
+    padding-right: $s-lg;
+  }
+
+  &--x-large {
+    padding-left: $s-xl;
+    padding-right: $s-xl;
+  }
+}

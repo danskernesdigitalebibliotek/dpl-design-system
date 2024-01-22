@@ -1,9 +1,12 @@
 // This component is used for WYSIWYG content.
 // E.g. we cannot control classes of the underlying elements, so in this case
 // we will target HTML tags instead.
+$_max-width-rich-text: 780px;
+
 .rich-text {
   @include typography($typo__rich-text-body);
-  @include layout-container($layout__max-width--text);
+  @include layout-container($_max-width-rich-text);
+  @include vertical-spacing;
 
   a {
     @extend %text-inline-link;
@@ -51,7 +54,7 @@
   ul > li::before {
     content: "";
     height: 1px;
-    background-color: black;
+    background-color: $color__global-black;
   }
 
   ol {

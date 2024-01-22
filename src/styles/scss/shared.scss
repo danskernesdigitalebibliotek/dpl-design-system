@@ -69,14 +69,14 @@
 .focus-styling {
   &:focus {
     outline: none;
-    border: 1px solid $color__text-primary-black;
+    border: 1px solid $color__global-black;
   }
 
   &__input {
     &:focus {
       outline: none;
-      border: 1px solid $color__text-primary-black;
-      background-color: $color__text-primary-white;
+      border: 1px solid $color__global-black;
+      background-color: $color__global-white;
     }
   }
 }
