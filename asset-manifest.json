@@ -4,14 +4,14 @@
     "0.e672e4eb.iframe.bundle.js.map": "./0.e672e4eb.iframe.bundle.js.map",
     "1.3e0d30ce.iframe.bundle.js": "./1.3e0d30ce.iframe.bundle.js",
     "2.b82fafb0.iframe.bundle.js": "./2.b82fafb0.iframe.bundle.js",
-    "main.css": "./static/css/main.fb260077.chunk.css",
-    "main.js": "./main.30428ee7.iframe.bundle.js",
-    "main.css.map": "./static/css/main.fb260077.chunk.css.map",
+    "main.css": "./static/css/main.32dac380.chunk.css",
+    "main.js": "./main.469b43e0.iframe.bundle.js",
+    "main.css.map": "./static/css/main.32dac380.chunk.css.map",
     "runtime~main.js": "./runtime~main.6c6b7827.iframe.bundle.js",
     "vendors~main.css": "./static/css/vendors~main.2b205a4f.chunk.css",
-    "vendors~main.js": "./vendors~main.4e660fb5.iframe.bundle.js",
+    "vendors~main.js": "./vendors~main.2c3627dd.iframe.bundle.js",
     "vendors~main.css.map": "./static/css/vendors~main.2b205a4f.chunk.css.map",
-    "vendors~main.js.map": "./vendors~main.4e660fb5.iframe.bundle.js.map",
+    "vendors~main.js.map": "./vendors~main.2c3627dd.iframe.bundle.js.map",
     "6.bcec739b.iframe.bundle.js": "./6.bcec739b.iframe.bundle.js",
     "6.bcec739b.iframe.bundle.js.map": "./6.bcec739b.iframe.bundle.js.map",
     "7.d2cbe207.iframe.bundle.js": "./7.d2cbe207.iframe.bundle.js",
@@ -25,20 +25,20 @@
     "6.bcec739b.iframe.bundle.js.LICENSE.txt": "./6.bcec739b.iframe.bundle.js.LICENSE.txt",
     "9.8efb09aa.iframe.bundle.js.LICENSE.txt": "./9.8efb09aa.iframe.bundle.js.LICENSE.txt",
     "iframe.html": "./iframe.html",
-    "static/media/base.css": "./static/media/noto-sans-jp-v42-latin-regular.cb4ce910.woff2",
+    "static/media/base.css": "./static/media/notosans-regular-webfont.d888d593.woff2",
     "static/media/icon-arrow-ui-large-left.7d951248.svg": "./static/media/icon-arrow-ui-large-left.7d951248.svg",
     "static/media/icon-arrow-ui-large-right.b4906622.svg": "./static/media/icon-arrow-ui-large-right.b4906622.svg",
     "static/media/icon-arrow-ui-small-left.svg": "./static/media/icon-arrow-ui-small-left.2b55e017.svg",
     "static/media/icon-arrow-ui-small-right.svg": "./static/media/icon-arrow-ui-small-right.f9b2df75.svg",
     "static/media/icon-external-link.9383ca1f.svg": "./static/media/icon-external-link.9383ca1f.svg",
     "static/media/icon-favourite.svg": "./static/media/icon-favourite.439569a6.svg",
-    "vendors~main.4e660fb5.iframe.bundle.js.LICENSE.txt": "./vendors~main.4e660fb5.iframe.bundle.js.LICENSE.txt"
+    "vendors~main.2c3627dd.iframe.bundle.js.LICENSE.txt": "./vendors~main.2c3627dd.iframe.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
     "runtime~main.6c6b7827.iframe.bundle.js",
     "static/css/vendors~main.2b205a4f.chunk.css",
-    "vendors~main.4e660fb5.iframe.bundle.js",
-    "static/css/main.fb260077.chunk.css",
-    "main.30428ee7.iframe.bundle.js"
+    "vendors~main.2c3627dd.iframe.bundle.js",
+    "static/css/main.32dac380.chunk.css",
+    "main.469b43e0.iframe.bundle.js"
   ]
 }
