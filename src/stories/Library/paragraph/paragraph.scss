@@ -1,9 +1,0 @@
-.paragraph {
-  @include vertical-spacing;
-}
-
-// 'Links' paragraphs should go flush against each-other.
-.paragraph--links + .paragraph--links {
-  // 1px to also collapse the border.
-  margin-top: -($_vertical-spacing--large + 1px);
-}
