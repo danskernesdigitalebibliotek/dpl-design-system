@@ -3,10 +3,14 @@
   padding: $s-md;
   position: relative;
   z-index: 0;
+  @include typography($typo__body-placeholder);
 
   @include media-query__medium {
     padding: $s-6xl;
   }
+}
+.fee-list {
+  margin-top: $s-lg;
 }
 
 .fee-list-bottom {
