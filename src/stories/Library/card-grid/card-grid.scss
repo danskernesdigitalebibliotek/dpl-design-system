@@ -105,6 +105,7 @@ $_card-grid-gap: $s-lg;
   @each $key, $name in $_card-patterns {
     // The design is very specific about the masonry design. See the sizes
     // defined in the arrays above, which we loop through here.
+    // stylelint-disable max-nesting-depth -- I know it's awful nesting, but i have no choice.
     &:nth-child(#{$key}) {
       width: map_get($_card-widths--small, $name);
 
@@ -126,7 +127,6 @@ $_card-grid-gap: $s-lg;
         // placeholder box, that there is no space for the text, on larger
         // screens. On smaller screens, it takes up 50% of the page, so
         // there, there is plenty of space.
-        // stylelint-disable max-nesting-depth -- I know it's awful nesting, but i have no choice.
         @if ($name == "small") {
           @include media-query__small {
             .card__placeholder-text {
@@ -134,8 +134,8 @@ $_card-grid-gap: $s-lg;
             }
           }
         }
-        // stylelint-enable max-nesting-depth
       }
     }
+    // stylelint-enable max-nesting-depth
   }
 }

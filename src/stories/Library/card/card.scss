@@ -119,6 +119,8 @@
   }
 
   .card__media {
+    @extend %identity-placeholder;
+
     aspect-ratio: 1/1;
   }
 }
@@ -155,7 +157,11 @@
 
 %card-variant--medium,
 .card[data-variant="medium"] {
-  width: 321px;
+  width: 200px;
+
+  @include media-query__name($breakpoint__large-card) {
+    width: 321px;
+  }
 
   .card__media {
     // Odd aspect ratio, taken from the design.
