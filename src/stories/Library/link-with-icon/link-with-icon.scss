@@ -22,8 +22,10 @@
     margin-bottom: 0;
   }
 
+  // Removing the spacing/double border between items next to eachother.
   & + .link-with-icon {
     margin-top: 0;
+    border-top: 0;
   }
 
   @include media-query__small {

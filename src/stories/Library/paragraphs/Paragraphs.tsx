@@ -5,17 +5,17 @@ import VideoEmbed from "../video-embed/VideoEmbed";
 export const EventParagraphs = () => {
   return (
     <section className="paragraphs">
-      <div className="paragraph paragraph--rich-text">
+      <div className="paragraphs__item paragraphs__item--rich-text">
         <RichTextEvent />
       </div>
-      <div className="paragraph paragraph--links">
+      <div className="paragraphs__item paragraphs__item--links">
         <LinkWithIcon
           href="https://example.com"
           linkText="External Link"
           linkType="external"
         />
       </div>
-      <div className="paragraph paragraph--links">
+      <div className="paragraphs__item paragraphs__item--links">
         <LinkWithIcon href="/" linkText="internal Link" linkType="internal" />
       </div>
     </section>
@@ -25,13 +25,13 @@ export const EventParagraphs = () => {
 export const ArticleParagraphs = () => {
   return (
     <section className="paragraphs">
-      <div className="paragraph paragraph--rich-text">
+      <div className="paragraphs__item paragraph--rich-text">
         <RichText />
       </div>
-      <div className="paragraph paragraph--video">
+      <div className="paragraphs__item paragraph--video">
         <VideoEmbed src="https://www.youtube.com/embed/CmzKQ3PSrow" />
       </div>
-      <div className="paragraph paragraph--links">
+      <div className="paragraphs__item paragraphs__item--links">
         <LinkWithIcon
           href="https://example.com"
           linkText="External Link"
