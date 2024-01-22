@@ -26,3 +26,20 @@
 .fee-list-bottom__actions > button {
   margin-left: auto;
 }
+
+.fee-list-body__payment-button {
+  margin: 18px 0px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  @include media-query__medium {
+    flex-direction: row-reverse;
+    justify-content: right;
+  }
+}
+
+.fee-list-body__payment-info-link {
+  margin-top: 18px;
+}
