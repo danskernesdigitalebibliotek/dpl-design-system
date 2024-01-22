@@ -4,7 +4,15 @@
 $_card-grid-gap: $s-lg;
 
 .card-grid {
-  @include layout-container("none");
+  @include layout-container();
+
+  .card__placeholder-text {
+    @include typography($typo__card-placeholder--grid);
+  }
+}
+
+.card-grid--full-width {
+  @include layout-container(none);
 }
 
 .card-grid__header {
@@ -85,6 +93,8 @@ $_card-grid-gap: $s-lg;
   );
 
   // The card widths on the largest (desktop) screen.
+  // These sizes are only being used on full-width grids, as the cards will
+  // become too massive otherwise.
   $_card-widths--large: (
     "x-large": 45%,
     "small": 15%,
@@ -102,8 +112,10 @@ $_card-grid-gap: $s-lg;
         width: map_get($_card-widths--medium, $name);
       }
 
-      @include media-query__large {
-        width: map_get($_card-widths--large, $name);
+      .card-grid--full-width & {
+        @include media-query__large {
+          width: map_get($_card-widths--large, $name);
+        }
       }
 
       .card {

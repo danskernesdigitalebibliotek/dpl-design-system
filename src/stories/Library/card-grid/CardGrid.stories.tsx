@@ -66,6 +66,7 @@ const Few = Template.bind({});
 Few.args = {
   title: undefined,
   linkText: undefined,
+  items: [cardNoImage, card, cardNoImage],
 };
 
 export { Many, Few };
