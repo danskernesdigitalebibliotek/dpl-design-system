@@ -33,6 +33,8 @@
 }
 
 .list-materials--disabled {
+  @include show-svg-on-hover(".list-materials__arrow");
+
   .checkbox {
     .checkbox__icon {
       opacity: 0;
