@@ -1,0 +1,13 @@
+.paragraphs__item {
+  @include vertical-spacing;
+}
+
+// 'Links' + 'Files' paragraphs should go flush against each-other.
+.paragraphs__item--links,
+.paragraphs__item--files {
+  + .paragraphs__item--files,
+  + .paragraphs__item--links {
+    // -1px to also collapse the border.
+    margin-top: -($_vertical-spacing--large + 1px);
+  }
+}

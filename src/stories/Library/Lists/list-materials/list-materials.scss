@@ -4,7 +4,7 @@
   display: flex;
   min-height: 96px;
   padding: $s-md;
-  background-color: $color__text-primary-white;
+  background-color: $color__global-white;
   justify-content: space-between;
 
   @include media-query__small {
@@ -28,7 +28,7 @@
 }
 
 .list-materials__content__header {
-  @extend %text-ellipsis-two-lines;
+  @include text-ellipsis-truncation();
   @include typography($typo__h5);
 }
 

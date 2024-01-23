@@ -16,6 +16,7 @@ const DateCalendar = () => {
       animate: false,
       mode: "range",
       defaultDate: ["2024-01-01", "2024-01-10"],
+      now: "2024-01-19",
     };
 
     if (node !== null) {

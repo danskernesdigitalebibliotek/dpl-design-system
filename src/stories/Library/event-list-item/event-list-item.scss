@@ -1,0 +1,178 @@
+.event-list-item {
+  @include show-svg-on-hover();
+  text-decoration: none;
+  display: grid;
+  padding: $s-lg;
+  background-color: $color__global-white;
+  margin: 0 auto;
+  grid-template-areas:
+    "image"
+    "content";
+  grid-template-rows: auto;
+  row-gap: $s-md;
+  @include layout-container($padding: $s-lg);
+
+  // Extending display none, as mixin show-svg-on-hover
+  // is only working up to __small breakpoint
+  @include media-query__medium("max-width") {
+    > svg {
+      display: none;
+    }
+  }
+}
+
+.event-list-item__image-container {
+  @extend %identity-placeholder-pseudo;
+  grid-area: image;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.event-list-item__image {
+  position: absolute;
+  z-index: $z-10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-list-item__content {
+  @include typography($typo__body-medium);
+  display: grid;
+  grid-template-areas:
+    "tag date"
+    "title title"
+    "description description"
+    "location schedule";
+  row-gap: $s-sm;
+}
+
+.event-list-item__tag {
+  grid-area: tag;
+  @include typography($typo__small-caption);
+  width: max-content;
+}
+
+.event-list-item__date {
+  grid-area: date;
+  @include typography($typo__small-caption);
+  text-align: right;
+}
+
+.event-list-item__title {
+  grid-area: title;
+  @include typography($typo__h4);
+  @extend %text-truncate;
+  margin-bottom: $s-sm;
+}
+
+.event-list-item__description {
+  grid-area: description;
+  @include typography($typo__small-caption);
+  @include text-ellipsis-truncation(3);
+  margin-bottom: $s-xl;
+}
+
+.event-list-item__location-wrapper {
+  grid-area: location;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: $s-xs;
+}
+
+.event-list-item__location {
+  @extend %link-tag;
+  @include typography($typo__small-caption);
+}
+
+.event-list-item__schedule {
+  grid-area: schedule;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.event-list-item__time {
+  @include typography($typo__body-placeholder);
+}
+
+@include media-query__small {
+  .event-list-item {
+    grid-template-areas: "image content";
+    grid-template-columns: 222px 1fr;
+    gap: $s-2xl;
+  }
+
+  .event-list-item__content {
+    grid-area: content;
+    grid-template-columns: 1fr 1fr $s-2xl max-content;
+    grid-template-areas:
+      "tag tag . schedule"
+      "date date . schedule"
+      "title title . schedule"
+      "description description . schedule"
+      "location location . schedule";
+  }
+  .event-list-item__image-container {
+    max-width: 222px;
+    grid-area: image;
+  }
+
+  .event-list-item__tag {
+    margin-bottom: unset;
+    grid-area: tag;
+  }
+
+  .event-list-item__date {
+    text-align: initial;
+    align-self: end;
+  }
+
+  .event-list-item__title {
+    margin-bottom: unset;
+    grid-area: title;
+  }
+
+  .event-list-item__description {
+    margin-bottom: unset;
+    @include text-ellipsis-truncation(2);
+    grid-area: description;
+  }
+
+  .event-list-item__schedule {
+    align-self: center;
+    margin-bottom: $s-md;
+    align-items: flex-start;
+    grid-area: schedule;
+  }
+
+  .event-list-item__location-wrapper {
+    margin-top: $s-md;
+  }
+
+  .event-list-item__time {
+    grid-column: 4;
+  }
+
+  .event-list-item__pricing {
+    grid-column: 4;
+  }
+}
+
+@include media-query__medium {
+  .event-list-item {
+    grid-template-areas: "image content arrow";
+    grid-template-columns: 222px 1fr max-content;
+    gap: $s-2xl;
+  }
+
+  .event-list-item > svg {
+    grid-area: arrow;
+  }
+}

@@ -1,5 +1,6 @@
 import { FC } from "react";
 import ArticleHeader from "../../Library/article-header/ArticleHeader";
+import { ArticleParagraphs } from "../../Library/paragraphs/Paragraphs";
 
 type ArticleProps = {
   title: string;
@@ -17,6 +18,7 @@ const Article: FC<ArticleProps> = ({ title, subtitle, author, date }) => {
         author={author}
         date={date}
       />
+      <ArticleParagraphs />
     </article>
   );
 };
