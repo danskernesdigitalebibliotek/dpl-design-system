@@ -1,5 +1,5 @@
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
-import { TagButton } from "../tag/tag-button/TagButton";
+import { Tag } from "../tag/Tag";
 
 export type EventListItemProps = {
   image: string;
@@ -34,9 +34,9 @@ export const EventListItem: React.FC<EventListItemProps> = ({
         <img src={image} alt={title} className="event-list-item__image" />
       </div>
       <div className="event-list-item__content">
-        <TagButton hasBackground className="event-list-item__tag">
+        <Tag hasBackground className="event-list-item__tag">
           {tagText}
-        </TagButton>
+        </Tag>
         <div className="event-list-item__date">{date}</div>
         <h2 className="event-list-item__title">{title}</h2>
         <p className="event-list-item__description">{description}</p>
