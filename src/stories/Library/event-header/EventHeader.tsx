@@ -13,7 +13,9 @@ const EventHeader: FC<EventHeaderProps> = ({ title, date, image }) => {
     <header className="event-header">
       <section className="event-header__content">
         <div className="event-header__tags">
-          <Tag hasBackground>Udstilling</Tag>
+          <Tag size="large" hasBackground>
+            Udstilling
+          </Tag>
         </div>
         <time className="event-header__date">{date}</time>
         <h1 className="event-header__title">{title}</h1>

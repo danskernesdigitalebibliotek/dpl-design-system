@@ -23,7 +23,9 @@ const ArticleHeader: FC<ArticleHeaderProps> = ({
       <ArrowLink label="Go back" className="article-header__back-link" />
       {tag && (
         <div className="article-header__tags">
-          <Tag hasBackground>{tag}</Tag>
+          <Tag size="large" hasBackground>
+            {tag}
+          </Tag>
         </div>
       )}
       <h1 className="article-header__title">{title}</h1>
