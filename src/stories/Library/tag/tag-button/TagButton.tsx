@@ -11,7 +11,7 @@ type TagProps = {
   className?: string;
 };
 
-export const Tag = ({
+export const TagButton = ({
   children,
   hasBackground = false,
   size = "small",
@@ -46,4 +46,4 @@ export const Tag = ({
   );
 };
 
-export default Tag;
+export default TagButton;

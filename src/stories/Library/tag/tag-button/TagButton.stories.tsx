@@ -1,12 +1,12 @@
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 
-import { Tag as TagComp } from "./Tag";
+import { TagButton as TagComp } from "./TagButton";
 
 type TagProps = typeof TagComp;
 
 export default {
-  title: "Library / Tag",
+  title: "Library / Tag / Tag button",
   component: TagComp,
   decorators: [withDesign],
   parameters: {
