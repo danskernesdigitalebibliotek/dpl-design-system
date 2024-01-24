@@ -1,5 +1,7 @@
 .list-materials {
   @include show-svg-on-hover(".list-dashboard__arrow");
+  @include show-svg-on-hover(".list-materials__arrow");
+  @include show-svg-on-hover(".arrow-button");
 
   display: flex;
   min-height: 96px;
