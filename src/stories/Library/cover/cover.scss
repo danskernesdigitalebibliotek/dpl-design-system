@@ -83,7 +83,9 @@ a.cover {
   }
 
   &.cover__img--shadow {
-    filter: drop-shadow(0 $s-xs 40px rgb(0 0 0 / 15%));
+    &-small {
+      filter: drop-shadow(0 $s-xs 40px rgb(0 0 0 / 15%));
+    }
 
     &-medium {
       filter: drop-shadow(0 $s-xs 40px rgb(0 0 0 / 25%));

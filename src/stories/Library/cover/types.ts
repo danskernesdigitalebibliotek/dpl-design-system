@@ -5,6 +5,6 @@ export type CoverProps = {
   tint?: "20" | "40" | "80" | "100" | "120";
   coverUrl?: string;
   alt?: string;
-  shadow?: boolean | "medium";
+  shadow?: "small" | "medium";
   ariaLabel?: string;
 };
