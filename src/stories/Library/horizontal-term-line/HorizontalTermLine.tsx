@@ -10,6 +10,7 @@ export interface HorizontalTermLineProps {
   title: string;
   subTitle?: string;
   linkList: HorizontalTermLineList[];
+  collapsible?: boolean;
 }
 
 export function generateId(index: number | string) {
@@ -21,8 +22,9 @@ const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
   title,
   subTitle,
   linkList,
+  collapsible = true,
 }) => {
-  const numberOfItemsToShow = 2;
+  const numberOfItemsToShow = collapsible ? 2 : linkList.length;
   const [showMore, setShowMore] = useState(false);
   const itemsToShow = showMore
     ? linkList
@@ -44,7 +46,7 @@ const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
         </span>
       ))}
 
-      {showMoreButton && (
+      {collapsible && showMoreButton && (
         <ButtonExpand showMore={showMore} setShowMore={setShowMore} />
       )}
     </div>
