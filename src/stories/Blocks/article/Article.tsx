@@ -1,14 +1,10 @@
 import { FC } from "react";
-import ArticleHeader from "../../Library/article-header/ArticleHeader";
+import ArticleHeader, {
+  ArticleHeaderProps,
+} from "../../Library/article-header/ArticleHeader";
 import { ArticleParagraphs } from "../../Library/paragraphs/Paragraphs";
 
-type ArticleProps = {
-  title: string;
-  subtitle: string;
-  category: string;
-  author: string;
-  date: string;
-};
+type ArticleProps = ArticleHeaderProps;
 
 const Article: FC<ArticleProps> = ({
   title,
@@ -16,6 +12,7 @@ const Article: FC<ArticleProps> = ({
   category,
   author,
   date,
+  tags,
 }) => {
   return (
     <article className="article">
@@ -25,6 +22,7 @@ const Article: FC<ArticleProps> = ({
         category={category}
         author={author}
         date={date}
+        tags={tags}
       />
       <ArticleParagraphs />
     </article>

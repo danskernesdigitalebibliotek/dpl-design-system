@@ -23,6 +23,16 @@ export default {
     date: {
       defaultValue: "08. April 21",
     },
+    tags: {
+      defaultValue: [
+        "dans",
+        "contemporary",
+        "modern",
+        "scenekunst",
+        "digt",
+        "3-8 årige",
+      ],
+    },
   },
   parameters: {
     design: {
