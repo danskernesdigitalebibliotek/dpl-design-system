@@ -3,7 +3,6 @@ import Cover from "../cover/Cover";
 
 export type RecommendedMaterialProps = {
   author: string;
-  publicationYear: string;
   description: string;
   src: string;
   alt: string;
@@ -13,7 +12,6 @@ export type RecommendedMaterialProps = {
 
 export const RecommendedMaterial: React.FC<RecommendedMaterialProps> = ({
   author,
-  publicationYear,
   description,
   src,
   alt,
@@ -35,13 +33,8 @@ export const RecommendedMaterial: React.FC<RecommendedMaterialProps> = ({
         alt={alt}
       />
       <div className="recommended-material__texts">
-        <p className="recommended-material__author">
-          {author}{" "}
-          <span className="recommended-material__publication-year">
-            ({publicationYear})
-          </span>
-        </p>
         <p className="recommended-material__description">{description}</p>
+        <p className="recommended-material__author">{author}</p>
       </div>
     </div>
   );

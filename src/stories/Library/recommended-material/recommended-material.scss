@@ -34,16 +34,12 @@ $_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
 .recommended-material__texts {
   justify-self: start;
 }
-.recommended-material__description {
-  @include typography($typo__body-small);
-  @include text-ellipsis-truncation(1);
-}
+.recommended-material__description,
 .recommended-material__author {
+  @include typography($typo__body-small);
   @include text-ellipsis-truncation(1);
 }
-
-.recommended-material__author,
-.recommended-material__publication-year {
-  @include typography($typo__body-small);
-  font-weight: $font__weight--semi-bold;
+.recommended-material__description {
+  font-weight: $font__weight--bold;
+  line-height: 2;
 }
