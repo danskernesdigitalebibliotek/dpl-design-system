@@ -3,7 +3,7 @@
 // we will target HTML tags instead.
 $_max-width-rich-text: 780px;
 
-%wysiwyg {
+%rich-text {
   @include typography($typo__rich-text-body);
 
   a {
@@ -128,5 +128,5 @@ $_max-width-rich-text: 780px;
 .rich-text {
   @include layout-container($_max-width-rich-text);
   @include vertical-spacing;
-  @extend %wysiwyg;
+  @extend %rich-text;
 }

@@ -21,7 +21,7 @@
 }
 
 .event-description__description {
-  @extend %wysiwyg;
+  @extend %rich-text;
   @include typography($typo__body-large);
 
   line-height: 24px;
