@@ -7,8 +7,6 @@ export default {
   title: "Library / Recommended Material",
   component: RecommendedMaterial,
   decorators: [withDesign],
-  // We disable the isChecked control, since it is not possible to
-  // get the states from the React component to work with Storybook controls.
   argTypes: {
     favoriteFill: {
       control: "boolean",
