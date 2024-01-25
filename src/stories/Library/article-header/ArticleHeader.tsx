@@ -23,6 +23,7 @@ const ArticleHeader: FC<ArticleHeaderProps> = ({
   tags,
 }) => {
   const tagData: HorizontalTermLineProps = {
+    headingLevel: "h2",
     title: "Tags",
     linkList: tags.map((tag) => {
       return { text: tag, url: "#" };

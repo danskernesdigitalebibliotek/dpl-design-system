@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ButtonExpand from "../Buttons/button/button-expand/ButtonExpand";
+import Heading, { HeadingLevelType } from "../heading/Heading";
 
 export interface HorizontalTermLineList {
   url: string;
@@ -11,6 +12,7 @@ export interface HorizontalTermLineProps {
   subTitle?: string;
   linkList: HorizontalTermLineList[];
   collapsible?: boolean;
+  headingLevel?: HeadingLevelType;
 }
 
 export function generateId(index: number | string) {
@@ -23,6 +25,7 @@ const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
   subTitle,
   linkList,
   collapsible = true,
+  headingLevel = "h3",
 }) => {
   const numberOfItemsToShow = collapsible ? 2 : linkList.length;
   const [showMore, setShowMore] = useState(false);
@@ -33,10 +36,10 @@ const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
 
   return (
     <div className="text-small-caption horizontal-term-line">
-      <h3 className="text-label-bold">
+      <Heading level={headingLevel} className="text-label-bold">
         {`${title}`}{" "}
         {subTitle && <span className="text-small-caption">{subTitle} </span>}
-      </h3>
+      </Heading>
 
       {itemsToShow.map((link, index) => (
         <span key={generateId(index)}>
