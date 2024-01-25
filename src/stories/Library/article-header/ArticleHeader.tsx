@@ -6,7 +6,7 @@ import { Tag } from "../tag/Tag";
 type ArticleHeaderProps = {
   title: string;
   subtitle: string;
-  tag?: string;
+  category?: string;
   author: string;
   date: string;
 };
@@ -14,17 +14,17 @@ type ArticleHeaderProps = {
 const ArticleHeader: FC<ArticleHeaderProps> = ({
   title,
   subtitle,
-  tag,
+  category,
   author,
   date,
 }) => {
   return (
     <header className="article-header">
       <ArrowLink label="Go back" className="article-header__back-link" />
-      {tag && (
-        <div className="article-header__tags">
+      {category && (
+        <div className="article-header__categories">
           <Tag size="large" hasBackground>
-            {tag}
+            {category}
           </Tag>
         </div>
       )}
