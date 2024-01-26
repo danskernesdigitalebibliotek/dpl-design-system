@@ -1,16 +1,15 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-
-import Hero from "./Hero";
+import FrontPage from "./FrontPage";
 
 export default {
-  title: "Library / Hero",
-  component: Hero,
+  title: "Blocks / Front Page",
+  component: FrontPage,
   decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=7477-39352&mode=design",
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=7477-39243&mode=dev",
     },
   },
   argTypes: {
@@ -35,8 +34,10 @@ export default {
         "Boghandlernes store bogpris - De Gyldne går denne gang til Stine Pilgaard for hendes roman 'Meter i sekundet'. Stort tillykke til Stine Pilgaard.",
     },
   },
-} as ComponentMeta<typeof Hero>;
+} as ComponentMeta<typeof FrontPage>;
 
-const Template: ComponentStory<typeof Hero> = (args) => <Hero {...args} />;
+const Template: ComponentStory<typeof FrontPage> = (args) => (
+  <FrontPage {...args} />
+);
 
-export const defaultHero = Template.bind({});
+export const Default = Template.bind({});

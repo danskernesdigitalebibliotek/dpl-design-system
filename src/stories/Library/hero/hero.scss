@@ -1,72 +1,12 @@
-// shuld share with event-header
 .hero {
-  @include layout-container;
-  border-bottom: 1px solid $color__global-tertiary-1;
-  display: grid;
-  gap: $s-lg;
-  padding-bottom: $s-2xl;
-  @include media-query__small {
-    grid-template-columns: 2fr 1fr;
-    gap: 0;
-    padding-bottom: 0;
-  }
-
-  a {
-    text-decoration: none;
-  }
+  @extend %hero-2-column;
 }
 
-.hero__content,
-.hero__visual {
-  padding: 0;
-  @include media-query__small {
-    padding: $s-2xl;
-  }
-}
-
-.hero__content {
-  padding-top: $s-md;
-  display: grid;
-  grid-template-columns: $s-3xl 1fr $s-3xl;
-  grid-template-areas:
-    ". tags  tags"
-    ". date  ."
-    ". title  ."
-    ". description  ."
-    ". cta cta";
-
-  @include media-query__small {
-    padding-top: $s-3xl;
-    grid-template-columns: 1fr;
-  }
-}
-
-.hero__visual {
-  @include media-query__small {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    border-right: 1px solid $color__global-tertiary-1;
-  }
-}
-
-// shuld share with event-header
-.hero__tags {
-  grid-area: tags;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: $s-md;
-  @include media-query__small {
-    margin-bottom: $s-lg;
-  }
-}
-
-// shuld be a component
 .hero-date {
-  grid-area: date;
   @include typography($typo__h5);
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: $s-md;
 
@@ -81,10 +21,8 @@
   }
 }
 
-.hero__title {
+.hero-title {
   @include typography($typo__h1);
-
-  grid-area: title;
   margin-bottom: $s-md;
 
   @include media-query__small {
@@ -92,11 +30,6 @@
   }
 }
 
-.hero__description {
-  grid-area: description;
+.hero-description {
   margin-bottom: $s-md;
-}
-
-.hero__cta {
-  grid-area: cta;
 }

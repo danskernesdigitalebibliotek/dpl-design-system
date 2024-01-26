@@ -1,9 +1,9 @@
 import React from "react";
 import ImageCredited from "../image-credited/ImageCredited";
-import { Tag } from "../tag/Tag";
+import HeroTags from "../tag/HeroTags";
 import { ReactComponent as ArrowLargeRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
 
-type HeroProps = {
+export type HeroProps = {
   image: string;
   date: string;
   title: string;
@@ -17,23 +17,21 @@ const Hero: React.FunctionComponent<HeroProps> = ({
   description,
 }) => {
   return (
-    <section className="hero ">
-      <a href="/" className="hero__content arrow arrow__hover--right-large">
-        <div className="hero__tags">
-          <Tag hasBackground>LITTERATUR</Tag>
-        </div>
+    <section className="hero">
+      <a href="/" className="hero-content arrow arrow__hover--right-large">
+        <HeroTags tags={["Arrangement"]} />
         <div className="hero-date">
           <span className="hero-date__text">Arrangement</span>
           <div>|</div>
           <time className="hero-date__date">{date}</time>
         </div>
-        <h1 className="hero__title">{title}</h1>
-        <p className="hero__description">{description}</p>
-        <div className="hero__cta">
+        <h1 className="hero-title">{title}</h1>
+        <p className="hero-description">{description}</p>
+        <div>
           <ArrowLargeRight />
         </div>
       </a>
-      <div className="hero__visual">
+      <div className="hero-visual">
         <ImageCredited
           src={image}
           description="Photo by Unsplash"
