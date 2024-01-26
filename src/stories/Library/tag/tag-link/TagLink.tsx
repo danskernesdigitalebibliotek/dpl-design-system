@@ -4,17 +4,20 @@ type TagProps = {
   children: React.ReactNode;
   size?: "small" | "large";
   hasBackground?: boolean;
+  showCloseIcon?: boolean;
   className?: string;
 };
 
-export const Tag = ({
+export const TagLink = ({
   children,
   size = "small",
   hasBackground = false,
+  showCloseIcon = false,
   className,
 }: TagProps) => {
   return (
-    <div
+    <a
+      href="#"
       className={clsx(
         "tag",
         hasBackground && "tag--fill",
@@ -23,8 +26,15 @@ export const Tag = ({
       )}
     >
       {children}
-    </div>
+      {showCloseIcon && (
+        <img
+          className="tag-icon"
+          src="icons/basic/icon-cross.svg"
+          alt="close icon"
+        />
+      )}
+    </a>
   );
 };
 
-export default Tag;
+export default TagLink;

@@ -29,7 +29,11 @@ const EventDescription: FC<EventDescriptionProps> = ({
         </p>
         <div className="event-description__links">
           {horizontalTermLineData.map((item, index) => (
-            <HorizontalTermLine {...item} key={generateId(index)} />
+            <HorizontalTermLine
+              {...item}
+              collapsible={false}
+              key={generateId(index)}
+            />
           ))}
         </div>
       </div>

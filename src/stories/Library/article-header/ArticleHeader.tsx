@@ -1,23 +1,44 @@
 import { FC } from "react";
-import RowButtons from "../Buttons/row-button/RowButtons";
 import ArrowLink from "../links/arrow-link/ArrowLink";
+import { Tag } from "../tag/Tag";
+import HorizontalTermLine, {
+  HorizontalTermLineProps,
+} from "../horizontal-term-line/HorizontalTermLine";
 
-type ArticleHeaderProps = {
+export type ArticleHeaderProps = {
   title: string;
   subtitle: string;
+  category?: string;
   author: string;
   date: string;
+  tags: string[];
 };
 
 const ArticleHeader: FC<ArticleHeaderProps> = ({
   title,
   subtitle,
+  category,
   author,
   date,
+  tags,
 }) => {
+  const tagData: HorizontalTermLineProps = {
+    headingLevel: "h2",
+    title: "Tags",
+    linkList: tags.map((tag) => {
+      return { text: tag, url: "#" };
+    }),
+  };
   return (
     <header className="article-header">
       <ArrowLink label="Go back" className="article-header__back-link" />
+      {category && (
+        <div className="article-header__categories">
+          <Tag size="large" hasBackground>
+            {category}
+          </Tag>
+        </div>
+      )}
       <h1 className="article-header__title">{title}</h1>
       <p className="article-header__subtitle">{subtitle}</p>
       <p className="article-header__info">
@@ -27,7 +48,9 @@ const ArticleHeader: FC<ArticleHeaderProps> = ({
         </a>
         <time className="article-header__date">{date}</time>
       </p>
-      <RowButtons labels={["Netmedier", "Licenser", "This is hiddden"]} />
+      <div className="article-header__tags">
+        <HorizontalTermLine collapsible={false} {...tagData} />
+      </div>
     </header>
   );
 };
