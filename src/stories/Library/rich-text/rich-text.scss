@@ -3,10 +3,8 @@
 // we will target HTML tags instead.
 $_max-width-rich-text: 780px;
 
-.rich-text {
+%rich-text {
   @include typography($typo__rich-text-body);
-  @include layout-container($_max-width-rich-text);
-  @include vertical-spacing;
 
   a {
     @extend %text-inline-link;
@@ -125,4 +123,10 @@ $_max-width-rich-text: 780px;
     text-align: left;
     font-weight: bold;
   }
+}
+
+.rich-text {
+  @include layout-container($_max-width-rich-text);
+  @include vertical-spacing;
+  @extend %rich-text;
 }
