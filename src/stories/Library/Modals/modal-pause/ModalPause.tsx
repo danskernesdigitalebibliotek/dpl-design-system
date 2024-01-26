@@ -57,6 +57,7 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
                 Pause period
               </label>
               <input
+                id="date-range"
                 ref={calendar}
                 title="Hidden field"
                 aria-label="Hidden field"
