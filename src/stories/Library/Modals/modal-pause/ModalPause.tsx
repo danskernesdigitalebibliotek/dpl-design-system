@@ -46,11 +46,11 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
     <Modal shownModal={showModal} classNames="modal-padding modal-pause">
       <div className="modal-pause__container">
         <h3 className="text-header-h3">{title}</h3>
-        <div className="mt-48 color-secondary-gray">
+        <div className="modal-pause__subtitle">
           <p className="text-body-medium-regular">{subtitle}</p>
         </div>
 
-        <div className="modal-pause__dropdowns mt-24">
+        <div className="modal-pause__date-range">
           <div className="date-range">
             <div className="date-range__input">
               <label htmlFor="date-range" className="text-body-medium-regular">
@@ -67,7 +67,7 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
           </div>
         </div>
 
-        <div className="modal-pause__text-link mt-24 color-secondary-gray">
+        <div className="modal-pause__text-link">
           <p className="text-body-small-regular">
             {textWithLink} <Links href="/" linkText={linkText} />
           </p>

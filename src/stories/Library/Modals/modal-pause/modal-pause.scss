@@ -3,6 +3,19 @@ $modal-pause-container-width: 550px;
 .modal-pause {
   flex-direction: column;
   align-items: center;
+
+  &__subtitle {
+    margin-top: $s-xl;
+    color: $color__text-secondary-gray;
+  }
+
+  &__date-range {
+    margin-top: $s-lg;
+  }
+
+  &__text-link {
+    color: $color__text-secondary-gray;
+  }
 }
 
 .modal-pause__container {
