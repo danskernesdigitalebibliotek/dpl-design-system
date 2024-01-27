@@ -43,6 +43,8 @@ jobs:
           node-version-file: '.nvmrc'
           registry-url: "https://npm.pkg.github.com"
           scope: "@${{ github.repository_owner }}"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - run: yarn install --frozen-lockfile
 
