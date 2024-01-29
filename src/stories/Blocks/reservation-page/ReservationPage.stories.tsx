@@ -27,6 +27,11 @@ export default {
       defaultValue: 2,
       control: { type: "number" },
     },
+    skeletonVersion: {
+      name: "Is skeleton version?",
+      defaultValue: false,
+      control: { type: "boolean" },
+    },
   },
   parameters: {
     design: {
@@ -54,4 +59,8 @@ NoReservationsAtAll.args = {
   readyForPickup: 0,
   physicalReservations: 0,
   digitalReservations: 0,
+};
+export const SkeletonVersion = Template.bind({});
+SkeletonVersion.args = {
+  skeletonVersion: true,
 };
