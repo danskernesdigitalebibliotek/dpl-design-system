@@ -15,22 +15,24 @@ const HeroTags: FC<HeroTagsProps> = ({ tags }) => {
   }
 
   return (
-    <ul data-show-more-list className="hero-tags">
-      {tags.map((tag, index) => (
-        <li data-show-more-item>
-          <Tag key={index} hasBackground>
-            {tag}
-          </Tag>
-        </li>
-      ))}
+    <div data-show-more-list className="hero-tags">
+      <ul>
+        {tags.map((tag, index) => (
+          <li data-show-more-item>
+            <Tag key={index} hasBackground>
+              {tag}
+            </Tag>
+          </li>
+        ))}
+      </ul>
       <button
-        className="tag tag--fill tag--small cursor-pointer"
+        className="tag tag--fill cursor-pointer"
         aria-expanded="false"
         data-show-more-button
       >
         ...
       </button>
-    </ul>
+    </div>
   );
 };
 

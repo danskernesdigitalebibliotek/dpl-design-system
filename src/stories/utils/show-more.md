@@ -10,7 +10,7 @@ Structure your HTML elements as follows for implementing the
 "Show More/Less" feature:
 
 - **List Element**:
-Use an `<ul>` or `<ol>` element with the `data-show-more-list` attribute
+Use an wrapper element with the `data-show-more-list` attribute
 This element will contain both the list items and the toggle button.
 - **List Items**:
 Assign the `data-show-more-item` attribute to each list item that you want
@@ -34,11 +34,13 @@ Set the initial number of visible items with the
 ### Example HTML Markup
 
 ```html
-<ul data-show-more-list>
-  <li data-show-more-item>Item 1</li>
-  <li data-show-more-item>Item 2</li>
-  <!-- additional items are hidden by default -->
-  <li data-show-more-item>Item 3</li>
+<div data-show-more-list>
+  <ul>
+    <li data-show-more-item>Item 1</li>
+    <li data-show-more-item>Item 2</li>
+    <!-- additional items are hidden by default -->
+    <li data-show-more-item>Item 3</li>
+  </ul>
   <button
     class="cursor-pointer"
     aria-expanded="false"
@@ -49,5 +51,5 @@ Set the initial number of visible items with the
   >
     Show more
   </button>
-</ul>
+</div>
 ``````
