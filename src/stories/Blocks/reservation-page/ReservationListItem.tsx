@@ -24,7 +24,6 @@ const ReservationListItem: React.FC<ReservationListItemProps> = ({
               <div className="list-reservation__about">
                 <button
                   type="button"
-                  lang="dan"
                   className="list-reservation__header color-secondary-gray"
                 >
                   <span
