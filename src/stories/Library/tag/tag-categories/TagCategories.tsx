@@ -1,13 +1,13 @@
 import { FC, useEffect } from "react";
-import { Tag } from "./Tag";
+import { Tag } from "../Tag";
 
-type HeroTagsProps = {
+type TagCategoriesProps = {
   tags: string[];
 };
 
-const HeroTags: FC<HeroTagsProps> = ({ tags }) => {
+const TagCategories: FC<TagCategoriesProps> = ({ tags }) => {
   useEffect(() => {
-    require("../../utils/show-more");
+    require("../../../utils/show-more");
   }, []);
 
   if (!tags) {
@@ -15,7 +15,7 @@ const HeroTags: FC<HeroTagsProps> = ({ tags }) => {
   }
 
   return (
-    <div data-show-more-list className="hero-tags">
+    <div data-show-more-list className="tag-categories">
       <ul>
         {tags.map((tag, index) => (
           <li data-show-more-item>
@@ -36,4 +36,4 @@ const HeroTags: FC<HeroTagsProps> = ({ tags }) => {
   );
 };
 
-export default HeroTags;
+export default TagCategories;

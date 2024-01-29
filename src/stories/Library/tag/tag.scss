@@ -25,20 +25,3 @@
 .tag-icon {
   margin-left: 10px;
 }
-
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: $s-md;
-  @include media-query__small {
-    margin-bottom: $s-lg;
-  }
-
-  ul,
-  ol {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-}

@@ -1,6 +1,6 @@
 import React from "react";
 import ImageCredited from "../image-credited/ImageCredited";
-import HeroTags from "../tag/HeroTags";
+import TagCategories from "../tag/tag-categories/TagCategories";
 import { ReactComponent as ArrowLargeRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
 
 export type HeroProps = {
@@ -19,7 +19,7 @@ const Hero: React.FunctionComponent<HeroProps> = ({
   return (
     <section className="hero">
       <a href="/" className="hero-content arrow arrow__hover--right-large">
-        <HeroTags tags={["Arrangement"]} />
+        <TagCategories tags={["Arrangement"]} />
         <div className="hero-date">
           <span className="hero-date__text">Arrangement</span>
           <div>|</div>
