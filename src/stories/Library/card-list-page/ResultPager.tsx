@@ -17,14 +17,16 @@ const ResultPager = ({
       <p className="text-small-caption result-pager__title">
         {`Viser ${currentResults} ud af ${total} resultater`}
       </p>
-      <Button
-        label="VIS FLERE"
-        disabled={false}
-        buttonType="none"
-        collapsible={false}
-        size="medium"
-        variant="outline"
-      />
+      {!(currentResults === totalResults) && (
+        <Button
+          label="SHOW MORE"
+          disabled={false}
+          buttonType="none"
+          collapsible={false}
+          size="medium"
+          variant="outline"
+        />
+      )}
     </div>
   );
 };
