@@ -19,7 +19,7 @@ const HeroTags: FC<HeroTagsProps> = ({ tags }) => {
       <ul>
         {tags.map((tag, index) => (
           <li data-show-more-item>
-            <Tag key={index} hasBackground>
+            <Tag key={index} hasBackground size="large">
               {tag}
             </Tag>
           </li>
