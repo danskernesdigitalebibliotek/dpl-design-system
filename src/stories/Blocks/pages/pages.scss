@@ -30,11 +30,15 @@
     }
 
     // Add paddig on childs except .hero-cta
-    > *:not(.hero-cta) {
+    > * {
       padding: 0 $s-3xl;
       @include media-query__small {
         padding: 0;
       }
+    }
+
+    > .hero-cta {
+      padding: 0;
     }
   }
 
