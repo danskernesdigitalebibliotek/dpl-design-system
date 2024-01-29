@@ -2,12 +2,14 @@ import ResultPager from "../../Library/card-list-page/ResultPager";
 import { PauseReservation } from "../../Library/pause-reservation/PauseReservation";
 import ReservationListEmptyState from "./ReservationListEmptyState";
 import ReservationListItem from "./ReservationListItem";
+import ReservationPageSkeleton from "./ReservationPageSkeleton";
 
 export interface ReservationPageProps {
   headline: string;
   readyForPickup: number;
   physicalReservations: number;
   digitalReservations: number;
+  skeletonVersion?: boolean;
 }
 
 const ReservationPage: React.FC<ReservationPageProps> = ({
@@ -15,7 +17,12 @@ const ReservationPage: React.FC<ReservationPageProps> = ({
   readyForPickup,
   physicalReservations,
   digitalReservations,
+  skeletonVersion,
 }) => {
+  if (skeletonVersion) {
+    return <ReservationPageSkeleton />;
+  }
+
   if (!readyForPickup && !physicalReservations && !digitalReservations) {
     return (
       <div className="reservation-list-page">
