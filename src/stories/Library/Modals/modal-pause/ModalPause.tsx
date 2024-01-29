@@ -27,13 +27,25 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
   const calendar = useCallback((node: Node | null) => {
     const options: Partial<BaseOptions> = {
       mode: "range",
-      defaultDate: ["2024-01-01", "2024-01-10"],
+      // defaultDate: ["2024-01-01", "2024-01-10"],
       now: "2024-01-19",
       altInput: true,
       dateFormat: "d-m-Y",
       static: true,
       onReady: (selectedDates, dateStr, instance) => {
         instance.altInput?.setAttribute("aria-label", "Pause period");
+        const classes =
+          instance.altInput?.getAttribute("class")?.split(" ") || [];
+
+        // Set placeholder if no dates are chosen and a placeholder is given.
+        if (!selectedDates.length) {
+          instance.altInput?.setAttribute("placeholder", "Choose pause period");
+        }
+        // Set empty-date-range class if no dates are chosen.
+        if (!selectedDates.length && !classes.includes("empty-date-range")) {
+          classes.push("empty-date-range");
+          instance.altInput?.setAttribute("class", classes.join(" "));
+        }
       },
     };
 
@@ -75,7 +87,7 @@ export const ModalPause: React.FC<ModalPauseProps> = ({
         </p>
         <div className="modal-pause__button mt-48">
           <Button
-            buttonType="default"
+            buttonType="none"
             size="large"
             variant="filled"
             label="gem"
