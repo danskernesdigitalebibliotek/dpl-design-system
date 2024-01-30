@@ -38,11 +38,9 @@ $layout__edge-spacing: $s-md;
 
 // Mixin for controlling vertical spacing(margin) of an element
 @mixin vertical-spacing(
-  $top: $_vertical-spacing--large,
-  $bottom: $_vertical-spacing--large
+  $top: $_vertical-spacing--large
 ) {
   margin-top: $top;
-  margin-bottom: $bottom;
 }
 
 // ########## Avoid using utilities as described in documentation ############
@@ -52,28 +50,17 @@ $layout__edge-spacing: $s-md;
   @include vertical-spacing;
 
   &--small {
-    @include vertical-spacing(
-      $_vertical-spacing--small,
-      $_vertical-spacing--small
-    );
+    @include vertical-spacing($_vertical-spacing--small);
   }
   &--medium {
     @include vertical-spacing(
-      $_vertical-spacing--medium,
-      $_vertical-spacing--medium
-    );
+      $_vertical-spacing--medium);
   }
   &--large {
-    @include vertical-spacing(
-      $_vertical-spacing--large,
-      $_vertical-spacing--large
-    );
+    @include vertical-spacing($_vertical-spacing--large);
   }
   &--x-large {
-    @include vertical-spacing(
-      $_vertical-spacing--x-large,
-      $_vertical-spacing--x-large
-    );
+    @include vertical-spacing($_vertical-spacing--x-large);
   }
 }
 

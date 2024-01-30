@@ -1,6 +1,6 @@
 .event-list {
   @include layout-container;
-  @include vertical-spacing(0, $s-xl);
+  @include vertical-spacing($s-xl);
 }
 .event-list__item {
   list-style: none;

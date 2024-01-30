@@ -81,29 +81,23 @@ Here are some examples of how to use these mixins, and utility classes.
 ### Including mixins in components using BEM
 
 ```scss
-// Using mixins in your BEM-named parent container. 
+// Using mixins in your BEM-named parent container.
 .your-BEM-component-name {
   @include layout-container;
   @include vertical-spacing;
 
   @include media-query__small() {
-    // Applying new edge spacing (Padding) using $spacings / other. 
+    // Applying new edge spacing (Padding) using $spacings / other.
     @include layout-container($padding: $s-xl);
-    // applying new vertical spacing. 
-    @include vertical-spacing(
-      $top: $_layout-spacing--large,
-      $bottom: $_layout-spacing--large
-    );
+    // applying new vertical spacing.
+    @include vertical-spacing($_layout-spacing--large);
   }
-  
+
  @include media-query__large() {
     // Removing max-width & applying specific padding from $spacings / other
      @include layout-container($max-width: 0, $padding: $s-md);
-    // Removing vertical spacing entirely. 
-     @include vertical-spacing(
-      $top: 0,
-      $bottom: 0
-    );
+    // Removing vertical spacing entirely.
+     @include vertical-spacing(0);
   }
 }
 ```
@@ -118,7 +112,7 @@ Here are some examples of how to use these mixins, and utility classes.
 </div>
 
 <!-- layout utility using respective specified sizes -->
-<div class="layout__max-width--medium layout__edge-spacing--large 
+<div class="layout__max-width--medium layout__edge-spacing--large
     layout__vertical-spacing--small">
   <!-- Content  -->
 </div>

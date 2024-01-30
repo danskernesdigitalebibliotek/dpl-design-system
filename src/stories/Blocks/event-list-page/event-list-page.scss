@@ -5,6 +5,6 @@
 .event-list-page__heading {
   @include layout-container;
   @include typography($typo__h2);
-  @include vertical-spacing(0, $s-xl);
+  @include vertical-spacing($s-xl);
   padding-top: $s-xl;
 }

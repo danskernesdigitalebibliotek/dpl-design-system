@@ -1,4 +1,5 @@
 .link-with-icon {
+  @include vertical-spacing();
   @include typography($typo__body-placeholder);
   @include show-svg-on-hover();
   @include layout-container;
@@ -14,17 +15,10 @@
   border: 1px solid $color__global-tertiary-1;
   width: 100%;
 
-  &:first-child {
-    margin-top: 0;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   // Removing the spacing/double border between items next to eachother.
   & + .link-with-icon {
-    margin-top: 0;
+    @include vertical-spacing(0);
+
     border-top: 0;
   }
 
