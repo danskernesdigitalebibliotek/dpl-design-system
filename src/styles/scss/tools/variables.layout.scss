@@ -30,7 +30,8 @@ $layout__edge-spacing: $s-md;
   $padding: $layout__edge-spacing
 ) {
   max-width: $max-width;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: $padding;
   padding-right: $padding;
   box-sizing: border-box;

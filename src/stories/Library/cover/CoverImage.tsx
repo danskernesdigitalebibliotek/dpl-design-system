@@ -8,7 +8,7 @@ type CoverState = {
 
 const CoverImage: FC<CoverProps & CoverState> = ({
   src,
-  description,
+  alt,
   animate,
   setImageLoaded,
   shadow,
@@ -27,10 +27,13 @@ const CoverImage: FC<CoverProps & CoverState> = ({
         {
           "cover__img--animate": animate,
         },
-        { "cover__img--shadow": shadow }
+        {
+          "cover__img--shadow-small": shadow === "small",
+          "cover__img--shadow-medium": shadow === "medium",
+        }
       )}
       src={src}
-      alt={description || ""}
+      alt={alt || ""}
     />
   );
 };
