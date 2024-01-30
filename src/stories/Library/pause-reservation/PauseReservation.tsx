@@ -1,8 +1,9 @@
 export type PauseReservationProps = {
-  isChecked: boolean;
+  isChecked?: boolean;
   isPausedtext: string;
   pauseText: string;
-  dates: string;
+  dates?: string;
+  classNames?: string;
 };
 
 export const PauseReservation = ({
@@ -10,9 +11,10 @@ export const PauseReservation = ({
   pauseText,
   isPausedtext,
   dates,
+  classNames,
 }: PauseReservationProps) => {
   return (
-    <div className="dpl-pause-reservation-component">
+    <div className={`dpl-pause-reservation-component ${classNames}`}>
       <div className="dpl-pause-reservation-component__pagefold" />
       <div className="dpl-pause-reservation-component__flex">
         <div className="dpl-pause-reservation-component__flex__reservation-icon">
@@ -21,7 +23,7 @@ export const PauseReservation = ({
         <div className="dpl-pause-reservation-component__flex__text">
           {isChecked ? isPausedtext : pauseText}
         </div>
-        {isChecked && (
+        {isChecked && dates && (
           <span
             aria-label="Reservationer er sat på pause i følgende periode"
             className="dpl-pause-reservation-component__flex__badge"
@@ -31,7 +33,7 @@ export const PauseReservation = ({
         )}
         <div className="dpl-pause-reservation-component__flex__button">
           <button type="button" className="btn-primary btn-filled btn-small">
-            Indstillinger
+            Settings
           </button>
         </div>
       </div>
