@@ -25,7 +25,7 @@ const HorizontalTermLine: React.FC<HorizontalTermLineProps> = ({
   subTitle,
   linkList,
   collapsible = true,
-  headingLevel = "h3",
+  headingLevel = "h2",
 }) => {
   const numberOfItemsToShow = collapsible ? 2 : linkList.length;
   const [showMore, setShowMore] = useState(false);
