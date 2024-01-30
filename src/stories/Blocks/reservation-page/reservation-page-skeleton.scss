@@ -1,0 +1,23 @@
+// Since we are using the Skeleton Screen Css classes connected to the existing styling
+// we deliberately not follow the BEM naming convention here.
+.reservation-list-page.ssc {
+  .ssc-square {
+    height: 72px;
+
+    &.cover--size-small {
+      height: 137px;
+      width: 95px;
+    }
+  }
+  .ssc-circle {
+    height: 90px;
+  }
+
+  & .list-reservation__information {
+    min-width: 200px;
+
+    @include media-query__x-small("max-width") {
+      min-width: 100px;
+    }
+  }
+}
