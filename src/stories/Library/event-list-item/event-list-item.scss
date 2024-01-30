@@ -1,3 +1,6 @@
+$_event-list-item--max-width: 1126px;
+$_event-list-item--image-width: 222px;
+
 .event-list-item {
   @include show-svg-on-hover();
   text-decoration: none;
@@ -9,8 +12,11 @@
     "image"
     "content";
   grid-template-rows: auto;
-  row-gap: $s-md;
-  @include layout-container($padding: $s-lg);
+  gap: $s-md;
+  @include layout-container(
+    $max-width: $_event-list-item--max-width,
+    $padding: $s-lg
+  );
 
   // Extending display none, as mixin show-svg-on-hover
   // is only working up to __small breakpoint
@@ -30,52 +36,48 @@
 }
 
 .event-list-item__image {
-  position: absolute;
-  z-index: $z-10;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: $z-10;
 }
 
 .event-list-item__content {
-  @include typography($typo__body-medium);
   display: grid;
   grid-template-areas:
-    "tag date"
-    "title title"
-    "description description"
-    "location schedule";
+    "tag date date"
+    "title title title"
+    "description description description"
+    "location schedule schedule";
   row-gap: $s-sm;
+  @include typography($typo__event-list--content);
 }
 
 .event-list-item__tag {
   grid-area: tag;
-  @include typography($typo__small-caption);
   width: max-content;
+  margin-bottom: $s-sm;
+}
+.event-list-item__pricing {
+  font-weight: $font__weight--semi-bold;
 }
 
 .event-list-item__date {
   grid-area: date;
-  @include typography($typo__small-caption);
-  text-align: right;
+  justify-self: end;
 }
 
 .event-list-item__title {
   grid-area: title;
-  @include typography($typo__h4);
+  @include typography($typo__event-list--heading);
   @extend %text-truncate;
-  margin-bottom: $s-sm;
 }
 
 .event-list-item__description {
   grid-area: description;
-  @include typography($typo__small-caption);
+
   @include text-ellipsis-truncation(3);
-  margin-bottom: $s-xl;
+  margin-bottom: $s-lg;
 }
 
 .event-list-item__location-wrapper {
@@ -88,7 +90,7 @@
 
 .event-list-item__location {
   @extend %link-tag;
-  @include typography($typo__small-caption);
+  @include typography($typo__event-list--content);
 }
 
 .event-list-item__schedule {
@@ -96,17 +98,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-}
-
-.event-list-item__time {
-  @include typography($typo__body-placeholder);
+  justify-content: flex-end;
+  row-gap: 8px;
+  @include typography($typo__event-list--content--large);
 }
 
 @include media-query__small {
   .event-list-item {
     grid-template-areas: "image content";
-    grid-template-columns: 222px 1fr;
-    gap: $s-2xl;
+    grid-template-columns: auto 1fr;
+    gap: $s-lg;
   }
 
   .event-list-item__content {
@@ -119,9 +120,11 @@
       "description description . schedule"
       "location location . schedule";
   }
+
   .event-list-item__image-container {
-    max-width: 222px;
     grid-area: image;
+    max-width: $_event-list-item--image-width;
+    min-width: $_event-list-item--image-width;
   }
 
   .event-list-item__tag {
@@ -130,46 +133,36 @@
   }
 
   .event-list-item__date {
-    text-align: initial;
-    align-self: end;
+    justify-self: start;
+    align-self: center;
   }
 
   .event-list-item__title {
-    margin-bottom: unset;
     grid-area: title;
   }
 
   .event-list-item__description {
     margin-bottom: unset;
-    @include text-ellipsis-truncation(2);
     grid-area: description;
+    @include text-ellipsis-truncation(2);
   }
 
   .event-list-item__schedule {
-    align-self: center;
-    margin-bottom: $s-md;
-    align-items: flex-start;
     grid-area: schedule;
-  }
-
-  .event-list-item__location-wrapper {
-    margin-top: $s-md;
-  }
-
-  .event-list-item__time {
-    grid-column: 4;
-  }
-
-  .event-list-item__pricing {
-    grid-column: 4;
+    grid-row: 3 / span 3;
+    justify-content: unset;
   }
 }
 
 @include media-query__medium {
   .event-list-item {
     grid-template-areas: "image content arrow";
-    grid-template-columns: 222px 1fr max-content;
+    grid-template-columns: auto 1fr max-content;
     gap: $s-2xl;
+  }
+
+  .event-list-item__schedule {
+    align-items: flex-start;
   }
 
   .event-list-item > svg {
