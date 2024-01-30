@@ -325,7 +325,7 @@ $typo__card-placeholder: (
     ),
 );
 
-$typo__card-placeholder--small: (
+$typo__card-placeholder--medium: (
   mobile: (
     font-family: $font__title,
     font-style: normal,
@@ -336,5 +336,19 @@ $typo__card-placeholder--small: (
   #{$breakpoint__large-card}: (
       font-size: 28px,
       line-height: 32px,
+    ),
+);
+
+$typo__card-placeholder--grid: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 16px,
+    line-height: 20px,
+  ),
+  #{$breakpoint__large-card}: (
+      font-size: 20px,
+      line-height: 24px,
     ),
 );

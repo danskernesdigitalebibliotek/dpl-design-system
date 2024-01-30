@@ -4,7 +4,15 @@
 $_card-grid-gap: $s-lg;
 
 .card-grid {
-  @include layout-container("none");
+  @include layout-container();
+
+  .card__placeholder-text {
+    @include typography($typo__card-placeholder--grid);
+  }
+}
+
+.card-grid--full-width {
+  @include layout-container(none);
 }
 
 .card-grid__header {
@@ -85,6 +93,8 @@ $_card-grid-gap: $s-lg;
   );
 
   // The card widths on the largest (desktop) screen.
+  // These sizes are only being used on full-width grids, as the cards will
+  // become too massive otherwise.
   $_card-widths--large: (
     "x-large": 45%,
     "small": 15%,
@@ -95,6 +105,7 @@ $_card-grid-gap: $s-lg;
   @each $key, $name in $_card-patterns {
     // The design is very specific about the masonry design. See the sizes
     // defined in the arrays above, which we loop through here.
+    // stylelint-disable max-nesting-depth -- I know it's awful nesting, but i have no choice.
     &:nth-child(#{$key}) {
       width: map_get($_card-widths--small, $name);
 
@@ -102,8 +113,10 @@ $_card-grid-gap: $s-lg;
         width: map_get($_card-widths--medium, $name);
       }
 
-      @include media-query__large {
-        width: map_get($_card-widths--large, $name);
+      .card-grid--full-width & {
+        @include media-query__large {
+          width: map_get($_card-widths--large, $name);
+        }
       }
 
       .card {
@@ -114,7 +127,6 @@ $_card-grid-gap: $s-lg;
         // placeholder box, that there is no space for the text, on larger
         // screens. On smaller screens, it takes up 50% of the page, so
         // there, there is plenty of space.
-        // stylelint-disable max-nesting-depth -- I know it's awful nesting, but i have no choice.
         @if ($name == "small") {
           @include media-query__small {
             .card__placeholder-text {
@@ -122,8 +134,8 @@ $_card-grid-gap: $s-lg;
             }
           }
         }
-        // stylelint-enable max-nesting-depth
       }
     }
+    // stylelint-enable max-nesting-depth
   }
 }
