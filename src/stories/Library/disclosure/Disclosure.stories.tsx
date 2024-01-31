@@ -29,6 +29,11 @@ export default {
       options: ["Various", "Receipt", "Create", "Profile"],
       control: { type: "select" },
     },
+    contentPadding: {
+      name: "Extra content padding",
+      defaultValue: false,
+      control: { type: "boolean" },
+    },
     withAvailability: {
       name: "Is with availability label?",
       defaultValue: false,
@@ -51,4 +56,14 @@ export const Default = Template.bind({});
 export const WithAvailabilityLabel = Template.bind({});
 WithAvailabilityLabel.args = {
   withAvailability: true,
+};
+
+export const WithoutIcon = Template.bind({});
+WithoutIcon.args = {
+  icon: undefined,
+};
+
+export const WithExtraContentPadding = Template.bind({});
+WithExtraContentPadding.args = {
+  contentPadding: true,
 };
