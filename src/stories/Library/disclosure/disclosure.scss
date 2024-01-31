@@ -1,3 +1,5 @@
+$_disclosure_paragraph--max-width: 844px;
+
 .disclosure {
   width: auto;
   border: solid 1px $color__global-tertiary-1;
@@ -93,9 +95,8 @@
   }
 }
 
-.disclosure[open] .disclosure__expand {
-  transition: transform 0.3s ease-in-out;
-  transform: scaleY(-1);
+.disclosure--paragraph-width {
+  @include layout-container($_disclosure_paragraph--max-width, 0);
 }
 
 .disclosure__content-padding {
@@ -103,4 +104,9 @@
   @include media-query__small {
     padding: $s-xl;
   }
+}
+
+.disclosure[open] .disclosure__expand {
+  transition: transform 0.3s ease-in-out;
+  transform: scaleY(-1);
 }
