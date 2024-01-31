@@ -7,7 +7,7 @@ type PageProps = {
 
 const Page: FC<PageProps> = ({ hero }) => {
   return (
-    <section>
+    <article>
       {hero && (
         <Hero
           image={hero.image}
@@ -17,7 +17,7 @@ const Page: FC<PageProps> = ({ hero }) => {
           description={hero.description}
         />
       )}
-    </section>
+    </article>
   );
 };
 
