@@ -18,6 +18,10 @@ export default {
         "https://images.unsplash.com/photo-1531058020387-3be344556be6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZXZlbnR8fHx8fHwxNzAyOTEwMzE0&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
       type: "string",
     },
+    type: {
+      defaultValue: "Arrangement",
+      type: "string",
+    },
     date: {
       defaultValue: "06 Dec 2022",
       type: "string",
