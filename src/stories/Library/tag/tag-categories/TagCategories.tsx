@@ -15,24 +15,35 @@ const TagCategories: FC<TagCategoriesProps> = ({ tags }) => {
   }
 
   return (
-    <div data-show-more-list className="tag-categories">
-      <ul>
-        {tags.map((tag, index) => (
-          <li data-show-more-item>
-            <Tag key={index} hasBackground size="large">
-              {tag}
-            </Tag>
-          </li>
-        ))}
-      </ul>
-      <button
-        className="tag tag--fill cursor-pointer"
-        aria-expanded="false"
-        data-show-more-button
-      >
-        ...
-      </button>
-    </div>
+    <>
+      {tags.length > 1 && (
+        <div data-show-more-list className="tag-categories">
+          <ul>
+            {tags.map((tag, index) => (
+              <li data-show-more-item>
+                <Tag key={index} hasBackground size="large">
+                  {tag}
+                </Tag>
+              </li>
+            ))}
+          </ul>
+          <button
+            className="tag tag--fill cursor-pointer"
+            aria-expanded="false"
+            data-show-more-button
+          >
+            ...
+          </button>
+        </div>
+      )}
+      {tags.length === 1 && (
+        <div className="tag-categories">
+          <Tag hasBackground size="large">
+            {tags[0]}
+          </Tag>
+        </div>
+      )}
+    </>
   );
 };
 
