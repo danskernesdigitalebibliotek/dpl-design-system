@@ -97,3 +97,10 @@
   transition: transform 0.3s ease-in-out;
   transform: scaleY(-1);
 }
+
+.disclosure__content-padding {
+  padding: $s-md;
+  @include media-query__small {
+    padding: $s-xl;
+  }
+}
