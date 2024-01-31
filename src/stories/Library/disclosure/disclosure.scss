@@ -95,6 +95,10 @@ $_disclosure_paragraph--max-width: 844px;
   }
 }
 
+.disclosure--paragraph-width .disclosure__expand {
+  transition: transform 0.3s ease-in-out;
+}
+
 .disclosure--paragraph-width {
   @include layout-container($_disclosure_paragraph--max-width, 0);
 }
