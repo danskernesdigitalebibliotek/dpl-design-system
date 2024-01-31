@@ -12,12 +12,4 @@
   .ssc-circle {
     height: 90px;
   }
-
-  & .list-reservation__information {
-    min-width: 200px;
-
-    @include media-query__x-small("max-width") {
-      min-width: 100px;
-    }
-  }
 }

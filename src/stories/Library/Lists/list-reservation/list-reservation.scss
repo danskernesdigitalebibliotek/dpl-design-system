@@ -84,6 +84,11 @@ $list-reservation-space-desktop: 24px;
   margin-left: $list-reservation-space-mobile;
   align-items: baseline;
   justify-content: space-between;
+  min-width: 200px;
+
+  @include media-query__x-small("max-width") {
+    min-width: 100px;
+  }
 
   @include media-query__small {
     margin-left: $list-reservation-space-desktop;
