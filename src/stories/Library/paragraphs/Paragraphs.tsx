@@ -1,5 +1,5 @@
 import CardGrid from "../card-grid/CardGrid";
-import { card, cardNoImage } from "../card-grid/CardGrid.stories";
+import { card, cardNoImage } from "../card-grid/card-grid-data";
 import { LinkWithIcon } from "../link-with-icon/LinkWithIcon";
 import Paragraph from "../paragraph/Paragraph";
 import { Recommendation } from "../recommendation/Recommendation";
