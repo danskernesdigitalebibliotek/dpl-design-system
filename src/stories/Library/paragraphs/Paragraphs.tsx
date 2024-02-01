@@ -1,19 +1,22 @@
 import { LinkWithIcon } from "../link-with-icon/LinkWithIcon";
+import Paragraph from "../paragraph/Paragraph";
 import { RichText, RichTextEvent } from "../rich-text/RichText";
 import VideoEmbed from "../video-embed/VideoEmbed";
 
 export const EventParagraphs = () => {
   return (
     <section className="paragraphs">
-      <div className="paragraphs__item paragraphs__item--rich-text">
+      <Paragraph modyfier="rich-text">
         <RichTextEvent />
-      </div>
-      <div className="paragraphs__item paragraphs__item--links">
+      </Paragraph>
+
+      <Paragraph modyfier="links">
         <LinkWithIcon href="/" linkText="External Link" linkType="external" />
-      </div>
-      <div className="paragraphs__item paragraphs__item--links">
+      </Paragraph>
+
+      <Paragraph modyfier="links">
         <LinkWithIcon href="/" linkText="internal Link" linkType="internal" />
-      </div>
+      </Paragraph>
     </section>
   );
 };
@@ -21,15 +24,17 @@ export const EventParagraphs = () => {
 export const ArticleParagraphs = () => {
   return (
     <section className="paragraphs">
-      <div className="paragraphs__item paragraph--rich-text">
+      <Paragraph modyfier="rich-text">
         <RichText />
-      </div>
-      <div className="paragraphs__item paragraph--video">
+      </Paragraph>
+
+      <Paragraph modyfier="video">
         <VideoEmbed src="https://www.youtube.com/embed/CmzKQ3PSrow" />
-      </div>
-      <div className="paragraphs__item paragraphs__item--links">
+      </Paragraph>
+
+      <Paragraph modyfier="links">
         <LinkWithIcon href="/" linkText="External Link" linkType="external" />
-      </div>
+      </Paragraph>
     </section>
   );
 };
