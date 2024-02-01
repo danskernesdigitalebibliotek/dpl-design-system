@@ -3,7 +3,7 @@ import { InputWithDropdown } from "../../Library/input-with-dropdown/InputWithDr
 import { Multiselect } from "../../Library/multiselect/Multiselect";
 import { Button } from "../../Library/Buttons/button/Button";
 import InputPreview from "../../Library/input-preview/InputPreview";
-import data from "../../Library/card-list-page/CardListPageData";
+import data from "../../Library/card-list-page/SearchResultPageData";
 import { CardListItem } from "../../Library/card-list-item/CardListItem";
 import ResultPager from "../../Library/card-list-page/ResultPager";
 
