@@ -93,6 +93,21 @@
   }
 }
 
+.disclosure--paragraph-width .disclosure__expand {
+  transition: transform 0.3s ease-in-out;
+}
+
+.disclosure--paragraph-width {
+  @include layout-container($block-max-width__medium);
+}
+
+.disclosure__content-padding {
+  padding: $s-md;
+  @include media-query__small {
+    padding: $s-xl;
+  }
+}
+
 .disclosure[open] .disclosure__expand {
   transition: transform 0.3s ease-in-out;
   transform: scaleY(-1);
