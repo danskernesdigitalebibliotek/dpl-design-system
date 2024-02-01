@@ -20,8 +20,8 @@ $block-max-width__large: 1240px;
 $block-max-width__x-large: $layout__max-width--large;
 
 // Variables specifically for managing the vertical space between elements
-$_vertical-spacing: 48px;
-$_vertical-spacing--large: 64px;
+$_block-vertical-spacing: 48px;
+$_block-vertical-spacing--large: 64px;
 
 // Edge spacing for containers, ensures edge spacing for mobile or tablet.
 $layout__edge-spacing: $s-md;
@@ -41,8 +41,8 @@ $layout__edge-spacing: $s-md;
 
 // Mixin for controlling vertical spacing (margin) of an element
 @mixin block-spacing($modifier: "standard") {
-  $_spacing: $_vertical-spacing;
-  $_spacing--large: $_vertical-spacing--large;
+  $_spacing: $_block-vertical-spacing;
+  $_spacing--large: $_block-vertical-spacing--large;
 
   // If we want sibling spacing, we'll move the element up by 1px, to avoid
   // double borders.
