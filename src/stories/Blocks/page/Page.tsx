@@ -11,7 +11,7 @@ const Page: FC<PageProps> = ({ hero }) => {
       {hero && (
         <Hero
           image={hero.image}
-          type={hero.type}
+          contentType={hero.contentType}
           date={hero.date}
           title={hero.title}
           description={hero.description}

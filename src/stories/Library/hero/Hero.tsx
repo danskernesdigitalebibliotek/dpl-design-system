@@ -5,7 +5,7 @@ import { ReactComponent as ArrowLargeRight } from "../Arrows/icon-arrow-ui/icon-
 
 export type HeroProps = {
   image: string;
-  type?: string;
+  contentType?: string;
   date: string;
   title: string;
   description: string;
@@ -13,7 +13,7 @@ export type HeroProps = {
 
 const Hero: React.FunctionComponent<HeroProps> = ({
   image,
-  type,
+  contentType,
   date,
   title,
   description,
@@ -23,9 +23,9 @@ const Hero: React.FunctionComponent<HeroProps> = ({
       <a href="/" className="hero-content arrow arrow__hover--right-large">
         <TagCategories tags={["Arrangement"]} />
         <div className="hero-date">
-          {type && (
+          {contentType && (
             <>
-              <span className="hero-date__text">{type}</span>|
+              <span className="hero-date__text">{contentType}</span>|
             </>
           )}
           <time className="hero-date__date">{date}</time>
