@@ -1,5 +1,3 @@
-$_disclosure_paragraph--max-width: 844px;
-
 .disclosure {
   width: auto;
   border: solid 1px $color__global-tertiary-1;
@@ -100,7 +98,7 @@ $_disclosure_paragraph--max-width: 844px;
 }
 
 .disclosure--paragraph-width {
-  @include layout-container($_disclosure_paragraph--max-width, 0);
+  @include layout-container($block-max-width__medium);
 }
 
 .disclosure__content-padding {
