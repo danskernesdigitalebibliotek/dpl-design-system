@@ -25,8 +25,7 @@ const Hero: React.FunctionComponent<HeroProps> = ({
         <div className="hero-date">
           {type && (
             <>
-              <span className="hero-date__text">{type}</span>
-              <div>|</div>
+              <span className="hero-date__text">{type}</span>|
             </>
           )}
           <time className="hero-date__date">{date}</time>
