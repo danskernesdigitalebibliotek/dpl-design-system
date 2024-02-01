@@ -1,13 +1,13 @@
 import { FC } from "react";
 
 type ParagraphProps = {
-  modyfier: string;
+  modifier: string;
   children: React.ReactNode;
 };
 
-const Paragraph: FC<ParagraphProps> = ({ modyfier, children }) => {
+const Paragraph: FC<ParagraphProps> = ({ modifier, children }) => {
   return (
-    <div className={`paragraphs__item paragraphs__item--${modyfier}`}>
+    <div className={`paragraphs__item paragraphs__item--${modifier}`}>
       {children}
     </div>
   );

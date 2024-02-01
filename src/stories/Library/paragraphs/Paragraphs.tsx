@@ -9,15 +9,15 @@ import VideoEmbed from "../video-embed/VideoEmbed";
 export const EventParagraphs = () => {
   return (
     <section className="paragraphs">
-      <Paragraph modyfier="rich-text">
+      <Paragraph modifier="rich-text">
         <RichTextEvent />
       </Paragraph>
 
-      <Paragraph modyfier="links">
+      <Paragraph modifier="links">
         <LinkWithIcon href="/" linkText="External Link" linkType="external" />
       </Paragraph>
 
-      <Paragraph modyfier="links">
+      <Paragraph modifier="links">
         <LinkWithIcon href="/" linkText="internal Link" linkType="internal" />
       </Paragraph>
     </section>
@@ -27,19 +27,19 @@ export const EventParagraphs = () => {
 export const ArticleParagraphs = () => {
   return (
     <section className="paragraphs">
-      <Paragraph modyfier="rich-text">
+      <Paragraph modifier="rich-text">
         <RichText />
       </Paragraph>
 
-      <Paragraph modyfier="video">
+      <Paragraph modifier="video">
         <VideoEmbed src="https://www.youtube.com/embed/CmzKQ3PSrow" />
       </Paragraph>
 
-      <Paragraph modyfier="links">
+      <Paragraph modifier="links">
         <LinkWithIcon href="/" linkText="External Link" linkType="external" />
       </Paragraph>
 
-      <Paragraph modyfier="recommendation">
+      <Paragraph modifier="recommendation">
         <Recommendation
           title="Børnenes Naturhobbybog"
           description="Naturen er fyldt med alle mulige ting fx blade, blomster, sten osv., der kan bruges til at lave en forskellige kreative ting af. Her er inspiration at hente til små og store hobbyprojekter."
@@ -55,7 +55,7 @@ export const ArticleParagraphs = () => {
         />
       </Paragraph>
 
-      <Paragraph modyfier="recommendation">
+      <Paragraph modifier="recommendation">
         <Recommendation
           positionImageRight
           title="Børnenes Naturhobbybog"
@@ -72,7 +72,7 @@ export const ArticleParagraphs = () => {
         />
       </Paragraph>
 
-      <Paragraph modyfier="card_grid">
+      <Paragraph modifier="card_grid">
         <CardGrid items={[card, cardNoImage, card, card, card, cardNoImage]} />
       </Paragraph>
     </section>
