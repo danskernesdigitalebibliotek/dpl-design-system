@@ -1,6 +1,6 @@
 .article-header {
   @include layout-container;
-  @include vertical-spacing;
+  @include block-spacing();
   display: grid;
   gap: $s-xl;
   position: relative;

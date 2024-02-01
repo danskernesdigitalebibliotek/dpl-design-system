@@ -18,7 +18,7 @@ as well as guidelines for responsive design.
 
 This document and its standards apply specifically to elements of the
 'formidling' project starting from December 1, 2023, and onwards. It has been
-created to aligsn with the recent developments in the project and is not
+created to aligns with the recent developments in the project and is not
 retroactively applied to earlier components or structures.
 
 Layout related SCSS is defined in the `variables.layout.scss` file.
@@ -32,7 +32,8 @@ The file defines several variables for managing layout and spacing:
 
 - `$layout__max-width--*`: These variables store the maximum width values
 aligned with breakpoints.
-- `$_vertical-spacing--*`: These variables store the vertical spacing values.
+- `block__max-width--*`: These variables store the maximum width values
+between block (paragraph) elements.
 - `$layout__edge-spacing`: This variable stores the edge spacing (padding)
 value for containers.
 
@@ -47,10 +48,9 @@ The file defines two mixins:
 - `layout-container($max-width, $padding)`: This mixin sets the maximum width,
  and padding of an element, as well as centering them.
 
-- `vertical-spacing($top, $bottom)`: This manages the vertical margins of
-elements, allowing for consistent spacing throughout the project. This uses
-margin in order to allow for collapsing margins if there design requires it
-in the future.
+- `block-spacing($modifier)`: This manages the vertical margins of
+elements, allowing for consistent spacing throughout the project. Use `$modifer`
+to create negative/sibling styles.
 
 Vertical padding is _not_ a part of layout.scss. Use regular `$spacing`
 variables for that.
@@ -65,9 +65,6 @@ for responsive customization like the mixins do.
 
 The file defines several utility classes:
 
-- `.layout__vertical-spacing--*`: These classes apply the `vertical-spacing`
-mixin with different values. Replace `*` with `small`, `medium`, `large`, or
-`x-large`.
 - `.layout__max-width--*`: These classes apply the `layout-container` mixin
 with different maximum width values and zero padding. Replace `*` with
 `x-small`, `small`, `medium`, `large`, `x-large`, or `xx-large`.
@@ -81,29 +78,19 @@ Here are some examples of how to use these mixins, and utility classes.
 ### Including mixins in components using BEM
 
 ```scss
-// Using mixins in your BEM-named parent container. 
+// Using mixins in your BEM-named parent container.
 .your-BEM-component-name {
   @include layout-container;
-  @include vertical-spacing;
+
 
   @include media-query__small() {
-    // Applying new edge spacing (Padding) using $spacings / other. 
+    // Applying new edge spacing (Padding) using $spacings / other.
     @include layout-container($padding: $s-xl);
-    // applying new vertical spacing. 
-    @include vertical-spacing(
-      $top: $_layout-spacing--large,
-      $bottom: $_layout-spacing--large
-    );
   }
-  
+
  @include media-query__large() {
     // Removing max-width & applying specific padding from $spacings / other
      @include layout-container($max-width: 0, $padding: $s-md);
-    // Removing vertical spacing entirely. 
-     @include vertical-spacing(
-      $top: 0,
-      $bottom: 0
-    );
   }
 }
 ```
@@ -113,13 +100,12 @@ Here are some examples of how to use these mixins, and utility classes.
 ```html
 
 <!-- layout utility using the default sizes -->
-<div class="layout__max-width layout__edge-spacing layout__vertical-spacing">
+<div class="layout__max-width layout__edge-spacing">
   <!-- Content  -->
 </div>
 
 <!-- layout utility using respective specified sizes -->
-<div class="layout__max-width--medium layout__edge-spacing--large 
-    layout__vertical-spacing--small">
+<div class="layout__max-width--medium">
   <!-- Content  -->
 </div>
 
@@ -131,7 +117,7 @@ you might be expecting a --none modifier. If this is not obvious, then in this
 
 ```html
 <!-- layout utility respective specified sizes with no edge-spacing(padding) -->
-<div class="layout__max-width layout__vertical-spacing--small">
+<div class="layout__max-width">
   <!-- Content  -->
 </div>
 

@@ -1,4 +1,6 @@
 .footer {
+  @include block-spacing();
+
   .footer__mobile {
     display: block;
   }

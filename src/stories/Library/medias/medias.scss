@@ -1,6 +1,6 @@
 $_medias-breakpoint: 550px;
-$_max-width-single-media: 896px;
-$_max-width-multiple-medias: 1240px;
+$_max-width-single-media: $block-max-width__medium;
+$_max-width-multiple-medias: $block-max-width__large;
 
 .medias__item {
   width: 100%;
@@ -15,8 +15,7 @@ $_max-width-multiple-medias: 1240px;
 }
 
 .medias--single {
-  @include layout-container($_max-width-single-media, 0);
-  @include vertical-spacing;
+  @include layout-container($_max-width-single-media);
 }
 
 @include media-query($_medias-breakpoint) {
@@ -54,7 +53,6 @@ $_max-width-multiple-medias: 1240px;
 
 .medias--multiple {
   @include layout-container($_max-width-multiple-medias, 0);
-  @include vertical-spacing;
 
   .medias__item--last {
     img {

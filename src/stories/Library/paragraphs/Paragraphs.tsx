@@ -9,11 +9,7 @@ export const EventParagraphs = () => {
         <RichTextEvent />
       </div>
       <div className="paragraphs__item paragraphs__item--links">
-        <LinkWithIcon
-          href="https://example.com"
-          linkText="External Link"
-          linkType="external"
-        />
+        <LinkWithIcon href="/" linkText="External Link" linkType="external" />
       </div>
       <div className="paragraphs__item paragraphs__item--links">
         <LinkWithIcon href="/" linkText="internal Link" linkType="internal" />
@@ -32,11 +28,7 @@ export const ArticleParagraphs = () => {
         <VideoEmbed src="https://www.youtube.com/embed/CmzKQ3PSrow" />
       </div>
       <div className="paragraphs__item paragraphs__item--links">
-        <LinkWithIcon
-          href="https://example.com"
-          linkText="External Link"
-          linkType="external"
-        />
+        <LinkWithIcon href="/" linkText="External Link" linkType="external" />
       </div>
     </section>
   );
