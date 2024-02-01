@@ -37,9 +37,8 @@ between block (paragraph) elements.
 - `$layout__edge-spacing`: This variable stores the edge spacing (padding)
 value for containers.
 
-Some components may use different variables. These should not be defined in
-`variables.layout.scss`, but instead be kept in scss file for the relevant
-component(s).
+All components that require a max-width should use the `block__max-width--*` 
+variables along with layout-container. 
 
 ## Mixins
 
@@ -54,6 +53,15 @@ to create negative/sibling styles.
 
 Vertical padding is _not_ a part of layout.scss. Use regular `$spacing`
 variables for that.
+
+`block-spacing($modifier)` is an approach use for the CMS, where all 
+paragraphs are rendered with a wrapper that will automatically add necessary 
+spacing between the components. Any component that is not a paragraph, should
+therefore follow this approach by including the mixin `@mixin block-spacing`
+
+The `$modfier` is currently a either 
+- `sibling` used for add a -1px to remove borders between sibling elements. 
+- `negative` used for elements that require -margin instead.
 
 ## Utility Classes
 
@@ -82,7 +90,6 @@ Here are some examples of how to use these mixins, and utility classes.
 .your-BEM-component-name {
   @include layout-container;
 
-
   @include media-query__small() {
     // Applying new edge spacing (Padding) using $spacings / other.
     @include layout-container($padding: $s-xl);
@@ -94,6 +101,16 @@ Here are some examples of how to use these mixins, and utility classes.
   }
 }
 ```
+
+### Adding spacing to non-paragraph elements in the cms. 
+
+```scss
+// Using block-spacing for non-paragraph component or container.
+.your-BEM-component-name {
+  @include block-spacing;
+}
+```
+
 
 ### Applying utility classes when mixins cannot be used
 
