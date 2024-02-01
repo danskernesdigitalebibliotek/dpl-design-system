@@ -20,9 +20,9 @@ export default {
   },
 } as ComponentMeta<typeof Page>;
 
-const Default: ComponentStory<typeof Page> = (args) => <Page {...args} />;
+const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
 
-export const frontPage = Default.bind({});
+export const frontPage = Template.bind({});
 frontPage.args = {
   hero: {
     image:
@@ -35,5 +35,5 @@ frontPage.args = {
   },
 };
 
-export const blankPage = Default.bind({});
+export const blankPage = Template.bind({});
 blankPage.args = {};
