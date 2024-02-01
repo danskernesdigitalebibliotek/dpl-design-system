@@ -2,7 +2,7 @@
   @extend %hero-2-column;
 }
 
-.hero-date {
+.hero__date {
   @include typography($typo__h5);
   display: flex;
   align-items: center;

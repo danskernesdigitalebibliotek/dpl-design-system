@@ -22,13 +22,13 @@ const Hero: React.FunctionComponent<HeroProps> = ({
     <section className="hero">
       <a href="/" className="hero-content arrow arrow__hover--right-large">
         <TagCategories tags={["Arrangement"]} />
-        <div className="hero-date">
+        <div className="hero__date">
           {contentType && (
             <>
-              <span className="hero-date__text">{contentType}</span>|
+              <span className="hero__date__text">{contentType}</span>|
             </>
           )}
-          <time className="hero-date__date">{date}</time>
+          <time className="hero__date__date">{date}</time>
         </div>
         <h1 className="hero-title">{title}</h1>
         <div className="hero-description">

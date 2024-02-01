@@ -13,8 +13,8 @@ const EventHeader: FC<EventHeaderProps> = ({ title, date, image }) => {
     <header className="event-header">
       <section className="hero-content">
         <TagCategories tags={["design & teknologi"]} />
-        <time className="event-header-date">{date}</time>
-        <h1 className="event-header-title">{title}</h1>
+        <time className="event-header__date">{date}</time>
+        <h1 className="event-header__title">{title}</h1>
         <a href="/" className="btn-primary btn-filled btn-large hero-cta">
           Køb billet
         </a>
