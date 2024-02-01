@@ -1,18 +1,18 @@
 .link-with-icon {
   @include typography($typo__body-placeholder);
   @include show-svg-on-hover();
-  @include layout-container;
 
   background-color: $color__global-primary;
-  padding-top: $s-md;
-  padding-bottom: $s-md;
+  padding: $s-md;
   display: grid;
   grid-template-columns: 40px auto max-content;
   align-items: center;
   gap: $s-md;
   text-decoration: none;
-  border: 1px solid $color__global-tertiary-1;
   width: 100%;
+
+  transform: translateY(-1px);
+  border: 1px solid $color__global-tertiary-1;
 
   &:first-child {
     margin-top: 0;

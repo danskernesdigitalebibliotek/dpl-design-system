@@ -3,7 +3,7 @@ $_recommendation-max-width: 896px;
 
 .recommendation {
   @include layout-container($padding: $s-2xl);
-  @include vertical-spacing;
+
   background-color: $color__global-primary;
   display: flex;
   flex-direction: column;

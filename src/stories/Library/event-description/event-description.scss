@@ -1,9 +1,8 @@
 .event-description {
   @include layout-container;
-  @include vertical-spacing;
+  @include block-spacing();
   @include media-query__small {
-    @include layout-container($layout__max-width--event-description);
-    @include vertical-spacing;
+    @include layout-container($block-max-width__medium);
     display: grid;
     column-gap: $s-xl;
     grid-template-columns: 2fr 1fr;

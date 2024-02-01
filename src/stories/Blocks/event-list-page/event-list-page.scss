@@ -1,10 +1,9 @@
 .event-list-page {
+  @include block-spacing();
   background-color: $color__global-primary;
 }
 
 .event-list-page__heading {
   @include layout-container;
   @include typography($typo__h2);
-  @include vertical-spacing(0, $s-xl);
-  padding-top: $s-xl;
 }
