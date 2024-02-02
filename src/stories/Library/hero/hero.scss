@@ -2,7 +2,7 @@
   @extend %hero-2-column;
 }
 
-.hero__date {
+.hero__details {
   @include typography($typo__h5);
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@
   gap: 10px;
   margin-bottom: $s-md;
 
-  &__text {
+  &__type {
     color: $color__global-tertiary-2;
   }
 
