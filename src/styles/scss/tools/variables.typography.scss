@@ -263,14 +263,13 @@ $typo__small-caption: (
     font-family: $font__body,
     font-style: normal,
     font-weight: $font__weight--normal,
-    font-size: 10px,
+    font-size: 12px,
     line-height: 16px,
   ),
   small: (
     line-height: 160%,
   ),
   medium: (
-    font-size: 12px,
     line-height: 120%,
   ),
 );
