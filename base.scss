@@ -115,6 +115,8 @@
 @import "./src/stories/Library/recommendation/recommendation";
 @import "./src/stories/Library/recommended-material/recommended-material-skeleton";
 @import "./src/stories/Library/recommendation/recommendation-skeleton";
+@import "./src/stories/Library/nav-teaser/nav-teaser";
+@import "./src/stories/Library/nav-grid/nav-grid";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";
