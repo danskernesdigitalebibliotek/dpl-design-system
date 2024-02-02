@@ -3,10 +3,12 @@ import { ReactComponent as ArrowSmallRight } from "../../Library/Arrows/icon-arr
 
 export interface ReservationListItemProps {
   amount: number;
+  withNote?: boolean;
 }
 
 const ReservationListItem: React.FC<ReservationListItemProps> = ({
   amount,
+  withNote = false,
 }) => {
   const listItems = Array(amount).fill(0);
   return (
@@ -39,13 +41,20 @@ const ReservationListItem: React.FC<ReservationListItemProps> = ({
                 >
                   Jørn Lier Horst (2020)
                 </p>
-                <p
-                  data-cy="reservation-about-series"
-                  className="text-small-caption color-secondary-gray"
-                >
-                  Detektivbureau Nr. 2
-                </p>
+                {!withNote && (
+                  <p
+                    data-cy="reservation-about-series"
+                    className="text-small-caption color-secondary-gray"
+                  >
+                    Detektivbureau Nr. 2
+                  </p>
+                )}
               </div>
+              {withNote && (
+                <div className="list-reservation__note list-reservation__note--desktop color-signal-alert">
+                  You will be charged a fee, when the item is returned
+                </div>
+              )}
               <div />
             </div>
           </div>
