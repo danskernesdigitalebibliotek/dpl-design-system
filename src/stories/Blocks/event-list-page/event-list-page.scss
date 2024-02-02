@@ -4,6 +4,6 @@
 }
 
 .event-list-page__heading {
-  @include layout-container;
+  @include layout-container($block-max-width__large);
   @include typography($typo__h2);
 }
