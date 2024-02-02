@@ -1,5 +1,5 @@
 .event-list {
-  @include layout-container;
+  @include layout-container($block-max-width__large);
 
   margin-top: $s-lg;
 }
