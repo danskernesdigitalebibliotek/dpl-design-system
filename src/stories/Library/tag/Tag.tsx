@@ -14,7 +14,7 @@ export const Tag = ({
   className,
 }: TagProps) => {
   return (
-    <div
+    <span
       className={clsx(
         "tag",
         hasBackground && "tag--fill",
@@ -23,7 +23,7 @@ export const Tag = ({
       )}
     >
       {children}
-    </div>
+    </span>
   );
 };
 

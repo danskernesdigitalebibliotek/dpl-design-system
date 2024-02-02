@@ -18,3 +18,7 @@
     @include block-spacing("sibling");
   }
 }
+
+.paragraphs__item--hero {
+  @include block-spacing("negative");
+}
