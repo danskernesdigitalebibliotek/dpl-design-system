@@ -255,14 +255,14 @@ $typo__small-caption: (
     font-family: $font__body,
     font-style: normal,
     font-weight: $font__weight--normal,
-    font-size: 10px,
+    font-size: 12px,
     line-height: 16px,
   ),
   small: (
     line-height: 160%,
   ),
   medium: (
-    font-size: 12px,
+    font-size: 14px,
     line-height: 120%,
   ),
 );
@@ -351,39 +351,4 @@ $typo__card-placeholder--grid: (
       font-size: 20px,
       line-height: 24px,
     ),
-);
-
-$typo__event-list--heading: (
-  mobile: (
-    font-family: $font__title,
-    font-style: normal,
-    font-weight: $font__weight--normal,
-    font-size: 16px,
-    line-height: 120%,
-  ),
-  small: (
-    font-size: 24px,
-  ),
-  x-large: (
-    font-size: 26px,
-  ),
-);
-
-$typo__event-list--content: (
-  mobile: (
-    font-family: $font__body,
-    font-style: normal,
-    font-weight: $font__weight--normal,
-    font-size: 12px,
-    line-height: 120%,
-  ),
-);
-
-$typo__event-list--content--large: (
-  mobile: (
-    font-size: 16px,
-    font-style: normal,
-    font-weight: $font__weight--normal,
-    line-height: 120%,
-  ),
 );

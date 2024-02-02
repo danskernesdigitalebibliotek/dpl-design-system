@@ -50,7 +50,7 @@ $_event-list-item--image-width: 222px;
     "description description description"
     "location schedule schedule";
   row-gap: $s-sm;
-  @include typography($typo__event-list--content);
+  @include typography($typo__small-caption);
 }
 
 .event-list-item__tag {
@@ -69,7 +69,7 @@ $_event-list-item--image-width: 222px;
 
 .event-list-item__title {
   grid-area: title;
-  @include typography($typo__event-list--heading);
+  @include typography($typo__h4);
   @extend %text-truncate;
 }
 
@@ -90,7 +90,7 @@ $_event-list-item--image-width: 222px;
 
 .event-list-item__location {
   @extend %link-tag;
-  @include typography($typo__event-list--content);
+  @include typography($typo__small-caption);
 }
 
 .event-list-item__schedule {
@@ -100,7 +100,8 @@ $_event-list-item--image-width: 222px;
   align-items: flex-end;
   justify-content: flex-end;
   row-gap: 8px;
-  @include typography($typo__event-list--content--large);
+  @include typography($typo__body-placeholder);
+  line-height: 120%;
 }
 
 @include media-query__small {
