@@ -16,8 +16,9 @@ $layout__max-width--xx-large: 2200px;
 
 $block-max-width__small: 780px;
 $block-max-width__medium: 896px;
-$block-max-width__large: 1240px;
-$block-max-width__x-large: $layout__max-width--large;
+$block-max-width__large: 1124px;
+$block-max-width__x-large: 1240px;
+$block-max-width__2x-large: $layout__max-width--large;
 
 // Variables specifically for managing the vertical space between elements
 $_block-vertical-spacing: 48px;
