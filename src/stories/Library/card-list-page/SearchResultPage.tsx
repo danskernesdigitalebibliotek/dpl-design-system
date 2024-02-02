@@ -5,9 +5,9 @@ import { SearchResultTitle } from "./SearchResultTitle";
 import { SearchResultZero } from "./SearchResultZero";
 import FacetLine from "./FacetLine";
 import FacetLineSelected from "./FacetLineSelectedTerms";
-import data from "./CardListPageData";
+import data from "./SearchResultPageData";
 
-export type CardListPageProps = {
+export type SearchResultPageProps = {
   title: string;
   currentResults: number;
   totalResults: number;
@@ -20,14 +20,14 @@ const SearchResultList = data.searchResult.map((item, i) => {
   return <CardListItem {...item} tintIndex={i} />;
 });
 
-export const CardListPage = ({
+export const SearchResultPage = ({
   title,
   linkName,
   linkTotalResults,
   currentResults,
   totalResults,
   zeroResult,
-}: CardListPageProps) => {
+}: SearchResultPageProps) => {
   return (
     <div className="card-list-page">
       <SearchResultTitle
