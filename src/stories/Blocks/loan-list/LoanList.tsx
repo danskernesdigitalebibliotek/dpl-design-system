@@ -3,6 +3,7 @@
 import LoanListItem from "./LoanListItem";
 import { ReactComponent as ListIcon } from "../../../public/icons/collection/List.svg";
 import { ReactComponent as VariousIcon } from "../../../public/icons/collection/Various.svg";
+import LoanListItemStacked from "./LoanListItemStacked";
 
 // TODO: Should be converted to react components.
 const LoanList: React.FC = () => {
@@ -78,6 +79,7 @@ const LoanList: React.FC = () => {
           This button opens a modal that covers the entire page and contains
           loans with the same due date as the loan currently in focus
         </div>
+        <LoanListItemStacked status="danger" />
         {[...Array(10)].map((_, index) => (
           <LoanListItem key={index} status="danger" />
         ))}
