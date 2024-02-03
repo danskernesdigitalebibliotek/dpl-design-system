@@ -1,9 +1,8 @@
 // This is copy/pasted from dpl-react because no design story was made for this view.
 
-import { Counter } from "../../Library/counter/Counter";
-import { Number } from "../../Library/number/Number";
-import { StatusLabel } from "../../Library/status-label/StatusLabel";
 import LoanListItem from "./LoanListItem";
+import { ReactComponent as ListIcon } from "../../../public/icons/collection/List.svg";
+import { ReactComponent as VariousIcon } from "../../../public/icons/collection/Various.svg";
 
 // TODO: Should be converted to react components.
 const LoanList: React.FC = () => {
@@ -32,12 +31,7 @@ const LoanList: React.FC = () => {
                 type="button"
                 aria-label="This button shows all loans in the list"
               >
-                <img
-                  src="icons/collection/List.svg"
-                  alt="List icon"
-                  width={24}
-                  height={24}
-                />
+                <ListIcon />
               </button>
             </div>
             <div className="dpl-list-buttons__buttons__button">
@@ -48,12 +42,7 @@ const LoanList: React.FC = () => {
                 type="button"
                 aria-label="This button filters the list, so only one the materials that have the same due date is shown"
               >
-                <img
-                  src="icons/collection/Various.svg"
-                  alt="Stack icon"
-                  width={24}
-                  height={24}
-                />
+                <VariousIcon />
               </button>
             </div>
             <div className="dpl-list-buttons__buttons__button dpl-list-buttons__buttons__button--hide-on-mobile">

@@ -2,7 +2,7 @@
   all: unset;
   cursor: pointer;
 
-  &--selected {
+  &--selected svg path {
     fill: $color__global-tertiary-2;
   }
 
