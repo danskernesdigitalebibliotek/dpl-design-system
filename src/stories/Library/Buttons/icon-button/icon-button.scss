@@ -1,9 +1,28 @@
 .dpl-icon-button {
   all: unset;
   cursor: pointer;
-
-  &--selected svg path {
+  height: 27px;
+  path {
     fill: $color__global-tertiary-2;
+  }
+
+  // If the icon is not selected and hovered add a vague line at the bottom
+  // indicating that you can select it.
+  &:not(&--selected) {
+    &:hover {
+      box-shadow: inset 0 -2px 0 0 $color__global-tertiary-2;
+    }
+  }
+
+  // If the icon is selected, add a line at the bottom to indicate that it is
+  // selected.
+  &--selected {
+    box-shadow: inset 0 -2px 0 0;
+    svg {
+      path {
+        fill: $color__text-primary-black;
+      }
+    }
   }
 
   @extend %default-focus-visible;
