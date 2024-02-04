@@ -3,11 +3,7 @@ import StatusExpired from "./StatusExpired";
 import StatusWarning from "./StatusWarning";
 
 const LoanListItemStacked = ({ status }: { status: "danger" | "warning" }) => (
-  <div
-    className="list-reservation my-32 cursor-pointer arrow__hover--right-small list-reservation--stacked"
-    role="button"
-    tabIndex={0}
-  >
+  <div className="list-reservation my-32 cursor-pointer arrow__hover--right-small list-reservation--stacked">
     <div className="list-reservation__material">
       <div>
         <div className="cover cover--size-small cover--aspect-small bg-identity-tint-120">
@@ -23,7 +19,7 @@ const LoanListItemStacked = ({ status }: { status: "danger" | "warning" }) => (
         <div className="list-reservation__about">
           <button
             type="button"
-            lang="dan"
+            lang="da"
             className="list-reservation__header color-secondary-gray"
           >
             <span
