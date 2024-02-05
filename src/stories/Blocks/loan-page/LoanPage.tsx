@@ -2,6 +2,7 @@ import { Button } from "../../Library/Buttons/button/Button";
 import ResultPager from "../../Library/card-list-page/ResultPager";
 import ReservationListEmptyState from "../reservation-page/ReservationListEmptyState";
 import ReservationListItem from "../reservation-page/ReservationListItem";
+import LoanPageSkeleton from "./LoanPageSkeleton";
 
 export interface LoanPageProps {
   headline: string;
@@ -17,7 +18,7 @@ const LoanPage: React.FC<LoanPageProps> = ({
   skeletonVersion,
 }) => {
   if (skeletonVersion) {
-    return <div>This will be skeletons</div>;
+    return <LoanPageSkeleton />;
   }
 
   if (!physicalLoans && !digitalLoans) {
