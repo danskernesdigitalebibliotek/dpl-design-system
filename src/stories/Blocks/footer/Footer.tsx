@@ -5,6 +5,10 @@ import { Logo } from "../../Library/logo/Logo";
 import { Links } from "../../Library/links/Links";
 import { FooterColumn } from "./FooterColumn";
 import list from "../../Library/accordion/accordionList";
+import { ReactComponent as FacebookIcon } from "../../../public/icons/social/icon-social-facebook.svg";
+import { ReactComponent as InstagramIcon } from "../../../public/icons/social/icon-social-instagram.svg";
+import { ReactComponent as YoutubeIcon } from "../../../public/icons/social/icon-social-youtube.svg";
+import { ReactComponent as SpotifyIcon } from "../../../public/icons/social/icon-social-spotify.svg";
 
 const dropdownList = [
   {
@@ -76,28 +80,16 @@ export const Footer = () => {
 
             <div className="footer__site-info-icons mt-32">
               <a href="/">
-                <img
-                  src="icons/social/icon-social-facebook.svg"
-                  alt="Facebook link"
-                />
+                <FacebookIcon />
               </a>
               <a href="/">
-                <img
-                  src="icons/social/icon-social-instagram.svg"
-                  alt="Instagram link"
-                />
+                <InstagramIcon />
               </a>
               <a href="/">
-                <img
-                  src="icons/social/icon-social-youtube.svg"
-                  alt="Youtube link"
-                />
+                <YoutubeIcon />
               </a>
               <a href="/">
-                <img
-                  src="icons/social/icon-social-spotify.svg"
-                  alt="Spotify link"
-                />
+                <SpotifyIcon />
               </a>
             </div>
           </div>
@@ -202,28 +194,16 @@ export const Footer = () => {
           <div className="footer__site-info">
             <div className="footer__site-info-icons">
               <a href="/">
-                <img
-                  src="icons/social/icon-social-facebook.svg"
-                  alt="Facebook link"
-                />
+                <FacebookIcon />
               </a>
               <a href="/">
-                <img
-                  src="icons/social/icon-social-instagram.svg"
-                  alt="Instagram link"
-                />
+                <InstagramIcon />
               </a>
               <a href="/">
-                <img
-                  src="icons/social/icon-social-youtube.svg"
-                  alt="Youtube link"
-                />
+                <YoutubeIcon />
               </a>
               <a href="/">
-                <img
-                  src="icons/social/icon-social-spotify.svg"
-                  alt="Spotify link"
-                />
+                <SpotifyIcon />
               </a>
             </div>
             <div className="footer__site-info-links color-secondary-gray">

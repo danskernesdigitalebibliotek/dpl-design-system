@@ -1,5 +1,6 @@
 import { useState } from "react";
 import clsx from "clsx";
+import { ReactComponent as CrossIcon } from "../../../public/icons/basic/icon-cross.svg";
 
 type TagProps = {
   children: React.ReactNode;
@@ -35,13 +36,7 @@ export const Tag = ({
       )}
     >
       {children}
-      {showCloseIcon && (
-        <img
-          className="tag-icon"
-          src="icons/basic/icon-cross.svg"
-          alt="close icon"
-        />
-      )}
+      {showCloseIcon && <CrossIcon className="tag-icon" />}
     </button>
   );
 };

@@ -5,6 +5,8 @@ import { Autosuggest, AutosuggestProps } from "./Autosuggest";
 import AutosuggestMaterialStories from "../../Library/autosuggest-material/AutosuggestMaterial.stories";
 import AutosuggestTextStories from "../../Library/autosuggest-text/AutosuggestText.stories";
 import { autosuggestMaterialSuggestions } from "../../Library/autosuggest-material/helper";
+import { ReactComponent as SearchIcon } from "../../../public/icons/basic/icon-search.svg";
+import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 
 export default {
   title: "Blocks / Autosuggest",
@@ -43,16 +45,8 @@ const Template: ComponentStory<typeof Autosuggest> = (
             type="text"
             placeholder="This field is here just for context."
           />
-          <img
-            className="header__menu-search-icon"
-            src="icons/basic/icon-search.svg"
-            alt="search icon"
-          />
-          <img
-            className="header__menu-dropdown-icon"
-            src="icons/collection/ExpandMore.svg"
-            alt="expand dropdown icon"
-          />
+          <SearchIcon className="header__menu-search-icon" />
+          <ExpandMoreIcon className="header__menu-dropdown-icon" />
           <Autosuggest {...args} />
         </div>
       </div>

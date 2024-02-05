@@ -1,8 +1,10 @@
+import { ReactComponent as WatchStaticIcon } from "../../../../public/icons/basic/icon-watch-static.svg";
+
 export const IconWatch = () => {
   return (
     <div className="internal-container-grid">
       <div className="internal-center">
-        <img src="icons/basic/icon-watch-static.svg" alt="klokke" />
+        <WatchStaticIcon />
         <span className="text-body-medium-regular">Clock</span>
       </div>
     </div>

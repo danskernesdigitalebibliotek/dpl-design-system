@@ -1,3 +1,5 @@
+import { ReactComponent as CheckIcon } from "../../../public/icons/collection/Check.svg";
+
 export type CounterProps = {
   value: number;
   percentage: number;
@@ -33,11 +35,7 @@ export const Counter = (props: CounterProps) => {
       aria-label="counter showing time remaining "
     >
       {isReady ? (
-        <img
-          className="counter__icon"
-          src="icons/basic/icon-check.svg"
-          alt="check icon"
-        />
+        <CheckIcon className="counter__icon" />
       ) : (
         <span className="counter__value">{value}</span>
       )}

@@ -1,4 +1,6 @@
 import React from "react";
+import { ReactComponent as HeartFilledIcon } from "../../../public/icons/basic/icon-heart-filled.svg";
+import { ReactComponent as HeartEmptyIcon } from "../../../public/icons/basic/icon-heart-grey.svg";
 
 export type ReviewProps = {
   numberOfReviews: number;
@@ -35,23 +37,11 @@ export const Review: React.FC<ReviewProps> = ({
             >
               {filledHeartsArray.map((value) => {
                 return (
-                  <img
-                    key={value}
-                    src="icons/basic/icon-heart-filled.svg"
-                    className="review__heart"
-                    alt=""
-                  />
+                  <HeartFilledIcon key={value} className="review__heart" />
                 );
               })}
               {emptyHeartsArray.map((value) => {
-                return (
-                  <img
-                    key={value}
-                    src="icons/basic/icon-heart-grey.svg"
-                    className="review__heart"
-                    alt=""
-                  />
-                );
+                return <HeartEmptyIcon key={value} className="review__heart" />;
               })}
             </div>
             <h3 className="review__headline mb-8">{headline}</h3>

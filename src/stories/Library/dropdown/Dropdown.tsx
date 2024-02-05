@@ -1,4 +1,6 @@
 import clsx from "clsx";
+import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
+import { ReactComponent as TriangleIcon } from "../../../public/icons/basic/icon-triangle.svg";
 
 export type DropdownItem = {
   title: string;
@@ -25,28 +27,14 @@ export const Dropdown: React.FC<DropdownProps> = ({
     if (arrowIcon === "triangles") {
       return (
         <span>
-          <img
-            className="dropdown__arrow"
-            src="icons/basic/icon-triangle.svg"
-            alt=""
-          />
-          <img
-            className="dropdown__arrow dropdown__arrow--bottom"
-            src="icons/basic/icon-triangle.svg"
-            alt=""
-          />
+          <TriangleIcon className="dropdown__arrow" />
+          <TriangleIcon className="dropdown__arrow dropdown__arrow--bottom" />
         </span>
       );
     }
 
     if (arrowIcon === "chevron") {
-      return (
-        <img
-          className="dropdown__arrow"
-          src="icons/collection/ExpandMore.svg"
-          alt=""
-        />
-      );
+      return <ExpandMoreIcon className="dropdown__arrow" />;
     }
 
     return null;

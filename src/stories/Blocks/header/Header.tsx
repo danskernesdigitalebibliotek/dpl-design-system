@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { Logo } from "../../Library/logo/Logo";
 import Pagefold from "../../Library/pagefold/Pagefold";
+import { ReactComponent as SearchIcon } from "../../../public/icons/basic/icon-search.svg";
+import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
+import { ReactComponent as MenuIcon } from "../../../public/icons/basic/icon-menu.svg";
+import { ReactComponent as ProfileIcon } from "../../../public/icons/basic/icon-profile.svg";
+import { ReactComponent as HeartIcon } from "../../../public/icons/basic/icon-heart.svg";
+import { ReactComponent as WatchStaticIcon } from "../../../public/icons/basic/icon-watch-static.svg";
+import { ReactComponent as CrossIcon } from "../../../public/icons/basic/icon-cross-medium.svg";
 
 export type HeaderProps = {
   signedIn: boolean;
@@ -75,10 +82,7 @@ export const Header = (props: HeaderProps) => {
                     onClick: () => window.eventHeader(),
                   }}
                 >
-                  <img
-                    src="icons/basic/icon-menu.svg"
-                    alt="List of bookmarks"
-                  />
+                  <MenuIcon />
                 </Pagefold>
                 <div className="header__menu-navigation-logo">
                   <Logo
@@ -106,7 +110,7 @@ export const Header = (props: HeaderProps) => {
                 {signedIn && haveNotification && (
                   <div className="header__notification bg-signal-alert" />
                 )}
-                <img src="icons/basic/icon-profile.svg" alt="Profile" />
+                <ProfileIcon />
                 {signedIn && (
                   <span className="text-small-caption">{username}</span>
                 )}
@@ -114,7 +118,7 @@ export const Header = (props: HeaderProps) => {
             </div>
             <div className="header__menu-bookmarked header__button">
               <a href="/">
-                <img src="icons/basic/icon-heart.svg" alt="List of bookmarks" />
+                <HeartIcon />
               </a>
             </div>
           </nav>
@@ -126,17 +130,11 @@ export const Header = (props: HeaderProps) => {
                   type="text"
                   placeholder={inputPlaceholder}
                 />
-                <img
-                  className="header__menu-search-icon"
-                  src="icons/basic/icon-search.svg"
-                  alt="search icon"
-                />
+                <SearchIcon className="header__menu-search-icon" />
               </form>
-              <img
+              <ExpandMoreIcon
                 className="header__menu-dropdown-icon"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                src="icons/collection/ExpandMore.svg"
-                alt="expand dropdown icon"
               />
               {isDropdownOpen && (
                 <div className="header__menu-dropdown">
@@ -154,11 +152,7 @@ export const Header = (props: HeaderProps) => {
         <div className="header__clock">
           <Pagefold isInheriting={false} isAContainer={false} size="medium" />
           <div className="header__clock-items">
-            <img
-              src="icons/basic/icon-watch-static.svg"
-              className="mb-8"
-              alt="clock icon"
-            />
+            <WatchStaticIcon className="mb-8" />
             <span className="text-small-caption">Fredag</span>
             <span className="text-small-caption">28 Maj</span>
           </div>
@@ -166,10 +160,7 @@ export const Header = (props: HeaderProps) => {
       </header>
       <div id="header__overlay" onClick={() => window.eventHeader()}>
         <div className="header__overlay-main">
-          <img
-            id="header__menu--close"
-            src="icons/basic/icon-cross-medium.svg"
-          />
+          <CrossIcon id="header__menu--close" />
           <ul className="header__overlay-menu">
             {list.map((i) => (
               <li className="header__overlay-menu-item">

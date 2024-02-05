@@ -6,6 +6,7 @@ import InputPreview from "../../Library/input-preview/InputPreview";
 import data from "../../Library/card-list-page/SearchResultPageData";
 import { CardListItem } from "../../Library/card-list-item/CardListItem";
 import ResultPager from "../../Library/card-list-page/ResultPager";
+import { ReactComponent as PlusButtonIcon } from "../../../public/icons/collection/PlusButton.svg";
 
 export interface AdvancedSearchProps {
   inputPlaceholder: string;
@@ -51,11 +52,7 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
                   );
                 })}
               <button className="advanced-search__clauses">
-                <img
-                  className="mr-8"
-                  src="icons/collection/PlusButton.svg"
-                  alt="Plus button icon"
-                />
+                <PlusButtonIcon className="mr-8" />
                 Tilføj ny linje
               </button>
             </div>

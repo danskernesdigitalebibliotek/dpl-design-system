@@ -2,6 +2,7 @@ import { AvailabilityLabelPropsType } from "../../availability-label/types";
 import PageFoldButton from "../Buttons/page-fold-button/PageFoldButton";
 import Pagefold from "../pagefold/Pagefold";
 import { withAvailabilityProps } from "./abilityLabel.hoc";
+import { ReactComponent as CheckIcon } from "../../../public/icons/collection/Check.svg";
 
 const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
   manifestationType,
@@ -12,11 +13,7 @@ const AvailabilityLabel: React.FC<AvailabilityLabelPropsType> = ({
 }) => {
   const content = (
     <>
-      <img
-        className={`availability-label__check ${status}`}
-        src="icons/collection/Check.svg"
-        alt=""
-      />
+      <CheckIcon className={`availability-label__check ${status}`} />
       {manifestationType && (
         <>
           <p className="availability-label__text text-label-semibold ml-24">

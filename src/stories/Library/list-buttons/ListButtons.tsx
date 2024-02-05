@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../Buttons/button/Button";
-import IconButton from "../Buttons/icon-button/IconButton";
+import { ReactComponent as MenuIcon } from "../../../public/icons/collection/Menu.svg";
+import { ReactComponent as VariousIcon } from "../../../public/icons/collection/Various.svg";
 
 export type ListButtonProps = {
   buttonLabel: string;
@@ -29,16 +30,14 @@ export const ListButton: React.FC<ListButtonProps> = ({
       </h2>
       <div className="dpl-list-buttons__buttons">
         <div className="dpl-list-buttons__buttons__button">
-          <IconButton
-            altText="Denne knap sorterer listen efter afleveringsdato"
-            src="icons/collection/Menu.svg"
-          />
+          <button className="dpl-icon-button" type="button">
+            <MenuIcon />
+          </button>
         </div>
         <div className="dpl-list-buttons__buttons__button">
-          <IconButton
-            altText="Denne knap sorterer listen i stakke"
-            src="icons/collection/Various.svg"
-          />
+          <button className="dpl-icon-button" type="button">
+            <VariousIcon />
+          </button>
         </div>
         <div
           className="dpl-list-buttons__buttons__button"

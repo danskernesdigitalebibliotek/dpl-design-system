@@ -1,13 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 // Import default styling
 import "flatpickr/dist/flatpickr.css";
-
 import flatpickr from "flatpickr";
 import { english } from "flatpickr/dist/l10n/default";
 import { Danish } from "flatpickr/dist/l10n/da";
 import { Instance } from "flatpickr/dist/types/instance";
 import { MutableRefObject, useCallback, useRef } from "react";
 import { BaseOptions } from "flatpickr/dist/types/options";
+import { ReactComponent as ExpandMoreIcon } from "../../../../public/icons/collection/ExpandMore.svg";
 
 export type DatePickerProps = {
   locale?: "en" | "da";
@@ -46,11 +46,7 @@ const DatePicker = (props: DatePickerProps) => {
           className="datepicker__opener"
           data-toggle
         >
-          <img
-            className="datepicker__icon"
-            src="icons/collection/ExpandMore.svg"
-            alt="Expand more icon"
-          />
+          <ExpandMoreIcon className="datepicker__icon" />
         </button>
       </div>
     </div>

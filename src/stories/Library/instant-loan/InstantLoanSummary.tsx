@@ -1,4 +1,5 @@
 import Cover from "../cover/Cover";
+import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 
 type InstantLoanSummaryProps = {
   title: string;
@@ -24,11 +25,7 @@ const InstantLoanSummary: React.FunctionComponent<InstantLoanSummaryProps> = ({
       <p className="text-small-caption">{subTitle}</p>
       <div className="instant-loan-underline mt-35">
         <p className="link-tag text-small-caption">{underlineDescription}</p>
-        <img
-          className="instant-loan-arrow"
-          src="icons/collection/ExpandMore.svg"
-          alt="various-icon"
-        />
+        <ExpandMoreIcon className="instant-loan-arrow" />
       </div>
     </div>
   </>

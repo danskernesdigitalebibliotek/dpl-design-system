@@ -1,4 +1,5 @@
 import { Checkbox } from "../Forms/checkbox/Checkbox";
+import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 
 export type MultiselectProps = {
   options: string[];
@@ -21,11 +22,7 @@ export const Multiselect: React.FC<MultiselectProps> = ({
           Mulighed 1, Mulighed 2, Mulighed 3, Mulighed 4
         </div>
         <div className="multiselect__opener">
-          <img
-            className="multiselect__icon"
-            src="icons/collection/ExpandMore.svg"
-            alt=""
-          />
+          <ExpandMoreIcon className="multiselect__icon" />
         </div>
         {isOpen && (
           <ul className="multiselect__options">

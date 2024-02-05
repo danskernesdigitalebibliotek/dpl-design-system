@@ -1,4 +1,5 @@
 import { Dropdown } from "../dropdown/Dropdown";
+import { ReactComponent as MinusIcon } from "../../../public/icons/collection/MinusButton.svg";
 
 export interface InputWithDropdownProps {
   inputPlaceholder: string;
@@ -29,11 +30,7 @@ export const InputWithDropdown: React.FC<InputWithDropdownProps> = ({
         }}
       />
       <button>
-        <img
-          className="input-with-dropdown__icon"
-          src="icons/collection/MinusButton.svg"
-          alt="Minus button icon"
-        />
+        <MinusIcon className="input-with-dropdown__icon" />
       </button>
     </div>
   );
