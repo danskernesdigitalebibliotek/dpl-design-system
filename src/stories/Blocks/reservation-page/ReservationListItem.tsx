@@ -5,17 +5,24 @@ import { ReactComponent as ArrowSmallRight } from "../../Library/Arrows/icon-arr
 export interface ReservationListItemProps {
   amount: number;
   withNote?: boolean;
+  isStacked?: boolean;
 }
 
 const ReservationListItem: React.FC<ReservationListItemProps> = ({
   amount,
   withNote = false,
+  isStacked = false,
 }) => {
   const listItems = Array(amount).fill(0);
   return (
     <>
       {listItems.map(() => (
-        <div className="list-reservation my-32 cursor-pointer arrow__hover--right-small">
+        <div
+          className={clsx(
+            "list-reservation my-32 cursor-pointer arrow__hover--right-small",
+            [{ "list-reservation--stacked": isStacked }]
+          )}
+        >
           <div className="list-reservation__material">
             <div>
               <div className="cover cover--size-small cover--aspect-small bg-identity-tint-120" />

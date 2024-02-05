@@ -12,6 +12,11 @@ export default {
       defaultValue: "Your loans",
       control: { type: "text" },
     },
+    isStacked: {
+      name: "Is stacked?",
+      defaultValue: false,
+      control: { type: "boolean" },
+    },
     physicalLoans: {
       name: "Physical loans amount",
       defaultValue: 2,
@@ -41,6 +46,10 @@ const Template: ComponentStory<typeof LoanPage> = (args: LoanPageProps) => (
 );
 
 export const Default = Template.bind({});
+export const Stacked = Template.bind({});
+Stacked.args = {
+  isStacked: true,
+};
 export const NoPhysicalLoans = Template.bind({});
 NoPhysicalLoans.args = {
   physicalLoans: 0,

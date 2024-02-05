@@ -3,9 +3,12 @@ import ResultPager from "../../Library/card-list-page/ResultPager";
 import ReservationListEmptyState from "../reservation-page/ReservationListEmptyState";
 import ReservationListItem from "../reservation-page/ReservationListItem";
 import LoanPageSkeleton from "./LoanPageSkeleton";
+import { ReactComponent as ListIcon } from "../../../public/icons/collection/List.svg";
+import { ReactComponent as VariousIcon } from "../../../public/icons/collection/Various.svg";
 
 export interface LoanPageProps {
   headline: string;
+  isStacked?: boolean;
   physicalLoans: number;
   digitalLoans: number;
   skeletonVersion?: boolean;
@@ -13,6 +16,7 @@ export interface LoanPageProps {
 
 const LoanPage: React.FC<LoanPageProps> = ({
   headline,
+  isStacked = false,
   physicalLoans,
   digitalLoans,
   skeletonVersion,
@@ -47,26 +51,56 @@ const LoanPage: React.FC<LoanPageProps> = ({
             <div className="dpl-list-buttons__power">{physicalLoans}</div>
           </h2>
           <div className="dpl-list-buttons__buttons">
-            <button className="dpl-list-buttons__buttons__button dpl-icon-button dpl-icon-button--selected">
-              <img src="icons/collection/Menu.svg" alt="list icon" />
-            </button>
-            <button className="dpl-list-buttons__buttons__button">
-              <img src="icons/collection/Various.svg" alt="stacked icon" />
-            </button>
-            <Button
-              buttonType="none"
-              label="Renew several"
-              size="small"
-              variant="filled"
-              classNames="dpl-list-buttons__buttons__button"
-            />
+            <div className="dpl-list-buttons__buttons__button">
+              <button
+                aria-pressed={!isStacked}
+                className="dpl-icon-button dpl-icon-button--selected"
+                id="test-list"
+                type="button"
+                aria-label="This button shows all loans in the list"
+              >
+                <ListIcon />
+              </button>
+            </div>
+            <div className="dpl-list-buttons__buttons__button">
+              <button
+                aria-pressed={isStacked}
+                className="dpl-icon-button"
+                type="button"
+                aria-label="This button filters the list, so only one the materials that have the same due date is shown"
+              >
+                <VariousIcon />
+              </button>
+            </div>
+            <div className="dpl-list-buttons__buttons__button">
+              <div className="dpl-list-buttons__buttons__button--hide-on-mobile">
+                <Button
+                  buttonType="none"
+                  label="Renew several"
+                  size="small"
+                  variant="filled"
+                />
+              </div>
+              <div className="hide-on-desktop button-box button-box--sticky-bottom">
+                <Button
+                  buttonType="none"
+                  label="Renew several"
+                  size="small"
+                  variant="filled"
+                />
+              </div>
+            </div>
           </div>
         </div>
         {!!physicalLoans && (
           <div>
             <ul className="list-reservation-container">
               <li>
-                <ReservationListItem amount={physicalLoans} withNote />
+                <ReservationListItem
+                  amount={physicalLoans}
+                  withNote
+                  isStacked={isStacked}
+                />
               </li>
             </ul>
             <ResultPager
