@@ -3,11 +3,11 @@ export type CounterProps = {
   percentage: number;
   label: string;
   status: "danger" | "warning" | "info" | "neutral";
-  isReady: boolean;
+  isReady?: boolean;
 };
 
 export const Counter = (props: CounterProps) => {
-  const { value, label, percentage, status, isReady } = props;
+  const { value, label, percentage, status, isReady = false } = props;
 
   function getColor() {
     if (status === "danger") return "#d22d43";
