@@ -29,7 +29,7 @@ export const InputWithDropdown: React.FC<InputWithDropdownProps> = ({
           arrowWrapper: "dropdown__arrows--inline",
         }}
       />
-      <button>
+      <button aria-label="remove this row">
         <MinusIcon className="input-with-dropdown__icon" />
       </button>
     </div>

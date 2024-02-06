@@ -36,6 +36,7 @@ export const Button: React.FC<ButtonProps> = ({
       )}
       disabled={disabled}
       onClick={onClick}
+      aria-label={label}
     >
       {`${label} ${buttonType === "search" ? "(6)" : ""}`}
       <ButtonIcon collapsible={collapsible} buttonType={buttonType} />
