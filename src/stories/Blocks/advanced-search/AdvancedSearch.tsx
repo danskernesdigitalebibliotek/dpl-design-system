@@ -37,13 +37,22 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
                   return (
                     <>
                       <div className="advanced-search__clauses">
-                        <button className="advanced-search__clause focus-styling">
+                        <button
+                          className="advanced-search__clause focus-styling"
+                          aria-label="og"
+                        >
                           OG
                         </button>
-                        <button className="advanced-search__clause advanced-search__clause--grey focus-styling">
+                        <button
+                          className="advanced-search__clause advanced-search__clause--grey focus-styling"
+                          aria-label="eller"
+                        >
                           ELLER
                         </button>
-                        <button className="advanced-search__clause advanced-search__clause--grey focus-styling">
+                        <button
+                          className="advanced-search__clause advanced-search__clause--grey focus-styling"
+                          aria-label="ikke"
+                        >
                           IKKE
                         </button>
                       </div>
@@ -51,7 +60,10 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
                     </>
                   );
                 })}
-              <button className="advanced-search__clauses">
+              <button
+                className="advanced-search__clauses"
+                aria-label="tilføj ny linje"
+              >
                 <PlusButtonIcon className="mr-8" />
                 Tilføj ny linje
               </button>
@@ -89,7 +101,10 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
       )}
       <footer className="advanced-search__footer">
         {isCqlSearch && (
-          <button className="link-tag advanced-search__back-button">
+          <button
+            className="link-tag advanced-search__back-button"
+            aria-label="til avanceret søgning"
+          >
             Til avanceret søgning
           </button>
         )}

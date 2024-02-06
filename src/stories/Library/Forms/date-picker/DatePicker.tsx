@@ -43,6 +43,7 @@ const DatePicker = (props: DatePickerProps) => {
         />
         <button
           name="Toggle datepicker"
+          aria-label="open datepicker"
           className="datepicker__opener"
           data-toggle
         >

@@ -30,12 +30,20 @@ export const ListButton: React.FC<ListButtonProps> = ({
       </h2>
       <div className="dpl-list-buttons__buttons">
         <div className="dpl-list-buttons__buttons__button">
-          <button className="dpl-icon-button" type="button">
+          <button
+            className="dpl-icon-button"
+            type="button"
+            aria-label="list view"
+          >
             <MenuIcon />
           </button>
         </div>
         <div className="dpl-list-buttons__buttons__button">
-          <button className="dpl-icon-button" type="button">
+          <button
+            className="dpl-icon-button"
+            type="button"
+            aria-label="stacked view"
+          >
             <VariousIcon />
           </button>
         </div>

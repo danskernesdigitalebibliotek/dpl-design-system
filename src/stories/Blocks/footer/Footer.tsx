@@ -79,16 +79,16 @@ export const Footer = () => {
             </div>
 
             <div className="footer__site-info-icons mt-32">
-              <a href="/">
+              <a href="/" aria-label="follow link to our Facebook">
                 <FacebookIcon />
               </a>
-              <a href="/">
+              <a href="/" aria-label="follow link to our Instagram">
                 <InstagramIcon />
               </a>
-              <a href="/">
+              <a href="/" aria-label="follow link to our Youtube channel">
                 <YoutubeIcon />
               </a>
-              <a href="/">
+              <a href="/" aria-label="follow link to our Spotify">
                 <SpotifyIcon />
               </a>
             </div>
@@ -193,16 +193,16 @@ export const Footer = () => {
 
           <div className="footer__site-info">
             <div className="footer__site-info-icons">
-              <a href="/">
+              <a href="/" aria-label="follow link to our Facebook">
                 <FacebookIcon />
               </a>
-              <a href="/">
+              <a href="/" aria-label="follow link to our Instagram">
                 <InstagramIcon />
               </a>
-              <a href="/">
+              <a href="/" aria-label="follow link to our Youtube channel">
                 <YoutubeIcon />
               </a>
-              <a href="/">
+              <a href="/" aria-label="follow link to our Spotify">
                 <SpotifyIcon />
               </a>
             </div>

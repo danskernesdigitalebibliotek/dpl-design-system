@@ -59,7 +59,11 @@ export const Header = (props: HeaderProps) => {
     <>
       <header className="header">
         <div className="header__logo-desktop">
-          <a className="header__logo-desktop-link" href="/">
+          <a
+            className="header__logo-desktop-link"
+            href="/"
+            aria-label="PromoTitle image of libary"
+          >
             <Logo
               fallback={false}
               libraryName="Hjørring"
@@ -106,7 +110,11 @@ export const Header = (props: HeaderProps) => {
               </ul>
             </div>
             <div className="header__menu-profile header__button">
-              <a href="/" className="hide-linkstyle">
+              <a
+                href="/"
+                className="hide-linkstyle"
+                aria-label="user profile link"
+              >
                 {signedIn && haveNotification && (
                   <div className="header__notification bg-signal-alert" />
                 )}
@@ -117,7 +125,7 @@ export const Header = (props: HeaderProps) => {
               </a>
             </div>
             <div className="header__menu-bookmarked header__button">
-              <a href="/">
+              <a href="/" aria-label="go to your favorites list">
                 <HeartIcon />
               </a>
             </div>
