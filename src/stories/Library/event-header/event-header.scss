@@ -2,6 +2,13 @@
   @extend %hero-2-column;
 }
 
+.event-tag {
+  margin-bottom: $s-md;
+  @include media-query__small {
+    margin-bottom: $s-lg;
+  }
+}
+
 .event-header__date {
   @include typography($typo__h4);
 
