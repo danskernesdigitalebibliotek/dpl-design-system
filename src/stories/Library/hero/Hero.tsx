@@ -1,6 +1,6 @@
 import React from "react";
 import ImageCredited from "../image-credited/ImageCredited";
-import TagCategories from "../tag/tag-categories/TagCategories";
+import TagList from "../tag/tag-list/TagList";
 import { ReactComponent as ArrowLargeRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
 
 export type HeroProps = {
@@ -21,7 +21,7 @@ const Hero: React.FunctionComponent<HeroProps> = ({
   return (
     <section className="hero">
       <a href="/" className="hero-content arrow arrow__hover--right-large">
-        <TagCategories tags={["Arrangement"]} />
+        <TagList tags={["Arrangement"]} />
         <div className="hero__details">
           {contentType && (
             <>
