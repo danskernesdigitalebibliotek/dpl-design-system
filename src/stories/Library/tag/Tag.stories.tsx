@@ -6,7 +6,7 @@ import { Tag as TagComp } from "./Tag";
 type TagProps = typeof TagComp;
 
 export default {
-  title: "Library / Tag",
+  title: "Library / Tag / Tag",
   component: TagComp,
   decorators: [withDesign],
   parameters: {
@@ -17,40 +17,26 @@ export default {
     layout: "centered",
   },
   argTypes: {
+    children: {
+      control: { type: "text" },
+      defaultValue: "Litteratur",
+    },
     hasBackground: {
       control: { type: "boolean" },
       defaultValue: false,
     },
-    showCloseIcon: {
-      control: { type: "boolean" },
-      defaultValue: false,
-    },
-    isClickable: {
-      control: { type: "boolean" },
-      defaultValue: true,
-    },
   },
 };
 
-export const Tag: ComponentStory<TagProps> = (args) => (
-  <TagComp {...args}>Vi anbefaler</TagComp>
+export const Default: ComponentStory<TagProps> = ({ children, ...args }) => (
+  <TagComp {...args}>{children}</TagComp>
 );
-Tag.args = {
+
+export const LargeWithBackground: ComponentStory<TagProps> = ({
+  children,
+  ...args
+}) => <TagComp {...args}>{children}</TagComp>;
+LargeWithBackground.args = {
   size: "large",
   hasBackground: true,
-};
-
-export const TagRemovable: ComponentStory<TagProps> = (args) => (
-  <TagComp {...args}>Litteratur</TagComp>
-);
-TagRemovable.args = {
-  showCloseIcon: true,
-  hasBackground: true,
-};
-
-export const facet: ComponentStory<TagProps> = (args) => (
-  <TagComp {...args}>Skønlitteratur (96)</TagComp>
-);
-facet.args = {
-  hasBackground: false,
 };

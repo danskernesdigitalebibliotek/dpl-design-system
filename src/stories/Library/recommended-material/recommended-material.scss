@@ -1,0 +1,45 @@
+$_recommended-material-max-height: 432px;
+$_recommended-material-max-width: 378px;
+$_aspect-ratio-mobile: 285 / 320;
+// stylelint-disable-next-line
+$_aspect-ratio-desktop: $_recommended-material-max-width /
+  $_recommended-material-max-height;
+$_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
+
+.recommended-material {
+  background-color: $color__global-secondary;
+  max-height: $_recommended-material-max-height;
+  width: 100%;
+  padding: $s-md;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  row-gap: $s-lg;
+  justify-items: center;
+  align-items: center;
+  aspect-ratio: $_aspect-ratio-mobile;
+
+  @include media-query__small {
+    padding: $s-lg;
+    aspect-ratio: $_aspect-ratio-desktop;
+    max-width: $_recommended-material-max-width;
+  }
+}
+
+.recommended-material__icon {
+  justify-self: end;
+  line-height: 1;
+}
+
+.recommended-material__texts {
+  justify-self: start;
+}
+.recommended-material__description,
+.recommended-material__author {
+  @include typography($typo__body-small);
+  @include text-ellipsis-truncation(1);
+}
+.recommended-material__description {
+  font-weight: $font__weight--bold;
+  line-height: 2;
+}

@@ -1,48 +1,29 @@
-import { useState } from "react";
 import clsx from "clsx";
 
 type TagProps = {
   children: React.ReactNode;
   size?: "small" | "large";
-  usesCursor?: boolean;
   hasBackground?: boolean;
-  showCloseIcon?: boolean;
-  isClickable?: boolean;
   className?: string;
 };
 
 export const Tag = ({
   children,
-  hasBackground = false,
   size = "small",
-  usesCursor = true,
-  showCloseIcon = false,
-  isClickable = true,
+  hasBackground = false,
   className,
 }: TagProps) => {
-  const [selected, setSelected] = useState(false);
-
   return (
-    <button
-      aria-pressed={selected}
-      onClick={() => isClickable && setSelected(!selected)}
+    <span
       className={clsx(
         "tag",
-        (hasBackground || selected) && "tag--fill",
-        usesCursor && "cursor-pointer",
+        hasBackground && "tag--fill",
         `tag--${size}`,
         className
       )}
     >
       {children}
-      {showCloseIcon && (
-        <img
-          className="tag-icon"
-          src="icons/basic/icon-cross.svg"
-          alt="close icon"
-        />
-      )}
-    </button>
+    </span>
   );
 };
 

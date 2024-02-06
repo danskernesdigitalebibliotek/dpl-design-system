@@ -1,6 +1,10 @@
 .logo {
   img {
     display: none;
+
+    height: 100px;
+    width: auto;
+
     @include media-query__small {
       display: block;
     }

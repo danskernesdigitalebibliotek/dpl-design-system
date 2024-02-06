@@ -111,6 +111,14 @@
 @import "./src/stories/Library/video-embed/video-embed";
 @import "./src/stories/Library/card-grid/card-grid";
 @import "./src/stories/Library/promo-title/promo-title";
+@import "./src/stories/Library/recommended-material/recommended-material";
+@import "./src/stories/Library/recommendation/recommendation";
+@import "./src/stories/Library/recommended-material/recommended-material-skeleton";
+@import "./src/stories/Library/recommendation/recommendation-skeleton";
+@import "./src/stories/Library/nav-teaser/nav-teaser";
+@import "./src/stories/Library/nav-grid/nav-grid";
+@import "./src/stories/Library/hero/hero";
+@import "./src/stories/Library/tag/tag-categories/tag-categories";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";
@@ -128,6 +136,7 @@
 @import "./src/stories/Blocks/article/article";
 @import "./src/stories/Blocks/event-page/event-page";
 @import "./src/stories/Blocks/event-list-page/event-list-page";
+@import "./src/stories/Blocks/page/page";
 @import "./src/stories/Blocks/reservation-page/reservation-page-skeleton";
 
 @import "./src/styles/scss/shared";

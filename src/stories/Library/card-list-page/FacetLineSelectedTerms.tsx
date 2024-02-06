@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Tag } from "../tag/Tag";
+import { TagButton } from "../tag/tag-button/TagButton";
 import { FacetLineItem } from "./FacetLine";
 
 export interface FacetLineSelectedProps {
@@ -11,9 +11,9 @@ const FacetLineSelectedTerms: FC<FacetLineSelectedProps> = ({ items }) => {
     <ul className="facet-line-selected-terms">
       {items.map(({ title }) => (
         <li className="facet-line-selected-terms__item">
-          <Tag showCloseIcon hasBackground>
+          <TagButton showCloseIcon hasBackground>
             {title}
-          </Tag>
+          </TagButton>
         </li>
       ))}
     </ul>

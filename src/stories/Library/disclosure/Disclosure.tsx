@@ -11,6 +11,7 @@ export type DisclosureProps = {
   fullWidth?: boolean;
   removeHeadlinePadding?: boolean;
   headingLevel: HeadingLevelType;
+  contentPadding?: boolean;
 };
 
 const Disclosure: React.FC<DisclosureProps> = ({
@@ -21,6 +22,7 @@ const Disclosure: React.FC<DisclosureProps> = ({
   fullWidth = false,
   removeHeadlinePadding,
   headingLevel,
+  contentPadding = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -67,7 +69,11 @@ const Disclosure: React.FC<DisclosureProps> = ({
           alt="various-icon"
         />
       </summary>
-      {children}
+      {contentPadding ? (
+        <div className="disclosure__content-padding">{children}</div>
+      ) : (
+        children
+      )}
     </details>
   );
 };
