@@ -81,7 +81,7 @@
     margin-left: auto;
     margin-right: $s-md;
     height: 24px;
-    width: 24px;
+    min-width: 24px;
 
     @include media-query__small {
       margin-right: $s-xl;
