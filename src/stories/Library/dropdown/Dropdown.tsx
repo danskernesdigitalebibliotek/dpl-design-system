@@ -26,10 +26,10 @@ export const Dropdown: React.FC<DropdownProps> = ({
   const Icon = () => {
     if (arrowIcon === "triangles") {
       return (
-        <span>
+        <>
           <TriangleIcon className="dropdown__arrow" />
           <TriangleIcon className="dropdown__arrow dropdown__arrow--bottom" />
-        </span>
+        </>
       );
     }
 
