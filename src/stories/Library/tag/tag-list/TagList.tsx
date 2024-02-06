@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { Tag } from "../Tag";
+import Tag from "../Tag";
 
 type TagListProps = {
   tags: string[];

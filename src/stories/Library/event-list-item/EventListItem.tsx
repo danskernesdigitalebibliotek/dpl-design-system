@@ -1,5 +1,5 @@
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
-import { Tag } from "../tag/Tag";
+import Tag from "../tag/Tag";
 
 export type EventListItemProps = {
   image: string;

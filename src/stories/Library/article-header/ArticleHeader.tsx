@@ -1,6 +1,6 @@
 import { FC } from "react";
 import ArrowLink from "../links/arrow-link/ArrowLink";
-import { Tag } from "../tag/Tag";
+import Tag from "../tag/Tag";
 import HorizontalTermLine, {
   HorizontalTermLineProps,
 } from "../horizontal-term-line/HorizontalTermLine";
