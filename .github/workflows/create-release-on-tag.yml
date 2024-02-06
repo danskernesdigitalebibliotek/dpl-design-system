@@ -23,7 +23,7 @@ jobs:
 
      # Validate/parse version tag.
      # If it is not a version tag it is ok, we just need to know it.
-      - uses: nowsprinting/check-version-format-action@v3
+      - uses: nowsprinting/check-version-format-action@v4
         id: version
 
       - uses: actions/checkout@v4

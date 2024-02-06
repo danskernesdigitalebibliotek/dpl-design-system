@@ -1,14 +1,26 @@
-$modal-pause-container-width: 550px;
-
 .modal-pause {
   flex-direction: column;
   align-items: center;
+
+  &__subtitle {
+    margin-top: $s-xl;
+    color: $color__text-secondary-gray;
+  }
+
+  &__date-range {
+    margin-top: $s-lg;
+  }
+
+  &__text-link {
+    color: $color__text-secondary-gray;
+    margin-bottom: $s-xs;
+  }
 }
 
 .modal-pause__container {
   margin: 0 $s-lg;
   padding-top: 96px;
-  max-width: $modal-pause-container-width;
+  max-width: 550px;
   width: 100%;
 
   @include media-query__small {
@@ -21,12 +33,7 @@ $modal-pause-container-width: 550px;
   justify-content: center;
 }
 
-.datepickers {
-  @include media-query__small {
-    display: flex;
-    justify-content: space-between;
-  }
-
+.date-range {
   input {
     border: 1px solid $color__global-tertiary-1;
     box-sizing: border-box;
@@ -36,27 +43,12 @@ $modal-pause-container-width: 550px;
     padding: 0 10px;
     color: $color__text-secondary-gray;
     @include typography($typo__button);
-
-    @include media-query__small {
-      min-width: 250px;
-      padding: 0 20px;
-    }
   }
 
-  .datepicker {
+  .date-range__input {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-bottom: $s-lg;
-
-    @include media-query__small {
-      margin-bottom: 0;
-    }
-
-    &:first-of-type {
-      @include media-query__small {
-        margin-right: $s-lg;
-      }
-    }
   }
 }

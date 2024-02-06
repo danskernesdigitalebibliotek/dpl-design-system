@@ -22,8 +22,8 @@
 @import "./src/stories/Library/Forms/checkbox/checkbox";
 @import "./src/stories/Library/cover/cover";
 @import "./src/stories/Library/Forms/input/input";
-@import "./src/stories/Library/Forms/date-picker/date-picker.scss";
-@import "./src/stories/Library/date-calendar/date-calendar.scss";
+@import "./src/stories/Library/Forms/date-picker/date-picker";
+@import "./src/stories/Library/date-calendar/date-calendar";
 @import "./src/stories/Library/list-buttons/list-buttons";
 @import "./src/stories/Library/progress-bar/progress-bar";
 @import "./src/stories/Library/missing-story/missing-story";
@@ -137,6 +137,7 @@
 @import "./src/stories/Blocks/event-page/event-page";
 @import "./src/stories/Blocks/event-list-page/event-list-page";
 @import "./src/stories/Blocks/page/page";
+@import "./src/stories/Blocks/reservation-page/reservation-page-skeleton";
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";
