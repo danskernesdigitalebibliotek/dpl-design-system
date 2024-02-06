@@ -15,6 +15,7 @@
   &__heart {
     // Ensure SVG has same height as font despite top whitespace.
     height: 14px;
+    width: 14px;
     display: inline-block;
     margin-right: 2px;
     &:last-of-type {
