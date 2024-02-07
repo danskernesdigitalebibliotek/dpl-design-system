@@ -147,6 +147,7 @@ $_desktop-content-rows: 5;
 
   .event-list-item__title {
     grid-area: title;
+    line-height: 100%;
   }
 
   .event-list-item__description {
