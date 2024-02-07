@@ -29,16 +29,15 @@
       padding-top: $s-3xl;
     }
 
-    // Add paddig on childs except .hero-cta
-    > * {
-      padding: 0 $s-3xl;
-      @include media-query__small {
-        padding: 0;
-      }
-    }
+    // Add margin to all child elements on small screens except .hero-cta
+    > *:not(.hero-cta) {
+      margin-left: $s-3xl;
+      margin-right: $s-3xl;
 
-    > .hero-cta {
-      padding: 0;
+      @include media-query__small {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 

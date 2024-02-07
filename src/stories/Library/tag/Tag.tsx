@@ -1,13 +1,13 @@
 import clsx from "clsx";
 
-type TagProps = {
+export type TagProps = {
   children: React.ReactNode;
   size?: "small" | "large";
   hasBackground?: boolean;
   className?: string;
 };
 
-export const Tag = ({
+const Tag = ({
   children,
   size = "small",
   hasBackground = false,
