@@ -72,9 +72,10 @@ $_event-list-item--image-width: 222px;
 
 .event-list-item__description {
   grid-area: description;
-
-  @include text-ellipsis-truncation(3);
   margin-bottom: $s-lg;
+  p {
+    @include text-ellipsis-truncation(3);
+  }
 }
 
 .event-list-item__location-wrapper {
@@ -141,7 +142,10 @@ $_event-list-item--image-width: 222px;
   .event-list-item__description {
     margin-bottom: unset;
     grid-area: description;
-    @include text-ellipsis-truncation(2);
+
+    p {
+      @include text-ellipsis-truncation(2);
+    }
   }
 
   .event-list-item__schedule {

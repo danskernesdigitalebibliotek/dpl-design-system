@@ -39,7 +39,9 @@ export const EventListItem: React.FC<EventListItemProps> = ({
         </Tag>
         <div className="event-list-item__date">{date}</div>
         <h2 className="event-list-item__title">{title}</h2>
-        <p className="event-list-item__description">{description}</p>
+        <div className="event-list-item__description">
+          <p>{description}</p>
+        </div>
         <div className="event-list-item__location-wrapper">
           <p className="event-list-item__location">{location}</p>
         </div>
