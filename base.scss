@@ -119,6 +119,8 @@
 @import "./src/stories/Library/nav-grid/nav-grid";
 @import "./src/stories/Library/hero/hero";
 @import "./src/stories/Library/tag/tag-list/tag-list";
+@import "./src/stories/Library/nav-spot/nav-spot";
+@import "./src/stories/Library/nav-spots/nav-spots";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";

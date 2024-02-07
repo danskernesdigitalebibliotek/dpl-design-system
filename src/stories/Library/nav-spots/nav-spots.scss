@@ -1,0 +1,37 @@
+.nav-spots {
+  @include layout-container($block-max-width__large, 0);
+}
+
+.nav-spots--count-1 {
+  .nav-spot {
+    @extend %nav-spot--large;
+  }
+}
+
+.nav-spots--count-2 {
+  $_gap: $s-4xl;
+
+  .nav-spots__item + .nav-spots__item {
+    padding-top: $_gap;
+    padding-left: $_gap;
+    box-sizing: border-box;
+
+    .nav-spot {
+      @extend %nav-spot--small;
+    }
+  }
+
+  @include media-query__medium {
+    .nav-spots__items {
+      display: flex;
+    }
+
+    .nav-spots__item {
+      width: 60%;
+    }
+
+    .nav-spots__item + .nav-spots__item {
+      width: 40%;
+    }
+  }
+}
