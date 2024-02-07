@@ -9,6 +9,7 @@ import {
 import { WarningStatus } from "../../warning-status/WarningStatus";
 import Modal from "../Modal";
 import ResultPager from "../../card-list-page/ResultPager";
+import GroupModalItemSkeleton from "../GroupModalItemSkeleton";
 
 type LoanMaterials = Array<{
   materialType?: string;
@@ -96,6 +97,7 @@ export type ModalLoanProps = {
   showModal: boolean;
   showExpired: boolean;
   buttonsUpTop: boolean;
+  isLoadingItems?: boolean;
 };
 
 export const ModalLoan: React.FC<ModalLoanProps> = ({
@@ -104,6 +106,7 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
   showExpired,
   showModal,
   buttonsUpTop,
+  isLoadingItems = false,
 }) => {
   const [isAllChecked, setChecked] = useState(false);
   const isExpired = showExpired;
@@ -163,17 +166,23 @@ export const ModalLoan: React.FC<ModalLoanProps> = ({
             </div>
           )}
           <ul className="modal-loan__list-materials">
-            {loanList.map(({ list }) => (
+            {isLoadingItems &&
+              [0, 1].map(() => <GroupModalItemSkeleton withLeftOutset />)}
+            {!isLoadingItems && (
               <>
-                {list.map((listItem, index) => (
-                  <ListMaterials
-                    key={`${index}-${isAllChecked}`}
-                    {...listItem}
-                    isChecked={listItem.isChecked}
-                  />
+                {loanList.map(({ list }) => (
+                  <>
+                    {list.map((listItem, index) => (
+                      <ListMaterials
+                        key={`${index}-${isAllChecked}`}
+                        {...listItem}
+                        isChecked={listItem.isChecked}
+                      />
+                    ))}
+                  </>
                 ))}
               </>
-            ))}
+            )}
           </ul>
           <ResultPager
             currentResults={1}
