@@ -34,6 +34,7 @@ $_event-list-item--image-width: 222px;
 
 .event-list-item__image {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   position: relative;
   z-index: $z-10;
