@@ -1,5 +1,6 @@
 $_event-list-item--max-width: 1126px;
-$_event-list-item--image-width: 222px;
+$_event-list-item--image-height: 166px;
+$_desktop-content-rows: 5;
 
 .event-list-item {
   @include show-svg-on-hover();
@@ -118,12 +119,20 @@ $_event-list-item--image-width: 222px;
       "title title . schedule"
       "description description . schedule"
       "location location . schedule";
+    grid-gap: unset;
+    grid-template-rows: repeat(
+      $_desktop-content-rows,
+      minmax(
+        calc($_event-list-item--image-height / $_desktop-content-rows),
+        auto
+      )
+    );
   }
 
   .event-list-item__image-container {
     grid-area: image;
-    max-width: $_event-list-item--image-width;
-    min-width: $_event-list-item--image-width;
+    max-height: $_event-list-item--image-height;
+    min-height: $_event-list-item--image-height;
   }
 
   .event-list-item__tag {
