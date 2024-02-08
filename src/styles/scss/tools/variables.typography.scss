@@ -161,6 +161,17 @@ $typo__body-placeholder: (
   ),
 );
 
+$typo__desktop-menu-item: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    line-height: 32px,
+    color: $color__text-secondary-gray,
+    font-size: 18px,
+  ),
+);
+
 // "Body Copy - M - medium"
 $typo__body-medium: (
   mobile: (
