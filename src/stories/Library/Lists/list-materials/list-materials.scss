@@ -23,6 +23,14 @@
   &--bottom-buttons-visible {
     padding-bottom: 90px;
   }
+
+  &.list-materials--no-hover {
+    cursor: default;
+
+    &:hover {
+      filter: none;
+    }
+  }
 }
 
 .list-materials__checkbox {
