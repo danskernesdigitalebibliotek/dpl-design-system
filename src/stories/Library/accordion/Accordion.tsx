@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { ReactComponent as TriangleIcon } from "../../../public/icons/basic/icon-triangle.svg";
 
 type AccordionRow = {
   header: string;
@@ -27,11 +28,7 @@ export const Accordion: React.FC<AccordionProps> = ({ list }) => {
               data-accordion-trigger
             >
               {row.header}
-              <img
-                className="accordion__button-arrow"
-                src="icons/basic/icon-triangle.svg"
-                alt=""
-              />
+              <TriangleIcon className="accordion__button-arrow" />
             </button>
           </h3>
           <div hidden className="accordion__body pt-16 pb-32">

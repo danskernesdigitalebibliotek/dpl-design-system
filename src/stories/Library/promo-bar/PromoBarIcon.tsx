@@ -1,3 +1,5 @@
+import { ReactComponent as InfoIcon } from "../../../public/icons/basic/icon-info.svg";
+
 export type PromoBarIconType = "none" | "info";
 
 export type PromoBarIconProps = {
@@ -8,7 +10,7 @@ export const PromoBarIcon: React.FunctionComponent<PromoBarIconProps> = ({
   type,
 }) => {
   if (type === "info") {
-    return <img src="icons/basic/icon-info.svg" alt="" />;
+    return <InfoIcon />;
   }
   return null;
 };

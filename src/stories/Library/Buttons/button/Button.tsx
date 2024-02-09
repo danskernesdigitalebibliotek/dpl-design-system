@@ -6,8 +6,8 @@ import { ButtonSize, ButtonType, ButtonVariant } from "./types";
 export type ButtonProps = {
   label: string;
   buttonType: ButtonType;
-  disabled: boolean;
-  collapsible: boolean;
+  disabled?: boolean;
+  collapsible?: boolean;
   size: ButtonSize;
   variant: ButtonVariant;
   onClick?: () => void;
@@ -17,8 +17,8 @@ export type ButtonProps = {
 export const Button: React.FC<ButtonProps> = ({
   label,
   buttonType,
-  disabled,
-  collapsible,
+  disabled = false,
+  collapsible = false,
   size,
   variant,
   onClick,
@@ -36,6 +36,7 @@ export const Button: React.FC<ButtonProps> = ({
       )}
       disabled={disabled}
       onClick={onClick}
+      aria-label={label}
     >
       {`${label} ${buttonType === "search" ? "(6)" : ""}`}
       <ButtonIcon collapsible={collapsible} buttonType={buttonType} />
