@@ -1,3 +1,5 @@
+import { ReactComponent as ReservationsIcon } from "../../../public/icons/collection/Reservations.svg";
+
 export type PauseReservationProps = {
   isChecked?: boolean;
   isPausedtext: string;
@@ -18,7 +20,7 @@ export const PauseReservation = ({
       <div className="dpl-pause-reservation-component__pagefold" />
       <div className="dpl-pause-reservation-component__flex">
         <div className="dpl-pause-reservation-component__flex__reservation-icon">
-          <img src="icons/collection/Reservations.svg" alt="" />
+          <ReservationsIcon />
         </div>
         <div className="dpl-pause-reservation-component__flex__text">
           {isChecked ? isPausedtext : pauseText}

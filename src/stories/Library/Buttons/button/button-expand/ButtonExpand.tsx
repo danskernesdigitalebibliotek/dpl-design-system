@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { FC } from "react";
+import { ReactComponent as ExpandMoreIcon } from "../../../../../public/icons/collection/ExpandMore.svg";
 
 export type ButtonExpandProps = {
   showMore: boolean;
@@ -14,12 +15,10 @@ const ButtonExpand: FC<ButtonExpandProps> = ({ showMore, setShowMore }) => {
       onClick={() => setShowMore(!showMore)}
       aria-label="Expand More"
     >
-      <img
+      <ExpandMoreIcon
         className={clsx("button-expand__image", {
           "button-expand__image--expanded": showMore,
         })}
-        src="icons/collection/ExpandMore.svg"
-        alt=""
       />
     </button>
   );

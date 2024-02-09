@@ -1,4 +1,5 @@
 import Modal from "../Modal";
+import { ReactComponent as InfomediaIcon } from "../../../../public/icons/logo/infomedia-logo.svg";
 
 export type InfomediaProps = {
   showModal: boolean;
@@ -11,11 +12,7 @@ export const Infomedia = (props: InfomediaProps) => {
   return (
     <Modal shownModal={showModal} classNames="">
       <article className="infomedia-article">
-        <img
-          className="infomedia-logo"
-          src="icons/logo/infomedia-logo.svg"
-          alt=""
-        />
+        <InfomediaIcon className="infomedia-logo" />
         <h2>{title}</h2>
         <div
           // eslint-disable-next-line react/no-danger

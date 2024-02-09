@@ -1,13 +1,15 @@
+import { ReactComponent as CheckIcon } from "../../../public/icons/collection/Check.svg";
+
 export type CounterProps = {
   value: number;
   percentage: number;
   label: string;
   status: "danger" | "warning" | "info" | "neutral";
-  isReady: boolean;
+  isReady?: boolean;
 };
 
 export const Counter = (props: CounterProps) => {
-  const { value, label, percentage, status, isReady } = props;
+  const { value, label, percentage, status, isReady = false } = props;
 
   function getColor() {
     if (status === "danger") return "#d22d43";
@@ -33,11 +35,7 @@ export const Counter = (props: CounterProps) => {
       aria-label="counter showing time remaining "
     >
       {isReady ? (
-        <img
-          className="counter__icon"
-          src="icons/basic/icon-check.svg"
-          alt="check icon"
-        />
+        <CheckIcon className="counter__icon" />
       ) : (
         <span className="counter__value">{value}</span>
       )}
