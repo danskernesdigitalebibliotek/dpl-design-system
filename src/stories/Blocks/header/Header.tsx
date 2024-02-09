@@ -101,17 +101,18 @@ export const Header = (props: HeaderProps) => {
                 ))}
               </ul>
             </div>
-            <div className="header__menu-profile header__button">
-              <a href="/" className="hide-linkstyle">
-                {signedIn && haveNotification && (
-                  <div className="header__notification bg-signal-alert" />
-                )}
-                <img src="icons/basic/icon-profile.svg" alt="Profile" />
-                {signedIn && (
-                  <span className="text-small-caption">{username}</span>
-                )}
-              </a>
-            </div>
+            <button
+              className="header__menu-profile header__button"
+              type="button"
+            >
+              {signedIn && haveNotification && (
+                <div className="header__notification bg-signal-alert" />
+              )}
+              <img src="icons/basic/icon-profile.svg" alt="Profile" />
+              {signedIn && (
+                <span className="text-small-caption">{username}</span>
+              )}
+            </button>
             <div className="header__menu-bookmarked header__button">
               <a href="/">
                 <img src="icons/basic/icon-heart.svg" alt="List of bookmarks" />
