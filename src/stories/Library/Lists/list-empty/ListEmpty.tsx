@@ -8,8 +8,8 @@ interface ListEmptyProps {
 
 const ListEmpty = ({ text, links, className }: ListEmptyProps) => {
   return (
-    <div className={`dpl-list-empty ${className}`}>
-      {text}
+    <div className={`dpl-list-empty ${className ?? ""}`}>
+      <p>{text}</p>
       {links && (
         <div className="dpl-list-empty__links">
           {links.map((item, index) => (
