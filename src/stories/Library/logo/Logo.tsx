@@ -1,13 +1,13 @@
 import "../../../styles/css/base.css";
 import logo from "./logo.png";
 
-type LogoProps = {
+export type LogoProps = {
   fallback: boolean;
   libraryName: string;
   altText: string;
 };
 
-export const Logo = (props: LogoProps) => {
+const Logo = (props: LogoProps) => {
   const { fallback, libraryName, altText } = props;
 
   return fallback ? (

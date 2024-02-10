@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Logo } from "../../Library/logo/Logo";
+import Logo from "../../Library/logo/Logo";
 import Pagefold from "../../Library/pagefold/Pagefold";
 
 export type HeaderProps = {
