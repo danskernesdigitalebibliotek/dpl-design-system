@@ -1,11 +1,10 @@
 import { withDesign } from "storybook-addon-designs";
 import { Meta } from "@storybook/react";
-
-import { Footer as FooterComp } from "./Footer";
+import Footer from "./Footer";
 
 export default {
   title: "Blocks / Footer",
-  component: FooterComp,
+  component: Footer,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -15,4 +14,4 @@ export default {
   },
 } as Meta;
 
-export const Footer = () => <FooterComp />;
+export const Default = () => <Footer />;

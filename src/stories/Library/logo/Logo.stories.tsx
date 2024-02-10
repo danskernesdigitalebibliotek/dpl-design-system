@@ -1,12 +1,10 @@
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { Logo as LogoComp } from "./Logo";
-
-type LogoProps = typeof LogoComp;
+import Logo, { LogoProps } from "./Logo";
 
 export default {
   title: "Library / Logo",
-  component: LogoComp,
+  component: Logo,
   decorators: [withDesign],
   argTypes: {
     libraryName: {
@@ -25,10 +23,12 @@ export default {
   },
 };
 
-const Template: ComponentStory<LogoProps> = (args) => <LogoComp {...args} />;
+const Template: ComponentStory<typeof Logo> = (args: LogoProps) => (
+  <Logo {...args} />
+);
 
-export const Logo = Template.bind({});
-Logo.args = {
+export const Default = Template.bind({});
+Default.args = {
   fallback: false,
   altText: "logo",
 };

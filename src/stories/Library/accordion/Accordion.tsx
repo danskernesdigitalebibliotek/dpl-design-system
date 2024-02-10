@@ -7,11 +7,12 @@ type AccordionRow = {
     href: string;
   }>;
 };
-type AccordionProps = {
+
+export type AccordionProps = {
   list: AccordionRow[];
 };
 
-export const Accordion: React.FC<AccordionProps> = ({ list }) => {
+const Accordion: React.FC<AccordionProps> = ({ list }) => {
   useEffect(() => {
     /* eslint-disable-next-line global-require */
     require("./initaccordion");
@@ -55,4 +56,4 @@ declare global {
   }
 }
 
-export default {};
+export default Accordion;

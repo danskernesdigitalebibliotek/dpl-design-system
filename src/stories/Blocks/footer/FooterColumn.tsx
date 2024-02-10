@@ -5,7 +5,7 @@ type FooterColumnProps = {
   links: string[];
 };
 
-export const FooterColumn = ({ title, links }: FooterColumnProps) => {
+const FooterColumn = ({ title, links }: FooterColumnProps) => {
   return (
     <div className="footer-column">
       <h3 className="text-header-h4">{title}</h3>

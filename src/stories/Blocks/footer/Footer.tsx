@@ -1,9 +1,9 @@
 import Pagefold from "../../Library/pagefold/Pagefold";
-import { Accordion } from "../../Library/accordion/Accordion";
+import Accordion from "../../Library/accordion/Accordion";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
-import { Logo } from "../../Library/logo/Logo";
+import Logo from "../../Library/logo/Logo";
 import { Links } from "../../Library/links/Links";
-import { FooterColumn } from "./FooterColumn";
+import FooterColumn from "./FooterColumn";
 import list from "../../Library/accordion/accordionList";
 
 const dropdownList = [
@@ -21,7 +21,7 @@ const dropdownList = [
   },
 ];
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="footer">
       <h2 className="hide-visually">Globale links</h2>

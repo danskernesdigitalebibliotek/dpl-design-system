@@ -1,14 +1,11 @@
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-
-import { Accordion as AccordionComp } from "./Accordion";
+import Accordion, { AccordionProps } from "./Accordion";
 import list from "./accordionList";
-
-type AccordionProps = typeof AccordionComp;
 
 export default {
   title: "Library / Accordion",
-  component: AccordionComp,
+  component: Accordion,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -24,8 +21,8 @@ export default {
   },
 };
 
-const Template: ComponentStory<AccordionProps> = (args) => (
-  <AccordionComp {...args} />
+const Template: ComponentStory<typeof Accordion> = (args: AccordionProps) => (
+  <Accordion {...args} />
 );
 
-export const Accordion = Template.bind({});
+export const Default = Template.bind({});
