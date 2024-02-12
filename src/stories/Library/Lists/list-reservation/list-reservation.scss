@@ -19,13 +19,13 @@ $list-reservation-space-desktop: 24px;
   cursor: pointer;
 
   h3 {
-     color: $color__text-primary-black;
+    color: $color__text-primary-black;
   }
 
   p {
     color: $color__global-grey;
   }
-  
+
   @include media-query__small {
     grid-template-columns: 1fr 1fr;
     height: 184px;
