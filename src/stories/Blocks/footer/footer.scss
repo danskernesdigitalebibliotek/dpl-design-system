@@ -35,14 +35,14 @@
   }
 }
 
-.footer-title {
+.footer__title {
   @include typography($typo__h4);
   @include media-query__small {
     margin-bottom: $s-md;
   }
 }
 
-.footer-content {
+.footer__content {
   @include typography($typo__body-placeholder);
 
   a {
