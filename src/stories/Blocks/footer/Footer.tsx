@@ -1,11 +1,29 @@
+import { FC } from "react";
 import Pagefold from "../../Library/pagefold/Pagefold";
 import FooterAccordions from "../../Library/footer-accordions/FooterAccordions";
 import FooterColumns from "../../Library/footer-colums/FooterColumns";
-import FooterInfo from "../../Library/footer-info/FooterInfo";
+import FooterInfo, {
+  FooterInfoLinksType,
+  FooterSocialMediaType,
+} from "../../Library/footer-info/FooterInfo";
 import FooterSeparator from "../../Library/footer-separator/FooterSeparator";
 import FooterWidgets from "../../Library/footer-widgets/FooterWidgets";
+import { DropdownItem } from "../../Library/dropdown/Dropdown";
+import { FooterColumnType } from "../../Library/footer-colums/FooterColumn";
 
-const Footer = () => {
+export type FooterType = {
+  footerContent: FooterColumnType[];
+  footerLanguages: DropdownItem[];
+  footerSocialMedia: FooterSocialMediaType[];
+  footerInfoLinks: FooterInfoLinksType[];
+};
+
+const Footer: FC<FooterType> = ({
+  footerContent,
+  footerLanguages,
+  footerSocialMedia,
+  footerInfoLinks,
+}) => {
   return (
     <footer className="footer">
       <h2 className="hide-visually">Globale links</h2>
@@ -16,10 +34,13 @@ const Footer = () => {
         isAContainer
         size="small"
       >
-        <FooterAccordions />
-        <FooterWidgets />
+        <FooterAccordions footerContent={footerContent} />
+        <FooterWidgets footerLanguages={footerLanguages} />
         <FooterSeparator />
-        <FooterInfo />
+        <FooterInfo
+          footerSocialMedia={footerSocialMedia}
+          footerInfoLinks={footerInfoLinks}
+        />
       </Pagefold>
 
       {/* Footer tablet/desktop */}
@@ -29,10 +50,13 @@ const Footer = () => {
         isAContainer
         size="medium"
       >
-        <FooterColumns />
-        <FooterWidgets />
+        <FooterColumns footerContent={footerContent} />
+        <FooterWidgets footerLanguages={footerLanguages} />
         <FooterSeparator />
-        <FooterInfo />
+        <FooterInfo
+          footerSocialMedia={footerSocialMedia}
+          footerInfoLinks={footerInfoLinks}
+        />
       </Pagefold>
     </footer>
   );

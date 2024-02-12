@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
-import { FooterColumnProps } from "../footer-colums/FooterColumn";
+import { FooterColumnType } from "../footer-colums/FooterColumn";
 
-type FooterAccordionProps = FooterColumnProps & {
+type FooterAccordionProps = FooterColumnType & {
   open?: boolean;
 };
 

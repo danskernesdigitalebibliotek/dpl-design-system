@@ -1,7 +1,11 @@
-import FooterColumn from "./FooterColumn";
-import { footerContent } from "../../Blocks/footer/footer-content";
+import { FC } from "react";
+import FooterColumn, { FooterColumnType } from "./FooterColumn";
 
-const FooterColumns = () => {
+export type FooterColumnsType = {
+  footerContent: FooterColumnType[];
+};
+
+const FooterColumns: FC<FooterColumnsType> = ({ footerContent }) => {
   return (
     <ul className="footer-columns">
       {footerContent.map(({ title, content }, i) => (

@@ -1,7 +1,12 @@
+import { FC } from "react";
 import FooterAccordion from "./FooterAccordion";
-import { footerContent } from "../../Blocks/footer/footer-content";
+import { FooterColumnType } from "../footer-colums/FooterColumn";
 
-const FooterAccordions = () => {
+export type FooterAccordionsType = {
+  footerContent: FooterColumnType[];
+};
+
+const FooterAccordions: FC<FooterAccordionsType> = ({ footerContent }) => {
   // use the logic in initaccordion.js to initialize the accordion ind drupal
   return (
     <ul className="footer-accordions" data-footer-accordions>

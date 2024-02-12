@@ -1,11 +1,11 @@
 import { FC } from "react";
 
-export type FooterColumnProps = {
+export type FooterColumnType = {
   title: string;
   content: string;
 };
 
-const FooterColumn: FC<FooterColumnProps> = ({ title, content }) => {
+const FooterColumn: FC<FooterColumnType> = ({ title, content }) => {
   return (
     <>
       <h3 className="footer-title">{title}</h3>

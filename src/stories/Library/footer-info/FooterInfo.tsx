@@ -1,62 +1,45 @@
-const FooterInfo = () => {
+import { FC } from "react";
+
+export type FooterSocialMediaType = {
+  href: string;
+  label: string;
+  icon: string;
+};
+
+export type FooterInfoLinksType = {
+  href: string;
+  label: string;
+};
+
+type FooterInfoType = {
+  footerInfoLinks: FooterInfoLinksType[];
+  footerSocialMedia: FooterSocialMediaType[];
+};
+
+const FooterInfo: FC<FooterInfoType> = ({
+  footerInfoLinks,
+  footerSocialMedia,
+}) => {
   return (
     <div className="footer-info">
       <ul className="footer-info__links">
-        <li>
-          <a href="" className="footer-info__link">
-            Behandling af persondata
-          </a>
-        </li>
-        <li>
-          <a href="/" className="footer-info__link">
-            Servicedeklaration
-          </a>
-        </li>
-        <li>
-          <a href="/" className="footer-info__link">
-            Relement
-          </a>
-        </li>
-        <li>
-          <a href="/" className="footer-info__link">
-            Tilgængelighed
-          </a>
-        </li>
+        {footerInfoLinks.map(({ href, label }, i) => (
+          <li key={i}>
+            <a href={href} className="footer-info__link">
+              {label}
+            </a>
+          </li>
+        ))}
       </ul>
 
       <ul className="footer-info__icons">
-        <li>
-          <a href="/">
-            <img
-              src="icons/social/icon-social-facebook.svg"
-              alt="Facebook link"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="/">
-            <img
-              src="icons/social/icon-social-instagram.svg"
-              alt="Instagram link"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="/">
-            <img
-              src="icons/social/icon-social-youtube.svg"
-              alt="Youtube link"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="/">
-            <img
-              src="icons/social/icon-social-spotify.svg"
-              alt="Spotify link"
-            />
-          </a>
-        </li>
+        {footerSocialMedia.map(({ href, label, icon }, i) => (
+          <li key={i}>
+            <a href={href} className="footer-info__icon">
+              <img src={icon} alt={label} />
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );

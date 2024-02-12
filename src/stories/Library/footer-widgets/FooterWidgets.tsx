@@ -1,8 +1,12 @@
-import { footerLanguages } from "../../Blocks/footer/footer-content";
-import { Dropdown } from "../dropdown/Dropdown";
+import { FC } from "react";
+import { Dropdown, DropdownItem } from "../dropdown/Dropdown";
 import Logo from "../logo/Logo";
 
-const FooterWidgets = () => {
+type FooterWidgetsType = {
+  footerLanguages: DropdownItem[];
+};
+
+const FooterWidgets: FC<FooterWidgetsType> = ({ footerLanguages }) => {
   return (
     <div className="footer-widgets">
       <Dropdown
