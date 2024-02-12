@@ -27,10 +27,6 @@ const list = [
     title: "Litteratur",
     href: "/",
   },
-  {
-    title: "Børn & forældre",
-    href: "/",
-  },
 ];
 
 export const Header = (props: HeaderProps) => {
@@ -46,6 +42,7 @@ export const Header = (props: HeaderProps) => {
   useEffect(() => {
     require("./header-toggle");
     require("./header-sticky");
+    require("./header-state");
   }, []);
 
   return (
@@ -93,7 +90,7 @@ export const Header = (props: HeaderProps) => {
                   <li className="header__menu-navigation-item">
                     <a
                       href={i.href}
-                      className="header__menu-navigation-link text-body-medium-regular hide-linkstyle"
+                      className="header__menu-navigation-link  hide-linkstyle"
                     >
                       {i.title}
                     </a>
