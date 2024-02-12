@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { FooterColumnProps } from "../footer-colums/FooterColumn";
 
 type FooterAccordionProps = FooterColumnProps & {
@@ -10,13 +10,17 @@ const FooterAccordion: FC<FooterAccordionProps> = ({
   content,
   open = false,
 }) => {
+  const [isOpen, setIsOpen] = useState(open);
+  const toggleAccordion = () => setIsOpen(!isOpen);
+
   return (
     <>
       <h3 className="footer-accordion__header footer-title">
         <button
           className="footer-accordion__header-button"
-          aria-expanded={open}
-          data-accordion-trigger
+          aria-expanded={isOpen}
+          data-footer-accordion-trigger
+          onClick={toggleAccordion}
         >
           {title}
           <img
@@ -27,7 +31,7 @@ const FooterAccordion: FC<FooterAccordionProps> = ({
         </button>
       </h3>
       <div
-        hidden={!open}
+        hidden={!isOpen}
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: content }}
         className="footer-content"
