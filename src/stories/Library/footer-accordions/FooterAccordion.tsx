@@ -11,7 +11,7 @@ const FooterAccordion: FC<FooterAccordionProps> = ({
   open = false,
 }) => {
   return (
-    <li className="footer-accordion">
+    <>
       <h3 className="footer-accordion__header footer-title">
         <button
           className="footer-accordion__header-button"
@@ -32,7 +32,7 @@ const FooterAccordion: FC<FooterAccordionProps> = ({
         dangerouslySetInnerHTML={{ __html: content }}
         className="footer-content"
       />
-    </li>
+    </>
   );
 };
 

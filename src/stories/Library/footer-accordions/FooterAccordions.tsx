@@ -10,7 +10,9 @@ const FooterAccordions = () => {
   return (
     <ul className="footer-accordions" onClick={(e) => window.eventAccordion(e)}>
       {footerContent.map(({ title, content }, i) => (
-        <FooterAccordion title={title} content={content} open={i === 0} />
+        <li className="footer-accordion" key={i}>
+          <FooterAccordion title={title} content={content} open={i === 0} />
+        </li>
       ))}
     </ul>
   );

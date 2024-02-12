@@ -5,7 +5,7 @@ const FooterColumns = () => {
   return (
     <ul className="footer-columns">
       {footerContent.map(({ title, content }, i) => (
-        <li className="footer-column">
+        <li className="footer-column" key={i}>
           <FooterColumn title={title} content={content} />
         </li>
       ))}
