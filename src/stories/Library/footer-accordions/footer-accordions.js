@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const target = btn.parentNode.nextElementSibling;
 
     btn.setAttribute("aria-expanded", String(!isOpen));
-    target.hidden = isOpen;
+
+    // Toggle the class based on the isOpen value
+    if (isOpen) {
+      target.classList.add("footer__content--hidden");
+    } else {
+      target.classList.remove("footer__content--hidden");
+    }
   });
 });

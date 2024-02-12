@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { clsx } from "clsx";
 import { FooterColumnType } from "../footer-colums/FooterColumn";
 
 type FooterAccordionProps = FooterColumnType & {
@@ -31,10 +32,11 @@ const FooterAccordion: FC<FooterAccordionProps> = ({
         </button>
       </h3>
       <div
-        hidden={!isOpen}
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: content }}
-        className="footer__content"
+        className={clsx("footer__content", {
+          "footer__content--hidden": !isOpen,
+        })}
       />
     </>
   );
