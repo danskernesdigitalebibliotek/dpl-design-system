@@ -43,7 +43,7 @@
 @import "./src/stories/Library/Lists/list-details/list-details";
 @import "./src/stories/Library/Lists/list-materials/list-materials";
 @import "./src/stories/Library/Lists/list-empty/list-empty";
-@import "./src/stories/Library/accordion/accordion";
+@import "./src/stories/Library/footer-accordions/footer-accordions";
 @import "./src/stories/Library/Modals/modal";
 @import "./src/stories/Library/Modals/modal-details/modal-details";
 @import "./src/stories/Library/Modals/modal-cta/modal-cta";
@@ -122,6 +122,10 @@
 @import "./src/stories/Library/nav-spot/nav-spot";
 @import "./src/stories/Library/nav-spots/nav-spots";
 @import "./src/stories/Library/input-label/input-label";
+@import "./src/stories/Library/footer-separator/footer-separator";
+@import "./src/stories/Library/footer-widgets/footer-widgets";
+@import "./src/stories/Library/footer-info/footer-info";
+@import "./src/stories/Library/footer-colums/footer-colums";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";

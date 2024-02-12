@@ -1,0 +1,55 @@
+$footer-content-width: $s-2xl;
+
+// Ensure the footer accordions span the entire width
+// by removing the default padding from .internal-pagefold-parent
+.footer-accordions {
+  margin: 0 -50px;
+}
+
+.footer-accordion .footer-content {
+  padding-top: $s-md;
+  padding-left: $footer-content-width;
+  padding-right: $footer-content-width;
+  padding-bottom: $s-2xl;
+}
+
+.footer-accordion__header {
+  height: $s-3xl;
+
+  button {
+    @extend %default-focus-visible;
+  }
+}
+
+.footer-accordion__header-button {
+  padding-left: $footer-content-width;
+  padding-right: $footer-content-width;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $color__global-tertiary-1;
+}
+
+.footer-accordion__header-button__arrow {
+  transition: transform 0.3s;
+  transform: rotateZ(180deg);
+}
+
+.footer-accordion__header-button[aria-expanded="true"]
+  .footer-accordion__header-button__arrow {
+  transform: rotateZ(0deg);
+}
+
+.footer-accordion:first-child {
+  .footer-accordion__header-button {
+    border-top: 0;
+  }
+}
+
+.footer-accordion:last-child {
+  .footer-accordion__header-button {
+    border-bottom: 1px solid $color__global-tertiary-1;
+  }
+}

@@ -1,0 +1,34 @@
+.footer-info {
+  @include media-query__small {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+
+.footer-info__links {
+  @include typography($typo__links);
+  color: $color__text-secondary-gray;
+  display: flex;
+  flex-direction: column;
+  gap: $s-md;
+  @include media-query__small {
+    gap: $s-lg;
+    flex-direction: row;
+  }
+}
+
+.footer-info__icons {
+  display: flex;
+  gap: $s-lg;
+  margin-top: $s-2xl;
+  @include media-query__small {
+    margin-top: 0;
+  }
+}
+
+.footer-info__link {
+  text-decoration: none;
+  @include typography($typo__links);
+  padding-bottom: $s-md;
+}
