@@ -112,6 +112,7 @@ export const Header = (props: HeaderProps) => {
             <button
               className="header__menu-profile header__button"
               type="button"
+              aria-label="Open user menu"
             >
               {signedIn && haveNotification && (
                 <div className="header__notification bg-signal-alert" />
