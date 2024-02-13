@@ -46,7 +46,7 @@
   }
 }
 
-%link-tag {
+@mixin link-tag {
   @include typography($typo__body-placeholder);
 
   text-decoration: none;
@@ -70,6 +70,10 @@
     transform: scaleX(0);
     transform-origin: 100% 0;
   }
+}
+
+%link-tag {
+  @include link-tag;
 }
 
 %button-link {

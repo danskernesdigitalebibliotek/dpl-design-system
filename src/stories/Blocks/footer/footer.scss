@@ -16,18 +16,6 @@
 
     .footer__desktop {
       display: block;
-
-      // Grid / columns
-      .footer__column-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(263px, 1fr));
-        grid-gap: 82px;
-      }
-
-      .footer__column {
-        width: 263px;
-        height: auto;
-      }
     }
   }
 
@@ -47,92 +35,39 @@
   }
 }
 
-// Widgets
-.footer__widgets {
-  display: flex;
-  justify-content: space-between;
-}
-
-// Dropdown tweaks
-.footer .dropdown {
-  width: 82px;
-
-  .dropdown__select {
-    background-color: $color__global-secondary;
-    height: $s-xl;
-    padding: 0 12px;
-    min-width: 82px;
-  }
-
-  .dropdown__arrows {
-    height: $s-xl;
-    width: $s-xl;
+.footer__title {
+  @include typography($typo__h4);
+  @include media-query__small {
+    margin-bottom: $s-md;
   }
 }
 
-// Site info
-.footer__desktop .footer__site-info {
-  display: flex;
-  justify-content: space-between;
-}
+.footer__content {
+  @include typography($typo__body-placeholder);
 
-.footer__site-info-links {
-  display: flex;
+  a {
+    display: block;
+    text-decoration: none;
+  }
 
-  li {
-    padding-bottom: $s-md;
+  p {
+    margin-bottom: $s-md;
+  }
+
+  // Drupal adds a <p> tag around the <a> tag
+  // so we need to remove the margin-bottom
+  // to avoid spacing between the links
+  p:has(> a) {
+    margin-bottom: 0;
   }
 
   @include media-query__small {
-    li {
-      padding-bottom: 0;
-    }
-
     a {
-      padding-right: $s-lg;
-    }
-
-    a:last-child {
-      padding-right: 0;
+      @include link-tag;
     }
   }
 }
 
-.footer__site-info-icons {
-  display: flex;
-
-  a {
-    padding-right: $s-lg;
-  }
-}
-
-// Separator
-.footer__separator {
-  border-bottom: 1px solid $color__global-tertiary-1;
-  margin: $s-lg 0;
-}
-
-// Separator mobile tweaks
-.footer__mobile .footer__separator {
-  margin: $s-lg (-50px);
-}
-
-// Link tweaks
-.footer__column-link {
-  margin-top: $s-md;
-}
-
-.footer__site-info-link {
-  text-decoration: none;
-  @include typography($typo__links);
-}
-
-.footer__column-phone {
-  color: $color__text-primary-black;
-  text-decoration: none;
-}
-
-// Accordion mobile tweaks
-.footer__mobile .accordion {
-  margin: 0 -50px;
+.footer__content--hidden {
+  display: none;
 }

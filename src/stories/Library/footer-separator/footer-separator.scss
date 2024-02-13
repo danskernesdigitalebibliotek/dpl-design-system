@@ -1,0 +1,9 @@
+.footer-separator {
+  border-bottom: 1px solid $color__global-tertiary-1;
+  margin: $s-lg 0;
+}
+
+// Separator mobile tweaks
+.footer__mobile .footer-separator {
+  margin: $s-lg (-50px);
+}
