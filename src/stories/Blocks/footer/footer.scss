@@ -54,14 +54,16 @@
     margin-bottom: $s-md;
   }
 
-  &[hidden] {
-    display: none;
+  // Drupal adds a <p> tag around the <a> tag
+  // so we need to remove the margin-bottom
+  // to avoid spacing between the links
+  p:has(> a) {
+    margin-bottom: 0;
   }
 
   @include media-query__small {
     a {
       @include link-tag;
-      display: block;
     }
   }
 }

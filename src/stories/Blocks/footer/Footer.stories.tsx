@@ -18,76 +18,85 @@ export default {
         title: "Åbningstider",
         content: `
       <p>Bibliotekerne lorem ipsum consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
-      <a href="/">Se bibliotekernes åbningstider</a>
+      <p><a href="/">Se bibliotekernes åbningstider</a></p>
     `,
       },
       {
         title: "Om bibliotekerne",
         content: `
-      <a href="#">Brug af bibliotekerne</a>
-      <a href="#">Erstatninger og gebyrer</a>
-      <a href="#">Opret bruger</a>
-      <a href="#">Biblioteket - A til Å</a>
-      <a href="#">Internetadgang</a>
-      <a href="#">Print, scan og kopi</a>
-      <a href="#">Booking af lokaler</a>
-      <a href="#">Nyhedsbrev</a>
+      <p><a href="#">Brug af bibliotekerne</a></p>
+      <p><a href="#">Erstatninger og gebyrer</a></p>
+      <p><a href="#">Opret bruger</a></p>
+      <p><a href="#">Biblioteket - A til Å</a></p>
+      <p><a href="#">Internetadgang</a></p>
+      <p><a href="#">Print, scan og kopi</a></p>
+      <p><a href="#">Booking af lokaler</a></p>
+      <p><a href="#">Nyhedsbrev</a></p>
     `,
       },
       {
         title: "Online tilbud",
         content: `
-      <a href="#">Litteratursiden</a>
-      <a href="#">Bibliotek.dk</a>
-      <a href="#">eReolen</a>
-      <a href="#">Filmstriben</a>
+      <p><a href="#">Litteratursiden</a></p>
+      <p><a href="#">Bibliotek.dk</a></p>
+      <p><a href="#">eReolen</a></p>
+      <p><a href="#">Filmstriben</a></p>
     `,
       },
       {
         title: "Text",
         content: `
-      <a href="#">Lorem ipsum a la lorem ip</a>
-      <a href="#">Bibliotekerne lorem</a>
-      <a href="#">Labore ipsum</a>
-      <a href="#">Adipisci velit le lorem</a>
+      <p><a href="#">Lorem ipsum a la lorem ip</a></p>
+      <p><a href="#">Bibliotekerne lorem</a></p>
+      <p><a href="#">Labore ipsum</a></p>
+      <p><a href="#">Adipisci velit le lorem</a></p>
     `,
       },
       {
         title: "Text",
         content: `
-      <a href="#">Lorem ipsum a la lorem ip</a>
-      <a href="#">Bibliotekerne lorem</a>
-      <a href="#">Labore ipsum</a>
-      <a href="#">Adipisci velit le lorem</a>
+      <p><a href="#">Lorem ipsum a la lorem ip</a></p>
+      <p><a href="#">Bibliotekerne lorem</a></p>
+      <p><a href="#">Labore ipsum</a></p>
+      <p><a href="#">Adipisci velit le lorem</a></p>
     `,
       },
       {
         title: "Text",
         content: `
-      <a href="#">Lorem ipsum a la lorem ip</a>
-      <a href="#">Bibliotekerne lorem</a>
-      <a href="#">Labore ipsum</a>
-      <a href="#">Adipisci velit le lorem</a>
+      <p><a href="#">Lorem ipsum a la lorem ip</a></p>
+      <p><a href="#">Bibliotekerne lorem</a></p>
+      <p><a href="#">Labore ipsum</a></p>
+      <p><a href="#">Adipisci velit le lorem</a></p>
     `,
       },
       {
         title: "Text",
         content: `
-      <a href="#">Lorem ipsum a la lorem ip</a>
-      <a href="#">Bibliotekerne lorem</a>
-      <a href="#">Labore ipsum</a>
-      <a href="#">Adipisci velit le lorem</a>
+      <p><a href="#">Lorem ipsum a la lorem ip</a></p>
+      <p><a href="#">Bibliotekerne lorem</a></p>
+      <p><a href="#">Labore ipsum</a></p>
+      <p><a href="#">Adipisci velit le lorem</a></p>
     `,
       },
       {
         title: "Kontakt",
         content: `
-      <p>Lyngby-Taarbæk Bibliotekerne<br />
-      Lyngby Hovedgade 28<br />
-      2800 Kgs. Lyngby<br /><br />
-      <a href="tel:4545973700">+45 45 97 37 00</a><br />
-      Man - fre / Kl. 10-16</p>
-      <a href="/">info@ltk.dk</a>
+      <p>
+          Lyngby-Taarbæk Bibliotekerne<br>
+          Lyngby Hovedgade 28<br>
+          2800 Kgs. Lyngby
+      </p>
+      <p>
+          <a href="tel:4545973700">+45 45 97 37 00</a>
+      </p>
+      <p>
+          &nbsp;
+      </p>
+      <p>
+          Man - fre / Kl. 10-16<br>
+          <a href="/">info@ltk.dk</a>
+      </p>
     `,
       },
     ],
