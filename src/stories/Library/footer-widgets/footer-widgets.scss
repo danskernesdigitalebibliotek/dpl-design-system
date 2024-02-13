@@ -7,6 +7,11 @@
   }
 }
 
+// if there are no dropdowns, align the logo to the right
+.footer-widgets:not(:has(.dropdown)) {
+  justify-content: flex-end;
+}
+
 // Dropdown tweaks
 .footer-widgets .dropdown {
   width: 82px;
