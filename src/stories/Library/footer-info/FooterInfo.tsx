@@ -2,7 +2,7 @@ import { FC } from "react";
 
 export type FooterSocialMediaType = {
   href: string;
-  label: string;
+  alt: string;
   icon: string;
 };
 
@@ -33,10 +33,10 @@ const FooterInfo: FC<FooterInfoType> = ({
       </ul>
 
       <ul className="footer-info__icons">
-        {footerSocialMedia.map(({ href, label, icon }, i) => (
+        {footerSocialMedia.map(({ href, alt, icon }, i) => (
           <li key={i}>
             <a href={href} className="footer-info__icon">
-              <img src={icon} alt={label} />
+              <img src={icon} alt={alt} />
             </a>
           </li>
         ))}
