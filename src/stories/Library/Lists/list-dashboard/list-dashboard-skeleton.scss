@@ -1,0 +1,20 @@
+// We don't have any of these dimensions in variables, but we want to preserve
+// the skeleton components' dimensions the same as the actual components.
+.list-dashboard.ssc {
+  height: 72px;
+
+  @include media-query__small {
+    height: 88px;
+  }
+
+  & .ssc-circle {
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+
+    @include media-query__small {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}

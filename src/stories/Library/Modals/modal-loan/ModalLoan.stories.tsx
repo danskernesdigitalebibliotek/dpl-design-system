@@ -19,6 +19,16 @@ const Template: ComponentStory<typeof ModalLoan> = (args) => (
   <ModalLoan {...args} />
 );
 
+export const ModalLoanLoading = Template.bind({});
+ModalLoanLoading.args = {
+  title: "Afleveres 12. oktober 2021",
+  description: "Kan afleveres på alle Rudersdals biblioteker",
+  showExpired: true,
+  showModal: true,
+  buttonsUpTop: true,
+  isLoadingItems: true,
+};
+
 export const ModalLoanExpired = Template.bind({});
 ModalLoanExpired.args = {
   title: "Afleveres 12. oktober 2021",

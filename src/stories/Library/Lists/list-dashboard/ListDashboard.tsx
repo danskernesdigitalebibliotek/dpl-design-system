@@ -1,6 +1,7 @@
 import { StatusLabel, StatusLabelProps } from "../../status-label/StatusLabel";
 import { Number, NumberProps } from "../../number/Number";
 import { ReactComponent as ArrowSmallRight } from "../../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
+import ListDashboardItemSkeleton from "./ListDashboardItemSkeleton";
 
 export type ListDashboardProps = {
   title: string;
@@ -8,6 +9,7 @@ export type ListDashboardProps = {
   number: NumberProps;
   label: StatusLabelProps;
   showDot: boolean;
+  isSkeleton?: boolean;
 };
 
 export const ListDashboard: React.FC<ListDashboardProps> = ({
@@ -16,7 +18,12 @@ export const ListDashboard: React.FC<ListDashboardProps> = ({
   number,
   label,
   showDot,
+  isSkeleton,
 }) => {
+  if (isSkeleton) {
+    return <ListDashboardItemSkeleton />;
+  }
+
   return (
     <a
       href={href}

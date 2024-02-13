@@ -34,6 +34,10 @@ export default {
       control: "string",
       defaultValue: "/",
     },
+    isSkeleton: {
+      control: "boolean",
+      defaultValue: false,
+    },
   },
   parameters: {
     design: {
@@ -50,3 +54,8 @@ const Template: ComponentStory<typeof ListDashboard> = (args) => (
 );
 
 export const DashboardList = Template.bind({});
+
+export const SkeletonScreen = Template.bind({});
+SkeletonScreen.args = {
+  isSkeleton: true,
+};
