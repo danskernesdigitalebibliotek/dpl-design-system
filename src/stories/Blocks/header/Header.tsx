@@ -110,7 +110,7 @@ export const Header = (props: HeaderProps) => {
               </ul>
             </div>
             <button
-              className="header__menu-profile header__button"
+              className="header__menu-profile header__button btn-ui"
               type="button"
               aria-label="Open user menu"
             >
