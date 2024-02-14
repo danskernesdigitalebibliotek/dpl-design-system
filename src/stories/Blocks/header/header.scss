@@ -101,6 +101,7 @@
 .header__menu-bookmarked {
   position: relative;
   border-left: 1px solid $color__global-tertiary-1;
+  border-bottom: none;
 
   a {
     width: 100%;
