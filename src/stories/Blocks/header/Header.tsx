@@ -40,7 +40,6 @@ export const Header = (props: HeaderProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(openDropdown);
 
   useEffect(() => {
-    require("./header-toggle");
     require("./header-sticky");
     require("./header-state");
   }, []);
@@ -69,7 +68,6 @@ export const Header = (props: HeaderProps) => {
                   className="header__menu-navigation-button header__button"
                   compProps={{
                     id: "header__menu--open",
-                    onClick: () => window.eventHeader(),
                   }}
                 >
                   <img
@@ -161,33 +159,6 @@ export const Header = (props: HeaderProps) => {
           </div>
         </div>
       </header>
-      <div id="header__overlay" onClick={() => window.eventHeader()}>
-        <div className="header__overlay-main">
-          <img
-            id="header__menu--close"
-            src="icons/basic/icon-cross-medium.svg"
-          />
-          <ul className="header__overlay-menu">
-            {list.map((i) => (
-              <li className="header__overlay-menu-item">
-                <a
-                  href={i.href}
-                  className="header__overlay-menu-link text-body-large hide-linkstyle"
-                >
-                  {i.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="header__overlay-backdrop" />
-      </div>
     </>
   );
 };
-
-declare global {
-  interface Window {
-    eventHeader: () => void;
-  }
-}
