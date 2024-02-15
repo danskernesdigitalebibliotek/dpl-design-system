@@ -17,9 +17,9 @@ const EventListItemStacked: FC<EventListItemStackedProps> = ({
       href={href}
       className="event-list-item-stacked arrow__hover--right-small"
     >
-      <time className="event-list-item-stacked__schedule">
+      <time className="event-list-item-stacked__content">
         <span className="event-list-item-stacked__date">{date}</span>
-        <span className="event-list-item-stacked__schedule-detail">{time}</span>
+        <span className="event-list-item-stacked__time">{time}</span>
       </time>
       <ArrowSmallRight />
     </a>

@@ -1,9 +1,9 @@
 $_event-list-item--max-width: 1126px;
 $_event-list-item--image-width: 222px;
-$_event-list-item--grid-content--large: 1fr $s-2xl 100px;
-$_event-list-item--grid-columns--medium: $_event-list-item--image-width 1fr;
+$_event-list-item--grid-columns: $_event-list-item--image-width 1fr;
 $_event-list-item--grid-columns--large: $_event-list-item--image-width 1fr
   max-content;
+$_event-list-item--grid-content: 1fr $s-2xl 100px;
 $_stacked-reduce-width-medium: 20px;
 
 @mixin event-list-item-stacked-shadow-box {
@@ -135,11 +135,11 @@ $_stacked-reduce-width-medium: 20px;
   @include event-list-item-stacked-shadow-box;
 }
 
-.event-list-item-stacked__schedule {
+.event-list-item-stacked__content {
   @include typography($typo__small-caption);
   grid-area: contentStacked;
   display: grid;
-  grid-template-columns: $_event-list-item--grid-content--large;
+  grid-template-columns: $_event-list-item--grid-content;
   grid-template-areas: "dateStacked . timeStacked";
 }
 
@@ -147,7 +147,7 @@ $_stacked-reduce-width-medium: 20px;
   grid-area: dateStacked;
 }
 
-.event-list-item-stacked__schedule-detail {
+.event-list-item-stacked__time {
   grid-area: timeStacked;
   justify-self: end;
 }
@@ -159,13 +159,13 @@ $_stacked-reduce-width-medium: 20px;
 @include media-query__small {
   .event-list-item {
     grid-template-areas: "image content";
-    grid-template-columns: $_event-list-item--grid-columns--medium;
+    grid-template-columns: $_event-list-item--grid-columns;
     gap: $s-lg;
   }
 
   .event-list-item__content {
     grid-area: content;
-    grid-template-columns: $_event-list-item--grid-content--large;
+    grid-template-columns: $_event-list-item--grid-content;
     grid-template-areas:
       "tag . schedule"
       "date . schedule"
@@ -208,14 +208,14 @@ $_stacked-reduce-width-medium: 20px;
 
   .event-list-item-stacked {
     grid-template-areas: ". contentStacked";
-    grid-template-columns: $_event-list-item--grid-columns--medium;
+    grid-template-columns: $_event-list-item--grid-columns;
     gap: $s-lg;
 
     @include event-list-item-stacked-shadow-box;
   }
 
-  .event-list-item-stacked__schedule {
-    grid-template-columns: $_event-list-item--grid-content--large;
+  .event-list-item-stacked__content {
+    grid-template-columns: $_event-list-item--grid-content;
     grid-template-areas: "dateStacked . timeStacked";
   }
 }
@@ -242,12 +242,12 @@ $_stacked-reduce-width-medium: 20px;
     @include event-list-item-stacked-shadow-box;
   }
 
-  .event-list-item-stacked__schedule {
-    grid-template-columns: $_event-list-item--grid-content--large;
+  .event-list-item-stacked__content {
+    grid-template-columns: $_event-list-item--grid-content;
     grid-template-areas: "dateStacked . timeStacked";
   }
 
-  .event-list-item-stacked__schedule-detail {
+  .event-list-item-stacked__time {
     justify-self: start;
   }
 
