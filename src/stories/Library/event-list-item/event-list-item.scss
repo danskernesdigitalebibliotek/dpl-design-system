@@ -26,7 +26,8 @@ $_stacked-reduce-width-medium: 20px;
   @include layout-container($block-max-width__large);
   text-decoration: none;
   display: grid;
-  padding: $s-lg;
+  padding-top: $s-lg;
+  padding-bottom: $s-lg;
   background-color: $color__global-white;
   margin: 0 auto;
   grid-template-areas:
@@ -127,7 +128,8 @@ $_stacked-reduce-width-medium: 20px;
 .event-list-item-stacked {
   @include show-svg-on-hover();
   @include layout-container($block-max-width__large);
-  padding: $s-sm $s-lg;
+  padding-top: $s-sm;
+  padding-bottom: $s-sm;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "contentStacked";
