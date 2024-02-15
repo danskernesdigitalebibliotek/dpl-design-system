@@ -138,7 +138,7 @@ $_stacked-reduce-width-medium: 20px;
 }
 
 .event-list-item-stacked__content {
-  @include typography($typo__small-caption);
+  @include typography($typo__body-placeholder);
   grid-area: contentStacked;
   display: grid;
   grid-template-columns: $_event-list-item--grid-content;
