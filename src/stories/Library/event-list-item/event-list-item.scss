@@ -1,13 +1,13 @@
 $_event-list-item--max-width: 1126px;
 $_event-list-item--image-width: 222px;
-$_stacked-reduce-width-medium: 20px;
+$_stacked-reduce-width: 20px;
 
 @mixin event-list-item-stacked-shadow-box {
   position: relative;
   &::before {
     content: "";
     position: absolute;
-    width: calc(100% - $_stacked-reduce-width-medium);
+    width: calc(100% - $_stacked-reduce-width);
     height: 100%;
     left: 50%;
     top: 0;
@@ -255,6 +255,6 @@ $_stacked-reduce-width-medium: 20px;
   }
 
   .event-list-item-stacked > svg {
-    transform: translateX(-#{calc($_stacked-reduce-width-medium / 2)});
+    transform: translateX(-#{calc($_stacked-reduce-width / 2)});
   }
 }
