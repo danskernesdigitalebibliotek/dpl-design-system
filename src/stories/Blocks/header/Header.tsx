@@ -4,6 +4,7 @@ import MenuItemList from "../../Library/header-menu-list/HeaderMenuList";
 import { menuItems } from "../../Library/header-menu-list/HeaderMenuListData";
 
 import Pagefold from "../../Library/pagefold/Pagefold";
+import HeaderSidebarNav from "../../Library/header-sidebar-nav/header-sidebar-nav";
 
 export type HeaderProps = {
   signedIn: boolean;
@@ -42,7 +43,10 @@ export const Header = (props: HeaderProps) => {
         </div>
 
         <div className="header__menu">
-          <nav className="header__menu-first">
+          <nav
+            className="header__menu-first"
+            aria-label="Primary site navigation"
+          >
             <div>
               <div className="header__menu-navigation-mobile">
                 <Pagefold
@@ -51,13 +55,14 @@ export const Header = (props: HeaderProps) => {
                   size="small"
                   className="header__menu-navigation-button header__button"
                   compProps={{
-                    id: "header__menu--open",
+                    id: "header-sidebar-nav__toggle",
+                    "aria-controls": "sidebarNav",
+                    "aria-expanded": "false",
+                    role: "button",
+                    tabIndex: 0,
                   }}
                 >
-                  <img
-                    src="icons/basic/icon-menu.svg"
-                    alt="List of bookmarks"
-                  />
+                  <img src="icons/basic/icon-menu.svg" alt="Open menu" />
                 </Pagefold>
                 <div className="header__menu-navigation-logo">
                   <Logo
@@ -132,6 +137,7 @@ export const Header = (props: HeaderProps) => {
           </div>
         </div>
       </header>
+      <HeaderSidebarNav menuLinks={menuItems} />
     </>
   );
 };
