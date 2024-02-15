@@ -1,8 +1,12 @@
 $_event-list-item--max-width: 1126px;
 $_event-list-item--image-width: 222px;
+$_event-list-item--grid-content--large: 1fr $s-2xl 100px;
+$_event-list-item--grid-columns--large: $_event-list-item--image-width 1fr
+  max-content;
 
 .event-list-item {
   @include show-svg-on-hover();
+  @include layout-container($block-max-width__large);
   text-decoration: none;
   display: grid;
   padding: $s-lg;
@@ -13,7 +17,6 @@ $_event-list-item--image-width: 222px;
     "content";
   grid-template-rows: auto;
   gap: $s-md;
-  @include layout-container($block-max-width__large);
 
   // Extending display none, as mixin show-svg-on-hover
   // is only working up to __small breakpoint
@@ -110,13 +113,13 @@ $_event-list-item--image-width: 222px;
 
   .event-list-item__content {
     grid-area: content;
-    grid-template-columns: 1fr 1fr $s-2xl max-content;
+    grid-template-columns: $_event-list-item--grid-content--large;
     grid-template-areas:
-      "tag tag . schedule"
-      "date date . schedule"
-      "title title . schedule"
-      "description description . schedule"
-      "location location . schedule";
+      "tag . schedule"
+      "date . schedule"
+      "title . schedule"
+      "description . schedule"
+      "location . schedule";
   }
 
   .event-list-item__image-container {
@@ -155,7 +158,7 @@ $_event-list-item--image-width: 222px;
 @include media-query__medium {
   .event-list-item {
     grid-template-areas: "image content arrow";
-    grid-template-columns: auto 1fr max-content;
+    grid-template-columns: $_event-list-item--grid-columns--large;
     gap: $s-2xl;
   }
 
@@ -165,5 +168,50 @@ $_event-list-item--image-width: 222px;
 
   .event-list-item > svg {
     grid-area: arrow;
+  }
+
+  $_stacked-reduce-width-medium: 80px;
+  .event-list-item-stacked {
+    @include show-svg-on-hover();
+    @include layout-container($block-max-width__large);
+    padding: $s-xs $s-lg;
+    display: grid;
+    align-items: center;
+    gap: $s-2xl;
+    grid-template-columns: $_event-list-item--grid-columns--large;
+    grid-template-areas: ". content arrow";
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: calc(100% - $_stacked-reduce-width-medium);
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      z-index: -1;
+      box-shadow: 0 $s-xs 20px rgb(72 72 72 / 10%); // should this be a variable?s
+    }
+  }
+
+  .event-list-item-stacked__schedule {
+    @include typography($typo__small-caption);
+    grid-area: content;
+    display: grid;
+    grid-template-columns: $_event-list-item--grid-content--large;
+    grid-template-areas: "date . time";
+  }
+
+  .event-list-item-stacked__date {
+    grid-area: date;
+  }
+
+  .event-list-item-stacked__schedule-detail {
+    grid-area: time;
+  }
+
+  .event-list-item-stacked > svg {
+    grid-area: arrow;
+    transform: translateX(-#{calc($_stacked-reduce-width-medium / 2)});
   }
 }
