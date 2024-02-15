@@ -109,21 +109,19 @@ export const Header = (props: HeaderProps) => {
                 ))}
               </ul>
             </div>
-            <div className="header__menu-profile header__button">
-              <a
-                href="/"
-                className="hide-linkstyle"
-                aria-label="user profile link"
-              >
-                {signedIn && haveNotification && (
-                  <div className="header__notification bg-signal-alert" />
-                )}
-                <ProfileIcon />
-                {signedIn && (
-                  <span className="text-small-caption">{username}</span>
-                )}
-              </a>
-            </div>
+            <button
+              className="header__menu-profile header__button btn-ui"
+              type="button"
+              aria-label="Open user menu"
+            >
+              {signedIn && haveNotification && (
+                <div className="header__notification bg-signal-alert" />
+              )}
+              <ProfileIcon />
+              {signedIn && (
+                <span className="text-small-caption">{username}</span>
+              )}
+            </button>
             <div className="header__menu-bookmarked header__button">
               <a href="/" aria-label="go to your favorites list">
                 <HeartIcon />
