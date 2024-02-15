@@ -1,6 +1,6 @@
 .nav-teaser {
   @include typography($typo__body-placeholder);
-  color: #000;
+  color: $color__global-black;
 
   display: block;
   width: 100%;
