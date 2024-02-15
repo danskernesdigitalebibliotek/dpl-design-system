@@ -1,9 +1,5 @@
 $_event-list-item--max-width: 1126px;
 $_event-list-item--image-width: 222px;
-$_event-list-item--grid-columns: $_event-list-item--image-width 1fr;
-$_event-list-item--grid-columns--large: $_event-list-item--image-width 1fr
-  max-content;
-$_event-list-item--grid-content: 1fr $s-2xl 100px;
 $_stacked-reduce-width-medium: 20px;
 
 @mixin event-list-item-stacked-shadow-box {
@@ -28,18 +24,20 @@ $_stacked-reduce-width-medium: 20px;
   grid-template-columns: 1fr;
 
   @include media-query__small {
-    grid-template-columns: $_event-list-item--grid-columns;
+    grid-template-columns: $_event-list-item--image-width 1fr;
     gap: $s-lg;
   }
   @include media-query__medium {
-    grid-template-columns: $_event-list-item--grid-columns--large;
+    grid-template-columns:
+      $_event-list-item--image-width 1fr
+      max-content;
     gap: $s-2xl;
   }
 }
 
 @mixin event-content-layout {
   display: grid;
-  grid-template-columns: $_event-list-item--grid-content;
+  grid-template-columns: 1fr $s-2xl 100px;
 }
 
 .event-list-item {
