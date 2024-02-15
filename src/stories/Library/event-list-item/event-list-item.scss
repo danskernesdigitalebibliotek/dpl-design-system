@@ -127,15 +127,20 @@ $_stacked-reduce-width-medium: 20px;
 .event-list-item-stacked {
   @include show-svg-on-hover();
   @include layout-container($block-max-width__large);
-  padding: $s-xs $s-lg;
+  padding: $s-sm $s-lg;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "contentStacked";
   align-items: center;
+  @include event-list-item-stacked-shadow-box;
 }
 
 .event-list-item-stacked__schedule {
   @include typography($typo__small-caption);
-  display: grid;
   grid-area: contentStacked;
+  display: grid;
+  grid-template-columns: $_event-list-item--grid-content--large;
+  grid-template-areas: "dateStacked . timeStacked";
 }
 
 .event-list-item-stacked__date {
@@ -144,6 +149,7 @@ $_stacked-reduce-width-medium: 20px;
 
 .event-list-item-stacked__schedule-detail {
   grid-area: timeStacked;
+  justify-self: end;
 }
 
 .event-list-item-stacked > svg {
@@ -212,10 +218,6 @@ $_stacked-reduce-width-medium: 20px;
     grid-template-columns: $_event-list-item--grid-content--large;
     grid-template-areas: "dateStacked . timeStacked";
   }
-
-  .event-list-item-stacked__schedule-detail {
-    justify-self: end;
-  }
 }
 
 @include media-query__medium {
@@ -234,7 +236,6 @@ $_stacked-reduce-width-medium: 20px;
   }
 
   .event-list-item-stacked {
-    padding: $s-xs $s-lg;
     gap: $s-2xl;
     grid-template-columns: $_event-list-item--grid-columns--large;
     grid-template-areas: ". contentStacked arrowStacked";
