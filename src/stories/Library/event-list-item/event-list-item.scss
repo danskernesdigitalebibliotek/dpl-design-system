@@ -1,8 +1,25 @@
 $_event-list-item--max-width: 1126px;
 $_event-list-item--image-width: 222px;
 $_event-list-item--grid-content--large: 1fr $s-2xl 100px;
+$_event-list-item--grid-columns--medium: $_event-list-item--image-width 1fr;
 $_event-list-item--grid-columns--large: $_event-list-item--image-width 1fr
   max-content;
+$_stacked-reduce-width-medium: 20px;
+
+@mixin event-list-item-stacked-shadow-box {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - $_stacked-reduce-width-medium);
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+    box-shadow: 0 $s-xs 20px rgb(72 72 72 / 50%); // should this be a variable?s
+  }
+}
 
 .event-list-item {
   @include show-svg-on-hover();
@@ -17,7 +34,10 @@ $_event-list-item--grid-columns--large: $_event-list-item--image-width 1fr
     "content";
   grid-template-rows: auto;
   gap: $s-md;
+}
 
+.event-list-item,
+.event-list-item-stacked {
   // Extending display none, as mixin show-svg-on-hover
   // is only working up to __small breakpoint
   @include media-query__medium("max-width") {
@@ -104,10 +124,36 @@ $_event-list-item--grid-columns--large: $_event-list-item--image-width 1fr
   @include typography($typo__body-placeholder);
 }
 
+.event-list-item-stacked {
+  @include show-svg-on-hover();
+  @include layout-container($block-max-width__large);
+  padding: $s-xs $s-lg;
+  display: grid;
+  align-items: center;
+}
+
+.event-list-item-stacked__schedule {
+  @include typography($typo__small-caption);
+  display: grid;
+  grid-area: contentStacked;
+}
+
+.event-list-item-stacked__date {
+  grid-area: dateStacked;
+}
+
+.event-list-item-stacked__schedule-detail {
+  grid-area: timeStacked;
+}
+
+.event-list-item-stacked > svg {
+  grid-area: arrowStacked;
+}
+
 @include media-query__small {
   .event-list-item {
     grid-template-areas: "image content";
-    grid-template-columns: auto 1fr;
+    grid-template-columns: $_event-list-item--grid-columns--medium;
     gap: $s-lg;
   }
 
@@ -153,6 +199,23 @@ $_event-list-item--grid-columns--large: $_event-list-item--image-width 1fr
     grid-row: 3 / span 3;
     justify-content: unset;
   }
+
+  .event-list-item-stacked {
+    grid-template-areas: ". contentStacked";
+    grid-template-columns: $_event-list-item--grid-columns--medium;
+    gap: $s-lg;
+
+    @include event-list-item-stacked-shadow-box;
+  }
+
+  .event-list-item-stacked__schedule {
+    grid-template-columns: $_event-list-item--grid-content--large;
+    grid-template-areas: "dateStacked . timeStacked";
+  }
+
+  .event-list-item-stacked__schedule-detail {
+    justify-self: end;
+  }
 }
 
 @include media-query__medium {
@@ -170,48 +233,24 @@ $_event-list-item--grid-columns--large: $_event-list-item--image-width 1fr
     grid-area: arrow;
   }
 
-  $_stacked-reduce-width-medium: 80px;
   .event-list-item-stacked {
-    @include show-svg-on-hover();
-    @include layout-container($block-max-width__large);
     padding: $s-xs $s-lg;
-    display: grid;
-    align-items: center;
     gap: $s-2xl;
     grid-template-columns: $_event-list-item--grid-columns--large;
-    grid-template-areas: ". content arrow";
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      width: calc(100% - $_stacked-reduce-width-medium);
-      height: 100%;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      z-index: -1;
-      box-shadow: 0 $s-xs 20px rgb(72 72 72 / 10%); // should this be a variable?s
-    }
+    grid-template-areas: ". contentStacked arrowStacked";
+    @include event-list-item-stacked-shadow-box;
   }
 
   .event-list-item-stacked__schedule {
-    @include typography($typo__small-caption);
-    grid-area: content;
-    display: grid;
     grid-template-columns: $_event-list-item--grid-content--large;
-    grid-template-areas: "date . time";
-  }
-
-  .event-list-item-stacked__date {
-    grid-area: date;
+    grid-template-areas: "dateStacked . timeStacked";
   }
 
   .event-list-item-stacked__schedule-detail {
-    grid-area: time;
+    justify-self: start;
   }
 
   .event-list-item-stacked > svg {
-    grid-area: arrow;
     transform: translateX(-#{calc($_stacked-reduce-width-medium / 2)});
   }
 }
