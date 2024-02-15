@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import Logo from "../../Library/logo/Logo";
+import MenuItemList from "../../Library/header-menu-list/HeaderMenuList";
+import { menuItems } from "../../Library/header-menu-list/HeaderMenuListData";
+
 import Pagefold from "../../Library/pagefold/Pagefold";
 
 export type HeaderProps = {
@@ -9,25 +12,6 @@ export type HeaderProps = {
   inputPlaceholder: string;
   openDropdown: boolean;
 };
-
-const list = [
-  {
-    title: "Det sker",
-    href: "/",
-  },
-  {
-    title: "Biblioteker & åbningstider",
-    href: "/",
-  },
-  {
-    title: "Digitale tilbud",
-    href: "/",
-  },
-  {
-    title: "Litteratur",
-    href: "/",
-  },
-];
 
 export const Header = (props: HeaderProps) => {
   const {
@@ -83,18 +67,7 @@ export const Header = (props: HeaderProps) => {
                   />
                 </div>
               </div>
-              <ul className="header__menu-navigation">
-                {list.map((i) => (
-                  <li className="header__menu-navigation-item">
-                    <a
-                      href={i.href}
-                      className="header__menu-navigation-link  hide-linkstyle"
-                    >
-                      {i.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <MenuItemList menuItems={menuItems} />
             </div>
             <div className="header__menu-profile header__button">
               <a href="/" className="hide-linkstyle">
