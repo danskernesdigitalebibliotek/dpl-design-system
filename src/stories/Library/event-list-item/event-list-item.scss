@@ -1,8 +1,8 @@
-$_event-list-item--max-width: 1126px;
-$_event-list-item--image-width: 222px;
-$_stacked-reduce-width: 20px;
-$_event-list-item--image-height: 166px;
 $_desktop-content-rows: 5;
+$_event-list-item--image-height: 166px;
+$_event-list-item--image-width: 222px;
+$_event-list-item--max-width: 1126px;
+$_stacked-reduce-width: 20px;
 
 @mixin event-list-item-stacked-shadow-box {
   position: relative;
