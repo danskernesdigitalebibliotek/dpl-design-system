@@ -38,7 +38,7 @@ $_stacked-reduce-width: 20px;
 
 @mixin event-content-layout {
   display: grid;
-  grid-template-columns: 1fr $s-2xl 100px;
+  grid-template-columns: 1fr $s-2xl 120px;
 }
 
 .event-list-item {
