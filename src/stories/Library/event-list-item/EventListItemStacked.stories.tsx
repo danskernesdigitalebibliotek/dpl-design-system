@@ -7,13 +7,13 @@ export default {
   component: EventListItemStacked,
   decorators: [withDesign],
   argTypes: {
-    date: {
-      defaultValue: "25 Feb 2023",
-      control: { type: "text" },
-    },
-    time: {
-      defaultValue: "19:30 - 21:00",
-      control: { type: "text" },
+    schedule: {
+      defaultValue: [
+        { date: "01 Feb 2023", time: "19:30 - 21:00" }, // This will be ignored since the date will be displayed in an EventListItem.
+        { date: "05 Feb 2023", time: "19:30 - 21:00" },
+        { date: "15 Feb 2023", time: "19:30 - 21:00" },
+      ],
+      control: { type: "object" },
     },
     href: {
       defaultValue: "/",

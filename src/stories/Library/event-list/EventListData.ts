@@ -7,11 +7,10 @@ const eventListData: EventListItemProps[] = [
     tagText: "Foredrag",
     title: "Kunst og kultur i middelalderen",
     description: "En dybdegående analyse af kunst og kultur i middelalderen.",
-    date: "10 Mar 2023",
-    time: "15:00 - 17:00",
     location: "Kulturhuset",
     price: "50 - 100 KR",
     href: "/",
+    schedule: [{ date: "10 Mar 2023", time: "15:00 - 17:00" }],
   },
 
   {
@@ -20,11 +19,16 @@ const eventListData: EventListItemProps[] = [
     tagText: "Kunst",
     title: "Historien om jazz",
     description: "Oplev jazzens rejse gennem tiderne.",
-    date: "05 May 2023",
-    time: "20:00 - 22:00",
     location: "Jazzklubben",
     price: "90 KR",
     href: "/",
+    schedule: [
+      { date: "05 May 2023", time: "20:00 - 22:00" },
+      { date: "10 May 2023", time: "20:00 - 22:00" },
+      { date: "15 May 2023", time: "20:00 - 22:00" },
+      { date: "20 May 2023", time: "20:00 - 22:00" },
+      { date: "25 May 2023", time: "20:00 - 22:00" },
+    ],
   },
   {
     image:
@@ -32,11 +36,11 @@ const eventListData: EventListItemProps[] = [
     tagText: "Liteeratur og poesi",
     title: "Moderne litteratur workshop",
     description: "Workshop om moderne litteratur og dens indflydelse.",
-    date: "18 Apr 2023",
-    time: "18:00 - 20:00",
+
     location: "Litteraturhuset",
     price: "Gratis - 200 KR",
     href: "/",
+    schedule: [{ date: "18 Apr 2023", time: "18:00 - 20:00" }],
   },
   {
     image:
@@ -44,11 +48,10 @@ const eventListData: EventListItemProps[] = [
     tagText: "Filosofi",
     title: "Filosofi i det 21. århundrede",
     description: "En samtale om moderne filosofiske strømninger.",
-    date: "23 Jun 2023",
-    time: "14:00 - 16:00",
     location: "Filosofisk Forum",
     price: "60 KR",
     href: "/",
+    schedule: [{ date: "23 Jun 2023", time: "14:00 - 16:00" }],
   },
 ];
 

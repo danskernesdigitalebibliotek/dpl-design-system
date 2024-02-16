@@ -11,21 +11,19 @@ type EventListProps = {
 const EventList: React.FC<EventListProps> = ({ events }) => {
   return (
     <ul className="event-list">
-      {events.map((event, index) => (
-        <li key={index} className="event-list__item">
-          <EventListItem {...event} />
-          <EventListItemStacked
-            href={event.href}
-            date={event.date}
-            time={event.time}
-          />
-          <EventListItemStacked
-            href={event.href}
-            date={event.date}
-            time={event.time}
-          />
-        </li>
-      ))}
+      {events.map((event, index) => {
+        return (
+          <li key={index} className="event-list__item">
+            <EventListItem {...event} />
+            {event.schedule.length > 1 && (
+              <EventListItemStacked
+                schedule={event.schedule}
+                href={event.href}
+              />
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 };
