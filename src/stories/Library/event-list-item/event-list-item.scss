@@ -91,7 +91,6 @@ $_stacked-reduce-width: 20px;
     "title title title"
     "description description description"
     "location schedule schedule";
-  // row-gap: $s-sm;
   @include typography($typo__small-caption);
 }
 
@@ -142,7 +141,6 @@ $_stacked-reduce-width: 20px;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  // row-gap: 8px;
   @include typography($typo__body-placeholder);
 }
 
@@ -189,7 +187,6 @@ $_stacked-reduce-width: 20px;
       "title . schedule"
       "description . schedule"
       "location . schedule";
-    // grid-gap: unset;
     grid-template-rows: repeat(
       $_desktop-content-rows,
       minmax(
