@@ -65,21 +65,6 @@
   border-right: 1px solid $color__global-tertiary-1;
 }
 
-.header__menu-navigation-item:hover {
-  border-top: 1px solid transparent; // to prevent jumping
-  border-bottom: 1px solid $color__global-black;
-}
-
-.header__menu-navigation-link {
-  @include typography($typo__desktop-menu-item);
-
-  padding: 0 12px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  color: $color__text-primary-black;
-}
-
 .header__menu-profile,
 .header__menu-bookmarked {
   position: relative;
@@ -228,50 +213,6 @@
   }
 }
 
-// The kebab casing conflicts with our naming convention.
-#header__overlay.visible {
-  /* stylelint-disable-line */
-  display: grid;
-}
-
-// The kebab casing conflicts with our naming convention.
-#header__overlay {
-  /* stylelint-disable-line */
-  display: none;
-  z-index: $z-20;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  grid-template-columns: 384px 1fr;
-}
-
-.header__overlay-main {
-  background-color: $color__global-primary;
-}
-
-.header__overlay-backdrop {
-  background-color: $color__global-black;
-  opacity: 0.6;
-}
-
-.header__overlay-menu {
-  margin-top: 96px;
-  margin-left: 56px;
-}
-
-.header__overlay-menu-item {
-  margin-bottom: $s-sm;
-}
-
-// The kebab casing conflicts with our naming convention.
-#header__menu--close {
-  /* stylelint-disable-line */
-  position: fixed;
-  padding: 30px;
-}
-
 // has-burger-menu is added dynamically using JS, by calculating if there
 // is enough space to show the desktop menu, and otherwise enabling the
 // burger menu. @see header-state.js
@@ -299,4 +240,8 @@
   .header__menu-navigation-mobile {
     display: flex;
   }
+}
+
+#header-sidebar-nav__toggle {
+  cursor: pointer;
 }
