@@ -6,6 +6,7 @@ $_stacked-reduce-width: 20px;
   position: relative;
   &::before {
     content: "";
+    background-color: $color__global-white;
     position: absolute;
     width: calc(100% - $_stacked-reduce-width);
     height: 100%;
@@ -13,7 +14,7 @@ $_stacked-reduce-width: 20px;
     top: 0;
     transform: translateX(-50%);
     z-index: -1;
-    box-shadow: 0 $s-xs 20px rgb(72 72 72 / 50%); // should this be a variable?s
+    box-shadow: inset 0 15px 15px -10px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -147,7 +148,6 @@ $_stacked-reduce-width: 20px;
   @include event-list-item-stacked-shadow-box;
   padding-top: $s-sm;
   padding-bottom: $s-sm;
-
   grid-template-areas: "contentStacked";
   align-items: center;
 }
