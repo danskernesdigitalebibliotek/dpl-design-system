@@ -7,3 +7,7 @@
   list-style: none;
   margin-bottom: $s-md;
 }
+
+.event-list__item--stacked {
+  margin-top: -$s-md;
+}

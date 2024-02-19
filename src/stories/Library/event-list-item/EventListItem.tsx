@@ -2,6 +2,7 @@ import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-
 import Tag from "../tag/Tag";
 
 export type EventListItemProps = {
+  eventSeriesId: string;
   image: string;
   tagText: string;
   title: string;
