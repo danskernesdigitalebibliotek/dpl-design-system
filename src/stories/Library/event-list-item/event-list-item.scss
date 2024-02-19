@@ -23,6 +23,7 @@ $_stacked-reduce-width: 20px;
 @mixin event-layout {
   @include show-svg-on-hover();
   @include layout-container($block-max-width__large);
+  text-decoration: none;
   display: grid;
   grid-template-columns: 1fr;
 
@@ -45,7 +46,6 @@ $_stacked-reduce-width: 20px;
 
 .event-list-item {
   @include event-layout;
-  text-decoration: none;
   padding-top: $s-lg;
   padding-bottom: $s-lg;
   background-color: $color__global-white;
