@@ -23,8 +23,8 @@ function swiperWrapperEventInit(swiperWrapper) {
     let sideMargins = 0;
 
     // Finding all previous siblings.
-    while (currentSibling.previousSibling) {
-      currentSibling = currentSibling.previousSibling;
+    while (currentSibling.previousElementSibling) {
+      currentSibling = currentSibling.previousElementSibling;
 
       // Offset width only gives us the 'inner' width. We also need to get
       // the side margins.
@@ -34,6 +34,10 @@ function swiperWrapperEventInit(swiperWrapper) {
 
       // Set a new translate width, used in transform.
       translateWidth -= currentSibling.offsetWidth + sideMargins;
+    }
+
+    if (translateWidth === 0) {
+      return;
     }
 
     // Calculate a new translate value, for pulling the slider.
