@@ -93,6 +93,17 @@
   }
 }
 
+%identity-placeholder-text {
+  @include typography($typo__card-placeholder--medium);
+  @extend %identity-placeholder-inner-padding;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+
+  align-items: end;
+  color: $color__text-primary-white;
+}
+
 %default-focus-visible {
   &:focus-visible {
     outline: 2px solid $color__text-primary-black;

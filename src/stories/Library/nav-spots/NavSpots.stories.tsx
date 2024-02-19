@@ -15,6 +15,14 @@ const teaser = (
   />
 );
 
+const teaserNoImage = (
+  <NavSpot
+    title="Digital læselyst"
+    subtitle="Find inspiration, tips og værktøjer til hvordan dit barn kommer videre med læsningen."
+    placeholderText="Mangler billede"
+  />
+);
+
 export default {
   title: "Library / Nav spots (Navigationsmodul)",
   component: NavSpots,
@@ -44,10 +52,22 @@ Many.args = {
   items: [teaser, teaser],
 };
 
+const ManyNoImage = Template.bind({});
+
+ManyNoImage.args = {
+  items: [teaserNoImage, teaserNoImage],
+};
+
 const Single = Template.bind({});
 
 Single.args = {
   items: [teaser],
 };
 
-export { Many, Single };
+const SingleNoImage = Template.bind({});
+
+SingleNoImage.args = {
+  items: [teaserNoImage],
+};
+
+export { Many, ManyNoImage, Single, SingleNoImage };
