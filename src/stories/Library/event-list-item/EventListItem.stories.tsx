@@ -27,7 +27,7 @@ export default {
       control: { type: "text" },
     },
     date: {
-      defaultValue: "2023-02-25",
+      defaultValue: "25 Feb 2023",
       control: { type: "text" },
     },
     time: {
