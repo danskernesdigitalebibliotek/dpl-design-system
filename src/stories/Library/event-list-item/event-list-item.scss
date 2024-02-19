@@ -15,12 +15,11 @@ $_stacked-reduce-width: 20px;
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    z-index: -1;
-    box-shadow: inset 0 15px 15px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.1);
   }
 }
 
-@mixin event-layout {
+@mixin event-list-item-grid {
   @include show-svg-on-hover();
   @include layout-container($block-max-width__large);
   text-decoration: none;
@@ -39,13 +38,13 @@ $_stacked-reduce-width: 20px;
   }
 }
 
-@mixin event-content-layout {
+@mixin event-list-item-content-grid {
   display: grid;
   grid-template-columns: 1fr $s-2xl 120px;
 }
 
 .event-list-item {
-  @include event-layout;
+  @include event-list-item-grid;
   padding-top: $s-lg;
   padding-bottom: $s-lg;
   background-color: $color__global-white;
@@ -145,7 +144,7 @@ $_stacked-reduce-width: 20px;
 }
 
 .event-list-item-stacked {
-  @include event-layout;
+  @include event-list-item-grid;
   @include event-list-item-stacked-shadow-box;
   padding-top: $s-sm;
   padding-bottom: $s-sm;
@@ -154,8 +153,9 @@ $_stacked-reduce-width: 20px;
 }
 
 .event-list-item-stacked__content {
-  @include typography($typo__body-placeholder);
-  @include event-content-layout;
+  @include typography($typo__small-caption);
+  @include event-list-item-content-grid;
+  z-index: $z-10;
   grid-area: contentStacked;
   grid-template-areas: "dateStacked . timeStacked";
 }
@@ -170,6 +170,7 @@ $_stacked-reduce-width: 20px;
 }
 
 .event-list-item-stacked > svg {
+  z-index: $z-10;
   grid-area: arrowStacked;
 }
 
@@ -179,7 +180,7 @@ $_stacked-reduce-width: 20px;
   }
 
   .event-list-item__content {
-    @include event-content-layout;
+    @include event-list-item-content-grid;
     grid-area: content;
     grid-template-areas:
       "tag . schedule"
