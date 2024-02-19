@@ -2,57 +2,145 @@ import { EventListItemProps } from "../event-list-item/EventListItem";
 
 const eventListData: EventListItemProps[] = [
   {
+    eventSeriesId: "a",
     image:
-      "https://plus.unsplash.com/premium_photo-1696886122527-e4303b76aa8f?q=80&w=5156&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
     tagText: "Foredrag",
     title: "Kunst og kultur i middelalderen",
-    description: "En dybdegående analyse af kunst og kultur i middelalderen.",
+    description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
     location: "Kulturhuset",
     price: "50 - 100 KR",
     href: "/",
-    schedule: [{ date: "10 Mar 2023", time: "15:00 - 17:00" }],
-  },
-
-  {
-    image:
-      "https://plus.unsplash.com/premium_photo-1696886122527-e4303b76aa8f?q=80&w=5156&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tagText: "Kunst",
-    title: "Historien om jazz",
-    description: "Oplev jazzens rejse gennem tiderne.",
-    location: "Jazzklubben",
-    price: "90 KR",
-    href: "/",
-    schedule: [
-      { date: "05 May 2023", time: "20:00 - 22:00" },
-      { date: "10 May 2023", time: "20:00 - 22:00" },
-      { date: "15 May 2023", time: "20:00 - 22:00" },
-      { date: "20 May 2023", time: "20:00 - 22:00" },
-      { date: "25 May 2023", time: "20:00 - 22:00" },
-    ],
+    date: "2023-01-10",
+    time: "15:00 - 17:00",
   },
   {
+    eventSeriesId: "b",
     image:
-      "https://plus.unsplash.com/premium_photo-1696886122527-e4303b76aa8f?q=80&w=5156&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tagText: "Liteeratur og poesi",
-    title: "Moderne litteratur workshop",
-    description: "Workshop om moderne litteratur og dens indflydelse.",
-
-    location: "Litteraturhuset",
-    price: "Gratis - 200 KR",
-    href: "/",
-    schedule: [{ date: "18 Apr 2023", time: "18:00 - 20:00" }],
-  },
-  {
-    image:
-      "https://plus.unsplash.com/premium_photo-1696886122527-e4303b76aa8f?q=80&w=5156&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tagText: "Filosofi",
-    title: "Filosofi i det 21. århundrede",
-    description: "En samtale om moderne filosofiske strømninger.",
-    location: "Filosofisk Forum",
+      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tagText: "arrangement",
+    title: "Fars Legesture",
+    description: "Kom forbi til hygge i fars legesture",
+    location: "Hovedeblibloteket",
     price: "60 KR",
     href: "/",
-    schedule: [{ date: "23 Jun 2023", time: "14:00 - 16:00" }],
+    date: "2023-01-12",
+    time: "18:00 - 20:00",
   },
-];
+  {
+    eventSeriesId: "b",
+    image:
+      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tagText: "arrangement",
+    title: "Fars Legesture",
+    description: "Kom forbi til hygge i fars legesture",
+    location: "Hovedeblibloteket",
+    price: "60 KR",
+    href: "/",
+    date: "2023-01-13",
+    time: "18:00 - 20:00",
+  },
+  {
+    eventSeriesId: "b",
+    image:
+      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tagText: "arrangement",
+    title: "Fars Legesture",
+    description: "Kom forbi til hygge i fars legesture",
+    location: "Hovedeblibloteket",
+    price: "60 KR",
+    href: "/",
+    date: "2023-01-14",
+    time: "18:00 - 20:00",
+  },
+  {
+    eventSeriesId: "b",
+    image:
+      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tagText: "arrangement",
+    title: "Fars Legesture",
+    description: "Kom forbi til hygge i fars legesture",
+    location: "Hovedeblibloteket",
+    price: "60 KR",
+    href: "/",
+    date: "2023-01-15",
+    time: "18:00 - 20:00",
+  },
+  {
+    eventSeriesId: "a",
+    image:
+      "https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+    tagText: "Foredrag",
+    title: "Kunst og kultur i middelalderen",
+    description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
+    location: "Kulturhuset",
+    price: "50 - 100 KR",
+    href: "/",
+    date: "2023-01-20",
+    time: "15:00 - 17:00",
+  },
+  {
+    eventSeriesId: "a",
+    image:
+      "https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+    tagText: "Foredrag",
+    title: "Kunst og kultur i middelalderen",
+    description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
+    location: "Kulturhuset",
+    price: "50 - 100 KR",
+    href: "/",
+    date: "2023-01-21",
+    time: "15:00 - 17:00",
+  },
+  {
+    eventSeriesId: "a",
+    image:
+      "https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+    tagText: "Foredrag",
+    title: "Kunst og kultur i middelalderen",
+    description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
+    location: "Kulturhuset",
+    price: "50 - 100 KR",
+    href: "/",
+    date: "2023-01-25",
+    time: "15:00 - 17:00",
+  },
+  {
+    eventSeriesId: "b",
+    image:
+      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tagText: "arrangement",
+    title: "Fars Legesture",
+    description: "Kom forbi til hygge i fars legesture",
+    location: "Hovedeblibloteket",
+    price: "60 KR",
+    href: "/",
+    date: "2023-01-30",
+    time: "18:00 - 20:00",
+  },
+]
+  .sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateA.getTime() - dateB.getTime();
+  })
+  .map((event) => {
+    const date = new Date(event.date);
+    const formattedDate = date.toLocaleDateString("da-DK", {
+      // weekday: "long",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+
+    return {
+      ...event,
+      date: formattedDate,
+    };
+  });
 
 export default eventListData;

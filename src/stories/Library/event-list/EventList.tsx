@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import {
   EventListItem,
   EventListItemProps,
@@ -12,14 +13,22 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
   return (
     <ul className="event-list">
       {events.map((event, index) => {
+        // Check if current event should be stacked with the previous one
+        const isStacked =
+          index > 0 &&
+          events[index].eventSeriesId === events[index - 1].eventSeriesId;
+
         return (
-          <li key={index} className="event-list__item">
-            <EventListItem {...event} />
-            {event.schedule.length > 1 && (
-              <EventListItemStacked
-                schedule={event.schedule}
-                href={event.href}
-              />
+          <li
+            key={index}
+            className={clsx("event-list__item", {
+              "event-list__item--stacked": isStacked,
+            })}
+          >
+            {isStacked ? (
+              <EventListItemStacked {...event} />
+            ) : (
+              <EventListItem {...event} />
             )}
           </li>
         );

@@ -1,17 +1,14 @@
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import Tag from "../tag/Tag";
 
-export type EventListItemScheduleType = {
-  date: string;
-  time: string;
-};
-
 export type EventListItemProps = {
+  eventSeriesId: string;
   image: string;
   tagText: string;
   title: string;
   description: string;
-  schedule: EventListItemScheduleType[];
+  date: string;
+  time: string;
   location: string;
   price: string;
   href: string;
@@ -22,7 +19,8 @@ export const EventListItem: React.FC<EventListItemProps> = ({
   tagText,
   title,
   description,
-  schedule,
+  date,
+  time,
   location,
   price,
   href,
@@ -42,7 +40,7 @@ export const EventListItem: React.FC<EventListItemProps> = ({
             {tagText}
           </Tag>
         )}
-        <div className="event-list-item__date">{schedule[0].date}</div>
+        <div className="event-list-item__date">{date}</div>
         <h2 className="event-list-item__title">{title}</h2>
         <div className="event-list-item__description">
           <p>{description}</p>
@@ -55,7 +53,7 @@ export const EventListItem: React.FC<EventListItemProps> = ({
             className="event-list-item__time"
             dateTime={placeholderDateTime}
           >
-            {schedule[0].time}
+            {time}
           </time>
           <p className="event-list-item__pricing">{price}</p>
         </div>

@@ -26,9 +26,13 @@ export default {
         "Demokrati betyder helt enkelt folkestyre og er en måde at fordele magten i fx et land",
       control: { type: "text" },
     },
-    schedule: {
-      defaultValue: [{ date: "25 Feb 2023", time: "19:30 - 21:00" }],
-      control: { type: "object" },
+    date: {
+      defaultValue: "2023-02-25",
+      control: { type: "text" },
+    },
+    time: {
+      defaultValue: "19:30 - 21:00",
+      control: { type: "text" },
     },
     location: {
       defaultValue: "Stadsbiblioteket",
