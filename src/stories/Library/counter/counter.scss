@@ -29,7 +29,10 @@
   font-weight: 500;
   line-height: 19px;
   text-align: center;
-  text-transform: capitalize;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 .counter__icon {
