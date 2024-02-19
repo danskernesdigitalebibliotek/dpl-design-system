@@ -7,6 +7,11 @@
 // calculate our own transform value, overwriting SwiperJS.
 function swiperWrapperEventInit(swiperWrapper) {
   swiperWrapper.addEventListener("focusin", () => {
+    // SwiperJS really wants to remove the tranisition duraton when not in use,
+    // but we still want it active when using keyboard tabbing.
+    // eslint-disable-next-line no-param-reassign
+    swiperWrapper.style.transitionDuration = "300ms";
+
     const activeSlide = swiperWrapper.querySelector(".swiper-slide-active");
 
     if (!activeSlide) {
@@ -41,6 +46,18 @@ function swiperWrapperEventInit(swiperWrapper) {
   });
 }
 
+// We want to make the controls not controllable by keyboard, as it quickly
+// becomes a confusing experience, when the active-slide is not what you get to
+// when you tab along.
+function disableKeyboardNavigation(swiper) {
+  const controls = swiper.el.querySelectorAll(".swiper-next, .swiper-prev");
+
+  controls.forEach((control) => {
+    // eslint-disable-next-line no-param-reassign
+    control.tabIndex = -1;
+  });
+}
+
 // Initialize the Swiper library, when the page is ready.
 window.addEventListener("load", () => {
   // eslint-disable-next-line no-undef, @typescript-eslint/no-unused-vars
@@ -50,9 +67,13 @@ window.addEventListener("load", () => {
     freeMode: true,
     centeredSlidesBounds: false,
     on: {
-      init: (swiper) => {
+      afterInit: (swiper) => {
         const swiperWrapper = swiper.el.querySelector(".swiper-wrapper");
         swiperWrapperEventInit(swiperWrapper);
+        disableKeyboardNavigation(swiper);
+      },
+      transitionEnd: (swiper) => {
+        disableKeyboardNavigation(swiper);
       },
     },
     a11y: {
