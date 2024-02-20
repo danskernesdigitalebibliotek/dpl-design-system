@@ -16,6 +16,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: $s-md;
+  min-height: 64px;
 
   &__type {
     color: $color__global-tertiary-2;
@@ -28,9 +29,15 @@
   }
 }
 
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero-title {
   @include typography($typo__h1);
   margin-bottom: $s-md;
+  flex-grow: 1;
 
   @include media-query__small {
     margin-bottom: $s-xl;
