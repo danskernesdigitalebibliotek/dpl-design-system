@@ -1,0 +1,7 @@
+.input-label {
+  @include typography($typo__small-caption);
+  width: 100%;
+  height: $s-lg;
+  margin-bottom: $s-sm;
+  padding-top: $s-xs;
+}

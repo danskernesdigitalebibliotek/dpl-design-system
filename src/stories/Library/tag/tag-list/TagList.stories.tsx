@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import TagCategories from "./TagCategories";
+import TagList from "./TagList";
 
 export default {
-  title: "Library / Tag Categories",
-  component: TagCategories,
+  title: "Library / Tag List",
+  component: TagList,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -19,10 +19,10 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof TagCategories>;
+} as ComponentMeta<typeof TagList>;
 
-const Template: ComponentStory<typeof TagCategories> = (args) => (
-  <TagCategories {...args} />
+const Template: ComponentStory<typeof TagList> = (args) => (
+  <TagList {...args} />
 );
 
 export const Default = Template.bind({});

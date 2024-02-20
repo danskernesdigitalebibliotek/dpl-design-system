@@ -11,14 +11,7 @@
 }
 
 .card__placeholder-text {
-  @include typography($typo__card-placeholder--medium);
-  @extend %identity-placeholder-inner-padding;
-  display: flex;
-  height: 100%;
-  overflow: hidden;
-
-  align-items: end;
-  color: $color__text-primary-white;
+  @extend %identity-placeholder-text;
 }
 
 .card--has-image {

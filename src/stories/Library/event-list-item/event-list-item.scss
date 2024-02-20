@@ -1,11 +1,52 @@
-$_event-list-item--max-width: 1126px;
+$_desktop-content-rows: 5;
+$_event-list-item--image-height: 166px;
 $_event-list-item--image-width: 222px;
+$_event-list-item--max-width: 1126px;
+$_stacked-reduce-width: 20px;
 
-.event-list-item {
+@mixin event-list-item-stacked-shadow-box {
+  position: relative;
+  &::before {
+    content: "";
+    background-color: $color__global-white;
+    position: absolute;
+    width: calc(100% - $_stacked-reduce-width);
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin event-list-item-grid {
   @include show-svg-on-hover();
+  @include layout-container($block-max-width__large);
   text-decoration: none;
   display: grid;
-  padding: $s-lg;
+  grid-template-columns: 1fr;
+
+  @include media-query__small {
+    grid-template-columns: $_event-list-item--image-width 1fr;
+    gap: $s-lg;
+  }
+  @include media-query__medium {
+    grid-template-columns:
+      $_event-list-item--image-width 1fr
+      max-content;
+    gap: $s-2xl;
+  }
+}
+
+@mixin event-list-item-content-grid {
+  display: grid;
+  grid-template-columns: 1fr $s-2xl 120px;
+}
+
+.event-list-item {
+  @include event-list-item-grid;
+  padding-top: $s-lg;
+  padding-bottom: $s-lg;
   background-color: $color__global-white;
   margin: 0 auto;
   grid-template-areas:
@@ -13,8 +54,10 @@ $_event-list-item--image-width: 222px;
     "content";
   grid-template-rows: auto;
   gap: $s-md;
-  @include layout-container($block-max-width__large);
+}
 
+.event-list-item,
+.event-list-item-stacked {
   // Extending display none, as mixin show-svg-on-hover
   // is only working up to __small breakpoint
   @include media-query__medium("max-width") {
@@ -33,6 +76,7 @@ $_event-list-item--image-width: 222px;
 }
 
 .event-list-item__image {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   position: relative;
@@ -46,7 +90,6 @@ $_event-list-item--image-width: 222px;
     "title title title"
     "description description description"
     "location schedule schedule";
-  row-gap: $s-sm;
   @include typography($typo__small-caption);
 }
 
@@ -72,9 +115,10 @@ $_event-list-item--image-width: 222px;
 
 .event-list-item__description {
   grid-area: description;
-
-  @include text-ellipsis-truncation(3);
   margin-bottom: $s-lg;
+  p {
+    @include text-ellipsis-truncation(3);
+  }
 }
 
 .event-list-item__location-wrapper {
@@ -96,32 +140,67 @@ $_event-list-item--image-width: 222px;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  row-gap: 8px;
   @include typography($typo__body-placeholder);
+}
+
+.event-list-item-stacked {
+  @include event-list-item-grid;
+  @include event-list-item-stacked-shadow-box;
+  padding-top: $s-sm;
+  padding-bottom: $s-sm;
+  grid-template-areas: "contentStacked";
+  align-items: center;
+}
+
+.event-list-item-stacked__content {
+  @include typography($typo__small-caption);
+  @include event-list-item-content-grid;
+  z-index: $z-10;
+  grid-area: contentStacked;
+  grid-template-areas: "dateStacked . timeStacked";
+}
+
+.event-list-item-stacked__date {
+  grid-area: dateStacked;
+}
+
+.event-list-item-stacked__time {
+  grid-area: timeStacked;
+  justify-self: end;
+}
+
+.event-list-item-stacked > svg {
+  z-index: $z-10;
+  grid-area: arrowStacked;
 }
 
 @include media-query__small {
   .event-list-item {
     grid-template-areas: "image content";
-    grid-template-columns: auto 1fr;
-    gap: $s-lg;
   }
 
   .event-list-item__content {
+    @include event-list-item-content-grid;
     grid-area: content;
-    grid-template-columns: 1fr 1fr $s-2xl max-content;
     grid-template-areas:
-      "tag tag . schedule"
-      "date date . schedule"
-      "title title . schedule"
-      "description description . schedule"
-      "location location . schedule";
+      "tag . schedule"
+      "date . schedule"
+      "title . schedule"
+      "description . schedule"
+      "location . schedule";
+    grid-template-rows: repeat(
+      $_desktop-content-rows,
+      minmax(
+        calc($_event-list-item--image-height / $_desktop-content-rows),
+        auto
+      )
+    );
   }
 
   .event-list-item__image-container {
     grid-area: image;
-    max-width: $_event-list-item--image-width;
-    min-width: $_event-list-item--image-width;
+    max-height: $_event-list-item--image-height;
+    min-height: $_event-list-item--image-height;
   }
 
   .event-list-item__tag {
@@ -136,12 +215,16 @@ $_event-list-item--image-width: 222px;
 
   .event-list-item__title {
     grid-area: title;
+    line-height: 100%;
   }
 
   .event-list-item__description {
     margin-bottom: unset;
     grid-area: description;
-    @include text-ellipsis-truncation(2);
+
+    p {
+      @include text-ellipsis-truncation(2);
+    }
   }
 
   .event-list-item__schedule {
@@ -149,13 +232,19 @@ $_event-list-item--image-width: 222px;
     grid-row: 3 / span 3;
     justify-content: unset;
   }
+
+  .event-list-item-stacked {
+    grid-template-areas: ". contentStacked";
+  }
+
+  .event-list-item-stacked__content {
+    grid-template-areas: "dateStacked . timeStacked";
+  }
 }
 
 @include media-query__medium {
   .event-list-item {
     grid-template-areas: "image content arrow";
-    grid-template-columns: auto 1fr max-content;
-    gap: $s-2xl;
   }
 
   .event-list-item__schedule {
@@ -164,5 +253,21 @@ $_event-list-item--image-width: 222px;
 
   .event-list-item > svg {
     grid-area: arrow;
+  }
+
+  .event-list-item-stacked {
+    grid-template-areas: ". contentStacked arrowStacked";
+  }
+
+  .event-list-item-stacked__content {
+    grid-template-areas: "dateStacked . timeStacked";
+  }
+
+  .event-list-item-stacked__time {
+    justify-self: start;
+  }
+
+  .event-list-item-stacked > svg {
+    transform: translateX(-#{calc($_stacked-reduce-width / 2)});
   }
 }

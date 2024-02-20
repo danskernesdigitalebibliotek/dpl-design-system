@@ -2,6 +2,13 @@
   @extend %hero-2-column;
 }
 
+.hero-tag {
+  margin-bottom: $s-md;
+  @include media-query__small {
+    margin-bottom: $s-lg;
+  }
+}
+
 .hero__details {
   @include typography($typo__h5);
   display: flex;

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import TagCategories from "../tag/tag-categories/TagCategories";
+import Tag from "../tag/Tag";
 import ImageCredited from "../image-credited/ImageCredited";
 
 type EventHeaderProps = {
@@ -12,7 +12,9 @@ const EventHeader: FC<EventHeaderProps> = ({ title, date, image }) => {
   return (
     <header className="event-header">
       <section className="hero-content">
-        <TagCategories tags={["design & teknologi"]} />
+        <Tag hasBackground size="large" className="event-tag">
+          design & teknologi
+        </Tag>
         <time className="event-header__date">{date}</time>
         <h1 className="event-header__title">{title}</h1>
         <a href="/" className="btn-primary btn-filled btn-large hero-cta">

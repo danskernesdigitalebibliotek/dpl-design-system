@@ -46,7 +46,7 @@
   }
 }
 
-%link-tag {
+@mixin link-tag {
   @include typography($typo__body-placeholder);
 
   text-decoration: none;
@@ -72,6 +72,10 @@
   }
 }
 
+%link-tag {
+  @include link-tag;
+}
+
 %button-link {
   @extend %link-tag;
 
@@ -87,6 +91,17 @@
       border-width: $width;
     }
   }
+}
+
+%identity-placeholder-text {
+  @include typography($typo__card-placeholder--medium);
+  @extend %identity-placeholder-inner-padding;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+
+  align-items: end;
+  color: $color__text-primary-white;
 }
 
 %default-focus-visible {

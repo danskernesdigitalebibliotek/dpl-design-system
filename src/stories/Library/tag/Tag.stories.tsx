@@ -1,13 +1,11 @@
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 
-import { Tag as TagComp } from "./Tag";
-
-type TagProps = typeof TagComp;
+import Tag, { TagProps } from "./Tag";
 
 export default {
   title: "Library / Tag / Tag",
-  component: TagComp,
+  component: Tag,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -28,14 +26,23 @@ export default {
   },
 };
 
-export const Default: ComponentStory<TagProps> = ({ children, ...args }) => (
-  <TagComp {...args}>{children}</TagComp>
+const Template: ComponentStory<typeof Tag> = (args: TagProps) => (
+  <Tag {...args} />
 );
+export const Default = Template.bind({});
+Default.args = {};
 
-export const LargeWithBackground: ComponentStory<TagProps> = ({
-  children,
-  ...args
-}) => <TagComp {...args}>{children}</TagComp>;
+export const Large = Template.bind({});
+Large.args = {
+  size: "large",
+};
+
+export const WithBackground = Template.bind({});
+WithBackground.args = {
+  hasBackground: true,
+};
+
+export const LargeWithBackground = Template.bind({});
 LargeWithBackground.args = {
   size: "large",
   hasBackground: true,

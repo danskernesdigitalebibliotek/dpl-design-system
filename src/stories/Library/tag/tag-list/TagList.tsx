@@ -1,11 +1,11 @@
 import { FC, useEffect } from "react";
-import { Tag } from "../Tag";
+import Tag from "../Tag";
 
-type TagCategoriesProps = {
+type TagListProps = {
   tags: string[];
 };
 
-const TagCategories: FC<TagCategoriesProps> = ({ tags }) => {
+const TagList: FC<TagListProps> = ({ tags }) => {
   useEffect(() => {
     require("../../../utils/show-more");
   }, []);
@@ -17,7 +17,7 @@ const TagCategories: FC<TagCategoriesProps> = ({ tags }) => {
   return (
     <>
       {tags.length > 1 && (
-        <div data-show-more-list className="tag-categories">
+        <div data-show-more-list className="tag-list">
           <ul>
             {tags.map((tag, index) => (
               <li data-show-more-item>
@@ -37,7 +37,7 @@ const TagCategories: FC<TagCategoriesProps> = ({ tags }) => {
         </div>
       )}
       {tags.length === 1 && (
-        <div className="tag-categories">
+        <div className="tag-list">
           <Tag hasBackground size="large">
             {tags[0]}
           </Tag>
@@ -47,4 +47,4 @@ const TagCategories: FC<TagCategoriesProps> = ({ tags }) => {
   );
 };
 
-export default TagCategories;
+export default TagList;
