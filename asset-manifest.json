@@ -4,9 +4,9 @@
     "0.e672e4eb.iframe.bundle.js.map": "./0.e672e4eb.iframe.bundle.js.map",
     "1.3e0d30ce.iframe.bundle.js": "./1.3e0d30ce.iframe.bundle.js",
     "2.b82fafb0.iframe.bundle.js": "./2.b82fafb0.iframe.bundle.js",
-    "main.css": "./static/css/main.2d1b2614.chunk.css",
-    "main.js": "./main.dd118b31.iframe.bundle.js",
-    "main.css.map": "./static/css/main.2d1b2614.chunk.css.map",
+    "main.css": "./static/css/main.219b5a35.chunk.css",
+    "main.js": "./main.c15af3de.iframe.bundle.js",
+    "main.css.map": "./static/css/main.219b5a35.chunk.css.map",
     "runtime~main.js": "./runtime~main.6c6b7827.iframe.bundle.js",
     "vendors~main.css": "./static/css/vendors~main.2b205a4f.chunk.css",
     "vendors~main.js": "./vendors~main.2c3627dd.iframe.bundle.js",
@@ -31,6 +31,7 @@
     "static/media/icon-arrow-ui-nav.4eea4151.svg": "./static/media/icon-arrow-ui-nav.4eea4151.svg",
     "static/media/icon-arrow-ui-small-left.svg": "./static/media/icon-arrow-ui-small-left.2b55e017.svg",
     "static/media/icon-arrow-ui-small-right.svg": "./static/media/icon-arrow-ui-small-right.f9b2df75.svg",
+    "static/media/icon-close-large.52ff367c.svg": "./static/media/icon-close-large.52ff367c.svg",
     "static/media/icon-external-link.9383ca1f.svg": "./static/media/icon-external-link.9383ca1f.svg",
     "static/media/icon-favourite.svg": "./static/media/icon-favourite.439569a6.svg",
     "vendors~main.2c3627dd.iframe.bundle.js.LICENSE.txt": "./vendors~main.2c3627dd.iframe.bundle.js.LICENSE.txt"
@@ -39,7 +40,7 @@
     "runtime~main.6c6b7827.iframe.bundle.js",
     "static/css/vendors~main.2b205a4f.chunk.css",
     "vendors~main.2c3627dd.iframe.bundle.js",
-    "static/css/main.2d1b2614.chunk.css",
-    "main.dd118b31.iframe.bundle.js"
+    "static/css/main.219b5a35.chunk.css",
+    "main.c15af3de.iframe.bundle.js"
   ]
 }
