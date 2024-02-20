@@ -75,7 +75,10 @@
   position: fixed;
   top: 0;
   right: 0;
-  padding: 22.5px;
+  // We need both padding & margin so that when the icon rotates, we don't see
+  // the background color bleed outside the modal.
+  padding: $s-md;
+  margin: 6.5px;
   transition: 0.3s;
   z-index: $z-15;
 
@@ -87,7 +90,11 @@
   }
 
   @include media-query__small {
-    padding: 34px;
+    // We need both padding & margin so that when the icon rotates, we don't see
+    // the background color bleed outside the modal.
+    padding: $s-lg;
+    margin: $s-sm;
+    border-radius: $s-2xl;
   }
 
   &:hover {
