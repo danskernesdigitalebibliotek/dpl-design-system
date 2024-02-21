@@ -1,0 +1,40 @@
+$_media_small_breakpoint: map_get($breakpoints, "small");
+
+.material-grid {
+  @include layout-container($layout__max-width--large, 0);
+}
+
+.material-grid__title {
+  @include typography($typo__h2);
+  @include layout-container();
+
+  @extend %title-underline--narrow;
+  margin-bottom: calc($s-lg * 2);
+}
+.material-grid__items {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calc(($_media_small_breakpoint / 3) + $s-md), 1fr)
+  );
+}
+
+.material-grid__items .recommended-material {
+  max-width: unset;
+  border: 1px solid $color__global-tertiary-1;
+}
+.material-grid__show-more {
+  cursor: pointer;
+  margin: $s-lg auto 0 auto;
+}
+
+@include media-query__small {
+  .material-grid__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@include media-query__medium {
+  .material-grid__items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
