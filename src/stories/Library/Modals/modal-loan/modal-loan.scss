@@ -11,6 +11,12 @@
 .modal-loan__header {
   display: flex;
   align-items: center;
+
+  & .text-body-large {
+    @include media-query__small("max-width") {
+      line-height: $s-lg;
+    }
+  }
 }
 
 .modal-loan__list-container {
