@@ -60,7 +60,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
           size="xlarge"
           tint="120"
           animate
-          shadow
+          shadow="small"
         />
       </div>
       <div className="material-header__content">

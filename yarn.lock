@@ -2873,10 +2873,10 @@
     lz-string "^1.5.0"
     pretty-format "^27.0.2"
 
-"@testing-library/jest-dom@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-6.2.0.tgz#b572bd5cd6b29314487bac7ba393188e4987b4f7"
-  integrity sha512-+BVQlJ9cmEn5RDMUS8c2+TU6giLvzaHZ8sU/x0Jj7fk+6/46wPdwlgOPcpxS17CjcanBi/3VmGMqVr2rmbUmNw==
+"@testing-library/jest-dom@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-6.4.2.tgz#38949f6b63722900e2d75ba3c6d9bf8cffb3300e"
+  integrity sha512-CzqH0AFymEMG48CpzXFriYYkOjk6ZGPCLMhW9e9jg3KMCn5OfJecF8GtGW7yGfR/IgCe3SX8BSwjdzI6BBbZLw==
   dependencies:
     "@adobe/css-tools" "^4.3.2"
     "@babel/runtime" "^7.9.2"
@@ -3034,10 +3034,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^29.5.11":
-  version "29.5.11"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.5.11.tgz#0c13aa0da7d0929f078ab080ae5d4ced80fa2f2c"
-  integrity sha512-S2mHmYIVe13vrm6q4kN6fLYYAka15ALQki/vgDC3mIukEOx8WJlv0kQPM+d4w8Gp6u0uSdKND04IlTXBv0rwnQ==
+"@types/jest@^29.5.12":
+  version "29.5.12"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.5.12.tgz#7f7dc6eb4cf246d2474ed78744b05d06ce025544"
+  integrity sha512-eDC8bTvT/QhYdxJAulQikueigY5AsdBRH2yDKW3yveW7svY3+DzN84/2NUgkw10RTiJbWqZrTtoGVdYlvFJdLw==
   dependencies:
     expect "^29.0.0"
     pretty-format "^29.0.0"
@@ -12748,10 +12748,10 @@ postcss@^7, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, po
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.1.0, postcss@^8.4.19, postcss@^8.4.33:
-  version "8.4.33"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.33.tgz#1378e859c9f69bf6f638b990a0212f43e2aaa742"
-  integrity sha512-Kkpbhhdjw2qQs2O2DGX+8m5OVqEcbB9HRBvuYM9pgrjEFUg30A9LmXNlTAUj4S9kgtGyrMbTzVjH7E+s5Re2yg==
+postcss@^8.1.0, postcss@^8.4.19, postcss@^8.4.35:
+  version "8.4.35"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.35.tgz#60997775689ce09011edf083a549cea44aabe2f7"
+  integrity sha512-u5U8qYpBCpN13BsiEB0CbR1Hhh4Gc0zLFuedrHJKMctHCHAGrMdG0PRM/KErzAL3CU6/eckEtmHNB3x6e3c0vA==
   dependencies:
     nanoid "^3.3.7"
     picocolors "^1.0.0"
@@ -13977,10 +13977,10 @@ sass-loader@^10.0.5:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass@^1.70.0:
-  version "1.70.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.70.0.tgz#761197419d97b5358cb25f9dd38c176a8a270a75"
-  integrity sha512-uUxNQ3zAHeAx5nRFskBnrWzDUJrrvpCPD5FNAoRvTi0WwremlheES3tg+56PaVtCs5QDRX5CBLxxKMDJMEa1WQ==
+sass@^1.71.0:
+  version "1.71.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.71.0.tgz#b3085759b9b2ab503a977aecb7e91153bf941117"
+  integrity sha512-HKKIKf49Vkxlrav3F/w6qRuPcmImGVbIXJ2I3Kg0VMA+3Bav+8yE9G5XmP5lMj6nl4OlqbPftGAscNaNu28b8w==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -15968,10 +15968,10 @@ web-namespaces@^1.0.0:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"
   integrity sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==
 
-web-vitals@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-3.5.1.tgz#af7a9dc60708b81007922ab55a23d963676ba30a"
-  integrity sha512-xQ9lvIpfLxUj0eSmT79ZjRoU5wIRfIr7pNukL7ZE4EcWZSmfZQqOlhuAGfkVa3EFmzPHZhWhXfm2i5ys+THVPg==
+web-vitals@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-3.5.2.tgz#5bb58461bbc173c3f00c2ddff8bfe6e680999ca9"
+  integrity sha512-c0rhqNcHXRkY/ogGDJQxZ9Im9D19hDihbzSQJrsioex+KnFgmMzBiy57Z1EjkhX/+OjyBpclDCzz2ITtjokFmg==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"

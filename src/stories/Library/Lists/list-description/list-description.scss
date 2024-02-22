@@ -40,13 +40,21 @@ dl.list-description.list-description--event {
   grid-template-columns: repeat(2, 1fr);
   gap: $s-md;
   align-items: start;
+  @include typography($typo__body-placeholder);
+  line-height: 120%;
 
   .list-description__item {
     grid-template-columns: 1fr;
   }
 
   .list-description__value {
-    font-weight: bold;
+    font-weight: $font__weight--semi-bold;
+    grid-gap: 8px;
+    gap: 8px;
+  }
+  .link-tag {
+    @include typography($typo__body-placeholder);
+    line-height: 120%;
   }
 
   @include media-query__small() {

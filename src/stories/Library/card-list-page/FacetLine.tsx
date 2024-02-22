@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Dropdown } from "../dropdown/Dropdown";
-import { Tag } from "../tag/Tag";
+import { TagButton } from "../tag/tag-button/TagButton";
 
 export type FacetLineItem<TType extends "facet" | "term"> = {
   title: string;
@@ -20,9 +20,9 @@ const FacetLine: FC<FacetLineProps> = ({ items }) => {
         if (type === "term") {
           return (
             <li key={index} className="facet-line__item">
-              <Tag isClickable={false}>
+              <TagButton isClickable={false}>
                 {title} ({score})
-              </Tag>
+              </TagButton>
             </li>
           );
         }
@@ -46,7 +46,7 @@ const FacetLine: FC<FacetLineProps> = ({ items }) => {
         return null;
       })}
       <li className="facet-line__item">
-        <Tag isClickable={false}>+ Flere filtre</Tag>
+        <TagButton isClickable={false}>+ Flere filtre</TagButton>
       </li>
     </ul>
   );

@@ -2,7 +2,7 @@ import Disclosure from "../../disclosure/Disclosure";
 import { Button } from "../../Buttons/button/Button";
 import Modal from "../Modal";
 import facetBrowserDummyData from "./facet-browser-dummy-data";
-import { Tag } from "../../tag/Tag";
+import { TagButton } from "../../tag/tag-button/TagButton";
 
 export type FacetBrowserProps = {
   title: string;
@@ -44,7 +44,7 @@ const FacetBrowser: React.FC<FacetBrowserProps> = ({
         >
           <div className="facet-browser__facet-group">
             {facet.tags.map((tag) => (
-              <Tag key={tag}>{tag}</Tag>
+              <TagButton key={tag}>{tag}</TagButton>
             ))}
           </div>
           <button className="link-tag cursor-pointer facet-browser__more-btn">

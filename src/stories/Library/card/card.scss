@@ -11,14 +11,7 @@
 }
 
 .card__placeholder-text {
-  @include typography($typo__card-placeholder--small);
-  @extend %identity-placeholder-inner-padding;
-  display: flex;
-  height: 100%;
-  overflow: hidden;
-
-  align-items: end;
-  color: $color__text-primary-white;
+  @extend %identity-placeholder-text;
 }
 
 .card--has-image {
@@ -119,15 +112,19 @@
   }
 
   .card__media {
+    @extend %identity-placeholder;
+
     aspect-ratio: 1/1;
   }
 }
 
 %card-variant--small,
 .card[data-variant="small"] {
-  @extend %card-variant--x-large;
-
   width: 206px;
+
+  .card__media {
+    aspect-ratio: 1/1;
+  }
 
   .card__tags,
   .card__media {
@@ -137,8 +134,6 @@
   // On desktop sizes this small, there is no space for placeholder text, and
   // extra tags, but we can still show it for screenreaders.
   @include media-query__name($breakpoint__large-card) {
-    width: 206px;
-
     .card__placeholder-text {
       font-size: 0;
     }
@@ -155,7 +150,11 @@
 
 %card-variant--medium,
 .card[data-variant="medium"] {
-  width: 321px;
+  width: 200px;
+
+  @include media-query__name($breakpoint__large-card) {
+    width: 321px;
+  }
 
   .card__media {
     // Odd aspect ratio, taken from the design.

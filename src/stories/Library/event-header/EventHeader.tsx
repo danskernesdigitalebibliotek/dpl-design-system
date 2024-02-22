@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Tag } from "../tag/Tag";
+import Tag from "../tag/Tag";
 import ImageCredited from "../image-credited/ImageCredited";
 
 type EventHeaderProps = {
@@ -11,20 +11,17 @@ type EventHeaderProps = {
 const EventHeader: FC<EventHeaderProps> = ({ title, date, image }) => {
   return (
     <header className="event-header">
-      <section className="event-header__content">
-        <div className="event-header__tags">
-          <Tag hasBackground>Udstilling</Tag>
-        </div>
+      <section className="hero-content">
+        <Tag hasBackground size="large" className="event-tag">
+          design & teknologi
+        </Tag>
         <time className="event-header__date">{date}</time>
         <h1 className="event-header__title">{title}</h1>
-        <a
-          href="/"
-          className="btn-primary btn-filled btn-large event-header__button"
-        >
+        <a href="/" className="btn-primary btn-filled btn-large hero-cta">
           Køb billet
         </a>
       </section>
-      <section className="event-header__visual">
+      <section className="hero-visual">
         <ImageCredited
           src={image}
           description="Photo by Unsplash"

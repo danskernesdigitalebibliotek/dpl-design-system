@@ -1,3 +1,5 @@
+$_dropdown-icon-size: 50px;
+
 .dropdown {
   width: 100%;
   position: relative;
@@ -17,18 +19,22 @@
 }
 
 .dropdown__select {
+  $_padding: 20px;
+
   appearance: none;
   -webkit-appearance: none;
   min-width: 230px;
   width: 100%;
-  height: 50px;
+  height: $_dropdown-icon-size;
   cursor: pointer;
   background-color: transparent;
   color: $color__global-black;
   border-radius: 0;
   border: 1px solid;
   border-color: inherit;
-  padding: 0 50px 0 20px;
+  padding: 0;
+  padding-left: $_padding;
+  padding-right: $_dropdown-icon-size + $_padding;
   text-overflow: ellipsis;
   white-space: nowrap;
 
@@ -51,8 +57,8 @@
   position: absolute;
   right: 0;
   top: 0;
-  height: 50px;
-  width: 50px;
+  height: $_dropdown-icon-size;
+  width: $_dropdown-icon-size;
   display: flex;
   justify-content: center;
   align-items: center;

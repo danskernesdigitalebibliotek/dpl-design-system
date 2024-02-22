@@ -5,8 +5,6 @@ import { Autosuggest, AutosuggestProps } from "./Autosuggest";
 import AutosuggestMaterialStories from "../../Library/autosuggest-material/AutosuggestMaterial.stories";
 import AutosuggestTextStories from "../../Library/autosuggest-text/AutosuggestText.stories";
 import { autosuggestMaterialSuggestions } from "../../Library/autosuggest-material/helper";
-import { ReactComponent as SearchIcon } from "../../../public/icons/basic/icon-search.svg";
-import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 
 export default {
   title: "Blocks / Autosuggest",
@@ -27,34 +25,12 @@ export default {
 const Template: ComponentStory<typeof Autosuggest> = (
   args: AutosuggestProps
 ) => (
-  // Apart from <Autosuggest />, everything else is here just for the story
-  // context. The autosuggest styling is directly dependent on the header component,
-  // Please keep up to date with Header.tsx
-  <header className="header" style={{ height: "144px" }}>
-    <div className="header__logo-desktop">
-      <p className="text-body-medium-regular">Context</p>
-    </div>
-    <div className="header__menu">
-      <nav className="header__menu-first">
-        <p className="text-body-medium-regular">Context</p>
-      </nav>
-      <div className="header__menu-second">
-        <div className="header__menu-search">
-          <input
-            className="header__menu-search-input text-body-medium-regular"
-            type="text"
-            placeholder="This field is here just for context."
-          />
-          <SearchIcon className="header__menu-search-icon" />
-          <ExpandMoreIcon className="header__menu-dropdown-icon" />
-          <Autosuggest {...args} />
-        </div>
-      </div>
-    </div>
-    <div className="header__clock">
-      <p className="text-body-medium-regular">Context</p>
-    </div>
-  </header>
+  // Inline styling should be avoided, but this is not really a part of the
+  // component - rather, a fix, to make sure the autosuggests look correct,
+  // even when they're not in the menu structure.
+  <div className="this-is-just-for-storybook" style={{ position: "relative" }}>
+    <Autosuggest {...args} />
+  </div>
 );
 
 export const Default = Template.bind({});

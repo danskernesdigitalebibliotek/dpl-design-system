@@ -1,43 +1,33 @@
-import { useState } from "react";
 import clsx from "clsx";
 import { ReactComponent as CrossIcon } from "../../../public/icons/basic/icon-cross.svg";
 
-type TagProps = {
+export type TagProps = {
   children: React.ReactNode;
   size?: "small" | "large";
-  usesCursor?: boolean;
   hasBackground?: boolean;
   showCloseIcon?: boolean;
-  isClickable?: boolean;
   className?: string;
 };
 
-export const Tag = ({
+const Tag = ({
   children,
-  hasBackground = false,
   size = "small",
-  usesCursor = true,
+  hasBackground = false,
   showCloseIcon = false,
-  isClickable = true,
   className,
 }: TagProps) => {
-  const [selected, setSelected] = useState(false);
-
   return (
-    <button
-      aria-pressed={selected}
-      onClick={() => isClickable && setSelected(!selected)}
+    <span
       className={clsx(
         "tag",
-        (hasBackground || selected) && "tag--fill",
-        usesCursor && "cursor-pointer",
+        hasBackground && "tag--fill",
         `tag--${size}`,
         className
       )}
     >
       {children}
       {showCloseIcon && <CrossIcon className="tag-icon" />}
-    </button>
+    </span>
   );
 };
 

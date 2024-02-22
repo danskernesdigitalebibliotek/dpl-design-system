@@ -1,0 +1,73 @@
+.nav-grid {
+  @include layout-container($layout__max-width--large, 0);
+}
+
+.nav-grid--simple {
+  .nav-teaser__subtitle {
+    display: none;
+  }
+}
+
+.nav-grid__controller {
+  display: none;
+  margin: auto;
+  margin-top: $s-md;
+}
+
+.nav-grid__header {
+  @include layout-container();
+
+  display: flex;
+  align-items: center;
+}
+
+.nav-grid__title {
+  @include typography($typo__h2);
+
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: $s-lg;
+}
+
+.nav-grid__items {
+  display: grid;
+  grid-gap: 1px;
+
+  grid-template-columns: 1fr;
+
+  @include media-query__small {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include media-query__medium {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .nav-grid--count-1 &,
+    .nav-grid--count-2 &,
+    .nav-grid--count-3 &,
+    .nav-grid--count-4 & {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+.nav-grid__item {
+  // We use outline, to collapse the border to avoid double 2px borders.
+  outline: 1px solid $color__global-tertiary-1;
+
+  // We want the borders to collapse, so we'll remove the borders on the
+  // individual teasers.
+  .nav-teaser {
+    border: 0;
+  }
+}
+
+.nav-grid--folded {
+  .nav-grid__item:nth-child(n + 7) {
+    display: none;
+  }
+
+  .nav-grid__controller {
+    display: block;
+  }
+}

@@ -1,7 +1,3 @@
-.slider {
-  @include vertical-spacing;
-}
-
 .slider__header {
   @include layout-container;
 
@@ -50,21 +46,19 @@
     max-width: calc(100vw - #{$_card-mobile-peek});
   }
 
-  // For some reason, all no-image cards in the slider should be pulled
-  // up higher than the image ones.
-  .card--has-image {
-    margin-top: $s-xl;
-  }
-
   // The slider follows a very specific card pattern:
   // 1: large, 2: x-large, 3: medium, 4: small - repeating.
   @for $i from 1 through 4 {
     &:nth-child(4n + #{$i}) .card {
       @if $i == 1 {
+        margin-top: $s-xl;
+
         @extend %card-variant--large;
       } @else if $i == 2 {
         @extend %card-variant--x-large;
       } @else if $i == 3 {
+        margin-top: $s-xl;
+
         @extend %card-variant--medium;
       } @else if $i == 4 {
         @extend %card-variant--small;

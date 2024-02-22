@@ -1,0 +1,30 @@
+.footer-widgets {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $s-2xl;
+  @include media-query__small {
+    margin-top: $s-4xl;
+  }
+}
+
+// if there are no dropdowns, align the logo to the right
+.footer-widgets:not(:has(.dropdown)) {
+  justify-content: flex-end;
+}
+
+// Dropdown tweaks
+.footer-widgets .dropdown {
+  width: 82px;
+
+  .dropdown__select {
+    background-color: $color__global-secondary;
+    height: $s-xl;
+    padding: 0 12px;
+    min-width: 82px;
+  }
+
+  .dropdown__arrows {
+    height: $s-xl;
+    width: $s-xl;
+  }
+}
