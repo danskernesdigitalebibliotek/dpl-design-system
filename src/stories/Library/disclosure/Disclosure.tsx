@@ -2,6 +2,7 @@ import { useState } from "react";
 import { clsx } from "clsx";
 import AvailabilityLabel from "../availability-label/AvailabilityLabel";
 import Heading, { HeadingLevelType } from "../heading/Heading";
+import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 
 export type DisclosureProps = {
   headline: string;
@@ -61,12 +62,10 @@ const Disclosure: React.FC<DisclosureProps> = ({
         {withAvailability && (
           <AvailabilityLabel availability="Hjemme" status="available" />
         )}
-        <img
+        <ExpandMoreIcon
           className={`disclosure__expand noselect ${
             isOpen ? "disclosure__expand-open" : ""
           }`}
-          src="icons/collection/ExpandMore.svg"
-          alt="various-icon"
         />
       </summary>
       {contentPadding ? (

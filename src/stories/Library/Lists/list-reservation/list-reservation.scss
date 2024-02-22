@@ -14,10 +14,17 @@ $list-reservation-space-desktop: 24px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  box-shadow: 0 $s-xs 20px rgb(0 0 0 / 10%);
   position: relative;
   padding: $list-reservation-space-mobile;
   cursor: pointer;
+
+  h3 {
+    color: $color__text-primary-black;
+  }
+
+  p {
+    color: $color__global-grey;
+  }
 
   @include media-query__small {
     grid-template-columns: 1fr 1fr;
@@ -26,7 +33,7 @@ $list-reservation-space-desktop: 24px;
   }
 
   &:hover {
-    filter: drop-shadow(0 $s-xs 20px rgb(72 72 72 / 10%));
+    filter: drop-shadow(0 $s-xs 20px rgb(72 72 72 / 20%));
   }
 }
 
@@ -84,6 +91,11 @@ $list-reservation-space-desktop: 24px;
   margin-left: $list-reservation-space-mobile;
   align-items: baseline;
   justify-content: space-between;
+  min-width: 200px;
+
+  @include media-query__x-small("max-width") {
+    min-width: 100px;
+  }
 
   @include media-query__small {
     margin-left: $list-reservation-space-desktop;
@@ -177,6 +189,7 @@ $list-reservation-space-desktop: 24px;
     @extend %list-stacked;
 
     content: " ";
+    height: 8px;
     transform: translateY(8px) scale(0.95);
     z-index: $-z-5;
   }
@@ -185,11 +198,8 @@ $list-reservation-space-desktop: 24px;
     @extend %list-stacked;
 
     content: " ";
+    height: 9px;
     transform: translateY($s-md) scale(0.9);
     z-index: $-z-10;
-  }
-
-  &:hover {
-    filter: none;
   }
 }

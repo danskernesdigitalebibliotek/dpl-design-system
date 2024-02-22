@@ -17,6 +17,11 @@
   &__container {
     justify-content: flex-start;
     width: 100%;
+    padding-bottom: $s-4xl;
+
+    @include media-query__small {
+      padding-bottom: 0px;
+    }
   }
 
   &__btn-create-profile {

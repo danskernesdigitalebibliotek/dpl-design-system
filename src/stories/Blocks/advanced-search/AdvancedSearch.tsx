@@ -3,9 +3,10 @@ import { InputWithDropdown } from "../../Library/input-with-dropdown/InputWithDr
 import { Multiselect } from "../../Library/multiselect/Multiselect";
 import { Button } from "../../Library/Buttons/button/Button";
 import InputPreview from "../../Library/input-preview/InputPreview";
-import data from "../../Library/card-list-page/CardListPageData";
+import data from "../../Library/card-list-page/SearchResultPageData";
 import { CardListItem } from "../../Library/card-list-item/CardListItem";
 import ResultPager from "../../Library/card-list-page/ResultPager";
+import { ReactComponent as PlusButtonIcon } from "../../../public/icons/collection/PlusButton.svg";
 
 export interface AdvancedSearchProps {
   inputPlaceholder: string;
@@ -36,13 +37,22 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
                   return (
                     <>
                       <div className="advanced-search__clauses">
-                        <button className="advanced-search__clause focus-styling">
+                        <button
+                          className="advanced-search__clause focus-styling"
+                          aria-label="og"
+                        >
                           OG
                         </button>
-                        <button className="advanced-search__clause advanced-search__clause--grey focus-styling">
+                        <button
+                          className="advanced-search__clause advanced-search__clause--grey focus-styling"
+                          aria-label="eller"
+                        >
                           ELLER
                         </button>
-                        <button className="advanced-search__clause advanced-search__clause--grey focus-styling">
+                        <button
+                          className="advanced-search__clause advanced-search__clause--grey focus-styling"
+                          aria-label="ikke"
+                        >
                           IKKE
                         </button>
                       </div>
@@ -50,12 +60,11 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
                     </>
                   );
                 })}
-              <button className="advanced-search__clauses">
-                <img
-                  className="mr-8"
-                  src="icons/collection/PlusButton.svg"
-                  alt="Plus button icon"
-                />
+              <button
+                className="advanced-search__clauses"
+                aria-label="tilføj ny linje"
+              >
+                <PlusButtonIcon className="mr-8" />
                 Tilføj ny linje
               </button>
             </div>
@@ -92,7 +101,10 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
       )}
       <footer className="advanced-search__footer">
         {isCqlSearch && (
-          <button className="link-tag advanced-search__back-button">
+          <button
+            className="link-tag advanced-search__back-button"
+            aria-label="til avanceret søgning"
+          >
             Til avanceret søgning
           </button>
         )}

@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Links } from "../links/Links";
 import Pagefold from "../pagefold/Pagefold";
+import { ReactComponent as CheckIcon } from "../../../public/icons/collection/Check.svg";
 
 export interface InputPreviewProps {
   cqlPreviewText: string;
@@ -28,11 +29,7 @@ const InputPreview: React.FC<InputPreviewProps> = ({
         <button className="link-tag mr-16 capitalize-first">Nulstil</button>
         <button className="link-tag mr-16 capitalize-first">
           Kopier streng
-          <img
-            className="inline-icon"
-            src="icons/collection/Check.svg"
-            alt=""
-          />
+          <CheckIcon className="inline-icon" />
         </button>
         <Links href="/" linkText="Rediger CQL" classNames="link-tag" />
       </section>

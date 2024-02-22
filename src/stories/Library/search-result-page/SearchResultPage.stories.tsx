@@ -1,11 +1,11 @@
 import { withDesign } from "storybook-addon-designs";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { CardListPage } from "./CardListPage";
-import { CardListPageSkeleton } from "./CardListPageSkeleton";
+import { SearchResultPageSkeleton } from "../card-list-page/SearchResultPageSkeleton";
+import { SearchResultPage } from "../card-list-page/SearchResultPage";
 
 export default {
-  title: "Blocks / Card list Page",
-  component: CardListPage,
+  title: "Blocks / Search Result Page",
+  component: SearchResultPage,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -40,16 +40,16 @@ export default {
       defaultValue: false,
     },
   },
-} as ComponentMeta<typeof CardListPage>;
+} as ComponentMeta<typeof SearchResultPage>;
 
-const Template: ComponentStory<typeof CardListPage> = (args) => {
-  return <CardListPage {...args} />;
+const Template: ComponentStory<typeof SearchResultPage> = (args) => {
+  return <SearchResultPage {...args} />;
 };
 export const Item = Template.bind({});
 
-const SkeletonTemplate: ComponentStory<typeof CardListPageSkeleton> = (
+const SkeletonTemplate: ComponentStory<typeof SearchResultPageSkeleton> = (
   args
 ) => {
-  return <CardListPageSkeleton {...args} />;
+  return <SearchResultPageSkeleton {...args} />;
 };
 export const SkeletonVersion = SkeletonTemplate.bind({});

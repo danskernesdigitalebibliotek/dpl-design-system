@@ -13,7 +13,7 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
 .modal-details__container {
   width: 100%;
   max-width: 100%;
-  padding-bottom: $s-2xl;
+  padding-bottom: $s-4xl;
 
   @include media-query__small {
     margin: 0;
@@ -103,6 +103,12 @@ $MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
 
 .modal-details__warning {
   margin-top: 40px;
+
+  & .text-body-medium-regular {
+    @include media-query__small("max-width") {
+      line-height: $s-lg;
+    }
+  }
 }
 
 .modal-details__list {

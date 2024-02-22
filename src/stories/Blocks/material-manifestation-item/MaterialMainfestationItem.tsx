@@ -5,6 +5,7 @@ import ListDescription, {
   ListData,
 } from "../../Library/Lists/list-description/ListDescription";
 import Cover from "../../Library/cover/Cover";
+import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 
 export type MaterialMainfestationItemProps = {
   title: string;
@@ -51,7 +52,7 @@ export const MaterialMainfestationItem = ({
           }}
         >
           <p className="link-tag text-small-caption">Detaljer om materialet </p>
-          <img src="icons/collection/ExpandMore.svg" alt="ExpandMore" />
+          <ExpandMoreIcon />
         </div>
         {isOpen && <ListDescription className="mt-24" data={detailsData} />}
       </div>

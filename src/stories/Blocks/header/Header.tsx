@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import Logo from "../../Library/logo/Logo";
 import MenuItemList from "../../Library/header-menu-list/HeaderMenuList";
 import { menuItems } from "../../Library/header-menu-list/HeaderMenuListData";
-
+import { ReactComponent as SearchIcon } from "../../../public/icons/basic/icon-search.svg";
+import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
+import { ReactComponent as MenuIcon } from "../../../public/icons/basic/icon-menu.svg";
+import { ReactComponent as ProfileIcon } from "../../../public/icons/basic/icon-profile.svg";
+import { ReactComponent as HeartIcon } from "../../../public/icons/basic/icon-heart.svg";
+import { ReactComponent as WatchStaticIcon } from "../../../public/icons/basic/icon-watch-static.svg";
 import Pagefold from "../../Library/pagefold/Pagefold";
 import HeaderSidebarNav from "../../Library/header-sidebar-nav/header-sidebar-nav";
 
@@ -62,7 +67,7 @@ export const Header = (props: HeaderProps) => {
                     tabIndex: 0,
                   }}
                 >
-                  <img src="icons/basic/icon-menu.svg" alt="Open menu" />
+                  <MenuIcon />
                 </Pagefold>
                 <div className="header__menu-navigation-logo">
                   <Logo
@@ -79,7 +84,7 @@ export const Header = (props: HeaderProps) => {
                 {signedIn && haveNotification && (
                   <div className="header__notification bg-signal-alert" />
                 )}
-                <img src="icons/basic/icon-profile.svg" alt="Profile" />
+                <ProfileIcon aria-label="go to user profile" />
                 {signedIn && (
                   <span className="text-small-caption">{username}</span>
                 )}
@@ -87,7 +92,7 @@ export const Header = (props: HeaderProps) => {
             </div>
             <div className="header__menu-bookmarked header__button">
               <a href="/">
-                <img src="icons/basic/icon-heart.svg" alt="List of bookmarks" />
+                <HeartIcon aria-label="go to favorites list" />
               </a>
             </div>
           </nav>
@@ -99,17 +104,11 @@ export const Header = (props: HeaderProps) => {
                   type="text"
                   placeholder={inputPlaceholder}
                 />
-                <img
-                  className="header__menu-search-icon"
-                  src="icons/basic/icon-search.svg"
-                  alt="search icon"
-                />
+                <SearchIcon className="header__menu-search-icon" />
               </form>
-              <img
+              <ExpandMoreIcon
                 className="header__menu-dropdown-icon"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                src="icons/collection/ExpandMore.svg"
-                alt="expand dropdown icon"
               />
               {isDropdownOpen && (
                 <div className="header__menu-dropdown">
@@ -127,11 +126,7 @@ export const Header = (props: HeaderProps) => {
         <div className="header__clock">
           <Pagefold isInheriting={false} isAContainer={false} size="medium" />
           <div className="header__clock-items">
-            <img
-              src="icons/basic/icon-watch-static.svg"
-              className="mb-8"
-              alt="clock icon"
-            />
+            <WatchStaticIcon className="mb-8" />
             <span className="text-small-caption">Fredag</span>
             <span className="text-small-caption">28 Maj</span>
           </div>
