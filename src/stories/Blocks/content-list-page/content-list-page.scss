@@ -1,14 +1,14 @@
-.event-list-page {
+.content-list-page {
   @include block-spacing();
   background-color: $color__global-primary;
 }
 
-.event-list-page__heading {
+.content-list-page__heading {
   @include layout-container($block-max-width__large);
   @include typography($typo__h2);
 }
 
-.event-list-page__filters {
+.content-list-page__filters {
   @include layout-container($block-max-width__large);
 
   display: flex;
