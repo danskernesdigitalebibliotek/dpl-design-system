@@ -84,7 +84,7 @@ export const Header = (props: HeaderProps) => {
                 {signedIn && haveNotification && (
                   <div className="header__notification bg-signal-alert" />
                 )}
-                <ProfileIcon />
+                <ProfileIcon aria-label="go to user profile" />
                 {signedIn && (
                   <span className="text-small-caption">{username}</span>
                 )}
@@ -92,7 +92,7 @@ export const Header = (props: HeaderProps) => {
             </div>
             <div className="header__menu-bookmarked header__button">
               <a href="/">
-                <HeartIcon />
+                <HeartIcon aria-label="go to favorites list" />
               </a>
             </div>
           </nav>
