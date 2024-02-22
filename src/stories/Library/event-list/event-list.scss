@@ -1,11 +1,5 @@
 .event-list {
   @include layout-container($block-max-width__large);
-  margin-top: $s-lg;
-}
-// Drupal renders each view page in a <ul> with the class 'event-list'.
-// Therefore, we need to remove the margin from the top of any 'event-list' that is a sibling to another 'event-list'.
-.event-list + .event-list {
-  margin-top: 0;
 }
 
 .event-list__item {
