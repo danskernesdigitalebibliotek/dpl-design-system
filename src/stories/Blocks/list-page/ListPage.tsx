@@ -15,12 +15,12 @@ const list = [
   },
 ];
 
-const EventListPage: React.FC = () => {
+const ListPage: React.FC = () => {
   return (
-    <div className="event-list-page">
-      <h1 className="event-list-page__heading">Arrangementer</h1>
-      <div className="event-list-page__filters">
-        <div className="event-list-page__filter">
+    <div className="list-page">
+      <h1 className="list-page__heading">Arrangementer</h1>
+      <div className="list-page__filters">
+        <div className="list-page__filter">
           <InputLabel text="Kategorier" />
           <Dropdown list={list} ariaLabel="Kategorier" arrowIcon="chevron" />
         </div>
@@ -30,4 +30,4 @@ const EventListPage: React.FC = () => {
   );
 };
 
-export default EventListPage;
+export default ListPage;
