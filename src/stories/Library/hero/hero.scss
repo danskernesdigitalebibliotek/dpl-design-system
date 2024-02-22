@@ -1,0 +1,42 @@
+.hero {
+  @extend %hero-2-column;
+}
+
+.hero-tag {
+  margin-bottom: $s-md;
+  @include media-query__small {
+    margin-bottom: $s-lg;
+  }
+}
+
+.hero__details {
+  @include typography($typo__h5);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: $s-md;
+
+  &__type {
+    color: $color__global-tertiary-2;
+  }
+
+  &__date {
+    @include media-query__small {
+      white-space: nowrap;
+    }
+  }
+}
+
+.hero-title {
+  @include typography($typo__h1);
+  margin-bottom: $s-md;
+
+  @include media-query__small {
+    margin-bottom: $s-xl;
+  }
+}
+
+.hero-description {
+  margin-bottom: $s-md;
+}

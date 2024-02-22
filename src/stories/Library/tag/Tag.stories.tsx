@@ -1,13 +1,11 @@
 import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 
-import { Tag as TagComp } from "./Tag";
-
-type TagProps = typeof TagComp;
+import Tag, { TagProps } from "./Tag";
 
 export default {
-  title: "Library / Tag",
-  component: TagComp,
+  title: "Library / Tag / Tag",
+  component: Tag,
   decorators: [withDesign],
   parameters: {
     design: {
@@ -17,40 +15,35 @@ export default {
     layout: "centered",
   },
   argTypes: {
+    children: {
+      control: { type: "text" },
+      defaultValue: "Litteratur",
+    },
     hasBackground: {
       control: { type: "boolean" },
       defaultValue: false,
     },
-    showCloseIcon: {
-      control: { type: "boolean" },
-      defaultValue: false,
-    },
-    isClickable: {
-      control: { type: "boolean" },
-      defaultValue: true,
-    },
   },
 };
 
-export const Tag: ComponentStory<TagProps> = (args) => (
-  <TagComp {...args}>Vi anbefaler</TagComp>
+const Template: ComponentStory<typeof Tag> = (args: TagProps) => (
+  <Tag {...args} />
 );
-Tag.args = {
+export const Default = Template.bind({});
+Default.args = {};
+
+export const Large = Template.bind({});
+Large.args = {
+  size: "large",
+};
+
+export const WithBackground = Template.bind({});
+WithBackground.args = {
+  hasBackground: true,
+};
+
+export const LargeWithBackground = Template.bind({});
+LargeWithBackground.args = {
   size: "large",
   hasBackground: true,
-};
-
-export const TagRemovable: ComponentStory<TagProps> = (args) => (
-  <TagComp {...args}>Litteratur</TagComp>
-);
-TagRemovable.args = {
-  showCloseIcon: true,
-  hasBackground: true,
-};
-
-export const facet: ComponentStory<TagProps> = (args) => (
-  <TagComp {...args}>Skønlitteratur (96)</TagComp>
-);
-facet.args = {
-  hasBackground: false,
 };

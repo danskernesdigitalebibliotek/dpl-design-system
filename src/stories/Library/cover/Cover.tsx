@@ -10,7 +10,7 @@ const Cover: FC<CoverProps> = ({
   src,
   tint,
   coverUrl,
-  description,
+  alt,
   shadow,
   ariaLabel = "Link to the material",
 }) => {
@@ -25,7 +25,7 @@ const Cover: FC<CoverProps> = ({
     ),
   };
 
-  if (coverUrl && description) {
+  if (coverUrl && alt) {
     // Images inside links must have an non-empty alt text to meet accessibility requirements.
     // Only render the cover as a link if we have both an url and a description.
     return (
@@ -39,7 +39,7 @@ const Cover: FC<CoverProps> = ({
         <CoverImage
           setImageLoaded={() => setImageLoaded(true)}
           src={src}
-          description={description}
+          alt={alt}
           size={size}
           animate={animate}
           tint={tint}
@@ -54,7 +54,7 @@ const Cover: FC<CoverProps> = ({
       <CoverImage
         setImageLoaded={() => setImageLoaded(true)}
         src={src}
-        description={description}
+        alt={alt}
         size={size}
         animate={animate}
         tint={tint}

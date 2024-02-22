@@ -130,9 +130,6 @@ $typo__body-large: (
     font-style: normal,
     font-weight: $font__weight--normal,
     font-size: 16px,
-    line-height: 42px,
-  ),
-  small: (
     line-height: 160%,
   ),
   medium: (
@@ -160,6 +157,17 @@ $typo__body-placeholder: (
     font-size: 16px,
   ),
   x-large: (
+    font-size: 18px,
+  ),
+);
+
+$typo__desktop-menu-item: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    line-height: 32px,
+    color: $color__text-secondary-gray,
     font-size: 18px,
   ),
 );
@@ -325,7 +333,7 @@ $typo__card-placeholder: (
     ),
 );
 
-$typo__card-placeholder--small: (
+$typo__card-placeholder--medium: (
   mobile: (
     font-family: $font__title,
     font-style: normal,
@@ -336,5 +344,19 @@ $typo__card-placeholder--small: (
   #{$breakpoint__large-card}: (
       font-size: 28px,
       line-height: 32px,
+    ),
+);
+
+$typo__card-placeholder--grid: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 16px,
+    line-height: 20px,
+  ),
+  #{$breakpoint__large-card}: (
+      font-size: 20px,
+      line-height: 24px,
     ),
 );

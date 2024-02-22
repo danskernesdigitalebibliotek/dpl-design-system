@@ -1,8 +1,13 @@
 .event-list {
-  @include layout-container;
-  @include vertical-spacing(0, $s-xl);
+  @include layout-container($block-max-width__large);
+
+  margin-top: $s-lg;
 }
 .event-list__item {
   list-style: none;
   margin-bottom: $s-md;
+}
+
+.event-list__item--stacked {
+  margin-top: -$s-md;
 }

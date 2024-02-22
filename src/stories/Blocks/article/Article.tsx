@@ -1,22 +1,28 @@
 import { FC } from "react";
-import ArticleHeader from "../../Library/article-header/ArticleHeader";
+import ArticleHeader, {
+  ArticleHeaderProps,
+} from "../../Library/article-header/ArticleHeader";
 import { ArticleParagraphs } from "../../Library/paragraphs/Paragraphs";
 
-type ArticleProps = {
-  title: string;
-  subtitle: string;
-  author: string;
-  date: string;
-};
+type ArticleProps = ArticleHeaderProps;
 
-const Article: FC<ArticleProps> = ({ title, subtitle, author, date }) => {
+const Article: FC<ArticleProps> = ({
+  title,
+  subtitle,
+  category,
+  author,
+  date,
+  tags,
+}) => {
   return (
     <article className="article">
       <ArticleHeader
         title={title}
         subtitle={subtitle}
+        category={category}
         author={author}
         date={date}
+        tags={tags}
       />
       <ArticleParagraphs />
     </article>

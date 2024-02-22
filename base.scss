@@ -43,7 +43,7 @@
 @import "./src/stories/Library/Lists/list-details/list-details";
 @import "./src/stories/Library/Lists/list-materials/list-materials";
 @import "./src/stories/Library/Lists/list-empty/list-empty";
-@import "./src/stories/Library/accordion/accordion";
+@import "./src/stories/Library/footer-accordions/footer-accordions";
 @import "./src/stories/Library/Modals/modal";
 @import "./src/stories/Library/Modals/modal-details/modal-details";
 @import "./src/stories/Library/Modals/modal-cta/modal-cta";
@@ -113,6 +113,23 @@
 @import "./src/stories/Library/promo-title/promo-title";
 @import "./src/stories/Library/Modals/group-modal-item-skeleton";
 @import "./src/stories/Library/Lists/list-dashboard/list-dashboard-skeleton";
+@import "./src/stories/Library/recommended-material/recommended-material";
+@import "./src/stories/Library/recommendation/recommendation";
+@import "./src/stories/Library/recommended-material/recommended-material-skeleton";
+@import "./src/stories/Library/recommendation/recommendation-skeleton";
+@import "./src/stories/Library/nav-teaser/nav-teaser";
+@import "./src/stories/Library/nav-grid/nav-grid";
+@import "./src/stories/Library/hero/hero";
+@import "./src/stories/Library/tag/tag-list/tag-list";
+@import "./src/stories/Library/nav-spot/nav-spot";
+@import "./src/stories/Library/nav-spots/nav-spots";
+@import "./src/stories/Library/input-label/input-label";
+@import "./src/stories/Library/footer-separator/footer-separator";
+@import "./src/stories/Library/footer-widgets/footer-widgets";
+@import "./src/stories/Library/footer-info/footer-info";
+@import "./src/stories/Library/footer-colums/footer-colums";
+@import "./src/stories/Library/header-sidebar-nav/header-sidebar-nav";
+@import "./src/stories/Library/header-menu-list/header-menu-list";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";
@@ -130,6 +147,7 @@
 @import "./src/stories/Blocks/article/article";
 @import "./src/stories/Blocks/event-page/event-page";
 @import "./src/stories/Blocks/event-list-page/event-list-page";
+@import "./src/stories/Blocks/page/page";
 @import "./src/stories/Blocks/reservation-page/reservation-page-skeleton";
 @import "./src/stories/Blocks/loan-page/loan-page-skeleton";
 

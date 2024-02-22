@@ -1,13 +1,24 @@
-.paragraphs__item {
-  @include vertical-spacing;
+.paragraphs {
+  @include block-spacing();
 }
 
-// 'Links' + 'Files' paragraphs should go flush against each-other.
+.paragraphs__item + .paragraphs__item {
+  @include block-spacing();
+}
+
+// Some paragraphs should go flush against each-other.
 .paragraphs__item--links,
-.paragraphs__item--files {
+.paragraphs__item--files,
+.paragraphs__item--accordion {
+  @include layout-container($block-max-width__medium);
+
+  + .paragraphs__item--accordion,
   + .paragraphs__item--files,
   + .paragraphs__item--links {
-    // -1px to also collapse the border.
-    margin-top: -($_vertical-spacing--large + 1px);
+    @include block-spacing("sibling");
   }
+}
+
+.paragraphs__item--hero {
+  @include block-spacing("negative");
 }

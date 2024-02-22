@@ -2,29 +2,17 @@
   border: 1px solid $color__global-tertiary-1;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 250px 1fr 105px;
   background-color: $color__global-primary;
   position: sticky;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
   z-index: $z-20;
-
-  @include media-query__small {
-    grid-template-columns: 1fr 105px;
-  }
-
-  @include media-query__medium {
-    grid-template-columns: 250px 1fr 105px;
-  }
 }
 
 .header__logo-desktop {
-  display: none;
   border-right: 1px solid $color__global-tertiary-1;
-  @include media-query__medium {
-    display: block;
-  }
 }
 
 .header__logo-desktop-link {
@@ -54,26 +42,19 @@
 }
 
 .header__menu-navigation {
-  display: none;
-
-  @include media-query__medium {
-    display: flex;
-    padding: 0 12px;
-    height: 100%;
-  }
+  display: inline-flex;
+  padding: 0 12px;
+  height: 100%;
+  white-space: nowrap;
 }
 
 .header__menu-navigation-mobile {
-  display: flex;
+  display: none;
 
   @include media-query__small {
     .pagefold-triangle-small {
       display: none;
     }
-  }
-
-  @include media-query__medium {
-    display: none;
   }
 }
 
@@ -82,19 +63,6 @@
   justify-content: center;
   align-items: center;
   border-right: 1px solid $color__global-tertiary-1;
-}
-
-.header__menu-navigation-item:hover {
-  border-top: 1px solid transparent; // to prevent jumping
-  border-bottom: 1px solid $color__global-black;
-}
-
-.header__menu-navigation-link {
-  padding: 0 12px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  color: $color__text-primary-black;
 }
 
 .header__menu-profile,
@@ -246,50 +214,35 @@
   }
 }
 
-// The kebab casing conflicts with our naming convention.
-#header__overlay.visible {
-  /* stylelint-disable-line */
-  display: grid;
-}
+// has-burger-menu is added dynamically using JS, by calculating if there
+// is enough space to show the desktop menu, and otherwise enabling the
+// burger menu. @see header-state.js
+.has-burger-menu {
+  .header {
+    grid-template-columns: 1fr;
 
-// The kebab casing conflicts with our naming convention.
-#header__overlay {
-  /* stylelint-disable-line */
-  display: none;
-  z-index: $z-20;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  grid-template-columns: 384px 1fr;
+    @include media-query__small {
+      grid-template-columns: 1fr 105px;
+    }
+  }
 
-  @include media-query__small {
-    grid-template-columns: 384px 1fr;
+  .header__menu-navigation {
+    position: absolute;
+    top: -999px;
+
+    // This is important, to avoid screen readers seeing double links.
+    visibility: hidden;
+  }
+
+  .header__logo-desktop {
+    display: none;
+  }
+
+  .header__menu-navigation-mobile {
+    display: flex;
   }
 }
 
-.header__overlay-main {
-  background-color: $color__global-primary;
-}
-
-.header__overlay-backdrop {
-  background-color: $color__global-black;
-  opacity: 0.6;
-}
-
-.header__overlay-menu {
-  margin-top: 96px;
-  margin-left: 56px;
-}
-
-.header__overlay-menu-item {
-  margin-bottom: $s-sm;
-}
-
-// The kebab casing conflicts with our naming convention.
-#header__menu--close {
-  /* stylelint-disable-line */
-  position: fixed;
-  padding: 30px;
+#header-sidebar-nav__toggle {
+  cursor: pointer;
 }

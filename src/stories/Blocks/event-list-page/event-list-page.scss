@@ -1,10 +1,17 @@
 .event-list-page {
+  @include block-spacing();
   background-color: $color__global-primary;
 }
 
 .event-list-page__heading {
-  @include layout-container;
+  @include layout-container($block-max-width__large);
   @include typography($typo__h2);
-  @include vertical-spacing(0, $s-xl);
-  padding-top: $s-xl;
+}
+
+.event-list-page__filters {
+  @include layout-container($block-max-width__large);
+
+  display: flex;
+  margin-top: $s-lg;
+  margin-bottom: $s-lg;
 }

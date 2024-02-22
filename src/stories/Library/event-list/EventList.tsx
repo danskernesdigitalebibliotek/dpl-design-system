@@ -1,7 +1,9 @@
+import clsx from "clsx";
 import {
   EventListItem,
   EventListItemProps,
 } from "../event-list-item/EventListItem";
+import EventListItemStacked from "../event-list-item/EventListItemStacked";
 
 type EventListProps = {
   events: EventListItemProps[];
@@ -10,11 +12,27 @@ type EventListProps = {
 const EventList: React.FC<EventListProps> = ({ events }) => {
   return (
     <ul className="event-list">
-      {events.map((event, index) => (
-        <li key={index} className="event-list__item">
-          <EventListItem {...event} />
-        </li>
-      ))}
+      {events.map((event, index) => {
+        // Check if current event should be stacked with the previous one
+        const isStacked =
+          index > 0 &&
+          events[index].eventSeriesId === events[index - 1].eventSeriesId;
+
+        return (
+          <li
+            key={index}
+            className={clsx("event-list__item", {
+              "event-list__item--stacked": isStacked,
+            })}
+          >
+            {isStacked ? (
+              <EventListItemStacked {...event} />
+            ) : (
+              <EventListItem {...event} />
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 };

@@ -1,0 +1,69 @@
+// Some variables used here are defined in recommended-material.scss
+$_recommendation-max-width: 896px;
+
+.recommendation {
+  @include layout-container($padding: $s-2xl);
+
+  background-color: $color__global-primary;
+  display: flex;
+  flex-direction: column;
+  gap: $s-xl;
+  padding-top: $s-xl;
+  padding-bottom: $s-xl;
+}
+
+.recommendation__texts {
+  text-decoration: none;
+}
+.recommendation__title {
+  @include typography($typo__h2);
+  word-wrap: break-word;
+  margin-bottom: $s-md;
+}
+.recommendation__description {
+  @include typography($typo__body-medium);
+  margin-bottom: $s-md;
+  word-wrap: break-word;
+}
+
+@include media-query__small {
+  .recommendation {
+    @include layout-container(
+      $padding: 0,
+      $max-width: $_recommendation-max-width
+    );
+    display: grid;
+    grid-template-columns:
+      $_recommended-material-max-width
+      minmax($_recommended-material-max-width, 1fr);
+    grid-template-areas: "material text-content";
+    padding-top: unset;
+    padding-bottom: unset;
+    gap: 0;
+    max-height: $_recommended-material-max-height;
+    overflow: hidden;
+  }
+  .recommendation_title {
+    @include typography($typo__h3);
+  }
+  .recommendation--reversed {
+    grid-template-columns:
+      minmax($_recommended-material-max-width, 1fr)
+      $_recommended-material-max-width;
+    grid-template-areas: "text-content material";
+  }
+  .recommendation__material {
+    grid-area: material;
+  }
+  .recommendation__texts {
+    grid-area: text-content;
+    padding-left: $s-4xl;
+    padding-right: $s-4xl;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .recommendation__description {
+    margin-bottom: $s-lg;
+  }
+}

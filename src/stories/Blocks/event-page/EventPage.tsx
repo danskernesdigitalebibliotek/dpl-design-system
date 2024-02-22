@@ -15,7 +15,6 @@ const EventPage: FC<EventPageProps> = ({
   title,
   date,
   image,
-  descriptionTitle,
   descriptionDescription,
   horizontalTermLineData,
   listDescriptionData,
@@ -24,7 +23,6 @@ const EventPage: FC<EventPageProps> = ({
     <article className="event-page">
       <EventHeader title={title} date={date} image={image} />
       <EventDescription
-        descriptionTitle={descriptionTitle}
         descriptionDescription={descriptionDescription}
         horizontalTermLineData={horizontalTermLineData}
         listDescriptionData={listDescriptionData}

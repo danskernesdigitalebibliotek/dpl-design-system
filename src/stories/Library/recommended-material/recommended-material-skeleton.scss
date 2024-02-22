@@ -1,0 +1,23 @@
+.recommended-material {
+  .ssc-square {
+    width: 30px;
+    height: 30px;
+    justify-self: end;
+  }
+
+  .ssc-square.image-square {
+    height: 216px;
+    aspect-ratio: 0.79;
+    width: auto;
+    justify-self: center;
+  }
+  .ssc-text-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .ssc-line {
+    width: 60%;
+  }
+}
