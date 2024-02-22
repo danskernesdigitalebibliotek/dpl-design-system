@@ -1,0 +1,116 @@
+$_hero-column-breakpoint: "small";
+
+.hero__content,
+.hero__visual {
+  @include media-query__name($_hero-column-breakpoint) {
+    padding: $s-2xl;
+  }
+}
+.hero__visual {
+  @include media-query__name($_hero-column-breakpoint) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-right: 1px solid $color__global-tertiary-1;
+  }
+}
+
+.hero {
+  @include layout-container($layout__max-width--large);
+  border-bottom: 1px solid $color__global-tertiary-1;
+  display: grid;
+  gap: $s-lg;
+  padding-bottom: $s-2xl;
+  @include media-query__name($_hero-column-breakpoint) {
+    grid-template-columns: 2fr 1fr;
+    gap: 0;
+    padding-bottom: 0;
+  }
+
+  // if hero-content is a link, remove text-decoration for all children
+  > a {
+    text-decoration: none;
+  }
+}
+
+@include media-query__name($_hero-column-breakpoint) {
+  .hero.hero--has-no-media {
+    .hero__visual {
+      @include identity-placeholder;
+    }
+  }
+}
+
+.hero__description {
+  margin-bottom: $s-md;
+  flex-grow: 1;
+
+  > * {
+    margin-bottom: $s-md;
+  }
+}
+
+.hero__inner {
+  margin-left: $s-3xl;
+  margin-right: $s-3xl;
+
+  @include media-query__name($_hero-column-breakpoint) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: $s-md;
+
+  @include media-query__name($_hero-column-breakpoint) {
+    padding-top: $s-3xl;
+  }
+}
+
+.hero__cta {
+  width: 100%;
+  text-decoration: none;
+  @include media-query__name($_hero-column-breakpoint) {
+    width: auto;
+  }
+}
+
+.hero__tag {
+  margin-bottom: $s-md;
+  @include media-query__name($_hero-column-breakpoint) {
+    margin-bottom: $s-lg;
+  }
+}
+
+.hero__details {
+  @include typography($typo__h5);
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: $s-md;
+
+  &__type {
+    color: $color__global-tertiary-2;
+  }
+
+  &__date {
+    @include media-query__name($_hero-column-breakpoint) {
+      white-space: nowrap;
+    }
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title {
+  @include typography($typo__h1);
+  margin-bottom: $s-md;
+
+  @include media-query__name($_hero-column-breakpoint) {
+    margin-bottom: $s-xl;
+  }
+}
