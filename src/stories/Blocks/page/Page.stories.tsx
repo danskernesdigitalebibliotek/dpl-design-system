@@ -25,8 +25,6 @@ const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
 export const frontPage = Template.bind({});
 frontPage.args = {
   hero: {
-    image:
-      "https://images.unsplash.com/photo-1531058020387-3be344556be6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZXZlbnR8fHx8fHwxNzAyOTEwMzE0&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
     contentType: "Arrangement",
     date: "06 Dec 2022",
     title: "Stine Pilgaard vinder De Gyldne Laurbær",
@@ -35,5 +33,18 @@ frontPage.args = {
   },
 };
 
-export const blankPage = Template.bind({});
-blankPage.args = {};
+export const branchPage = Template.bind({});
+branchPage.args = {
+  hero: {
+    image:
+      "https://images.unsplash.com/photo-1531058020387-3be344556be6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZXZlbnR8fHx8fHwxNzAyOTEwMzE0&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
+    contentType: "Fillial",
+    title: "Søborg",
+    description:
+      "Boghandlernes store bogpris - De Gyldne går denne gang til Stine Pilgaard for hendes roman 'Meter i sekundet'. Stort tillykke til Stine Pilgaard.",
+    descriptionItems: {
+      Type: { value: ["Bog"], type: "standard" },
+      Sprog: { value: ["Dansk"], type: "standard" },
+    },
+  },
+};
