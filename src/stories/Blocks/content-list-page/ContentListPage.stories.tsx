@@ -1,9 +1,9 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import EventListPage from "./EventListPage";
+import ContentListPage from "./ContentListPage";
 
 export default {
-  title: "Blocks/Event List Page",
-  component: EventListPage,
+  title: "Blocks/List Page",
+  component: ContentListPage,
   parameters: {
     design: {
       type: "figma",
@@ -11,8 +11,8 @@ export default {
     },
     layout: "fullscreen",
   },
-} as ComponentMeta<typeof EventListPage>;
+} as ComponentMeta<typeof ContentListPage>;
 
-const Template: ComponentStory<typeof EventListPage> = () => <EventListPage />;
+const Template: ComponentStory<typeof ContentListPage> = () => <ContentListPage />;
 
 export const Default = Template.bind({});
