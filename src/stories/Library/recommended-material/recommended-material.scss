@@ -34,6 +34,7 @@ $_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
 .recommended-material__texts {
   justify-self: start;
 }
+
 .recommended-material__description,
 .recommended-material__author {
   @include typography($typo__body-small);
@@ -42,4 +43,11 @@ $_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
 .recommended-material__description {
   font-weight: $font__weight--bold;
   line-height: 2;
+}
+
+// Modifier for when the component is used in a grid presentation.
+// I.e. then  <MaterialGrid/> component
+.recommended-material--in-grid {
+  max-width: unset;
+  border: 1px solid $color__global-tertiary-1;
 }

@@ -19,10 +19,6 @@ $_media_small_breakpoint: map_get($breakpoints, "small");
   );
 }
 
-.material-grid__items .recommended-material {
-  max-width: unset;
-  border: 1px solid $color__global-tertiary-1;
-}
 .material-grid__show-more {
   cursor: pointer;
   margin: $s-lg auto 0 auto;

@@ -44,7 +44,7 @@ export const MaterialGrid: React.FC<MaterialGridProps> = ({
           .slice(0, currentMaterialsDisplayed)
           .map((material, index) => (
             <li key={index}>
-              <RecommendedMaterial {...material} />
+              <RecommendedMaterial partOfGrid {...material} />
             </li>
           ))}
       </ul>
