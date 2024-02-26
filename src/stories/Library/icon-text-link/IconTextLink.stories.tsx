@@ -12,6 +12,11 @@ export default {
       defaultValue: "Read in English",
       control: { type: "text" },
     },
+    icon: {
+      name: "Icon",
+      defaultValue: "england",
+      control: { type: "text" },
+    },
   },
   parameters: {
     design: {
