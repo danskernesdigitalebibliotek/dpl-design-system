@@ -8,12 +8,14 @@ export type MaterialGridProps = {
   title: string;
   selectedAmountOfMaterialsForDisplay: 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32;
   materials: RecommendedMaterialProps[];
+  buttonText: string;
 };
 
 export const MaterialGrid: React.FC<MaterialGridProps> = ({
   title,
   selectedAmountOfMaterialsForDisplay,
   materials,
+  buttonText,
 }) => {
   // The JS code here is just an example of how this works.
   // The proper implementation is in the react repo.
@@ -56,7 +58,7 @@ export const MaterialGrid: React.FC<MaterialGridProps> = ({
           aria-controls="material-grid__items"
           onClick={() => handleSetShowAllMaterials()}
         >
-          Se alle
+          {buttonText}
         </button>
       )}
     </div>

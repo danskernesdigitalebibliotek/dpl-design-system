@@ -21,11 +21,16 @@ export default {
       control: "object",
       description: "Recommended materials",
     },
+    buttonText: {
+      control: "text",
+      description: "Text for the button",
+    },
   },
   args: {
     title: "Recommended materials",
     selectedAmountOfMaterialsForDisplay: 4,
     materials: MaterialGridData,
+    buttonText: "Show more",
   },
   parameters: {
     design: {
