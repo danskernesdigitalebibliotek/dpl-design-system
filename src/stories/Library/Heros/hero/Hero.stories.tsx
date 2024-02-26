@@ -40,6 +40,10 @@ export default {
         "Boghandlernes store bogpris - De Gyldne går denne gang til Stine Pilgaard for hendes roman 'Meter i sekundet'. Stort tillykke til Stine Pilgaard.",
       control: { type: "text" },
     },
+    descriptionItems: {
+      Type: { value: ["Bog"], type: "standard" },
+      Sprog: { value: ["Dansk"], type: "standard" },
+    },
   },
 } as ComponentMeta<typeof Hero>;
 
