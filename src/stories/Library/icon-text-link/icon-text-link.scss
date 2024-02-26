@@ -1,0 +1,15 @@
+.icon-text-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $s-sm;
+  cursor: pointer;
+
+  &__text {
+    @include typography($typo__links);
+    color: $color__global-grey;
+    &::after {
+      color: $color__global-grey;
+    }
+  }
+}
