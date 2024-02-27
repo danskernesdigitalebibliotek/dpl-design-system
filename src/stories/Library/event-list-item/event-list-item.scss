@@ -73,14 +73,18 @@ $_stacked-reduce-width: 20px;
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
-}
 
-.event-list-item__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: $z-10;
+  // We want to treat everything inside the image-container as image related.
+  // To make object-fit work, it is important that everything has 100%
+  // height and width set. We cannot know 100% what markup Drupal will use,
+  // so we'll use a wildcard here.
+  * {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: $z-10;
+  }
 }
 
 .event-list-item__content {
