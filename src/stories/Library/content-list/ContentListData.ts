@@ -1,6 +1,6 @@
-import { EventListItemProps } from "../event-list-item/EventListItem";
+import { ContentListItemProps } from "../content-list-item/ContentListItem";
 
-const eventListData: EventListItemProps[] = [
+const contentListData: ContentListItemProps[] = [
   {
     eventSeriesId: "a",
     image:
@@ -143,4 +143,4 @@ const eventListData: EventListItemProps[] = [
     };
   });
 
-export default eventListData;
+export default contentListData;

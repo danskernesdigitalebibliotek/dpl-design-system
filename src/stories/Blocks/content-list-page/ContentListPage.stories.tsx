@@ -13,6 +13,8 @@ export default {
   },
 } as ComponentMeta<typeof ContentListPage>;
 
-const Template: ComponentStory<typeof ContentListPage> = () => <ContentListPage />;
+const Template: ComponentStory<typeof ContentListPage> = () => (
+  <ContentListPage />
+);
 
 export const Default = Template.bind({});
