@@ -1,6 +1,6 @@
 import React from "react";
-import EventList from "../../Library/event-list/EventList";
-import eventListData from "../../Library/event-list/EventListData";
+import ContentList from "../../Library/content-list/ContentList";
+import contentListData from "../../Library/content-list/ContentListData";
 import { InputLabel } from "../../Library/input-label/InputLabel";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
 
@@ -25,7 +25,7 @@ const ContentListPage: React.FC = () => {
           <Dropdown list={list} ariaLabel="Kategorier" arrowIcon="chevron" />
         </div>
       </div>
-      <EventList events={eventListData} />
+      <ContentList items={contentListData} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import Tag from "../tag/Tag";
 
-export type EventListItemProps = {
+export type ContentListItemProps = {
   eventSeriesId: string;
   image: string;
   tagText: string;
@@ -14,7 +14,7 @@ export type EventListItemProps = {
   href: string;
 };
 
-export const EventListItem: React.FC<EventListItemProps> = ({
+export const ContentListItem: React.FC<ContentListItemProps> = ({
   image,
   tagText,
   title,
@@ -30,32 +30,32 @@ export const EventListItem: React.FC<EventListItemProps> = ({
   const placeholderDateTime = "2023-03-10T15:00"; // ISO format date and time
 
   return (
-    <a href={href} className="event-list-item arrow__hover--right-small">
-      <div className="event-list-item__image-container">
-        <img src={image} alt={title} className="event-list-item__image" />
+    <a href={href} className="content-list-item arrow__hover--right-small">
+      <div className="content-list-item__image-container">
+        <img src={image} alt={title} className="content-list-item__image" />
       </div>
-      <div className="event-list-item__content">
+      <div className="content-list-item__content">
         {tagText && (
-          <Tag hasBackground className="event-list-item__tag">
+          <Tag hasBackground className="content-list-item__tag">
             {tagText}
           </Tag>
         )}
-        <div className="event-list-item__date">{date}</div>
-        <h2 className="event-list-item__title">{title}</h2>
-        <div className="event-list-item__description">
+        <div className="content-list-item__date">{date}</div>
+        <h2 className="content-list-item__title">{title}</h2>
+        <div className="content-list-item__description">
           <p>{description}</p>
         </div>
-        <div className="event-list-item__location-wrapper">
-          <p className="event-list-item__location">{location}</p>
+        <div className="content-list-item__location-wrapper">
+          <p className="content-list-item__location">{location}</p>
         </div>
-        <div className="event-list-item__schedule">
+        <div className="content-list-item__schedule">
           <time
-            className="event-list-item__time"
+            className="content-list-item__time"
             dateTime={placeholderDateTime}
           >
             {time}
           </time>
-          <p className="event-list-item__pricing">{price}</p>
+          <p className="content-list-item__pricing">{price}</p>
         </div>
       </div>
       <ArrowSmallRight />
