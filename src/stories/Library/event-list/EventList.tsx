@@ -15,8 +15,8 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
       {events.map((event, index) => {
         // Check if current event should be stacked with the previous one
         const isStacked =
-          index > 0 &&
-          events[index].eventSeriesId === events[index - 1].eventSeriesId;
+          events[index].eventSeriesId === events[index - 1]?.eventSeriesId ??
+          false;
 
         return (
           <li
