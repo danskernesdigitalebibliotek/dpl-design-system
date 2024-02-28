@@ -266,8 +266,4 @@ $_stacked-reduce-width: 20px;
   .event-list-item-stacked__time {
     justify-self: start;
   }
-
-  .event-list-item-stacked > svg {
-    transform: translateX(-#{calc($_stacked-reduce-width / 2)});
-  }
 }
