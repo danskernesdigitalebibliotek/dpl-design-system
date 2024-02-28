@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Hero, { HeroProps } from "../../Library/hero/Hero";
+import Hero, { HeroProps } from "../../Library/Heros/hero/Hero";
 import Paragraph from "../../Library/paragraph/Paragraph";
 
 type PageProps = {
@@ -18,6 +18,7 @@ const Page: FC<PageProps> = ({ hero }) => {
               date={hero.date}
               title={hero.title}
               description={hero.description}
+              descriptionItems={hero.descriptionItems}
             />
           </Paragraph>
         )}
