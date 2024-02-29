@@ -1,5 +1,3 @@
-$_media_small_breakpoint: map_get($breakpoints, "small");
-
 .material-grid {
   @include layout-container($layout__max-width--large, 0);
 }
@@ -13,10 +11,7 @@ $_media_small_breakpoint: map_get($breakpoints, "small");
 }
 .material-grid__items {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(calc(($_media_small_breakpoint / 3) + $s-md), 1fr)
-  );
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .material-grid__show-more {
@@ -24,11 +19,6 @@ $_media_small_breakpoint: map_get($breakpoints, "small");
   margin: $s-lg auto 0 auto;
 }
 
-@include media-query__small {
-  .material-grid__items {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @include media-query__medium {
   .material-grid__items {
     grid-template-columns: repeat(4, 1fr);
