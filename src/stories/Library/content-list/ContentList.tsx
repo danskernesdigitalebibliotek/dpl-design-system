@@ -12,12 +12,7 @@ const ContentList: React.FC<ContentListProps> = ({ items }) => {
   return (
     <ul className="content-list">
       {items.map((item, index) => {
-        // Check if current event should be stacked with the previous one
-        const isStacked =
-          items[index].eventSeriesId === items[index - 1]?.eventSeriesId ??
-          false;
-
-        if (isStacked) {
+        if (item.isStacked) {
           return (
             <li
               key={index}
