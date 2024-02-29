@@ -128,7 +128,7 @@ const contentListData: ContentListItemProps[] = [
     const dateB = new Date(b.date);
     return dateA.getTime() - dateB.getTime();
   })
-  .map((event) => {
+  .map((event, index, items) => {
     const date = new Date(event.date);
     const formattedDate = date.toLocaleDateString("da-DK", {
       // weekday: "long",
@@ -137,9 +137,14 @@ const contentListData: ContentListItemProps[] = [
       day: "numeric",
     });
 
+    const isStacked =
+      index > 0 &&
+      items[index].eventSeriesId === items[index - 1].eventSeriesId;
+
     return {
       ...event,
       date: formattedDate,
+      isStacked,
     };
   });
 

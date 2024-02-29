@@ -2,7 +2,7 @@ import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-
 import Tag from "../tag/Tag";
 
 export type ContentListItemProps = {
-  eventSeriesId: string;
+  eventSeriesId?: string;
   image: string;
   tagText: string;
   title: string;
@@ -12,6 +12,7 @@ export type ContentListItemProps = {
   location: string;
   price: string;
   href: string;
+  isStacked?: boolean;
 };
 
 export const ContentListItem: React.FC<ContentListItemProps> = ({
