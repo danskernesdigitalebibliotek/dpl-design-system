@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import ContentListPage from "./ContentListPage";
 
 export default {
-  title: "Blocks/List Page",
+  title: "Blocks/Content List Page",
   component: ContentListPage,
   parameters: {
     design: {
