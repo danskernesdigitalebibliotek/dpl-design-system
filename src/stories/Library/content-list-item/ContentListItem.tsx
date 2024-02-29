@@ -45,10 +45,10 @@ export const ContentListItem: React.FC<ContentListItemProps> = ({
         <div className="content-list-item__description">
           <p>{description}</p>
         </div>
-        <div className="content-list-item__location-wrapper">
+        <div className="content-list-item__content-bottom-container">
           <p className="content-list-item__location">{location}</p>
         </div>
-        <div className="content-list-item__schedule">
+        <div className="content-list-item__content-right-container">
           <time
             className="content-list-item__time"
             dateTime={placeholderDateTime}
