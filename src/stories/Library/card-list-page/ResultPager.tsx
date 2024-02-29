@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Button } from "../Buttons/button/Button";
 
 interface ResultPagerProps {
@@ -13,7 +14,7 @@ const ResultPager = ({
 }: ResultPagerProps) => {
   const total = totalResults.toLocaleString("da-Dk");
   return (
-    <div className={`${classNames} result-pager`}>
+    <div className={clsx("result-pager", classNames)}>
       <p className="text-small-caption result-pager__title">
         {`Showing ${currentResults} out of ${total} results`}
       </p>
