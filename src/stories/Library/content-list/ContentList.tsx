@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import {
   ContentListItem,
   ContentListItemProps,
@@ -18,18 +17,20 @@ const ContentList: React.FC<ContentListProps> = ({ items }) => {
           items[index].eventSeriesId === items[index - 1]?.eventSeriesId ??
           false;
 
-        return (
-          <li
-            key={index}
-            className={clsx("content-list__item", {
-              "content-list__item--stacked": isStacked,
-            })}
-          >
-            {isStacked ? (
+        if (isStacked) {
+          return (
+            <li
+              key={index}
+              className="content-list__item content-list__item--stacked"
+            >
               <ContentListItemStacked {...item} />
-            ) : (
-              <ContentListItem {...item} />
-            )}
+            </li>
+          );
+        }
+
+        return (
+          <li key={index} className="content-list__item">
+            <ContentListItem {...item} />
           </li>
         );
       })}
