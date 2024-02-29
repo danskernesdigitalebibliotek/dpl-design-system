@@ -7,6 +7,10 @@ export default {
   component: ContentListItemStacked,
   decorators: [withDesign],
   argTypes: {
+    title: {
+      defaultValue: "Hidden Title",
+      control: { type: "text" },
+    },
     date: {
       defaultValue: "01 Feb 2023",
       control: { type: "text" },
