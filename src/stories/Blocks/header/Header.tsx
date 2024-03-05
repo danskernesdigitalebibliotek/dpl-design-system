@@ -127,7 +127,7 @@ export const Header = (props: HeaderProps) => {
           <Pagefold isInheriting={false} isAContainer={false} size="medium" />
           <a href="#" className="header__clock-items">
             <WatchStaticIcon className="mb-8" />
-            <span className="link-tag text-small-caption">Opening hours</span>
+            <span className="text-small-caption">Opening hours</span>
           </a>
         </div>
       </header>
