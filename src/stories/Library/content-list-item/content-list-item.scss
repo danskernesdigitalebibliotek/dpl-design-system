@@ -134,7 +134,6 @@ $_stacked-reduce-width: 20px;
 }
 
 .content-list-item__location {
-  @extend %link-tag;
   @include typography($typo__small-caption);
 }
 
