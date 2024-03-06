@@ -14,6 +14,7 @@ const Page: FC<PageProps> = ({ hero }) => {
           <Paragraph modifier="hero">
             <Hero
               image={hero.image}
+              placeholderText={hero.placeholderText}
               contentType={hero.contentType}
               date={hero.date}
               title={hero.title}

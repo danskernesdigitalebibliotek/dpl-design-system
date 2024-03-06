@@ -15,13 +15,15 @@ const MediaContainer: FC<ImageCreditedProps> = ({
   });
 
   return (
-    <figure className={clsx(classes)}>
-      {media ?? (
+    <div className={clsx(classes)}>
+      {media ? (
+        <div className="media-container__media"> {media} </div>
+      ) : (
         <div className="media-container__placeholder-text">
           {placeholderText}
         </div>
       )}
-    </figure>
+    </div>
   );
 };
 
