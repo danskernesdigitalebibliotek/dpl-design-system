@@ -35,8 +35,15 @@
   &--placeholder {
     @include identity-placeholder;
   }
+}
 
-  * {
+.media-container__media {
+  height: 100%;
+  width: 100%;
+
+  // This is necessary to make object fit work.
+  > figure {
+    width: 100%;
     height: 100%;
   }
 
