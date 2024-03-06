@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
 import clsx from "clsx";
+import MediaContainer from "../media-container/MediaContainer";
 
 type CardProps = {
   variant?: string;
@@ -19,18 +20,16 @@ const Card: FC<CardProps> = ({
   dateTag,
 }) => {
   const classes = clsx("card", {
-    "card--has-no-image": !image,
-    "card--has-image": image,
+    "card--has-no-media": !image,
+    "card--has-media": !!image,
   });
 
   return (
     <article className={classes} data-variant={variant}>
       <a href="https://google.com">
-        <figure className="card__media">
-          {image || (
-            <div className="card__placeholder-text">{placeholderText}</div>
-          )}
-        </figure>
+        <div className="card__media">
+          <MediaContainer placeholderText={placeholderText} media={image} />
+        </div>
         <div className="card__tags">
           {typeTag ? (
             <span className="card__tag card__tag--type">{typeTag}</span>
