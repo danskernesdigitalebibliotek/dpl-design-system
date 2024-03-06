@@ -25,6 +25,7 @@ $_hero-column-breakpoint: "small";
   display: grid;
   gap: $s-lg;
   padding-bottom: $s-2xl;
+  text-decoration: none;
   @include media-query__name($_hero-column-breakpoint) {
     grid-template-columns: 2fr 1fr;
     gap: 0;
