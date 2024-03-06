@@ -47,6 +47,7 @@ $_hero-column-breakpoint: "small";
 }
 
 .hero__description {
+  @include typography($typo__body-placeholder);
   flex-grow: 1;
 
   > * {
