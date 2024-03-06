@@ -5,10 +5,7 @@ $_card-grid-gap: $s-lg;
 
 .card-grid {
   @include layout-container();
-
-  .card__placeholder-text {
-    @include typography($typo__card-placeholder--grid);
-  }
+  @include media-container--grid;
 }
 
 .card-grid--full-width {
@@ -129,9 +126,7 @@ $_card-grid-gap: $s-lg;
         // there, there is plenty of space.
         @if ($name == "small") {
           @include media-query__small {
-            .card__placeholder-text {
-              font-size: 0;
-            }
+            @include media-container--small;
           }
         }
       }
