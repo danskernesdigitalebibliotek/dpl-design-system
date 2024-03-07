@@ -1,5 +1,6 @@
 import React from "react";
 import Tag from "../../tag/Tag";
+import { ReactComponent as ArrowLargeRight } from "../../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
 import ListDescription, {
   ListData,
 } from "../../Lists/list-description/ListDescription";
@@ -12,6 +13,7 @@ export type HeroInnerProps = {
   descriptionItems?: ListData;
   cta?: string;
   tag?: string;
+  arrow?: boolean;
 };
 
 const HeroInner: React.FunctionComponent<HeroInnerProps> = ({
@@ -22,6 +24,7 @@ const HeroInner: React.FunctionComponent<HeroInnerProps> = ({
   descriptionItems,
   cta,
   tag,
+  arrow,
 }) => {
   return (
     <div className="hero__inner">
@@ -44,6 +47,12 @@ const HeroInner: React.FunctionComponent<HeroInnerProps> = ({
       {description && (
         <div className="hero__description">
           <p>{description} </p>
+
+          {arrow && (
+            <div>
+              <ArrowLargeRight />
+            </div>
+          )}
         </div>
       )}
       {cta && (
