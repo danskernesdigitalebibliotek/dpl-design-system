@@ -18,7 +18,10 @@ export const ErrorMessage = ({ message }: ErrorMessageProps) => {
         className="error-message__btn-close"
         aria-label="close modal"
       >
-        <img src="icons/collection/CloseLarge.svg" alt="close modal button" />
+        <img
+          src="icons/collection/CloseLarge.svg"
+          alt="close error message button"
+        />
       </button>
     </div>
   );
