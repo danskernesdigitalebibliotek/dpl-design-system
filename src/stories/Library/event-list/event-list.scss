@@ -1,8 +1,7 @@
 .event-list {
   @include layout-container($block-max-width__large);
-
-  margin-top: $s-lg;
 }
+
 .event-list__item {
   list-style: none;
   margin-bottom: $s-md;

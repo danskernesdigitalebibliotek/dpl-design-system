@@ -5,7 +5,9 @@
 // This function is called when the swiper is initialized.
 // We listen on focus within the item wrapper, and when we detect it, we
 // calculate our own transform value, overwriting SwiperJS.
-function swiperWrapperEventInit(swiperWrapper) {
+function swiperWrapperEventInit(swiper) {
+  const swiperWrapper = swiper.el.querySelector(".swiper-wrapper");
+
   swiperWrapper.addEventListener("focusin", () => {
     // SwiperJS really wants to remove the tranisition duraton when not in use,
     // but we still want it active when using keyboard tabbing.
@@ -43,10 +45,9 @@ function swiperWrapperEventInit(swiperWrapper) {
     // Calculate a new translate value, for pulling the slider.
     // We add half of the latest known sidemargin, so the active slide doesn't
     // go flush against the screen.
-    // eslint-disable-next-line no-param-reassign
-    swiperWrapper.style.transform = `translate3d(${Math.floor(
-      translateWidth + sideMargins / 2
-    )}px, 0, 0)`;
+    translateWidth = Math.floor(translateWidth + sideMargins / 2);
+
+    swiper.setTranslate(translateWidth);
   });
 }
 
@@ -72,8 +73,7 @@ window.addEventListener("load", () => {
     centeredSlidesBounds: false,
     on: {
       afterInit: (swiper) => {
-        const swiperWrapper = swiper.el.querySelector(".swiper-wrapper");
-        swiperWrapperEventInit(swiperWrapper);
+        swiperWrapperEventInit(swiper);
         disableKeyboardNavigation(swiper);
       },
       transitionEnd: (swiper) => {

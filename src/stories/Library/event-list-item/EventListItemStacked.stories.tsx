@@ -23,7 +23,7 @@ export default {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/0TDev6dKbbWlWQQ7w5yAOw/Gentagende-arrangementer---legeplads?type=design&node-id=0-1&mode=design", // This should be change when the design is in the correct figma
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=13701-3367&mode=design&t=yJCbrISIEY34WPBj-4",
     },
     layout: "full",
   },

@@ -82,7 +82,7 @@
   @include typography($typo__body-small);
 }
 
-%identity-placeholder {
+@mixin identity-placeholder {
   background-color: var(--tint-color-120);
   border: $s-lg solid $color__identity-primary;
 
@@ -91,6 +91,10 @@
       border-width: $width;
     }
   }
+}
+
+%identity-placeholder {
+  @include identity-placeholder;
 }
 
 %identity-placeholder-text {

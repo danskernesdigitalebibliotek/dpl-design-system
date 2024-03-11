@@ -8,6 +8,7 @@ export type RecommendedMaterialProps = {
   alt: string;
   favoriteFill?: boolean;
   coverUrl?: string;
+  partOfGrid?: boolean;
 };
 
 export const RecommendedMaterial: React.FC<RecommendedMaterialProps> = ({
@@ -17,9 +18,14 @@ export const RecommendedMaterial: React.FC<RecommendedMaterialProps> = ({
   alt,
   favoriteFill = true,
   coverUrl,
+  partOfGrid = false,
 }) => {
   return (
-    <div className="recommended-material">
+    <div
+      className={`recommended-material ${
+        partOfGrid && "recommended-material--in-grid "
+      }`}
+    >
       <div className="recommended-material__icon">
         <ButtonFavourite fill={favoriteFill} />
       </div>

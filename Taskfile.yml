@@ -14,8 +14,7 @@ vars:
   RELEASE_FULL_NAME: '{{.RELEASE_IMAGE_REGISTRY}}/{{.RELEASE_IMAGE_NAME}}:{{.RELEASE_IMAGE_TAG}}'
 
   # Docker file selection
-  DOCKER_COMPOSE_FILES_OSX: '{{if eq OS "darwin"}}-f docker-compose.mac-nfs.yml{{end}}'
-  DOCKER_COMPOSE_FILES_DEFAULT: '-f docker-compose.yml {{ .DOCKER_COMPOSE_FILES_OSX }}'
+  DOCKER_COMPOSE_FILES_DEFAULT: '-f docker-compose.yml'
   DOCKER_COMPOSE_FILES: '{{.DOCKER_COMPOSE_FILES | default .DOCKER_COMPOSE_FILES_DEFAULT }}'
 
 tasks:

@@ -71,7 +71,7 @@ jobs:
 
 
       - name: Create or update tag
-        uses: EndBug/latest-tag@v1.6.1
+        uses: EndBug/latest-tag@v1.6.2
         with:
           ref: ${{ env.TAG_NAME }}
 

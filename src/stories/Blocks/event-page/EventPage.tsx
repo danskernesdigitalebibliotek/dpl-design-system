@@ -1,5 +1,5 @@
 import { FC } from "react";
-import EventHeader from "../../Library/event-header/EventHeader";
+import Hero from "../../Library/Heros/hero/Hero";
 import EventDescription, {
   EventDescriptionProps,
 } from "../../Library/event-description/EventDescription";
@@ -21,7 +21,13 @@ const EventPage: FC<EventPageProps> = ({
 }) => {
   return (
     <article className="event-page">
-      <EventHeader title={title} date={date} image={image} />
+      <Hero
+        title={title}
+        date={date}
+        image={image}
+        cta="Køb billet"
+        tag="Arrangement"
+      />
       <EventDescription
         descriptionDescription={descriptionDescription}
         horizontalTermLineData={horizontalTermLineData}
