@@ -38,12 +38,12 @@
     }
   }
 
-  &__link {
+  // This approach is used specifically to override the definitions of a in the .rich-text class.
+  a.paragraphs__item--user_registration_section__link {
     width: fit-content;
-  }
-
-  .rich-text a:hover {
-    color: $color__global-white;
-    text-decoration: none;
+    &:hover {
+      color: $color__global-white;
+      text-decoration: none;
+    }
   }
 }

@@ -19,8 +19,7 @@ const RegistrationPageSection = () => {
         mollit anim id est laborum.
       </p>
       <p>
-        <Links href="/" linkText="Go read more here" classNames="mr-16" />
-        <Links href="/" linkText="Or at this webpage" classNames="mr-16" />
+        <a href="/">Go read more here</a> <a href="/">Or at this webpage</a>
       </p>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
