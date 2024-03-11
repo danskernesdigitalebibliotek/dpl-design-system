@@ -1,62 +1,50 @@
-.left-aligned-page {
-  background: $color__global-primary;
-  padding: $s-md;
-  position: relative;
-  z-index: 0;
-  @include typography($typo__body-placeholder);
+.paragraphs__item--language_selector {
+  @include layout-container($_max-width-rich-text);
 
-  @include media-query__medium {
-    padding: $s-6xl;
+  margin-bottom: $s-xl;
+}
+
+.paragraphs__item--user_registration_section {
+
+  &__button_row {
+    @include layout-container($_max-width-rich-text);
+
+    p {
+      @include typography($typo__body-medium);
+      display: inline-block;
+    }
   }
 
-  &__title {
-    @include typography($typo__h1);
-    padding: $s-xl 0;
-  }
-
-  &__body {
-    @include typography($typo__body-large);
-    max-width: 1000px;
-    margin-bottom: $s-xl;
-  }
-
-  &__switch-languages {
-    display: flex;
-    flex-direction: row;
-    gap: $s-md;
-    margin-bottom: $s-2xl;
-  }
-
-  &__switch-language {
-    margin-right: $s-md;
-  }
-
-  &__quick-links {
-    @include typography($typo__body-medium);
-    display: inline-block;
-  }
-
-  &__quick-link {
+  &__button {
     @include typography($typo__links);
+
+    color: $color__global-grey;
     display: inline-block;
     margin-left: $s-md;
-    color: $color__global-grey;
+
     &::after {
       color: $color__global-grey;
     }
   }
-
-  &__subsection {
-    margin-top: $s-6xl;
-    max-width: 900px;
+  
+  &__title {
+    padding: $s-xl 0;
   }
 
-  &__headline {
-    @include typography($typo__h2);
+  &__body {
+    padding-top: $s-3xl;
+    
+    p {
+      margin-bottom: $s-md;    
+    }
+  } 
+
+  &__link {
+    width: fit-content;
   }
 
-  &__subsection-body {
-    @include typography($typo__body-placeholder);
-    margin: $s-xl 0;
+  .rich-text a:hover {
+    color: $color__global-white; 
+    text-decoration: none;
   }
 }

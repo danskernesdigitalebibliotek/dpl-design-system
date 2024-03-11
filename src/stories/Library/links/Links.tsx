@@ -8,7 +8,7 @@ export const Links = (props: LinksProps) => {
   const { href, linkText, classNames } = props;
 
   return (
-    <a href={href} className={`link-tag ${classNames || ""}`}>
+    <a href={href} className={classNames}>
       {linkText}
     </a>
   );
