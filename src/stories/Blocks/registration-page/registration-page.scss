@@ -5,7 +5,6 @@
 }
 
 .paragraphs__item--user_registration_section {
-
   &__button_row {
     @include layout-container($_max-width-rich-text);
 
@@ -26,25 +25,25 @@
       color: $color__global-grey;
     }
   }
-  
+
   &__title {
     padding: $s-xl 0;
   }
 
   &__body {
     padding-top: $s-3xl;
-    
+
     p {
-      margin-bottom: $s-md;    
+      margin-bottom: $s-md;
     }
-  } 
+  }
 
   &__link {
     width: fit-content;
   }
 
   .rich-text a:hover {
-    color: $color__global-white; 
+    color: $color__global-white;
     text-decoration: none;
   }
 }
