@@ -35,19 +35,8 @@
 
   grid-template-columns: 1fr;
 
-  @include media-query__small {
-    grid-template-columns: 1fr 1fr;
-  }
-
   @include media-query__medium {
-    grid-template-columns: 1fr 1fr 1fr;
-
-    .nav-grid--count-1 &,
-    .nav-grid--count-2 &,
-    .nav-grid--count-3 &,
-    .nav-grid--count-4 & {
-      grid-template-columns: 1fr 1fr;
-    }
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

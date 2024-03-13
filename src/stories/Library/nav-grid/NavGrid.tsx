@@ -18,27 +18,24 @@ const NavGrid: FC<CardProps> = ({ items, title, showSubtitles }) => {
     <div
       className={clsx(
         "nav-grid",
-        `nav-grid--count-${items.length}`,
         showSubtitles ? "nav-grid--expanded" : "nav-grid--simple",
         hasMany && "nav-grid--has-many",
         hasMany && "nav-grid--folded"
       )}
     >
       <div className="nav-grid__header">
-        {title ? <h2 className="nav-grid__title">{title}</h2> : ""}
+        {title && <h2 className="nav-grid__title">{title}</h2>}
       </div>
-      <div className="nav-grid__items">
-        {items.map((item) => {
-          return <div className={clsx("nav-grid__item")}>{item}</div>;
-        })}
-      </div>
+      <ul className="nav-grid__items">
+        {items.map((item) => (
+          <li className="nav-grid__item">{item}</li>
+        ))}
+      </ul>
 
-      {hasMany ? (
+      {hasMany && (
         <button className="nav-grid__controller btn-primary btn-outline btn-medium">
           Vis alle
         </button>
-      ) : (
-        ""
       )}
     </div>
   );
