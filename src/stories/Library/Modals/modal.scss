@@ -74,7 +74,7 @@
   background-color: $color__global-primary;
   position: fixed;
   top: 0;
-  right: 17px;
+  right: 0;
   // We need both padding & margin so that when the icon rotates, we don't see
   // the background color bleed outside the modal.
   padding: $s-md;
@@ -85,7 +85,7 @@
   &.modal-btn-close--offset {
     @include media-query__small {
       top: $s-5xl;
-      right: $s-5xl;
+      right: cals($s-5xl + 17px);
     }
   }
 
