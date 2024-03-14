@@ -4,9 +4,9 @@
     "0.e672e4eb.iframe.bundle.js.map": "./0.e672e4eb.iframe.bundle.js.map",
     "1.3e0d30ce.iframe.bundle.js": "./1.3e0d30ce.iframe.bundle.js",
     "2.b82fafb0.iframe.bundle.js": "./2.b82fafb0.iframe.bundle.js",
-    "main.css": "./static/css/main.89e66df2.chunk.css",
-    "main.js": "./main.b2b4716f.iframe.bundle.js",
-    "main.css.map": "./static/css/main.89e66df2.chunk.css.map",
+    "main.css": "./static/css/main.ecf07368.chunk.css",
+    "main.js": "./main.8ed0543a.iframe.bundle.js",
+    "main.css.map": "./static/css/main.ecf07368.chunk.css.map",
     "runtime~main.js": "./runtime~main.6c6b7827.iframe.bundle.js",
     "vendors~main.css": "./static/css/vendors~main.2b205a4f.chunk.css",
     "vendors~main.js": "./vendors~main.8ad9ee52.iframe.bundle.js",
@@ -34,6 +34,8 @@
     "static/media/Profile.9dc56ac6.svg": "./static/media/Profile.9dc56ac6.svg",
     "static/media/Reservations.2ab1341a.svg": "./static/media/Reservations.2ab1341a.svg",
     "static/media/Various.svg": "./static/media/Various.57c7c4a4.svg",
+    "static/media/denmark.6b6ea474.svg": "./static/media/denmark.6b6ea474.svg",
+    "static/media/england.c5ea5647.svg": "./static/media/england.c5ea5647.svg",
     "static/media/base.css": "./static/media/notosans-regular-webfont.d888d593.woff2",
     "static/media/icon-arrow-accent.8244469f.svg": "./static/media/icon-arrow-accent.8244469f.svg",
     "static/media/icon-arrow-ui-large-left.7d951248.svg": "./static/media/icon-arrow-ui-large-left.7d951248.svg",
@@ -53,7 +55,7 @@
     "static/media/icon-profile.9dc56ac6.svg": "./static/media/icon-profile.9dc56ac6.svg",
     "static/media/icon-search.89549f3a.svg": "./static/media/icon-search.89549f3a.svg",
     "static/media/icon-triangle.f1fbee4f.svg": "./static/media/icon-triangle.f1fbee4f.svg",
-    "static/media/icon-warning.e7985235.svg": "./static/media/icon-warning.e7985235.svg",
+    "static/media/icon-warning.svg": "./static/media/icon-warning.e7985235.svg",
     "static/media/icon-watch-static.svg": "./static/media/icon-watch-static.36607596.svg",
     "static/media/infomedia-logo.16e7a40f.svg": "./static/media/infomedia-logo.16e7a40f.svg",
     "vendors~main.8ad9ee52.iframe.bundle.js.LICENSE.txt": "./vendors~main.8ad9ee52.iframe.bundle.js.LICENSE.txt"
@@ -62,7 +64,7 @@
     "runtime~main.6c6b7827.iframe.bundle.js",
     "static/css/vendors~main.2b205a4f.chunk.css",
     "vendors~main.8ad9ee52.iframe.bundle.js",
-    "static/css/main.89e66df2.chunk.css",
-    "main.b2b4716f.iframe.bundle.js"
+    "static/css/main.ecf07368.chunk.css",
+    "main.8ed0543a.iframe.bundle.js"
   ]
 }
