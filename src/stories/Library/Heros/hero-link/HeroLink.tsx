@@ -1,6 +1,5 @@
 import React from "react";
 import clsx from "clsx";
-import { ReactComponent as ArrowLargeRight } from "../../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
 import HeroInner from "../hero/HeroInner";
 import { HeroProps } from "../hero/Hero";
 import HeroVisual from "../hero/HeroVisual";
@@ -31,10 +30,8 @@ const HeroLink: React.FunctionComponent<HeroLinkProps> = ({
           title={title}
           description={description}
           descriptionItems={descriptionItems}
+          arrow
         />
-        <div>
-          <ArrowLargeRight />
-        </div>
       </a>
 
       <HeroVisual image={image} />

@@ -1,12 +1,12 @@
-.event-list {
+.content-list {
   @include layout-container($block-max-width__large);
 }
 
-.event-list__item {
+.content-list__item {
   list-style: none;
   margin-bottom: $s-md;
 }
 
-.event-list__item--stacked {
+.content-list__item--stacked {
   margin-top: -$s-md;
 }

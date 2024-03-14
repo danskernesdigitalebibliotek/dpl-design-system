@@ -1,6 +1,6 @@
 import React from "react";
-import EventList from "../../Library/event-list/EventList";
-import eventListData from "../../Library/event-list/EventListData";
+import ContentList from "../../Library/content-list/ContentList";
+import contentListData from "../../Library/content-list/ContentListData";
 import { InputLabel } from "../../Library/input-label/InputLabel";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
 
@@ -15,19 +15,19 @@ const list = [
   },
 ];
 
-const EventListPage: React.FC = () => {
+const ContentListPage: React.FC = () => {
   return (
-    <div className="event-list-page">
-      <h1 className="event-list-page__heading">Arrangementer</h1>
-      <div className="event-list-page__filters">
-        <div className="event-list-page__filter">
+    <div className="content-list-page">
+      <h1 className="content-list-page__heading">Arrangementer</h1>
+      <div className="content-list-page__filters">
+        <div className="content-list-page__filter">
           <InputLabel text="Kategorier" />
           <Dropdown list={list} ariaLabel="Kategorier" arrowIcon="chevron" />
         </div>
       </div>
-      <EventList events={eventListData} />
+      <ContentList items={contentListData} />
     </div>
   );
 };
 
-export default EventListPage;
+export default ContentListPage;

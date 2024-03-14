@@ -1,12 +1,16 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import EventListItemStacked from "./EventListItemStacked";
+import ContentListItemStacked from "./ContentListItemStacked";
 
 export default {
-  title: "Library / Event List Item Stacked",
-  component: EventListItemStacked,
+  title: "Library / Content List Item Stacked",
+  component: ContentListItemStacked,
   decorators: [withDesign],
   argTypes: {
+    title: {
+      defaultValue: "Hidden Title",
+      control: { type: "text" },
+    },
     date: {
       defaultValue: "01 Feb 2023",
       control: { type: "text" },
@@ -27,10 +31,10 @@ export default {
     },
     layout: "full",
   },
-} as ComponentMeta<typeof EventListItemStacked>;
+} as ComponentMeta<typeof ContentListItemStacked>;
 
-const Template: ComponentStory<typeof EventListItemStacked> = (args) => (
-  <EventListItemStacked {...args} />
+const Template: ComponentStory<typeof ContentListItemStacked> = (args) => (
+  <ContentListItemStacked {...args} />
 );
 
 export const Default = Template.bind({});
