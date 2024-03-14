@@ -74,7 +74,7 @@
   background-color: $color__global-primary;
   position: fixed;
   top: 0;
-  right: 0;
+  right: 17;
   // We need both padding & margin so that when the icon rotates, we don't see
   // the background color bleed outside the modal.
   padding: $s-md;
