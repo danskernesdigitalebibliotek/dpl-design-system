@@ -1,6 +1,6 @@
-import { EventListItemProps } from "../event-list-item/EventListItem";
+import { ContentListItemProps } from "../content-list-item/ContentListItem";
 
-const eventListData: EventListItemProps[] = [
+const contentListData: ContentListItemProps[] = [
   {
     eventSeriesId: "a",
     image:
@@ -128,7 +128,7 @@ const eventListData: EventListItemProps[] = [
     const dateB = new Date(b.date);
     return dateA.getTime() - dateB.getTime();
   })
-  .map((event) => {
+  .map((event, index, items) => {
     const date = new Date(event.date);
     const formattedDate = date.toLocaleDateString("da-DK", {
       // weekday: "long",
@@ -137,10 +137,15 @@ const eventListData: EventListItemProps[] = [
       day: "numeric",
     });
 
+    const isStacked =
+      index > 0 &&
+      items[index].eventSeriesId === items[index - 1].eventSeriesId;
+
     return {
       ...event,
       date: formattedDate,
+      isStacked,
     };
   });
 
-export default eventListData;
+export default contentListData;

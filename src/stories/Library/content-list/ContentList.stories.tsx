@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import EventList from "./EventList";
-import eventListData from "./EventListData";
+import ContentList from "./ContentList";
+import contentListData from "./ContentListData";
 
 export default {
-  title: "Library / Event List",
-  component: EventList,
+  title: "Library / Content List",
+  component: ContentList,
   parameters: {
     design: {
       type: "figma",
@@ -12,13 +12,13 @@ export default {
     },
     layout: "fullscreen",
   },
-} as ComponentMeta<typeof EventList>;
-const Template: ComponentStory<typeof EventList> = (args) => (
-  <EventList {...args} />
+} as ComponentMeta<typeof ContentList>;
+const Template: ComponentStory<typeof ContentList> = (args) => (
+  <ContentList {...args} />
 );
 
 export const Default = Template.bind({});
 
 Default.args = {
-  events: eventListData,
+  items: contentListData,
 };

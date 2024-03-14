@@ -1,10 +1,10 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { EventListItem } from "./EventListItem";
+import { ContentListItem } from "./ContentListItem";
 
 export default {
-  title: "Library / Event List Item",
-  component: EventListItem,
+  title: "Library / Content List Item",
+  component: ContentListItem,
   decorators: [withDesign],
   argTypes: {
     image: {
@@ -54,10 +54,10 @@ export default {
     },
     layout: "full",
   },
-} as ComponentMeta<typeof EventListItem>;
+} as ComponentMeta<typeof ContentListItem>;
 
-const Template: ComponentStory<typeof EventListItem> = (args) => (
-  <EventListItem {...args} />
+const Template: ComponentStory<typeof ContentListItem> = (args) => (
+  <ContentListItem {...args} />
 );
 
 export const Default = Template.bind({});

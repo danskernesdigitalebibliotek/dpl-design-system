@@ -125,11 +125,10 @@ export const Header = (props: HeaderProps) => {
 
         <div className="header__clock">
           <Pagefold isInheriting={false} isAContainer={false} size="medium" />
-          <div className="header__clock-items">
+          <a href="#" className="header__clock-items">
             <WatchStaticIcon className="mb-8" />
-            <span className="text-small-caption">Fredag</span>
-            <span className="text-small-caption">28 Maj</span>
-          </div>
+            <span className="text-small-caption">Opening hours</span>
+          </a>
         </div>
       </header>
       <HeaderSidebarNav menuLinks={menuItems} />
