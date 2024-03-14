@@ -1,0 +1,49 @@
+.paragraphs__item--language_selector {
+  @include layout-container($_max-width-rich-text);
+
+  margin-bottom: $s-xl;
+}
+
+.paragraphs__item--user_registration_section {
+  &__button_row {
+    @include layout-container($_max-width-rich-text);
+
+    p {
+      @include typography($typo__body-medium);
+      display: inline-block;
+    }
+  }
+
+  &__button {
+    @include typography($typo__links);
+
+    color: $color__global-grey;
+    display: inline-block;
+    margin-left: $s-md;
+
+    &::after {
+      color: $color__global-grey;
+    }
+  }
+
+  &__title {
+    padding: $s-md 0;
+  }
+
+  &__body {
+    padding-top: $s-3xl;
+
+    p {
+      margin-bottom: $s-md;
+    }
+  }
+
+  // This approach is used specifically to override the definitions of a in the .rich-text class.
+  a.paragraphs__item--user_registration_section__link {
+    width: fit-content;
+    &:hover {
+      color: $color__global-white;
+      text-decoration: none;
+    }
+  }
+}
