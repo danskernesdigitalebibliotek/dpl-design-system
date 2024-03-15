@@ -85,7 +85,7 @@
   &.modal-btn-close--offset {
     @include media-query__small {
       top: $s-5xl;
-      right: $s-5xl;
+      right: calc($s-5xl + 17px);
     }
   }
 
