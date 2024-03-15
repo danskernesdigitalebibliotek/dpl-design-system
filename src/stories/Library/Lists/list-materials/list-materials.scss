@@ -3,11 +3,16 @@
   @include show-svg-on-hover(".list-materials__arrow");
   @include show-svg-on-hover(".arrow-button");
 
-  display: flex;
   min-height: 96px;
   padding: $s-md;
   background-color: $color__global-white;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-areas:
+    "checkbox content"
+    "checkbox status-content";
+  align-items: center;
+  position: relative;
   cursor: pointer;
 
   &:hover {
@@ -18,6 +23,7 @@
     padding: $s-md 32px;
     align-items: center;
     flex-direction: row;
+    display: flex;
   }
 
   &--bottom-buttons-visible {
@@ -34,12 +40,13 @@
 }
 
 .list-materials__checkbox {
-  display: flex;
-  align-items: center;
+  grid-area: checkbox;
 }
-
 .list-materials__content {
-  flex: 1;
+  grid-area: content;
+  @include media-query__small {
+    flex: 1;
+  }
 }
 
 .list-materials__content__header {
@@ -61,11 +68,20 @@
 }
 
 .list-materials__status {
-  display: flex;
-  flex-direction: row;
-  margin-top: 0;
-  align-items: center;
-  grid-gap: $s-md;
+  grid-area: status-content;
+
+  @include media-query__small {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: unset;
+    align-items: flex-end;
+  }
+}
+.list-materials__status-label {
+  position: absolute;
+  top: $s-md;
+  right: $s-md;
 }
 
 .list-materials__status__note-desktop {

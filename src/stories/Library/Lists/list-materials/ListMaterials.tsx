@@ -43,22 +43,22 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
               <StatusLabel {...statusMaterialType} />
             </div>
             <p className="list-materials__content__header mt-8">{title}</p>
-            <p className="text-small-caption">
+            <p className="text-small-caption mt-8">
               {author} ({year})
             </p>
           </div>
           <div className="list-materials__status">
             {statusMessage && (
-              <span className="list-materials__status__note-desktop">
+              <span className="list-materials__status__note-desktop mt-8">
                 {statusMessage}
               </span>
             )}
             <div>
-              <div className="status-label status-label--neutral">
+              <div className="list-materials__status-label status-label status-label--neutral">
                 Afleveres 27-04-2023
               </div>
               {statusMessage && (
-                <span className="list-materials__status__note-mobile">
+                <span className="list-materials__status__note-mobile mt-8">
                   {statusMessage}
                 </span>
               )}
@@ -88,13 +88,13 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
               <div className="status-label status-label--outline">Bog</div>
             </div>
             <p className="list-materials__content__header mt-8">{title}</p>
-            <p className="text-small-caption">
+            <p className="text-small-caption mt-8">
               {author} ({year})
             </p>
           </div>
           <div className="list-materials__status">
             <div>
-              <div className="status-label status-label--neutral">
+              <div className="list-materials__status-label status-label status-label--neutral">
                 Afleveres 27-04-2023
               </div>
               <button
