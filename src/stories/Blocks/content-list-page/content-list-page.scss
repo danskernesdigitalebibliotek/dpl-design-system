@@ -12,6 +12,7 @@
   @include layout-container($block-max-width__large);
 
   display: flex;
+  gap: $s-sm;
   margin-top: $s-lg;
   margin-bottom: $s-lg;
 }
