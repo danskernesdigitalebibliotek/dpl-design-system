@@ -83,7 +83,7 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-scripts": "^4.0.3",
-    "sass": "^1.71.1",
+    "sass": "^1.72.0",
     "skeleton-screen-css": "^1.1.0",
     "storybook-addon-designs": "^6.2.1",
     "stylelint": "^14.16.1",
