@@ -11,10 +11,6 @@
   height: 100vh;
   overflow: auto;
 
-  h2 {
-    padding-right: $s-xl;
-  }
-
   &__screen-reader-description {
     @include hide-visually;
   }
@@ -23,18 +19,10 @@
     height: calc(100vh - 200px);
     width: calc(100vw - 200px);
     margin: $s-5xl 0 0 $s-5xl;
-
-    h2 {
-      padding-right: $s-4xl;
-    }
   }
 
   @include media-query__medium {
     padding: $s-4xl $s-7xl;
-
-    h2 {
-      padding-right: initial;
-    }
   }
 
   &.modal--no-padding {
