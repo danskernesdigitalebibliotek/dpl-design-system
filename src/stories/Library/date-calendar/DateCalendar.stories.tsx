@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import DateCalendar from "./DateCalendar";
 
 export default {
-  title: "Library / DateCalendar",
+  title: "Library / Date calendar",
   component: DateCalendar,
   decorators: [withDesign],
   argTypes: {},
