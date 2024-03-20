@@ -4,10 +4,14 @@ import "flatpickr/dist/flatpickr.css";
 
 import flatpickr from "flatpickr";
 import { Instance } from "flatpickr/dist/types/instance";
-import React, { MutableRefObject, useCallback, useRef } from "react";
+import React, { MutableRefObject, useCallback, useEffect, useRef } from "react";
 import { BaseOptions } from "flatpickr/dist/types/options";
 
-const DateRange: React.FC = () => {
+export type DateRangeProps = {
+  open: boolean;
+};
+
+const DateRange: React.FC<DateRangeProps> = ({ open }) => {
   const picker = useRef() as MutableRefObject<Instance>;
 
   const calendar = useCallback((node: Node | null) => {
@@ -22,6 +26,14 @@ const DateRange: React.FC = () => {
       picker.current = flatpickr(node, options);
     }
   }, []);
+
+  useEffect(() => {
+    if (open) {
+      picker.current.open();
+    } else {
+      picker.current.close();
+    }
+  }, [open]);
 
   return (
     <div className="date-range">

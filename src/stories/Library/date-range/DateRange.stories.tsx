@@ -1,12 +1,18 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import DateRange from "./DateRange";
+import DateRange, { DateRangeProps } from "./DateRange";
 
 export default {
   title: "Library / Date range",
   component: DateRange,
   decorators: [withDesign],
-  argTypes: {},
+  argTypes: {
+    open: {
+      name: "Open calendar",
+      defaultValue: false,
+      control: { type: "boolean" },
+    },
+  },
   parameters: {
     design: {
       type: "figma",
@@ -16,6 +22,13 @@ export default {
   },
 } as ComponentMeta<typeof DateRange>;
 
-const Template: ComponentStory<typeof DateRange> = () => <DateRange />;
+const Template: ComponentStory<typeof DateRange> = (args: DateRangeProps) => (
+  <DateRange {...args} />
+);
 
-export const Default = Template.bind({});
+export const Closed = Template.bind({});
+
+export const Open = Template.bind({});
+Open.args = {
+  open: true,
+};
