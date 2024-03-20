@@ -76,7 +76,7 @@
     "flatpickr": "^4.6.13",
     "json": "^11.0.0",
     "markdownlint-cli2": "^0.4.0",
-    "postcss": "^8.4.35",
+    "postcss": "^8.4.37",
     "prettier": "^2.7.1",
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.1.0",
