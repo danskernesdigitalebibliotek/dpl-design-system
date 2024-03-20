@@ -1,10 +1,10 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import DateCalendar from "./DateCalendar";
+import DateRange from "./DateRange";
 
 export default {
-  title: "Library / Date calendar",
-  component: DateCalendar,
+  title: "Library / Date range",
+  component: DateRange,
   decorators: [withDesign],
   argTypes: {},
   parameters: {
@@ -14,8 +14,8 @@ export default {
     },
     layout: "padded",
   },
-} as ComponentMeta<typeof DateCalendar>;
+} as ComponentMeta<typeof DateRange>;
 
-const Template: ComponentStory<typeof DateCalendar> = () => <DateCalendar />;
+const Template: ComponentStory<typeof DateRange> = () => <DateRange />;
 
 export const Default = Template.bind({});

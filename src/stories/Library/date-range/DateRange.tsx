@@ -4,15 +4,14 @@ import "flatpickr/dist/flatpickr.css";
 
 import flatpickr from "flatpickr";
 import { Instance } from "flatpickr/dist/types/instance";
-import { MutableRefObject, useCallback, useRef } from "react";
+import React, { MutableRefObject, useCallback, useRef } from "react";
 import { BaseOptions } from "flatpickr/dist/types/options";
 
-const DateCalendar = () => {
+const DateRange: React.FC = () => {
   const picker = useRef() as MutableRefObject<Instance>;
 
   const calendar = useCallback((node: Node | null) => {
     const options: Partial<BaseOptions> = {
-      inline: true,
       animate: false,
       mode: "range",
       defaultDate: ["2024-01-01", "2024-01-10"],
@@ -24,16 +23,16 @@ const DateCalendar = () => {
     }
   }, []);
 
-  // An input is required for flatpickr to work, but we don't want to show it in the story
   return (
-    <input
-      ref={calendar}
-      title="Hidden field"
-      aria-label="Hidden field"
-      type="text"
-      className="hide-visually"
-    />
+    <div className="date-range">
+      <input
+        className="date-range__input"
+        ref={calendar}
+        type="text"
+        aria-label="Vælg dato"
+      />
+    </div>
   );
 };
 
-export default DateCalendar;
+export default DateRange;
