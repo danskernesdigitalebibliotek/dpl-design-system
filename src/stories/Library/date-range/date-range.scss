@@ -9,11 +9,17 @@
     color: $color__text-secondary-gray;
     @include typography($typo__button);
   }
+}
 
-  .date-range__input {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: $s-lg;
-  }
+.date-range__input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: $s-lg;
+}
+
+.date-range__values {
+  // If the date range uses individual form inputs for managing from and to
+  // dates then hide these values in favour of the input field.
+  display: none;
 }
