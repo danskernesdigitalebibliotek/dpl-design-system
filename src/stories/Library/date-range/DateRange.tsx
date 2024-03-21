@@ -41,6 +41,7 @@ const DateRange: React.FC<DateRangeProps> = ({ open, modifiers }) => {
       },
     };
     require("./date-range");
+    require("./init-date-range");
   }, []);
 
   useEffect(() => {
