@@ -32,3 +32,8 @@ export const Open = Template.bind({});
 Open.args = {
   open: true,
 };
+
+export const Filter = Template.bind({});
+Filter.args = {
+  modifiers: ["filter"],
+};

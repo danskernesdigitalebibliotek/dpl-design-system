@@ -5,6 +5,7 @@ import "flatpickr/dist/flatpickr.css";
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { BaseOptions } from "flatpickr/dist/types/options";
+import clsx from "clsx";
 
 declare global {
   interface Window {
@@ -13,11 +14,14 @@ declare global {
   }
 }
 
+type Modifiers = "filter";
+
 export type DateRangeProps = {
-  open: boolean;
+  open?: boolean;
+  modifiers?: Modifiers[];
 };
 
-const DateRange: React.FC<DateRangeProps> = ({ open }) => {
+const DateRange: React.FC<DateRangeProps> = ({ open, modifiers }) => {
   // Use a set of static values for testing.
   const now = "2024-01-19";
   const from = "2024-01-01";
@@ -45,6 +49,11 @@ const DateRange: React.FC<DateRangeProps> = ({ open }) => {
     }
   }, [open]);
 
+  const classNames = clsx(
+    "date-range",
+    modifiers?.map((modifier) => `date-range--${modifier}`)
+  );
+
   return (
     <>
       <Helmet>
@@ -56,7 +65,7 @@ const DateRange: React.FC<DateRangeProps> = ({ open }) => {
         <script src="https://cdn.jsdelivr.net/npm/flatpickr@4/dist/flatpickr.min.js" />
       </Helmet>
 
-      <div className="date-range">
+      <div className={classNames}>
         <input
           className="date-range__input"
           type="text"

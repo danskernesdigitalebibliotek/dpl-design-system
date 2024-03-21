@@ -23,3 +23,9 @@
   // dates then hide these values in favour of the input field.
   display: none;
 }
+
+.date-range--filter {
+  input {
+    border-color: $color__global-black;
+  }
+}
