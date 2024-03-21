@@ -63,8 +63,8 @@ const DateRange: React.FC<DateRangeProps> = ({ open }) => {
           aria-label="Vælg dato"
         />
         <div className="date-range__values">
-          <input className="date-range__from" type="date" value={from} />
-          <input className="date-range__to" type="date" value={to} />
+          <input className="date-range__from" type="date" defaultValue={from} />
+          <input className="date-range__to" type="date" defaultValue={to} />
         </div>
       </div>
     </>
