@@ -82,6 +82,8 @@ $selected-date-background: rgb(0, 105, 255);
     }
   }
   & .flatpickr-days {
+    user-select: none;
+
     & .flatpickr-day {
       display: flex;
       align-items: center;
