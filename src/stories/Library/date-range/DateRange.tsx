@@ -31,21 +31,31 @@ const DateRange: React.FC<DateRangeProps> = ({ open, modifiers }) => {
     window.flatpickrOptions = {
       now,
       animate: false,
+      altInput: true,
+      altFormat: "j. M Y",
+      // For whatever reason we cannot load the Danish translation properly
+      // in Storybook.
+      // locale: da
+      locale: {
+        firstDayOfWeek: 1,
+      },
     };
     require("./date-range");
   }, []);
 
   useEffect(() => {
-    const element = document.querySelector(
-      ".date-range__input"
-    ) as HTMLElement | null;
-
-    if (element && open) {
+    if (open) {
       // Wait a bit for the calendar to load. Then click the input field to
       // open it.
       window.setTimeout(() => {
-        element?.click();
-      }, 1000);
+        const elements = document.querySelectorAll(
+          ".date-range__input"
+        ) as NodeListOf<HTMLElement>;
+
+        elements.forEach((e) => {
+          e.click();
+        });
+      }, 250);
     }
   }, [open]);
 
