@@ -12,6 +12,12 @@
   @include layout-container($block-max-width__large);
 
   display: flex;
+  flex-direction: column;
+  gap: $s-sm;
   margin-top: $s-lg;
   margin-bottom: $s-lg;
+
+  @include media-query__small {
+    flex-direction: row;
+  }
 }
