@@ -3,6 +3,7 @@ import ContentList from "../../Library/content-list/ContentList";
 import contentListData from "../../Library/content-list/ContentListData";
 import { InputLabel } from "../../Library/input-label/InputLabel";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
+import DateRange from "../../Library/date-range/DateRange";
 
 const filters = [
   {
@@ -50,6 +51,10 @@ const ContentListPage: React.FC = () => {
             </div>
           );
         })}
+        <div className="content-list-page__filter content-list-page__filter--date content-list-page__filter--right">
+          <InputLabel text="Dato" />
+          <DateRange modifiers={["filter"]} open={false} />
+        </div>
       </div>
       <ContentList items={contentListData} />
     </div>

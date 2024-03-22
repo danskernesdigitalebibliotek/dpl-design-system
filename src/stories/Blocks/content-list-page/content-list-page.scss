@@ -21,3 +21,19 @@
     flex-direction: row;
   }
 }
+
+.content-list-page__filter--right {
+  @include media-query__small {
+    margin-left: auto;
+  }
+}
+
+.content-list-page__filter--date {
+  @include media-query__small {
+    // Use the same width as allocated for dropdowns. This should be wide
+    // enough to show all elements when using the j. M Y format e.g.
+    // 01. jan 2024
+    // @see src/stories/Library/dropdown/dropdown.scss
+    width: 230px;
+  }
+}
