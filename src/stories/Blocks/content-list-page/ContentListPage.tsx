@@ -4,14 +4,32 @@ import contentListData from "../../Library/content-list/ContentListData";
 import { InputLabel } from "../../Library/input-label/InputLabel";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
 
-const list = [
+const filters = [
   {
-    title: "Bob Dylan 80 år",
-    href: "/",
+    label: "Kategorier",
+    options: [
+      {
+        title: "Bob Dylan 80 år",
+        href: "/",
+      },
+      {
+        title: "5 Nordiske fuldtræffere",
+        href: "/",
+      },
+    ],
   },
   {
-    title: "5 Nordiske fuldtræffere",
-    href: "/",
+    label: "Filialer",
+    options: [
+      {
+        title: "Hovedbiblioteket",
+        href: "/",
+      },
+      {
+        title: "Højbjerg",
+        href: "/",
+      },
+    ],
   },
 ];
 
@@ -20,10 +38,18 @@ const ContentListPage: React.FC = () => {
     <div className="content-list-page">
       <h1 className="content-list-page__heading">Arrangementer</h1>
       <div className="content-list-page__filters">
-        <div className="content-list-page__filter">
-          <InputLabel text="Kategorier" />
-          <Dropdown list={list} ariaLabel="Kategorier" arrowIcon="chevron" />
-        </div>
+        {filters.map((filter) => {
+          return (
+            <div className="content-list-page__filter">
+              <InputLabel text={filter.label} />
+              <Dropdown
+                list={filter.options}
+                ariaLabel="Kategorier"
+                arrowIcon="chevron"
+              />
+            </div>
+          );
+        })}
       </div>
       <ContentList items={contentListData} />
     </div>

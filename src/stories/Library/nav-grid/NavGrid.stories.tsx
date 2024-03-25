@@ -24,7 +24,7 @@ export default {
     items: {
       // Disabling controls, as the different teaser variants are added already.
       control: false,
-      defaultValue: [teaser, teaser, teaser],
+      defaultValue: [teaser],
     },
   },
   parameters: {
@@ -39,14 +39,14 @@ const Template: ComponentStory<typeof NavGrid> = (args) => (
   <NavGrid {...args} />
 );
 
-const Few = Template.bind({});
+const One = Template.bind({});
 
-Few.args = {
-  showSubtitles: false,
+const Tree = Template.bind({});
+Tree.args = {
+  items: [teaser, teaser, teaser],
 };
 
 const Many = Template.bind({});
-
 Many.args = {
   items: [
     teaser,
@@ -67,4 +67,10 @@ Many.args = {
   ],
 };
 
-export { Many, Few };
+const NoSubtitles = Template.bind({});
+NoSubtitles.args = {
+  showSubtitles: false,
+  items: [teaser, teaser, teaser],
+};
+
+export { One, Tree, Many, NoSubtitles };
