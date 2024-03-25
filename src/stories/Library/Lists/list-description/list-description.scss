@@ -27,7 +27,11 @@ dl.list-description {
     flex-direction: column;
   }
 
-  .link-tag {
+  // TODO: Reevaluate this when implementing logic to determine if 'link-tag' styled
+  // values in dpl-react should be 'a' tags or 'span' tags as currently implemented.
+  .link-tag,
+  a {
+    @extend %link-tag;
     @include typography($typo__small-caption);
 
     color: $color__text-primary-black;
@@ -52,7 +56,12 @@ dl.list-description {
       grid-gap: 8px;
       gap: 8px;
     }
-    .link-tag {
+
+    // TODO: Reevaluate this when implementing logic to determine if 'link-tag' styled
+    // values in dpl-react should be 'a' tags or 'span' tags as currently implemented.
+    .link-tag,
+    a {
+      @extend %link-tag;
       @include typography($typo__body-placeholder);
       line-height: 120%;
     }

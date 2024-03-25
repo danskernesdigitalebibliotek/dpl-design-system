@@ -30,7 +30,7 @@ const ListDescription: React.FC<{ data: ListData; className?: string }> = ({
               {value.map((val) => (
                 <Fragment key={val}>
                   {type === "standard" && <span>{val}</span>}
-                  {type === "link" && <span className="link-tag">{val}</span>}
+                  {type === "link" && <a href="#">{val}</a>}
                 </Fragment>
               ))}
             </dd>
