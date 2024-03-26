@@ -1,21 +1,19 @@
-import React from "react";
-import ImageCredited from "../../image-credited/ImageCredited";
+import React, { ReactNode } from "react";
+import MediaContainer from "../../media-container/MediaContainer";
 
 export type HeroInnerProps = {
-  image?: string;
+  image?: ReactNode;
+  placeholderText?: string;
 };
 
-const HeroVisual: React.FunctionComponent<HeroInnerProps> = ({ image }) => {
+const HeroVisual: React.FunctionComponent<HeroInnerProps> = ({
+  image,
+  placeholderText,
+}) => {
   return (
     <div className="hero__visual">
       <div className="hero__visual-inner">
-        {image && (
-          <ImageCredited
-            src={image}
-            description="Photo by Unsplash"
-            year="©2021"
-          />
-        )}
+        <MediaContainer placeholderText={placeholderText} media={image} />
       </div>
     </div>
   );

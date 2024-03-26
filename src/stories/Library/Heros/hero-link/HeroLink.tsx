@@ -11,6 +11,7 @@ export type HeroLinkProps = {
 const HeroLink: React.FunctionComponent<HeroLinkProps> = ({
   url,
   image,
+  placeholderText,
   contentType,
   date,
   title,
@@ -34,7 +35,7 @@ const HeroLink: React.FunctionComponent<HeroLinkProps> = ({
         />
       </a>
 
-      <HeroVisual image={image} />
+      <HeroVisual image={image} placeholderText={placeholderText} />
     </section>
   );
 };

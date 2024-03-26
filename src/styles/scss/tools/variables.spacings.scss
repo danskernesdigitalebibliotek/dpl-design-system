@@ -29,3 +29,9 @@ $placeholder-paddings: (
   small: $s-xl,
   medium: $s-2xl,
 );
+
+$placeholder-paddings--small: (
+  mobile: $s-md,
+  small: $s-lg,
+  medium: $s-xl,
+);
