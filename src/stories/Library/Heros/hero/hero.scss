@@ -23,8 +23,8 @@ $_hero-column-breakpoint: "small";
 }
 
 .hero__visual-inner {
-  height: 100%;
   width: 100%;
+  aspect-ratio: 5/4;
 }
 
 .hero {
