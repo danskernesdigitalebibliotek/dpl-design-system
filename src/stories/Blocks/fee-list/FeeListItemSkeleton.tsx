@@ -1,6 +1,10 @@
 const FeeListItemSkeleton = () => {
   return (
-    <button type="button" className="list-reservation my-32">
+    <button
+      type="button"
+      className="list-reservation my-32"
+      aria-label="Fee card"
+    >
       <div className="list-reservation__material">
         <div>
           <div className="ssc-square cover--size-small" />
