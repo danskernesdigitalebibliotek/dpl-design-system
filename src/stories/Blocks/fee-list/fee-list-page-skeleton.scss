@@ -3,14 +3,13 @@
 .fee-list-page {
   .ssc-square {
     &.cover--size-small {
-      height: 104px;      
+      height: 104px;
       width: 70px;
 
       @include media-query__small {
-        height: 137px;      
+        height: 137px;
         width: 95px;
-      }  
-
+      }
     }
   }
 
