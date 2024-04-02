@@ -31,23 +31,3 @@
   display: grid;
   justify-content: center;
 }
-
-.date-range {
-  input {
-    border: 1px solid $color__global-tertiary-1;
-    box-sizing: border-box;
-    background-color: $color__global-primary;
-    min-width: 100%;
-    height: 50px;
-    padding: 0 10px;
-    color: $color__text-secondary-gray;
-    @include typography($typo__button);
-  }
-
-  .date-range__input {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: $s-lg;
-  }
-}
