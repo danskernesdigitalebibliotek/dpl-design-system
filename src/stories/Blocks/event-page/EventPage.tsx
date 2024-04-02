@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import Hero from "../../Library/Heros/hero/Hero";
 import EventDescription, {
   EventDescriptionProps,
@@ -8,12 +8,14 @@ import { EventParagraphs } from "../../Library/paragraphs/Paragraphs";
 type EventPageProps = {
   title: string;
   date: string;
-  image: string;
+  placeholderText?: string;
+  image?: ReactNode;
 } & EventDescriptionProps;
 
 const EventPage: FC<EventPageProps> = ({
   title,
   date,
+  placeholderText,
   image,
   descriptionDescription,
   horizontalTermLineData,
@@ -25,6 +27,7 @@ const EventPage: FC<EventPageProps> = ({
         title={title}
         date={date}
         image={image}
+        placeholderText={placeholderText}
         cta="Køb billet"
         tag="Arrangement"
       />

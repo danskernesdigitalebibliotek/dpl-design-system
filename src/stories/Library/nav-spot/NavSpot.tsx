@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
-import clsx from "clsx";
 import { ReactComponent as Arrow } from "../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
+import MediaContainer from "../media-container/MediaContainer";
 
 type NavSpotProps = {
   variant?: string;
@@ -17,19 +17,15 @@ const NavSpot: FC<NavSpotProps> = ({
   media,
   placeholderText,
 }) => {
-  const classes = clsx("nav-spot", "arrow__hover--right-large", {
-    "nav-spot--has-no-media": !media,
-    "nav-spot--has-media": media,
-  });
-
   return (
-    <article className={classes} data-variant={variant}>
+    <article
+      className="nav-spot arrow__hover--right-large"
+      data-variant={variant}
+    >
       <a href="#" className="nav-spot__content">
-        <figure className="nav-spot__media">
-          {media || (
-            <div className="nav-spot__placeholder-text">{placeholderText}</div>
-          )}
-        </figure>
+        <div className="nav-spot__media">
+          <MediaContainer placeholderText={placeholderText} media={media} />
+        </div>
 
         <div className="nav-spot__text">
           <h1 className="nav-spot__title">{title}</h1>
