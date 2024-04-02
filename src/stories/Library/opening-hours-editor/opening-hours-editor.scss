@@ -1,0 +1,60 @@
+// The Opening Hours Editor utilizes the Dialog component.
+// We aim to consolidate all Opening Hours Editor styles into a single file.
+// Because is used in drupal admin area
+@import "../dialog/dialog";
+.opening-hours-editor-form {
+  display: grid;
+  background: #f8f8f8;
+  padding: 2.5rem;
+  min-width: 300px;
+  line-height: 1;
+}
+
+.opening-hours-editor-form__label {
+  font-weight: bold;
+  color: #333;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.opening-hours-editor-form__select,
+.opening-hours-editor-form__time-input {
+  border: 2px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: #555;
+  background-color: #fff;
+}
+
+.opening-hours-editor-form__submit,
+.opening-hours-editor-form__remove {
+  cursor: pointer;
+  margin-top: 1rem;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.opening-hours-editor-form__submit {
+  border: 0;
+  background-color: #22c55e;
+
+  &:hover {
+    background-color: #15803d;
+  }
+}
+
+.opening-hours-editor-form__remove {
+  border: 0;
+  background-color: #ef4444;
+
+  &:hover {
+    background-color: #dc2626;
+  }
+}
+
+.opening-hours-editor-event-content {
+  padding: 5px 10px;
+  cursor: pointer;
+}

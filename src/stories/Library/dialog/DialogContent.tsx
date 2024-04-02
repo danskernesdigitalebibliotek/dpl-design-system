@@ -1,7 +1,7 @@
-const DialogContent1 = () => {
+const DialogContent = () => {
   return (
     <div>
-      <h2>DialogContent1</h2>
+      <h2>Dialog Content</h2>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia officia
         odio temporibus libero a labore sint omnis, autem quibusdam fugit quae,
@@ -10,4 +10,4 @@ const DialogContent1 = () => {
     </div>
   );
 };
-export default DialogContent1;
+export default DialogContent;

@@ -1,7 +1,7 @@
-import DialogContent1 from "./DialogContent1";
-import DialogContent2 from "./DialogContent2";
+import DialogContent from "./DialogContent";
 import Dialog from "./Dialog";
 import useDialog from "./useDialog";
+import OpeningHoursForm from "../opening-hours-editor/OpeningHoursForm";
 
 const DialogPlayGround = () => {
   const { dialogContent, openDialogWithContent, closeDialog, dialogRef } =
@@ -12,7 +12,7 @@ const DialogPlayGround = () => {
       <button
         className="btn-primary btn-outline btn-medium"
         onClick={() => {
-          openDialogWithContent(<DialogContent1 />);
+          openDialogWithContent(<DialogContent />);
         }}
       >
         Open Dialog 1
@@ -20,10 +20,10 @@ const DialogPlayGround = () => {
       <button
         className="btn-primary btn-outline btn-medium"
         onClick={() => {
-          openDialogWithContent(<DialogContent2 />);
+          openDialogWithContent(<OpeningHoursForm />);
         }}
       >
-        Open Dialog 2
+        Open Dialog 2 (OpeningHoursForm)
       </button>
 
       <Dialog closeDialog={closeDialog} ref={dialogRef}>
