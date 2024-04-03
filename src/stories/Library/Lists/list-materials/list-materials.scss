@@ -62,9 +62,9 @@
 
 .list-materials__status {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 0;
-  align-items: center;
+  align-items: flex-start;
   grid-gap: $s-md;
 }
 
