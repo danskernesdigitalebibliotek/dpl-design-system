@@ -1,0 +1,13 @@
+.opening-hours {
+  .ssc-line {
+    height: $s-xl;
+  }
+  .ssc-line--odd {
+    opacity: 0.5;
+  }
+  .ssc-line-headline {
+    height: 26px;
+    margin-bottom: $s-md;
+    width: 100px;
+  }
+}
