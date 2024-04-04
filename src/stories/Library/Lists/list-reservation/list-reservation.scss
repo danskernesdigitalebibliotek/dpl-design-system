@@ -74,16 +74,12 @@ $list-reservation-space-desktop: 24px;
   display: none;
   @include media-query__small {
     display: block;
-    margin-top: $s-xs;
-    max-width: 150px;
   }
 }
 
 .list-reservation__note--mobile {
   @include media-query__small {
     display: none;
-    margin-top: $s-xs;
-    max-width: 150px;
   }
 }
 
