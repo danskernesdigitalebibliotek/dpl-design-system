@@ -58,16 +58,15 @@ $list-reservation-space-desktop: 24px;
 .list-reservation__note {
   @include typography($typo__small-caption);
 
-  // To make it easy to click
   min-height: 20px;
+  max-width: 150px;
   cursor: pointer;
   background-color: transparent;
   align-self: baseline;
   border: 0;
   display: block;
-  margin-top: $s-xs;
-  white-space: break-spaces;
-  text-decoration: underline;
+  margin-top: $s-sm;
+  text-decoration: none;
   padding-left: 0;
 }
 
