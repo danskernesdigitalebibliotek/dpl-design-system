@@ -48,27 +48,13 @@ export const ListMaterials: FC<ListMaterialsProps> = ({
             </p>
           </div>
           <div className="list-materials__status">
-            {statusMessage && (
-              <span className="list-materials__status__note-desktop">
-                {statusMessage}
-              </span>
-            )}
             <div>
               <div className="status-label status-label--neutral">
                 Afleveres 27-04-2023
               </div>
               {statusMessage && (
-                <span className="list-materials__status__note-mobile">
-                  {statusMessage}
-                </span>
+                <span className="list-reservation__note">{statusMessage}</span>
               )}
-              <button
-                type="button"
-                className="list-reservation__note"
-                aria-label="Go to Alt om håndarbejdes strikkemagasin material details"
-              >
-                Go to material details
-              </button>
             </div>
           </div>
         </div>
