@@ -57,16 +57,15 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__note {
   @include typography($typo__small-caption);
-
+  // To make it easy to click
   min-height: 20px;
-  max-width: 150px;
   cursor: pointer;
   background-color: transparent;
   align-self: baseline;
   border: 0;
-  display: block;
-  margin-top: $s-sm;
-  text-decoration: none;
+  margin-top: $s-xs;
+  white-space: break-spaces;
+  text-decoration: underline;
   padding-left: 0;
 }
 
@@ -74,12 +73,16 @@ $list-reservation-space-desktop: 24px;
   display: none;
   @include media-query__small {
     display: block;
+    margin-top: $s-xs;
+    max-width: 150px;
   }
 }
 
 .list-reservation__note--mobile {
   @include media-query__small {
     display: none;
+    margin-top: $s-xs;
+    max-width: 150px;
   }
 }
 
