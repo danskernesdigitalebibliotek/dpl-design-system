@@ -22,8 +22,9 @@ const Dialog = forwardRef<HTMLDialogElement, DialogType>(
           type="button"
           onClick={closeDialog}
           className="dialog__close-button"
+          aria-label="Close dialog"
         >
-          <img src="/icons/basic/icon-cross.svg" alt="close icon" />
+          <img src="/icons/basic/icon-cross.svg" alt="" />
         </button>
         {children}
       </dialog>
