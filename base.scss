@@ -6,6 +6,7 @@
 @import "./src/styles/scss/legacy";
 
 // Library
+@import "./src/stories/Library/media-container/media-container";
 @import "./src/stories/Library/links/links";
 @import "./src/stories/Library/link-filters/link-filters";
 @import "./src/stories/Library/Arrows/arrows";
@@ -132,6 +133,10 @@
 @import "./src/stories/Library/icon-text-link/icon-text-link";
 @import "./src/stories/Library/material-grid/material-grid";
 @import "./src/stories/Library/error-message/error-message";
+@import "./src/stories/Library/dialog/dialog";
+@import "./src/stories/Library/opening-hours-editor/opening-hours-editor";
+@import "./src/stories/Library/opening-hours/opening-hours";
+@import "./src/stories/Library/opening-hours/opening-hours-skeleton";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";

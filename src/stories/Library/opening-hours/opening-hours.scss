@@ -1,0 +1,86 @@
+$_nav-control-height: 40px;
+$_nav-control-border-width: 2px;
+$_opening-hours-max-width: 600px;
+
+.opening-hours {
+  @include layout-container;
+}
+
+.opening-hours__header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: $s-lg;
+  margin-bottom: $s-lg;
+  align-items: center;
+  max-width: $_opening-hours-max-width;
+
+  @include media-query__small {
+    flex-direction: row;
+  }
+}
+
+.opening-hours__content {
+  max-width: $_opening-hours-max-width;
+}
+
+.opening-hours__heading {
+  @include typography($typo__h3);
+  align-self: flex-start;
+}
+
+.opening-hours__row {
+  padding: $s-md 0 $s-lg 0;
+  border-bottom: 1px solid $color__global-tertiary-1;
+  @include typography($typo__body-placeholder);
+}
+
+.opening-hours__individual-day {
+  @include typography($typo__body-medium);
+  font-weight: $font__weight--bold;
+  margin-bottom: $s-md;
+  @include media-query__small {
+    @include typography($typo__body-large);
+    font-weight: $font__weight--bold;
+  }
+}
+
+.opening-hours__individual-opening {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 $s-xs;
+  @include media-query__small {
+    line-height: 32px;
+  }
+}
+.opening-hours__individual-opening:nth-child(odd) {
+  background-color: $color__global-tertiary-1;
+}
+
+.opening-hours__row:first-child {
+  border-top: 1px solid $color__global-tertiary-1;
+}
+
+.opening-hours__navigation-controls {
+  display: flex;
+  gap: $s-sm;
+}
+
+.opening-hours__navigation-control {
+  width: 40px;
+  height: $_nav-control-height;
+  background-color: $color__global-primary;
+  border: $_nav-control-border-width solid $color__global-tertiary-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.opening-hours__week-display {
+  border: $_nav-control-border-width solid $color__global-tertiary-1;
+  height: $_nav-control-height;
+  display: flex;
+  align-items: center;
+  gap: $s-xs;
+  padding: $s-xs $s-md;
+}
