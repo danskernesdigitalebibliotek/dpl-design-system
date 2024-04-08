@@ -23,8 +23,8 @@ const FavouritesList: React.FC<FavouritesListProps> = ({
 
   const SkeletonList = () => (
     <ul className="card-list-page__list my-32">
-      {[...Array(5)].map((_, index) => (
-        <li key={index}>
+      {[...Array(5)].slice(0, materialsCount).map(() => (
+        <li>
           <CardListItemSkeleton />
         </li>
       ))}
@@ -34,7 +34,9 @@ const FavouritesList: React.FC<FavouritesListProps> = ({
   const FavouritesListContent = () => (
     <ul className="card-list-page__list my-32">
       {data.searchResult.slice(0, materialsCount).map((item, i) => (
-        <CardListItem {...item} heartFill tintIndex={i} />
+        <li>
+          <CardListItem {...item} heartFill tintIndex={i} />
+        </li>
       ))}
     </ul>
   );
