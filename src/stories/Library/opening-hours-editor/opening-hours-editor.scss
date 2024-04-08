@@ -58,3 +58,9 @@
   padding: 5px 10px;
   cursor: pointer;
 }
+
+// Override Drupal's default margin for tables inside .fc to eliminate top and bottom spacing
+// Fixes the issue where the selected hour starts half an hour later than the actual selection.
+.fc table {
+  margin: 0;
+}
