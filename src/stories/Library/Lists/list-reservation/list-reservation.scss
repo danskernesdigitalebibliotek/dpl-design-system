@@ -78,6 +78,7 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__note--mobile {
+  text-align: left;
   @include media-query__small {
     display: none;
   }
