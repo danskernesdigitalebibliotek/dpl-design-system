@@ -34,7 +34,7 @@ Item.args = {
   year: "2001",
   title: "Audrey Hepburn",
   author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
-  statusMessage: "The item cannot be renewed further",
+  statusMessage: "Can't be renewed further",
   isChecked: true,
   disabled: true,
   statusMaterialType: {

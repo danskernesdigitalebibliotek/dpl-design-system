@@ -24,7 +24,7 @@ const listExpired: LoanMaterials = [
         title:
           "Den utrolige historie om den kæmpestore pære (eller beretningen om, hvordan Jeronimus Bjergstrøm Severin Olsen blev genindsat i sit retmæssige embede som Solbys borgmester til glæde for alle byens indbyggere på nær én)",
         author: "Af Jakob Martin Strid",
-        statusMessage: "The item cannot be renewed further",
+        statusMessage: "Can't be renewed further",
         isChecked: true,
         disabled: true,
         statusMaterialType: {
@@ -36,7 +36,7 @@ const listExpired: LoanMaterials = [
         year: "2001",
         title: "Audrey Hepburn",
         author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
-        statusMessage: "The item cannot be renewed further",
+        statusMessage: "Can't be renewed further",
         isChecked: true,
         disabled: false,
         statusMaterialType: {
@@ -48,7 +48,7 @@ const listExpired: LoanMaterials = [
         year: "2001",
         title: "Audrey Hepburn",
         author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
-        statusMessage: "The item cannot be renewed further",
+        statusMessage: "Can't be renewed further",
         isChecked: true,
         disabled: true,
         statusMaterialType: {
@@ -60,7 +60,7 @@ const listExpired: LoanMaterials = [
         year: "2001",
         title: "Audrey Hepburn",
         author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
-        statusMessage: "The item cannot be renewed further",
+        statusMessage: "Can't be renewed further",
         isChecked: true,
         disabled: true,
         statusMaterialType: {
@@ -79,7 +79,7 @@ const listExpiresSoon: LoanMaterials = [
         year: "2001",
         title: "Audrey Hepburn",
         author: "Af Isabel Sánchez Vegara, Amaia Arrazola",
-        statusMessage: "The item cannot be renewed further",
+        statusMessage: "Can't be renewed further",
         isChecked: true,
         disabled: true,
         statusMaterialType: {
