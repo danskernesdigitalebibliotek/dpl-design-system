@@ -7,7 +7,7 @@ export type RecommendedMaterialProps = {
   src: string;
   alt: string;
   favoriteFill?: boolean;
-  coverUrl?: string;
+  materialUrl?: string;
   partOfGrid?: boolean;
 };
 
@@ -17,7 +17,7 @@ export const RecommendedMaterial: React.FC<RecommendedMaterialProps> = ({
   src,
   alt,
   favoriteFill = true,
-  coverUrl,
+  materialUrl,
   partOfGrid = false,
 }) => {
   return (
@@ -35,12 +35,16 @@ export const RecommendedMaterial: React.FC<RecommendedMaterialProps> = ({
         animate={false}
         tint="80"
         shadow="medium"
-        coverUrl={coverUrl}
+        coverUrl={materialUrl}
         alt={alt}
       />
       <div className="recommended-material__texts">
-        <p className="recommended-material__description">{description}</p>
-        <p className="recommended-material__author">{author}</p>
+        <a href={materialUrl} className="recommended-material__description">
+          {description}
+        </a>
+        <a href={materialUrl} className="recommended-material__author">
+          {author}
+        </a>
       </div>
     </div>
   );
