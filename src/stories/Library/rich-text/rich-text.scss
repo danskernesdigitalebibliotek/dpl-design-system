@@ -75,6 +75,25 @@ $_max-width-rich-text: $block-max-width__small;
     }
   }
 
+  blockquote {
+    $_quote-indicator-width: 10px;
+
+    position: relative;
+    padding-top: $s-md;
+    padding-bottom: $s-md;
+    padding-left: $_quote-indicator-width + $s-md;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: $_quote-indicator-width;
+      background-color: $color__identity-primary;
+    }
+  }
+
   table {
     // There is no perfect way of making tables responsive.
     // A quick fix, is to make the text smaller on smaller screens.
