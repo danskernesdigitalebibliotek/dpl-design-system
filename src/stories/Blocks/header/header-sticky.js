@@ -26,20 +26,14 @@ window.addEventListener("DOMContentLoaded", () => {
     lastScrollY = scrollY > 0 ? scrollY : 0;
 
     // Control header direction class.
-    const headerContainerSelector = ".header";
-
     if (scrollDirection === "down") {
-      const headerHeight = document.querySelector(
-        headerContainerSelector
-      ).offsetHeight;
+      const headerHeight = document.querySelector("header").offsetHeight;
       const headerDownTopPosition = headerHeight + headerDownTopPositionOffset;
       document.querySelector(
-        headerContainerSelector
+        "header"
       ).style.top = `-${headerDownTopPosition}px`;
     } else {
-      document.querySelector(
-        headerContainerSelector
-      ).style.top = `${headerYStartPosition}px`;
+      document.querySelector("header").style.top = `${headerYStartPosition}px`;
     }
   };
 
