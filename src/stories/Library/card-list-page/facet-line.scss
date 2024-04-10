@@ -3,6 +3,10 @@
   display: inline-block;
   margin-right: $s-sm;
   margin-top: $s-md;
+
+  .tag {
+    color: $color__global-grey;
+  }
 }
 
 .facet-line-selected-terms {
