@@ -1,17 +1,18 @@
 import React from "react";
 import PatronInfo from "../../Library/patron-info/PatronInfo";
 import Input from "../../Library/Forms/input/Input";
-import { Checkbox } from "../../Library/Forms/checkbox/Checkbox";
 import { StatusLoans } from "../status-loans/statusLoans";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
 import { Links } from "../../Library/links/Links";
+import PatronPageSkeleton from "./PatronPageSkeleton";
+import ContactInfoSection from "./ContactInfoSection";
 
 export interface PatronPageProps {
   skeletonVersion?: boolean;
 }
 
 const PatronPage: React.FC<PatronPageProps> = ({ skeletonVersion = false }) => {
-  if (skeletonVersion) return <>hello skeleton</>;
+  if (skeletonVersion) return <PatronPageSkeleton />;
 
   const statusBarsData = [
     {
@@ -38,7 +39,6 @@ const PatronPage: React.FC<PatronPageProps> = ({ skeletonVersion = false }) => {
   return (
     <form className="dpl-patron-page">
       <h1 className="text-header-h1 my-32">Patron profile page</h1>
-
       <h2 className="text-header-h4 mt-32 mb-16">Basic details</h2>
 
       {/* Patron info section */}
@@ -50,27 +50,7 @@ const PatronPage: React.FC<PatronPageProps> = ({ skeletonVersion = false }) => {
       />
 
       <div className="patron-page-info">
-        {/* Contact info section */}
-        <section data-cy="patron-page-contact-info">
-          <h2 className="text-header-h4 mt-64 mb-16">Contact information</h2>
-          <p className="text-body-small-regular mb-32">
-            Patron contact info body text
-          </p>
-          <Input label="Phone number" type="text" id="phone" description="" />
-          <Checkbox
-            label="Receive text messages about your loans, reservations, and so forth"
-            isChecked={false}
-            hiddenLabel={false}
-            classNames="checkbox mt-8 mb-16"
-          />
-          <Input label="E-mail" type="text" id="email" description="" />
-          <Checkbox
-            label="Receive emails about your loans, reservations, and so forth"
-            isChecked={false}
-            hiddenLabel={false}
-            classNames="checkbox mt-8 mb-16"
-          />
-        </section>
+        <ContactInfoSection />
 
         {/* Digital loans section */}
         <section className="dpl-status-loans">
