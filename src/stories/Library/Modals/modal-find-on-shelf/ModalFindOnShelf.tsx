@@ -66,7 +66,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
             headingLevel="h2"
             withAvailability
             fullWidth
-            headline="Bibliotek fliale navn"
+            headline="Bibliotek filial navn"
             icon="Various"
             key={branchKey}
           >
