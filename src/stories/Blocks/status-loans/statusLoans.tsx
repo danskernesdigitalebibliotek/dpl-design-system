@@ -33,7 +33,7 @@ export const StatusLoans = (props: StatusLoansProps) => {
 
   return (
     <>
-      <h1 className="text-header-h4 mt-64 mb-16">{statusBarsTitle}</h1>
+      <h2 className="text-header-h4 mt-64 mb-16">{statusBarsTitle}</h2>
       <div className="text-body-small-regular mb-8">
         {`${bread} `}
         <a href={url} className="text-links">
