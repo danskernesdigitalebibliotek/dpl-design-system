@@ -18,25 +18,35 @@ export type StatusLoansProps = {
   title: string;
   link: LinkProps;
   bread: string;
+  reservationsText: string;
 };
 
 export const StatusLoans = (props: StatusLoansProps) => {
-  const { statusBarsData, title: statusBarsTitle, link, bread } = props;
+  const {
+    statusBarsData,
+    title: statusBarsTitle,
+    link,
+    bread,
+    reservationsText,
+  } = props;
   const { link: url, text: linkText } = link;
 
   return (
     <>
-      <h1 className="text-header-h1 m-8">{statusBarsTitle}</h1>
-      <div className="m-8 text-body-small-regular">
+      <h1 className="text-header-h4 mt-64 mb-16">{statusBarsTitle}</h1>
+      <div className="text-body-small-regular mb-8">
         {`${bread} `}
         <a href={url} className="text-links">
           {linkText}
         </a>
       </div>
-      <div className="dpl-status-loans">
+      <div className="text-body-small-regular mt-8 mb-8">
+        {reservationsText}
+      </div>
+      <div className="dpl-status mt-32">
         {statusBarsData.map(({ statusBars, title }) => (
-          <div className="dpl-status-loans__container m-8">
-            <h2 className="text-header-h2">{title}</h2>
+          <div className="dpl-status-loans__container">
+            <h3 className="text-small-caption">{title}</h3>
             {statusBars.map(
               ({ title: statusBarTitle, amount, fullAmount, outOf }) => (
                 <ProgressBar

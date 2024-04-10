@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { StatusUserprofile as StatusUserprofileComp } from "./statusUserprofile";
 
 export default {
-  title: "Blocks / Userprofile / Loans and Reservations",
+  title: "Blocks / User Profile / Loans and Reservations",
   component: StatusUserprofileComp,
   parameters: {
     design: {
