@@ -42,6 +42,10 @@ $_dropdown-icon-size: 50px;
 
   // Chromeium based browsers will trigger focus when opening the dropdown
   @extend %default-focus-visible;
+
+  &.dropdown__select--grey {
+    border-color: $color__global-tertiary-1;
+  }
 }
 
 .dropdown__option {
@@ -65,6 +69,10 @@ $_dropdown-icon-size: 50px;
   flex-direction: column;
   border-left: 1px solid;
   border-color: inherit;
+
+  &.dropdown__arrows--grey {
+    border-color: $color__global-tertiary-1;
+  }
 }
 
 .dropdown__arrow--bottom {
