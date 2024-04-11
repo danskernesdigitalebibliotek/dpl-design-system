@@ -41,6 +41,7 @@ $_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
 .recommended-material__author {
   @include typography($typo__body-small);
   @include text-ellipsis-truncation(1);
+  text-decoration: none;
 }
 .recommended-material__description {
   font-weight: $font__weight--bold;

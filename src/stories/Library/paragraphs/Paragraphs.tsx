@@ -50,7 +50,7 @@ export const ArticleParagraphs = () => {
             src: "images/book_cover_6.jpg",
             alt: "book cover",
             favoriteFill: false,
-            coverUrl: "#",
+            materialUrl: "#",
           }}
         />
       </Paragraph>
@@ -67,7 +67,7 @@ export const ArticleParagraphs = () => {
             src: "images/book_cover_6.jpg",
             alt: "book cover",
             favoriteFill: false,
-            coverUrl: "#",
+            materialUrl: "#",
           }}
         />
       </Paragraph>
