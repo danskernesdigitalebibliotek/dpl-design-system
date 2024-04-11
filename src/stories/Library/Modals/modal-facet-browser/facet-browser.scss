@@ -17,6 +17,10 @@
     display: flex;
     gap: $s-sm;
     flex-wrap: wrap;
+
+    .tag {
+      color: $color__global-grey;
+    }
   }
 
   &__clear-btn {

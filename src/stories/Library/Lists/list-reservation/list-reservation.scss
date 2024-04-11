@@ -123,6 +123,7 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__header {
   @include typography($typo__h4);
+  color: $color__global-black;
   padding: 0;
   cursor: pointer;
 
