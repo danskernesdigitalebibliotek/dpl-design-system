@@ -47,7 +47,7 @@ const Webform: React.FC<WebformProps> = ({
                 Category
               </label>
               <Dropdown
-                ariaLabel=""
+                ariaLabel="select category"
                 arrowIcon="chevron"
                 innerClassNames={{
                   select: "dropdown__select--grey",
