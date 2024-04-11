@@ -64,7 +64,7 @@ jobs:
           mv dist.zip $DIST_FILENAME
 
       - name: Delete existing releases
-        uses: dev-drprasad/delete-tag-and-release@v1.0
+        uses: dev-drprasad/delete-tag-and-release@v1.1
         with:
           tag_name: ${{ env.TAG_NAME }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
