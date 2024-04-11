@@ -1,14 +1,16 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import clsx from "clsx";
 import HeroInner, { HeroInnerProps } from "./HeroInner";
 import HeroVisual from "./HeroVisual";
 
 export type HeroProps = {
-  image?: string;
+  image?: ReactNode;
+  placeholderText?: string;
 } & HeroInnerProps;
 
 const HeroLink: React.FunctionComponent<HeroProps> = ({
   image,
+  placeholderText,
   contentType,
   date,
   title,
@@ -35,7 +37,7 @@ const HeroLink: React.FunctionComponent<HeroProps> = ({
         />
       </div>
 
-      <HeroVisual image={image} />
+      <HeroVisual image={image} placeholderText={placeholderText} />
     </section>
   );
 };

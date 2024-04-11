@@ -1,0 +1,62 @@
+@mixin media-container--grid {
+  .media-container {
+    .media-container__placeholder-text {
+      @include typography($typo__card-placeholder--grid);
+    }
+  }
+}
+
+@mixin media-container--card {
+  .media-container {
+    .media-container__placeholder-text {
+      @include typography($typo__card-placeholder);
+    }
+  }
+}
+
+@mixin media-container--small {
+  .media-container {
+    &--placeholder {
+      @include identity-placeholder($placeholder-paddings--small);
+    }
+
+    .media-container__placeholder-text {
+      font-size: 14px;
+      line-height: 16px;
+      padding: $s-md;
+    }
+  }
+}
+
+.media-container {
+  height: 100%;
+  width: 100%;
+
+  &--placeholder {
+    @include identity-placeholder;
+  }
+}
+
+.media-container__media {
+  height: 100%;
+  width: 100%;
+
+  // This is necessary to make object fit work.
+  .image-credited__image,
+  figure,
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.media-container__placeholder-text {
+  @extend %identity-placeholder-text;
+}

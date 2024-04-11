@@ -1,18 +1,13 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 import { ContentListItem } from "./ContentListItem";
+import ImageCredited from "../image-credited/ImageCredited";
 
 export default {
   title: "Library / Content List Item",
   component: ContentListItem,
   decorators: [withDesign],
   argTypes: {
-    image: {
-      defaultValue:
-        "https://plus.unsplash.com/premium_photo-1696886122527-e4303b76aa8f?q=80&w=5156&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-
-      control: { type: "text" },
-    },
     tagText: {
       defaultValue: "Foredrag",
       control: { type: "text" },
@@ -45,6 +40,15 @@ export default {
     href: {
       defaultValue: "/",
       control: { type: "text" },
+    },
+    image: {
+      defaultValue: (
+        <ImageCredited src="https://images.unsplash.com/photo-1585779034823-7e9ac8faec70?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+      ),
+    },
+    placeholderText: {
+      defaultValue: "Stine Pilgaard vinder De Gyldne Laurbær",
+      type: "string",
     },
   },
   parameters: {
