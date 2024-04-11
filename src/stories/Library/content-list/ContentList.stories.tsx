@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import ContentList from "./ContentList";
-import contentListData from "./ContentListData";
+import ContentListData from "./ContentListData";
 
 export default {
   title: "Library / Content List",
@@ -20,5 +20,5 @@ const Template: ComponentStory<typeof ContentList> = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  items: contentListData,
+  items: ContentListData,
 };

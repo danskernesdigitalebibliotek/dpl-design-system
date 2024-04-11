@@ -1,5 +1,13 @@
 $_hero-column-breakpoint: "small";
 
+// On mobile, it makes no sense to show the placeholder text,
+// as it just serves the purpose to fill out the hero on desktop.
+@include media-query__name($_hero-column-breakpoint, "max-width") {
+  .hero--has-no-media .hero__visual {
+    display: none;
+  }
+}
+
 .hero__content,
 .hero__visual {
   @include media-query__name($_hero-column-breakpoint) {
@@ -15,8 +23,8 @@ $_hero-column-breakpoint: "small";
 }
 
 .hero__visual-inner {
-  height: 100%;
   width: 100%;
+  aspect-ratio: 5/4;
 }
 
 .hero {
@@ -35,14 +43,6 @@ $_hero-column-breakpoint: "small";
   // if hero-content is a link, remove text-decoration for all children
   > a {
     text-decoration: none;
-  }
-}
-
-@include media-query__name($_hero-column-breakpoint) {
-  .hero.hero--has-no-media {
-    .hero__visual-inner {
-      @include identity-placeholder;
-    }
   }
 }
 

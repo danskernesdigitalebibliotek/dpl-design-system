@@ -1,5 +1,9 @@
-.image-credited__img {
+.image-credited__image {
   width: 100%;
+
+  * {
+    width: 100%;
+  }
 }
 
 .image-credited__info {
