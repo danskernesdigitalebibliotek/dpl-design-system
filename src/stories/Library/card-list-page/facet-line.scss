@@ -34,7 +34,7 @@
   white-space: nowrap;
 
   @include media-query__small() {
-    margin-bottom: $s-sm;
+    margin-top: $s-sm;
   }
 
   .tag {
