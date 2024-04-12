@@ -69,7 +69,7 @@ const Disclosure: React.FC<DisclosureProps> = ({
         />
       </summary>
       {contentPadding ? (
-        <div className="disclosure__content-padding">{children}</div>
+        <div className="disclosure__content-padding rich-text">{children}</div>
       ) : (
         children
       )}
