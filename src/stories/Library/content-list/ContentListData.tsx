@@ -1,11 +1,12 @@
 import { ContentListItemProps } from "../content-list-item/ContentListItem";
+import ImageCredited from "../image-credited/ImageCredited";
 
 const contentListData: ContentListItemProps[] = [
   {
     eventSeriesId: "a",
-    image:
-      "https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-
+    image: (
+      <ImageCredited src="https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    ),
     tagText: "Foredrag",
     title: "Kunst og kultur i middelalderen",
     description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
@@ -17,8 +18,9 @@ const contentListData: ContentListItemProps[] = [
   },
   {
     eventSeriesId: "b",
-    image:
-      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: (
+      <ImageCredited src="https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    ),
     tagText: "arrangement",
     title: "Fars Legestue",
     description: "Kom forbi til hygge i Fars Legestue",
@@ -30,8 +32,9 @@ const contentListData: ContentListItemProps[] = [
   },
   {
     eventSeriesId: "b",
-    image:
-      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: (
+      <ImageCredited src="https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    ),
     tagText: "arrangement",
     title: "Fars Legestue",
     description: "Kom forbi til hygge i Fars Legestue",
@@ -43,8 +46,9 @@ const contentListData: ContentListItemProps[] = [
   },
   {
     eventSeriesId: "b",
-    image:
-      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: (
+      <ImageCredited src="https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    ),
     tagText: "arrangement",
     title: "Fars Legestue",
     description: "Kom forbi til hygge i Fars Legestue",
@@ -56,8 +60,9 @@ const contentListData: ContentListItemProps[] = [
   },
   {
     eventSeriesId: "b",
-    image:
-      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: (
+      <ImageCredited src="https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    ),
     tagText: "arrangement",
     title: "Fars Legestue",
     description: "Kom forbi til hygge i Fars Legestue",
@@ -69,9 +74,7 @@ const contentListData: ContentListItemProps[] = [
   },
   {
     eventSeriesId: "a",
-    image:
-      "https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-
+    placeholderText: "Placeholder tekst",
     tagText: "Foredrag",
     title: "Kunst og kultur i middelalderen",
     description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
@@ -83,9 +86,9 @@ const contentListData: ContentListItemProps[] = [
   },
   {
     eventSeriesId: "a",
-    image:
-      "https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-
+    image: (
+      <ImageCredited src="https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    ),
     tagText: "Foredrag",
     title: "Kunst og kultur i middelalderen",
     description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
@@ -97,9 +100,7 @@ const contentListData: ContentListItemProps[] = [
   },
   {
     eventSeriesId: "a",
-    image:
-      "https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-
+    placeholderText: "Placeholder tekst",
     tagText: "Foredrag",
     title: "Kunst og kultur i middelalderen",
     description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
@@ -111,8 +112,7 @@ const contentListData: ContentListItemProps[] = [
   },
   {
     eventSeriesId: "b",
-    image:
-      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    placeholderText: "Placeholder tekst",
     tagText: "arrangement",
     title: "Fars Legestue",
     description: "Kom forbi til hygge i Fars Legestue",

@@ -20,7 +20,9 @@ const ImageCredited: FC<ImageCreditedProps> = ({
     <figure className={clsx("image-credited", className)}>
       {src ? (
         <>
-          <img src={src} className="image-credited__img" alt={alt} />
+          <div className="image-credited__image">
+            <img src={src} alt={alt} />
+          </div>
           {(description || year) && (
             <figcaption className="image-credited__info">
               <span>{description}</span>

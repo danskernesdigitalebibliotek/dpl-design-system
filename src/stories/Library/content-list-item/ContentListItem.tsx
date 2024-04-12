@@ -1,9 +1,12 @@
+import { ReactNode } from "react";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import Tag from "../tag/Tag";
+import MediaContainer from "../media-container/MediaContainer";
 
 export type ContentListItemProps = {
   eventSeriesId?: string;
-  image: string;
+  image?: ReactNode;
+  placeholderText?: string;
   tagText: string;
   title: string;
   description: string;
@@ -17,6 +20,7 @@ export type ContentListItemProps = {
 
 export const ContentListItem: React.FC<ContentListItemProps> = ({
   image,
+  placeholderText,
   tagText,
   title,
   description,
@@ -33,7 +37,7 @@ export const ContentListItem: React.FC<ContentListItemProps> = ({
   return (
     <a href={href} className="content-list-item arrow__hover--right-small">
       <div className="content-list-item__image-container">
-        <img src={image} alt={title} className="content-list-item__image" />
+        <MediaContainer media={image} placeholderText={placeholderText} />
       </div>
       <div className="content-list-item__content">
         {tagText && (

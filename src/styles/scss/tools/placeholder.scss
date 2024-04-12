@@ -82,11 +82,11 @@
   @include typography($typo__body-small);
 }
 
-@mixin identity-placeholder {
+@mixin identity-placeholder($paddings: $placeholder-paddings) {
   background-color: var(--tint-color-120);
   border: $s-lg solid $color__identity-primary;
 
-  @each $breakpoint-name, $width in $placeholder-paddings {
+  @each $breakpoint-name, $width in $paddings {
     @include media-query__name($breakpoint-name) {
       border-width: $width;
     }
