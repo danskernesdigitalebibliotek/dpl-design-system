@@ -111,6 +111,7 @@ $_hero-column-breakpoint: "small";
 
 .hero__title {
   @include typography($typo__h1);
+  word-break: break-word;
   margin-bottom: $s-md;
 
   @include media-query__name($_hero-column-breakpoint) {
