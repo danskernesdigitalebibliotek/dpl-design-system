@@ -1,0 +1,28 @@
+.filtered-event-list {
+  @include layout-container($layout__max-width--medium);
+}
+.filtered-event-list__heading {
+  @include typography($typo__h2);
+  margin-bottom: $s-xl;
+}
+.filtered-event-list__list-item {
+  border-bottom: 1px solid $color__global-tertiary-1;
+
+  &--hidden {
+    display: none;
+  }
+
+  &:first-child {
+    border-top: 1px solid $color__global-tertiary-1;
+  }
+}
+
+.filtered-event-list__button {
+  width: min-content;
+  margin: 0 auto;
+  margin-top: $s-xl;
+
+  &--hidden {
+    display: none;
+  }
+}
