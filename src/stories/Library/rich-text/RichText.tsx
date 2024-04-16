@@ -30,10 +30,12 @@ export const RichText = () => {
       <h3>
         Narsil enjoying shattered bigger leaderless retrieve dreamed dwarf.
       </h3>
-      <p>
-        Ravens wonder wanted runs me crawl gaining lots faster! Khazad-dum
-        surprise baby season ranks. I bid you all a very fond farewell.
-      </p>
+      <blockquote>
+        <p>
+          Ravens wonder wanted runs me crawl gaining lots faster! Khazad-dum
+          surprise baby season ranks. I bid you all a very fond farewell.
+        </p>
+      </blockquote>
       <ol>
         <li>Narsil.</li>
         <li>Elros.</li>
