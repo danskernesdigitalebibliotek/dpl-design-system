@@ -23,6 +23,7 @@
 @import "./src/stories/Library/Forms/checkbox/checkbox";
 @import "./src/stories/Library/cover/cover";
 @import "./src/stories/Library/Forms/input/input";
+@import "./src/stories/Library/Forms/textarea/textarea";
 @import "./src/stories/Library/Forms/date-picker/date-picker";
 @import "./src/stories/Library/date-calendar/date-calendar";
 @import "./src/stories/Library/list-buttons/list-buttons";
@@ -158,7 +159,7 @@
 @import "./src/stories/Blocks/reservation-page/reservation-page-skeleton";
 @import "./src/stories/Blocks/loan-page/loan-page-skeleton";
 @import "./src/stories/Blocks/registration-page/registration-page";
-@import "./src/stories/Blocks/webform/webform";
+@import "./src/stories/Blocks/form/form";
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";
