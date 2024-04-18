@@ -15,10 +15,12 @@ export const Links = ({
   target,
   excludeLinkTagClass = false,
 }: LinksProps) => {
-  const classes = clsx({
-    "link-tag": !excludeLinkTagClass,
-    classNames,
-  });
+  const classes = clsx(
+    {
+      "link-tag": !excludeLinkTagClass,
+    },
+    classNames
+  );
   return (
     <a {...(target ? { target } : {})} href={href} className={classes}>
       {linkText}
