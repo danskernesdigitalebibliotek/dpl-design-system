@@ -19,6 +19,7 @@
 
   &__clauses {
     @include typography($typo__button);
+    color: $color__global-grey;
     display: flex;
     flex-direction: row;
     align-items: center;

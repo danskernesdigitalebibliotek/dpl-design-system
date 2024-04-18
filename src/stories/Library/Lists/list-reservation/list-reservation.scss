@@ -57,7 +57,6 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__note {
   @include typography($typo__small-caption);
-
   // To make it easy to click
   min-height: 20px;
   cursor: pointer;
@@ -79,6 +78,7 @@ $list-reservation-space-desktop: 24px;
 }
 
 .list-reservation__note--mobile {
+  text-align: left;
   @include media-query__small {
     display: none;
   }
@@ -123,6 +123,7 @@ $list-reservation-space-desktop: 24px;
 
 .list-reservation__header {
   @include typography($typo__h4);
+  color: $color__global-black;
   padding: 0;
   cursor: pointer;
 

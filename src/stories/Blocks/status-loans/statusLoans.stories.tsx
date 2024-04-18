@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { StatusLoans as StatusLoansComp } from "./statusLoans";
 
 export default {
-  title: "Blocks / Userprofile / Status loans",
+  title: "Blocks / User Profile / Status loans",
   component: StatusLoansComp,
   parameters: {
     design: {
@@ -28,6 +28,9 @@ export default {
     bread: {
       defaultValue:
         "På mange digitale materialer, er der er begrænsning på, hvor mange du kan låne pr. måned. Der findes dog en række materialer uden begrænsning.",
+    },
+    reservationsText: {
+      defaultValue: "You can reserve 3 ebooks and 3 audiobooks",
     },
     link: {
       defaultValue: {

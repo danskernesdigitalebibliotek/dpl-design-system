@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 import PatronInfo from "./PatronInfo";
+import PatronInfoSkeleton from "./PatronInfoSkeleton";
 
 export default {
   title: "Library / User info",
@@ -33,3 +34,9 @@ const Template: ComponentStory<typeof PatronInfo> = (props) => (
 );
 
 export const PatronInfoExample = Template.bind({});
+
+const SkeletonTemplate: ComponentStory<typeof PatronInfoSkeleton> = () => (
+  <PatronInfoSkeleton />
+);
+
+export const PatronInfoSkeletonExample = SkeletonTemplate.bind({});

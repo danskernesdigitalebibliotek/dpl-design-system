@@ -1,8 +1,49 @@
+.facet-line {
+  width: 100vw;
+  max-height: $s-xl;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-left: -16px;
+  padding-left: 16px;
+  // Hide scrollbar
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+  @include media-query__small() {
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+    overflow-y: visible;
+    max-height: none;
+    flex-wrap: wrap;
+  }
+}
+
 .facet-line-selected-terms__item,
 .facet-line__item {
   display: inline-block;
   margin-right: $s-sm;
-  margin-top: $s-md;
+  margin-top: 0px;
+  white-space: nowrap;
+
+  @include media-query__small() {
+    margin-top: $s-sm;
+  }
+
+  .tag {
+    color: $color__global-grey;
+  }
+}
+
+.facet-line-selected-terms__item {
+  margin-bottom: $s-sm;
 }
 
 .facet-line-selected-terms {
