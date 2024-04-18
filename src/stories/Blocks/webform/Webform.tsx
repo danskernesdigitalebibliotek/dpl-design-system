@@ -18,14 +18,14 @@ const Webform: React.FC<WebformProps> = ({
   withoutSubtitle = false,
 }) => {
   return (
-    <div className="webform">
-      <div className="webform__header">
-        <h1 className="webform__title">{title}</h1>
-        {!withoutSubtitle && <p className="webform__subtitle">{subtitle}</p>}
+    <div className="dpl-form">
+      <div className="dpl-form__header">
+        <h1 className="dpl-form__title">{title}</h1>
+        {!withoutSubtitle && <p className="dpl-form__subtitle">{subtitle}</p>}
       </div>
-      <section className="paragraph">
-        <div className="paragraphs__item paragraphs__item--webform webform__form">
-          <form className="webform-submission-form">
+      <section>
+        <div className="dpl-form__body">
+          <form>
             <Input id="edit-name" type="text" label="Your name" />
             <Input id="edit-email" type="text" label="Your email" />
             <Dropdown
@@ -51,7 +51,7 @@ const Webform: React.FC<WebformProps> = ({
               variant="filled"
               classNames="mt-48 mb-22"
             />
-            <p className="webform__info-message">
+            <p className="dpl-form__info-message">
               BEMÆRK!: Indsæt aldrig CPR-nummer eller følsomme oplysninger i
               formularen. Læs mere om{" "}
               <Links

@@ -1,4 +1,4 @@
-.webform {
+.dpl-form {
   max-width: 100%;
 
   &__header {
@@ -29,7 +29,7 @@
     max-width: 550px;
   }
 
-  &__form {
+  &__body {
     margin: 0 $s-md 0 $s-md;
 
     @include media-query__small {
