@@ -12,13 +12,15 @@ $_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
   background-color: $color__global-secondary;
   max-height: $_recommended-material-max-height;
   width: 100%;
+  height: 100%;
   padding: $s-md;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-auto-rows: min-content;
   row-gap: $s-lg;
   justify-items: center;
   align-items: center;
+  align-content: space-between;
   aspect-ratio: $_aspect-ratio-mobile;
 
   @include media-query__small {
@@ -53,12 +55,12 @@ $_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
 .recommended-material--in-grid {
   max-width: unset;
   border: 1px solid $color__global-tertiary-1;
+  aspect-ratio: unset;
 
   > .cover {
-    height: 100%;
+    height: $MATERIAL_LARGE_DESKTOP;
     max-height: $MATERIAL_LARGE_DESKTOP;
     @include media-query__medium {
-      height: $MATERIAL_LARGE_DESKTOP;
       max-height: unset;
     }
   }
