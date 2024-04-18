@@ -6,13 +6,13 @@ import Input from "../../Library/Forms/input/Input";
 import Label from "../../Library/Forms/label/Label";
 import { Links } from "../../Library/links/Links";
 
-export interface WebformProps {
+export interface ContactFormProps {
   title: string;
   subtitle: string;
   withoutSubtitle?: boolean;
 }
 
-const Webform: React.FC<WebformProps> = ({
+const ContactForm: React.FC<ContactFormProps> = ({
   title,
   subtitle,
   withoutSubtitle = false,
@@ -26,10 +26,10 @@ const Webform: React.FC<WebformProps> = ({
       <section>
         <div className="dpl-form__body">
           <form>
-            <Input id="edit-name" type="text" label="Your name" />
-            <Input id="edit-email" type="text" label="Your email" />
+            <Input id="name" type="text" label="Your name" />
+            <Input id="email" type="text" label="Your email" />
             <Dropdown
-              labelComponent={<Label id="edit-category">Category</Label>}
+              labelComponent={<Label id="category">Category</Label>}
               ariaLabel="select category"
               arrowIcon="chevron"
               innerClassNames={{
@@ -42,8 +42,8 @@ const Webform: React.FC<WebformProps> = ({
                 { title: "Option 3" },
               ]}
             />
-            <Input id="edit-subject" type="text" label="Subject" />
-            <Textarea id="edit-message" name="message" label="Message" />
+            <Input id="subject" type="text" label="Subject" />
+            <Textarea id="message" name="message" label="Message" />
             <Button
               buttonType="none"
               label="Send message"
@@ -68,4 +68,4 @@ const Webform: React.FC<WebformProps> = ({
   );
 };
 
-export default Webform;
+export default ContactForm;
