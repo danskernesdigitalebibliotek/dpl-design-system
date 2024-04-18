@@ -3,28 +3,28 @@ import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collecti
 import { ReactComponent as TriangleIcon } from "../../../public/icons/basic/icon-triangle.svg";
 import Label from "../Forms/label/Label";
 
-export type DropdownItem = {
+export type DropdownWithLabelItem = {
   title: string;
   href?: string;
   disabled?: boolean;
 };
 
-export type DropdownProps = {
-  labelComponent?: ReturnType<typeof Label>;
-  list: DropdownItem[];
+export type DropdownWithLabelProps = {
+  label: ReturnType<typeof Label>;
+  list: DropdownWithLabelItem[];
   ariaLabel: string;
   arrowIcon: "triangles" | "chevron";
   classNames?: string;
   innerClassNames?: { select?: string; option?: string; arrowWrapper?: string };
 };
 
-export const Dropdown: React.FC<DropdownProps> = ({
-  labelComponent,
+export const DropdownWithLabel: React.FC<DropdownWithLabelProps> = ({
   arrowIcon,
   ariaLabel,
   list,
   classNames,
   innerClassNames,
+  label,
 }) => {
   const Icon = () => {
     if (arrowIcon === "triangles") {
@@ -52,7 +52,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <div className="dpl-input">
-      {labelComponent && labelComponent}
+      {label}
       <div className={classes.root}>
         <select className={classes.select} aria-label={ariaLabel}>
           {list.map(({ title, disabled }, index) => (

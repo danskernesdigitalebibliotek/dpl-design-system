@@ -1,8 +1,10 @@
+import Label from "../label/Label";
+
 export type InputProps = {
   label: string;
   type: "text" | "password";
   id: string;
-  description: string;
+  description?: string;
   validation?: string;
 };
 
@@ -11,7 +13,7 @@ const Input = (props: InputProps) => {
   const invalid = validation ? "true" : "false";
   return (
     <div className="dpl-input">
-      <label htmlFor={id}>{label}</label>
+      <Label id={id}>{label}</Label>
       <input
         aria-invalid={invalid}
         aria-describedby={`description-${id}`}

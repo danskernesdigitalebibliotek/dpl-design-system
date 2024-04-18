@@ -28,11 +28,6 @@
     margin-bottom: $s-lg;
     max-width: 550px;
 
-    &:has(.form-textarea) {
-      max-width: $block-max-width__medium;
-    }
-  }
-
   &__form {
     margin: 0 $s-md 0 $s-md;
 
@@ -40,18 +35,6 @@
       margin-left: 160px;
       max-width: $block-max-width__medium;
     }
-  }
-
-  // Class from the webform Drupal module
-  & .form-textarea {
-    @include typography($typo__body-placeholder);
-    border: solid 1px $color__global-tertiary-1;
-    width: 100%;
-    padding: $s-md;
-    resize: none;
-    background-color: $color__global-primary;
-
-    @extend %default-focus-visible;
   }
 
   &__info-message {

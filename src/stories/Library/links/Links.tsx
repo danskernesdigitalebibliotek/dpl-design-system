@@ -1,14 +1,26 @@
+import clsx from "clsx";
+
 export type LinksProps = {
   href: string;
   linkText: string;
   classNames?: string;
+  target?: string;
+  excludeLinkTagClass?: boolean;
 };
 
-export const Links = (props: LinksProps) => {
-  const { href, linkText, classNames } = props;
-
+export const Links = ({
+  href,
+  linkText,
+  classNames,
+  target,
+  excludeLinkTagClass = false,
+}: LinksProps) => {
+  const classes = clsx({
+    "link-tag": !excludeLinkTagClass,
+    classNames,
+  });
   return (
-    <a href={href} className={`link-tag ${classNames || ""}`}>
+    <a {...(target ? { target } : {})} href={href} className={classes}>
       {linkText}
     </a>
   );
