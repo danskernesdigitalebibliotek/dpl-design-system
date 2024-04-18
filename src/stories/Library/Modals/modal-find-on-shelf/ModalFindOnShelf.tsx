@@ -42,6 +42,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
             ]}
             arrowIcon="chevron"
             classNames="dropdown--grey-borders"
+            hideInputWrapper
           />
           <Dropdown
             ariaLabel="Choose periodical week"
@@ -54,6 +55,7 @@ const ModalFindOnShelf: React.FC<ModalFindOnShelfProps> = ({
             ]}
             arrowIcon="chevron"
             classNames="dropdown--grey-borders"
+            hideInputWrapper
           />
         </div>
       )}
