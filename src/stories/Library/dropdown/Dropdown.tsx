@@ -9,7 +9,7 @@ export type DropdownItem = {
   disabled?: boolean;
 };
 
-export type DropdownProps = {
+export type DropdownElementProps = {
   labelComponent?: ReturnType<typeof Label>;
   list: DropdownItem[];
   ariaLabel: string;
@@ -18,7 +18,7 @@ export type DropdownProps = {
   innerClassNames?: { select?: string; option?: string; arrowWrapper?: string };
 };
 
-export const Dropdown: React.FC<DropdownProps> = ({
+const DropdownElement: React.FC<DropdownElementProps> = ({
   labelComponent,
   arrowIcon,
   ariaLabel,
@@ -51,7 +51,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   };
 
   return (
-    <div className="dpl-input">
+    <>
       {labelComponent && labelComponent}
       <div className={classes.root}>
         <select className={classes.select} aria-label={ariaLabel}>
@@ -70,6 +70,52 @@ export const Dropdown: React.FC<DropdownProps> = ({
           <Icon />
         </div>
       </div>
+    </>
+  );
+};
+
+export type DropdownProps = {
+  labelComponent?: ReturnType<typeof Label>;
+  list: DropdownItem[];
+  ariaLabel: string;
+  arrowIcon: "triangles" | "chevron";
+  classNames?: string;
+  innerClassNames?: { select?: string; option?: string; arrowWrapper?: string };
+  hideInputWrapper?: boolean;
+};
+
+export const Dropdown: React.FC<DropdownProps> = ({
+  labelComponent,
+  arrowIcon,
+  ariaLabel,
+  list,
+  classNames,
+  innerClassNames,
+  hideInputWrapper = false,
+}) => {
+  if (hideInputWrapper) {
+    return (
+      <DropdownElement
+        labelComponent={labelComponent}
+        arrowIcon={arrowIcon}
+        ariaLabel={ariaLabel}
+        list={list}
+        classNames={classNames}
+        innerClassNames={innerClassNames}
+      />
+    );
+  }
+
+  return (
+    <div className="dpl-input">
+      <DropdownElement
+        labelComponent={labelComponent}
+        arrowIcon={arrowIcon}
+        ariaLabel={ariaLabel}
+        list={list}
+        classNames={classNames}
+        innerClassNames={innerClassNames}
+      />
     </div>
   );
 };
