@@ -27,7 +27,9 @@ export default {
 } as ComponentMeta<typeof Textarea>;
 
 const Template: ComponentStory<typeof Textarea> = (args) => (
-  <Textarea {...args} />
+  <div className="dpl-form">
+    <Textarea {...args} />
+  </div>
 );
 
 export const Default = Template.bind({});
