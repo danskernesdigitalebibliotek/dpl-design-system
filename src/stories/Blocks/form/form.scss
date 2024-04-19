@@ -23,10 +23,14 @@
     }
   }
 
-  & .dpl-input {
+  .dpl-input {
     @include typography($typo__body-placeholder);
     margin-bottom: $s-lg;
     max-width: 550px;
+
+    &--full-width {
+      max-width: 750px;
+    }
   }
 
   &__body {
