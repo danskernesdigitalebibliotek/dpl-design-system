@@ -1,41 +1,73 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const lists = document.querySelectorAll("[data-show-more-list]");
+  const listWrappers = document.querySelectorAll(
+    "[data-show-more-list-wrapper]"
+  );
 
-  lists.forEach((list) => {
-    const uid = Math.floor(Math.random() * 1000000);
-    list.setAttribute("id", `category-list-${uid}`);
+  listWrappers.forEach((listWrapper) => {
+    const list = listWrapper.querySelector("[data-show-more-list]");
+    const listId = list.getAttribute("data-show-more-list-id");
+    const listElements = list.querySelectorAll("[data-show-more-item]");
+    const amountOfListElements = parseInt(listElements.length, 10);
+    const listShowMoreButton = listWrapper.querySelector(
+      "[data-show-more-button]"
+    );
 
-    const categories = list.querySelectorAll("[data-show-more-item]");
-    const toggleButton = list.querySelector("[data-show-more-button]");
-    toggleButton.setAttribute("id", `category-toggle-${uid}`);
+    if (!list || !listShowMoreButton || !listElements || !listId) {
+      const missingElements = [];
+      if (!list) missingElements.push("list");
+      if (!listShowMoreButton) missingElements.push("listShowMoreButton");
+      if (!listElements.length) missingElements.push("listElements");
+      if (!listId) missingElements.push("listId");
 
-    const initialVisibleItems =
-      list.getAttribute("data-show-more-initial-visible-items") || 2; // default to 2 if not set
-
-    // if there are no categories or only one category, hide the toggle button
-    // or if there are less categories than the initial visible items, hide the toggle button
-    if (!categories.length || categories.length <= initialVisibleItems) {
-      toggleButton.classList.add("show-more__hidden");
+      // eslint-disable-next-line no-console
+      console.debug(
+        `show-more.js: Missing required elements: ${missingElements.join(", ")}`
+      );
       return;
     }
 
-    const showMoreText =
-      toggleButton.getAttribute("data-show-more-text") || "+";
-    const hideMoreText =
-      toggleButton.getAttribute("data-show-more-hide-text") || "-";
-    const visibleItems = initialVisibleItems - 1;
+    // Add listId  & aria attributes to list and buttons
+    list.setAttribute("id", `list-id-${listId}`);
+    listShowMoreButton.setAttribute("aria-controls", `list-id-${listId}`);
 
-    categories.forEach((item, index) => {
-      if (index > visibleItems) item.classList.add("show-more__hidden");
+    const initialVisibleItems =
+      list.getAttribute("data-initial-visible-items") || amountOfListElements;
+
+    // Hide button if there are less items than the initial visible items
+    if (initialVisibleItems >= amountOfListElements) {
+      listShowMoreButton.classList.add("show-more__hidden");
+      return;
+    }
+
+    // Hide items beyond the initial visible items
+    listElements.forEach((listItem, index) => {
+      if (index > initialVisibleItems - 1)
+        listItem.classList.add("show-more__hidden");
     });
 
-    toggleButton.addEventListener("click", () => {
-      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
-      categories.forEach((item, index) => {
-        if (index > visibleItems) item.classList.toggle("show-more__hidden");
+    const showMoreText = listShowMoreButton.getAttribute("data-show-more-text");
+    const showLessText = listShowMoreButton.getAttribute("data-show-less-text");
+    const hideListButtonAfterExpand = list.getAttribute(
+      "data-hide-list-button-after-expand"
+    );
+
+    listShowMoreButton.addEventListener("click", () => {
+      listElements.forEach((listItem, index) => {
+        if (index > initialVisibleItems - 1)
+          listItem.classList.toggle("show-more__hidden");
       });
-      toggleButton.innerText = isExpanded ? showMoreText : hideMoreText;
-      toggleButton.setAttribute("aria-expanded", !isExpanded);
+
+      const isAriaExpanded =
+        listShowMoreButton.getAttribute("aria-expanded") === "true";
+      listShowMoreButton.setAttribute("aria-expanded", !isAriaExpanded);
+
+      listShowMoreButton.innerText = isAriaExpanded
+        ? showMoreText
+        : showLessText;
+
+      if (hideListButtonAfterExpand === "true" && !isAriaExpanded) {
+        listShowMoreButton.classList.add("show-more__hidden");
+      }
     });
   });
 });
