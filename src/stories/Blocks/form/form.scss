@@ -1,5 +1,10 @@
 .dpl-form {
-  max-width: 100%;
+  max-width: 812px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
 
   &__header {
     margin: $s-2xl 0 $s-2xl $s-md;
@@ -30,6 +35,12 @@
 
     &--full-width {
       max-width: 750px;
+    }
+
+    &:has(p) {
+      @include typography($typo__links);
+      color: $color__global-tertiary-2;
+      max-width: 550px;
     }
   }
 
