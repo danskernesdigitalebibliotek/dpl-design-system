@@ -6,7 +6,7 @@
   }
 
   .ssc-square.image-square {
-    height: 216px;
+    height: 100%;
     aspect-ratio: 0.79;
     width: auto;
     justify-self: center;
@@ -16,9 +16,11 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-bottom: 12px;
-  }
-  .ssc-line {
-    width: 60%;
+    margin-top: 12px;
+
+    .ssc-line {
+      width: 60%;
+      margin-bottom: 0;
+    }
   }
 }
