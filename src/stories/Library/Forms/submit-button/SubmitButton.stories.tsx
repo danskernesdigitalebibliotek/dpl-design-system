@@ -1,20 +1,14 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import Textarea from "./Textarea";
+import SubmitButton from "./SubmitButton";
 
 export default {
-  title: "Library / Forms / Textarea",
-  component: Textarea,
+  title: "Library / Forms / Submit Button",
+  component: SubmitButton,
   decorators: [withDesign],
   argTypes: {
-    id: {
-      defaultValue: "id",
-    },
-    name: {
-      defaultValue: "name",
-    },
-    label: {
-      defaultValue: "Besked",
+    buttonText: {
+      defaultValue: "Save changes",
     },
   },
   parameters: {
@@ -24,11 +18,11 @@ export default {
     },
     layout: "padded",
   },
-} as ComponentMeta<typeof Textarea>;
+} as ComponentMeta<typeof SubmitButton>;
 
-const Template: ComponentStory<typeof Textarea> = (args) => (
+const Template: ComponentStory<typeof SubmitButton> = (args) => (
   <div className="dpl-form">
-    <Textarea {...args} />
+    <SubmitButton {...args} />
   </div>
 );
 

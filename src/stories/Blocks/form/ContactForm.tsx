@@ -1,10 +1,10 @@
 import React from "react";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
-import { Button } from "../../Library/Buttons/button/Button";
 import Textarea from "../../Library/Forms/textarea/Textarea";
 import Input from "../../Library/Forms/input/Input";
 import Label from "../../Library/Forms/label/Label";
 import { Links } from "../../Library/links/Links";
+import SubmitButton from "../../Library/Forms/submit-button/SubmitButton";
 
 export interface ContactFormProps {
   title: string;
@@ -44,13 +44,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
             />
             <Input id="subject" type="text" label="Subject" />
             <Textarea id="message" name="message" label="Message" />
-            <Button
-              buttonType="none"
-              label="Send message"
-              size="small"
-              variant="filled"
-              classNames="mt-48 mb-22"
-            />
+            <SubmitButton buttonText="Send message" />
             <p className="dpl-form__info-message">
               BEMÆRK!: Indsæt aldrig CPR-nummer eller følsomme oplysninger i
               formularen. Læs mere om{" "}

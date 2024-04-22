@@ -1,16 +1,18 @@
-.dpl-input {
-  &:has(.form-textarea) {
-    max-width: $block-max-width__medium;
-  }
+.dpl-form {
+  .dpl-input {
+    &:has(textarea) {
+      max-width: $block-max-width__medium;
+    }
 
-  & textarea {
-    @include typography($typo__body-placeholder);
-    border: solid 1px $color__global-tertiary-1;
-    width: 100%;
-    padding: $s-md;
-    resize: none;
-    background-color: $color__global-primary;
+    textarea {
+      @include typography($typo__body-placeholder);
+      border: solid 1px $color__global-tertiary-1;
+      width: 100%;
+      padding: $s-md;
+      resize: none;
+      background-color: $color__global-primary;
 
-    @extend %default-focus-visible;
+      @extend %default-focus-visible;
+    }
   }
 }
