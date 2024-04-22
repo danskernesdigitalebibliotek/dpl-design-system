@@ -1,14 +1,11 @@
 // MATERIAL_LARGE_DESKTOP & MATERIAL_MEDIUM_MOBILE are variables
 // taken from the cover.scss file.
+// Aspect ratio is equal the defined cover value of large in cover.scss.
 $cover_height_small: $MATERIAL_MEDIUM_MOBILE;
 $cover_height_large: $MATERIAL_LARGE_DESKTOP;
+$cover_aspect_ratio: 0.79;
 $_recommended-material-max-height: 432px;
 $_recommended-material-max-width: 378px;
-$_aspect-ratio-mobile: 285 / 320;
-// stylelint-disable-next-line
-$_aspect-ratio-desktop: $_recommended-material-max-width /
-  $_recommended-material-max-height;
-$_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
 
 .recommended-material {
   background-color: $color__global-secondary;
@@ -18,20 +15,16 @@ $_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
   padding: $s-md;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content $cover_height_small min-content;
+  grid-auto-rows: auto $cover_height_large auto;
   row-gap: $s-lg;
   justify-items: center;
   align-items: center;
   align-content: space-between;
-  aspect-ratio: $_aspect-ratio-mobile;
+  aspect-ratio: 0.79;
 
   @include media-query__small {
     padding: $s-lg;
-    aspect-ratio: $_aspect-ratio-desktop;
     max-width: $_recommended-material-max-width;
-  }
-  @include media-query__medium {
-    grid-template-rows: min-content $cover_height_large min-content;
   }
 }
 
@@ -42,6 +35,7 @@ $_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
 
 .recommended-material__texts {
   justify-self: start;
+  align-self: baseline;
 }
 
 .recommended-material__description,
@@ -62,7 +56,11 @@ $_material-image-box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
   border: 1px solid $color__global-tertiary-1;
   aspect-ratio: unset;
 
+  grid-template-rows: min-content $cover_height_small 1fr;
   > .cover {
     height: 100%;
+  }
+  @include media-query__small {
+    grid-template-rows: min-content $cover_height_large 1fr;
   }
 }
