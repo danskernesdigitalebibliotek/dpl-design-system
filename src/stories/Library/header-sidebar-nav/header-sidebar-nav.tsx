@@ -6,11 +6,13 @@ import MenuItemList from "../header-menu-list/HeaderMenuList";
 export type HeaderSidebarNavProps = {
   menuLinks: MenuItemsProps[];
   menuOpen?: "open" | "closed";
+  isStorybookContext?: boolean;
 };
 
 const HeaderSidebarNav: React.FC<HeaderSidebarNavProps> = ({
   menuLinks,
   menuOpen = "closed",
+  isStorybookContext = false,
 }) => {
   useEffect(() => {
     /* eslint-disable-next-line global-require */
@@ -18,7 +20,13 @@ const HeaderSidebarNav: React.FC<HeaderSidebarNavProps> = ({
   }, []);
 
   return (
-    <div className="header-sidebar-nav" data-open={menuOpen}>
+    <div
+      className="header-sidebar-nav"
+      data-open={menuOpen}
+      // The sidebar normally isn't displayed on larger screens (otherwise it's
+      // accessible using keyboard on desktop), but we want to show it in Storybook.
+      style={isStorybookContext ? { display: "block" } : undefined}
+    >
       <div className="header-sidebar-nav__background-wrapper">
         <div className="header-sidebar-nav__menu-wrapper">
           <div
