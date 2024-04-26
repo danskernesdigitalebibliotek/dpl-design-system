@@ -5,7 +5,7 @@ import { generateId } from "../../horizontal-term-line/HorizontalTermLine";
 export type ListData = {
   [k: string]: {
     value: string[];
-    type: "standard" | "link";
+    type: "standard" | "link" | "list";
     layout?: "default" | "column";
   };
 };
@@ -27,12 +27,27 @@ const ListDescription: React.FC<{ data: ListData; className?: string }> = ({
                 layout === "column" && "list-description__value--column"
               )}
             >
-              {value.map((val) => (
-                <Fragment key={val}>
-                  {type === "standard" && <span>{val}</span>}
-                  {type === "link" && <span className="link-tag">{val}</span>}
-                </Fragment>
-              ))}
+              {type === "standard" &&
+                value.map((val) => (
+                  <Fragment key={val}>
+                    <span>{val}</span>
+                  </Fragment>
+                ))}
+
+              {type === "link" &&
+                value.map((val) => (
+                  <Fragment key={val}>
+                    <span className="link-tag">{val}</span>
+                  </Fragment>
+                ))}
+
+              {type === "list" && (
+                <ul className="list-description__value--list">
+                  {value.map((val) => (
+                    <li key={val}>{val}</li>
+                  ))}
+                </ul>
+              )}
             </dd>
           </div>
         );
