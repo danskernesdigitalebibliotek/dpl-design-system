@@ -20,7 +20,7 @@ $icon-position: 10px;
       background-repeat: no-repeat;
       background-size: 6px;
       // This is a copy from  icons/basic/icon-select-arrow
-      background-image: url('data:image/svg+xml;utf8,<svg width="6" height="5" viewBox="0 0 6 5" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4.75821 0.708313L3 3.95101L1.24179 0.708313L4.75821 0.708313Z" fill="black" stroke="black"/> </svg>');
+      background-image: url("data:image/svg+xml;utf8,%3Csvg width='6' height='5' viewBox='0 0 6 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.75821 0.708313L3 3.95101L1.24179 0.708313L4.75821 0.708313Z' fill='black' stroke='black'/%3E%3C/svg%3E");
       background-position: 100%;
       padding-right: $icon-position;
     }
