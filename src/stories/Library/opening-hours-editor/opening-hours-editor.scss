@@ -24,17 +24,28 @@
   padding: 0.5rem;
   color: #555;
   background-color: #fff;
+
+  &:disabled {
+    background-color: transparent;
+  }
 }
 
 .opening-hours-editor-form__checkbox {
-  margin-top: 0.75rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   display: flex;
   gap: 0.5rem;
   align-items: center;
 
+  input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+  }
+
   label {
     margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.25;
   }
 }
 
@@ -92,12 +103,17 @@
 }
 
 .opening-hours-editor-event-content__series-icon {
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
 }
 
 // Override Drupal's default margin for tables inside .fc to eliminate top and bottom spacing
 // Fixes the issue where the selected hour starts half an hour later than the actual selection.
 .fc table {
   margin: 0;
+}
+
+// Override Drupal's default border for table rows inside .fc to keep the correct styling for when an hour starts
+.fc tr {
+  border-bottom: unset;
 }
