@@ -48,6 +48,10 @@
   cursor: pointer;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 // When class is used on a block element it will show a loading ellipsis animation.
 .text-loading:after {
   overflow: hidden;
