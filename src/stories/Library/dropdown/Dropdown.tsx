@@ -16,6 +16,7 @@ export type DropdownElementProps = {
   arrowIcon: "triangles" | "chevron";
   classNames?: string;
   innerClassNames?: { select?: string; option?: string; arrowWrapper?: string };
+  footnote?: string;
 };
 
 const DropdownElement: React.FC<DropdownElementProps> = ({
@@ -25,6 +26,7 @@ const DropdownElement: React.FC<DropdownElementProps> = ({
   list,
   classNames,
   innerClassNames,
+  footnote,
 }) => {
   const Icon = () => {
     if (arrowIcon === "triangles") {
@@ -70,6 +72,7 @@ const DropdownElement: React.FC<DropdownElementProps> = ({
           <Icon />
         </div>
       </div>
+      {footnote && <div className="dropdown__footnote">{footnote}</div>}
     </>
   );
 };
@@ -82,6 +85,7 @@ export type DropdownProps = {
   classNames?: string;
   innerClassNames?: { select?: string; option?: string; arrowWrapper?: string };
   hideInputWrapper?: boolean;
+  footnote?: string;
 };
 
 export const Dropdown: React.FC<DropdownProps> = ({
@@ -92,6 +96,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   classNames,
   innerClassNames,
   hideInputWrapper = false,
+  footnote,
 }) => {
   if (hideInputWrapper) {
     return (
@@ -102,6 +107,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
         list={list}
         classNames={classNames}
         innerClassNames={innerClassNames}
+        footnote={footnote}
       />
     );
   }
@@ -115,6 +121,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
         list={list}
         classNames={classNames}
         innerClassNames={innerClassNames}
+        footnote={footnote}
       />
     </div>
   );
