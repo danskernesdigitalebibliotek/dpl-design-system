@@ -6,13 +6,14 @@ export type InputProps = {
   id: string;
   description?: string;
   validation?: string;
+  classNames?: string;
 };
 
 const Input = (props: InputProps) => {
-  const { label, type, id, description, validation } = props;
+  const { label, type, id, description, validation, classNames } = props;
   const invalid = validation ? "true" : "false";
   return (
-    <div className="dpl-input">
+    <div className={`dpl-input ${classNames || ""}`}>
       <Label id={id}>{label}</Label>
       <input
         aria-invalid={invalid}
