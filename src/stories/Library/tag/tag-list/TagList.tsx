@@ -17,8 +17,13 @@ const TagList: FC<TagListProps> = ({ tags }) => {
   return (
     <>
       {tags.length > 1 && (
-        <div data-show-more-list className="tag-list">
-          <ul>
+        <div data-show-more-list-wrapper className="tag-list">
+          <ul
+            data-show-more-list
+            data-initial-visible-items="3"
+            data-hide-list-button-after-expand="false"
+            data-show-more-list-id="tag-list"
+          >
             {tags.map((tag, index) => (
               <li data-show-more-item>
                 <Tag key={index} hasBackground size="large">
@@ -31,6 +36,8 @@ const TagList: FC<TagListProps> = ({ tags }) => {
             className="tag tag--fill cursor-pointer"
             aria-expanded="false"
             data-show-more-button
+            data-show-more-text="..."
+            data-show-less-text="-"
           >
             ...
           </button>

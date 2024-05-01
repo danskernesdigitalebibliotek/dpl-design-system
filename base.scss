@@ -140,6 +140,8 @@
 @import "./src/stories/Library/opening-hours-editor/opening-hours-editor";
 @import "./src/stories/Library/opening-hours/opening-hours";
 @import "./src/stories/Library/opening-hours/opening-hours-skeleton";
+@import "./src/stories/Library/filtered-event-list/filtered-event-list";
+@import "./src/stories/Library/event-list-stacked/event-list-stacked";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";
