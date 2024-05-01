@@ -1,0 +1,9 @@
+.event-list-stacked {
+  @include layout-container($layout__max-width--medium);
+  @include block-spacing();
+}
+
+.event-list-stacked__heading {
+  @include typography($typo__h2);
+  margin-bottom: $s-xl;
+}

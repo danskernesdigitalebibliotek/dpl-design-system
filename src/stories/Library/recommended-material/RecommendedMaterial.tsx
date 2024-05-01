@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { ButtonFavourite } from "../Buttons/button-favourite/ButtonFavourite";
 import Cover from "../cover/Cover";
 
@@ -22,9 +23,9 @@ export const RecommendedMaterial: React.FC<RecommendedMaterialProps> = ({
 }) => {
   return (
     <div
-      className={`recommended-material ${
-        partOfGrid && "recommended-material--in-grid "
-      }`}
+      className={clsx("recommended-material", {
+        "recommended-material--in-grid": partOfGrid,
+      })}
     >
       <div className="recommended-material__icon">
         <ButtonFavourite fill={favoriteFill} />
