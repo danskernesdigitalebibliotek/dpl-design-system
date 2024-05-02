@@ -1,19 +1,38 @@
 .breadcrumb {
-  .arrow__link {
-    text-decoration: none;
-  }
+  @include layout-container($layout__max-width--large);
 
-  .text-links {
-    color: $color__text-secondary-gray;
-    margin-bottom: -4px;
-    @include typography($typo__links);
-  }
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: $s-lg;
+  padding-bottom: $s-lg;
+  row-gap: $s-sm;
 
-  .arrow__body {
-    stroke: $color__text-secondary-gray;
+  > a {
+    @extend %text-inline-link;
   }
+}
 
-  .arrow__head {
-    fill: $color__global-grey;
+// We cannot be sure to be able to put classes directly on the children,
+// as they might be atom links.
+.breadcrumb > * {
+  @include typography($typo__body-small);
+
+  position: relative;
+  display: inline-block;
+  color: $color__text-secondary-gray;
+}
+
+// Targeting all the items that should have a > prefix.
+.breadcrumb > * + * {
+  $_arrow-size: 20px;
+
+  padding-left: $_arrow-size;
+
+  &::before {
+    position: absolute;
+    content: ">";
+    left: 0;
+    width: $_arrow-size;
+    text-align: center;
   }
 }
