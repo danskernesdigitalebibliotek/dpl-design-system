@@ -1,9 +1,9 @@
 .article-header {
   @include layout-container;
-  @include block-spacing();
   display: grid;
   gap: $s-xl;
   position: relative;
+  margin-top: $s-lg;
 
   @include media-query__small {
     margin-bottom: $s-4xl;

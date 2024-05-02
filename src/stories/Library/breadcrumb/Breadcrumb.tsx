@@ -1,16 +1,16 @@
-import { IconArrow } from "../Arrows/icon-arrow-ui/ArrowUI";
-
 export type BreadcrumbProps = {
-  text: string;
+  items: { link?: string; text: string }[];
 };
-export const Breadcrumb = ({ text }: BreadcrumbProps) => {
+export const Breadcrumb = ({ items }: BreadcrumbProps) => {
   return (
-    <div className="breadcrumb">
-      <IconArrow size="small" direction="left" hover>
-        <a href="/" className="arrow__link" aria-label="Arrow link">
-          <p className="text-links">{text}</p>
-        </a>
-      </IconArrow>
-    </div>
+    <nav className="breadcrumb" role="navigation">
+      {items.map((item) => {
+        return item.link ? (
+          <a href={item.link}>{item.text}</a>
+        ) : (
+          <span>{item.text}</span>
+        );
+      })}
+    </nav>
   );
 };

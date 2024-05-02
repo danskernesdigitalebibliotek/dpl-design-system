@@ -8,16 +8,20 @@ const StoryBase: StoryBaseType<BreadcrumbProps> = {
   component: BreadcrumbComp,
   decorators: [withDesign],
   argTypes: {
-    text: {
-      defaultValue: "Nyheder",
+    items: {
+      defaultValue: [
+        { text: "Nyheder" },
+        { text: "Pressemeddelser", link: "/" },
+        { text: "Page" },
+        { text: "Article", link: "/" },
+      ],
     },
   },
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=437%3A4681",
+      url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=15294-35432&mode=design&t=yVa9YIJSSytj3Ta6-4",
     },
-    layout: "centered",
   },
 };
 
