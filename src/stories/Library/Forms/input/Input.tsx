@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Label from "../label/Label";
 
 export type InputProps = {
@@ -13,7 +14,7 @@ const Input = (props: InputProps) => {
   const { label, type, id, description, validation, classNames } = props;
   const invalid = validation ? "true" : "false";
   return (
-    <div className={`dpl-input ${classNames || ""}`}>
+    <div className={clsx("dpl-input", [{ classNames }])}>
       <Label id={id}>{label}</Label>
       <input
         aria-invalid={invalid}
