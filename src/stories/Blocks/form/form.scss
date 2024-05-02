@@ -1,5 +1,10 @@
-.webform {
-  max-width: 100%;
+.dpl-form {
+  max-width: 812px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $s-md;
+  padding-right: $s-md;
+  box-sizing: border-box;
 
   &__header {
     margin: $s-2xl 0 $s-2xl $s-md;
@@ -23,35 +28,29 @@
     }
   }
 
-  & .dpl-input {
+  .dpl-input {
     @include typography($typo__body-placeholder);
     margin-bottom: $s-lg;
     max-width: 550px;
 
-    &:has(.form-textarea) {
-      max-width: $block-max-width__medium;
+    &--full-width {
+      max-width: 750px;
+    }
+
+    &:has(p) {
+      @include typography($typo__links);
+      color: $color__global-tertiary-2;
+      max-width: 550px;
     }
   }
 
-  &__form {
+  &__body {
     margin: 0 $s-md 0 $s-md;
 
     @include media-query__small {
       margin-left: 160px;
       max-width: $block-max-width__medium;
     }
-  }
-
-  // Class from the webform Drupal module
-  & .form-textarea {
-    @include typography($typo__body-placeholder);
-    border: solid 1px $color__global-tertiary-1;
-    width: 100%;
-    padding: $s-md;
-    resize: none;
-    background-color: $color__global-primary;
-
-    @extend %default-focus-visible;
   }
 
   &__info-message {

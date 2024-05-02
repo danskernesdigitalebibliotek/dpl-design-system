@@ -3,28 +3,28 @@ import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collecti
 import { ReactComponent as TriangleIcon } from "../../../public/icons/basic/icon-triangle.svg";
 import Label from "../Forms/label/Label";
 
-export type DropdownItem = {
+export type DropdownWithLabelItem = {
   title: string;
   href?: string;
   disabled?: boolean;
 };
 
-export type DropdownElementProps = {
-  labelComponent?: ReturnType<typeof Label>;
-  list: DropdownItem[];
+export type DropdownWithLabelProps = {
+  label: ReturnType<typeof Label>;
+  list: DropdownWithLabelItem[];
   ariaLabel: string;
   arrowIcon: "triangles" | "chevron";
   classNames?: string;
   innerClassNames?: { select?: string; option?: string; arrowWrapper?: string };
 };
 
-const DropdownElement: React.FC<DropdownElementProps> = ({
-  labelComponent,
+export const DropdownWithLabel: React.FC<DropdownWithLabelProps> = ({
   arrowIcon,
   ariaLabel,
   list,
   classNames,
   innerClassNames,
+  label,
 }) => {
   const Icon = () => {
     if (arrowIcon === "triangles") {
@@ -51,8 +51,8 @@ const DropdownElement: React.FC<DropdownElementProps> = ({
   };
 
   return (
-    <>
-      {labelComponent && labelComponent}
+    <div className="dpl-input">
+      {label}
       <div className={classes.root}>
         <select className={classes.select} aria-label={ariaLabel}>
           {list.map(({ title, disabled }, index) => (
@@ -70,52 +70,6 @@ const DropdownElement: React.FC<DropdownElementProps> = ({
           <Icon />
         </div>
       </div>
-    </>
-  );
-};
-
-export type DropdownProps = {
-  labelComponent?: ReturnType<typeof Label>;
-  list: DropdownItem[];
-  ariaLabel: string;
-  arrowIcon: "triangles" | "chevron";
-  classNames?: string;
-  innerClassNames?: { select?: string; option?: string; arrowWrapper?: string };
-  hideInputWrapper?: boolean;
-};
-
-export const Dropdown: React.FC<DropdownProps> = ({
-  labelComponent,
-  arrowIcon,
-  ariaLabel,
-  list,
-  classNames,
-  innerClassNames,
-  hideInputWrapper = false,
-}) => {
-  if (hideInputWrapper) {
-    return (
-      <DropdownElement
-        labelComponent={labelComponent}
-        arrowIcon={arrowIcon}
-        ariaLabel={ariaLabel}
-        list={list}
-        classNames={classNames}
-        innerClassNames={innerClassNames}
-      />
-    );
-  }
-
-  return (
-    <div className="dpl-input">
-      <DropdownElement
-        labelComponent={labelComponent}
-        arrowIcon={arrowIcon}
-        ariaLabel={ariaLabel}
-        list={list}
-        classNames={classNames}
-        innerClassNames={innerClassNames}
-      />
     </div>
   );
 };

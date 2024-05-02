@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Webform from "./Webform";
+import ContactForm from "./ContactForm";
 
 export default {
-  title: "Blocks / Webform",
-  component: Webform,
+  title: "Blocks / Forms / Contact Form",
+  component: ContactForm,
   parameters: {
     design: {
       type: "figma",
@@ -14,7 +14,7 @@ export default {
   argTypes: {
     title: {
       control: "text",
-      defaultValue: "Webform title",
+      defaultValue: "Contact Form Title",
     },
     subtitle: {
       control: "text",
@@ -26,15 +26,15 @@ export default {
       defaultValue: false,
     },
   },
-} as ComponentMeta<typeof Webform>;
+} as ComponentMeta<typeof ContactForm>;
 
-const Template: ComponentStory<typeof Webform> = (args) => {
-  return <Webform {...args} />;
+const ContactFormTemplate: ComponentStory<typeof ContactForm> = (args) => {
+  return <ContactForm {...args} />;
 };
 
-export const Default = Template.bind({});
+export const ContactFormGeneral = ContactFormTemplate.bind({});
 
-export const WithoutSubtitle = Template.bind({});
-WithoutSubtitle.args = {
+export const ContactFormWithoutSubtitle = ContactFormTemplate.bind({});
+ContactFormWithoutSubtitle.args = {
   withoutSubtitle: true,
 };

@@ -88,11 +88,13 @@ export const Header = (props: HeaderProps) => {
                 {signedIn && (
                   <span className="text-small-caption">{username}</span>
                 )}
+                {!signedIn && <span className="text-small-caption">Login</span>}
               </a>
             </div>
             <div className="header__menu-bookmarked header__button">
               <a href="/">
                 <HeartIcon aria-label="go to favorites list" />
+                <span className="text-small-caption">Liked</span>
               </a>
             </div>
           </nav>
