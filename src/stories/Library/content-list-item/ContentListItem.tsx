@@ -47,9 +47,7 @@ export const ContentListItem: React.FC<ContentListItemProps> = ({
         )}
         <div className="content-list-item__date">{date}</div>
         <h2 className="content-list-item__title">{title}</h2>
-        <div className="content-list-item__description">
-          <p>{description}</p>
-        </div>
+        <div className="content-list-item__description">{description}</div>
         <div className="content-list-item__content-bottom-container">
           <p className="content-list-item__location">{location}</p>
         </div>
