@@ -16,6 +16,10 @@ $_menu_animation_delay: 0.2s;
   transform: translateX(-100%);
   transition: transform $_transition_speed $_bezier_transition;
 
+  @include media-query__small {
+    display: none;
+  }
+
   ul.header__menu-navigation {
     padding: 0;
     display: flex;

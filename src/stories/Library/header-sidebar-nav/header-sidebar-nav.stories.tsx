@@ -27,6 +27,11 @@ export default {
       defaultValue: "open",
       control: { type: "select", options: ["open", "closed"] },
     },
+    isStorybookContext: {
+      name: "Are we in storybook?",
+      defaultValue: true,
+      control: { type: "none" },
+    },
   },
 } as ComponentMeta<typeof HeaderSidebarNav>;
 
