@@ -38,13 +38,12 @@ export const Header = (props: HeaderProps) => {
     <>
       <header className="header">
         <div className="header__logo-desktop">
-          <a className="header__logo-desktop-link" href="/">
-            <Logo
-              fallback={false}
-              libraryName="Hjørring"
-              altText="PromoTitle image of libary"
-            />
-          </a>
+          <Logo
+            hasImage
+            libraryName="Hjørring"
+            libraryPlace="Bibliotekerne"
+            altText="PromoTitle image of libary"
+          />
         </div>
 
         <div className="header__menu">
@@ -71,8 +70,9 @@ export const Header = (props: HeaderProps) => {
                 </Pagefold>
                 <div className="header__menu-navigation-logo">
                   <Logo
-                    fallback
+                    hasImage
                     libraryName="Lyngby-Taarbæk"
+                    libraryPlace="Bibliotekerne"
                     altText="PromoTitle image of libary"
                   />
                 </div>

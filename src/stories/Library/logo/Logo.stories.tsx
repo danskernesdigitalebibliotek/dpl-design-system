@@ -1,19 +1,9 @@
 import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
 import Logo, { LogoProps } from "./Logo";
 
 export default {
   title: "Library / Logo",
   component: Logo,
-  decorators: [withDesign],
-  argTypes: {
-    libraryName: {
-      defaultValue: "Hjørring",
-    },
-    altText: {
-      defaultValue: "Logo",
-    },
-  },
   parameters: {
     design: {
       type: "figma",
@@ -27,14 +17,18 @@ const Template: ComponentStory<typeof Logo> = (args: LogoProps) => (
   <Logo {...args} />
 );
 
-export const Default = Template.bind({});
-Default.args = {
-  fallback: false,
-  altText: "logo",
+export const LogoWithImage = Template.bind({});
+LogoWithImage.args = {
+  hasImage: true,
+  libraryName: "Hjørring",
+  libraryPlace: "Bibliotekerne",
+  altText: "Logo",
 };
 
-export const LogoFallback = Template.bind({});
-LogoFallback.args = {
-  fallback: true,
+export const LogoWithoutImage = Template.bind({});
+LogoWithoutImage.args = {
+  hasImage: false,
   libraryName: "Hjørring",
+  libraryPlace: "Bibliotekerne",
+  altText: "Logo",
 };
