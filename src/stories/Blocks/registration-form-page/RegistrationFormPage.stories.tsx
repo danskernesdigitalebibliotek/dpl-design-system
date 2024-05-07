@@ -4,7 +4,7 @@ import RedirectToLoginMessage, {
 } from "./RedirectToLoginMessage";
 
 export default {
-  title: "Blocks / Registration Formular Page",
+  title: "Blocks / Registration Form Page",
   argTypes: {
     infoTopText: {
       name: "Headline",
