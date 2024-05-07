@@ -14,7 +14,7 @@ const Input = (props: InputProps) => {
   const { label, type, id, description, validation, classNames } = props;
   const invalid = validation ? "true" : "false";
   return (
-    <div className={clsx("dpl-input", !!classNames && classNames)}>
+    <div className={clsx("dpl-input", classNames)}>
       <Label id={id}>{label}</Label>
       <input
         aria-invalid={invalid}
