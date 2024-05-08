@@ -1,0 +1,18 @@
+.redirect-to-login-message {
+  padding: $s-lg;
+  margin-left: auto;
+
+  @include media-query__small {
+    padding: 300px;
+  }
+
+  &__top {
+    @include typography($typo__body-large);
+    margin-top: $s-md;
+  }
+
+  &__bottom {
+    @include typography($typo__body-placeholder);
+    margin-top: $s-md;
+  }
+}
