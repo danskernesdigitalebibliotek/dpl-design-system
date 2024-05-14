@@ -20,6 +20,24 @@
     }
   }
 
+  &__flex {
+    display: flex;
+    flex-direction: column;
+
+    @include media-query__small {
+      flex-direction: row;
+    }
+  }
+
+  &.dpl-input--double {
+    width: 100%;
+    margin-bottom: $s-xl;
+
+    @include media-query__small {
+      margin-bottom: 0px;
+    }
+  }
+
   &__description {
     color: $color__text-secondary-gray;
     @include typography($typo__body-small);
@@ -41,6 +59,7 @@
 
   /* Firefox */
   input[type="number"] {
+    appearance: textfield;
     -moz-appearance: textfield;
   }
 }

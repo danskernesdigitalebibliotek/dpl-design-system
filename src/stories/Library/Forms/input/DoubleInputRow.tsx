@@ -10,18 +10,18 @@ const DoubleInputRow: React.FC<DoubleInputRowProps> = ({
   rightLabel,
 }) => {
   return (
-    <div className="contact-info-flex">
+    <div className="dpl-input__flex">
       <Input
         id={leftLabel}
         label={leftLabel}
         type="text"
-        classNames="patron__input patron__input--desktop mr-16"
+        classNames="dpl-input dpl-input--double mr-16"
       />
       <Input
         id={rightLabel}
         label={rightLabel}
         type="text"
-        classNames="patron__input patron__input--desktop"
+        classNames="dpl-input dpl-input--double"
       />
     </div>
   );
