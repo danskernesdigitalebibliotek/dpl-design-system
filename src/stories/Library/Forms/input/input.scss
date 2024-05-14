@@ -1,6 +1,7 @@
 .dpl-input {
   display: flex;
   flex-direction: column;
+  @include typography($typo__body-medium);
 
   label {
     @include typography($typo__body-medium);
