@@ -32,6 +32,10 @@
       padding-left: $s-xl;
     }
 
+    &::-webkit-details-marker {
+      display: none;
+    }
+
     &.disclosure__headline--no-padding {
       padding-left: $s-xl;
       @include media-query__small {
