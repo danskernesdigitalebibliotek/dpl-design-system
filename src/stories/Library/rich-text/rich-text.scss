@@ -25,7 +25,6 @@ $_max-width-rich-text: $block-max-width__small;
   ol > li,
   ul > li {
     $_dash-width: 21px;
-    $_dash-width--wide: 33px;
 
     position: relative;
     padding-left: $_dash-width + $s-md;
@@ -39,19 +38,11 @@ $_max-width-rich-text: $block-max-width__small;
       width: $_dash-width;
       text-align: center;
     }
-
-    @include media-query__medium {
-      padding-left: $_dash-width--wide + $s-lg;
-
-      &::before {
-        width: $_dash-width--wide;
-      }
-    }
   }
 
   ul > li::before {
     content: "";
-    height: 1px;
+    height: 2px;
     background-color: $color__global-black;
   }
 
@@ -68,8 +59,9 @@ $_max-width-rich-text: $block-max-width__small;
         )
       );
 
+      top: 0;
       font-weight: normal;
-      line-height: 0;
+      line-height: normal;
       counter-increment: list;
       content: counter(list) ".";
     }

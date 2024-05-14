@@ -1,24 +1,29 @@
 import "../../../styles/css/base.css";
+import clsx from "clsx";
 import logo from "./logo.png";
 
 export type LogoProps = {
-  fallback: boolean;
+  hasImage: boolean;
   libraryName: string;
+  libraryPlace?: string;
   altText: string;
 };
 
-const Logo = (props: LogoProps) => {
-  const { fallback, libraryName, altText } = props;
-
-  return fallback ? (
-    <div className="logo-fallback">
-      <p className="logo-fallback__text-name">{libraryName}</p>
-      <p className="logo-fallback__text-libraries">Bibliotekerne</p>
-    </div>
-  ) : (
-    <div>
-      <img className="logo" src={logo} alt={altText} />
-    </div>
+const Logo = ({ hasImage, libraryName, libraryPlace, altText }: LogoProps) => {
+  return (
+    <a href="/" className="logo" aria-label="Gå til forsiden">
+      <figure className="logo__content">
+        {hasImage && <img src={logo} alt={altText} />}
+        <div
+          className={clsx("logo__description", {
+            "logo__description--has-image": hasImage,
+          })}
+        >
+          <p className="logo__library-name">{libraryName}</p>
+          {libraryPlace && <p>{libraryPlace}</p>}
+        </div>
+      </figure>
+    </a>
   );
 };
 
