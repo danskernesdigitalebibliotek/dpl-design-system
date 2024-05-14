@@ -29,6 +29,12 @@
     }
   }
 
+  &.dpl-input--invalid {
+    input {
+      background-color: $color__global-secondary;
+    }
+  }
+
   &.dpl-input--double {
     width: 100%;
     margin-bottom: $s-xl;

@@ -16,7 +16,13 @@ const CreatePatron: React.FC<CreatePatronProps> = ({ headline }) => {
           <DoubleInputRow leftLabel="Phone number*" rightLabel="Email*" />
         </section>
         <section className="create-patron-page__row">
-          <DoubleInputRow leftLabel="New pin*" rightLabel="Confirm new pin*" />
+          <DoubleInputRow
+            leftLabel="New pin*"
+            rightLabel="Confirm new pin*"
+            descriptionLeft="Exactly 4 digits"
+            descriptionRight="Exactly 4 digits"
+            validationRight="Pin doesn't match"
+          />
         </section>
         <Dropdown
           ariaLabel="Choose pickup branch"
