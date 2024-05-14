@@ -1,0 +1,29 @@
+.create-patron-page {
+  background: $color__global-primary;
+  padding: $s-2xl $s-sm $s-6xl $s-sm;
+
+  @include media-query__small {
+    margin: auto;
+    max-width: 550px;
+    padding: $s-5xl 0 $s-2xl 0;
+  }
+
+  &__title {
+    @include typography($typo__h1);
+    margin-bottom: $s-2xl;
+
+    @include media-query__small {
+      margin-bottom: $s-5xl;
+    }
+  }
+
+  &__row {
+    @include media-query__small {
+      margin-bottom: $s-3xl;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+}

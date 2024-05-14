@@ -1,6 +1,7 @@
 .dpl-input {
   display: flex;
   flex-direction: column;
+  @include typography($typo__body-medium);
 
   label {
     @include typography($typo__body-medium);
@@ -16,6 +17,30 @@
     &:focus {
       border-bottom-color: $color__global-black;
       outline: none;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+
+    @include media-query__small {
+      flex-direction: row;
+    }
+  }
+
+  &.dpl-input--invalid {
+    input {
+      background-color: $color__global-secondary;
+    }
+  }
+
+  &.dpl-input--double {
+    width: 100%;
+    margin-bottom: $s-xl;
+
+    @include media-query__small {
+      margin-bottom: 0px;
     }
   }
 
@@ -40,6 +65,7 @@
 
   /* Firefox */
   input[type="number"] {
+    appearance: textfield;
     -moz-appearance: textfield;
   }
 }

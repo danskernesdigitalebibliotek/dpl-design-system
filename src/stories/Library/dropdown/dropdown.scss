@@ -96,3 +96,8 @@ $_dropdown-icon-size: 50px;
 .dropdown__arrows--inline {
   height: 100%;
 }
+
+.dropdown__footnote {
+  @include typography($typo__small-caption);
+  margin: $s-sm 0 $s-3xl 0;
+}
