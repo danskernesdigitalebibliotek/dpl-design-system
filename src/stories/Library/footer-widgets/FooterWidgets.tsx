@@ -14,7 +14,12 @@ const FooterWidgets: FC<FooterWidgetsType> = ({ footerLanguages }) => {
         ariaLabel="dropdown"
         arrowIcon="triangles"
       />
-      <Logo fallback={false} libraryName="" altText="logo" />
+      <Logo
+        hasImage
+        libraryName="Hjørring"
+        libraryPlace="Bibliotekerne"
+        altText="logo"
+      />
     </div>
   );
 };
