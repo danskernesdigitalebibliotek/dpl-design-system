@@ -85,6 +85,21 @@ jobs:
           body: ${{ env.RELEASE_DESCRIPTION }}
           files: ${{ env.DIST_FILENAME }}
 
+      - name: Write release information in artifact file
+        run: |
+            printf '{
+              "release_branch": "${{ env.RELEASE_BRANCH }}",
+              "dependency_package": "danskernesdigitalebibliotek/dpl-design-system",
+              "release_download_url": "${{ env.DOWNLOAD_URL }}"
+            }' >> release-info.json
+        env:
+          DOWNLOAD_URL: "${{ github.event.repository.html_url }}/releases/download/${{ env.TAG_NAME }}/${{ env.DIST_FILENAME }}"
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: release-info.json
+          path: ./release-info.json
+
       - name: Adding summary
         run: |
           echo "Release created 🚀😎 at: ${{ steps.create-release.outputs.url }}" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,65 @@
+name: Create CMS PR
+on:
+  workflow_run:
+    workflows: ["Create release on branch changes"]
+    types:
+      - completed
+
+jobs:
+  invoke-external-pr-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-info.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Set env variables
+        run: |
+          RELEASE_BRANCH=$(jq -r '.release_branch' release-info.json)
+          RELEASE_DOWNLOAD_URL=$(jq -r '.release_download_url' release-info.json)
+          DEPENDENCY_PACKAGE=$(jq -r '.dependency_package' release-info.json)
+          echo "RELEASE_BRANCH=$RELEASE_BRANCH" >> $GITHUB_ENV
+          echo "RELEASE_DOWNLOAD_URL=$RELEASE_DOWNLOAD_URL" >> $GITHUB_ENV
+          echo "DEPENDENCY_PACKAGE=$DEPENDENCY_PACKAGE" >> $GITHUB_ENV
+
+      - name: Invoke external PR workflow
+        id: invoke_external_pr_workflow
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url:  ${{ env.REQUEST_URL}}
+          method: 'POST'
+          customHeaders: |
+            {
+              "Accept": "application/vnd.github+json",
+              "Authorization": "Bearer ${{ secrets.CMS_PR_CREATION_PAT }}"
+            }
+          data: |
+            {
+              "event_type": "create_pr",
+              "client_payload": {
+                "branch": "${{ env.RELEASE_BRANCH }}",
+                "build_url": "${{ env.RELEASE_DOWNLOAD_URL }}",
+                "dependency_package": "${{ env.DEPENDENCY_PACKAGE }}"
+              }
+            }
+        env:
+          REQUEST_URL: ${{ format('https://api.github.com/repos/{0}/dispatches', vars.REMOTE_REPO_GITHUB_HANDLE) }}
+        # Only invoke external PR workflow if the release branch is not develop or main
+        if: ${{ !contains(fromJSON('["develop", "main"]'), env.RELEASE_BRANCH) }}
+
+      - name: Adding summary
+        run: |
+          echo "Requested external PR at: ${REMOTE_REPO_GITHUB_HANDLE}" >> $GITHUB_STEP_SUMMARY
+          echo "Based on the [${{ env.RELEASE_BRANCH }}](${{ env.BRANCH_URL }}) branch" >> $GITHUB_STEP_SUMMARY
+        if: ${{ steps.invoke_external_pr_workflow.outcome == 'success' }}
+        env:
+          BRANCH_URL: "${{ github.event.repository.html_url }}/tree/${{ env.RELEASE_BRANCH }}"
+          REMOTE_REPO_GITHUB_HANDLE: "${{ vars.REMOTE_REPO_GITHUB_HANDLE }}"
+
+      - name: Adding summary about skip if branch is develop or main
+        run: |
+          echo "Skipped PR creation because the branch was: $RELEASE_BRANCH " >> $GITHUB_STEP_SUMMARY
+          echo "...which is not considered being a release branch. " >> $GITHUB_STEP_SUMMARY
+        if: ${{ contains(fromJSON('["develop", "main"]'), env.RELEASE_BRANCH) }}
