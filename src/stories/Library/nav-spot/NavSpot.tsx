@@ -28,7 +28,7 @@ const NavSpot: FC<NavSpotProps> = ({
         </div>
 
         <div className="nav-spot__text">
-          <h1 className="nav-spot__title">{title}</h1>
+          <h2 className="nav-spot__title">{title}</h2>
 
           {subtitle ? <p className="nav-spot__subtitle">{subtitle}</p> : ""}
 
