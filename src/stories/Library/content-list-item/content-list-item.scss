@@ -107,9 +107,7 @@ $_stacked-reduce-width: 20px;
 .content-list-item__description {
   grid-area: description;
   margin-bottom: $s-lg;
-  p {
-    @include text-ellipsis-truncation(3);
-  }
+  @include text-ellipsis-truncation(3);
 }
 
 .content-list-item__content-bottom-container {
@@ -211,12 +209,9 @@ $_stacked-reduce-width: 20px;
   }
 
   .content-list-item__description {
-    margin-bottom: unset;
+    margin-bottom: auto;
     grid-area: description;
-
-    p {
-      @include text-ellipsis-truncation(2);
-    }
+    @include text-ellipsis-truncation(2);
   }
 
   .content-list-item__content-right-container {
