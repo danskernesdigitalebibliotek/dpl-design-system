@@ -72,14 +72,38 @@
   }
 }
 
+.card__override-images {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+}
+
+@mixin cardStyle($style_name) {
+  .card__override-images[data-card-style="#{$style_name}"] {
+    // Overwrite inline styling.
+    &[style] {
+      display: block !important;
+    }
+
+    // Hide the initial image.
+    ~ img {
+      display: none;
+    }
+  }
+}
+
 %card-variant--large,
 .card[data-variant="large"] {
   @extend %card-variant--default;
+
+  @include cardStyle("large");
 }
 
 %card-variant--x-large,
 .card[data-variant="x-large"] {
   @include media-container--card;
+  @include cardStyle("x-large");
 
   width: 200px;
 
@@ -106,6 +130,8 @@
 
 %card-variant--small,
 .card[data-variant="small"] {
+  @include cardStyle("small");
+
   width: 206px;
 
   // stylelint-disable-next-line no-descending-specificity -- Stylelint wants us to re-order the file, but it actually would make it less readable.
@@ -136,6 +162,8 @@
 
 %card-variant--medium,
 .card[data-variant="medium"] {
+  @include cardStyle("medium");
+
   width: 200px;
 
   @include media-query__name($breakpoint__large-card) {
