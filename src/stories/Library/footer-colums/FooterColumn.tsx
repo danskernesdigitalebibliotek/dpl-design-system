@@ -8,7 +8,7 @@ export type FooterColumnType = {
 const FooterColumn: FC<FooterColumnType> = ({ title, content }) => {
   return (
     <>
-      <h3 className="footer__title">{title}</h3>
+      <h2 className="footer__title">{title}</h2>
       <div
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: content }}
