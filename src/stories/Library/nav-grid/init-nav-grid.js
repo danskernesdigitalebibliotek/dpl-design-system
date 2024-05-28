@@ -11,8 +11,16 @@ window.addEventListener("load", () => {
       return;
     }
 
+    const firstHiddenLink = Array.from(grid.querySelectorAll(".nav-grid__item"))
+      .find((item) => window.getComputedStyle(item).display === "none")
+      ?.querySelector("a");
+
     button.addEventListener("click", () => {
       grid.classList.remove("nav-grid--folded");
+
+      if (firstHiddenLink) {
+        firstHiddenLink.focus();
+      }
     });
   });
 });
