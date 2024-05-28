@@ -4,17 +4,12 @@
   margin: 0 $s-lg $s-md $s-lg;
   padding-top: 30px;
   display: grid;
-  cursor: pointer;
 
   @include media-query__small {
     min-height: 184px;
     grid-template-columns: min-content minmax(0, 634px) 1fr;
     grid-template-rows: 40px auto;
     column-gap: $s-lg;
-  }
-
-  &:hover {
-    filter: drop-shadow(0 $s-xs 20px rgba(72, 72, 72, 0.1));
   }
 
   &__cover {
