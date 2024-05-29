@@ -12,7 +12,7 @@ We have decided to create a set of `default classes` to be used when building
 different kinds of forms, as to not create a large amount of location that
 contain form styling. Considering the forms within the project all look very
 similar/consist of elements that look the same, it will be an advantage to have
-a centralized place to expand//apply future changes to.
+a centralized place to expand/apply future changes to.
 
 As we follow the BEM class structure, the block is called "dpl-form", which can
 be expanded with elements, and modifiers.
