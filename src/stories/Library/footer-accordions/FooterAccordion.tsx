@@ -16,7 +16,7 @@ const FooterAccordion: FC<FooterAccordionProps> = ({
 
   return (
     <>
-      <h3 className="footer-accordion__header footer__title">
+      <h2 className="footer-accordion__header footer__title">
         <button
           className="footer-accordion__header-button"
           aria-expanded={isOpen}
@@ -30,7 +30,7 @@ const FooterAccordion: FC<FooterAccordionProps> = ({
             alt=""
           />
         </button>
-      </h3>
+      </h2>
       <div
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: content }}
