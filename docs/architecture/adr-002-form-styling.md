@@ -3,8 +3,8 @@
 ## Context
 
 There are various types of forms within the project, and it is always a dilemma
-as to whether to write specific styling per form, or if there should be a common
-set of base classes that can be used throughout the project.
+as to whether to write specific styling per form, or to create a common set of
+base classes.
 
 ## Decision
 
