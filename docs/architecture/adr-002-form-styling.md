@@ -1,4 +1,4 @@
-# Architecture Decision Record: Form styling
+# Architecture Decision Record: Form Styling
 
 ## Context
 
