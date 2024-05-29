@@ -32,7 +32,7 @@ As per this decision, we expect introduction of new form elements to be styled
 expanding the current `dpl-form` class.
 
 This currently has an exception in form of form inputs - these have been styled
-a long time ago and use the class "dpl-input".
+a long time ago and use the class `dpl-input`.
 
 ### Implementation in the dpl-design-system
 
