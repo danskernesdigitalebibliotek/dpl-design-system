@@ -20,15 +20,8 @@
 }
 
 .event-description__description {
-  @extend %rich-text;
-  @include typography($typo__body-large);
-
-  line-height: 24px;
+  @include typography($typo__subtitle);
   margin-bottom: $s-md;
-
-  @include media-query__small {
-    line-height: 32px;
-  }
 }
 
 .event-description__links {
