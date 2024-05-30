@@ -53,6 +53,20 @@ const Template: ComponentStory<typeof MaterialGrid> = (args) => (
 export const Default = Template.bind({});
 
 export const GridWithMoreMaterials = Template.bind({});
+
 GridWithMoreMaterials.args = {
   selectedAmountOfMaterialsForDisplay: 8,
+};
+
+export const GridWithNoDescription = Template.bind({});
+
+GridWithNoDescription.args = {
+  description: "",
+};
+
+export const GridWithNoTitleOrDescription = Template.bind({});
+
+GridWithNoTitleOrDescription.args = {
+  title: "",
+  description: "",
 };
