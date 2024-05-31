@@ -1,3 +1,11 @@
+# This workflow is triggered when the "Create release on branch changes" workflow is completed.
+# It downloads the release information from the previous workflow and invokes the external PR workflow.
+# The external PR workflow is invoked only if the release branch is not develop or main.
+# Needed secrets:
+#   GITHUB_TOKEN - for downloading the release information from the previous workflow
+#   CMS_PR_CREATION_PAT - for invoking the external PR workflow. A Token with the "repo" scope is needed.
+# Needed env variables:
+#   REMOTE_REPO_GITHUB_HANDLE - is the GitHub handle ([ORG]/[REPO]) of the repository where the external PR workflow is located.
 name: Create CMS PR
 on:
   workflow_run:
