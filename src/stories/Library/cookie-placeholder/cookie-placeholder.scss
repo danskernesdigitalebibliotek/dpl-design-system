@@ -1,0 +1,14 @@
+.cookie-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;    
+}
+
+.cookie-placeholder__description {
+  font-family: $font__body;
+  font-weight: $font__weight--normal;
+  margin-bottom: 20px;
+}
