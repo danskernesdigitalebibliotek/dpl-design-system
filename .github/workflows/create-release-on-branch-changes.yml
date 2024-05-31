@@ -85,20 +85,15 @@ jobs:
           body: ${{ env.RELEASE_DESCRIPTION }}
           files: ${{ env.DIST_FILENAME }}
 
-      - name: Write release information in artifact file
+      - name: Dispatch CMS PR creation workflow
         run: |
-            printf '{
-              "release_branch": "${{ env.RELEASE_BRANCH }}",
-              "dependency_package": "danskernesdigitalebibliotek/dpl-design-system",
-              "release_download_url": "${{ env.DOWNLOAD_URL }}"
-            }' >> release-info.json
+          gh workflow run create-cms-pr.yml \
+          -f releaseBranch=${{ env.RELEASE_BRANCH }} \
+          -f releaseDownloadUrl=${{ env.DOWNLOAD_URL }} \
+          -f dependencyPackage=danskernesdigitalebibliotek/dpl-design-system
         env:
+          GH_TOKEN: ${{ github.token }}
           DOWNLOAD_URL: "${{ github.event.repository.html_url }}/releases/download/${{ env.TAG_NAME }}/${{ env.DIST_FILENAME }}"
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: release-info.json
-          path: ./release-info.json
 
       - name: Adding summary
         run: |
