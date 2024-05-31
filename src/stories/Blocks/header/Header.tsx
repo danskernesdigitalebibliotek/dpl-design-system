@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import clsx from "clsx";
 import Logo from "../../Library/logo/Logo";
 import MenuItemList from "../../Library/header-menu-list/HeaderMenuList";
 import { menuItems } from "../../Library/header-menu-list/HeaderMenuListData";
@@ -109,7 +110,9 @@ export const Header = (props: HeaderProps) => {
                 <SearchIcon className="header__menu-search-icon" />
               </form>
               <ExpandMoreIcon
-                className="header__menu-dropdown-icon"
+                className={clsx("header__menu-dropdown-icon", {
+                  "header__menu-dropdown-icon--expanded": isDropdownOpen,
+                })}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               />
               {isDropdownOpen && (
