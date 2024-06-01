@@ -1,0 +1,65 @@
+@mixin banner-height {
+  height: 500px;
+  @include media-query__medium {
+    height: 810px;
+  }
+}
+
+@mixin banner-text-margin {
+  margin-bottom: $s-md;
+  @include media-query__medium {
+    margin-bottom: $s-xl;
+  }
+}
+
+.banner {
+  @include layout-container($layout__max-width--large, 0);
+  @include banner-height;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  text-decoration: none;
+}
+
+.banner-content {
+  padding: $s-xl;
+  max-width: 375px;
+  background-color: white;
+  grid-row: 2;
+  grid-column: 1;
+
+  @include media-query__medium {
+    padding: $s-2xl;
+    max-width: 575px;
+    margin-left: 250px;
+  }
+
+  &--no-image {
+    max-width: unset;
+    background-color: unset;
+    margin-left: unset;
+    text-align: center;
+  }
+}
+
+.banner-content__title {
+  @include typography($typo__h1);
+  @include underlined-title;
+  @include banner-text-margin;
+}
+
+.banner-content__description {
+  @include typography($typo__body-medium);
+  @include banner-text-margin;
+  color: $color__global-grey;
+}
+
+.banner-visual {
+  grid-row: 1 / -1;
+  grid-column: 1;
+
+  img {
+    @include banner-height;
+    object-fit: cover;
+    object-position: center;
+  }
+}
