@@ -42,6 +42,8 @@ $_menu_animation_delay: 0.2s;
     text-decoration: none;
     position: relative;
     display: inline-block;
+    white-space: normal;
+    word-break: break-word;
   }
 
   .header__menu-navigation-link::after {
