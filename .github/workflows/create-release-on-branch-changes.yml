@@ -89,11 +89,9 @@ jobs:
         run: |
           gh workflow run create-cms-pr.yml \
           -f releaseBranch=${{ env.RELEASE_BRANCH }} \
-          -f releaseDownloadUrl=${{ env.DOWNLOAD_URL }} \
           -f dependencyPackage=danskernesdigitalebibliotek/dpl-design-system
         env:
           GH_TOKEN: ${{ github.token }}
-          DOWNLOAD_URL: "${{ github.event.repository.html_url }}/releases/download/${{ env.TAG_NAME }}/${{ env.DIST_FILENAME }}"
 
       - name: Adding summary
         run: |

@@ -12,9 +12,6 @@ on:
       releaseBranch:
         description: 'Release Branch'
         required: true
-      releaseDownloadUrl:
-        description: 'Release Download Url'
-        required: true
       dependencyPackage:
         description: 'Dependency Package'
         required: true
@@ -39,7 +36,6 @@ jobs:
               "event_type": "create_pr",
               "client_payload": {
                 "branch": "${{ inputs.releaseBranch }}",
-                "build_url": "${{ inputs.releaseDownloadUrl }}",
                 "dependency_package": "${{ inputs.dependencyPackage }}"
               }
             }
