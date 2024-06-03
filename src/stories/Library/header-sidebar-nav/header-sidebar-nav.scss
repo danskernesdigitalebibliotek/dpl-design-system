@@ -16,10 +16,6 @@ $_menu_animation_delay: 0.2s;
   transform: translateX(-100%);
   transition: transform $_transition_speed $_bezier_transition;
 
-  @include media-query__small {
-    display: none;
-  }
-
   ul.header__menu-navigation {
     padding: 0;
     display: flex;
@@ -115,6 +111,10 @@ $_menu_animation_delay: 0.2s;
     --sidebar-padding: #{$s-lg};
   }
 
+  .header-sidebar-nav {
+    display: none;
+  }
+
   .header-sidebar-nav__menu-wrapper {
     max-width: 375px;
     grid-gap: $s-lg;
@@ -123,4 +123,12 @@ $_menu_animation_delay: 0.2s;
   .header-sidebar-nav__menu-items {
     padding-top: 120px;
   }
+}
+
+// This reflects the current override of the burger menu state, which is
+// controlled by the .has-burger-menu class on the html element.
+// This takes effect when the desktop-menu has too many items, and gets
+// changed to a burger menu.
+.has-burger-menu .header-sidebar-nav {
+  display: block;
 }
