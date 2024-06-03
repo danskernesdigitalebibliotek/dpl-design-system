@@ -158,9 +158,8 @@
 }
 
 .header__menu-dropdown-item {
-  width: 100%;
   padding: $s-xs $s-2xl;
-  cursor: pointer;
+  line-height: 2em;
 
   &:hover {
     background-color: $color__global-secondary;
