@@ -118,8 +118,13 @@ export const Header = (props: HeaderProps) => {
               {isDropdownOpen && (
                 <div className="header__menu-dropdown">
                   <ul>
-                    <li className="header__menu-dropdown-item">
-                      Avanceret søgning
+                    <li>
+                      <a
+                        className="header__menu-dropdown-item hide-linkstyle"
+                        href="/advanced-search"
+                      >
+                        Avanceret søgning
+                      </a>
                     </li>
                   </ul>
                 </div>
