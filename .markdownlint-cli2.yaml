@@ -11,3 +11,7 @@ config:
       # https://gist.github.com/scmx/eca72d44afee0113ceb0349dd54a84a2
       - summary
       - details
+  # Allow duplicate headings for non-siblings.
+  # Duplications do not cause problems for GitHub, which is our default renderer.
+  MD024:
+    siblings_only: true

@@ -1,0 +1,13 @@
+.autosuggest {
+  background-color: $color__global-primary;
+  outline: 1px solid $color__global-tertiary-1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 1px);
+  z-index: $z-5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: $s-md;
+}

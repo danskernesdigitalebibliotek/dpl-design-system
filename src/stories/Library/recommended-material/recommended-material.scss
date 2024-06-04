@@ -1,0 +1,66 @@
+// MATERIAL_LARGE_DESKTOP & MATERIAL_MEDIUM_MOBILE are variables
+// taken from the cover.scss file.
+// Aspect ratio is equal the defined cover value of large in cover.scss.
+$cover_height_small: $MATERIAL_MEDIUM_MOBILE;
+$cover_height_large: $MATERIAL_LARGE_DESKTOP;
+$cover_aspect_ratio: 0.79;
+$_recommended-material-max-height: 432px;
+$_recommended-material-max-width: 378px;
+
+.recommended-material {
+  background-color: $color__global-secondary;
+  max-height: $_recommended-material-max-height;
+  width: 100%;
+  height: 100%;
+  padding: $s-md;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto $cover_height_large auto;
+  row-gap: $s-lg;
+  justify-items: center;
+  align-items: center;
+  align-content: space-between;
+  aspect-ratio: 0.79;
+
+  @include media-query__small {
+    padding: $s-lg;
+    max-width: $_recommended-material-max-width;
+  }
+}
+
+.recommended-material__icon {
+  justify-self: end;
+  line-height: 1;
+}
+
+.recommended-material__texts {
+  justify-self: start;
+  align-self: baseline;
+}
+
+.recommended-material__description,
+.recommended-material__author {
+  @include typography($typo__body-small);
+  @include text-ellipsis-truncation(1);
+  text-decoration: none;
+}
+.recommended-material__description {
+  font-weight: $font__weight--bold;
+  line-height: 2;
+}
+
+// Modifier for when the component is used in a grid presentation.
+// I.e. then  <MaterialGrid/> component
+.recommended-material--in-grid {
+  max-width: unset;
+  border: 1px solid $color__global-tertiary-1;
+  aspect-ratio: unset;
+
+  grid-template-rows: min-content $cover_height_small 1fr;
+  > .cover {
+    height: 100%;
+  }
+  @include media-query__small {
+    grid-template-rows: min-content $cover_height_large 1fr;
+  }
+}

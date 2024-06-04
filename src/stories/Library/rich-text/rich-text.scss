@@ -1,0 +1,143 @@
+// This component is used for WYSIWYG content.
+// E.g. we cannot control classes of the underlying elements, so in this case
+// we will target HTML tags instead.
+$_max-width-rich-text: $block-max-width__small;
+
+%rich-text {
+  @include typography($typo__rich-text-body);
+
+  a {
+    @extend %text-inline-link;
+  }
+
+  h2 {
+    @include typography($typo__h3);
+  }
+
+  h3 {
+    @include typography($typo__h4);
+  }
+
+  > * {
+    margin-bottom: $s-md;
+  }
+
+  ol > li,
+  ul > li {
+    $_dash-width: 21px;
+
+    position: relative;
+    padding-left: $_dash-width + $s-md;
+    padding-bottom: $s-lg;
+    box-sizing: border-box;
+
+    &::before {
+      position: absolute;
+      top: 0.8em;
+      left: 0;
+      width: $_dash-width;
+      text-align: center;
+    }
+  }
+
+  ul > li::before {
+    content: "";
+    height: 2px;
+    background-color: $color__global-black;
+  }
+
+  ol {
+    counter-reset: list;
+
+    > li::before {
+      @include typography(
+        $typo__h4,
+        (
+          excludes: (
+            line-height,
+          ),
+        )
+      );
+
+      top: 0;
+      font-weight: normal;
+      line-height: normal;
+      counter-increment: list;
+      content: counter(list) ".";
+    }
+  }
+
+  blockquote {
+    $_quote-indicator-width: 10px;
+
+    position: relative;
+    padding-top: $s-md;
+    padding-bottom: $s-md;
+    padding-left: $_quote-indicator-width + $s-md;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: $_quote-indicator-width;
+      background-color: $color__identity-primary;
+    }
+  }
+
+  table {
+    // There is no perfect way of making tables responsive.
+    // A quick fix, is to make the text smaller on smaller screens.
+    @include media-query__small("max-width") {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+
+    table-layout: fixed;
+    max-width: 100%;
+    width: 100%;
+
+    // CKEditor also *can* set inline widths and heights.
+    // We want to disable this.
+    &[style] {
+      min-width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  table,
+  th,
+  td {
+    border-collapse: collapse;
+    border: 1px solid $color__global-tertiary-2;
+    padding: $s-xs $s-sm;
+    box-sizing: border-box;
+  }
+
+  thead {
+    background-color: $color__global-tertiary-2;
+    color: $color__text-primary-white;
+  }
+
+  tbody {
+    tr {
+      background-color: $color__global-primary;
+    }
+
+    tr:nth-child(2n) {
+      background-color: $color__global-secondary;
+    }
+  }
+
+  th {
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+.rich-text {
+  @include layout-container($_max-width-rich-text);
+
+  @extend %rich-text;
+}

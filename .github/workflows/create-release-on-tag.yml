@@ -1,0 +1,92 @@
+name: Create release on tag
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  create_release_on_tag:
+    name: "Create release on tag"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set release variables
+        id: resolve-release-vars
+        run: |
+          RELEASE_NAME=${{ github.ref_name }}
+          RELEASE_NAME_SLUGGED=$(echo $RELEASE_NAME | sed -E -e 's/[^[:alnum:]]+/-/g' -e 's/^-+|-+$//g' | tr '[:upper:]' '[:lower:]')
+          RELEASE_SHA=${{ github.sha }}
+          echo "RELEASE_NAME=$RELEASE_NAME" >> "$GITHUB_ENV"
+          echo "RELEASE_SHA=$RELEASE_SHA" >> "$GITHUB_ENV"
+          echo "NPM_VERSION=${RELEASE_NAME}-${RELEASE_SHA}" >> "$GITHUB_ENV"
+          echo "DIST_FILENAME=dist-${RELEASE_NAME_SLUGGED}-${RELEASE_SHA}.zip" >> "$GITHUB_ENV"
+
+     # Validate/parse version tag.
+     # If it is not a version tag it is ok, we just need to know it.
+      - uses: nowsprinting/check-version-format-action@v4
+        id: version
+
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Create NPMRC
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+          echo "@${{ github.repository_owner }}]:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          echo "always-auth=true" >> ~/.npmrc
+          echo 'registry "https://registry.yarnpkg.com"' >> ~/.yarnrc
+
+      - run: yarn install --frozen-lockfile
+
+      - name: Building
+        run: yarn css:build
+
+      - name: Bundling assets
+        run: ./bundle.sh
+        env:
+          VERSION: ${{ env.RELEASE_NAME }}-${{ env.RELEASE_SHA }}
+
+      - name: Rename assets
+        run: |
+          mv dist.zip ${{ env.DIST_FILENAME }}
+
+      - name: Create release
+        id: create-release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.DIST_FILENAME }}
+
+      - name: Adding summary
+        run: |
+          echo "Release created 🚀😎 at: ${{ steps.create-release.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Modify package.json for local context
+        if: steps.version.outputs.is_valid == 'true'
+        # Values in package.json must match the current GitHub repository to
+        # publish to it.
+        run: |
+          npm exec -- json -I -f package.json -e "this.name='@$GITHUB_REPOSITORY'"
+          npm exec -- json -I -f package.json -e "this.repository='https://github.com/$GITHUB_REPOSITORY'"
+
+      - name: Release NPM package
+        if: steps.version.outputs.is_valid == 'true'
+        # The latest tag follows tagged versions to follow NPM conventions.
+        run: |
+          npm version ${{ env.NPM_VERSION }} --no-git-tag-version
+          cat package.json
+          npm publish --tag latest
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: If created add NPM created summary
+        if: steps.version.outputs.is_valid == 'true'
+        run: |
+          echo "Npm package created 🚀. Version: ${{ env.NPM_VERSION }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: If created add NPM NOT created summary
+        if: steps.version.outputs.is_valid != 'true'
+        run: |
+          echo "No npm package created... Just so you know it." >> $GITHUB_STEP_SUMMARY
+

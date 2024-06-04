@@ -1,0 +1,247 @@
+.header {
+  border: 1px solid $color__global-tertiary-1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 250px 1fr 105px;
+  background-color: $color__global-primary;
+  position: sticky;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  z-index: $z-20;
+}
+
+.header__logo-desktop {
+  border-right: 1px solid $color__global-tertiary-1;
+}
+
+.header__menu {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.header__menu-first {
+  border-bottom: 1px solid $color__global-tertiary-1;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+}
+
+.header__menu-navigation-logo {
+  margin-left: $s-md;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu-navigation {
+  display: inline-flex;
+  padding: 0 12px;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.header__menu-navigation-mobile {
+  display: none;
+
+  @include media-query__small {
+    .pagefold-triangle-small {
+      display: none;
+    }
+  }
+}
+
+.header__menu-navigation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid $color__global-tertiary-1;
+}
+
+.header__menu-profile,
+.header__menu-bookmarked {
+  position: relative;
+  border-left: 1px solid $color__global-tertiary-1;
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  span {
+    position: absolute;
+    bottom: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 $s-xs;
+    text-align: center;
+  }
+
+  @include media-query__small {
+    span {
+      bottom: $s-xs;
+    }
+  }
+
+  .header__notification {
+    position: absolute;
+    width: $s-sm;
+    height: $s-sm;
+    border-radius: 100%;
+    transform: translateX(10px) translateY(-12px);
+  }
+}
+
+.header__menu-second {
+  height: 100%;
+}
+
+.header__menu-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.header__menu-search-input {
+  @include typography($typo__body-placeholder);
+
+  width: 100%;
+  height: 100%;
+  padding: 0 $s-lg;
+  border: 0 solid transparent;
+  background-color: transparent;
+
+  ::placeholder {
+    color: $color__text-secondary-gray;
+  }
+
+  &:focus {
+    background-color: $color__global-white;
+    border: 0 solid transparent;
+    outline: none;
+  }
+}
+
+.header__menu-search-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header__menu-search-icon {
+  position: absolute;
+  right: $s-3xl;
+  cursor: pointer;
+}
+
+.header__menu-dropdown {
+  @include typography($typo__body-placeholder);
+  position: absolute;
+  right: 0;
+  top: 58px;
+  background-color: $color__global-primary;
+  padding: $s-xs 0;
+  outline: $color__global-tertiary-1 solid 1px;
+  z-index: $z-10;
+
+  @include media-query__small {
+    padding: $s-sm 0;
+    right: 0;
+    top: 72px;
+  }
+}
+
+.header__menu-dropdown-item {
+  padding: $s-xs $s-2xl;
+  line-height: 2em;
+
+  &:hover {
+    background-color: $color__global-secondary;
+  }
+}
+
+.header__menu-dropdown-item--highlighted {
+  background-color: $color__global-secondary;
+}
+
+.header__menu-dropdown-icon {
+  position: absolute;
+  cursor: pointer;
+  right: $s-lg;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleY(1);
+
+  &.header__menu-dropdown-icon--expanded {
+    transition: transform 0.3s ease-in-out;
+    transform: scaleY(-1);
+  }
+}
+
+.header__clock {
+  border-left: 1px solid $color__global-tertiary-1;
+  display: none;
+
+  @include media-query__small {
+    display: block;
+  }
+}
+
+.header__clock-items {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__button {
+  height: 56px;
+  width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color__text-primary-black;
+
+  @include media-query__small {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+// has-burger-menu is added dynamically using JS, by calculating if there
+// is enough space to show the desktop menu, and otherwise enabling the
+// burger menu. @see header-state.js
+.has-burger-menu {
+  .header {
+    grid-template-columns: 1fr;
+
+    @include media-query__small {
+      grid-template-columns: 1fr 105px;
+    }
+  }
+
+  .header__menu-navigation {
+    position: absolute;
+    top: -999px;
+
+    // This is important, to avoid screen readers seeing double links.
+    visibility: hidden;
+  }
+
+  .header__logo-desktop {
+    display: none;
+  }
+
+  .header__menu-navigation-mobile {
+    display: flex;
+  }
+}
+
+#header-sidebar-nav__toggle {
+  cursor: pointer;
+}

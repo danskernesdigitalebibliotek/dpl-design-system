@@ -1,9 +1,115 @@
 {
-  "extends": ["plugin:reload/typescript"],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "settings": {
+    "react": {
+      "version": "16.11.0"
+    }
+  },
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "ecmaFeatures": {
+      "jsx": true,
+      "globalReturn": false,
+    },
+    "project": "./tsconfig.json"
   },
   "rules": {
-    "@typescript-eslint/explicit-module-boundary-types": "off"
-  }
+    "prefer-arrow-callback": [
+      "error",
+      {
+        "allowNamedFunctions": false,
+        "allowUnboundThis": true
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "state"
+        ]
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    // We like to use arrow function syntax also for functional components.
+    "react/function-component-definition": "off",
+    // No complaints about missing trailing comma
+    "@typescript-eslint/comma-dangle": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.tsx"
+      ],
+      "rules": {
+        // We do not use prop-types in ts.
+        "react/prop-types": "off",
+        "react/require-default-props": "off",
+        "react/no-unused-prop-types": "off",
+        "no-underscore-dangle": [
+          "error",
+          {
+            "allow": [
+              "__typename"
+            ]
+          }
+        ],
+        // We do not create any functionality for our components
+        // outside of making them work for storybook viewing
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "react/button-has-type": "off",
+        "jsx-a11y/alt-text": "off",
+        "react/no-unstable-nested-components": "off",
+        "react/no-array-index-key": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "global-require": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "react/jsx-props-no-spreading": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        // We do not need return types on react components.
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+      }
+    },
+    {
+      "files": [
+        "*.stories.jsx",
+        "*.stories.tsx",
+        "*.hoc.tsx"
+      ],
+      "rules": {
+        // We need a simple way of passing args in stories via object spreading.
+        "react/jsx-props-no-spreading": "off"
+      }
+    },
+    {
+      "files": [
+        "*.entry.tsx"
+      ],
+      "rules": {
+        // Since we use High Order Functional Component in entries for text props
+        // and want to show the props being used we disable this rule.
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    }
+  ]
 }

@@ -1,0 +1,28 @@
+.tag {
+  color: $color__global-black;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $color__global-tertiary-1;
+  padding: $s-sm $s-md;
+  @include typography($typo__tags);
+  text-decoration: none;
+
+  &.tag--fill {
+    background-color: $color__global-secondary;
+  }
+
+  &.tag--small {
+    height: $s-xl;
+    padding: 0 $s-sm;
+  }
+
+  &.tag--large {
+    height: 40px;
+    padding: 0 $s-md;
+  }
+}
+
+.tag-icon {
+  margin-left: 10px;
+}

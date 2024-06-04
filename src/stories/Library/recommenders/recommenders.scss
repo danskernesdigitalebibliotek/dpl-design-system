@@ -1,0 +1,130 @@
+.recommender {
+  background-color: $color__global-tertiary-2;
+  color: $color__text-primary-white;
+  border-color: $color__global-grey;
+
+  &--bright {
+    background-color: $color__global-primary;
+    color: $color__text-primary-black;
+    border-color: $color__global-tertiary-1;
+  }
+  /* stylelint-disable max-nesting-depth */
+  &--triple-desktop {
+    @include media-query__medium {
+      .simple-material {
+        &:last-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &--padding-desktop {
+    @include media-query__medium {
+      padding: $s-6xl;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    padding: $s-lg;
+
+    @include media-query__medium {
+      padding-bottom: $s-6xl;
+    }
+  }
+
+  &__left-title {
+    text-align: left;
+    padding-left: $s-md;
+
+    @include media-query__medium {
+      padding-left: $s-4xl;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: end;
+    margin-bottom: $s-md;
+    margin-right: $s-md;
+    gap: $s-md;
+  }
+
+  &__triple-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+
+    @include media-query__medium {
+      grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+
+    @include media-query__medium {
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+  }
+}
+
+.simple-material {
+  border: 1px solid $color__global-grey;
+  padding: 30px;
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 350px;
+
+  &--bright {
+    border: 1px solid $color__global-tertiary-1;
+  }
+
+  &__favourite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__cover-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  &__meta {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 100%;
+    padding-right: 10px;
+  }
+
+  &__title {
+    @include typography($typo__body-placeholder);
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__author {
+    @include typography($typo__body-placeholder);
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: inherit;
+  }
+}

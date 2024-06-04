@@ -1,0 +1,52 @@
+.article-header {
+  @include layout-container;
+  display: grid;
+  gap: $s-xl;
+  position: relative;
+  margin-top: $s-lg;
+
+  @include media-query__small {
+    margin-bottom: $s-4xl;
+  }
+}
+
+.article-header__back-link {
+  position: absolute;
+  left: $s-md;
+  top: $s-sm;
+
+  @include media-query__small {
+    left: $s-2xl;
+    top: $s-lg;
+  }
+}
+
+.article-header__title {
+  @include typography($typo__h1);
+}
+
+.article-header__subtitle {
+  @include typography($typo__subtitle);
+}
+
+.article-header__title,
+.article-header__subtitle {
+  @include media-query__small {
+    max-width: 897px;
+  }
+}
+
+.article-header__info {
+  @include typography($typo__body-small);
+}
+
+.article-header__author {
+  @include typography($typo__body-small);
+
+  @extend %link-tag;
+  margin-left: $s-xs;
+}
+
+.article-header__date {
+  margin-left: $s-sm;
+}

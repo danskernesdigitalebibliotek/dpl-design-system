@@ -1,0 +1,20 @@
+.dpl-list-empty {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dotted $color__global-grey;
+  text-align: center;
+  color: $color__text-secondary-gray;
+  padding: 48px $s-xs;
+
+  @include typography($typo__body-large);
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    column-gap: $s-lg;
+  }
+}

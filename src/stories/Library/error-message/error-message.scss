@@ -1,0 +1,60 @@
+.error-message {
+  background-color: $color__global-secondary;
+  padding: $s-md;
+  display: flex;
+  align-items: center;
+
+  @include media-query__x-small {
+    display: flex;
+    align-items: center;
+    padding: $s-md $s-xl $s-md $s-xl;
+  }
+
+  &__icon {
+    margin-right: $s-sm;
+    min-width: 40px;
+  }
+
+  &__description {
+    color: $color__text-primary-black;
+    @include typography($typo__body-placeholder);
+    padding: $s-md $s-sm;
+    max-width: 82%;
+    line-height: 120%;
+
+    @include media-query__large {
+      max-width: 85%;
+    }
+  }
+
+  &__btn-close {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: $s-sm;
+    transition: 0.3s;
+    z-index: $z-15;
+    margin: $s-sm;
+
+    @include media-query__small {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin: $s-sm $s-sm $s-sm auto;
+      padding: 0;
+    }
+
+    &:hover {
+      transform: rotateZ(90deg);
+    }
+
+    & > img {
+      width: 15px;
+
+      @include media-query__small {
+        width: 18px;
+      }
+    }
+  }
+}

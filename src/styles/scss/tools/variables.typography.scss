@@ -1,0 +1,361 @@
+// "Title / Header 1"
+$typo__h1: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 32px,
+    line-height: 40px,
+  ),
+  small: (
+    line-height: 120%,
+  ),
+  medium: (
+    font-size: 52px,
+  ),
+  x-large: (
+    font-size: 58px,
+  ),
+);
+
+// "Header 2"
+$typo__h2: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 28px,
+    line-height: 32px,
+  ),
+  small: (
+    line-height: 120%,
+  ),
+  medium: (
+    font-size: 42px,
+  ),
+  x-large: (
+    font-size: 44px,
+  ),
+);
+
+// "Header 3"
+$typo__h3: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 24px,
+    line-height: 32px,
+  ),
+  small: (
+    line-height: 120%,
+  ),
+  medium: (
+    font-size: 32px,
+  ),
+  x-large: (
+    font-size: 34px,
+  ),
+);
+
+// "Header 4"
+$typo__h4: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 18px,
+    line-height: 24px,
+  ),
+  small: (
+    line-height: 120%,
+  ),
+  medium: (
+    font-size: 24px,
+  ),
+  x-large: (
+    font-size: 26px,
+  ),
+);
+
+// "Header 5"
+$typo__h5: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 20px,
+    line-height: 24px,
+  ),
+);
+
+// "Subtitle"
+$typo__subtitle: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 18px,
+    line-height: 32px,
+  ),
+  small: (
+    line-height: 160%,
+  ),
+  medium: (
+    font-size: 24px,
+  ),
+  x-large: (
+    font-size: 26px,
+  ),
+);
+
+// "Accent"
+$typo__accent: (
+  mobile: (
+    font-family: $font__accent,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 24px,
+    line-height: 120%,
+  ),
+  x-large: (
+    font-size: 26px,
+  ),
+);
+
+// "Body Copy - L"
+$typo__body-large: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 16px,
+    line-height: 160%,
+  ),
+  medium: (
+    font-size: 18px,
+  ),
+  x-large: (
+    font-size: 20px,
+  ),
+);
+
+// "Body Copy - M"
+$typo__body-placeholder: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 14px,
+    line-height: 32px,
+    color: $color__text-secondary-gray,
+  ),
+  small: (
+    line-height: 160%,
+  ),
+  medium: (
+    font-size: 16px,
+  ),
+  x-large: (
+    font-size: 18px,
+  ),
+);
+
+$typo__desktop-menu-item: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    line-height: 32px,
+    color: $color__text-secondary-gray,
+    font-size: 18px,
+  ),
+);
+
+// "Body Copy - M - medium"
+$typo__body-medium: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--semi-bold,
+    font-size: 14px,
+    line-height: 160%,
+  ),
+  medium: (
+    font-size: 16px,
+  ),
+  x-large: (
+    font-size: 18px,
+  ),
+);
+
+// "Body Copy - S"
+$typo__body-small: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 14px,
+    line-height: 16px,
+  ),
+);
+
+// "Button text"
+$typo__button: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--semi-bold,
+    font-size: 14px,
+    line-height: 24px,
+    letter-spacing: 0.02em,
+    text-transform: uppercase,
+  ),
+  small: (
+    line-height: 120%,
+  ),
+  x-large: (
+    font-size: 16px,
+    line-height: 20px,
+  ),
+);
+
+// "Links"
+$typo__links: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 14px,
+    line-height: 24px,
+    text-underline-offset: 0.5em,
+  ),
+  small: (
+    line-height: 150%,
+  ),
+  x-large: (
+    font-size: 16px,
+  ),
+);
+
+// "Tags"
+$typo__tags: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--semi-bold,
+    font-size: 12px,
+    line-height: 120%,
+    letter-spacing: 0.02em,
+    text-transform: uppercase,
+  ),
+  small: (
+    line-height: 120%,
+  ),
+  x-large: (
+    font-size: 14px,
+  ),
+);
+
+// "Small Text - Caption"
+$typo__small-caption: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 12px,
+    line-height: 16px,
+  ),
+  small: (
+    line-height: 160%,
+  ),
+  medium: (
+    line-height: 120%,
+  ),
+);
+
+// "Label"
+$typo__label: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 10px,
+    line-height: 18px,
+    letter-spacing: 0.02em,
+  ),
+);
+
+$typo__byline-tags: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 14px,
+    line-height: 24px,
+  ),
+  #{$breakpoint__large-card}: (
+      font-size: 20px,
+    ),
+);
+
+$typo__byline-tags--small: (
+  mobile: map_get($typo__byline-tags, "mobile"),
+);
+
+$typo__rich-text-body: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 16px,
+    line-height: 24px,
+    color: $color__text-secondary-gray,
+  ),
+  medium: (
+    font-size: 18px,
+    line-height: 32px,
+  ),
+);
+
+$typo__card-placeholder: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 16px,
+    line-height: 20px,
+  ),
+  #{$breakpoint__large-card}: (
+      font-size: 42px,
+      line-height: 46px,
+    ),
+);
+
+$typo__card-placeholder--medium: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 20px,
+    line-height: 24px,
+  ),
+  #{$breakpoint__large-card}: (
+      font-size: 28px,
+      line-height: 32px,
+    ),
+);
+
+$typo__card-placeholder--grid: (
+  mobile: (
+    font-family: $font__title,
+    font-style: normal,
+    font-weight: $font__weight--normal,
+    font-size: 16px,
+    line-height: 20px,
+  ),
+  #{$breakpoint__large-card}: (
+      font-size: 20px,
+      line-height: 24px,
+    ),
+);

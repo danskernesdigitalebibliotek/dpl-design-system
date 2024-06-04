@@ -1,0 +1,39 @@
+.modal-header {
+  display: grid;
+  grid-template-areas: "avatar" "name" "link";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  row-gap: 12px;
+  column-gap: $s-lg;
+  padding: $s-xl;
+  border-bottom: 1px solid $color__global-tertiary-1;
+
+  &__avatar {
+    grid-area: avatar;
+    width: fit-content;
+  }
+
+  &__name {
+    grid-area: name;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  &__link {
+    grid-area: link;
+  }
+
+  @include media-query__small {
+    grid-template-areas: "avatar name" "avatar link";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    padding: {
+      top: 40px;
+      right: $s-4xl;
+      bottom: 40px;
+      left: $s-4xl;
+    }
+  }
+}

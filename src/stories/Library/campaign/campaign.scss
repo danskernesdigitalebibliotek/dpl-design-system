@@ -1,0 +1,52 @@
+.campaign {
+  background-color: $color__global-tertiary-2;
+  display: grid;
+  grid-template-rows: 150px auto;
+
+  @include media-query__small {
+    height: 150px;
+    display: flex;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    @include media-query__small {
+      max-width: 30%;
+    }
+
+    &.campaign__image--full-width {
+      @include media-query__small {
+        max-width: 100%;
+        min-width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    @include typography($typo__h4);
+
+    margin: $s-lg;
+    align-self: center;
+    color: $color__text-primary-white;
+
+    &.campaign__title--none {
+      display: none;
+    }
+  }
+}
+
+.campaign--reverse {
+  @include media-query__small {
+    flex-direction: row-reverse;
+  }
+}
+
+.campaign__title--ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,55 @@
+// BEM plugin does not support interpolation.
+@mixin _icon-arrow-animated($direction, $size, $scaleX, $translatePx, $origin) {
+  .arrow__hover--#{$direction}-#{$size} {
+    cursor: pointer;
+
+    svg {
+      overflow: visible;
+    }
+
+    &:hover {
+      .arrow__head {
+        transition: 0.3s;
+        transform: translateX($translatePx);
+      }
+
+      .arrow__body {
+        transition: 0.3s;
+        transform: scaleX($scaleX);
+      }
+    }
+
+    .arrow__body {
+      transition: 0.6s;
+      transform: scaleX(1);
+      transform-origin: $origin;
+    }
+
+    .arrow__head {
+      transition: 0.6s;
+      transform: translateX(0);
+    }
+  }
+}
+
+@include _icon-arrow-animated("right", "large", 1.165, 25px, left);
+@include _icon-arrow-animated("right", "small", 1.5, 30px, left);
+@include _icon-arrow-animated("left", "large", 1.165, -25px, right);
+@include _icon-arrow-animated("left", "small", 1.5, -30px, right);
+
+.arrow__link {
+  text-decoration: none;
+}
+
+.arrow-button {
+  // This width mimics what the expanded svg width. The class is intended to be
+  // used when the arrow needs to be within a button so they look the same.
+  width: 101px;
+
+  &:focus {
+    svg {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

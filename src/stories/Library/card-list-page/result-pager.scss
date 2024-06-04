@@ -1,0 +1,27 @@
+.result-pager {
+  &__title {
+    text-align: center;
+    margin-top: $s-lg;
+    margin-bottom: $s-md;
+  }
+}
+
+.result-pager--margin-bottom {
+  margin-bottom: $s-5xl;
+  margin-top: 0px;
+}
+// Override button css (Center + Width)
+.result-pager > .btn-primary {
+  margin: 0 auto;
+  width: 100%;
+
+  @include media-query__small {
+    max-width: 253px;
+  }
+}
+
+.result-pager--margin-bottom > .btn-primary {
+  @include media-query__small {
+    margin-bottom: 90px;
+  }
+}

@@ -1,0 +1,73 @@
+.footer {
+  @include block-spacing();
+
+  .footer__mobile {
+    display: block;
+  }
+
+  .footer__desktop {
+    display: none;
+  }
+
+  @include media-query__small {
+    .footer__mobile {
+      display: none;
+    }
+
+    .footer__desktop {
+      display: block;
+    }
+  }
+
+  // Pagefold tweaks
+  .pagefold-parent--small,
+  .pagefold-parent--medium {
+    width: 100%;
+    height: auto;
+  }
+
+  .internal-pagefold-parent {
+    background-color: $color__global-secondary;
+
+    @include media-query__medium {
+      padding: 56px $s-5xl $s-lg;
+    }
+  }
+}
+
+.footer__title {
+  @include typography($typo__h4);
+  @include media-query__small {
+    margin-bottom: $s-md;
+  }
+}
+
+.footer__content {
+  @include typography($typo__body-placeholder);
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  p {
+    margin-bottom: $s-md;
+  }
+
+  // Drupal adds a <p> tag around the <a> tag
+  // so we need to remove the margin-bottom
+  // to avoid spacing between the links
+  p:has(> a) {
+    margin-bottom: 0;
+  }
+
+  @include media-query__small {
+    a {
+      @include link-tag;
+    }
+  }
+}
+
+.footer__content--hidden {
+  display: none;
+}

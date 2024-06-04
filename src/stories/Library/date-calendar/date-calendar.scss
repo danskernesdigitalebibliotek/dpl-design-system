@@ -1,0 +1,109 @@
+// flatpickr does not use BEM naming convention, so we have to disable stylelint for this file
+/* stylelint-disable */
+
+//// Color variables
+$primary-gray: rgba(57, 57, 57, 0.7);
+// inherited by flatpickr
+$hover-background: rgba(0, 0, 0, 0.05);
+// we do not currently have a good color for this in the design system
+$selected-date-background: rgb(0, 105, 255);
+
+.flatpickr-calendar {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  color: $color__text-primary-black;
+  padding: $s-md !important;
+  width: fit-content !important;
+
+  &.inline {
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  & * {
+    font-weight: 500 !important;
+  }
+
+  & .flatpickr-months {
+    & .flatpickr-month {
+      order: -1;
+      display: flex;
+      padding-left: 5px;
+
+      & .flatpickr-current-month {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 0;
+        left: 0;
+        width: auto;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color__text-primary-black;
+
+        & select {
+          appearance: none;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 $s-xs;
+        }
+
+        & .numInputWrapper {
+          width: 7ch;
+          display: flex;
+          height: 30px;
+        }
+      }
+    }
+
+    & .flatpickr-prev-month,
+    & .flatpickr-next-month {
+      position: relative;
+      height: auto;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background: $hover-background;
+      }
+
+      & svg {
+        stroke: $color__text-primary-black;
+      }
+    }
+  }
+
+  & .flatpickr-innerContainer {
+    & .flatpickr-weekdays {
+      height: auto;
+      padding: 20px 0;
+    }
+  }
+  & .flatpickr-days {
+    user-select: none;
+
+    & .flatpickr-day {
+      display: flex;
+      align-items: center;
+
+      &.selected {
+        background-color: $selected-date-background;
+        border-color: $selected-date-background;
+      }
+
+      &.selected.startRange + .endRange:not(:nth-child(7n + 1)),
+      &.startRange.startRange + .endRange:not(:nth-child(7n + 1)),
+      &.endRange.startRange + .endRange:not(:nth-child(7n + 1)) {
+        box-shadow: -10px 0 0 $selected-date-background;
+      }
+
+      &.prevMonthDay:not(.endRange):not(.startRange),
+      &.nextMonthDay:not(.endRange):not(.startRange) {
+        color: $primary-gray;
+        font-weight: 400 !important;
+      }
+    }
+  }
+}

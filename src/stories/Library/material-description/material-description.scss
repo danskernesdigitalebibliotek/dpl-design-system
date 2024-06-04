@@ -1,0 +1,25 @@
+.material-description {
+  padding: $s-md;
+  padding-top: $s-3xl;
+  padding-bottom: $s-2xl;
+
+  > h2.text-header-h4 {
+    font-size: 24px;
+  }
+
+  &__content {
+    max-width: 750px;
+    line-height: 160%;
+  }
+
+  @include media-query__medium {
+    padding-top: $s-4xl;
+    padding-left: $s-7xl;
+    padding-bottom: $s-5xl;
+  }
+
+  // spacing between the description links
+  &__links > * + * {
+    margin-top: $s-md;
+  }
+}

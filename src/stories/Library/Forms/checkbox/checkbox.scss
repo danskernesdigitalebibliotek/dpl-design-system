@@ -1,0 +1,96 @@
+.checkbox__input {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.checkbox__label {
+  user-select: none;
+  cursor: pointer;
+  padding: 6px $s-sm 6px 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__label .checkbox__icon {
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox__label .checkbox__icon:first-of-type {
+  position: relative;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  border-radius: $s-xs;
+  transform: scale(1);
+  border: 1px solid $color__global-tertiary-2;
+  transition: all 0.3s ease;
+}
+
+.checkbox__label .checkbox__icon:first-of-type svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: $color__global-white;
+  stroke-dasharray: $s-md;
+  stroke-dashoffset: $s-md;
+  transition: all 0.3s ease;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox__label .checkbox__text {
+  padding-left: $s-sm;
+  line-height: 18px;
+
+  &--validation {
+    color: $color__signal-alert;
+  }
+
+  &--hide-visually {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    // Should include "hide-visually", but it doesn't work, I suspect due to import order
+    // @include hide-visually;
+  }
+}
+
+.checkbox__label:hover .checkbox__icon:first-of-type {
+  border-color: $color__global-grey;
+}
+
+/* stylelint-disable selector-max-compound-selectors */
+.checkbox__input:checked + .checkbox__label .checkbox__icon:first-of-type {
+  background: $color__global-grey;
+  border-color: $color__global-grey;
+  animation: zoom-in-out 0.3s ease;
+
+  svg {
+    stroke-dashoffset: 0;
+  }
+}
+
+.checkbox__input:focus + .checkbox__label {
+  // TODO: Determine a proper design for elements in focus.
+  // This is a temporary solution to make it easier to test keyboard navigation.
+  outline: solid 1px $color__global-grey;
+  outline-offset: 0;
+}
+
+@keyframes zoom-in-out {
+  50% {
+    transform: scale(0.9);
+  }
+}

@@ -1,0 +1,206 @@
+$list-reservation-space-mobile: $s-md;
+$list-reservation-space-desktop: 24px;
+
+.list-reservation-container {
+  position: relative;
+}
+
+.list-reservation {
+  @include show-svg-on-hover(".list-reservation__status");
+  @include show-svg-on-hover(".arrow-button");
+
+  background-color: $color__global-white;
+  border: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  padding: $list-reservation-space-mobile;
+  cursor: pointer;
+
+  h3 {
+    color: $color__text-primary-black;
+  }
+
+  p {
+    color: $color__global-grey;
+  }
+
+  @include media-query__small {
+    grid-template-columns: 1fr 1fr;
+    height: 184px;
+    padding: $list-reservation-space-desktop;
+  }
+
+  &:hover {
+    filter: drop-shadow(0 $s-xs 20px rgb(72 72 72 / 20%));
+  }
+}
+
+.list-reservation__material {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.list-reservation__hidden-explanation {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  // Should include "hide-visually", but it doesn't work, I suspect due to import order
+  // @include hide-visually;
+}
+
+.list-reservation__note {
+  @include typography($typo__small-caption);
+  // To make it easy to click
+  min-height: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  align-self: baseline;
+  border: 0;
+  display: block;
+  margin-top: $s-xs;
+  white-space: break-spaces;
+  text-decoration: underline;
+  padding-left: 0;
+}
+
+.list-reservation__note--desktop {
+  display: none;
+  @include media-query__small {
+    display: block;
+  }
+}
+
+.list-reservation__note--mobile {
+  text-align: left;
+  @include media-query__small {
+    display: none;
+  }
+}
+
+.list-reservation__information {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: $list-reservation-space-mobile;
+  align-items: baseline;
+  justify-content: space-between;
+  min-width: 200px;
+
+  @include media-query__x-small("max-width") {
+    min-width: 100px;
+  }
+
+  @include media-query__small {
+    margin-left: $list-reservation-space-desktop;
+  }
+}
+
+.list-reservation__about {
+  padding-left: 0;
+  text-align: left;
+
+  p {
+    margin-top: 2px;
+    font-size: 14px;
+    margin-bottom: $s-md;
+  }
+
+  @include media-query__small {
+    margin-top: 0;
+    p {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.list-reservation__header {
+  @include typography($typo__h4);
+  color: $color__global-black;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.list-reservation__header__text {
+  @include text-ellipsis-truncation(2);
+}
+
+.list-reservation__status {
+  height: 100%;
+  display: grid;
+  align-items: flex-end;
+  grid-template-columns: auto 1fr max-content;
+
+  @include media-query__small {
+    align-items: center;
+  }
+}
+
+.list-reservation__counter {
+  display: none;
+  margin: $s-xs;
+
+  @include media-query__small {
+    width: 92px;
+    display: block;
+  }
+}
+
+.list-reservation__deadline {
+  display: inline-grid;
+  grid-row-gap: $s-sm;
+  margin-left: 2px;
+
+  @include media-query__small {
+    margin-left: 15px;
+  }
+}
+
+.list-reservation__fee {
+  > p {
+    text-align: end;
+    white-space: nowrap;
+  }
+}
+
+%list-stacked {
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: $color__global-white;
+  perspective: 500px;
+  box-shadow: 0 $s-xs 20px rgb(72 72 72 / 10%);
+}
+
+.list-reservation--stacked {
+  &::after {
+    @extend %list-stacked;
+
+    content: " ";
+    height: 8px;
+    transform: translateY(8px) scale(0.95);
+    z-index: $-z-5;
+  }
+
+  &::before {
+    @extend %list-stacked;
+
+    content: " ";
+    height: 9px;
+    transform: translateY($s-md) scale(0.9);
+    z-index: $-z-10;
+  }
+}

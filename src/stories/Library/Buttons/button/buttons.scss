@@ -1,0 +1,102 @@
+$color__btn-border-active: $color__global-black;
+$color__btn-border-disabled: $color__global-tertiary-2;
+$color__btn-filled-hover: $color__text-secondary-gray;
+
+.btn-icon {
+  margin-left: $s-md;
+  color: inherit;
+}
+
+.btn-collapsible {
+  margin-left: $s-md;
+  display: none;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  border: 1px solid $color__btn-border-active;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.4s ease-in-out, color 0.2s ease-in-out,
+    opacity 0.4s ease-in-out;
+  text-decoration: none;
+
+  @include typography($typo__button);
+
+  &:hover,
+  &:focus-visible {
+    .btn-collapsible {
+      display: block;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color__btn-border-active;
+    box-shadow: inset 0 0 0 3px $color__text-primary-white;
+  }
+
+  &[disabled] {
+    border: 1px solid $color__btn-border-disabled;
+    color: $color__btn-border-disabled;
+    fill: $color__btn-border-disabled;
+    cursor: not-allowed;
+
+    .arrow__body {
+      stroke: $color__btn-border-disabled;
+    }
+
+    .arrow__head {
+      fill: $color__btn-border-disabled;
+    }
+  }
+}
+
+.btn-xlarge {
+  height: 48px;
+  padding: $s-sm 86px;
+}
+
+.btn-large {
+  height: 48px;
+  padding: 0 86px;
+}
+
+.btn-medium {
+  height: 48px;
+  padding: 0 48px;
+}
+
+.btn-small {
+  height: 40px;
+  padding: 0 $s-xl;
+}
+
+.btn-xsmall {
+  height: $s-xl;
+  padding: 0 $s-lg;
+}
+
+.btn-filled:not([disabled]) {
+  background-color: $color__global-black;
+  color: $color__text-primary-white;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color__btn-filled-hover;
+    border-color: $color__btn-filled-hover;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $color__text-primary-black;
+
+  &:not([disabled]):hover,
+  &:not([disabled]):focus-visible {
+    background-color: $color__global-black;
+    color: $color__text-primary-white;
+  }
+}

@@ -6,24 +6,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
 
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
-      - run: npm run css:build
+      - run: yarn css:build
 
       - name: Publish to Chromatic
-        uses: chromaui/action@v1
+        uses: chromaui/action@v11.4.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        # Forks may not have a CHROMATIC_PROJECT_TOKEN secret set
-        # making the action fail unrelated to the change at hand.
-        # Make it not fail.
-        continue-on-error: true
+          projectToken: c6b96f9648b6

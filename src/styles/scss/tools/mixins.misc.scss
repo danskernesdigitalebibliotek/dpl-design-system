@@ -1,0 +1,46 @@
+/**
+ * Hide element visually but not from screen readers.
+ *
+ * https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/
+ * The class is intentionally called .hide-visually and not .visually-hidden.
+ * Drupal which is a known consumer of the design system also has a
+ * .visually-hidden class where the implementation is a bit different.
+ * To avoid any conflicts we call our class something else.
+ * https://git.drupalcode.org/project/drupal/-/blob/9.2.x/core/modules/system/css/components/hidden.module.css#L18-33
+ */
+@mixin hide-visually {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/**
+ * Add styling, that only shows svg arrow when hovering.
+ *
+ * @todo - this needs to be cleaned up, as it currently targets all SVGs.
+ * It is also a problem that we need to do the $icon-container, which can be
+ * fixed by actually adding a class to the svg - or, a common wrapper class.
+ */
+@mixin show-svg-on-hover($icon-container: "") {
+  #{$icon-container} > svg {
+    visibility: hidden;
+    opacity: 0;
+    margin-right: 40px;
+    align-self: center;
+
+    transition: opacity 0.5s ease-in-out;
+
+    @include media-query__small("max-width") {
+      display: none;
+    }
+  }
+
+  &:hover #{$icon-container} > svg {
+    visibility: visible;
+    opacity: 1;
+  }
+}

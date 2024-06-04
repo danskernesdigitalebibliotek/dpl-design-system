@@ -1,5 +1,19 @@
 version: '3.7'
 
+# This block is used for inclusion in the environment section of each container.
+x-volumes:
+  &default-volumes
+    # Define all volumes you would like to have real-time mounted into the docker containers
+    volumes:
+      - 'projectroot:/home/node/app'
+      - ~/.npmrc:/home/node/.npmrc
+
+
+x-user:
+  &default-user
+    # The default user under which the containers should run. Change this if you are on linux and run with another user than id `1000`
+    user: '1000'
+
 services:
   node:
   # Remember to keep version updated with the .nvmrc file.
@@ -8,19 +22,17 @@ services:
     user: node
     init: true
     working_dir: /home/node/app
-    volumes:
-      - root:/home/node/app
-      - ~/.npmrc:/home/node/.npmrc
+    <<: [*default-volumes, *default-user]
     expose:
       - 80
-    command: 'npm run dev'
+    command: 'yarn dev'
     environment:
       VIRTUAL_HOST: dpl-design-system.docker
       VIRTUAL_PORT: 6006
       STORYBOOK_CLIENT_ID: bdc1d425-9117-4867-acb9-c7307ddc2e0f
 
 volumes:
-  root:
+  projectroot:
     driver_opts:
       type: none
       device: $PWD

@@ -1,0 +1,41 @@
+.status-label {
+  @include typography($typo__label);
+
+  min-height: 28px;
+  padding: 0 $s-xs;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: $font__weight--semi-bold;
+
+  @include media-query__small {
+    padding: 0 16px;
+  }
+
+  &--danger {
+    background-color: $color__signal-alert;
+    color: $color__text-primary-white;
+  }
+
+  &--warning {
+    background-color: $color__signal-aware;
+    color: $color__text-secondary-gray;
+  }
+
+  &--info {
+    background-color: $color__signal-success;
+    color: $color__text-primary-white;
+  }
+
+  &--neutral {
+    background-color: $color__global-primary;
+    color: $color__text-secondary-gray;
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid #dbdbdb;
+    color: $color__text-secondary-gray;
+  }
+}

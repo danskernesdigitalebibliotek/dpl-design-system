@@ -1,0 +1,13 @@
+.link-tag {
+  @extend %link-tag;
+}
+
+.button-link {
+  @extend %button-link;
+
+  color: $color__text-primary-white;
+}
+
+.button-link--bright {
+  color: $color__text-primary-black;
+}

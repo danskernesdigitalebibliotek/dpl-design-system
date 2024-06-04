@@ -1,0 +1,92 @@
+.reservation-modal {
+  background-color: $color__global-primary;
+  width: 100%;
+}
+
+.reservation-modal--confirm {
+  display: grid;
+  place-content: center;
+}
+
+.reservation-modal__confirm-button {
+  width: 193px;
+  margin: 0 auto;
+}
+
+.reservation-modal-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $s-md;
+  @include media-query__small {
+    flex-direction: row;
+  }
+}
+
+.reservation-modal-description {
+  margin-top: $s-lg;
+  @include media-query__small {
+    margin-left: 42px;
+  }
+}
+
+.reservation-modal-tag {
+  @include typography($typo__tags);
+  padding: $s-xs $s-md;
+
+  border: 1px solid $color__global-tertiary-1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation-modal-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $s-md;
+  margin-bottom: $s-lg;
+
+  @include media-query__small {
+    justify-content: end;
+    flex-direction: row;
+  }
+}
+
+.reservation-modal-list {
+  display: grid;
+  gap: $s-sm;
+}
+
+.reservation-modal-list-item {
+  background-color: $color__global-white;
+  display: flex;
+  align-items: center;
+  min-height: 96px;
+  gap: $s-xl;
+  padding-left: $s-xl;
+  padding-right: $s-xl;
+}
+
+.reservation-modal-list-item-text {
+  // Remove spacing between elements in reservation-list-item
+  flex: 1;
+  & > * {
+    margin: 0;
+  }
+}
+
+.reservation-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    @include media-query__medium {
+      width: 45%;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+  }
+}

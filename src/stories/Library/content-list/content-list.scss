@@ -1,0 +1,12 @@
+.content-list {
+  @include layout-container($block-max-width__large);
+}
+
+.content-list__item {
+  list-style: none;
+  margin-bottom: $s-md;
+}
+
+.content-list__item--stacked {
+  margin-top: -$s-md;
+}

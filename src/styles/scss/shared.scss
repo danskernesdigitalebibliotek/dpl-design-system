@@ -1,61 +1,21 @@
 .hide-linkstyle {
-  color: inherit;
   text-decoration: inherit;
 }
 
-/**
- * Hide element visually but not from screen readers.
- *
- * https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/
- *
- * The class is intentionally called .hide-visually and not .visually-hidden.
- * Drupal which is a known consumer of the design system also has a
- * .visually-hidden class where the implementation is a bit different.
- * To avoid any conflicts we call our class something else.
- *
- * https://git.drupalcode.org/project/drupal/-/blob/9.2.x/core/modules/system/css/components/hidden.module.css#L18-33
- */
 .hide-visually {
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
+  @include hide-visually;
 
-.modal-btn-close {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 34px;
-  transition: 0.3s;
-  z-index: 2;
-
-  &:hover {
-    transform: rotateZ(90deg);
+  &--on-desktop {
+    @include media-query__name("small") {
+      @include hide-visually;
+    }
   }
 }
 
-.modal {
-  // This color is inherited by the <Counter /> component.
-  --parent-bg-color: #f6f5f0;
-
-  background-color: $c-global-primary;
-  position: relative;
-  opacity: 0;
-  display: none;
-  transition: opacity 0.3s;
-  min-height: 100vh;
-  height: 100%;
-}
-
-.modal-padding {
-  padding: 20px;
-}
-
-.modal-show {
-  display: flex;
-  opacity: 1;
+.hide-on-desktop {
+  @include media-query__name("small") {
+    display: none;
+  }
 }
 
 :root {
@@ -66,8 +26,66 @@
   text-transform: uppercase;
 }
 
-.modal-btn-fallback {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
+.noselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.capitalize-all {
+  text-transform: uppercase;
+}
+
+.capitalize-first:first-letter {
+  text-transform: uppercase;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// When class is used on a block element it will show a loading ellipsis animation.
+.text-loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis 1.7s infinite;
+  -webkit-animation: ellipsis 1.7s infinite;
+  -moz-animation: ellipsis 1.7s infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+.focus-styling {
+  &:focus {
+    outline: none;
+    border: 1px solid $color__global-black;
+  }
+
+  &__input {
+    &:focus {
+      outline: none;
+      border: 1px solid $color__global-black;
+      background-color: $color__global-white;
+    }
+  }
+}
+
+.inline-icon {
+  display: inline;
+  margin: 0 0 -5px 5px;
 }

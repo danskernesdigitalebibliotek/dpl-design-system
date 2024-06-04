@@ -1,0 +1,16 @@
+.card-list-item {
+  &.ssc {
+    grid-template-columns: min-content 1fr;
+  }
+  .ssc-square {
+    width: 95px;
+  }
+  .ssc-head-line {
+    margin-top: $s-md;
+  }
+  @include media-query__small {
+    .ssc-wrapper {
+      width: 50%;
+    }
+  }
+}

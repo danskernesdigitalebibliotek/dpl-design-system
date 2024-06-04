@@ -1,0 +1,107 @@
+$MATERIAL_XSMALL_MOBILE: 104px;
+$MATERIAL_XSMALL_DESKTOP: 104px;
+$MATERIAL_SMALL_MOBILE: 104px;
+$MATERIAL_SMALL_DESKTOP: 137px;
+$MATERIAL_MEDIUM_MOBILE: 137px;
+$MATERIAL_MEDIUM_DESKTOP: 216px;
+$MATERIAL_LARGE_MOBILE: 216px;
+$MATERIAL_LARGE_DESKTOP: 216px;
+$MATERIAL_XLARGE_MOBILE: 284px;
+$MATERIAL_XLARGE_DESKTOP: 460px;
+
+.cover--size {
+  &-xsmall {
+    border-radius: 3px;
+    height: $MATERIAL_XSMALL_MOBILE;
+    @include media-query__small {
+      height: $MATERIAL_XSMALL_DESKTOP;
+    }
+  }
+
+  &-small {
+    height: $MATERIAL_SMALL_MOBILE;
+    @include media-query__small {
+      height: $MATERIAL_SMALL_DESKTOP;
+    }
+  }
+
+  &-medium {
+    height: $MATERIAL_LARGE_MOBILE;
+    @include media-query__small {
+      height: $MATERIAL_LARGE_DESKTOP;
+    }
+  }
+
+  &-large {
+    height: $MATERIAL_LARGE_MOBILE;
+    @include media-query__small {
+      height: $MATERIAL_LARGE_DESKTOP;
+    }
+  }
+
+  &-xlarge {
+    height: $MATERIAL_XLARGE_MOBILE;
+    @include media-query__small {
+      height: $MATERIAL_XLARGE_DESKTOP;
+    }
+  }
+}
+
+.cover--aspect {
+  &-xsmall {
+    aspect-ratio: 0.69;
+  }
+
+  &-small {
+    aspect-ratio: 0.69;
+  }
+
+  &-medium {
+    aspect-ratio: 0.69;
+  }
+
+  &-large {
+    aspect-ratio: 0.79;
+  }
+
+  &-xlarge {
+    aspect-ratio: 0.79;
+  }
+}
+
+a.cover {
+  display: block;
+}
+
+.cover__img {
+  height: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+
+  &.cover__img--animate {
+    animation: 0.3s ease-out 0s 1 CoverFadeIn;
+  }
+
+  &.cover__img--shadow {
+    &-small {
+      filter: drop-shadow(0 $s-xs 40px rgb(0 0 0 / 15%));
+    }
+
+    &-medium {
+      filter: drop-shadow(0 $s-xs 40px rgb(0 0 0 / 25%));
+    }
+  }
+}
+// In this case we do not want to use kebab case
+@keyframes CoverFadeIn {
+  /* stylelint-disable-line */
+  0% {
+    opacity: 0;
+    transform: scale(1.05) translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

@@ -1,0 +1,120 @@
+.disclosure {
+  width: auto;
+  border: solid 1px $color__global-tertiary-1;
+  border-top: none;
+
+  &:first-of-type {
+    border-top: solid 1px $color__global-tertiary-1;
+  }
+
+  @include media-query__small {
+    margin: 0 133px;
+  }
+
+  &.disclosure--full-width {
+    width: 100%;
+    margin: 0;
+
+    @include media-query__small {
+      margin: 0;
+    }
+  }
+
+  &__headline {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-left: $s-md;
+
+    @include media-query__small {
+      padding-left: $s-xl;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &.disclosure__headline--no-padding {
+      padding-left: $s-xl;
+      @include media-query__small {
+        padding-left: $s-2xl;
+      }
+    }
+  }
+
+  &__text {
+    width: 201px;
+    text-overflow: ellipsis;
+    max-height: 84px;
+    overflow-y: hidden;
+
+    @include media-query__small {
+      width: 685px;
+    }
+
+    &--shorter {
+      width: 197px;
+
+      @include media-query__small {
+        width: 404px;
+      }
+    }
+  }
+
+  &__icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin-right: $s-md;
+
+    @include media-query__small {
+      margin-left: -#{$s-sm};
+      margin-right: $s-lg;
+    }
+
+    & > img {
+      width: $s-lg;
+    }
+  }
+
+  &__expand {
+    margin-left: auto;
+    margin-right: $s-md;
+    height: 24px;
+    min-width: 24px;
+
+    @include media-query__small {
+      margin-right: $s-xl;
+    }
+
+    // This is for DisclosureControllable because it's not a details element. and can't use the [open] attribute.
+    &--expanded {
+      transition: transform 0.3s ease-in-out;
+      transform: scaleY(-1);
+    }
+  }
+}
+
+.disclosure--paragraph-width .disclosure__expand {
+  transition: transform 0.3s ease-in-out;
+}
+
+.disclosure--paragraph-width {
+  @include layout-container($block-max-width__medium);
+}
+
+.disclosure__content-padding {
+  padding: $s-md;
+  @include media-query__small {
+    padding: $s-xl;
+  }
+}
+
+.disclosure[open] .disclosure__expand {
+  transition: transform 0.3s ease-in-out;
+  transform: scaleY(-1);
+}

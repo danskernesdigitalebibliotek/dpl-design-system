@@ -1,0 +1,136 @@
+.list-materials {
+  @include show-svg-on-hover(".list-dashboard__arrow");
+  @include show-svg-on-hover(".list-materials__arrow");
+  @include show-svg-on-hover(".arrow-button");
+
+  display: flex;
+  min-height: 96px;
+  padding: $s-md;
+  background-color: $color__global-white;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &:hover {
+    filter: drop-shadow(0 $s-xs 20px rgb(72 72 72 / 20%));
+  }
+
+  @include media-query__small {
+    padding: $s-md 32px;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &--bottom-buttons-visible {
+    padding-bottom: 90px;
+  }
+
+  &.list-materials--no-hover {
+    cursor: default;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.list-materials__checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.list-materials__content {
+  flex: 1;
+}
+
+.list-materials__content__header {
+  @include text-ellipsis-truncation();
+  @include typography($typo__h5);
+}
+
+.list-materials--disabled {
+  @include show-svg-on-hover(".list-materials__arrow");
+
+  .checkbox {
+    .checkbox__icon {
+      opacity: 0;
+    }
+    input {
+      display: none;
+    }
+  }
+}
+
+.list-materials__status {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  align-items: flex-start;
+  justify-content: center;
+  grid-gap: $s-md;
+}
+
+.list-materials__status--mobile {
+  @include typography($typo__small-caption);
+  margin-top: $s-md;
+
+  @include media-query__small {
+    display: none;
+  }
+}
+
+.list-materials__status--desktop {
+  @include typography($typo__small-caption);
+  display: none;
+
+  @include media-query__small {
+    display: block;
+    margin-top: $s-sm;
+    max-width: 150px;
+  }
+}
+
+.list-materials__status__note-desktop {
+  @include typography($typo__small-caption);
+  display: none;
+  margin-top: $s-sm;
+  max-width: 150px;
+
+  @include media-query__small {
+    display: flex;
+  }
+}
+.list-materials__status__note-mobile {
+  @include typography($typo__small-caption);
+  display: flex;
+
+  @include media-query__small {
+    display: none;
+  }
+}
+
+.list-materials__content-status {
+  display: inline-flex;
+  gap: 8;
+
+  @include media-query__small {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.list-materials__content-status-label {
+  @include media-query__small {
+    display: none;
+  }
+}
+
+.list-materials__arrow {
+  margin-left: $s-xl;
+  margin-right: $s-md;
+  cursor: pointer;
+  display: none;
+
+  @include media-query__small {
+    display: block;
+  }
+}

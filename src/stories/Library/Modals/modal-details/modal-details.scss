@@ -1,0 +1,136 @@
+$MODAL_DETAILS_CONTAINER_WIDTH: 1000px;
+
+.modal-details {
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-details__container {
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: $s-4xl;
+
+  @include media-query__small {
+    margin: 0;
+    padding-bottom: 0;
+  }
+}
+
+.modal-details__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include media-query__small {
+    align-items: center;
+    flex-direction: row;
+    padding-top: 96px;
+    width: 80%;
+  }
+}
+
+.modal-details__cover {
+  margin: 48px 0;
+  @include media-query__small {
+    margin: 0;
+  }
+}
+
+.modal-details__material {
+  margin: 0;
+
+  @include media-query__small {
+    margin: 0 46px;
+  }
+}
+
+.modal-details__tags {
+  display: flex;
+  grid-column-gap: $s-sm;
+  margin-bottom: $s-md;
+}
+
+/*
+  We disable stylelint here since -webkit-box
+  uses ellipsis for truncating which we need.
+  https://caniuse.com/?search=line-clamp
+*/
+.modal-details__title {
+  display: block;
+  /* stylelint-disable-next-line */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: normal;
+}
+
+.modal-details__buttons {
+  margin-top: 40px;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  @include media-query__small {
+    display: none;
+  }
+}
+
+.modal-details__buttons--bottom {
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.modal-details__buttons--hide-on-mobile {
+  display: none;
+  @include media-query__small {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.modal-details__buttons__full-width {
+  @include media-query__small {
+    width: 100%;
+  }
+}
+
+.modal-details__warning {
+  margin-top: 40px;
+
+  & .text-body-medium-regular {
+    @include media-query__small("max-width") {
+      line-height: $s-lg;
+    }
+  }
+}
+
+.modal-details__list {
+  display: grid;
+  grid-row-gap: 10px;
+  margin-top: 40px;
+}
+
+.modal-details__banner {
+  width: 100%;
+  margin-top: 128px;
+}
+
+.modal-details__close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 34px;
+  transition: 0.3s;
+  z-index: $z-10;
+
+  &:hover {
+    transform: rotateZ(90deg);
+  }
+}

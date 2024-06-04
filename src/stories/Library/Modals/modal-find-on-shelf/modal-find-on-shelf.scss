@@ -1,0 +1,39 @@
+.modal-find-on-shelf {
+  padding: 72px 0;
+  overflow-y: scroll;
+  align-items: flex-start;
+
+  @include media-query__medium {
+    padding: $s-4xl $s-7xl;
+  }
+
+  &__headline {
+    margin: 0 $s-md $s-2xl $s-md;
+
+    @include media-query__medium {
+      margin: 0 $s-md 96px 0;
+    }
+  }
+
+  &__caption {
+    margin: 0 0 $s-md $s-md;
+
+    @include media-query__medium {
+      margin: 0 0 $s-sm 0;
+    }
+  }
+
+  &__periodical-dropdowns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0 $s-2xl 0;
+
+    @include media-query__medium {
+      flex-direction: row;
+      gap: $s-lg;
+      max-width: 800px;
+      margin: 0 0 $s-3xl 0;
+    }
+  }
+}

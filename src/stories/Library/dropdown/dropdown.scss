@@ -1,0 +1,103 @@
+$_dropdown-icon-size: 50px;
+
+.dropdown {
+  width: 100%;
+  position: relative;
+  border-color: $color__global-black;
+
+  &--grey-borders {
+    border-color: $color__global-tertiary-1;
+  }
+}
+
+.dropdown__desktop {
+  width: 100%;
+
+  @include media-query__medium {
+    width: 50%;
+  }
+}
+
+.dropdown__select {
+  $_padding: 20px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  min-width: 230px;
+  width: 100%;
+  height: $_dropdown-icon-size;
+  cursor: pointer;
+  background-color: transparent;
+  color: $color__global-black;
+  border-radius: 0;
+  border: 1px solid;
+  border-color: inherit;
+  padding: 0;
+  padding-left: $_padding;
+  padding-right: $_dropdown-icon-size + $_padding;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @include typography($typo__button);
+
+  // Chromeium based browsers will trigger focus when opening the dropdown
+  @extend %default-focus-visible;
+
+  &.dropdown__select--grey {
+    border-color: $color__global-tertiary-1;
+  }
+}
+
+.dropdown__option {
+  text-transform: capitalize;
+  background-color: #f9f9f9;
+  height: 400px;
+
+  @include typography($typo__body-placeholder);
+}
+
+.dropdown__arrows {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: $_dropdown-icon-size;
+  width: $_dropdown-icon-size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 1px solid;
+  border-color: inherit;
+
+  &.dropdown__arrows--grey {
+    border-color: $color__global-tertiary-1;
+  }
+}
+
+.dropdown__arrow--bottom {
+  margin-top: $s-xs;
+  transform: rotateZ(180deg);
+}
+
+.dropdown__select--inline {
+  @include typography($typo__tags);
+  height: 100%;
+  padding: $s-sm $s-md;
+  min-width: 200px;
+}
+
+.dropdown__select--inline-body-font {
+  height: 100%;
+  padding: $s-sm $s-3xl $s-sm $s-md;
+  min-width: 200px;
+}
+
+.dropdown__arrows--inline {
+  height: 100%;
+}
+
+.dropdown__footnote {
+  @include typography($typo__small-caption);
+  margin: $s-sm 0 $s-3xl 0;
+}

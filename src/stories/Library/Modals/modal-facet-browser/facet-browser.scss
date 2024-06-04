@@ -1,0 +1,47 @@
+.facet-browser {
+  width: 100%;
+
+  &__header {
+    min-height: 120px;
+    padding-left: $s-xl;
+    padding-top: $s-xl;
+    @include media-query__small {
+      min-height: 144px;
+      padding-left: $s-2xl;
+      padding-top: $s-2xl;
+    }
+  }
+
+  &__facet-group {
+    margin: $s-md;
+    display: flex;
+    gap: $s-sm;
+    flex-wrap: wrap;
+
+    .tag {
+      color: $color__global-grey;
+    }
+  }
+
+  &__clear-btn {
+    padding: 0;
+    margin-top: $s-sm;
+  }
+
+  &__more-btn {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: block;
+    margin-left: auto;
+    margin-bottom: $s-xl;
+    margin-right: $s-md;
+
+    @include media-query__small {
+      margin-right: $s-2xl;
+    }
+  }
+
+  &__results-btn {
+    margin: $s-2xl auto $s-sm;
+  }
+}

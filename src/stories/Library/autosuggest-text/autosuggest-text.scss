@@ -1,0 +1,37 @@
+.autosuggest {
+  &__text-item {
+    min-height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @include media-query__medium {
+      // Because the main autosuggest is a prominent feature we don't want the hover
+      // effect to take effect on phones, as iPhones have a known bug that requires
+      // users to double click in order to get past hover to register a click.
+      // For reference, go to https://github.com/common-voice/common-voice/issues/424
+      // or google "iphone hover issue".
+      &:hover {
+        background-color: $color__global-secondary;
+        cursor: pointer;
+      }
+    }
+
+    @include media-query__large {
+      height: 40px;
+      padding-right: $s-lg;
+    }
+
+    &--highlight {
+      background-color: $color__global-secondary;
+    }
+  }
+
+  &__text {
+    @include media-query__medium {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

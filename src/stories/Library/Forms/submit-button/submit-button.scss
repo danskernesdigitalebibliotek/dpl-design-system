@@ -1,0 +1,9 @@
+.dpl-form {
+  .dpl-button {
+    margin: $s-2xl 0 $s-lg 0;
+
+    &.btn-primary {
+      padding: 0 $s-lg;
+    }
+  }
+}

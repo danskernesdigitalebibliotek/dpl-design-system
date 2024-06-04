@@ -1,0 +1,38 @@
+.breadcrumb {
+  @include layout-container($layout__max-width--large);
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $s-lg;
+  margin-bottom: $s-lg;
+  row-gap: $s-sm;
+
+  > a {
+    @extend %text-inline-link;
+  }
+}
+
+// We cannot be sure to be able to put classes directly on the children,
+// as they might be atom links.
+.breadcrumb > * {
+  @include typography($typo__body-small);
+
+  position: relative;
+  display: inline-block;
+  color: $color__text-secondary-gray;
+}
+
+// Targeting all the items that should have a > prefix.
+.breadcrumb > * + * {
+  $_arrow-size: 20px;
+
+  padding-left: $_arrow-size;
+
+  &::before {
+    position: absolute;
+    content: ">";
+    left: 0;
+    width: $_arrow-size;
+    text-align: center;
+  }
+}

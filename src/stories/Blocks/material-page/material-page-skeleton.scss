@@ -1,0 +1,10 @@
+// Since we are using the Skeleton Screen Css classes connected to the existing styling
+// we deliberately not follow the BEM naming convention here.
+.material-page.ssc .material-header__content {
+  height: 605px;
+  // Favorite icon.
+  .ssc-square {
+    height: 30px;
+    width: 30px;
+  }
+}

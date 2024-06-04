@@ -1,0 +1,65 @@
+/* #########################################################################
+ * IMPORTANT NOTE:
+ * Make sure to read the Project Layout documentation before
+ * modifying or using this file. The guide contains information on the mixins,
+ * utilities, best practices, and usage examples.
+ * Documentation can be found at: [layout-documentation.md](..docs/layout-documentation.md)
+ * ######################################################################### */
+
+// Layout max-width variables aligned with breakpoints
+$layout__max-width--x-small: 375px;
+$layout__max-width--small: 768px;
+$layout__max-width--medium: 1024px;
+$layout__max-width--large: 1440px;
+$layout__max-width--x-large: 1920px;
+$layout__max-width--xx-large: 2200px;
+
+$block-max-width__small: 780px;
+$block-max-width__medium: 896px;
+$block-max-width__large: 1124px;
+$block-max-width__x-large: 1240px;
+$block-max-width__2x-large: $layout__max-width--large;
+
+// Variables specifically for managing the vertical space between elements
+$_block-vertical-spacing: 48px;
+$_block-vertical-spacing--large: 64px;
+
+// Edge spacing for containers, ensures edge spacing for mobile or tablet.
+$layout__edge-spacing: $s-md;
+
+// Mixin for controlling max-width and edge-spacing(padding) of an element
+@mixin layout-container(
+  $max-width: $layout__max-width--medium,
+  $padding: $layout__edge-spacing
+) {
+  max-width: $max-width + ($padding * 2);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding;
+  padding-right: $padding;
+  box-sizing: border-box;
+}
+
+// Mixin for controlling vertical spacing (margin) of an element
+@mixin block-spacing($modifier: "standard") {
+  $_spacing: $_block-vertical-spacing;
+  $_spacing--large: $_block-vertical-spacing--large;
+
+  // If we want sibling spacing, we'll move the element up by 1px, to avoid
+  // double borders.
+  @if ($modifier == "sibling") {
+    $_spacing: -1px;
+    $_spacing--large: -1px;
+  }
+
+  @if ($modifier == "negative") {
+    $_spacing: $_spacing * -1;
+    $_spacing--large: $_spacing--large * -1;
+  }
+
+  margin-top: $_spacing;
+
+  @include media-query__medium {
+    margin-top: $_spacing--large;
+  }
+}

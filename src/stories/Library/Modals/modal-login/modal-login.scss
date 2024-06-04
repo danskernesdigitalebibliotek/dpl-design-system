@@ -1,0 +1,30 @@
+.modal-login {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  justify-content: flex-start;
+
+  &--authenticated {
+    align-items: baseline;
+  }
+
+  &--anonymous {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    justify-content: flex-start;
+    width: 100%;
+    padding-bottom: $s-4xl;
+
+    @include media-query__small {
+      padding-bottom: 0px;
+    }
+  }
+
+  &__btn-create-profile {
+    justify-self: center;
+  }
+}

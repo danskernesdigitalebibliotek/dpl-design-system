@@ -1,0 +1,54 @@
+.dpl-pause-reservation-component {
+  background-color: $color__global-secondary;
+  min-height: 72px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: $s-md;
+  @extend %pagefold-parent--medium;
+
+  &__pagefold {
+    @extend %pagefold-triangle--medium;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: $s-sm;
+
+    @include media-query__x-small {
+      justify-content: start;
+    }
+
+    &__reservation-icon {
+      justify-content: center;
+      @include media-query__small {
+        padding-left: 48px;
+      }
+    }
+
+    &__text {
+      @include typography($typo__body-large);
+    }
+
+    &__badge {
+      background-color: $color__global-primary;
+      padding: $s-xs $s-sm;
+      @include typography($typo__body-medium);
+    }
+
+    &__button {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+
+      @include media-query__x-small {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

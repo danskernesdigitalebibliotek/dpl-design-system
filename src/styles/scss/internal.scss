@@ -49,13 +49,13 @@
 }
 
 .internal-spacing-css-inner-prefix {
-  border: 1px solid $c-global-tertiary-1;
+  border: 1px solid $color__global-tertiary-1;
   width: 200px;
   height: 60px;
 }
 
 .internal-spacing-css-inner-property {
-  border: 1px solid $c-global-tertiary-1;
+  border: 1px solid $color__global-tertiary-1;
   width: 250px;
   height: 60px;
 }
@@ -66,13 +66,13 @@
 
 // Breakpoints
 .internal-breakpoints-css-inner-prefix {
-  border: 1px solid $c-global-tertiary-1;
+  border: 1px solid $color__global-tertiary-1;
   width: 250px;
   height: 60px;
 }
 
 .internal-breakpoints-css-inner-property {
-  border: 1px solid $c-global-tertiary-1;
+  border: 1px solid $color__global-tertiary-1;
   width: 90px;
   height: 60px;
 }
@@ -85,7 +85,7 @@
 code {
   font-family: monospace;
   background-color: #f5f8fa;
-  padding: 4px;
+  padding: $s-xs;
   border-radius: 2px;
   font-size: 90%;
   line-height: 1.45;
@@ -122,10 +122,13 @@ code {
   background-color: #f5f8fa;
 }
 
-.sb-main-padded {
-  padding: 0 !important;
+// Shadows
+.shadow-box-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 }
 
-.sb-show-main {
-  padding: 0 !important;
+.shadow-box-item {
+  padding: 24px;
 }

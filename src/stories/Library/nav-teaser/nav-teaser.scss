@@ -1,0 +1,36 @@
+.nav-teaser {
+  @include typography($typo__body-placeholder);
+  color: $color__global-black;
+
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $color__global-tertiary-1;
+  cursor: pointer;
+
+  > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: $s-md;
+    text-decoration: none;
+
+    @include media-query__medium {
+      padding: $s-xl $s-2xl;
+    }
+
+    @include media-query__large {
+      padding: $s-2xl $s-3xl;
+    }
+  }
+}
+
+.nav-teaser__title {
+  @include typography($typo__h3);
+
+  margin-bottom: $s-md;
+}
+
+.nav-teaser__subtitle {
+  margin-bottom: $s-lg;
+}

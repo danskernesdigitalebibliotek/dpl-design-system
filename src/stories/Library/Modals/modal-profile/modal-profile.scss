@@ -1,0 +1,60 @@
+.modal-profile {
+  padding: 0; // reset padding from default .modal class
+  flex-direction: column;
+
+  &__notifications:has[div] {
+    border-bottom: 1px solid $color__global-tertiary-1;
+
+    padding: $s-xl;
+
+    @include media-query__small {
+      padding: {
+        top: 40px;
+        right: $s-4xl;
+        bottom: 40px;
+        left: $s-4xl;
+      }
+    }
+  }
+
+  &__notification-item {
+    margin-bottom: $s-sm;
+  }
+
+  &__notification-item .list-dashboard {
+    padding: $s-sm;
+  }
+
+  &__notification-item .number {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $s-xl;
+  }
+
+  &__links .link-filters {
+    display: flex;
+    flex-direction: column;
+    row-gap: $s-lg;
+  }
+
+  &__btn-logout {
+    margin: 0 $s-xl;
+
+    @include media-query__small {
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        width: 200px;
+      }
+    }
+  }
+}

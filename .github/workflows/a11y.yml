@@ -10,14 +10,14 @@ jobs:
   a11y:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
-      - run: npm ci
+      - run: yarn install --frozen-lockfile
 
       - name: Compile styles
-        run: npm run css:build
+        run: yarn css:build
 
       - name: Run accessibility tests
-        run: npm run storybook:axe
+        run: yarn storybook:axe

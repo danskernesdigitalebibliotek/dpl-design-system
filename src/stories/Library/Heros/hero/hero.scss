@@ -1,0 +1,120 @@
+$_hero-column-breakpoint: "small";
+
+// On mobile, it makes no sense to show the placeholder text,
+// as it just serves the purpose to fill out the hero on desktop.
+@include media-query__name($_hero-column-breakpoint, "max-width") {
+  .hero--has-no-media .hero__visual {
+    display: none;
+  }
+}
+
+.hero__content,
+.hero__visual {
+  @include media-query__name($_hero-column-breakpoint) {
+    padding: $s-2xl;
+  }
+}
+.hero__visual {
+  @include media-query__name($_hero-column-breakpoint) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-right: 1px solid $color__global-tertiary-1;
+  }
+}
+
+.hero__visual-inner {
+  width: 100%;
+  aspect-ratio: 5/4;
+}
+
+.hero {
+  @include layout-container($layout__max-width--large);
+  border-bottom: 1px solid $color__global-tertiary-1;
+  display: grid;
+  gap: $s-lg;
+  padding-bottom: $s-2xl;
+  text-decoration: none;
+  @include media-query__name($_hero-column-breakpoint) {
+    grid-template-columns: 2fr 1fr;
+    gap: 0;
+    padding-bottom: 0;
+  }
+
+  // if hero-content is a link, remove text-decoration for all children
+  > a {
+    text-decoration: none;
+  }
+}
+
+.hero__description {
+  @include typography($typo__body-placeholder);
+  flex-grow: 1;
+
+  > * {
+    margin-bottom: $s-md;
+  }
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: $s-md;
+
+  @include media-query__name($_hero-column-breakpoint) {
+    padding-top: $s-3xl;
+  }
+}
+
+.hero__inner > :not(.hero__cta) {
+  @include media-query__name($_hero-column-breakpoint, "max-width") {
+    margin-left: $s-3xl;
+    margin-right: $s-3xl;
+  }
+}
+
+.hero__cta {
+  width: 100%;
+  text-decoration: none;
+}
+
+.hero__tag {
+  margin-bottom: $s-md;
+  @include media-query__name($_hero-column-breakpoint) {
+    margin-bottom: $s-lg;
+  }
+}
+
+.hero__details {
+  @include typography($typo__h5);
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: $s-md;
+
+  &__type {
+    color: $color__global-tertiary-2;
+  }
+
+  &__date {
+    @include media-query__name($_hero-column-breakpoint) {
+      white-space: nowrap;
+    }
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title {
+  @include typography($typo__h1);
+  word-break: break-word;
+  margin-bottom: $s-md;
+
+  @include media-query__name($_hero-column-breakpoint) {
+    margin-bottom: $s-xl;
+  }
+}

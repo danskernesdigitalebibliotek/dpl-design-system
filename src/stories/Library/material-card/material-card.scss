@@ -1,0 +1,44 @@
+.material-card {
+  padding: $s-md;
+  max-width: 500px;
+  text-decoration: none;
+  height: 100%;
+}
+
+.material-card__icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.material-card__cover {
+  display: flex;
+  justify-content: center;
+
+  .cover {
+    margin-top: $s-sm;
+  }
+}
+
+.material-card__texts {
+  margin-top: $s-md;
+  display: grid;
+
+  @include media-query__small {
+    margin-top: $s-xl;
+  }
+}
+
+.material-card__description {
+  @include typography($typo__body-small);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: normal;
+}
+
+.material-card__title {
+  @include typography($typo__body-small);
+
+  font-weight: $font__weight--semi-bold;
+}

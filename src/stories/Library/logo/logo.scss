@@ -1,0 +1,39 @@
+.logo {
+  text-decoration: none;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    display: none;
+    width: auto;
+    @include media-query__small {
+      display: block;
+    }
+  }
+}
+
+.logo__description {
+  @include typography($typo__body-small);
+}
+
+.logo__library-name {
+  font-weight: 700;
+}
+
+.logo__description--has-image {
+  @include media-query__small {
+    display: none;
+  }
+}
+
+.has-burger-menu .header__menu-navigation-mobile .logo {
+  img {
+    display: none;
+  }
+  .logo__description--has-image {
+    display: block;
+  }
+}

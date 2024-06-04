@@ -1,0 +1,19 @@
+.image-credited__image {
+  width: 100%;
+
+  * {
+    width: 100%;
+  }
+}
+
+.image-credited__info {
+  @include typography($typo__small-caption);
+  margin-top: $s-md;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-credited__no-image {
+  aspect-ratio: 4/3;
+  @extend %identity-placeholder;
+}

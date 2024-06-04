@@ -1,0 +1,8 @@
+.dpl-status-loans {
+  display: flex;
+  flex-direction: column;
+
+  @include media-query__small {
+    width: 50%;
+  }
+}

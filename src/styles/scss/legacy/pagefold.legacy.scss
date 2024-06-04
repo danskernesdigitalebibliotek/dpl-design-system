@@ -1,0 +1,61 @@
+.pagefold-inherit-parent {
+  opacity: 0.2;
+  background-color: $color__global-black;
+}
+
+$pagefold-map: (
+  "none": 0,
+  "xsmall": 14,
+  "small": 16,
+  "medium": 24,
+  "large": 38,
+  "xlarge": 56,
+);
+
+@each $size, $triangle-width in $pagefold-map {
+  .m-#{$size} {
+    margin: #{$size}px;
+  }
+
+  %pagefold-parent--#{$size},
+  .pagefold-parent--#{$size} {
+    min-width: #{$triangle-width}px;
+    min-height: #{$triangle-width}px;
+    position: relative;
+    display: inherit;
+    clip-path: polygon(
+      #{$triangle-width}px 0,
+      0 #{$triangle-width}px,
+      0 100%,
+      100% 100%,
+      100% 0
+    );
+    -webkit-clip-path: polygon(
+      #{$triangle-width}px 0,
+      0 #{$triangle-width}px,
+      0 100%,
+      100% 100%,
+      100% 0
+    );
+  }
+
+  %pagefold-triangle--#{$size},
+  .pagefold-triangle--#{$size} {
+    width: #{$triangle-width}px;
+    height: #{$triangle-width}px;
+    background-color: $color__identity-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .pagefold-triangle {
+    &--success {
+      background-color: $color__signal-success;
+    }
+
+    &--alert {
+      background-color: $color__signal-alert;
+    }
+  }
+}

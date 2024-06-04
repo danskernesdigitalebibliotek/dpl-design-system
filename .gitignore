@@ -31,3 +31,6 @@ storybook-static
 # Dev Tools
 .vscode
 .history
+
+#zipped files generated when using dapple. 
+dist.zip

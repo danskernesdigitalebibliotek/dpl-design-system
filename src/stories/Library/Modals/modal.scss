@@ -1,0 +1,117 @@
+.modal {
+  padding: $s-md;
+  // This color is inherited by the <Counter /> component.
+  --parent-bg-color: #f6f5f0;
+
+  background-color: $color__global-primary;
+  position: relative;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.3s;
+  height: 100vh;
+  overflow: auto;
+
+  &__screen-reader-description {
+    @include hide-visually;
+  }
+
+  @include media-query__small {
+    height: calc(100vh - 200px);
+    width: calc(100vw - 200px);
+    margin: $s-5xl 0 0 $s-5xl;
+  }
+
+  @include media-query__medium {
+    padding: $s-4xl $s-7xl;
+  }
+
+  &.modal--no-padding {
+    padding: 0;
+  }
+}
+
+%modal-padding,
+.modal-padding {
+  padding: $s-lg;
+}
+
+.modal-show {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 1;
+}
+
+.modal-right {
+  position: fixed;
+  top: 0;
+  left: initial;
+  right: 0;
+  max-width: 560px;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+.modal-backdrop {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: $z-20;
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 15%, 0.5);
+}
+
+.modal--no-padding {
+  padding: 0;
+}
+
+.modal-btn-close {
+  background-color: $color__global-primary;
+  position: fixed;
+  top: 0;
+  right: 0;
+  // We need both padding & margin so that when the icon rotates, we don't see
+  // the background color bleed outside the modal.
+  padding: $s-md;
+  margin: 6.5px;
+  transition: 0.3s;
+  z-index: $z-15;
+
+  &.modal-btn-close--offset {
+    @include media-query__small {
+      top: $s-5xl;
+      right: calc($s-5xl + 17px);
+    }
+  }
+
+  @include media-query__small {
+    // We need both padding & margin so that when the icon rotates, we don't see
+    // the background color bleed outside the modal.
+    padding: $s-lg;
+    margin: $s-sm;
+    border-radius: $s-2xl;
+  }
+
+  &:hover {
+    transform: rotateZ(90deg);
+  }
+
+  & > img {
+    width: 11.5px;
+
+    @include media-query__small {
+      width: 19.5px;
+    }
+  }
+}
+
+.modal-btn-fallback {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}

@@ -1,0 +1,163 @@
+// *** Global colors ***
+// Background
+.bg-global-primary {
+  background-color: $color__global-primary;
+}
+
+.bg-global-secondary {
+  background-color: $color__global-secondary;
+}
+
+.bg-global-tertiary-1 {
+  background-color: $color__global-tertiary-1;
+}
+
+.bg-global-tertiary-2 {
+  background-color: $color__global-tertiary-2;
+}
+
+// Border
+.border-global-primary {
+  border: 1px solid $color__global-primary;
+  stroke: $color__global-primary;
+}
+
+.border-global-secondary {
+  border: 1px solid $color__global-secondary;
+  stroke: $color__global-secondary;
+}
+
+.border-global-tertiary-1 {
+  border: 1px solid $color__global-tertiary-1;
+  stroke: $color__global-tertiary-1;
+}
+
+.border-global-tertiary-2 {
+  border: 1px solid $color__global-tertiary-2;
+  stroke: $color__global-tertiary-2;
+}
+
+// *** Identity colors ***
+// Background
+.bg-identity-primary {
+  background-color: $color__identity-primary;
+  fill: $color__identity-primary;
+}
+
+// Border
+.border-identity-primary {
+  border: 1px solid $color__identity-primary;
+  stroke: $color__identity-primary;
+}
+
+// Color
+.color-identity-primary {
+  color: $color__identity-primary;
+}
+
+.color-secondary-gray {
+  color: $color__text-secondary-gray;
+}
+
+// *** Identity color tints ***
+// Background
+.bg-identity-tint-20 {
+  background-color: var(--tint-color-20);
+}
+
+.bg-identity-tint-40 {
+  background-color: var(--tint-color-40);
+}
+
+.bg-identity-tint-80 {
+  background-color: var(--tint-color-80);
+}
+
+.bg-identity-tint-100 {
+  background-color: var(--tint-color-100);
+}
+
+.bg-identity-tint-120 {
+  background-color: var(--tint-color-120);
+}
+
+// *** Text colors ***
+// Color
+.color-primary-white {
+  color: $color__text-primary-white;
+}
+
+.color-primary-black {
+  color: $color__text-primary-black;
+}
+
+.border-primary-white {
+  border: 1px solid $color__global-white;
+  stroke: $color__global-white;
+}
+
+.border-primary-black {
+  border: 1px solid $color__global-black;
+  stroke: $color__global-black;
+}
+
+.border-secondary-gray {
+  border: 1px solid $color__global-grey;
+  stroke: $color__global-grey;
+}
+
+// Only used internally for bg-color in Colors comp.
+.bg-color-primary-white {
+  background-color: $color__global-white;
+}
+
+.bg-color-primary-black {
+  background-color: $color__global-black;
+}
+
+.bg-color-secondary-gray {
+  background-color: $color__global-grey;
+}
+
+// *** Signal colors ***
+// Background
+.bg-signal-success {
+  background-color: $color__signal-success;
+}
+
+.bg-signal-aware {
+  background-color: $color__signal-aware;
+}
+
+.bg-signal-alert {
+  background-color: $color__signal-alert;
+}
+
+// Border
+.border-signal-success {
+  border: 1px solid $color__signal-success;
+  stroke: $color__signal-success;
+}
+
+.border-signal-aware {
+  border: 1px solid $color__signal-aware;
+  stroke: $color__signal-aware;
+}
+
+.border-signal-alert {
+  border: 1px solid $color__signal-alert;
+  stroke: $color__signal-alert;
+}
+
+// Color
+.color-signal-success {
+  color: $color__signal-success;
+}
+
+.color-signal-aware {
+  color: $color__signal-aware;
+}
+
+.color-signal-alert {
+  color: $color__signal-alert;
+}

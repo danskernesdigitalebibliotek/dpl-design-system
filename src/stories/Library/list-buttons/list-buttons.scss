@@ -1,0 +1,53 @@
+.dpl-list-buttons {
+  display: flex;
+  justify-content: space-between;
+  @include typography($typo__body-medium);
+}
+
+.dpl-list-buttons__header {
+  all: unset;
+  height: 35px;
+  position: relative;
+  padding-right: 25px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.dpl-list-buttons__power {
+  @include typography($typo__small-caption);
+
+  margin-left: 2px;
+  height: 30px;
+  vertical-align: super;
+}
+
+.dpl-list-buttons__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpl-list-buttons__buttons__button {
+  margin-left: $s-xl;
+  display: flex;
+}
+
+.dpl-list-buttons__buttons__button--hide-on-mobile {
+  display: none;
+
+  @include media-query__small {
+    display: flex;
+  }
+}
+
+.dpl-list-buttons__screen-reader-description {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  // Should include "hide-visually", but it doesn't work, I suspect due to import order
+  // @include hide-visually;
+}

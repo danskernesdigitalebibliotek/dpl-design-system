@@ -1,0 +1,111 @@
+name: Create release on branch changes
+
+on:
+  push:
+    branches-ignore:
+      # Dependabot does not have permissions to create releases
+      - 'dependabot/**'
+
+jobs:
+  create_release_on_branch_changes:
+    name: "Create release on branch changes"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set release variables
+        id: resolve-release-vars
+        # Version 0.0.0-SHA is a schema that supports semantic versioning but
+        # should sink below proper versions.
+        # Output package.json to provide insight and help debugging
+        # Using branch names as tags allows other projects to track unreleased
+        # development.
+        run: |
+          RELEASE_BRANCH=$(echo ${GITHUB_REF#refs/heads/})
+          RELEASE_BRANCH_SLUGGED=$(echo $RELEASE_BRANCH | sed -E -e 's/[^[:alnum:]]+/-/g' -e 's/^-+|-+$//g' | tr '[:upper:]' '[:lower:]')
+          RELEASE_SHA=${{ github.sha }}
+          TAG_NAME=$(echo "branch-${RELEASE_BRANCH}")
+          echo "RELEASE_BRANCH=$RELEASE_BRANCH" >> "$GITHUB_ENV"
+          echo "RELEASE_SHA=$RELEASE_SHA" >> "$GITHUB_ENV"
+          echo "TAG_NAME=$TAG_NAME" >> "$GITHUB_ENV"
+          echo "NPM_VERSION=0.0.0-${RELEASE_SHA}" >> "$GITHUB_ENV"
+          echo "DIST_FILENAME=dist-${RELEASE_BRANCH_SLUGGED}.zip" >> "$GITHUB_ENV"
+
+      # Checkout the HEAD of the PR branch to get the latest commit message.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Get release description
+        run: |
+          echo "RELEASE_DESCRIPTION=$(git show -s --format=%s)" >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Create NPMRC
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+          echo "[@${{ github.repository_owner }}]:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          echo "always-auth=true" >> ~/.npmrc
+          echo 'registry "https://registry.yarnpkg.com"' >> ~/.yarnrc
+
+      - run: yarn install --frozen-lockfile
+
+      - name: Building
+        run: yarn css:build
+
+      - name: Bundling assets
+        run: ./bundle.sh
+        env:
+          VERSION: ${{ env.TAG_NAME }}-${{ env.RELEASE_SHA }}
+
+      - name: Rename assets
+        run: |
+          mv dist.zip $DIST_FILENAME
+
+      - name: Delete existing releases
+        uses: dev-drprasad/delete-tag-and-release@v1.1
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
+      - name: Create or update tag
+        uses: EndBug/latest-tag@v1.6.2
+        with:
+          ref: ${{ env.TAG_NAME }}
+
+      - name: Create release
+        id: create-release
+        uses: softprops/action-gh-release@v2
+        with:
+          prerelease: true
+          target_commitish: ${{ env.RELEASE_SHA }}
+          tag_name: ${{ env.TAG_NAME }}
+          body: ${{ env.RELEASE_DESCRIPTION }}
+          files: ${{ env.DIST_FILENAME }}
+
+      - name: Dispatch CMS PR creation workflow
+        run: |
+          gh workflow run create-cms-pr.yml \
+          -f releaseBranch=${{ env.RELEASE_BRANCH }} \
+          -f dependencyPackage=danskernesdigitalebibliotek/dpl-design-system
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Adding summary
+        run: |
+          echo "Release created 🚀😎 at: ${{ steps.create-release.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Release NPM package
+        run: |
+          npm version ${{ env.NPM_VERSION }} --no-git-tag-version
+          echo ${{ env.TAG_NAME }}
+          cat package.json
+          npm publish --tag ${{ env.TAG_NAME }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Adding summary
+        run: |
+          echo "Npm package created 🚀. Version: ${{ env.NPM_VERSION }}" >> $GITHUB_STEP_SUMMARY

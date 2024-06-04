@@ -1,0 +1,97 @@
+.dpl-patron-info {
+  color: $color__text-secondary-gray;
+  background-color: $color__global-secondary;
+  padding-bottom: $s-xl;
+
+  &__label {
+    @include typography($typo__body-large);
+    margin-left: $s-xl;
+    padding-top: $s-xl;
+  }
+  &__text {
+    @include typography($typo__body-medium);
+    margin-left: $s-xl;
+  }
+}
+
+.patron-buttons {
+  display: flex;
+  margin-top: $s-xl;
+}
+
+.contact-info-flex {
+  display: flex;
+  flex-direction: column;
+
+  @include media-query__small {
+    flex-direction: row;
+  }
+}
+
+.patron-page-info {
+  width: 100%;
+
+  @include media-query__small {
+    width: 75%;
+  }
+}
+
+.patron__input {
+  display: flex;
+  flex-direction: column;
+  @include typography($typo__body-medium);
+  margin-bottom: $s-xl;
+
+  label {
+    @include typography($typo__body-medium);
+    color: $color__text-secondary-gray;
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $color__global-tertiary-1;
+    height: 40px;
+
+    &:focus {
+      border-bottom-color: $color__global-black;
+      outline: none;
+    }
+  }
+
+  &__description {
+    color: $color__text-secondary-gray;
+    @include typography($typo__body-small);
+    margin-top: $s-sm;
+  }
+
+  &__validation {
+    color: $color__signal-alert;
+    @include typography($typo__body-small);
+    margin-top: $s-sm;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+}
+
+.patron__input--desktop {
+  width: 100%;
+
+  &:first-of-type {
+    @include media-query__small {
+      margin-right: $s-lg;
+    }
+  }
+
+  @include media-query__medium {
+    width: 50%;
+  }
+}

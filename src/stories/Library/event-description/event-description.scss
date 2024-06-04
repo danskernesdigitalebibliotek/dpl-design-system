@@ -1,0 +1,33 @@
+.event-description {
+  @include layout-container;
+  @include block-spacing();
+  @include media-query__small {
+    @include layout-container($block-max-width__medium);
+    display: grid;
+    column-gap: $s-xl;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.event-description__title {
+  @include typography($typo__h4);
+  margin-bottom: $s-md;
+
+  @include media-query__small {
+    grid-column: 1 / -1;
+    margin-bottom: $s-lg;
+  }
+}
+
+.event-description__description {
+  @include typography($typo__subtitle);
+  margin-bottom: $s-md;
+}
+
+.event-description__links {
+  margin-bottom: $s-2xl;
+
+  @include media-query__small {
+    margin-bottom: 0;
+  }
+}

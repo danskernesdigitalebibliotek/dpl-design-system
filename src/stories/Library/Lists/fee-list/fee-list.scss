@@ -1,0 +1,45 @@
+.fee-list-page {
+  background: $color__global-primary;
+  padding: $s-md;
+  position: relative;
+  z-index: 0;
+  @include typography($typo__body-placeholder);
+
+  @include media-query__medium {
+    padding: $s-6xl;
+  }
+}
+.fee-list {
+  margin-top: $s-lg;
+}
+
+.fee-list-bottom {
+  display: flex;
+  flex-direction: row;
+}
+.fee-list-bottom__paymenttypes {
+  flex: 1;
+}
+.fee-list-bottom__actions > p {
+  text-align: right;
+}
+.fee-list-bottom__actions > button {
+  margin-left: auto;
+}
+
+.fee-list-body__payment-button {
+  margin: 18px 0px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  @include media-query__medium {
+    flex-direction: row-reverse;
+    justify-content: right;
+  }
+}
+
+.fee-list-body__payment-info-link {
+  margin-top: 18px;
+}

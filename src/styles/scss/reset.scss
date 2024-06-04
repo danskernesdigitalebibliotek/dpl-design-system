@@ -38,8 +38,9 @@ a {
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizespeed;
   line-height: 1.5;
+  background-color: $color__page-bg;
 }
 
 /* A elements that don't have a class get default styles */
@@ -49,13 +50,9 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img {
+  height: auto;
   max-width: 100%;
   display: block;
-}
-
-/* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -66,12 +63,16 @@ select {
   font: inherit;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+/* Reset default button styling */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  padding: 0;
+  border: inherit;
+  background-color: inherit;
+}
+
+address {
+  font-style: normal;
 }

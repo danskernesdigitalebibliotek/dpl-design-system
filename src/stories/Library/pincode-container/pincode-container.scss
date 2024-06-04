@@ -1,0 +1,16 @@
+.dpl-pincode-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media-query__medium {
+    flex-wrap: nowrap;
+
+    .dpl-input:first-of-type {
+      margin-right: $s-sm;
+    }
+
+    .dpl-input:last-of-type {
+      margin-left: $s-sm;
+    }
+  }
+}

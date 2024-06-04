@@ -1,0 +1,73 @@
+.multiselect {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid $color__global-tertiary-1;
+
+  &__selected {
+    @include typography($typo__button);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 $s-md;
+    cursor: pointer;
+  }
+
+  &__opener {
+    width: $s-2xl;
+    min-width: $s-2xl;
+    height: 48px;
+    border-left: 1px solid $color__global-tertiary-1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin: auto;
+  }
+
+  &__options {
+    @include typography($typo__body-placeholder);
+    width: 100%;
+    padding: $s-md 0;
+    position: absolute;
+    top: 47px;
+    background-color: $color__global-primary;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid $color__global-tertiary-1;
+  }
+
+  &__option {
+    position: relative;
+    width: 100%;
+    height: 28px;
+    padding: 0 0 0 $s-md;
+    cursor: pointer;
+
+    &.multiselect__option--highlighted {
+      background-color: $color__global-secondary;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    right: $s-sm;
+    top: 0px;
+  }
+
+  &__caption {
+    @include typography($typo__small-caption);
+    width: 100%;
+    height: $s-lg;
+    margin-bottom: $s-sm;
+    padding-top: $s-xs;
+  }
+}

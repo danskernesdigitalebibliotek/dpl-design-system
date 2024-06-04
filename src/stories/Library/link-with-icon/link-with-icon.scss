@@ -1,0 +1,48 @@
+.link-with-icon {
+  @include typography($typo__body-placeholder);
+  @include show-svg-on-hover();
+
+  background-color: $color__global-primary;
+  padding: $s-md;
+  display: grid;
+  grid-template-columns: 40px auto max-content;
+  align-items: center;
+  gap: $s-md;
+  text-decoration: none;
+  width: 100%;
+
+  transform: translateY(-1px);
+  border: 1px solid $color__global-tertiary-1;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // Removing the spacing/double border between items next to eachother.
+  & + .link-with-icon {
+    margin-top: 0;
+    border-top: 0;
+  }
+
+  @include media-query__small {
+    padding: $s-lg $s-xl;
+  }
+}
+
+.link-with-icon__icon {
+  background-color: $color__identity-primary;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-with-icon__icon--rotate-180 {
+  transform: rotate(180deg);
+}

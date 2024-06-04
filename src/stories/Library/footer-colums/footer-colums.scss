@@ -1,0 +1,10 @@
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(263px, 1fr));
+  grid-gap: 82px;
+}
+
+.footer-column {
+  width: 263px;
+  height: auto;
+}

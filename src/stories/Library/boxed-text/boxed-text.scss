@@ -1,0 +1,7 @@
+.boxed-text {
+  height: $s-lg;
+  display: flex;
+  align-items: center;
+  outline: 1px solid $color__global-tertiary-1;
+  padding: 0 $s-sm;
+}

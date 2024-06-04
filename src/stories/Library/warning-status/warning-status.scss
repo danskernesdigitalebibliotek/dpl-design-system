@@ -1,0 +1,33 @@
+.warning-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $s-md;
+
+  @include media-query__small {
+    padding: $s-md $s-xl;
+  }
+}
+
+.warning-bar__icon {
+  margin-right: $s-md;
+  min-width: 40px;
+}
+
+.warning-bar__left {
+  display: flex;
+  align-items: center;
+}
+
+.warning-bar__right {
+  display: flex;
+  align-items: center;
+}
+
+.warning-bar__owes {
+  margin-right: $s-sm;
+
+  @include media-query__small {
+    margin-right: $s-lg;
+  }
+}

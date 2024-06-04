@@ -1,0 +1,14 @@
+@import "./src/styles/scss/tools";
+@import "./src/styles/scss/reset";
+@import "./src/stories/Library/rich-text/rich-text";
+
+// Making CKEditor reflect the frontend display.
+// This file will be loaded into CMS using ckeditor5-stylesheets.
+.ck.ck-content {
+  @extend %rich-text;
+
+  ul,
+  ol {
+    list-style: none;
+  }
+}

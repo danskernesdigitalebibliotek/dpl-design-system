@@ -1,0 +1,11 @@
+.infomedia-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: $s-2xl;
+  object-fit: contain;
+  height: $s-lg;
+}
+
+.infomedia-article > * + * {
+  margin-top: 1em;
+}
