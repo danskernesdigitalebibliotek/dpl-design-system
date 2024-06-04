@@ -34,6 +34,8 @@ expanding the current `dpl-form` class.
 This currently has an exception in form of form inputs - these have been styled
 a long time ago and use the class `dpl-input`.
 
-### Implementation in the dpl-design-system
+@todo 👆can we do something about this `dpl-input`?
 
-Here is the [link to our form css file](../src/stories/Blocks/form/form.scss).
+### Implementation
+
+See [form.scss for our implementation](../../src/stories/Blocks/form/form.scss).

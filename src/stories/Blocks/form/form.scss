@@ -5,55 +5,57 @@
   padding-left: $s-md;
   padding-right: $s-md;
   box-sizing: border-box;
+}
 
-  &__header {
-    margin: $s-2xl 0 $s-2xl $s-md;
+.dpl-form__header {
+  margin: $s-2xl 0 $s-2xl $s-md;
 
-    @include media-query__small {
-      margin: $s-3xl 0 $s-4xl 160px;
-      max-width: $block-max-width__medium;
-    }
+  @include media-query__small {
+    margin: $s-3xl 0 $s-4xl 160px;
+    max-width: $block-max-width__medium;
+  }
+}
+
+.dpl-form__title {
+  @include typography($typo__h1);
+}
+
+.dpl-form__subtitle {
+  @include typography($typo__subtitle);
+  margin-top: $s-sm;
+
+  @include media-query__small {
+    margin-top: $s-xl;
+  }
+}
+
+.dpl-form__body {
+  margin: 0 $s-md 0 $s-md;
+
+  @include media-query__small {
+    margin-left: 160px;
+    max-width: $block-max-width__medium;
+  }
+}
+
+.dpl-form__info-message {
+  @include typography($typo__links);
+  color: $color__global-tertiary-2;
+  max-width: 550px;
+}
+
+// @todo This should be called .dpl-form__input.
+.dpl-input {
+  @include typography($typo__body-placeholder);
+  margin-bottom: $s-lg;
+  max-width: 550px;
+
+  &--full-width {
+    max-width: 750px;
   }
 
-  &__title {
-    @include typography($typo__h1);
-  }
-
-  &__subtitle {
-    @include typography($typo__subtitle);
-    margin-top: $s-sm;
-
-    @include media-query__small {
-      margin-top: $s-xl;
-    }
-  }
-
-  .dpl-input {
-    @include typography($typo__body-placeholder);
-    margin-bottom: $s-lg;
-    max-width: 550px;
-
-    &--full-width {
-      max-width: 750px;
-    }
-
-    &:has(p) {
-      @include typography($typo__links);
-      color: $color__global-tertiary-2;
-      max-width: 550px;
-    }
-  }
-
-  &__body {
-    margin: 0 $s-md 0 $s-md;
-
-    @include media-query__small {
-      margin-left: 160px;
-      max-width: $block-max-width__medium;
-    }
-  }
-
-  &__info-message {
+  // @todo This is unsupported in IE. Does it need a polyfill, or alternative?
+  &:has(p) {
     @include typography($typo__links);
     color: $color__global-tertiary-2;
     max-width: 550px;
