@@ -6,7 +6,7 @@
 
     textarea {
       @include typography($typo__body-placeholder);
-      border: solid 1px $color__global-tertiary-1;
+      border: solid 1px $color__global-tertiary-2;
       width: 100%;
       padding: $s-md;
       resize: none;
