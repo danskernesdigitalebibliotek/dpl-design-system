@@ -10,20 +10,24 @@ export const CookiePlaceholder = ({
   buttonText,
 }: CookiePlaceholderProps) => {
   return (
-    <div className="cookie-placeholder">
-      <div className="cookie-placeholder__description">
-        <div id="dpl-react-apps-cookie-placeholder">{info}</div>
+    <div
+      className="consent-placeholder cookie-placeholder"
+      data-category="cookie_cat_marketing"
+    >
+      <div className="cookie-placeholder__wrapper">
+        <div className="cookie-placeholder__description">
+          <div id="dpl-react-apps-cookie-placeholder">{info}</div>
+        </div>
+        <Button
+          classNames="cookie-placeholder__manage-consent-button"
+          size="xlarge"
+          label={buttonText}
+          buttonType="none"
+          variant="outline"
+          collapsible={false}
+          disabled={false}
+        />
       </div>
-
-      <Button
-        classNames="cookie-placeholder__manage-consent-button"
-        size="xlarge"
-        label={buttonText}
-        buttonType="none"
-        variant="outline"
-        collapsible={false}
-        disabled={false}
-      />
     </div>
   );
 };
