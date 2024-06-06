@@ -14,6 +14,7 @@ export const CookiePlaceholder = ({
       className="consent-placeholder cookie-placeholder"
       data-category="cookie_cat_marketing"
     >
+      <div className="pagefold-triangle--medium pagefold-inherit-parent" />
       <div className="cookie-placeholder__wrapper">
         <div className="cookie-placeholder__description">
           <div id="dpl-react-apps-cookie-placeholder">{info}</div>
