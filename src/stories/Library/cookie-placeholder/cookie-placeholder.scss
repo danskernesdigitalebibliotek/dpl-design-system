@@ -8,7 +8,6 @@
   height: 100%;
   clip-path: polygon(24px 0, 0 24px, 0 100%, 100% 100%, 100% 0);
   -webkit-clip-path: polygon(24px 0, 0 24px, 0 100%, 100% 100%, 100% 0);
-  display: none;
 }
 
 .cookie-placeholder__wrapper {
@@ -27,4 +26,8 @@
   font-family: $font__body;
   font-weight: $font__weight--normal;
   margin-bottom: $s-lg;
+}
+
+.cookie-placeholder__hide{
+  display: none;
 }

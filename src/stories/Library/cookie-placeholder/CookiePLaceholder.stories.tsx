@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { CookiePlaceholder } from "./CookiePlaceholder";
+import VideoEmbed from "../video-embed/VideoEmbed";
 
 export default {
   title: "Library / Cookie Placeholder",
@@ -12,13 +13,21 @@ export default {
     layout: "fullscreen",
   },
   argTypes: {
+    buttonText: {
+      defaultValue: "Manage consent",
+      type: "string",
+    },
+    acceptCookies: {
+      control: "boolean",
+      defaultValue: false,
+    },
     info: {
       defaultValue:
         "To view this content, we need your consent to use cookies.",
       type: "string",
     },
-    buttonText: {
-      defaultValue: "Manage consent",
+    src: {
+      defaultValue: "https://www.youtube.com/embed/CmzKQ3PSrow",
       type: "string",
     },
   },
