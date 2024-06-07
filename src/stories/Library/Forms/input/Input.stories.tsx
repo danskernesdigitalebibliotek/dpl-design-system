@@ -9,15 +9,24 @@ export default {
   argTypes: {
     label: {
       defaultValue: "Navn",
+      control: { type: "text" },
     },
     type: {
       defaultValue: "text",
+      control: { type: "select", options: ["text", "password"] },
     },
     id: {
       defaultValue: "id",
+      control: { type: "text" },
     },
-    description: { defaultValue: "Dit fulde navn" },
-    validation: { defaultValue: "Fejlbesked lorem ipsum dolor" },
+    description: {
+      defaultValue: "Dit fulde navn",
+      control: { type: "text" },
+    },
+    validation: {
+      defaultValue: "Fejlbesked lorem ipsum dolor",
+      control: { type: "text" },
+    },
   },
   parameters: {
     design: {
