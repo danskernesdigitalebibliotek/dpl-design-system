@@ -54,21 +54,21 @@ export const Header = (props: HeaderProps) => {
           >
             <div>
               <div className="header__menu-navigation-mobile">
-                <Pagefold
-                  isInheriting={false}
-                  isAContainer={false}
-                  size="small"
+                <button
+                  id="header-sidebar-nav__toggle"
                   className="header__menu-navigation-button header__button"
-                  compProps={{
-                    id: "header-sidebar-nav__toggle",
-                    "aria-controls": "sidebarNav",
-                    "aria-expanded": "false",
-                    role: "button",
-                    tabIndex: 0,
-                  }}
+                  aria-controls="sidebarNav"
+                  aria-expanded="false"
                 >
-                  <MenuIcon />
-                </Pagefold>
+                  <Pagefold
+                    isInheriting={false}
+                    isAContainer={false}
+                    size="small"
+                    className="header__menu-navigation-pagefold"
+                  >
+                    <MenuIcon />
+                  </Pagefold>
+                </button>
                 <div className="header__menu-navigation-logo">
                   <Logo
                     hasImage

@@ -55,6 +55,13 @@
   align-items: center;
   border-right: 1px solid $color__global-tertiary-1;
 }
+.header__menu-navigation-pagefold {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .header__menu-profile,
 .header__menu-bookmarked {
