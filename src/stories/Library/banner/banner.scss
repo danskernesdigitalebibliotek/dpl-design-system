@@ -1,6 +1,6 @@
 @mixin banner-height {
   height: 500px;
-  @include media-query__medium {
+  @include media-query__small {
     height: 810px;
   }
 }
@@ -20,23 +20,25 @@
   text-decoration: none;
 }
 
-.banner-content {
-  padding: $s-xl;
-  max-width: 375px;
-  background-color: white;
+.banner__spacing {
+  @include layout-container($layout__max-width--medium, 0);
   grid-row: 2;
   grid-column: 1;
+}
 
-  @include media-query__medium {
+.banner-content {
+  padding: $s-xl;
+  max-width: 90%;
+  background-color: white;
+
+  @include media-query__small {
     padding: $s-2xl;
-    max-width: 575px;
-    margin-left: 250px;
+    max-width: 60%;
   }
 
   &--no-image {
     max-width: unset;
     background-color: unset;
-    margin-left: unset;
     text-align: center;
   }
 }
