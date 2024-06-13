@@ -4,14 +4,15 @@ import MediaContainer from "../media-container/MediaContainer";
 import { ReactComponent as ArrowLargeRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
 
 type BannerType = {
+  link: string;
   title: string;
   image?: ReactNode;
   description?: string;
 };
 
-const Banner: FC<BannerType> = ({ image, title, description }) => {
+const Banner: FC<BannerType> = ({ link, image, title, description }) => {
   return (
-    <a href="#" className="banner">
+    <a href={link} className="banner">
       {image && (
         <div className="banner-visual">
           <MediaContainer media={image} />

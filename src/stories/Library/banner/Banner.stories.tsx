@@ -33,6 +33,11 @@ export default {
         "Om du er dedikeret musiknørd eller moderat musikinteresseret, så er dette siden til dig. Her kan du finde anbefalinger, digitale musikmagasiner, nyheder, musiklitteratur og meget mere.",
       control: { type: "text" },
     },
+    link: {
+      name: "Link",
+      defaultValue: "#",
+      control: { type: "text" },
+    },
   },
 } as ComponentMeta<typeof Banner>;
 
