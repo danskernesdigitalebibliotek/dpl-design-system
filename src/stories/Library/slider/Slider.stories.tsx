@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 
 import Slider from "./Slider";
 import Card from "../card/Card";
-import ImageCredited from "../image-credited/ImageCredited";
+import CardImages from "../card/CardImages";
 
 export default {
   title: "Library / Slider",
@@ -29,9 +29,16 @@ export default {
 
 const Template: ComponentStory<typeof Slider> = (args) => <Slider {...args} />;
 
-const imageUrl =
-  "https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=2815&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-const image = <ImageCredited src={imageUrl} />;
+const image = (
+  <CardImages
+    src="images/card_original.jpg"
+    alternativeSrcs={[
+      { name: "x-large", src: "images/card_x_large.jpg" },
+      { name: "large", src: "images/card_large.jpg" },
+      { name: "medium", src: "images/card_medium.jpg" },
+    ]}
+  />
+);
 
 const card = (
   <Card

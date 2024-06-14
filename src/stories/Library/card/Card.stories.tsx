@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 import Card from "./Card";
-import ImageCredited from "../image-credited/ImageCredited";
+import CardImages from "./CardImages";
 
 export default {
   title: "Library / Card ('news card')",
@@ -30,7 +30,14 @@ export default {
     },
     image: {
       defaultValue: (
-        <ImageCredited src="https://images.unsplash.com/photo-1585779034823-7e9ac8faec70?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        <CardImages
+          src="images/card_original.jpg"
+          alternativeSrcs={[
+            { name: "x-large", src: "images/card_x_large.jpg" },
+            { name: "large", src: "images/card_large.jpg" },
+            { name: "medium", src: "images/card_medium.jpg" },
+          ]}
+        />
       ),
     },
     placeholderText: {
