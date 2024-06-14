@@ -3,11 +3,10 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  padding: $s-md $s-xl;
+  padding: $s-md;
 
   @include media-query__small {
     flex-direction: row;
-    padding: $s-md;
   }
 
   &__icon {
