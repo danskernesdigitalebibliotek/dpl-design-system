@@ -6,6 +6,7 @@ import { CoverProps } from "./types";
 
 const Cover: FC<CoverProps> = ({
   size,
+  displaySize,
   animate,
   src,
   tint,
@@ -16,11 +17,13 @@ const Cover: FC<CoverProps> = ({
 }) => {
   const [imageLoaded, setImageLoaded] = useState<boolean | null>(null);
 
+  const coverDisplaySize = displaySize || size;
+
   const classes = {
     wrapper: clsx(
       "cover",
-      `cover--size-${size}`,
-      `cover--aspect-${size}`,
+      `cover--size-${coverDisplaySize}`,
+      `cover--aspect-${coverDisplaySize}`,
       imageLoaded || tintClasses[tint || "default"]
     ),
   };
