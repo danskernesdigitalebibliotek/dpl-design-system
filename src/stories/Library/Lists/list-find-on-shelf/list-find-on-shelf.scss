@@ -16,6 +16,11 @@
     width: 404px;
   }
 
+  &__location-header {
+    white-space: nowrap;
+    padding-right: $s-lg;
+  }
+
   &__item-count-header {
     @include media-query__small {
       margin-left: auto;
