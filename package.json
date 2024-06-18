@@ -16,7 +16,7 @@
     "css:lint": "concurrently 'yarn:css:stylelint' 'yarn:css:prettier -- --check' --raw",
     "css:lint:watch": "chokidar 'src/**/*.scss' -c 'yarn css:lint'",
     "css:format": "concurrently 'yarn:css:stylelint -- --fix' 'yarn:css:prettier -- --write' --max-processes 1 --raw",
-    "css:build": "sass base.scss:src/styles/css/base.css wysiwyg.scss:src/styles/css/wysiwyg.css src/stories/Library/opening-hours-editor/opening-hours-editor.scss:src/styles/css/opening-hours-editor.css --style compressed",
+    "css:build": "sass base.scss:src/styles/css/base.css wysiwyg.scss:src/styles/css/wysiwyg.css admin-base.scss:src/styles/css/admin-base.css --style compressed",
     "css:watch": "yarn css:build -- --watch",
     "build": "concurrently 'yarn:css:build' --raw",
     "markdown:lint": "markdownlint-cli2",

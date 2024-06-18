@@ -1,0 +1,223 @@
+// Variables
+$_gin_xs_spacing: 0.5rem;
+$_gin_m_spacing: 1rem;
+$_gin_xl_spacing: 2rem;
+$_gin_border_color: #8e929c;
+$_gin_font_weight_semibold: 525;
+$_gin-header-bg-color: #e1eafc;
+
+$_color__background-light: #eeeeed;
+$_color__hover-background: #8e929c;
+
+$_box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.25);
+$_loading-spinner-size: 40px;
+$_highlighted-item-bg-color: $_gin-header-bg-color;
+
+// Fixed preview height so the size doesn't jump if nothing is selected.
+$_preview-height: 170px;
+$_max-select-input-width: 220px;
+$_material-search-max-width: 800px;
+$list_header_height: 50px;
+
+// Material Search
+.material-search {
+  max-width: $_material-search-max-width;
+  margin-bottom: $_gin_m_spacing;
+}
+
+.material-search__label {
+  display: flex;
+  flex-direction: column;
+  gap: $_gin_xs_spacing;
+  margin-bottom: $_gin_xs_spacing;
+  font-weight: $_gin_font_weight_semibold;
+}
+
+.material-search__inputs-container {
+  display: grid;
+  grid-template-columns: 2fr minmax(auto, $_max-select-input-width);
+  gap: $_gin_m_spacing;
+  margin-bottom: $_gin_xs_spacing;
+}
+
+.material-search__inputs-container--hidden {
+  display: none; // This class is only applied in Drupal.
+}
+
+// Preview
+.material-search__preview {
+  color: $color__global-grey;
+  cursor: not-allowed;
+  display: grid;
+  background-color: $_highlighted-item-bg-color;
+  height: $_preview-height;
+  align-items: center;
+  border: 1px solid $_gin_border_color;
+  border-radius: $_gin_xs_spacing;
+  overflow: hidden;
+}
+
+.material-search__preview-material {
+  display: grid;
+  padding: 0 $_gin_m_spacing;
+  grid-template-columns: min-content auto;
+  column-gap: $_gin_m_spacing;
+  align-items: center;
+  height: 100%;
+}
+
+.material-search__preview-empty {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: $color__global-tertiary-1;
+  align-items: center;
+  color: $color__global-grey;
+}
+
+.material-search__preview-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.material-search__input,
+.material-search__selector {
+  border: 1px solid $_gin_border_color;
+  padding: $_gin_xs_spacing;
+  border-radius: $_gin_xs_spacing;
+  height: 100%;
+  font-family: inherit;
+
+  &:disabled {
+    background-color: $color__global-tertiary-1;
+  }
+}
+
+.material-search__preview-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: $_gin_xs_spacing;
+}
+
+.material-search__preview-term {
+  font-weight: 700;
+}
+.material-search__preview-detail {
+  width: max-content;
+}
+
+// Loading
+.material-search__loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-search__loading-spinner {
+  width: $_loading-spinner-size;
+  height: $_loading-spinner-size;
+  animation: spin 0.9s linear infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.material-search__loading-text {
+  font-size: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Search List
+.material-search-list {
+  border: 1px solid $_gin_border_color;
+  margin-top: $_gin_xl_spacing;
+  overflow: hidden;
+  border-radius: $_gin_xs_spacing;
+  background-color: $color__global-white;
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
+  max-height: 500px;
+}
+
+.material-search-list__results {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  row-gap: $_gin_xs_spacing;
+  padding: $_gin_xs_spacing;
+  padding-bottom: 20px;
+  background-color: $_color__background-light;
+  margin: 0;
+}
+
+.material-search-list__item {
+  background-color: $color__global-white;
+  &--highlighted {
+    background-color: $_highlighted-item-bg-color;
+  }
+}
+
+.material-search-list__button {
+  width: 100%;
+  border: 1px solid $_gin_border_color;
+  border-radius: $_gin_xs_spacing;
+  padding: $_gin_xs_spacing;
+  display: grid;
+  grid-template-columns: min-content auto;
+  column-gap: $_gin_m_spacing;
+  justify-items: baseline;
+  align-items: center;
+  transition: scale 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.005);
+    box-shadow: $_box-shadow;
+    cursor: pointer;
+  }
+}
+
+.material-search-list__header {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid $_gin_border_color;
+  height: $list_header_height;
+  align-items: center;
+  padding: 0 $_gin_m_spacing;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: $color__global-white;
+  gap: $_gin_xs_spacing;
+}
+
+.material-search-list__detail-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: $_gin_xs_spacing;
+  font-size: 14px;
+}
+
+.material-search-list__term {
+  font-weight: 700;
+}
+.material-search-list__detail {
+  width: max-content;
+}
+
+.material-search-list__loading {
+  margin-top: $_gin_m_spacing;
+}
