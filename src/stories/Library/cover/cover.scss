@@ -1,3 +1,5 @@
+$MATERIAL_2XSMALL_MOBILE: 52px;
+$MATERIAL_2XSMALL_DESKTOP: 68.5px;
 $MATERIAL_XSMALL_MOBILE: 104px;
 $MATERIAL_XSMALL_DESKTOP: 104px;
 $MATERIAL_SMALL_MOBILE: 104px;
@@ -10,6 +12,14 @@ $MATERIAL_XLARGE_MOBILE: 284px;
 $MATERIAL_XLARGE_DESKTOP: 460px;
 
 .cover--size {
+  &-2xsmall {
+    border-radius: 3px;
+    height: $MATERIAL_2XSMALL_MOBILE;
+    @include media-query__small {
+      height: $MATERIAL_2XSMALL_DESKTOP;
+    }
+  }
+
   &-xsmall {
     border-radius: 3px;
     height: $MATERIAL_XSMALL_MOBILE;
@@ -48,6 +58,10 @@ $MATERIAL_XLARGE_DESKTOP: 460px;
 }
 
 .cover--aspect {
+  &-2xsmall {
+    aspect-ratio: 0.69;
+  }
+
   &-xsmall {
     aspect-ratio: 0.69;
   }

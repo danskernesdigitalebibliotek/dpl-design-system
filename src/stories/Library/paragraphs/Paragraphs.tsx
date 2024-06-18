@@ -32,7 +32,12 @@ export const ArticleParagraphs = () => {
       </Paragraph>
 
       <Paragraph modifier="video">
-        <VideoEmbed src="https://www.youtube.com/embed/CmzKQ3PSrow" />
+        <VideoEmbed
+          info="To view this content, we need your consent to use marketing cookies."
+          buttonText="Manage consent"
+          src="https://www.youtube.com/embed/CmzKQ3PSrow"
+          acceptCookies={false}
+        />
       </Paragraph>
 
       <Paragraph modifier="links">

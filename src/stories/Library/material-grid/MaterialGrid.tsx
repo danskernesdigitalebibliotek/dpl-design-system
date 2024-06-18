@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import clsx from "clsx";
 import {
   RecommendedMaterial,
   RecommendedMaterialProps,
@@ -6,6 +7,7 @@ import {
 
 export type MaterialGridProps = {
   title: string;
+  description: string;
   selectedAmountOfMaterialsForDisplay: 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32;
   materials: RecommendedMaterialProps[];
   buttonText: string;
@@ -13,6 +15,7 @@ export type MaterialGridProps = {
 
 export const MaterialGrid: React.FC<MaterialGridProps> = ({
   title,
+  description,
   selectedAmountOfMaterialsForDisplay,
   materials,
   buttonText,
@@ -38,9 +41,20 @@ export const MaterialGrid: React.FC<MaterialGridProps> = ({
     setCurrentMaterialsDisplayed(selectedAmountOfMaterialsForDisplay);
   }
 
+  const titleClasses = clsx("material-grid__title", {
+    "material-grid__title--no-description": !description,
+  });
+
   return (
     <div className="material-grid">
-      <h2 className="material-grid__title">{title}</h2>
+      {(title || description) && (
+        <div className="material-grid__text-wrapper">
+          {title && <h2 className={titleClasses}>{title}</h2>}
+          {description && (
+            <p className="material-grid__description">{description}</p>
+          )}
+        </div>
+      )}
       <ul className="material-grid__items">
         {materials
           .slice(0, currentMaterialsDisplayed)

@@ -16,7 +16,7 @@
     "css:lint": "concurrently 'yarn:css:stylelint' 'yarn:css:prettier -- --check' --raw",
     "css:lint:watch": "chokidar 'src/**/*.scss' -c 'yarn css:lint'",
     "css:format": "concurrently 'yarn:css:stylelint -- --fix' 'yarn:css:prettier -- --write' --max-processes 1 --raw",
-    "css:build": "sass base.scss:src/styles/css/base.css wysiwyg.scss:src/styles/css/wysiwyg.css src/stories/Library/opening-hours-editor/opening-hours-editor.scss:src/styles/css/opening-hours-editor.css --style compressed",
+    "css:build": "sass base.scss:src/styles/css/base.css wysiwyg.scss:src/styles/css/wysiwyg.css admin-base.scss:src/styles/css/admin-base.css --style compressed",
     "css:watch": "yarn css:build -- --watch",
     "build": "concurrently 'yarn:css:build' --raw",
     "markdown:lint": "markdownlint-cli2",
@@ -48,7 +48,7 @@
     "@storybook/node-logger": "^6.3.7",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.5.9",
-    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.12",
@@ -83,7 +83,7 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-scripts": "^4.0.3",
-    "sass": "^1.77.4",
+    "sass": "^1.77.5",
     "skeleton-screen-css": "^1.1.0",
     "storybook-addon-designs": "^6.2.1",
     "stylelint": "^14.16.1",
@@ -92,7 +92,7 @@
     "stylelint-prettier": "^3.0.0",
     "stylelint-scss": "^5.3.2",
     "typescript": "^4.7.4",
-    "web-vitals": "^4.1.0"
+    "web-vitals": "^4.1.1"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

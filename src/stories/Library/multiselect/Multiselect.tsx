@@ -18,12 +18,14 @@ export const Multiselect: React.FC<MultiselectProps> = ({
         <div className="multiselect__caption">Caption for multiselect</div>
       )}
       <div className="multiselect">
-        <div className="multiselect__selected">
-          Mulighed 1, Mulighed 2, Mulighed 3, Mulighed 4
-        </div>
-        <div className="multiselect__opener">
-          <ExpandMoreIcon className="multiselect__icon" />
-        </div>
+        <button type="button" className="multiselect">
+          <div className="multiselect__selected">
+            Mulighed 1, Mulighed 2, Mulighed 3, Mulighed 4
+          </div>
+          <div className="multiselect__opener">
+            <ExpandMoreIcon className="multiselect__icon" />
+          </div>
+        </button>
         {isOpen && (
           <ul className="multiselect__options">
             {options.map((item, index) => (
