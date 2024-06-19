@@ -72,11 +72,11 @@
 }
 
 /**
- * Mixin `underlined-title` applies a custom underline effect to `<u>` elements.
+ * Mixin `u-extending-underline-style` applies a custom underline effect to `<u>` elements.
  * - Uses a pseudo-element (::after) with a positioned SVG image as the underline.
  * - Removes default text underline.
  */
-@mixin underlined-title {
+@mixin u-extending-underline-style {
   u {
     position: relative;
     text-decoration: none;

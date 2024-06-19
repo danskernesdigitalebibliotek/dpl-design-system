@@ -14,25 +14,29 @@ const Banner: FC<BannerType> = ({ link, image, title, description }) => {
   return (
     <a href={link} className="banner">
       {image && (
-        <div className="banner-visual">
+        <div className="banner__media-wrapper">
           <MediaContainer media={image} />
         </div>
       )}
-      <div className="banner__spacing">
+      <div
+        className={clsx("banner__content-wrapper", {
+          "banner__content-wrapper--no-image": !image,
+        })}
+      >
         <div
-          className={clsx("banner-content arrow__hover--right-large", {
-            "banner-content--no-image": !image,
+          className={clsx("banner__content arrow__hover--right-large", {
+            "banner__content--no-image": !image,
           })}
         >
-          <h2
-            className="banner-content__title"
-            // We need to be able to replicate our WYSIWYG field in Drupal that makes it possible to underline (<u>) words.
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: title }}
-          />
-          {description && (
-            <p className="banner-content__description">{description}</p>
+          {title && (
+            <h2
+              className="banner__title"
+              // We need to be able to replicate our WYSIWYG field in Drupal that makes it possible to underline (<u>) words.
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
           )}
+          {description && <p className="banner__description">{description}</p>}
           <ArrowLargeRight />
         </div>
       </div>

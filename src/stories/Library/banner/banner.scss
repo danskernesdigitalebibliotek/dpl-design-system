@@ -1,67 +1,77 @@
-@mixin banner-height {
-  height: 500px;
-  @include media-query__small {
-    height: 810px;
-  }
-}
-
-@mixin banner-text-margin {
-  margin-bottom: $s-md;
-  @include media-query__medium {
-    margin-bottom: $s-xl;
-  }
-}
+$_banner-content-wrapper-width: 944px;
+$_banner-content-max-width-small: 300px;
+$_banner-content-max-width-medium: 569px;
+$_banner-content-no-image-max-width-small: $layout__max-width--small;
+$_banner-height-small: 500px;
+$_banner-height-medium: 810px;
 
 .banner {
   @include layout-container($layout__max-width--large, 0);
-  @include banner-height;
+
   display: grid;
-  grid-template-rows: 1fr auto 1fr;
+  align-items: center;
   text-decoration: none;
-}
-
-.banner__spacing {
-  @include layout-container($layout__max-width--medium, 0);
-  grid-row: 2;
-  grid-column: 1;
-}
-
-.banner-content {
-  padding: $s-xl;
-  max-width: 90%;
-  background-color: white;
+  box-sizing: border-box;
+  background-color: $color__global-secondary;
+  height: $_banner-height-small;
 
   @include media-query__small {
-    padding: $s-2xl;
-    max-width: 60%;
+    height: $_banner-height-medium;
   }
+}
+
+.banner__media-wrapper {
+  grid-row: 1;
+  grid-column: 1;
+  height: $_banner-height-small;
+  @include media-query__small {
+    height: $_banner-height-medium;
+  }
+}
+
+.banner__content-wrapper {
+  @include layout-container($_banner-content-wrapper-width, 0);
+  width: 100%;
+  grid-row: 1;
+  grid-column: 1;
+  padding: $s-2xl $s-2xl $s-2xl 0;
+  @include media-query__small {
+    padding-right: unset;
+  }
+  &--no-image {
+    padding: unset;
+  }
+}
+
+.banner__content {
+  padding: $s-xl;
+  max-width: $_banner-content-max-width-small;
+  background-color: $color__global-white;
+  display: flex;
+  flex-direction: column;
+  gap: $s-md;
 
   &--no-image {
-    max-width: unset;
+    max-width: $_banner-content-max-width-small;
+    margin: 0 auto;
     background-color: unset;
     text-align: center;
+    align-items: center;
+  }
+  @include media-query__small {
+    gap: $s-lg;
+    padding: calc($s-2xl + 6px);
+    max-width: $_banner-content-max-width-medium;
   }
 }
 
-.banner-content__title {
-  @include typography($typo__h1);
-  @include underlined-title;
-  @include banner-text-margin;
+.banner__title {
+  @include typography($typo__h2);
+  @include u-extending-underline-style;
 }
 
-.banner-content__description {
-  @include typography($typo__body-medium);
-  @include banner-text-margin;
+.banner__description {
+  @include typography($typo__body-placeholder);
+  line-height: 160%;
   color: $color__global-grey;
-}
-
-.banner-visual {
-  grid-row: 1 / -1;
-  grid-column: 1;
-
-  img {
-    @include banner-height;
-    object-fit: cover;
-    object-position: center;
-  }
 }
