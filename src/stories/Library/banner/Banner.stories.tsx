@@ -47,12 +47,31 @@ export const Default = Template.bind({});
 
 export const NoImage = Template.bind({});
 NoImage.args = {
-  title: "Title <u>uden</u> billede",
   image: undefined,
 };
 
-export const NoDescription = Template.bind({});
-NoDescription.args = {
+export const NoImageOnlyTitle = Template.bind({});
+NoImageOnlyTitle.args = {
+  title: "Title <u>uden</u> billede",
+  image: undefined,
+  description: undefined,
+};
+
+export const NoImageOnlyDescription = Template.bind({});
+NoImageOnlyDescription.args = {
+  title: undefined,
+  image: undefined,
+  description:
+    "Om du er dedikeret musiknørd eller moderat musikinteresseret, så er dette siden til dig. Her kan du finde anbefalinger, digitale musikmagasiner, nyheder, musiklitteratur og meget mere.",
+};
+
+export const WithImageOnlyTitle = Template.bind({});
+WithImageOnlyTitle.args = {
   title: "Banner <u>uden</u> beskrivelse",
   description: undefined,
+};
+export const WithImageOnlyDescription = Template.bind({});
+WithImageOnlyDescription.args = {
+  description:
+    "Om du er dedikeret musiknørd eller moderat musikinteresseret, så er dette siden til dig. Her kan du finde anbefalinger, digitale musikmagasiner, nyheder, musiklitteratur og meget mere.",
 };
