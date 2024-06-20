@@ -1,7 +1,6 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 import Banner from "./Banner";
-import ImageCredited from "../image-credited/ImageCredited";
 
 export default {
   title: "Library / Banner",
@@ -14,13 +13,9 @@ export default {
     },
   },
   argTypes: {
-    image: {
-      defaultValue: (
-        <ImageCredited
-          src="https://images.unsplash.com/photo-1531058020387-3be344556be6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZXZlbnR8fHx8fHwxNzAyOTEwMzE0&ixlib=rb-4.0.3&q=8
-0&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080"
-        />
-      ),
+    imageSrc: {
+      defaultValue: "images/campaign_cover.jpg",
+      control: { type: "text" },
     },
     title: {
       name: "Title",
@@ -47,20 +42,20 @@ export const Default = Template.bind({});
 
 export const NoImage = Template.bind({});
 NoImage.args = {
-  image: undefined,
+  imageSrc: undefined,
 };
 
 export const NoImageOnlyTitle = Template.bind({});
 NoImageOnlyTitle.args = {
   title: "Title <u>uden</u> billede",
-  image: undefined,
+  imageSrc: undefined,
   description: undefined,
 };
 
 export const NoImageOnlyDescription = Template.bind({});
 NoImageOnlyDescription.args = {
   title: undefined,
-  image: undefined,
+  imageSrc: undefined,
   description:
     "Om du er dedikeret musiknørd eller moderat musikinteresseret, så er dette siden til dig. Her kan du finde anbefalinger, digitale musikmagasiner, nyheder, musiklitteratur og meget mere.",
 };

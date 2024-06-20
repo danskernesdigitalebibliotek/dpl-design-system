@@ -1,31 +1,30 @@
-import { FC, ReactNode } from "react";
 import clsx from "clsx";
-import MediaContainer from "../media-container/MediaContainer";
+import { FC, ReactNode } from "react";
 import { ReactComponent as ArrowLargeRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-large-right.svg";
 
 type BannerType = {
   link: string;
   title: string;
-  image?: ReactNode;
+  imageSrc?: ReactNode;
   description?: string;
 };
 
-const Banner: FC<BannerType> = ({ link, image, title, description }) => {
+const Banner: FC<BannerType> = ({ link, imageSrc, title, description }) => {
+  const backgroundImageStyle = imageSrc
+    ? { backgroundImage: `url(${imageSrc})` }
+    : {};
   return (
-    <a href={link} className="banner">
-      {image && (
-        <div className="banner__media-wrapper">
-          <MediaContainer media={image} />
-        </div>
-      )}
-      <div
-        className={clsx("banner__content-wrapper", {
-          "banner__content-wrapper--no-image": !image,
-        })}
-      >
+    <a
+      href={link}
+      className={clsx(`banner arrow__hover--right-large`, {
+        "banner--has-image": imageSrc,
+      })}
+      style={backgroundImageStyle}
+    >
+      <div className="banner__content-wrapper">
         <div
-          className={clsx("banner__content arrow__hover--right-large", {
-            "banner__content--no-image": !image,
+          className={clsx("banner__content", {
+            "banner__content--has-image": imageSrc,
           })}
         >
           {title && (
