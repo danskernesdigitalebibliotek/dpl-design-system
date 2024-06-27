@@ -5,13 +5,15 @@ $_gin_xl_spacing: 2rem;
 $_gin_border_color: #8e929c;
 $_gin_font_weight_semibold: 525;
 $_gin-header-bg-color: #e1eafc;
-
+$_gin_color_danger: #cc3d3d;
+$_gin_color_danger_lightest: #fdd9d9;
 $_color__background-light: #eeeeed;
 $_color__hover-background: #8e929c;
 
 $_box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.25);
 $_loading-spinner-size: 40px;
 $_highlighted-item-bg-color: $_gin-header-bg-color;
+$_box_shadow_header: 0 4px 2px -2px rgba(0, 0, 0, 0.171);
 
 // Fixed preview height so the size doesn't jump if nothing is selected.
 $_preview-height: 170px;
@@ -220,4 +222,54 @@ $list_header_height: 50px;
 
 .material-search-list__loading {
   margin-top: $_gin_m_spacing;
+}
+
+// Warning
+.material-search__error {
+  background-color: $color__global-white;
+  border: 1px solid $_gin_color_danger;
+  min-height: $_preview-height;
+  height: 100%;
+  border-radius: $_gin_xs_spacing;
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.material-search__error-header {
+  display: flex;
+  gap: $_gin_xs_spacing;
+  align-items: center;
+  font-size: 1rem;
+  padding: $_gin_m_spacing;
+  background-color: $_gin_color_danger_lightest;
+  font-weight: $font__weight--bold;
+  box-shadow: $_box_shadow_header;
+}
+
+.material-search__error-icon {
+  height: 25px;
+  width: 25px;
+}
+
+.material-search__error-content {
+  padding: $_gin_m_spacing;
+}
+.material-search__error-material-content {
+  margin-top: $_gin_m_spacing;
+}
+.material-search__error-item {
+  display: flex;
+  gap: $_gin_xs_spacing;
+  flex-direction: row;
+  align-items: center;
+}
+.material-search__error-term {
+  font-weight: $font__weight--bold;
+}
+.material-search__error-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
