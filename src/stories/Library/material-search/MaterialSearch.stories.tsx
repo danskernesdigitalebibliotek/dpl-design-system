@@ -5,12 +5,29 @@ import MaterialSearch from "./MaterialSearch";
 export default {
   title: "Library / Material Search",
   component: MaterialSearch,
-  argTypes: {},
+  argTypes: {
+    displayWorkError: {
+      defaultValue: false,
+      control: {
+        type: "boolean",
+      },
+    },
+    displayMaterialTypeError: {
+      defaultValue: false,
+      control: {
+        type: "boolean",
+      },
+    },
+  },
+  args: {
+    displayWorkError: false,
+    displayMaterialTypeError: false,
+  },
 } as ComponentMeta<typeof MaterialSearch>;
 
 const uniqueIdentifier = Math.floor(Math.random() * 10000);
 
-const Template: ComponentStory<typeof MaterialSearch> = () => {
+const Template: ComponentStory<typeof MaterialSearch> = (args) => {
   return (
     <div className="material-search">
       <div className="material-search__inputs-container">
@@ -43,9 +60,21 @@ const Template: ComponentStory<typeof MaterialSearch> = () => {
         </label>
       </div>
 
-      <MaterialSearch />
+      <MaterialSearch {...args} />
     </div>
   );
 };
 
 export const Default = Template.bind({});
+
+export const withWorkError = Template.bind({});
+withWorkError.args = {
+  displayWorkError: true,
+  displayMaterialTypeError: false,
+};
+
+export const withMaterialTypeError = Template.bind({});
+withMaterialTypeError.args = {
+  displayWorkError: false,
+  displayMaterialTypeError: true,
+};
