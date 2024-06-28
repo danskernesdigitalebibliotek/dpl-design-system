@@ -43,14 +43,17 @@ $color__signal-alert: #d22d43;
   );
 
   // Global colors
-  --c-global-primary: $color__global-primary;
-  --c-global-secondary: $color__global-secondary;
-  --c-global-tertiary-1: $color__global-tertiary-1;
-  --c-global-tertiary-2: $color__global-tertiary-2;
-  --c-text-primary-white: $color__text-primary-white;
-  --c-text-primary-black: $color__text-primary-black;
-  --c-text-secondary-gray: $color__text-secondary-gray;
-  --c-signal-success: $color__signal-success;
-  --c-signal-aware: $color__signal-aware;
-  --c-signal-alert: $color__signal-alert;
+  --c-global-primary: #{$color__global-primary};
+  --c-global-secondary: #{$color__global-secondary};
+  --c-global-tertiary-1: #{$color__global-tertiary-1};
+  --c-global-tertiary-2: #{$color__global-tertiary-2};
+  --c-text-primary-white: #{$color__text-primary-white};
+  --c-text-primary-black: #{$color__text-primary-black};
+  --c-text-secondary-gray: #{$color__text-secondary-gray};
+  --c-signal-success: #{$color__signal-success};
+  --c-signal-aware: #{$color__signal-aware};
+  --c-signal-alert: #{$color__signal-alert};
+
+  // Fonts
+  --font-body: #{$font__body};
 }
