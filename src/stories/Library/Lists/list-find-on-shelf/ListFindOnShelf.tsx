@@ -17,7 +17,9 @@ const ListFindOnShelf: React.FC<ListFindOnShelfProps> = ({
     <ul className="find-on-shelf">
       <li className="find-on-shelf__header-row text-small-caption">
         <span className="find-on-shelf__material-header">Materiale</span>
-        <span>Find det på hylden</span>
+        <span className="find-on-shelf__location-header">
+          Find det på hylden
+        </span>
         <span className="find-on-shelf__item-count-header">Hjemme</span>
       </li>
       {numberArray.map((key) => {
