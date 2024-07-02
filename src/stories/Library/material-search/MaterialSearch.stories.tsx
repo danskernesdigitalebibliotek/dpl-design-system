@@ -1,27 +1,20 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-
 import MaterialSearch from "./MaterialSearch";
+import ErrorState from "./Errors/ErrorState";
 
 export default {
   title: "Library / Material Search",
   component: MaterialSearch,
   argTypes: {
-    displayWorkError: {
-      defaultValue: false,
+    errorState: {
       control: {
-        type: "boolean",
-      },
-    },
-    displayMaterialTypeError: {
-      defaultValue: false,
-      control: {
-        type: "boolean",
+        type: "select",
+        options: ["NoError", "WorkError", "MaterialTypeError"],
       },
     },
   },
   args: {
-    displayWorkError: false,
-    displayMaterialTypeError: false,
+    errorState: "NoError",
   },
 } as ComponentMeta<typeof MaterialSearch>;
 
@@ -69,12 +62,10 @@ export const Default = Template.bind({});
 
 export const withWorkError = Template.bind({});
 withWorkError.args = {
-  displayWorkError: true,
-  displayMaterialTypeError: false,
+  errorState: ErrorState.WorkError,
 };
 
 export const withMaterialTypeError = Template.bind({});
 withMaterialTypeError.args = {
-  displayWorkError: false,
-  displayMaterialTypeError: true,
+  errorState: ErrorState.MaterialTypeError,
 };
