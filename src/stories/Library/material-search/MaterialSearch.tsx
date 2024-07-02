@@ -1,10 +1,15 @@
 import { FC, useState } from "react";
-import MaterialSearchInputs from "./MaterialSearchInputs";
-import MaterialSearchPreview from "./MaterialSearchPreview";
-import MaterialSearchList from "./MaterialSearchList";
 import { PreviewData } from "./MaterialSearchExampleData";
+import MaterialSearchInputs from "./MaterialSearchInputs";
+import MaterialSearchList from "./MaterialSearchList";
+import MaterialSearchPreview from "./MaterialSearchPreview";
+import ErrorState from "./Errors/ErrorState";
 
-const MaterialSearch: FC = () => {
+interface MaterialSearchProps {
+  errorState: ErrorState;
+}
+
+const MaterialSearch: FC<MaterialSearchProps> = ({ errorState }) => {
   const [searchInput, setSearchInput] = useState("");
   const [selectedMaterialType, setSelectedMaterialType] = useState("");
   const [selectedWorkId] = useState(PreviewData.workId);
@@ -22,7 +27,10 @@ const MaterialSearch: FC = () => {
         onMaterialTypeChange={setSelectedMaterialType}
       />
       <div className="material-search__materials-wrapper">
-        <MaterialSearchPreview displayMaterial={searchInput.length > 1} />
+        <MaterialSearchPreview
+          displayMaterial={searchInput.length > 1}
+          errorState={errorState}
+        />
         <MaterialSearchList
           showListResults={searchInput.length > 1}
           selectedWorkId={selectedWorkId}
