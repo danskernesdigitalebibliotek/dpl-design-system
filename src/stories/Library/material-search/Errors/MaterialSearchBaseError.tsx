@@ -12,7 +12,9 @@ const MaterialSearchBaseError: React.FC<MaterialSearchBaseErrorProps> = ({
     <div className="material-search__error">
       <div className="material-search__error-header">
         <WarningIcon className="material-search__error-icon" />
-        <h3>This material is outdated.</h3>
+        <h3 className="material-search__error-header-text">
+          This material is outdated.
+        </h3>
       </div>
       {children}
     </div>
