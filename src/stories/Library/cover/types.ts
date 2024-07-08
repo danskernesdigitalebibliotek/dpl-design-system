@@ -11,4 +11,5 @@ export type CoverProps = {
   alt?: string;
   shadow?: "small" | "medium";
   ariaLabel?: string;
+  isHiddenFromScreenReaders?: boolean;
 };
