@@ -5,3 +5,7 @@
   margin-bottom: $s-sm;
   padding-top: $s-xs;
 }
+
+.form-required::after {
+  content: "*";
+}
