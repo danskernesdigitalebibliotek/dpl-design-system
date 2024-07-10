@@ -16,6 +16,7 @@
   }
 }
 
+// Todo: Should be removed. Use @mixin u-extending-underline-style instead.
 %title-underline {
   position: relative;
   &::before {
@@ -34,6 +35,7 @@
   }
 }
 
+// Todo: Should be removed. Use @mixin u-extending-underline-style instead.
 %title-underline--narrow {
   @extend %title-underline;
 
