@@ -1,14 +1,19 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Cover from "../cover/Cover";
+import MaterialTypeNotFoundError from "./Errors/MaterialTypeNotFoundError";
+import WorkNotFoundError from "./Errors/WorkNotFoundError";
 import { PreviewData } from "./MaterialSearchExampleData";
-import MaterialSearchLoading from "./MaterialSearchLoading"; // Assuming this is the correct import
+import MaterialSearchLoading from "./MaterialSearchLoading";
+import ErrorState from "./Errors/ErrorState";
 
 interface MaterialSearchPreviewProps {
   displayMaterial: boolean;
+  errorState: ErrorState;
 }
 
 const MaterialSearchPreview = ({
   displayMaterial,
+  errorState,
 }: MaterialSearchPreviewProps) => {
   const [fictiveLoading, setFictiveLoading] = useState(false);
 
@@ -24,6 +29,13 @@ const MaterialSearchPreview = ({
 
     return () => {};
   }, [displayMaterial]);
+
+  if (errorState === ErrorState.WorkError) {
+    return <WorkNotFoundError />;
+  }
+  if (errorState === ErrorState.MaterialTypeError) {
+    return <MaterialTypeNotFoundError />;
+  }
 
   if (fictiveLoading) {
     return (
