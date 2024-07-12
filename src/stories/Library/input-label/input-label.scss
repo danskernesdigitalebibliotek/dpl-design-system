@@ -6,6 +6,6 @@
   padding-top: $s-xs;
 }
 
-.form-required::after {
-  content: "*";
+.input-label--required::after {
+  content: " *";
 }
