@@ -37,6 +37,7 @@ $_dropdown-icon-size: 50px;
   padding-right: $_dropdown-icon-size + $_padding;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-transform: none;
 
   @include typography($typo__button);
 
@@ -49,7 +50,6 @@ $_dropdown-icon-size: 50px;
 }
 
 .dropdown__option {
-  text-transform: capitalize;
   background-color: #f9f9f9;
   height: 400px;
 
@@ -85,6 +85,7 @@ $_dropdown-icon-size: 50px;
   height: 100%;
   padding: $s-sm $s-md;
   min-width: 200px;
+  text-transform: none;
 }
 
 .dropdown__select--inline-body-font {
