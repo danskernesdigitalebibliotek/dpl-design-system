@@ -24,7 +24,14 @@ const Slider: FC<SliderProps> = ({ title, items }) => {
 
       <div className="slider swiper">
         <div className="slider__header">
-          {title ? <h2 className="slider__title">{title}</h2> : ""}
+          {title && (
+            <h2
+              className="slider__title"
+              // We need to be able to replicate our WYSIWYG field in Drupal that makes it possible to underline (<u>) words.
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
+          )}
 
           <div className="slider__controls" data-glide-el="controls">
             <button
