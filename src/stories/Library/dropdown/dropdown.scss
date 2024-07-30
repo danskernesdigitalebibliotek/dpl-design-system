@@ -21,6 +21,8 @@ $_dropdown-icon-size: 50px;
 .dropdown__select {
   $_padding: 20px;
 
+  @include typography($typo__button);
+
   appearance: none;
   -webkit-appearance: none;
   min-width: 230px;
@@ -38,8 +40,6 @@ $_dropdown-icon-size: 50px;
   text-overflow: ellipsis;
   white-space: nowrap;
   text-transform: none;
-
-  @include typography($typo__button);
 
   // Chromeium based browsers will trigger focus when opening the dropdown
   @extend %default-focus-visible;
