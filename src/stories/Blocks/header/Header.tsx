@@ -20,14 +20,13 @@ export type HeaderProps = {
   openDropdown: boolean;
 };
 
-export const Header = (props: HeaderProps) => {
-  const {
-    signedIn,
-    haveNotification,
-    username,
-    inputPlaceholder,
-    openDropdown,
-  } = props;
+export const Header = ({
+  signedIn,
+  haveNotification,
+  username,
+  inputPlaceholder,
+  openDropdown,
+}: HeaderProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(openDropdown);
 
   useEffect(() => {
@@ -43,7 +42,7 @@ export const Header = (props: HeaderProps) => {
             hasImage
             libraryName="Hjørring"
             libraryPlace="Bibliotekerne"
-            altText="PromoTitle image of libary"
+            altText="PromoTitle image of library"
           />
         </div>
 
@@ -56,7 +55,7 @@ export const Header = (props: HeaderProps) => {
               <div className="header__menu-navigation-mobile">
                 <button
                   id="header-sidebar-nav__toggle"
-                  className="header__menu-navigation-button header__button"
+                  className="header__button header__button--right-border"
                   aria-controls="sidebarNav"
                   aria-expanded="false"
                 >
@@ -74,32 +73,48 @@ export const Header = (props: HeaderProps) => {
                     hasImage
                     libraryName="Lyngby-Taarbæk"
                     libraryPlace="Bibliotekerne"
-                    altText="PromoTitle image of libary"
+                    altText="PromoTitle image of library"
                   />
                 </div>
               </div>
               <MenuItemList menuItems={menuItems} />
             </div>
-            <div className="header__menu-profile header__button">
-              <a href="/" className="hide-linkstyle">
-                {signedIn && haveNotification && (
-                  <div className="header__notification bg-signal-alert" />
-                )}
-                <ProfileIcon aria-label="go to user profile" />
-                {signedIn && (
-                  <span className="text-small-caption">{username}</span>
-                )}
-                {!signedIn && <span className="text-small-caption">Login</span>}
+            <button className="header__button header__button--left-border btn-ui">
+              {signedIn && haveNotification && (
+                <div className="header__button-notification bg-signal-alert" />
+              )}
+              <ProfileIcon
+                className="header__button-icon"
+                aria-label="go to user profile"
+              />
+              <span className="header__button-text">
+                {signedIn ? username : "Login"}
+              </span>
+            </button>
+            <div className="header__button-responsive-switch">
+              <a
+                href="/"
+                className="header__button header__button--left-border"
+              >
+                <WatchStaticIcon
+                  className="header__button-icon"
+                  aria-label="go to opening hours"
+                />
+                <span className="header__button-text">Opening hours</span>
               </a>
-            </div>
-            <div className="header__menu-bookmarked header__button">
-              <a href="/">
-                <HeartIcon aria-label="go to favorites list" />
-                <span className="text-small-caption">Liked</span>
+              <a
+                href="/"
+                className="header__button header__button--left-border"
+              >
+                <HeartIcon
+                  className="header__button-icon"
+                  aria-label="go to favorites list"
+                />
+                <span className="header__button-text">Liked</span>
               </a>
             </div>
           </nav>
-          <div>
+          <div className="header__menu-second">
             <div className="header__menu-search">
               <form className="header__menu-search-form">
                 <input
