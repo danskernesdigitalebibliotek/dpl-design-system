@@ -8,6 +8,14 @@
   @include typography($typo__h2);
 }
 
+.content-list-page__subheading {
+  @extend %rich-text;
+
+  @include layout-container($block-max-width__large);
+  @include typography($typo__body-small);
+  margin-top: $s-lg;
+}
+
 .content-list-page__filters {
   @include layout-container($block-max-width__large);
 
