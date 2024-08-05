@@ -8,7 +8,8 @@ export const SearchResultInfo = ({
   linkTotalResults,
 }: SearchResultInfoProps) => {
   return (
-    <h2 className="text-body-medium-regular search-result-info">
+    // Todo: use content-list-page__heading
+    <h2 className="text-body-medium-regular">
       Vis i stedet resultater fra{" "}
       <a className="link-tag text-body-medium-medium" href="/">
         {linkName}

@@ -9,11 +9,14 @@
 }
 
 .content-list-page__subheading {
-  @extend %rich-text;
-
   @include layout-container($block-max-width__large);
   @include typography($typo__body-small);
+  color: $color__global-grey;
   margin-top: $s-lg;
+
+  a {
+    @include link-tag;
+  }
 }
 
 .content-list-page__filters {

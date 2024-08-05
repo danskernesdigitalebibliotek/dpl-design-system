@@ -13,6 +13,7 @@ const FavouritesList: React.FC<FavouritesListProps> = ({
   skeletonVersion = false,
   materialsCount,
 }) => {
+  // Todo: use content-list-page__heading and content-list-page__subheading
   const pageTitle = (
     <h1 className="text-header-h2 mb-16 search-result-title">Favourites</h1>
   );
