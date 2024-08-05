@@ -37,6 +37,10 @@ const ContentListPage: React.FC = () => {
   return (
     <div className="content-list-page">
       <h1 className="content-list-page__heading">Arrangementer</h1>
+      <h2 className="content-list-page__subheading">
+        Switch to results for the&nbsp;
+        <a href="/search?q=dans">library materials.</a>
+      </h2>
       <div className="content-list-page__filters">
         {filters.map((filter) => {
           return (
