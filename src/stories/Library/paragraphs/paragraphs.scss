@@ -8,13 +8,15 @@
 
 // Some paragraphs should go flush against each-other.
 .paragraphs__item--links,
+.paragraphs__item--simple_links,
 .paragraphs__item--files,
 .paragraphs__item--accordion {
   @include layout-container($block-max-width__medium);
 
   + .paragraphs__item--accordion,
   + .paragraphs__item--files,
-  + .paragraphs__item--links {
+  + .paragraphs__item--links,
+  + .paragraphs__item--simple_links {
     @include block-spacing("sibling");
   }
 }

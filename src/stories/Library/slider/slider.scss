@@ -6,10 +6,8 @@
 }
 
 .slider__title {
-  @extend %title-underline;
   @include typography($typo__h2);
-
-  display: flex;
+  @include u-extending-underline-style;
 }
 
 .slider__controls {
