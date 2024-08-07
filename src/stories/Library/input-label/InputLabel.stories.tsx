@@ -11,6 +11,9 @@ export default {
     text: {
       defaultValue: "Her er en label",
     },
+    required: {
+      defaultValue: false,
+    },
   },
   parameters: {
     layout: "padded",
@@ -22,3 +25,10 @@ const Template: ComponentStory<DropdownProps> = (args) => (
 );
 
 export const InputLabel = Template.bind({});
+
+export const RequiredInputLabel = Template.bind({});
+
+RequiredInputLabel.args = {
+  text: "Her er en required label",
+  required: true,
+};

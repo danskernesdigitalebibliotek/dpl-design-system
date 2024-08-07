@@ -5,3 +5,7 @@
   margin-bottom: $s-sm;
   padding-top: $s-xs;
 }
+
+.input-label--required::after {
+  content: " *";
+}
