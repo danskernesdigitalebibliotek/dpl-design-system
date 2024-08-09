@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Logo from "../../Library/logo/Logo";
 import MenuItemList from "../../Library/header-menu-list/HeaderMenuList";
 import { menuItems } from "../../Library/header-menu-list/HeaderMenuListData";
-import { ReactComponent as SearchIcon } from "../../../public/icons/basic/icon-search.svg";
 import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 import { ReactComponent as MenuIcon } from "../../../public/icons/basic/icon-menu.svg";
 import { ReactComponent as ProfileIcon } from "../../../public/icons/basic/icon-profile.svg";
