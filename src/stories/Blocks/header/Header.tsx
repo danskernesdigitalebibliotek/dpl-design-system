@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Logo from "../../Library/logo/Logo";
 import MenuItemList from "../../Library/header-menu-list/HeaderMenuList";
 import { menuItems } from "../../Library/header-menu-list/HeaderMenuListData";
-import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 import { ReactComponent as MenuIcon } from "../../../public/icons/basic/icon-menu.svg";
 import { ReactComponent as ProfileIcon } from "../../../public/icons/basic/icon-profile.svg";
 import { ReactComponent as HeartIcon } from "../../../public/icons/basic/icon-heart.svg";
@@ -122,7 +121,7 @@ export const Header = (props: HeaderProps) => {
                 aria-expanded={isDropdownOpen}
                 aria-controls="search-header-dropdown"
               >
-                <ExpandMoreIcon />
+                <img src="icons/collection/ExpandMore.svg" alt="" />
               </button>
               {isDropdownOpen && (
                 <div className="header__menu-dropdown">
