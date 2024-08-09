@@ -114,6 +114,7 @@ export const Header = (props: HeaderProps) => {
                   "header__menu-dropdown-icon--expanded": isDropdownOpen,
                 })}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                aria-label="dropdown with advanced search"
               />
               {isDropdownOpen && (
                 <div className="header__menu-dropdown">
