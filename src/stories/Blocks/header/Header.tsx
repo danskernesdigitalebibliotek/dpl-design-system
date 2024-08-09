@@ -101,21 +101,30 @@ export const Header = (props: HeaderProps) => {
           </nav>
           <div>
             <div className="header__menu-search">
-              <form className="header__menu-search-form">
-                <input
-                  className="header__menu-search-input text-body-medium-regular"
-                  type="text"
-                  placeholder={inputPlaceholder}
-                />
-                <SearchIcon className="header__menu-search-icon" />
-              </form>
-              <ExpandMoreIcon
+              <input
+                className="header__menu-search-input text-body-medium-regular"
+                type="text"
+                placeholder={inputPlaceholder}
+              />
+              <input
+                type="image"
+                src="icons/basic/icon-search.svg"
+                alt="search-button"
+                className="header__menu-search-icon"
+              />
+              <button
+                type="button"
                 className={clsx("header__menu-dropdown-icon", {
                   "header__menu-dropdown-icon--expanded": isDropdownOpen,
                 })}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                tabIndex={0}
                 aria-label="dropdown with advanced search"
-              />
+                aria-expanded={isDropdownOpen}
+                aria-controls="search-header-dropdown"
+              >
+                <ExpandMoreIcon />
+              </button>
               {isDropdownOpen && (
                 <div className="header__menu-dropdown">
                   <ul>
