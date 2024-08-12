@@ -3,8 +3,6 @@ import clsx from "clsx";
 import Logo from "../../Library/logo/Logo";
 import MenuItemList from "../../Library/header-menu-list/HeaderMenuList";
 import { menuItems } from "../../Library/header-menu-list/HeaderMenuListData";
-import { ReactComponent as SearchIcon } from "../../../public/icons/basic/icon-search.svg";
-import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 import { ReactComponent as MenuIcon } from "../../../public/icons/basic/icon-menu.svg";
 import { ReactComponent as ProfileIcon } from "../../../public/icons/basic/icon-profile.svg";
 import { ReactComponent as HeartIcon } from "../../../public/icons/basic/icon-heart.svg";
@@ -101,20 +99,30 @@ export const Header = (props: HeaderProps) => {
           </nav>
           <div>
             <div className="header__menu-search">
-              <form className="header__menu-search-form">
-                <input
-                  className="header__menu-search-input text-body-medium-regular"
-                  type="text"
-                  placeholder={inputPlaceholder}
-                />
-                <SearchIcon className="header__menu-search-icon" />
-              </form>
-              <ExpandMoreIcon
+              <input
+                className="header__menu-search-input text-body-medium-regular"
+                type="text"
+                placeholder={inputPlaceholder}
+              />
+              <input
+                type="image"
+                src="icons/basic/icon-search.svg"
+                alt="search-button"
+                className="header__menu-search-icon"
+              />
+              <button
+                type="button"
                 className={clsx("header__menu-dropdown-icon", {
                   "header__menu-dropdown-icon--expanded": isDropdownOpen,
                 })}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              />
+                tabIndex={0}
+                aria-label="dropdown with advanced search"
+                aria-expanded={isDropdownOpen}
+                aria-controls="search-header-dropdown"
+              >
+                <img src="icons/collection/ExpandMore.svg" alt="" />
+              </button>
               {isDropdownOpen && (
                 <div className="header__menu-dropdown">
                   <ul>
