@@ -134,6 +134,13 @@
   }
 }
 
+.header__menu-search-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .header__menu-search-icon {
   position: absolute;
   right: $s-3xl;
