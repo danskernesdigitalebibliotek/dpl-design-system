@@ -1,5 +1,6 @@
 .card-list-page__skeleton-facet-line {
   &--mobile {
+    @include layout-container($block-max-width__large);
     display: block;
     @include media-query__small {
       display: none;
@@ -7,6 +8,7 @@
   }
 
   &--desktop {
+    @include layout-container($block-max-width__large);
     display: none;
     @include media-query__small {
       display: block;

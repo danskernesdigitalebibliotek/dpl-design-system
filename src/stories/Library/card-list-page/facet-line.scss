@@ -1,13 +1,12 @@
+//  Todo should be merged with .content-list-page__filters
 .facet-line {
-  width: 100vw;
+  @include layout-container($block-max-width__large);
   max-height: $s-xl;
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  margin-left: -16px;
-  padding-left: 16px;
   // Hide scrollbar
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -17,9 +16,6 @@
   }
 
   @include media-query__small() {
-    width: 100%;
-    margin-left: 0px;
-    padding-left: 0px;
     overflow-y: visible;
     max-height: none;
     flex-wrap: wrap;
@@ -46,6 +42,8 @@
   margin-bottom: $s-sm;
 }
 
+//  Todo should be merged with .content-list-page__filters
 .facet-line-selected-terms {
+  @include layout-container($block-max-width__large);
   margin-top: $s-md;
 }

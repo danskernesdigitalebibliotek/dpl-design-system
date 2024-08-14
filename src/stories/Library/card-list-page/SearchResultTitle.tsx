@@ -13,8 +13,7 @@ export const SearchResultTitle = ({
   zeroResult,
   isLoading = false,
 }: SearchResultTitleProps) => {
-  // Todo: use content-list-page__heading
-  const classes = clsx(["text-header-h2", "mb-16", "search-result-title"], {
+  const classes = clsx("content-list-page__heading", {
     "text-loading": isLoading,
   });
   const total = totalResults.toLocaleString("da-Dk");
