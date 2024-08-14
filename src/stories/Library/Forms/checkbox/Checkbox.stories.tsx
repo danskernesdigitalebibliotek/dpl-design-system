@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
 import { Checkbox } from "./Checkbox";
+import { CheckboxDrupal } from "./CheckboxDrupal";
 
 export default {
   title: "Library / Forms / Checkbox",
@@ -26,6 +27,17 @@ export default {
       control: {
         type: "text",
         defaultValue: "",
+      },
+    },
+    includeHeadline: {
+      control: {
+        type: "null",
+      },
+    },
+    description: {
+      control: {
+        type: "text",
+        defaultValue: "| This is a description.",
       },
     },
     // We disable the isChecked control, since it is not possible to
@@ -89,4 +101,22 @@ export const Multiple = Several.bind({});
 Multiple.args = {
   isChecked: false,
   label: "Checkbox",
+};
+
+// The stories below mimic HTML structure from Drupal for checkbox usage.
+const DrupalCheckboxExample: ComponentStory<typeof CheckboxDrupal> = (args) => (
+  <CheckboxDrupal {...args} />
+);
+
+export const DrupalCheckbox = DrupalCheckboxExample.bind({});
+DrupalCheckbox.args = {
+  label: "Toggle this checkbox",
+  description: "| This is a description.",
+};
+
+export const DrupalMultiple = DrupalCheckboxExample.bind({});
+DrupalMultiple.args = {
+  label: "Toggle this checkbox",
+  includeHeadline: true,
+  description: "| This is a description.",
 };
