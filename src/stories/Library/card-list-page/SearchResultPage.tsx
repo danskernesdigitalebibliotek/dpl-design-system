@@ -17,7 +17,11 @@ export type SearchResultPageProps = {
 };
 
 const SearchResultList = data.searchResult.map((item, i) => {
-  return <CardListItem {...item} tintIndex={i} />;
+  return (
+    <li className="content-list__item" key={i}>
+      <CardListItem {...item} tintIndex={i} />
+    </li>
+  );
 });
 
 export const SearchResultPage = ({
@@ -29,7 +33,7 @@ export const SearchResultPage = ({
   zeroResult,
 }: SearchResultPageProps) => {
   return (
-    <div className="card-list-page">
+    <div className="content-list-page">
       <SearchResultTitle
         title={title}
         totalResults={zeroResult ? 0 : totalResults}
@@ -48,7 +52,7 @@ export const SearchResultPage = ({
           />
           <FacetLine items={data.facetLineItems} />
           <FacetLineSelected items={data.selectedTerms} />
-          <div className="card-list-page__list my-32">{SearchResultList}</div>
+          <ul className="content-list">{SearchResultList}</ul>
           <ResultPager
             currentResults={currentResults}
             totalResults={totalResults}

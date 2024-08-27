@@ -8,7 +8,7 @@ export const SearchResultInfo = ({
   linkTotalResults,
 }: SearchResultInfoProps) => {
   return (
-    <h2 className="text-body-medium-regular search-result-info">
+    <h2 className="content-list-page__subheading">
       Vis i stedet resultater fra{" "}
       <a className="link-tag text-body-medium-medium" href="/">
         {linkName}
