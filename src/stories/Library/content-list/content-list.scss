@@ -1,5 +1,7 @@
 .content-list {
   @include layout-container($block-max-width__large);
+  margin-top: $s-xl;
+  margin-bottom: $s-xl;
 }
 
 .content-list__item {
