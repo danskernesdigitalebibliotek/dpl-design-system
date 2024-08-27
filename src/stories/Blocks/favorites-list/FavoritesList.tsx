@@ -13,18 +13,16 @@ const FavouritesList: React.FC<FavouritesListProps> = ({
   skeletonVersion = false,
   materialsCount,
 }) => {
-  const pageTitle = (
-    <h1 className="text-header-h2 mb-16 search-result-title">Favourites</h1>
-  );
-
   const materialsCountLine = materialsCount > 0 && (
-    <p className="text-small-caption my-32">{materialsCount} materials</p>
+    <h2 className="content-list-page__subheading">
+      {materialsCount} materials
+    </h2>
   );
 
   const SkeletonList = () => (
-    <ul className="card-list-page__list my-32">
-      {[...Array(5)].slice(0, materialsCount).map(() => (
-        <li>
+    <ul className="content-list">
+      {[...Array(5)].slice(0, materialsCount).map((_, i) => (
+        <li className="content-list__item" key={i}>
           <CardListItemSkeleton />
         </li>
       ))}
@@ -32,9 +30,9 @@ const FavouritesList: React.FC<FavouritesListProps> = ({
   );
 
   const FavouritesListContent = () => (
-    <ul className="card-list-page__list my-32">
+    <ul className="content-list">
       {data.searchResult.slice(0, materialsCount).map((item, i) => (
-        <li>
+        <li className="content-list__item" key={i}>
           <CardListItem {...item} heartFill tintIndex={i} />
         </li>
       ))}
@@ -55,8 +53,8 @@ const FavouritesList: React.FC<FavouritesListProps> = ({
   }
 
   return (
-    <div className="card-list-page">
-      {pageTitle}
+    <div className="content-list-page">
+      <h1 className="content-list-page__heading">Favourites</h1>
       {materialsCountLine}
       {content}
       {!skeletonVersion && (

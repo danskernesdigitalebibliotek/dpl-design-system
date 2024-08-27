@@ -14,7 +14,7 @@ export const SearchResultPageSkeleton = ({
   title,
 }: SearchResultPageSkeletonProps) => {
   return (
-    <div className="card-list-page">
+    <div className="content-list-page">
       <SearchResultTitle
         title={title}
         totalResults={0}
@@ -33,22 +33,12 @@ export const SearchResultPageSkeleton = ({
           <div className="ssc-head-line mb" />
         </div>
       </div>
-      <ul className="card-list-page__list my-32">
-        <li>
-          <CardListItemSkeleton />
-        </li>
-        <li>
-          <CardListItemSkeleton />
-        </li>
-        <li>
-          <CardListItemSkeleton />
-        </li>
-        <li>
-          <CardListItemSkeleton />
-        </li>
-        <li>
-          <CardListItemSkeleton />
-        </li>
+      <ul className="content-list">
+        {[...Array(5)].map((_, index) => (
+          <li className="content-list__item" key={index}>
+            <CardListItemSkeleton />
+          </li>
+        ))}
       </ul>
     </div>
   );
