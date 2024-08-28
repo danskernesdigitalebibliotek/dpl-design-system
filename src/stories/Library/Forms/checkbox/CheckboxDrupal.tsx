@@ -31,6 +31,7 @@ export const CheckboxDrupal: React.FC<CheckboxDrupalProps> = ({
           aria-describedby="edit-title-example--description"
           type="checkbox"
           value="1"
+          aria-label={checkboxLabel}
         />
         <label
           id="edit-title-example--description"
