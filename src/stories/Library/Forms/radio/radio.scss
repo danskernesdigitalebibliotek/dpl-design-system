@@ -8,28 +8,21 @@
   }
 
   &__wrapper__col {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 
     &__item {
       display: flex;
       align-items: center;
-      margin-bottom: 2px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+      padding: 6px $s-sm 6px 0;
 
       label {
         @include typography($typo__small-caption);
         cursor: pointer;
-        padding-left: 8px;
-        line-height: 18px;
+        padding-left: $s-sm;
         color: $color__text-secondary-gray;
-        padding: 0 $s-sm 0 $s-sm;
         width: fit-content;
         max-width: 300px;
-        margin: 0;
-        height: auto;
+        padding-top: 3px;
       }
 
       input[type="radio"] {
