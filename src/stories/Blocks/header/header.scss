@@ -214,6 +214,7 @@
 }
 
 .header__clock {
+  height: 100%;
   border-left: 1px solid $color__global-tertiary-1;
   display: none;
 
@@ -224,9 +225,12 @@
 
 .header__clock-items {
   text-decoration: none;
+  border: none;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 // has-burger-menu is added dynamically using JS, by calculating if there
