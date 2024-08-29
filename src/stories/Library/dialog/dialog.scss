@@ -13,3 +13,58 @@
   background-color: transparent;
   padding: 10px;
 }
+
+.dialog--sidebar {
+  // Reset dialog
+  max-height: unset;
+  max-width: unset;
+  border: 0;
+  border-radius: 0;
+  // Apply custom
+  background-color: $color__global-primary;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  left: auto;
+
+  @include media-query__small {
+    width: 435px;
+  }
+  // Apply animation
+  // The 'allow-discrete' property is necessary for animating the dialog
+  transition-behavior: allow-discrete;
+  transition-property: translate overlay display;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-out;
+  translate: 100vw 0;
+}
+
+.dialog--sidebar[open] {
+  translate: 0 0;
+}
+
+@starting-style {
+  .dialog--sidebar[open] {
+    translate: 100vw 0;
+  }
+}
+
+.dialog--sidebar[open]::backdrop {
+  animation: backdrop-fade-in 0.25s forwards;
+}
+
+@keyframes backdrop-fade-in {
+  from {
+    background-color: rgb(0 0 0 / 0%);
+  }
+  to {
+    background-color: rgb(0 0 0 / 25%);
+  }
+}
+
+// This sets the correct sidebar width for accurate visual regression testing.
+.storybook-dialog-sidebar {
+  @include media-query__small {
+    width: 435px;
+  }
+}

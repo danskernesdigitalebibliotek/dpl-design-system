@@ -1,0 +1,70 @@
+@mixin opening-hours-sidebar-padding {
+  padding: $s-lg $s-md;
+
+  @include media-query__small {
+    padding: $s-lg $s-xl;
+  }
+}
+
+.opening-hours-sidebar__header {
+  @include opening-hours-sidebar-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.opening-hours-sidebar__texts {
+  align-items: end;
+  text-align: end;
+}
+
+.opening-hours-sidebar__title {
+  @include typography($typo__h4);
+}
+
+.opening-hours-sidebar-details {
+  @include opening-hours-sidebar-padding;
+  border-top: 1px solid $color__global-tertiary-1;
+}
+
+.opening-hours-sidebar-summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.opening-hours-sidebar-summary__icon {
+  transition: transform 0.3s;
+}
+
+.opening-hours-sidebar-summary[aria-expanded="true"]
+  .opening-hours-sidebar-summary__icon {
+  transform: rotateZ(180deg);
+}
+
+.opening-hours-sidebar-summary__name {
+  @include typography($typo__body-placeholder);
+  font-weight: $font__weight--semi-bold;
+}
+
+.opening-hours-sidebar-details__content {
+  @include typography($typo__body-placeholder);
+  margin-top: $s-lg;
+  color: $color__global-grey;
+}
+
+.opening-hours-sidebar-details__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.opening-hours-sidebar__link {
+  @include link-tag;
+  display: block;
+  margin-top: $s-lg;
+
+  @include media-query__small {
+    font-size: 14px;
+  }
+}
