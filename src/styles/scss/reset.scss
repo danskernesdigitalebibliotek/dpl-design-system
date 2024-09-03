@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+// Controls word hyphenation when text wraps.
+* {
+  hyphens: auto;
+}
+
 /* Remove default padding and list styles */
 ul,
 ol {

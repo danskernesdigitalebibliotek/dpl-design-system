@@ -10,6 +10,10 @@ export default {
       control: "text",
       description: "Title of the recommendation",
     },
+    description: {
+      control: "text",
+      description: "This is a description of the materials selected",
+    },
     selectedAmountOfMaterialsForDisplay: {
       control: {
         type: "select",
@@ -28,6 +32,8 @@ export default {
   },
   args: {
     title: "Recommended materials",
+    description:
+      "This is a long description of the materials selected, or whatever else you want to put in here",
     selectedAmountOfMaterialsForDisplay: 4,
     materials: MaterialGridData,
     buttonText: "Show more",
@@ -47,6 +53,20 @@ const Template: ComponentStory<typeof MaterialGrid> = (args) => (
 export const Default = Template.bind({});
 
 export const GridWithMoreMaterials = Template.bind({});
+
 GridWithMoreMaterials.args = {
   selectedAmountOfMaterialsForDisplay: 8,
+};
+
+export const GridWithNoDescription = Template.bind({});
+
+GridWithNoDescription.args = {
+  description: "",
+};
+
+export const GridWithNoTitleOrDescription = Template.bind({});
+
+GridWithNoTitleOrDescription.args = {
+  title: "",
+  description: "",
 };

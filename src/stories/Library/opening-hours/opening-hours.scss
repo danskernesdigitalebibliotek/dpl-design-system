@@ -77,6 +77,7 @@ $_opening-hours-max-width: 600px;
 }
 
 .opening-hours__week-display {
+  @include typography($typo__tags);
   border: $_nav-control-border-width solid $color__global-tertiary-1;
   height: $_nav-control-height;
   display: flex;

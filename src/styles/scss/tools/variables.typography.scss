@@ -359,3 +359,17 @@ $typo__card-placeholder--grid: (
       line-height: 24px,
     ),
 );
+
+$typo_quotes: (
+  mobile: (
+    color: $color__global-grey,
+    font-family: $font__body,
+    font-weight: 600,
+    font-size: 16px,
+    line-height: 24px,
+  ),
+  medium: (
+    font-size: 18px,
+    line-height: 32px,
+  ),
+);

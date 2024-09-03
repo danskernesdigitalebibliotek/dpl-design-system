@@ -7,6 +7,7 @@
   align-items: center;
   flex-direction: row;
   border: 1px solid $color__global-tertiary-1;
+  color: $color__global-grey;
 
   &__selected {
     @include typography($typo__button);
@@ -16,6 +17,7 @@
     text-overflow: ellipsis;
     padding: 0 $s-md;
     cursor: pointer;
+    text-transform: none;
   }
 
   &__opener {

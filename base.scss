@@ -69,15 +69,12 @@
 @import "./src/stories/Library/material-description/material-description";
 @import "./src/stories/Library/disclosure/disclosure";
 @import "./src/stories/Library/horizontal-term-line/horizontal-term-line";
-@import "./src/stories/Library/card-list-page/search-result-info";
-@import "./src/stories/Library/card-list-page/card-list-page";
 @import "./src/stories/Library/card-list-page/card-list-page-skeleton";
 @import "./src/stories/Library/loan-list-page/loan-list-page";
 @import "./src/stories/Library/dashboard-page/dashboard-page";
 @import "./src/stories/Library/patron-page/patron-page";
 @import "./src/stories/Library/reservation-list-page/reservation-list-page";
 @import "./src/stories/Library/card-list-page/result-pager";
-@import "./src/stories/Library/card-list-page/search-result-title";
 @import "./src/stories/Library/card-list-page/search-result-zero";
 @import "./src/stories/Library/card-list-page/facet-line";
 @import "./src/stories/Library/review/review";
@@ -111,6 +108,7 @@
 @import "./src/stories/Library/card/card";
 @import "./src/stories/Library/paragraphs/paragraphs";
 @import "./src/stories/Library/video-embed/video-embed";
+@import "./src/stories/Library/video-embed/cookie-placeholder";
 @import "./src/stories/Library/card-grid/card-grid";
 @import "./src/stories/Library/promo-title/promo-title";
 @import "./src/stories/Library/Modals/group-modal-item-skeleton";
@@ -142,6 +140,9 @@
 @import "./src/stories/Library/opening-hours/opening-hours-skeleton";
 @import "./src/stories/Library/filtered-event-list/filtered-event-list";
 @import "./src/stories/Library/event-list-stacked/event-list-stacked";
+@import "./src/stories/Library/material-search/material-search";
+@import "./src/stories/Library/banner/banner";
+@import "./src/stories/Library/simple-link/simple-link";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";

@@ -21,6 +21,8 @@ $_dropdown-icon-size: 50px;
 .dropdown__select {
   $_padding: 20px;
 
+  @include typography($typo__button);
+
   appearance: none;
   -webkit-appearance: none;
   min-width: 230px;
@@ -37,8 +39,7 @@ $_dropdown-icon-size: 50px;
   padding-right: $_dropdown-icon-size + $_padding;
   text-overflow: ellipsis;
   white-space: nowrap;
-
-  @include typography($typo__button);
+  text-transform: none;
 
   // Chromeium based browsers will trigger focus when opening the dropdown
   @extend %default-focus-visible;
@@ -49,7 +50,6 @@ $_dropdown-icon-size: 50px;
 }
 
 .dropdown__option {
-  text-transform: capitalize;
   background-color: #f9f9f9;
   height: 400px;
 
@@ -85,6 +85,7 @@ $_dropdown-icon-size: 50px;
   height: 100%;
   padding: $s-sm $s-md;
   min-width: 200px;
+  text-transform: none;
 }
 
 .dropdown__select--inline-body-font {

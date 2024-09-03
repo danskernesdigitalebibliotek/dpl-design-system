@@ -119,16 +119,20 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
         />
       </footer>
       <div className="advanced-search__divider" />
-      <section>
-        <h2 className="text-header-h2 advanced-search__title capitalize-first">
-          Viser materialer (20)
-        </h2>
-        <button className="link-tag mb-16">Link til søgninget</button>
-        <div className="card-list-page__list my-32">
-          {data.searchResult.map((item, i) => {
-            return <CardListItem {...item} tintIndex={i} />;
-          })}
+      <section className="content-list-page">
+        <h2 className="content-list-page__heading">Viser materialer (20)</h2>
+        <div className="content-list-page__subheading">
+          <button className="link-tag">Link til søgninget</button>
         </div>
+        <ul className="content-list">
+          {data.searchResult.map((item, i) => {
+            return (
+              <li className="content-list__item">
+                <CardListItem {...item} tintIndex={i} key={i} />
+              </li>
+            );
+          })}
+        </ul>
         <ResultPager currentResults={10} totalResults={20} />
       </section>
     </div>

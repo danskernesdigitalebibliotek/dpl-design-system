@@ -17,7 +17,7 @@ export default {
   },
   argTypes: {
     title: {
-      defaultValue: "Inspiration",
+      defaultValue: "Get <u>new</u> Inspiration",
       type: "string",
     },
     items: {

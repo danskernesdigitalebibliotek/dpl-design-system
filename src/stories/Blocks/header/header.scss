@@ -1,6 +1,5 @@
 .header {
   border: 1px solid $color__global-tertiary-1;
-  width: 100%;
   display: grid;
   grid-template-columns: 250px 1fr 105px;
   background-color: $color__global-primary;
@@ -49,12 +48,6 @@
   }
 }
 
-.header__menu-navigation-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid $color__global-tertiary-1;
-}
 .header__menu-navigation-pagefold {
   height: 100%;
   width: 100%;
@@ -63,44 +56,74 @@
   align-items: center;
 }
 
-.header__menu-profile,
-.header__menu-bookmarked {
+.header__button {
+  cursor: pointer;
   position: relative;
-  border-left: 1px solid $color__global-tertiary-1;
+  height: 56px;
+  width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color__text-primary-black;
 
-  a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  @include media-query__small {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+.header__button-notification {
+  position: absolute;
+  width: $s-sm;
+  height: $s-sm;
+  border-radius: 100%;
+  transform: translateX(10px) translateY(-12px);
+}
+
+.header__button--left-border {
+  border-left: 1px solid $color__global-tertiary-1;
+}
+
+.header__button--right-border {
+  border-right: 1px solid $color__global-tertiary-1;
+}
+
+.header__button-responsive-switch {
+  > *:first-child {
+    @include media-query__small {
+      display: none;
+    }
   }
 
-  span {
-    position: absolute;
-    bottom: 0;
+  > *:last-child {
+    display: none;
+
+    @include media-query__small {
+      display: flex;
+    }
+  }
+}
+
+.header__button-text {
+  display: none;
+
+  @include media-query__small {
+    display: block;
+    @include typography($typo__small-caption);
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     width: 100%;
     padding: 0 $s-xs;
     text-align: center;
-  }
-
-  @include media-query__small {
-    span {
-      bottom: $s-xs;
-    }
-  }
-
-  .header__notification {
     position: absolute;
-    width: $s-sm;
-    height: $s-sm;
-    border-radius: 100%;
-    transform: translateX(10px) translateY(-12px);
+    bottom: $s-xs;
   }
+}
+
+.header__button-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .header__menu-second {
@@ -206,20 +229,6 @@
   align-items: center;
 }
 
-.header__button {
-  height: 56px;
-  width: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $color__text-primary-black;
-
-  @include media-query__small {
-    height: 70px;
-    width: 70px;
-  }
-}
-
 // has-burger-menu is added dynamically using JS, by calculating if there
 // is enough space to show the desktop menu, and otherwise enabling the
 // burger menu. @see header-state.js
@@ -247,8 +256,4 @@
   .header__menu-navigation-mobile {
     display: flex;
   }
-}
-
-#header-sidebar-nav__toggle {
-  cursor: pointer;
 }

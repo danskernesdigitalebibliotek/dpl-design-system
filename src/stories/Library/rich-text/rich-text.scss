@@ -68,12 +68,19 @@ $_max-width-rich-text: $block-max-width__small;
   }
 
   blockquote {
-    $_quote-indicator-width: 10px;
+    $_quote-indicator-width: 3px;
+    $_padding-left: $_quote-indicator-width + $s-lg;
+    $_position-left--large-screen: $s-md;
 
+    @include typography($typo_quotes);
     position: relative;
-    padding-top: $s-md;
-    padding-bottom: $s-md;
-    padding-left: $_quote-indicator-width + $s-md;
+    padding-top: $s-sm;
+    padding-bottom: $s-sm;
+    padding-left: $_padding-left;
+
+    @include media-query__small {
+      padding-left: $_padding-left + $_position-left--large-screen;
+    }
 
     &::before {
       position: absolute;
@@ -83,6 +90,15 @@ $_max-width-rich-text: $block-max-width__small;
       bottom: 0;
       width: $_quote-indicator-width;
       background-color: $color__identity-primary;
+
+      @include media-query__small {
+        left: $_position-left--large-screen;
+      }
+    }
+
+    // Make space between elements in a blockquote.
+    & > *:not(:last-child) {
+      margin-bottom: $s-lg;
     }
   }
 

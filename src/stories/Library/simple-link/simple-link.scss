@@ -1,0 +1,17 @@
+$_simple_link_min_height: 80px;
+.simple-link {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr min-content;
+  gap: $s-xl;
+  min-height: $_simple_link_min_height;
+  border: 1px solid $color__global-tertiary-1;
+  padding: $s-lg $s-xl;
+  text-decoration: none;
+  @include typography($typo__body-large);
+  color: $color__global-grey;
+
+  > svg {
+    margin-right: 40px;
+  }
+}
