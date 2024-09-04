@@ -1,38 +1,32 @@
-.dpl-radio-fieldset {
-  @include typography($typo__small-caption);
+.dpl-form {
+  .dpl-input.radio-override {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px $s-sm 6px 0;
+    margin-bottom: 0;
 
-  legend {
-    padding-inline-start: 0;
-    padding-inline-end: 0;
-    margin-bottom: 6px;
-  }
+    input[type="radio"] {
+      accent-color: black;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      margin: 3px 3px 3px 0;
+    }
 
-  &__wrapper__col {
-    margin-bottom: 10px;
+    label,
+    .description {
+      @include typography($typo__small-caption);
+      color: $color__text-secondary-gray;
+      padding: 0 $s-sm 0 $s-sm;
+      width: fit-content;
+      max-width: 300px;
+      margin: 0;
+      height: auto;
+    }
 
-    &__item {
-      display: flex;
-      align-items: center;
-      padding: 6px $s-sm 6px 0;
-
-      label {
-        @include typography($typo__small-caption);
-        cursor: pointer;
-        padding-left: $s-sm;
-        color: $color__text-secondary-gray;
-        width: fit-content;
-        max-width: 300px;
-        padding-top: 3px;
-      }
-
-      input[type="radio"] {
-        cursor: pointer;
-        margin: 0;
-        line-height: 18px;
-        width: 16px;
-        height: 16px;
-        accent-color: #232323;
-      }
+    label {
+      cursor: pointer;
     }
   }
 }

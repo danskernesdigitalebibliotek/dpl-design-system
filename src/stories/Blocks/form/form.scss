@@ -61,6 +61,8 @@
 }
 
 .dpl-fieldset {
+  @include typography($typo__small-caption);
+
   border: 0;
   padding-block-start: 0;
   padding-block-end: 0;
@@ -68,4 +70,24 @@
   padding-inline-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+  margin-bottom: $s-lg;
+
+  legend {
+    @include typography($typo__body-medium);
+    color: $color__text-secondary-gray;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    margin-bottom: 6px;
+    max-width: 550px;
+
+    &--full-width {
+      max-width: 750px;
+    }
+
+    &:has(p) {
+      @include typography($typo__links);
+      color: $color__global-tertiary-2;
+      max-width: 550px;
+    }
+  }
 }

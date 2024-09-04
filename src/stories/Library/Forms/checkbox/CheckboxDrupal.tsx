@@ -61,9 +61,7 @@ export const CheckboxDrupal: React.FC<CheckboxDrupalProps> = ({
         className="checkboxes--wrapper fieldgroup form-composite webform-composite-visible-title js-webform-type-checkboxes webform-type-checkboxes js-form-item form-item js-form-wrapper form-wrapper dpl-fieldset"
       >
         <legend>
-          <span className="fieldset-legend dpl-input">
-            Multiple checkboxes title
-          </span>
+          <span className="fieldset-legend">Multiple checkboxes title</span>
         </legend>
         <div className="fieldset-wrapper">
           <div
