@@ -87,8 +87,10 @@ export const CheckboxDrupal: React.FC<CheckboxDrupalProps> = ({
     );
   };
 
-  if (includeHeadline) {
-    return checkboxElementMultiple(label || "");
-  }
-  return checkboxElement(label || "label");
+  return (
+    <div className="dpl-form">
+      {includeHeadline && checkboxElementMultiple(label || "")}
+      {!includeHeadline && checkboxElement(label || "label")}
+    </div>
+  );
 };
