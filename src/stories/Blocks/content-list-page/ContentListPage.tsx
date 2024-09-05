@@ -37,20 +37,24 @@ const ContentListPage: React.FC = () => {
   return (
     <div className="content-list-page">
       <h1 className="content-list-page__heading">Arrangementer</h1>
-      <div className="content-list-page__filters">
+      <h2 className="content-list-page__subheading">
+        Switch to results for the&nbsp;
+        <a href="/search?q=dans">library materials.</a>
+      </h2>
+      <ul className="content-list-page__filters">
         {filters.map((filter) => {
           return (
-            <div className="content-list-page__filter">
+            <li className="content-list-page__filter">
               <InputLabel text={filter.label} />
               <Dropdown
                 list={filter.options}
                 ariaLabel="Kategorier"
                 arrowIcon="chevron"
               />
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ul>
       <ContentList items={contentListData} />
     </div>
   );
