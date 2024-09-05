@@ -32,5 +32,5 @@ const Template: ComponentStory<typeof RadioDrupal> = (args) => (
 export const drupalRadio = Template.bind({});
 drupalRadio.args = {
   legend: "Try this radio",
-  description: "| This is a description.",
+  description: "This is a description.",
 };

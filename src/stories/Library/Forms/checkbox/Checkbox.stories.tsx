@@ -37,7 +37,7 @@ export default {
     description: {
       control: {
         type: "text",
-        defaultValue: "| This is a description.",
+        defaultValue: "This is a description.",
       },
     },
     // We disable the isChecked control, since it is not possible to
@@ -111,12 +111,12 @@ const DrupalCheckboxExample: ComponentStory<typeof CheckboxDrupal> = (args) => (
 export const DrupalCheckbox = DrupalCheckboxExample.bind({});
 DrupalCheckbox.args = {
   label: "Toggle this checkbox",
-  description: "| This is a description.",
+  description: "This is a description.",
 };
 
 export const DrupalMultiple = DrupalCheckboxExample.bind({});
 DrupalMultiple.args = {
   label: "Toggle this checkbox",
   includeHeadline: true,
-  description: "| This is a description.",
+  description: "This is a description.",
 };
