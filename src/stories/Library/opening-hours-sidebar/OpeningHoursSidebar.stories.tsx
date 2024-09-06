@@ -9,13 +9,13 @@ export default {
   decorators: [withDesign],
   argTypes: {
     title: {
-      defaultValue: "Åbningstider",
+      defaultValue: "Dagens åbningstider",
       control: {
         type: "text",
       },
     },
     dateString: {
-      defaultValue: "I dag (fredag 28. maj)",
+      defaultValue: "fredag 28. maj",
       control: {
         type: "text",
       },

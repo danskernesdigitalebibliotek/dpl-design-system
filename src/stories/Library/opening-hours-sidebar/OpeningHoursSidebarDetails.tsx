@@ -8,11 +8,13 @@ export type OpeningHoursItemType = {
 type OpeningHoursSidebarDetailsType = {
   openingHoursData: OpeningHoursItemType[];
   link: string;
+  name: string;
 };
 
 const OpeningHoursSidebarDetails: React.FC<OpeningHoursSidebarDetailsType> = ({
   openingHoursData,
   link,
+  name,
 }) => {
   return (
     <div className="opening-hours-sidebar-details__content">
@@ -27,7 +29,7 @@ const OpeningHoursSidebarDetails: React.FC<OpeningHoursSidebarDetailsType> = ({
         ))}
       </dl>
       <a href={link} className="opening-hours-sidebar__link">
-        Se alle åbningstider
+        {`Gå til ${name}`}
       </a>
     </div>
   );

@@ -45,6 +45,7 @@ const OpeningHoursSidebar: FC<OpeningHoursSidebarType> = ({
           <OpeningHoursSidebarDetails
             openingHoursData={openingHoursData}
             link={link}
+            name={name}
           />
         </DisclosureControllable>
       ))}
