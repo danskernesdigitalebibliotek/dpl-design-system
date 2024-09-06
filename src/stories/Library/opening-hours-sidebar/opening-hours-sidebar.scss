@@ -22,6 +22,11 @@
   @include typography($typo__h4);
 }
 
+.opening-hours-sidebar__date {
+  @include typography($typo__body-medium);
+  font-weight: $font__weight--normal;
+}
+
 .opening-hours-sidebar-details {
   @include opening-hours-sidebar-padding;
   border-top: 1px solid $color__global-tertiary-1;
