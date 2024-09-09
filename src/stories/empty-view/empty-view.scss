@@ -1,0 +1,5 @@
+.empty-view {
+  @include layout-container($block-max-width__large);
+  margin-top: $s-2xl;
+  text-align: center;
+}
