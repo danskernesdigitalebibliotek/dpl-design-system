@@ -9,9 +9,9 @@
     "main.css.map": "./static/css/main.e9286415.chunk.css.map",
     "runtime~main.js": "./runtime~main.6c6b7827.iframe.bundle.js",
     "vendors~main.css": "./static/css/vendors~main.2b205a4f.chunk.css",
-    "vendors~main.js": "./vendors~main.717351b1.iframe.bundle.js",
+    "vendors~main.js": "./vendors~main.d254519c.iframe.bundle.js",
     "vendors~main.css.map": "./static/css/vendors~main.2b205a4f.chunk.css.map",
-    "vendors~main.js.map": "./vendors~main.717351b1.iframe.bundle.js.map",
+    "vendors~main.js.map": "./vendors~main.d254519c.iframe.bundle.js.map",
     "6.bcec739b.iframe.bundle.js": "./6.bcec739b.iframe.bundle.js",
     "6.bcec739b.iframe.bundle.js.map": "./6.bcec739b.iframe.bundle.js.map",
     "7.d2cbe207.iframe.bundle.js": "./7.d2cbe207.iframe.bundle.js",
@@ -62,12 +62,12 @@
     "static/media/icon-watch-static.svg": "./static/media/icon-watch-static.36607596.svg",
     "static/media/infomedia-logo.16e7a40f.svg": "./static/media/infomedia-logo.16e7a40f.svg",
     "static/media/reload_logo_black.0e4b64c2.svg": "./static/media/reload_logo_black.0e4b64c2.svg",
-    "vendors~main.717351b1.iframe.bundle.js.LICENSE.txt": "./vendors~main.717351b1.iframe.bundle.js.LICENSE.txt"
+    "vendors~main.d254519c.iframe.bundle.js.LICENSE.txt": "./vendors~main.d254519c.iframe.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
     "runtime~main.6c6b7827.iframe.bundle.js",
     "static/css/vendors~main.2b205a4f.chunk.css",
-    "vendors~main.717351b1.iframe.bundle.js",
+    "vendors~main.d254519c.iframe.bundle.js",
     "static/css/main.e9286415.chunk.css",
     "main.6c156ed7.iframe.bundle.js"
   ]
