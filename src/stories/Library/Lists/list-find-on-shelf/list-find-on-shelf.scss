@@ -16,6 +16,11 @@
     width: 404px;
   }
 
+  &__location-header {
+    white-space: nowrap;
+    padding-right: $s-lg;
+  }
+
   &__item-count-header {
     @include media-query__small {
       margin-left: auto;
@@ -42,9 +47,7 @@
     max-width: 600px;
 
     @include media-query__small {
-      // Both width and min-width need to be here to prevent flex shrink & stretch.
       width: 404px;
-      min-width: 404px;
     }
   }
 

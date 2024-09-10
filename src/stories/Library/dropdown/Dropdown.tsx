@@ -59,7 +59,7 @@ const DropdownElement: React.FC<DropdownElementProps> = ({
         <select className={classes.select} aria-label={ariaLabel}>
           {list.map(({ title, disabled }, index) => (
             <option
-              key={index}
+              key={index + title}
               className={classes.option}
               value={title}
               disabled={disabled !== undefined ? disabled : false}
