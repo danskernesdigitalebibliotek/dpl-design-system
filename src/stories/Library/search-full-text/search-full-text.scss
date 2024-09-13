@@ -1,4 +1,6 @@
 .search-full-text {
+  @include typography($typo__button);
+  font-weight: $font__weight--normal;
   @extend %default-focus-within;
   width: 100%;
   border: $color__global-tertiary-1 1px solid;
