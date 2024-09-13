@@ -3,6 +3,7 @@ import ContentList from "../../Library/content-list/ContentList";
 import contentListData from "../../Library/content-list/ContentListData";
 import { InputLabel } from "../../Library/input-label/InputLabel";
 import { Dropdown } from "../../Library/dropdown/Dropdown";
+import SearchFullText from "../../Library/search-full-text/SearchFullText";
 
 const filters = [
   {
@@ -47,6 +48,10 @@ const ContentListPage: React.FC = () => {
             <li className="content-list-page__filter">
               <InputLabel text={filter.label} />
               <Dropdown
+                classNames="dropdown--grey-borders"
+                innerClassNames={{
+                  select: "dropdown__select--grey",
+                }}
                 list={filter.options}
                 ariaLabel="Kategorier"
                 arrowIcon="chevron"
@@ -54,6 +59,10 @@ const ContentListPage: React.FC = () => {
             </li>
           );
         })}
+        <li className="content-list-page__filter content-list-page__filter--right">
+          <InputLabel text="Søg" />
+          <SearchFullText />
+        </li>
       </ul>
       <ContentList items={contentListData} />
     </div>

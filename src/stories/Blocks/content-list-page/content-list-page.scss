@@ -33,3 +33,9 @@
     flex-direction: row;
   }
 }
+
+.content-list-page__filter--right {
+  @include media-query__small {
+    margin-left: auto;
+  }
+}

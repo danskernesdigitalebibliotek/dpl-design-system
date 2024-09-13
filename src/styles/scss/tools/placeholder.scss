@@ -112,6 +112,12 @@
   }
 }
 
+%default-focus-within {
+  &:focus-within {
+    outline: 2px solid $color__text-primary-black;
+  }
+}
+
 %identity-placeholder-pseudo {
   background-color: var(--tint-color-120);
   position: relative;

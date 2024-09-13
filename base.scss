@@ -143,6 +143,8 @@
 @import "./src/stories/Library/material-search/material-search";
 @import "./src/stories/Library/banner/banner";
 @import "./src/stories/Library/simple-link/simple-link";
+@import "./src/stories/Library/search-full-text/search-full-text";
+@import "./src/stories/empty-view/empty-view";
 
 // Autosuggest block styling needs to be loaded before the rest of the scss for autosuggest
 @import "./src/stories/Blocks/autosuggest/autosuggest";
