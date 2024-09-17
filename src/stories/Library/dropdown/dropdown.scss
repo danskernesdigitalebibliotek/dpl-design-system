@@ -1,5 +1,3 @@
-$_dropdown-icon-size: 50px;
-
 .dropdown {
   width: 100%;
   position: relative;
@@ -27,7 +25,7 @@ $_dropdown-icon-size: 50px;
   -webkit-appearance: none;
   min-width: 230px;
   width: 100%;
-  height: $_dropdown-icon-size;
+  height: $form_input_height;
   cursor: pointer;
   background-color: transparent;
   color: $color__global-black;
@@ -36,7 +34,7 @@ $_dropdown-icon-size: 50px;
   border-color: inherit;
   padding: 0;
   padding-left: $_padding;
-  padding-right: $_dropdown-icon-size + $_padding;
+  padding-right: $form_input_height + $_padding;
   text-overflow: ellipsis;
   white-space: nowrap;
   text-transform: none;
@@ -46,6 +44,7 @@ $_dropdown-icon-size: 50px;
 
   &.dropdown__select--grey {
     border-color: $color__global-tertiary-1;
+    color: $color__global-grey;
   }
 }
 
@@ -61,8 +60,8 @@ $_dropdown-icon-size: 50px;
   position: absolute;
   right: 0;
   top: 0;
-  height: $_dropdown-icon-size;
-  width: $_dropdown-icon-size;
+  height: $form_input_height;
+  width: $form_input_height;
   display: flex;
   justify-content: center;
   align-items: center;

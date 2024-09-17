@@ -1,15 +1,17 @@
+import clsx from "clsx";
 import React, { forwardRef } from "react";
 
 export type DialogType = {
   children: React.ReactNode;
   closeDialog: () => void;
+  isSidebar?: boolean;
 };
 
 const Dialog = forwardRef<HTMLDialogElement, DialogType>(
-  ({ children, closeDialog }, ref) => {
+  ({ children, closeDialog, isSidebar }, ref) => {
     return (
       <dialog
-        className="dialog"
+        className={clsx("dialog", isSidebar && "dialog--sidebar")}
         ref={ref}
         // Close dialog when clicking outside of it (::backdrop pseudo-element)
         onClick={({ currentTarget, target }) => {

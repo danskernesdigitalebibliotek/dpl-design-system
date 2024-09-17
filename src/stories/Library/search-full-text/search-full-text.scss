@@ -1,0 +1,28 @@
+.search-full-text {
+  @include typography($typo__button);
+  font-weight: $font__weight--normal;
+  @extend %default-focus-within;
+  width: 100%;
+  border: $color__global-tertiary-1 1px solid;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  @include media-query__small {
+    width: fit-content;
+  }
+}
+
+.search-full-text__input {
+  width: 100%;
+  outline: none;
+  height: $form_input_height;
+  background-color: transparent;
+  border: none;
+}
+
+.search-full-text__button {
+  border: none;
+  display: grid;
+  place-items: center;
+}

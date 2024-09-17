@@ -94,3 +94,38 @@
     transform: scale(0.9);
   }
 }
+
+// Classes below are meant to target specifically overwriting Drupal component styling.
+// These checkboxes are always used inside a .dpl-input container in Drupal.
+.dpl-form {
+  .dpl-input.checkbox-override {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px $s-sm 6px 0;
+    margin-bottom: 0;
+  }
+
+  .dpl-input.checkbox-override input {
+    accent-color: black;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-left: 0;
+  }
+
+  .dpl-input.checkbox-override .input-label,
+  .dpl-input.checkbox-override .description {
+    @include typography($typo__small-caption);
+    color: $color__text-secondary-gray;
+    padding: 0 $s-sm 0 $s-sm;
+    width: fit-content;
+    max-width: 300px;
+    margin: 0;
+    height: auto;
+  }
+
+  .dpl-input.checkbox-override .input-label {
+    cursor: pointer;
+  }
+}
