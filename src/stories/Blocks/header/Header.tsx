@@ -150,10 +150,10 @@ export const Header = ({
 
         <div className="header__clock">
           <Pagefold isInheriting={false} isAContainer={false} size="medium" />
-          <a href="#" className="header__clock-items">
+          <button className="header__clock-items">
             <WatchStaticIcon className="mb-8" />
             <span className="text-small-caption">Opening hours</span>
-          </a>
+          </button>
         </div>
       </header>
       <HeaderSidebarNav menuLinks={menuItems} />

@@ -25,13 +25,22 @@ const DisclosureControllable: React.FunctionComponent<
     setIsOpen(!isOpen);
   }, [isOpen]);
 
+  const onKeyDown = useCallback(
+    (e: { key: string }) => {
+      if (e.key === "Enter" || e.key === " ") {
+        toggleOpen();
+      }
+    },
+    [toggleOpen]
+  );
+
   const disclosureId = `disclosure-${id}`;
   return (
     <div className={detailsClassName}>
       <div
         className={summaryClassName}
         onClick={toggleOpen}
-        onKeyDown={toggleOpen}
+        onKeyDown={onKeyDown}
         role="button"
         tabIndex={0}
         aria-controls={disclosureId}
