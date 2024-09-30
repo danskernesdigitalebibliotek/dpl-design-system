@@ -1,3 +1,4 @@
+import { clsx } from "clsx";
 import { FC } from "react";
 import Label from "../label/Label";
 
@@ -7,6 +8,8 @@ export interface TextareaProps {
   label: string;
   rows?: number;
   cols?: number;
+  className?: string;
+  placeholder?: string;
 }
 
 const Textarea: FC<TextareaProps> = ({
@@ -15,12 +18,21 @@ const Textarea: FC<TextareaProps> = ({
   label,
   rows = 8,
   cols = 80,
+  className,
+  placeholder,
 }) => {
   return (
     <div className="dpl-input">
       <Label id={id}>{label}</Label>
       <div>
-        <textarea id={id} name={name} rows={rows} cols={cols} />
+        <textarea
+          className={clsx(className)}
+          id={id}
+          name={name}
+          rows={rows}
+          cols={cols}
+          placeholder={placeholder}
+        />
       </div>
     </div>
   );
