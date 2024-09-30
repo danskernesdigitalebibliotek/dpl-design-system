@@ -1,3 +1,7 @@
+a.tag {
+  @extend %text-inline-link;
+}
+
 .tag {
   color: $color__global-black;
   display: inline-flex;
