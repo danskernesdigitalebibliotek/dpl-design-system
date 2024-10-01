@@ -7,6 +7,9 @@ import data from "../../Library/card-list-page/SearchResultPageData";
 import { CardListItem } from "../../Library/card-list-item/CardListItem";
 import ResultPager from "../../Library/card-list-page/ResultPager";
 import { ReactComponent as PlusButtonIcon } from "../../../public/icons/collection/PlusButton.svg";
+import Input from "../../Library/Forms/input/Input";
+import { Checkbox } from "../../Library/Forms/checkbox/Checkbox";
+import Textarea from "../../Library/Forms/textarea/Textarea";
 
 export interface AdvancedSearchProps {
   inputPlaceholder: string;
@@ -92,12 +95,34 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
         </>
       )}
       {isCqlSearch && (
-        <textarea
-          className="advanced-search__cql-input focus-styling__input"
-          cols={100}
-          rows={5}
-          placeholder="e.g. title=snemand*"
-        />
+        <form className="advanced-search-cql-form">
+          <Textarea
+            id="cql"
+            name="name"
+            label="CQL"
+            className="advanced-search-cql-form__input focus-styling__input"
+            cols={100}
+            rows={5}
+            placeholder="e.g. 'harry potter'"
+          />
+          <Input
+            label="Location"
+            type="text"
+            id="location"
+            description="Add a comma separated list for multiple locations"
+          />
+          <Input
+            label="Sublocation"
+            type="text"
+            id="sublocation"
+            description="Add a comma separated list for multiple sublocations"
+          />
+          <Checkbox
+            isChecked={false}
+            hiddenLabel={false}
+            label=" Holding Status On Shelf"
+          />
+        </form>
       )}
       <footer className="advanced-search__footer">
         {isCqlSearch && (
