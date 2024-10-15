@@ -119,18 +119,18 @@
 // Adjust the modal to display all content when printing
 @media print {
   .modal {
-    position: static !important;
-    overflow: visible !important;
-    width: auto !important;
-    height: auto !important;
-    opacity: 1 !important;
-    display: block !important;
+    position: static;
+    overflow: visible;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    display: block;
   }
 
   // Hide elements that shouldn't appear in print
   .modal-backdrop,
   .modal-btn-close,
   .modal-btn-fallback {
-    display: none !important;
+    display: none;
   }
 }
