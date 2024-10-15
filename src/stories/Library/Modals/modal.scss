@@ -115,3 +115,22 @@
   justify-content: flex-end;
   padding: 20px;
 }
+
+// Adjust the modal to display all content when printing
+@media print {
+  .modal {
+    position: static !important;
+    overflow: visible !important;
+    width: auto !important;
+    height: auto !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+
+  // Hide elements that shouldn't appear in print
+  .modal-backdrop,
+  .modal-btn-close,
+  .modal-btn-fallback {
+    display: none !important;
+  }
+}
