@@ -19,7 +19,7 @@
 
 .modal-pause__container {
   margin: 0 $s-lg;
-  padding-top: 96px;
+  padding-top: $s-4xl;
   max-width: 550px;
 
   @include media-query__small {

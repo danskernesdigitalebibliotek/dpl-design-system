@@ -16,6 +16,19 @@ $selected-date-background: rgb(0, 105, 255);
   padding: $s-md !important;
   width: fit-content !important;
 
+  // On small devices, we need to make sure that the calendar is visible.
+  // People had troubles scrolling when the calendar is open (possible, but users
+  // can't figure it out.
+  &.open.rangeMode {
+    @include media-query(
+      calc(map_get($breakpoints, "x-small") + 1px),
+      "max-width"
+    ) {
+      left: -$s-xl;
+      top: -$s-4xl;
+    }
+  }
+
   &.inline {
     box-shadow: none;
     border-radius: 0;
