@@ -26,3 +26,9 @@
   display: grid;
   place-items: center;
 }
+
+// Hide the submit button from the Drupal form with CSS
+// The button cannot be removed directly in the Drupal view, so we hide it using CSS
+.search-full-text input[value="Apply"] {
+  display: none;
+}
