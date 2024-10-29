@@ -101,5 +101,8 @@
   "files": [
     "build/**/*"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "overrides": {
+    "fork-ts-checker-webpack-plugin": "6.5.3"
+  }
 }
