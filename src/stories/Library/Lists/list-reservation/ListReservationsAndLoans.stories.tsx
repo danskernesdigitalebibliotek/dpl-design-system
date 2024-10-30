@@ -1,11 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { ListReservationsAndLoans } from "./ListReservationsAndLoans";
 
 export default {
   title: "Library / Lists / ReservationAndLoans",
   component: ListReservationsAndLoans,
-  decorators: [withDesign],
+
   argTypes: {},
   parameters: {
     design: {
@@ -13,9 +12,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1181%3A5923",
     },
   },
-} as ComponentMeta<typeof ListReservationsAndLoans>;
+} as Meta<typeof ListReservationsAndLoans>;
 
-const Template: ComponentStory<typeof ListReservationsAndLoans> = (args) => (
+const Template: StoryFn<typeof ListReservationsAndLoans> = (args) => (
   <ListReservationsAndLoans {...args} />
 );
 

@@ -1,12 +1,12 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import NavSpot from "./NavSpot";
 import ImageCredited from "../image-credited/ImageCredited";
 
 export default {
   title: "Library / Nav-spot (Navigationsmodul)",
   component: NavSpot,
-  decorators: [withDesign],
+
   argTypes: {
     variant: {
       // Disabling controls, as the different variations are added already.
@@ -33,11 +33,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=1958-7664&mode=design&t=nK04fkaFk3f9pafj-4",
     },
   },
-} as ComponentMeta<typeof NavSpot>;
+} as Meta<typeof NavSpot>;
 
-const Template: ComponentStory<typeof NavSpot> = (args) => (
-  <NavSpot {...args} />
-);
+const Template: StoryFn<typeof NavSpot> = (args) => <NavSpot {...args} />;
 
 const Large = Template.bind({});
 Large.args = {

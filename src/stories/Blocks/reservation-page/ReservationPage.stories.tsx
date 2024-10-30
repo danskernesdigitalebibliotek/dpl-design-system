@@ -1,11 +1,11 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
+
 import ReservationPage, { ReservationPageProps } from "./ReservationPage";
 
 export default {
   title: "Blocks / Reservation / Reservation Page",
   component: ReservationPage,
-  decorators: [withDesign],
+
   argTypes: {
     headline: {
       name: "Headline",
@@ -41,8 +41,8 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof ReservationPage> = (
-  args: ReservationPageProps
+const Template: StoryFn<typeof ReservationPage> = (
+  args: ReservationPageProps,
 ) => <ReservationPage {...args} />;
 
 export const Default = Template.bind({});

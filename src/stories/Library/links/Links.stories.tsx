@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import { Links as LinksComp } from "./Links";
 
 export default {
   title: "Library / Links / Text link",
   component: LinksComp,
-  decorators: [withDesign],
+
   argTypes: {
     href: {
       defaultValue: "/",
@@ -21,11 +21,9 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof LinksComp>;
+} as Meta<typeof LinksComp>;
 
-const Template: ComponentStory<typeof LinksComp> = (args) => (
-  <LinksComp {...args} />
-);
+const Template: StoryFn<typeof LinksComp> = (args) => <LinksComp {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

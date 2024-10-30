@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import EventListStacked from "./EventListStacked";
 
 export default {
@@ -12,9 +12,9 @@ export default {
       description: "Title of the section",
     },
   },
-} as ComponentMeta<typeof EventListStacked>;
+} as Meta<typeof EventListStacked>;
 
-const Template: ComponentStory<typeof EventListStacked> = (args) => (
+const Template: StoryFn<typeof EventListStacked> = (args) => (
   <EventListStacked {...args} />
 );
 

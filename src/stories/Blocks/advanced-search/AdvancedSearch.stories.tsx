@@ -1,5 +1,5 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
+
 import {
   AdvancedSearch as AdvancedSearchComp,
   AdvancedSearchProps,
@@ -7,8 +7,6 @@ import {
 
 export default {
   title: "Blocks / Advanced Search",
-  component: AdvancedSearchComp,
-  decorators: [withDesign],
   argTypes: {
     inputPlaceholder: {
       name: "Input placeholder",
@@ -40,8 +38,8 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof AdvancedSearchComp> = (
-  args: AdvancedSearchProps
+const Template: StoryFn<typeof AdvancedSearchComp> = (
+  args: AdvancedSearchProps,
 ) => <AdvancedSearchComp {...args} />;
 
 export const AdvancedSearch = Template.bind({});

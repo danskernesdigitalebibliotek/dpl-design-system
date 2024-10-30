@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import { BoxedText, BoxedTextProps } from "./BoxedText";
 
 export default {
   title: "Library / Boxed text",
   component: BoxedText,
-  decorators: [withDesign],
+
   argTypes: {
     text: {
       name: "Text string",
@@ -20,9 +20,9 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof BoxedText>;
+} as Meta<typeof BoxedText>;
 
-const Template: ComponentStory<typeof BoxedText> = (args: BoxedTextProps) => (
+const Template: StoryFn<typeof BoxedText> = (args: BoxedTextProps) => (
   <BoxedText {...args} />
 );
 

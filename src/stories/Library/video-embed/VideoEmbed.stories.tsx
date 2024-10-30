@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import VideoEmbed from "./VideoEmbed";
 
 export default {
@@ -30,10 +30,8 @@ export default {
       type: "string",
     },
   },
-} as ComponentMeta<typeof VideoEmbed>;
+} as Meta<typeof VideoEmbed>;
 
-const Template: ComponentStory<typeof VideoEmbed> = (args) => (
-  <VideoEmbed {...args} />
-);
+const Template: StoryFn<typeof VideoEmbed> = (args) => <VideoEmbed {...args} />;
 
 export const Default = Template.bind({});

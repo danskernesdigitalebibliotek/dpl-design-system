@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import ModalFindOnShelf, { ModalFindOnShelfProps } from "./ModalFindOnShelf";
 
 export default {
   title: "Library / Modals / Find On Shelf",
   component: ModalFindOnShelf,
-  decorators: [withDesign],
+
   argTypes: {
     workTitle: {
       name: "Work title",
@@ -35,7 +35,7 @@ export default {
     isPeriodical: {
       name: "Is periodical (e.g. magazine)?",
       defaultValue: false,
-      control: { type: "null" },
+      control: { type: "boolean" },
     },
   },
   parameters: {
@@ -44,10 +44,10 @@ export default {
       url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4561%3A26097",
     },
   },
-} as ComponentMeta<typeof ModalFindOnShelf>;
+} as Meta<typeof ModalFindOnShelf>;
 
-const Template: ComponentStory<typeof ModalFindOnShelf> = (
-  args: ModalFindOnShelfProps
+const Template: StoryFn<typeof ModalFindOnShelf> = (
+  args: ModalFindOnShelfProps,
 ) => <ModalFindOnShelf {...args} />;
 
 export const Default = Template.bind({});

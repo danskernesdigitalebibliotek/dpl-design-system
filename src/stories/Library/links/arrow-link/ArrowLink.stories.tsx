@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import ArrowLink from "./ArrowLink";
 
 export default {
   title: "Library / Links / ArrowLink",
   component: ArrowLink,
-  decorators: [withDesign],
+
   argTypes: {
     label: {
       defaultValue: "Go back",
@@ -18,10 +18,8 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof ArrowLink>;
+} as Meta<typeof ArrowLink>;
 
-const Template: ComponentStory<typeof ArrowLink> = (args) => (
-  <ArrowLink {...args} />
-);
+const Template: StoryFn<typeof ArrowLink> = (args) => <ArrowLink {...args} />;
 
 export const Default = Template.bind({});

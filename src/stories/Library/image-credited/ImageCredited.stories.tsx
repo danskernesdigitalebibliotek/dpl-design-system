@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import ImageCredited from "./ImageCredited";
 
 export default {
   title: "Library / Image Credited",
   component: ImageCredited,
-  decorators: [withDesign],
+
   argTypes: {
     src: {
       defaultValue:
@@ -31,9 +31,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=7477-39846&mode=dev",
     },
   },
-} as ComponentMeta<typeof ImageCredited>;
+} as Meta<typeof ImageCredited>;
 
-const Template: ComponentStory<typeof ImageCredited> = (args) => (
+const Template: StoryFn<typeof ImageCredited> = (args) => (
   <ImageCredited {...args} />
 );
 

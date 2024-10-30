@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import Input from "./Input";
 
 export default {
   title: "Library / Forms / Input",
   component: Input,
-  decorators: [withDesign],
+
   argTypes: {
     label: {
       defaultValue: "Navn",
@@ -35,8 +35,8 @@ export default {
     },
     layout: "padded",
   },
-} as ComponentMeta<typeof Input>;
+} as Meta<typeof Input>;
 
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
+const Template: StoryFn<typeof Input> = (args) => <Input {...args} />;
 
 export const Default = Template.bind({});

@@ -1,4 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
 import { StoryBaseType } from "../../../../types/StorybookHelpers";
 
 import { IconArrow as ArrowComp, IconArrowProps } from "./ArrowUI";
@@ -6,7 +5,7 @@ import { IconArrow as ArrowComp, IconArrowProps } from "./ArrowUI";
 const StoryBase: StoryBaseType<IconArrowProps> = {
   title: "Library / Arrows / Arrow UI",
   component: ArrowComp,
-  decorators: [withDesign],
+
   argTypes: {
     direction: {
       defaultValue: "right",

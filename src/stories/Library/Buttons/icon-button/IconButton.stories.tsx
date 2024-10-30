@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import IconButton from "./IconButton";
 
 export default {
   title: "Library / Buttons / Button icon",
   component: IconButton,
-  decorators: [withDesign],
+
   argTypes: {
     src: {
       defaultValue: "icons/collection/Menu.svg",
@@ -23,9 +23,9 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof IconButton>;
+} as Meta<typeof IconButton>;
 
-const Template: ComponentStory<typeof IconButton> = (props) => (
+const Template: StoryFn<typeof IconButton> = (props) => (
   <IconButton {...props} />
 );
 export const IconButtonExample = Template.bind({});

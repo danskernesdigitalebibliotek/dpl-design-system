@@ -1,11 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { MaterialMainfestationItem } from "./MaterialMainfestationItem";
 
 export default {
   title: "Blocks / Material Manifestation Item",
   component: MaterialMainfestationItem,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -29,9 +28,9 @@ export default {
       control: { type: "object" },
     },
   },
-} as ComponentMeta<typeof MaterialMainfestationItem>;
+} as Meta<typeof MaterialMainfestationItem>;
 
-const Template: ComponentStory<typeof MaterialMainfestationItem> = (args) => {
+const Template: StoryFn<typeof MaterialMainfestationItem> = (args) => {
   return <MaterialMainfestationItem {...args} />;
 };
 

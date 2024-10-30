@@ -1,12 +1,12 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import Hero from "./Hero";
 import ImageCredited from "../../image-credited/ImageCredited";
 
 export default {
   title: "Library / Hero",
   component: Hero,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -54,8 +54,8 @@ export default {
       Sprog: { value: ["Dansk"], type: "standard" },
     },
   },
-} as ComponentMeta<typeof Hero>;
+} as Meta<typeof Hero>;
 
-const Template: ComponentStory<typeof Hero> = (args) => <Hero {...args} />;
+const Template: StoryFn<typeof Hero> = (args) => <Hero {...args} />;
 
 export const Default = Template.bind({});

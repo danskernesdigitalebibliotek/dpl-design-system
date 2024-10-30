@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import PagefoldComp from "./Pagefold";
 
 export default {
   title: "Library / Pagefold",
   component: PagefoldComp,
-  decorators: [withDesign],
+
   argTypes: {
     isInheriting: {
       defaultValue: false,
@@ -41,9 +41,9 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof PagefoldComp>;
+} as Meta<typeof PagefoldComp>;
 
-const Template: ComponentStory<typeof PagefoldComp> = (args) => (
+const Template: StoryFn<typeof PagefoldComp> = (args) => (
   <PagefoldComp {...args} />
 );
 
