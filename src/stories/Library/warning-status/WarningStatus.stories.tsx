@@ -1,17 +1,16 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
 
 import { WarningStatus } from "./WarningStatus";
 
 export default {
   title: "Library / Warning Status",
   component: WarningStatus,
-  decorators: [withDesign],
+
   argTypes: {},
   parameters: {},
-} as ComponentMeta<typeof WarningStatus>;
+} as Meta<typeof WarningStatus>;
 
-const Template: ComponentStory<typeof WarningStatus> = (args) => (
+const Template: StoryFn<typeof WarningStatus> = (args) => (
   <WarningStatus {...args} />
 );
 

@@ -1,12 +1,12 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import CardGrid from "./CardGrid";
 import { card, cardNoImage } from "./card-grid-data";
 
 export default {
   title: "Library / Card grid ('Nyhedskomponent')",
   component: CardGrid,
-  decorators: [withDesign],
+
   argTypes: {
     title: {
       defaultValue: "Nyheder",
@@ -26,11 +26,9 @@ export default {
       url: "Designsystem",
     },
   },
-} as ComponentMeta<typeof CardGrid>;
+} as Meta<typeof CardGrid>;
 
-const Template: ComponentStory<typeof CardGrid> = (args) => (
-  <CardGrid {...args} />
-);
+const Template: StoryFn<typeof CardGrid> = (args) => <CardGrid {...args} />;
 
 const Many = Template.bind({});
 

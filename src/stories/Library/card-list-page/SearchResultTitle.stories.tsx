@@ -1,11 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { SearchResultTitle } from "./SearchResultTitle";
 
 export default {
   title: "Blocks / Search Result Header Title",
   component: SearchResultTitle,
-  decorators: [withDesign],
+
   argTypes: {
     title: {
       control: { type: "text" },
@@ -26,9 +25,9 @@ export default {
       defaultValue: false,
     },
   },
-} as ComponentMeta<typeof SearchResultTitle>;
+} as Meta<typeof SearchResultTitle>;
 
-const Template: ComponentStory<typeof SearchResultTitle> = (args) => {
+const Template: StoryFn<typeof SearchResultTitle> = (args) => {
   return <SearchResultTitle {...args} />;
 };
 

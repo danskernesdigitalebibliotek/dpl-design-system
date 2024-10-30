@@ -1,12 +1,12 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import Event from "./EventPage";
 import ImageCredited from "../../Library/image-credited/ImageCredited";
 
 export default {
   title: "Blocks / Event page",
   component: Event,
-  decorators: [withDesign],
+
   argTypes: {
     title: {
       defaultValue: "Fernisering Modern Dans",
@@ -109,9 +109,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=7477-39846&mode=dev",
     },
   },
-} as ComponentMeta<typeof Event>;
+} as Meta<typeof Event>;
 
-const Template: ComponentStory<typeof Event> = (args) => <Event {...args} />;
+const Template: StoryFn<typeof Event> = (args) => <Event {...args} />;
 
 export const Default = Template.bind({});
 export const withOutImage = Template.bind({});

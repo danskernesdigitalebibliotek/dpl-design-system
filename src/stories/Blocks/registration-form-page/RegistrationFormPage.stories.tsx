@@ -1,4 +1,4 @@
-import { ComponentStory } from "@storybook/react";
+import { StoryFn } from "@storybook/react";
 import RedirectToLoginMessage, {
   RedirectToLoginMessageProps,
 } from "./RedirectToLoginMessage";
@@ -26,6 +26,6 @@ export default {
   },
 };
 
-export const RedirectToLoginMessageExample: ComponentStory<
+export const RedirectToLoginMessageExample: StoryFn<
   typeof RedirectToLoginMessage
 > = (args: RedirectToLoginMessageProps) => <RedirectToLoginMessage {...args} />;

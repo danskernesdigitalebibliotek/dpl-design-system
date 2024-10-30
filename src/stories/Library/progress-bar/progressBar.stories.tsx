@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { ProgressBar as ProgressBarComp } from "./progressBar";
 
 export default {
@@ -25,9 +25,9 @@ export default {
       defaultValue: "ud af",
     },
   },
-} as ComponentMeta<typeof ProgressBarComp>;
+} as Meta<typeof ProgressBarComp>;
 
-const Template: ComponentStory<typeof ProgressBarComp> = (args) => (
+const Template: StoryFn<typeof ProgressBarComp> = (args) => (
   <ProgressBarComp {...args} />
 );
 

@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { MaterialGrid } from "./MaterialGrid";
 import MaterialGridData from "./MaterialGridData";
 
@@ -44,9 +44,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=446-6954&mode=design&t=IkusOClO6YuhuPrb-4",
     },
   },
-} as ComponentMeta<typeof MaterialGrid>;
+} as Meta<typeof MaterialGrid>;
 
-const Template: ComponentStory<typeof MaterialGrid> = (args) => (
+const Template: StoryFn<typeof MaterialGrid> = (args) => (
   <MaterialGrid {...args} />
 );
 

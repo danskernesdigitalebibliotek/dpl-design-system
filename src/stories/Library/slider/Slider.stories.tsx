@@ -1,5 +1,4 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
 
 import Slider from "./Slider";
 import Card from "../card/Card";
@@ -8,7 +7,7 @@ import CardImages from "../card/CardImages";
 export default {
   title: "Library / Slider",
   component: Slider,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -27,7 +26,7 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof Slider> = (args) => <Slider {...args} />;
+const Template: StoryFn<typeof Slider> = (args) => <Slider {...args} />;
 
 const image = (
   <CardImages

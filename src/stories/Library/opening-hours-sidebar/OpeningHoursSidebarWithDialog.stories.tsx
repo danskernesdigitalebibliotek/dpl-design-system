@@ -1,5 +1,5 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import OpeningHoursSidebar from "./OpeningHoursSidebar";
 import Dialog from "../dialog/Dialog";
 import useDialog from "../dialog/useDialog";
@@ -8,7 +8,7 @@ import defaultLibraries from "./opening-hours-libraries-data";
 export default {
   title: "Library/Opening Hours Sidebar/With Dialog",
   component: OpeningHoursSidebar,
-  decorators: [withDesign],
+
   argTypes: {
     title: {
       defaultValue: "Åbningstider",
@@ -41,9 +41,9 @@ export default {
       url: "https://www.figma.com/design/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=7760-59368&t=FtYoMFQsdy52r88A-4",
     },
   },
-} as ComponentMeta<typeof OpeningHoursSidebar>;
+} as Meta<typeof OpeningHoursSidebar>;
 
-const Template: ComponentStory<typeof OpeningHoursSidebar> = (args) => {
+const Template: StoryFn<typeof OpeningHoursSidebar> = (args) => {
   const { dialogContent, openDialogWithContent, closeDialog, dialogRef } =
     useDialog();
 

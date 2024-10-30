@@ -1,12 +1,11 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { CardListItem } from "./CardListItem";
 import { CardListItemSkeleton } from "./CardListItemSkeleton";
 
 export default {
   title: "Library / Card List Item",
   component: CardListItem,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -45,13 +44,13 @@ export default {
     },
     availabilityLabels: {
       // The control is disabled because we use stories to explore different availability label counts.
-      control: { type: "null" },
+      control: { type: "number" },
       defaultValue: 3,
     },
   },
-} as ComponentMeta<typeof CardListItem>;
+} as Meta<typeof CardListItem>;
 
-export const Item: ComponentStory<typeof CardListItem> = (args) => {
+export const Item: StoryFn<typeof CardListItem> = (args) => {
   return <CardListItem {...args} />;
 };
 
@@ -63,6 +62,6 @@ ContentOverload.args = {
   availabilityLabels: 25,
 };
 
-export const SkeletonItem: ComponentStory<typeof CardListItemSkeleton> = () => {
+export const SkeletonItem: StoryFn<typeof CardListItemSkeleton> = () => {
   return <CardListItemSkeleton />;
 };

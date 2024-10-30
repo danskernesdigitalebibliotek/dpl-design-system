@@ -1,12 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
 
 import { Button } from "./Button";
 
 export default {
   title: "Library / Buttons / Button",
   component: Button,
-  decorators: [withDesign],
+
   argTypes: {
     label: {
       defaultValue: "Se hele kalenderen",
@@ -31,9 +30,9 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof Button>;
+} as Meta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

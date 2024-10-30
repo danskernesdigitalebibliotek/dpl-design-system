@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import { LinkButton } from "./LinkButton";
 
 export default {
   title: "Library / Buttons / Link Button",
   component: LinkButton,
-  decorators: [withDesign],
+
   argTypes: {
     href: {
       control: {
@@ -40,11 +40,9 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof LinkButton>;
+} as Meta<typeof LinkButton>;
 
-const Template: ComponentStory<typeof LinkButton> = (args) => (
-  <LinkButton {...args} />
-);
+const Template: StoryFn<typeof LinkButton> = (args) => <LinkButton {...args} />;
 
 export const External = Template.bind({});
 External.args = {

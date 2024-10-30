@@ -1,4 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
 import { Meta } from "@storybook/react";
 
 import { Typography } from "./Typography";
@@ -6,7 +5,7 @@ import { Typography } from "./Typography";
 export default {
   title: "Library / Typography",
   component: Typography,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",

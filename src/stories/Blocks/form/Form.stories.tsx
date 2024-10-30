@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import ContactForm from "./ContactForm";
 
 export default {
@@ -26,9 +26,9 @@ export default {
       defaultValue: false,
     },
   },
-} as ComponentMeta<typeof ContactForm>;
+} as Meta<typeof ContactForm>;
 
-const ContactFormTemplate: ComponentStory<typeof ContactForm> = (args) => {
+const ContactFormTemplate: StoryFn<typeof ContactForm> = (args) => {
   return <ContactForm {...args} />;
 };
 

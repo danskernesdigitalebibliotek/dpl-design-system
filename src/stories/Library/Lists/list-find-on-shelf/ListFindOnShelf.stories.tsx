@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import ListFindOnShelf, { ListFindOnShelfProps } from "./ListFindOnShelf";
 
 export default {
   title: "Library / Lists / Find On Shelf",
   component: ListFindOnShelf,
-  decorators: [withDesign],
+
   argTypes: {
     manifestationName: {
       name: "Manifestation Name",
@@ -34,10 +34,10 @@ export default {
       url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4561%3A26097",
     },
   },
-} as ComponentMeta<typeof ListFindOnShelf>;
+} as Meta<typeof ListFindOnShelf>;
 
-const Template: ComponentStory<typeof ListFindOnShelf> = (
-  args: ListFindOnShelfProps
+const Template: StoryFn<typeof ListFindOnShelf> = (
+  args: ListFindOnShelfProps,
 ) => <ListFindOnShelf {...args} />;
 
 export const FindOnShelf = Template.bind({});

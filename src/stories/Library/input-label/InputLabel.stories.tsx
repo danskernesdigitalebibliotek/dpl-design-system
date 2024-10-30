@@ -1,4 +1,4 @@
-import { ComponentStory } from "@storybook/react";
+import { StoryFn } from "@storybook/react";
 
 import { InputLabel as InputLabelComp } from "./InputLabel";
 
@@ -20,9 +20,7 @@ export default {
   },
 };
 
-const Template: ComponentStory<DropdownProps> = (args) => (
-  <InputLabelComp {...args} />
-);
+const Template: StoryFn<DropdownProps> = (args) => <InputLabelComp {...args} />;
 
 export const InputLabel = Template.bind({});
 

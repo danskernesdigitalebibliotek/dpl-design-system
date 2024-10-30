@@ -1,5 +1,4 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import Reservation from "../../../Library/Modals/modal-reservation/Reservation";
 import Email from "./Email";
 import Sms from "./Sms";
@@ -9,7 +8,7 @@ import Collect from "./Collect";
 export default {
   title: "Blocks / Reservation / Forms",
   component: Email,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -17,18 +16,18 @@ export default {
     },
   },
   argTypes: {},
-} as ComponentMeta<typeof Reservation>;
+} as Meta<typeof Reservation>;
 
-const EmailModalTemplate: ComponentStory<typeof Email> = (args) => {
+const EmailModalTemplate: StoryFn<typeof Email> = (args) => {
   return <Email {...args} />;
 };
-const SmsModalTemplate: ComponentStory<typeof Email> = (args) => {
+const SmsModalTemplate: StoryFn<typeof Email> = (args) => {
   return <Sms {...args} />;
 };
-const ExpirationModalTemplate: ComponentStory<typeof Email> = (args) => {
+const ExpirationModalTemplate: StoryFn<typeof Email> = (args) => {
   return <Expiration {...args} />;
 };
-const CollectModalTemplate: ComponentStory<typeof Email> = (args) => {
+const CollectModalTemplate: StoryFn<typeof Email> = (args) => {
   return <Collect {...args} />;
 };
 export const EmailModal = EmailModalTemplate.bind({});

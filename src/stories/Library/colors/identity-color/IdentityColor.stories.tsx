@@ -1,4 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
 import { Meta } from "@storybook/react";
 
 import {
@@ -9,7 +8,7 @@ import {
 export default {
   title: "Library / Colors / Identity Color",
   component: IdentityColorComp,
-  decorators: [withDesign],
+
   argTypes: {
     identityColor: {
       defaultValue: "#476e57",

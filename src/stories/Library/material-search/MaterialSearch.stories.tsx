@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import MaterialSearch from "./MaterialSearch";
 import ErrorState from "./Errors/ErrorState";
 
@@ -16,11 +16,11 @@ export default {
   args: {
     errorState: "NoError",
   },
-} as ComponentMeta<typeof MaterialSearch>;
+} as Meta<typeof MaterialSearch>;
 
 const uniqueIdentifier = Math.floor(Math.random() * 10000);
 
-const Template: ComponentStory<typeof MaterialSearch> = (args) => {
+const Template: StoryFn<typeof MaterialSearch> = (args) => {
   return (
     <div className="material-search">
       <div className="material-search__inputs-container">
