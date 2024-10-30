@@ -20,7 +20,7 @@ const NavGrid: FC<CardProps> = ({ items, title, showSubtitles }) => {
         "nav-grid",
         showSubtitles ? "nav-grid--expanded" : "nav-grid--simple",
         hasMany && "nav-grid--has-many",
-        hasMany && "nav-grid--folded"
+        hasMany && "nav-grid--folded",
       )}
     >
       <div className="nav-grid__header">

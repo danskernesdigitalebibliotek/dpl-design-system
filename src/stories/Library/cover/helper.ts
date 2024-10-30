@@ -14,7 +14,7 @@ export const tintClasses: TintClassesType = {
 type CoverTintsType = ("20" | "40" | "80" | "100" | "120")[];
 
 export const getCoverTint = (
-  index: number
+  index: number,
 ): "20" | "40" | "80" | "100" | "120" => {
   const coverTints: CoverTintsType = ["20", "40", "80", "100", "120"];
   const tintKey = index % coverTints.length;

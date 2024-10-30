@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const listWrappers = document.querySelectorAll(
-    "[data-show-more-list-wrapper]"
+    "[data-show-more-list-wrapper]",
   );
 
   listWrappers.forEach((listWrapper) => {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const listElements = list.querySelectorAll("[data-show-more-item]");
     const amountOfListElements = parseInt(listElements.length, 10);
     const listShowMoreButton = listWrapper.querySelector(
-      "[data-show-more-button]"
+      "[data-show-more-button]",
     );
 
     if (!list || !listShowMoreButton || !listElements || !listId) {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // eslint-disable-next-line no-console
       console.debug(
-        `show-more.js: Missing required elements: ${missingElements.join(", ")}`
+        `show-more.js: Missing required elements: ${missingElements.join(", ")}`,
       );
       return;
     }
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const showMoreText = listShowMoreButton.getAttribute("data-show-more-text");
     const showLessText = listShowMoreButton.getAttribute("data-show-less-text");
     const hideListButtonAfterExpand = list.getAttribute(
-      "data-hide-list-button-after-expand"
+      "data-hide-list-button-after-expand",
     );
 
     listShowMoreButton.addEventListener("click", () => {

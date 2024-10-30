@@ -32,7 +32,7 @@ export const Button: React.FC<ButtonProps> = ({
         getVariant(variant),
         getSize(size),
         "arrow__hover--right-small",
-        classNames
+        classNames,
       )}
       disabled={disabled}
       onClick={onClick}

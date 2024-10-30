@@ -31,7 +31,7 @@ const DisclosureControllable: React.FunctionComponent<
         toggleOpen();
       }
     },
-    [toggleOpen]
+    [toggleOpen],
   );
 
   const disclosureId = `disclosure-${id}`;

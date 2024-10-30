@@ -31,7 +31,7 @@ export const TagButton = ({
         (hasBackground || selected) && "tag--fill",
         usesCursor && "cursor-pointer",
         `tag--${size}`,
-        className
+        className,
       )}
     >
       {children}

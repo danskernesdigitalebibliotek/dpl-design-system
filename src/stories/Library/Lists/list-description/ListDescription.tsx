@@ -24,7 +24,7 @@ const ListDescription: React.FC<{ data: ListData; className?: string }> = ({
             <dd
               className={clsx(
                 "list-description__value",
-                layout === "column" && "list-description__value--column"
+                layout === "column" && "list-description__value--column",
               )}
             >
               {type === "standard" &&
