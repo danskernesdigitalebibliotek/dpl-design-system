@@ -31,6 +31,6 @@ const Dialog = forwardRef<HTMLDialogElement, DialogType>(
         {children}
       </dialog>
     );
-  }
+  },
 );
 export default Dialog;

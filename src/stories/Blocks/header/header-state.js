@@ -26,7 +26,7 @@ function desktopLinksContainerCheckSize() {
 function initHeaderState() {
   // Finds the node with class 'header__menu-navigation' which is not initialized.
   const desktopLinks = document.querySelector(
-    ".header__menu-navigation:not(.is-header-initialized)"
+    ".header__menu-navigation:not(.is-header-initialized)",
   );
 
   // If the desktop links exist, check their size
