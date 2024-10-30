@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   staticDirs: ["../public"],
 
   addons: [
@@ -10,6 +10,7 @@ module.exports = {
     "@storybook/addon-designs",
     "@storybook/addon-a11y",
   ],
+
   typescript: {
     check: true,
     checkOptions: {},
