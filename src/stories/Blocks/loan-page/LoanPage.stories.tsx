@@ -1,11 +1,11 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
+
 import LoanPage, { LoanPageProps } from "./LoanPage";
 
 export default {
   title: "Blocks / Loan Page",
   component: LoanPage,
-  decorators: [withDesign],
+
   argTypes: {
     headline: {
       name: "Headline",
@@ -41,7 +41,7 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof LoanPage> = (args: LoanPageProps) => (
+const Template: StoryFn<typeof LoanPage> = (args: LoanPageProps) => (
   <LoanPage {...args} />
 );
 

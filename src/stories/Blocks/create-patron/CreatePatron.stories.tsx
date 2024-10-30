@@ -1,11 +1,11 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
+
 import CreatePatron, { CreatePatronProps } from "./CreatePatron";
 
 export default {
   title: "Blocks / Create Patron",
   component: CreatePatron,
-  decorators: [withDesign],
+
   argTypes: {
     headline: {
       name: "Title",
@@ -21,8 +21,8 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof CreatePatron> = (
-  args: CreatePatronProps
-) => <CreatePatron {...args} />;
+const Template: StoryFn<typeof CreatePatron> = (args: CreatePatronProps) => (
+  <CreatePatron {...args} />
+);
 
 export const Default = Template.bind({});

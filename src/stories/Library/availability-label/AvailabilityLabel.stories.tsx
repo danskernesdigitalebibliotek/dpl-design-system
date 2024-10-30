@@ -1,12 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
 
 import AvailabilityLabel from "./AvailabilityLabel";
 
 export default {
   title: "Library / Availability Label",
   component: AvailabilityLabel,
-  decorators: [withDesign],
+
   argTypes: {
     manifestationType: {
       name: "Manifestation Type",
@@ -33,9 +32,9 @@ export default {
     },
   },
   parameters: {},
-} as ComponentMeta<typeof AvailabilityLabel>;
+} as Meta<typeof AvailabilityLabel>;
 
-const Template: ComponentStory<typeof AvailabilityLabel> = (args) => (
+const Template: StoryFn<typeof AvailabilityLabel> = (args) => (
   <AvailabilityLabel {...args} />
 );
 

@@ -1,5 +1,5 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
+
 import clsx from "clsx";
 import { Autosuggest, AutosuggestProps } from "./Autosuggest";
 import AutosuggestMaterialStories from "../../Library/autosuggest-material/AutosuggestMaterial.stories";
@@ -9,7 +9,7 @@ import { autosuggestMaterialSuggestions } from "../../Library/autosuggest-materi
 export default {
   title: "Blocks / Autosuggest",
   component: Autosuggest,
-  decorators: [withDesign],
+
   argTypes: {
     ...AutosuggestMaterialStories.argTypes,
     ...AutosuggestTextStories.argTypes,
@@ -22,9 +22,7 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof Autosuggest> = (
-  args: AutosuggestProps
-) => (
+const Template: StoryFn<typeof Autosuggest> = (args: AutosuggestProps) => (
   // Inline styling should be avoided, but this is not really a part of the
   // component - rather, a fix, to make sure the autosuggests look correct,
   // even when they're not in the menu structure.

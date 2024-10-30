@@ -1,12 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-
 import { StoryBaseType } from "../../../types/StorybookHelpers";
 import { Breadcrumb as BreadcrumbComp, BreadcrumbProps } from "./Breadcrumb";
 
 const StoryBase: StoryBaseType<BreadcrumbProps> = {
   title: "Library / Breadcrumb",
   component: BreadcrumbComp,
-  decorators: [withDesign],
+
   argTypes: {
     items: {
       defaultValue: [

@@ -1,15 +1,14 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import { Review as ReviewsComp } from "./Review";
 
 export default {
   title: "Library / Review",
   component: ReviewsComp,
-  decorators: [withDesign],
   argTypes: {
     numberOfReviews: {
       defaultValue: 1,
-      control: { type: null },
+      control: { type: "number" },
     },
     meta: {
       defaultValue: "Berlingske tidende, 2021.03.19",
@@ -42,9 +41,9 @@ export default {
       url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=1030%3A16233",
     },
   },
-} as ComponentMeta<typeof ReviewsComp>;
+} as Meta<typeof ReviewsComp>;
 
-const Template: ComponentStory<typeof ReviewsComp> = (args) => {
+const Template: StoryFn<typeof ReviewsComp> = (args) => {
   return <ReviewsComp {...args} />;
 };
 

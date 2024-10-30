@@ -1,12 +1,11 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 
 import { ModalPause } from "./ModalPause";
 
 export default {
   title: "Library / Modals / Pause",
   component: ModalPause,
-  decorators: [withDesign],
+
   argTypes: {},
   parameters: {
     design: {
@@ -14,11 +13,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2137%3A14335",
     },
   },
-} as ComponentMeta<typeof ModalPause>;
+} as Meta<typeof ModalPause>;
 
-const Template: ComponentStory<typeof ModalPause> = (args) => (
-  <ModalPause {...args} />
-);
+const Template: StoryFn<typeof ModalPause> = (args) => <ModalPause {...args} />;
 
 export const Pause = Template.bind({});
 Pause.args = {

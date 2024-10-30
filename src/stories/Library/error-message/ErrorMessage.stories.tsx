@@ -1,17 +1,16 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
 
 import { ErrorMessage } from "./ErrorMessage";
 
 export default {
   title: "Library / Error Message",
   component: ErrorMessage,
-  decorators: [withDesign],
+
   argTypes: {},
   parameters: {},
-} as ComponentMeta<typeof ErrorMessage>;
+} as Meta<typeof ErrorMessage>;
 
-const Template: ComponentStory<typeof ErrorMessage> = (args) => (
+const Template: StoryFn<typeof ErrorMessage> = (args) => (
   <ErrorMessage {...args} />
 );
 

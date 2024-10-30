@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import ToggleButton from "./ToggleButton";
 
 export default {
   title: "Library / Toggle button",
   component: ToggleButton,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -18,9 +18,9 @@ export default {
       defaultValue: false,
     },
   },
-} as ComponentMeta<typeof ToggleButton>;
+} as Meta<typeof ToggleButton>;
 
-const Template: ComponentStory<typeof ToggleButton> = (args) => (
+const Template: StoryFn<typeof ToggleButton> = (args) => (
   <ToggleButton {...args} />
 );
 

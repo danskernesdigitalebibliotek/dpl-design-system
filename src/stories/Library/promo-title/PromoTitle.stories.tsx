@@ -1,5 +1,5 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
+
 import { PromoTitle } from "./PromoTitle";
 
 type PromoTitleProps = typeof PromoTitle;
@@ -7,7 +7,7 @@ type PromoTitleProps = typeof PromoTitle;
 export default {
   title: "Library / PromoTitle",
   component: PromoTitle,
-  decorators: [withDesign],
+
   argTypes: {
     libraryName: {
       defaultValue: "Hjørring",
@@ -24,9 +24,7 @@ export default {
   },
 };
 
-const Template: ComponentStory<PromoTitleProps> = (args) => (
-  <PromoTitle {...args} />
-);
+const Template: StoryFn<PromoTitleProps> = (args) => <PromoTitle {...args} />;
 
 export const Wide = Template.bind({});
 

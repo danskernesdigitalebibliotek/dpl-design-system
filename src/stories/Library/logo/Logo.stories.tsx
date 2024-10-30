@@ -1,4 +1,4 @@
-import { ComponentStory } from "@storybook/react";
+import { StoryFn } from "@storybook/react";
 import Logo, { LogoProps } from "./Logo";
 
 export default {
@@ -13,9 +13,7 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof Logo> = (args: LogoProps) => (
-  <Logo {...args} />
-);
+const Template: StoryFn<typeof Logo> = (args: LogoProps) => <Logo {...args} />;
 
 export const LogoWithImage = Template.bind({});
 LogoWithImage.args = {

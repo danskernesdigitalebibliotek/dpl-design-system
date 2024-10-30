@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
 import SearchFullText from "./SearchFullText";
 
@@ -12,10 +12,8 @@ export default {
     },
     layout: "fullscreen",
   },
-} as ComponentMeta<typeof SearchFullText>;
+} as Meta<typeof SearchFullText>;
 
-const Template: ComponentStory<typeof SearchFullText> = () => (
-  <SearchFullText />
-);
+const Template: StoryFn<typeof SearchFullText> = () => <SearchFullText />;
 
 export const Default = Template.bind({});

@@ -1,5 +1,5 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import NavGrid from "./NavGrid";
 import NavTeaser from "../nav-teaser/NavTeaser";
 
@@ -13,7 +13,7 @@ const teaser = (
 export default {
   title: "Library / Nav grid ('Navigationskomponent')",
   component: NavGrid,
-  decorators: [withDesign],
+
   argTypes: {
     title: {
       defaultValue: "Nyheder",
@@ -33,11 +33,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=434-6449&mode=design&t=BnLo07eCsytFa8Ik-4",
     },
   },
-} as ComponentMeta<typeof NavGrid>;
+} as Meta<typeof NavGrid>;
 
-const Template: ComponentStory<typeof NavGrid> = (args) => (
-  <NavGrid {...args} />
-);
+const Template: StoryFn<typeof NavGrid> = (args) => <NavGrid {...args} />;
 
 const One = Template.bind({});
 

@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import Disclosure, { DisclosureProps } from "./Disclosure";
 
 export default {
   title: "Library / Disclosure",
   component: Disclosure,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -45,9 +45,9 @@ export default {
       control: { type: "boolean" },
     },
   },
-} as ComponentMeta<typeof Disclosure>;
+} as Meta<typeof Disclosure>;
 
-const Template: ComponentStory<typeof Disclosure> = (args: DisclosureProps) => (
+const Template: StoryFn<typeof Disclosure> = (args: DisclosureProps) => (
   <Disclosure {...args} />
 );
 

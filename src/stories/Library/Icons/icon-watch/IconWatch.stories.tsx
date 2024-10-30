@@ -1,13 +1,11 @@
 import { Meta } from "@storybook/react";
 
-import { withDesign } from "storybook-addon-designs";
-
 import { IconWatch as IconWatchComp } from "./IconWatch";
 
 const StoryBase: Meta = {
   title: "Library / Icons / Watch",
   component: IconWatchComp,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",

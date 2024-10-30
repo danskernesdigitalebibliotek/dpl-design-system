@@ -1,16 +1,16 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import { Multiselect as MultiselectComp } from "./Multiselect";
 
 export default {
   title: "Library / Dropdown / Multiselect",
   component: MultiselectComp,
-  decorators: [withDesign],
+
   argTypes: {
     options: {
       defaultValue: ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"],
       control: {
-        type: "array",
+        type: "object",
       },
     },
     isOpen: {
@@ -33,9 +33,9 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof MultiselectComp>;
+} as Meta<typeof MultiselectComp>;
 
-const Template: ComponentStory<typeof MultiselectComp> = (args) => (
+const Template: StoryFn<typeof MultiselectComp> = (args) => (
   <MultiselectComp {...args} />
 );
 
