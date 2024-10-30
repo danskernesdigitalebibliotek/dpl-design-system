@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import DateCalendar from "./DateCalendar";
 
 export default {
   title: "Library / DateCalendar",
   component: DateCalendar,
-  decorators: [withDesign],
+
   argTypes: {},
   parameters: {
     design: {
@@ -14,8 +14,8 @@ export default {
     },
     layout: "padded",
   },
-} as ComponentMeta<typeof DateCalendar>;
+} as Meta<typeof DateCalendar>;
 
-const Template: ComponentStory<typeof DateCalendar> = () => <DateCalendar />;
+const Template: StoryFn<typeof DateCalendar> = () => <DateCalendar />;
 
 export const Default = Template.bind({});

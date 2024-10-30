@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import { RadioDrupal } from "./RadioDrupal";
 
 export default {
   title: "Library / Forms / Radio",
   component: RadioDrupal,
-  decorators: [withDesign],
+
   argTypes: {
     legend: {
       control: {
@@ -23,9 +23,9 @@ export default {
   parameters: {
     layout: "centered",
   },
-} as ComponentMeta<typeof RadioDrupal>;
+} as Meta<typeof RadioDrupal>;
 
-const Template: ComponentStory<typeof RadioDrupal> = (args) => (
+const Template: StoryFn<typeof RadioDrupal> = (args) => (
   <RadioDrupal {...args} />
 );
 

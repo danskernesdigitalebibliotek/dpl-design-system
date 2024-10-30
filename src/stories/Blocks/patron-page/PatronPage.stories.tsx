@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import PatronPage from "./PatronPage";
 
 export default {
@@ -17,9 +17,9 @@ export default {
       defaultValue: false,
     },
   },
-} as ComponentMeta<typeof PatronPage>;
+} as Meta<typeof PatronPage>;
 
-const Template: ComponentStory<typeof PatronPage> = (args) => {
+const Template: StoryFn<typeof PatronPage> = (args) => {
   return <PatronPage {...args} />;
 };
 

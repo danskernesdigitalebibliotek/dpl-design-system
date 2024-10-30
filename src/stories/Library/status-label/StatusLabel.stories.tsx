@@ -1,18 +1,18 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import { StatusLabel } from "./StatusLabel";
 
 export default {
   title: "Library / Status Label",
   component: StatusLabel,
-  decorators: [withDesign],
+
   argTypes: {},
   parameters: {
     layout: "centered",
   },
-} as ComponentMeta<typeof StatusLabel>;
+} as Meta<typeof StatusLabel>;
 
-const Template: ComponentStory<typeof StatusLabel> = (args) => (
+const Template: StoryFn<typeof StatusLabel> = (args) => (
   <StatusLabel {...args} />
 );
 

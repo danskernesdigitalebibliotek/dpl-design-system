@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import Heading from "./Heading";
 
 export default {
@@ -21,11 +21,9 @@ export default {
   },
 
   parameters: {},
-} as ComponentMeta<typeof Heading>;
+} as Meta<typeof Heading>;
 
-const Template: ComponentStory<typeof Heading> = (args) => (
-  <Heading {...args} />
-);
+const Template: StoryFn<typeof Heading> = (args) => <Heading {...args} />;
 
 export const H2 = Template.bind({});
 H2.args = {

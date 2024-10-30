@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import MediaContainer from "./MediaContainer";
 import ImageCredited from "../image-credited/ImageCredited";
 
@@ -21,9 +21,9 @@ export default {
       type: "string",
     },
   },
-} as ComponentMeta<typeof MediaContainer>;
+} as Meta<typeof MediaContainer>;
 
-const Template: ComponentStory<typeof MediaContainer> = (args) => (
+const Template: StoryFn<typeof MediaContainer> = (args) => (
   <MediaContainer {...args} />
 );
 

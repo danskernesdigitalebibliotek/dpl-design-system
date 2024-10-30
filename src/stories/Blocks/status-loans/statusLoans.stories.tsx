@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { StatusLoans as StatusLoansComp } from "./statusLoans";
 
 export default {
@@ -39,9 +39,9 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof StatusLoansComp>;
+} as Meta<typeof StatusLoansComp>;
 
-const Template: ComponentStory<typeof StatusLoansComp> = (args) => (
+const Template: StoryFn<typeof StatusLoansComp> = (args) => (
   <StatusLoansComp {...args} />
 );
 

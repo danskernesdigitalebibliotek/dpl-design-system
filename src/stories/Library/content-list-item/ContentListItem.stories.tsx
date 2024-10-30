@@ -1,12 +1,12 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import { ContentListItem } from "./ContentListItem";
 import ImageCredited from "../image-credited/ImageCredited";
 
 export default {
   title: "Library / Content List Item",
   component: ContentListItem,
-  decorators: [withDesign],
+
   argTypes: {
     tagText: {
       defaultValue: "Foredrag",
@@ -58,9 +58,9 @@ export default {
     },
     layout: "full",
   },
-} as ComponentMeta<typeof ContentListItem>;
+} as Meta<typeof ContentListItem>;
 
-const Template: ComponentStory<typeof ContentListItem> = (args) => (
+const Template: StoryFn<typeof ContentListItem> = (args) => (
   <ContentListItem {...args} />
 );
 

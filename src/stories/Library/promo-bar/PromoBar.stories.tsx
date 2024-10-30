@@ -1,12 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
 
 import PromoBar from "./PromoBar";
 
 export default {
   title: "Library / PromoBar",
   component: PromoBar,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -39,11 +38,9 @@ export default {
       defaultValue: false,
     },
   },
-} as ComponentMeta<typeof PromoBar>;
+} as Meta<typeof PromoBar>;
 
-const Template: ComponentStory<typeof PromoBar> = (args) => (
-  <PromoBar {...args} />
-);
+const Template: StoryFn<typeof PromoBar> = (args) => <PromoBar {...args} />;
 
 export const defaultPromoBar = Template.bind({});
 defaultPromoBar.args = {

@@ -1,5 +1,4 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
 
 import { Dropdown as DropdownComp } from "./Dropdown";
 
@@ -8,7 +7,7 @@ type DropdownProps = typeof DropdownComp;
 export default {
   title: "Library / Dropdown",
   component: DropdownComp,
-  decorators: [withDesign],
+
   argTypes: {
     arrowIcon: {
       defaultValue: "triangles",
@@ -23,9 +22,7 @@ export default {
   },
 };
 
-const Template: ComponentStory<DropdownProps> = (args) => (
-  <DropdownComp {...args} />
-);
+const Template: StoryFn<DropdownProps> = (args) => <DropdownComp {...args} />;
 
 const list = [
   {

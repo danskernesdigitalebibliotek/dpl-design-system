@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import FilteredEventList from "./FilteredEventlist";
 import FilteredListData from "./FilteredEventListData";
 
@@ -34,9 +34,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=7567-80202&mode=design&t=eZs7Tgx4a1ebZQiO-4",
     },
   },
-} as ComponentMeta<typeof FilteredEventList>;
+} as Meta<typeof FilteredEventList>;
 
-const Template: ComponentStory<typeof FilteredEventList> = (args) => (
+const Template: StoryFn<typeof FilteredEventList> = (args) => (
   <FilteredEventList {...args} />
 );
 

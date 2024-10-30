@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import Campaign, { CampaignProps } from "./Campaign";
 
 export default {
   title: "Library / Campaign",
   component: Campaign,
-  decorators: [withDesign],
+
   argTypes: {
     title: {
       control: { type: "text" },
@@ -34,9 +34,9 @@ export default {
       url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4525%3A14602",
     },
   },
-} as ComponentMeta<typeof Campaign>;
+} as Meta<typeof Campaign>;
 
-const Template: ComponentStory<typeof Campaign> = (args: CampaignProps) => (
+const Template: StoryFn<typeof Campaign> = (args: CampaignProps) => (
   <Campaign {...args} />
 );
 

@@ -1,17 +1,16 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
 
 import { StatusMessage } from "./StatusMessage";
 
 export default {
   title: "Library / Status Message",
   component: StatusMessage,
-  decorators: [withDesign],
+
   argTypes: {},
   parameters: {},
-} as ComponentMeta<typeof StatusMessage>;
+} as Meta<typeof StatusMessage>;
 
-const Template: ComponentStory<typeof StatusMessage> = (args) => (
+const Template: StoryFn<typeof StatusMessage> = (args) => (
   <StatusMessage {...args} />
 );
 

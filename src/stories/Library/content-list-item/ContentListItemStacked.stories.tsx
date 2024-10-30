@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import ContentListItemStacked from "./ContentListItemStacked";
 
 export default {
   title: "Library / Content List Item Stacked",
   component: ContentListItemStacked,
-  decorators: [withDesign],
+
   argTypes: {
     title: {
       defaultValue: "Hidden Title",
@@ -31,9 +31,9 @@ export default {
     },
     layout: "full",
   },
-} as ComponentMeta<typeof ContentListItemStacked>;
+} as Meta<typeof ContentListItemStacked>;
 
-const Template: ComponentStory<typeof ContentListItemStacked> = (args) => (
+const Template: StoryFn<typeof ContentListItemStacked> = (args) => (
   <ContentListItemStacked {...args} />
 );
 

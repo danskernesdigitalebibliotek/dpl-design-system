@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import NavTeaser from "./NavTeaser";
 
 export default {
   title: "Library / Nav teaser",
   component: NavTeaser,
-  decorators: [withDesign],
+
   argTypes: {
     title: {
       defaultValue: "Læseklub for børn",
@@ -21,11 +21,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=434-6449&mode=design&t=BnLo07eCsytFa8Ik-4",
     },
   },
-} as ComponentMeta<typeof NavTeaser>;
+} as Meta<typeof NavTeaser>;
 
-const Template: ComponentStory<typeof NavTeaser> = (args) => (
-  <NavTeaser {...args} />
-);
+const Template: StoryFn<typeof NavTeaser> = (args) => <NavTeaser {...args} />;
 
 const Teaser = Template.bind({});
 

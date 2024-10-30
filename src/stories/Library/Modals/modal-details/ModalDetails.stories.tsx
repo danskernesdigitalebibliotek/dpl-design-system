@@ -1,12 +1,11 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 
 import { ModalDetails } from "./ModalDetails";
 
 export default {
   title: "Library / Modals / Details",
   component: ModalDetails,
-  decorators: [withDesign],
+
   argTypes: {},
   parameters: {
     design: {
@@ -14,9 +13,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2146%3A13292",
     },
   },
-} as ComponentMeta<typeof ModalDetails>;
+} as Meta<typeof ModalDetails>;
 
-const Template: ComponentStory<typeof ModalDetails> = (args) => (
+const Template: StoryFn<typeof ModalDetails> = (args) => (
   <ModalDetails {...args} />
 );
 

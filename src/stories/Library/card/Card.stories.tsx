@@ -1,12 +1,12 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import Card from "./Card";
 import CardImages from "./CardImages";
 
 export default {
   title: "Library / Card ('news card')",
   component: Card,
-  decorators: [withDesign],
+
   argTypes: {
     variant: {
       // Disabling controls, as the different variations are added already.
@@ -51,9 +51,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=1968-8159&mode=design&t=8uX61DMzCXLhbNod-4",
     },
   },
-} as ComponentMeta<typeof Card>;
+} as Meta<typeof Card>;
 
-const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
+const Template: StoryFn<typeof Card> = (args) => <Card {...args} />;
 
 const XLarge = Template.bind({});
 
