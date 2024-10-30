@@ -1,12 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
 
 import { Header as HeaderComp, HeaderProps } from "./Header";
 
 export default {
   title: "Blocks / Header",
   component: HeaderComp,
-  decorators: [withDesign],
+
   argTypes: {
     signedIn: {
       defaultValue: false,
@@ -30,9 +29,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=264%3A2160",
     },
   },
-} as ComponentMeta<typeof HeaderComp>;
+} as Meta<typeof HeaderComp>;
 
-export const Header: ComponentStory<typeof HeaderComp> = (args) => (
+export const Header: StoryFn<typeof HeaderComp> = (args) => (
   <HeaderComp {...args} />
 );
 

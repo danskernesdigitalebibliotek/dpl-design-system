@@ -1,11 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import Reservation from "./Reservation";
 
 export default {
   title: "Library / Modals / Reservation",
   component: Reservation,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -46,9 +45,9 @@ export default {
       defaultValue: false,
     },
   },
-} as ComponentMeta<typeof Reservation>;
+} as Meta<typeof Reservation>;
 
-const Template: ComponentStory<typeof Reservation> = (args) => {
+const Template: StoryFn<typeof Reservation> = (args) => {
   return <Reservation {...args} />;
 };
 

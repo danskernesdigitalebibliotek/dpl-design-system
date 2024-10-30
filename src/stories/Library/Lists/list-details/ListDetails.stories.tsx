@@ -1,12 +1,11 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 
 import { ListDetails } from "./ListDetails";
 
 export default {
   title: "Library / Lists / Details",
   component: ListDetails,
-  decorators: [withDesign],
+
   argTypes: {},
   parameters: {
     design: {
@@ -14,9 +13,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1385%3A8923",
     },
   },
-} as ComponentMeta<typeof ListDetails>;
+} as Meta<typeof ListDetails>;
 
-const Template: ComponentStory<typeof ListDetails> = (args) => (
+const Template: StoryFn<typeof ListDetails> = (args) => (
   <ListDetails {...args} />
 );
 

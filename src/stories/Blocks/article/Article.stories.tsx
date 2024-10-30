@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import Article from "./Article";
 
 export default {
   title: "Blocks / Article page",
   component: Article,
-  decorators: [withDesign],
+
   argTypes: {
     title: {
       defaultValue: "Jesper Stein vinder Læsernes Bogpris for Rampen’",
@@ -40,10 +40,8 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=7477%3A39048&mode=dev",
     },
   },
-} as ComponentMeta<typeof Article>;
+} as Meta<typeof Article>;
 
-const Template: ComponentStory<typeof Article> = (args) => (
-  <Article {...args} />
-);
+const Template: StoryFn<typeof Article> = (args) => <Article {...args} />;
 
 export const Default = Template.bind({});

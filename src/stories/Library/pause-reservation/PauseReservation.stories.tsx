@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import { PauseReservation } from "./PauseReservation";
 
 export default {
   title: "Library / Pause reservation",
   component: PauseReservation,
-  decorators: [withDesign],
+
   argTypes: {
     isChecked: {
       defaultValue: true,
@@ -29,9 +29,9 @@ export default {
       url: "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=607%3A35282",
     },
   },
-} as ComponentMeta<typeof PauseReservation>;
+} as Meta<typeof PauseReservation>;
 
-const Template: ComponentStory<typeof PauseReservation> = (args) => (
+const Template: StoryFn<typeof PauseReservation> = (args) => (
   <PauseReservation {...args} />
 );
 

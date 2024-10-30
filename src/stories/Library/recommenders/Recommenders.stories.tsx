@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import Recommender from "./Recommenders";
 
 export default {
@@ -51,13 +51,13 @@ export default {
       ],
     },
   },
-} as ComponentMeta<typeof Recommender>;
+} as Meta<typeof Recommender>;
 
-const RecommenderMC: ComponentStory<typeof Recommender> = (args) => (
+const RecommenderMC: StoryFn<typeof Recommender> = (args) => (
   <Recommender {...args} />
 );
 
-const SomethingSimilarMC: ComponentStory<typeof Recommender> = (args) => (
+const SomethingSimilarMC: StoryFn<typeof Recommender> = (args) => (
   <Recommender {...args} />
 );
 

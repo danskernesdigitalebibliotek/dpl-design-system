@@ -1,11 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { ListMaterials } from "./ListMaterials";
 
 export default {
   title: "Library / Lists / Materials",
   component: ListMaterials,
-  decorators: [withDesign],
+
   // We disable the isChecked control, since it is not possible to
   // get the states from the React component to work with Storybook controls.
   argTypes: {
@@ -21,9 +20,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1385%3A8204",
     },
   },
-} as ComponentMeta<typeof ListMaterials>;
+} as Meta<typeof ListMaterials>;
 
-const Template: ComponentStory<typeof ListMaterials> = (args) => (
+const Template: StoryFn<typeof ListMaterials> = (args) => (
   <ul>
     <ListMaterials {...args} />
   </ul>

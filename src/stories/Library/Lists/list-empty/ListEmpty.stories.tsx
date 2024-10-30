@@ -1,11 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import ListEmpty from "./ListEmpty";
 
 export default {
   title: "Library / Lists / List - empty",
   component: ListEmpty,
-  decorators: [withDesign],
+
   argTypes: {
     text: {
       defaultValue: "Du har i øjeblikket 0 Reserveringer",
@@ -32,10 +31,8 @@ export default {
     },
     layout: "fullscreen",
   },
-} as ComponentMeta<typeof ListEmpty>;
+} as Meta<typeof ListEmpty>;
 
-const Template: ComponentStory<typeof ListEmpty> = (props) => (
-  <ListEmpty {...props} />
-);
+const Template: StoryFn<typeof ListEmpty> = (props) => <ListEmpty {...props} />;
 
 export const ListEmptyExample = Template.bind({});

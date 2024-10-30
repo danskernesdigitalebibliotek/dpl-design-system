@@ -1,12 +1,11 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import MaterialPage from "./MaterialPage";
 import MaterialPageSkeleton from "./MaterialPageSkeleton";
 
 export default {
   title: "Blocks / Material Page",
   component: MaterialPage,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -30,9 +29,9 @@ export default {
       control: { type: "text" },
     },
   },
-} as ComponentMeta<typeof MaterialPage>;
+} as Meta<typeof MaterialPage>;
 
-const Template: ComponentStory<typeof MaterialPage> = (args) => {
+const Template: StoryFn<typeof MaterialPage> = (args) => {
   return <MaterialPage {...args} />;
 };
 
@@ -46,6 +45,6 @@ Item.args = {
     "Stormandssønnen Arn får hos cisterciensermunkene i Sverige og Danmark den bedste uddannelse, der findes i middelalderens Europa. Men hans lærere aner, at han ikke er bestemt til at være klosterbroder og vil gøre bedre fyldest som Kristi strids... ",
 };
 
-export const SkeletonVersion: ComponentStory<
-  typeof MaterialPageSkeleton
-> = () => <MaterialPageSkeleton />;
+export const SkeletonVersion: StoryFn<typeof MaterialPageSkeleton> = () => (
+  <MaterialPageSkeleton />
+);

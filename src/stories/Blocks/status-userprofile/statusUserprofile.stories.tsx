@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { StatusUserprofile as StatusUserprofileComp } from "./statusUserprofile";
 
 export default {
@@ -101,9 +101,9 @@ export default {
       ],
     },
   },
-} as ComponentMeta<typeof StatusUserprofileComp>;
+} as Meta<typeof StatusUserprofileComp>;
 
-const Template: ComponentStory<typeof StatusUserprofileComp> = (args) => (
+const Template: StoryFn<typeof StatusUserprofileComp> = (args) => (
   <StatusUserprofileComp {...args} />
 );
 

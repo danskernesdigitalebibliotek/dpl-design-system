@@ -1,12 +1,11 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
 
 import Tag, { TagProps } from "./Tag";
 
 export default {
   title: "Library / Tag / Tag",
   component: Tag,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -26,9 +25,7 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof Tag> = (args: TagProps) => (
-  <Tag {...args} />
-);
+const Template: StoryFn<typeof Tag> = (args: TagProps) => <Tag {...args} />;
 export const Default = Template.bind({});
 Default.args = {};
 

@@ -1,4 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
 import { Meta } from "@storybook/react";
 
 import { Shadows } from "./Shadows";
@@ -6,7 +5,7 @@ import { Shadows } from "./Shadows";
 export default {
   title: "Library / Shadows",
   component: Shadows,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",

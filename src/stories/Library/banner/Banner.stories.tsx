@@ -1,11 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import Banner from "./Banner";
 
 export default {
   title: "Library / Banner",
   component: Banner,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -34,9 +34,9 @@ export default {
       control: { type: "text" },
     },
   },
-} as ComponentMeta<typeof Banner>;
+} as Meta<typeof Banner>;
 
-const Template: ComponentStory<typeof Banner> = (args) => <Banner {...args} />;
+const Template: StoryFn<typeof Banner> = (args) => <Banner {...args} />;
 
 export const Default = Template.bind({});
 

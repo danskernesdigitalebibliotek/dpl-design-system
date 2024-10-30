@@ -1,12 +1,12 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import HeroLink from "./HeroLink";
 import ImageCredited from "../../image-credited/ImageCredited";
 
 export default {
   title: "Library / Hero with link",
   component: HeroLink,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -54,10 +54,8 @@ export default {
       control: { type: "text" },
     },
   },
-} as ComponentMeta<typeof HeroLink>;
+} as Meta<typeof HeroLink>;
 
-const Template: ComponentStory<typeof HeroLink> = (args) => (
-  <HeroLink {...args} />
-);
+const Template: StoryFn<typeof HeroLink> = (args) => <HeroLink {...args} />;
 
 export const Default = Template.bind({});

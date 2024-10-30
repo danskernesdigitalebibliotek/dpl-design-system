@@ -1,5 +1,4 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
 
 import { TagButton as TagComp } from "./TagButton";
 
@@ -8,7 +7,7 @@ type TagProps = typeof TagComp;
 export default {
   title: "Library / Tag / Tag button",
   component: TagComp,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -32,7 +31,7 @@ export default {
   },
 };
 
-export const Tag: ComponentStory<TagProps> = (args) => (
+export const Tag: StoryFn<TagProps> = (args) => (
   <TagComp {...args}>Vi anbefaler</TagComp>
 );
 Tag.args = {
@@ -40,7 +39,7 @@ Tag.args = {
   hasBackground: true,
 };
 
-export const TagRemovable: ComponentStory<TagProps> = (args) => (
+export const TagRemovable: StoryFn<TagProps> = (args) => (
   <TagComp {...args}>Litteratur</TagComp>
 );
 TagRemovable.args = {
@@ -48,7 +47,7 @@ TagRemovable.args = {
   hasBackground: true,
 };
 
-export const facet: ComponentStory<TagProps> = (args) => (
+export const facet: StoryFn<TagProps> = (args) => (
   <TagComp {...args}>Skønlitteratur (96)</TagComp>
 );
 facet.args = {

@@ -1,16 +1,16 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import { MaterialBanner } from "./MaterialBanner";
 
 export default {
   title: "Blocks / Material Banner",
   component: MaterialBanner,
-  decorators: [withDesign],
+
   argTypes: {},
   parameters: {},
-} as ComponentMeta<typeof MaterialBanner>;
+} as Meta<typeof MaterialBanner>;
 
-const Template: ComponentStory<typeof MaterialBanner> = (args) => (
+const Template: StoryFn<typeof MaterialBanner> = (args) => (
   <MaterialBanner {...args} />
 );
 

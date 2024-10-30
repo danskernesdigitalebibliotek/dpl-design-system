@@ -1,11 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import InstantLoan from "./InstantLoan";
 
 export default {
   title: "Library / InstantLoan",
   component: InstantLoan,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -34,9 +33,9 @@ export default {
       type: "boolean",
     },
   },
-} as ComponentMeta<typeof InstantLoan>;
+} as Meta<typeof InstantLoan>;
 
-const Template: ComponentStory<typeof InstantLoan> = (args) => {
+const Template: StoryFn<typeof InstantLoan> = (args) => {
   return <InstantLoan {...args} />;
 };
 

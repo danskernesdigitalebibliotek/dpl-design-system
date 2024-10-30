@@ -1,12 +1,11 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 
 import { LinkFilters } from "./LinkFilters";
 
 export default {
   title: "Library / Links / Link filters",
   component: LinkFilters,
-  decorators: [withDesign],
+
   parameters: {
     design: {
       type: "figma",
@@ -14,9 +13,9 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof LinkFilters>;
+} as Meta<typeof LinkFilters>;
 
-const Template: ComponentStory<typeof LinkFilters> = (args) => (
+const Template: StoryFn<typeof LinkFilters> = (args) => (
   <LinkFilters {...args} />
 );
 

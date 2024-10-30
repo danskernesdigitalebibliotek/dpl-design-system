@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import SubmitButton from "./SubmitButton";
 
 export default {
   title: "Library / Forms / Submit Button",
   component: SubmitButton,
-  decorators: [withDesign],
+
   argTypes: {
     buttonText: {
       defaultValue: "Save changes",
@@ -18,9 +18,9 @@ export default {
     },
     layout: "padded",
   },
-} as ComponentMeta<typeof SubmitButton>;
+} as Meta<typeof SubmitButton>;
 
-const Template: ComponentStory<typeof SubmitButton> = (args) => (
+const Template: StoryFn<typeof SubmitButton> = (args) => (
   <div className="dpl-form">
     <SubmitButton {...args} />
   </div>

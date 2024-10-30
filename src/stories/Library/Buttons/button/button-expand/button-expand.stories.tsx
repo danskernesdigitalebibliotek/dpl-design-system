@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import ButtonExpand, { ButtonExpandProps } from "./ButtonExpand";
 
 export default {
@@ -19,11 +19,11 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof ButtonExpand>;
+} as Meta<typeof ButtonExpand>;
 
-const Template: ComponentStory<typeof ButtonExpand> = (
-  args: ButtonExpandProps
-) => <ButtonExpand {...args} />;
+const Template: StoryFn<typeof ButtonExpand> = (args: ButtonExpandProps) => (
+  <ButtonExpand {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {

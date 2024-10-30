@@ -1,12 +1,12 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import FavouritesList from "./FavoritesList";
 
 export default {
   title: "Blocks / Favourite List",
   component: FavouritesList,
-} as ComponentMeta<typeof FavouritesList>;
+} as Meta<typeof FavouritesList>;
 
-const Template: ComponentStory<typeof FavouritesList> = (args) => {
+const Template: StoryFn<typeof FavouritesList> = (args) => {
   return <FavouritesList {...args} />;
 };
 
