@@ -23,7 +23,7 @@ export type ListReservationsAndLoansProps = {
 };
 
 export const ListReservationsAndLoans = (
-  props: ListReservationsAndLoansProps
+  props: ListReservationsAndLoansProps,
 ) => {
   const { cover, isStacked, counter, statusLabel, statusNotes, fee } = props;
 
@@ -57,7 +57,7 @@ export const ListReservationsAndLoans = (
               aria-label="note about material"
               className={clsx(
                 "list-reservation__note list-reservation__note--desktop color-secondary-gray",
-                cover.noteAsWarning && "color-signal-alert"
+                cover.noteAsWarning && "color-signal-alert",
               )}
             >
               {cover.noteLabel}
@@ -90,7 +90,7 @@ export const ListReservationsAndLoans = (
                 href={cover.noteUrl}
                 className={clsx(
                   "list-reservation__note list-reservation__note--mobile color-secondary-gray",
-                  cover.noteAsWarning && "color-signal-alert"
+                  cover.noteAsWarning && "color-signal-alert",
                 )}
               >
                 {cover.noteLabel}

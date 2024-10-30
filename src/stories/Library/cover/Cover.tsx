@@ -25,7 +25,7 @@ const Cover: FC<CoverProps> = ({
       "cover",
       `cover--size-${coverDisplaySize}`,
       `cover--aspect-${coverDisplaySize}`,
-      imageLoaded || tintClasses[tint || "default"]
+      imageLoaded || tintClasses[tint || "default"],
     ),
   };
 
