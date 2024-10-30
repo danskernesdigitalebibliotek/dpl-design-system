@@ -31,7 +31,7 @@ export const LinkButton = ({
         getVariant(variant),
         getSize(size),
         "arrow__hover--right-small",
-        classNames
+        classNames,
       )}
     >
       {text}

@@ -27,8 +27,8 @@ const Recommender: React.FC<RecommenderProps> = ({
     <div
       className={`recommender ${padding ? "recommender--padding-desktop" : ""}
         ${triple ? "recommender--triple-desktop " : ""} ${
-        bright ? "recommender--bright" : ""
-      }`}
+          bright ? "recommender--bright" : ""
+        }`}
     >
       <h2
         className={`${

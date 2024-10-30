@@ -19,7 +19,7 @@ export const Links = ({
     {
       "link-tag": !excludeLinkTagClass,
     },
-    classNames
+    classNames,
   );
   return (
     <a {...(target ? { target } : {})} href={href} className={classes}>

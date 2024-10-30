@@ -25,7 +25,7 @@ export const Recommendation: React.FC<RecommendationProps> = ({
     <div
       className={clsx(
         "recommendation",
-        positionImageRight && "recommendation--reversed"
+        positionImageRight && "recommendation--reversed",
       )}
     >
       <div className="recommendation__material">

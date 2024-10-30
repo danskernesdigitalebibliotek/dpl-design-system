@@ -29,10 +29,7 @@ export const Header = ({
 }: HeaderProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(openDropdown);
 
-  useEffect(() => {
-    require("./header-sticky");
-    require("./header-state");
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <>
