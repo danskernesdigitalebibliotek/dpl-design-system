@@ -51,8 +51,8 @@ const OpeningHoursForm = () => {
         onChange={(e) => {
           setCategory(
             openingHoursCategories.find(
-              (item) => item.title === e.target.value
-            ) || openingHoursCategories[0]
+              (item) => item.title === e.target.value,
+            ) || openingHoursCategories[0],
           );
         }}
       >

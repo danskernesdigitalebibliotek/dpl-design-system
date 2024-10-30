@@ -55,7 +55,7 @@ export const StatusLoans = (props: StatusLoansProps) => {
                   outOf={outOf}
                   amount={amount}
                 />
-              )
+              ),
             )}
           </div>
         ))}

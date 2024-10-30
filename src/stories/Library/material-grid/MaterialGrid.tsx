@@ -30,7 +30,7 @@ export const MaterialGrid: React.FC<MaterialGridProps> = ({
 
   const [showAllMaterials, setShowAllMaterials] = useState(false);
   const [currentMaterialsDisplayed, setCurrentMaterialsDisplayed] = useState(
-    initialMaterialsToDisplay
+    initialMaterialsToDisplay,
   );
 
   const moreMaterialsThanInitialMaximum =

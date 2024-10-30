@@ -1,21 +1,21 @@
 window.addEventListener("load", () => {
   const sidebarNavToggle = document.getElementById(
-    "header-sidebar-nav__toggle"
+    "header-sidebar-nav__toggle",
   );
   const backgroundWrapper = document.querySelector(
-    ".header-sidebar-nav__background-wrapper"
+    ".header-sidebar-nav__background-wrapper",
   );
   const menu = document.querySelector(".header-sidebar-nav");
 
   const closeButton = document.getElementById(
-    "js-header-sidebar-nav__close-menu-button"
+    "js-header-sidebar-nav__close-menu-button",
   );
 
   const lastMenuItem = document.querySelector(
-    ".header-sidebar-nav  .header__menu-navigation li:last-child a"
+    ".header-sidebar-nav  .header__menu-navigation li:last-child a",
   );
   const menuWrapper = document.querySelector(
-    ".header-sidebar-nav__menu-wrapper"
+    ".header-sidebar-nav__menu-wrapper",
   );
 
   function toggleSidebarNav() {

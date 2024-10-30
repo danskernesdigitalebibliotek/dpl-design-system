@@ -17,7 +17,7 @@ const OpeningHoursWeekList: React.FC<OpeningHoursWeekListProps> = ({
           {
             day: "numeric",
             month: "2-digit",
-          }
+          },
         );
 
         return (

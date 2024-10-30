@@ -30,16 +30,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (scrollDirection === "down") {
       const headerHeight = document.querySelector(
-        headerContainerSelector
+        headerContainerSelector,
       ).offsetHeight;
       const headerDownTopPosition = headerHeight + headerDownTopPositionOffset;
-      document.querySelector(
-        headerContainerSelector
-      ).style.top = `-${headerDownTopPosition}px`;
+      document.querySelector(headerContainerSelector).style.top =
+        `-${headerDownTopPosition}px`;
     } else {
-      document.querySelector(
-        headerContainerSelector
-      ).style.top = `${headerYStartPosition}px`;
+      document.querySelector(headerContainerSelector).style.top =
+        `${headerYStartPosition}px`;
     }
   };
 

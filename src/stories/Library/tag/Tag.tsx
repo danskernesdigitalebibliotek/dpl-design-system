@@ -22,7 +22,7 @@ const Tag = ({
         "tag",
         hasBackground && "tag--fill",
         `tag--${size}`,
-        className
+        className,
       )}
     >
       {children}

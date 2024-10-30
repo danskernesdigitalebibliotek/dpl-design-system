@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
   const grids = document.querySelectorAll(
-    ".nav-grid--has-many:not(.is-initialized)"
+    ".nav-grid--has-many:not(.is-initialized)",
   );
 
   grids.forEach((grid) => {

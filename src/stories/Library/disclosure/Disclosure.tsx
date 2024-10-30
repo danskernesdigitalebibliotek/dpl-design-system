@@ -30,13 +30,13 @@ const Disclosure: React.FC<DisclosureProps> = ({
     <details
       className={clsx(
         "disclosure text-body-large",
-        fullWidth && "disclosure--full-width"
+        fullWidth && "disclosure--full-width",
       )}
     >
       <summary
         className={clsx(
           "disclosure__headline text-body-large",
-          removeHeadlinePadding && "disclosure__headline--no-padding"
+          removeHeadlinePadding && "disclosure__headline--no-padding",
         )}
         onClick={() => {
           setIsOpen(!isOpen);
