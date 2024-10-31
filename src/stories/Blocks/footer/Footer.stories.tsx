@@ -4,7 +4,6 @@ import Footer, { FooterType } from "./Footer";
 export default {
   title: "Blocks / Footer",
   component: Footer,
-
   parameters: {
     design: {
       type: "figma",

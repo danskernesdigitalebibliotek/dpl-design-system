@@ -5,7 +5,6 @@ import Banner from "./Banner";
 export default {
   title: "Library / Banner",
   component: Banner,
-
   parameters: {
     design: {
       type: "figma",
@@ -14,25 +13,27 @@ export default {
   },
   argTypes: {
     imageSrc: {
-      defaultValue: "images/campaign_cover.jpg",
       control: { type: "text" },
     },
     title: {
       name: "Title",
-      defaultValue: "Hvad skal jeg <u>høre?</u>",
       control: { type: "text" },
     },
     description: {
       name: "Description",
-      defaultValue:
-        "Om du er dedikeret musiknørd eller moderat musikinteresseret, så er dette siden til dig. Her kan du finde anbefalinger, digitale musikmagasiner, nyheder, musiklitteratur og meget mere.",
       control: { type: "text" },
     },
     link: {
       name: "Link",
-      defaultValue: "#",
       control: { type: "text" },
     },
+  },
+  args: {
+    imageSrc: "images/campaign_cover.jpg",
+    title: "Hvad skal jeg <u>høre?</u>",
+    description:
+      "Om du er dedikeret musiknørd eller moderat musikinteresseret, så er dette siden til dig. Her kan du finde anbefalinger, digitale musikmagasiner, nyheder, musiklitteratur og meget mere.",
+    link: "#",
   },
 } as Meta<typeof Banner>;
 

@@ -5,23 +5,21 @@ import { Button } from "./Button";
 export default {
   title: "Library / Buttons / Button",
   component: Button,
-
   argTypes: {
-    label: {
-      defaultValue: "Se hele kalenderen",
-    },
-    disabled: {
-      defaultValue: false,
-    },
-    collapsible: {
-      defaultValue: false,
-    },
-    size: {
-      defaultValue: "medium",
-    },
-    variant: {
-      defaultValue: "outline",
-    },
+    buttonType: { control: "select" },
+    label: { control: "text" },
+    disabled: { control: "boolean" },
+    collapsible: { control: "boolean" },
+    size: { control: "select" },
+    variant: { control: "select" },
+  },
+  args: {
+    buttonType: "none",
+    label: "Se hele kalenderen",
+    disabled: false,
+    collapsible: false,
+    size: "medium",
+    variant: "outline",
   },
   parameters: {
     design: {

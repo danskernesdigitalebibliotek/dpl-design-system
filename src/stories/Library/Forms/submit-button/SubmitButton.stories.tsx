@@ -5,11 +5,13 @@ import SubmitButton from "./SubmitButton";
 export default {
   title: "Library / Forms / Submit Button",
   component: SubmitButton,
-
   argTypes: {
     buttonText: {
-      defaultValue: "Save changes",
+      control: "text",
     },
+  },
+  args: {
+    buttonText: "Save changes",
   },
   parameters: {
     design: {

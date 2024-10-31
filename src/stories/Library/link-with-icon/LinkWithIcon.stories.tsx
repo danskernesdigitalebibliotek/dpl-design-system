@@ -5,21 +5,20 @@ import { LinkWithIcon } from "./LinkWithIcon";
 export default {
   title: "Library / Link with icon",
   component: LinkWithIcon,
-
   argTypes: {
-    href: {
-      defaultValue: "/",
-    },
-    linkText: {
-      defaultValue: "Følg prisoverrækkelsen live fra kl. 15:30",
-    },
+    href: {},
+    linkText: {},
     linkType: {
       control: {
         type: "select",
         options: ["internal", "external", "download", "search"],
       },
-      defaultValue: "internal",
     },
+  },
+  args: {
+    href: "/",
+    linkText: "Følg prisoverrækkelsen live fra kl. 15:30",
+    linkType: "internal",
   },
   parameters: {
     design: {

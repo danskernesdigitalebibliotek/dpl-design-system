@@ -5,7 +5,6 @@ import Disclosure, { DisclosureProps } from "./Disclosure";
 export default {
   title: "Library / Disclosure",
   component: Disclosure,
-
   parameters: {
     design: {
       type: "figma",
@@ -15,35 +14,37 @@ export default {
   argTypes: {
     headline: {
       name: "Headline",
-      defaultValue: "Headline",
       control: { type: "text" },
     },
     children: {
       name: "Headline",
-      defaultValue: "I am the content. Look at me!",
       control: { type: "text" },
     },
     icon: {
       name: "Icon name",
-      defaultValue: "Various",
       options: ["Various", "Receipt", "Create", "Profile"],
       control: { type: "select" },
     },
     contentPadding: {
       name: "Extra content padding",
-      defaultValue: false,
       control: { type: "boolean" },
     },
     withAvailability: {
       name: "Is with availability label?",
-      defaultValue: false,
       control: { disable: true },
     },
     fullWidth: {
       name: "Full width?",
-      defaultValue: false,
       control: { type: "boolean" },
     },
+  },
+  args: {
+    headline: "Headline",
+    children: "I am the content. Look at me!",
+    icon: "Various",
+    contentPadding: false,
+    withAvailability: false,
+    fullWidth: false,
   },
 } as Meta<typeof Disclosure>;
 

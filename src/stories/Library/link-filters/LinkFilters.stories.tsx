@@ -5,7 +5,6 @@ import { LinkFilters } from "./LinkFilters";
 export default {
   title: "Library / Links / Link filters",
   component: LinkFilters,
-
   parameters: {
     design: {
       type: "figma",

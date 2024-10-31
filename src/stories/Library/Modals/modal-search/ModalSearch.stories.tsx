@@ -5,7 +5,6 @@ import { ModalSearch } from "./ModalSearch";
 export default {
   title: "Library / Modals / Search",
   component: ModalSearch,
-
   argTypes: {},
   parameters: {
     design: {

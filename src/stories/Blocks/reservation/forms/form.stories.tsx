@@ -8,7 +8,6 @@ import Collect from "./Collect";
 export default {
   title: "Blocks / Reservation / Forms",
   component: Email,
-
   parameters: {
     design: {
       type: "figma",

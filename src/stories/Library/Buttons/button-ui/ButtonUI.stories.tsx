@@ -5,23 +5,19 @@ import { ButtonUI } from "./ButtonUI";
 export default {
   title: "Library / Buttons / Button",
   component: ButtonUI,
-
   argTypes: {
-    label: {
-      defaultValue: "Se hele kalenderen",
-    },
-    disabled: {
-      defaultValue: false,
-    },
-    collapsible: {
-      defaultValue: false,
-    },
-    size: {
-      defaultValue: "medium",
-    },
-    variant: {
-      defaultValue: "outline",
-    },
+    label: { control: "text" },
+    disabled: { control: "boolean" },
+    collapsible: { control: "boolean" },
+    size: { control: "select", options: ["small", "medium", "large"] },
+    variant: { control: "select", options: ["outline", "filled"] },
+  },
+  args: {
+    label: "Se hele kalenderen",
+    disabled: false,
+    collapsible: false,
+    size: "medium",
+    variant: "outline",
   },
   parameters: {
     design: {

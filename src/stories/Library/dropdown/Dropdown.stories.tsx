@@ -7,12 +7,6 @@ type DropdownProps = typeof DropdownComp;
 export default {
   title: "Library / Dropdown",
   component: DropdownComp,
-
-  argTypes: {
-    arrowIcon: {
-      defaultValue: "triangles",
-    },
-  },
   parameters: {
     design: {
       type: "figma",

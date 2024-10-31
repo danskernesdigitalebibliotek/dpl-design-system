@@ -5,28 +5,17 @@ import Campaign, { CampaignProps } from "./Campaign";
 export default {
   title: "Library / Campaign",
   component: Campaign,
-
   argTypes: {
-    title: {
-      control: { type: "text" },
-      defaultValue: "10 gode bøger om Venner & Veninder",
-    },
-    imageUrl: {
-      control: { type: "text" },
-      defaultValue: "https://picsum.photos/id/777/300/200",
-    },
-    reverse: {
-      control: {
-        type: "boolean",
-        default: false,
-      },
-    },
-    ellipsis: {
-      control: {
-        type: "boolean",
-        default: false,
-      },
-    },
+    title: { control: { type: "text" } },
+    imageUrl: { control: { type: "text" } },
+    reverse: { control: { type: "boolean" } },
+    ellipsis: { control: { type: "boolean" } },
+  },
+  args: {
+    title: "10 gode bøger om Venner & Veninder",
+    imageUrl: "https://picsum.photos/id/777/300/200",
+    reverse: false,
+    ellipsis: false,
   },
   parameters: {
     design: {

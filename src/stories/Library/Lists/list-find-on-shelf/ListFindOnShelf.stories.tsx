@@ -5,28 +5,29 @@ import ListFindOnShelf, { ListFindOnShelfProps } from "./ListFindOnShelf";
 export default {
   title: "Library / Lists / Find On Shelf",
   component: ListFindOnShelf,
-
   argTypes: {
     manifestationName: {
       name: "Manifestation Name",
-      defaultValue: "Vejen til Jerusalem, 2008",
       control: { type: "text" },
     },
     location: {
       name: "Location",
-      defaultValue: "Voksen · Skønlitteratur · Standard · Guillou",
       control: { type: "text" },
     },
     nrAvailable: {
       name: "Amount of available manifestations",
-      defaultValue: 1,
       control: { type: "number" },
     },
     nrOfListItems: {
       name: "Amount of lit items",
-      defaultValue: 2,
       control: { type: "number" },
     },
+  },
+  args: {
+    manifestationName: "Vejen til Jerusalem, 2008",
+    location: "Voksen · Skønlitteratur · Standard · Guillou",
+    nrAvailable: 1,
+    nrOfListItems: 2,
   },
   parameters: {
     design: {

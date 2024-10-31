@@ -4,7 +4,6 @@ import InstantLoan from "./InstantLoan";
 export default {
   title: "Library / InstantLoan",
   component: InstantLoan,
-
   parameters: {
     design: {
       type: "figma",

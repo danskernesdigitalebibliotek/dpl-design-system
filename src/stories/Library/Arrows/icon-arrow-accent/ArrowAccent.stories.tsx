@@ -5,7 +5,6 @@ import { ReactComponent as ArrowAccentIcon } from "../../../../public/icons/arro
 const StoryBase: Meta = {
   title: "Library / Arrows / Arrow Accent",
   component: ArrowAccentIcon,
-
   parameters: {
     design: {
       type: "figma",

@@ -5,7 +5,6 @@ import ToggleButton from "./ToggleButton";
 export default {
   title: "Library / Toggle button",
   component: ToggleButton,
-
   parameters: {
     design: {
       type: "figma",
@@ -14,9 +13,10 @@ export default {
     layout: "centered",
   },
   argTypes: {
-    isChecked: {
-      defaultValue: false,
-    },
+    isChecked: { control: "boolean" },
+  },
+  args: {
+    isChecked: false,
   },
 } as Meta<typeof ToggleButton>;
 
@@ -25,6 +25,3 @@ const Template: StoryFn<typeof ToggleButton> = (args) => (
 );
 
 export const ToggleButtonExample = Template.bind({});
-ToggleButtonExample.args = {
-  isChecked: false,
-};

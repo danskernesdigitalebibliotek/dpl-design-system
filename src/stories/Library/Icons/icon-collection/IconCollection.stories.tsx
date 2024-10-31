@@ -5,7 +5,6 @@ import { IconCollection as IconCollectionComp } from "./IconCollection";
 const StoryBase: Meta = {
   title: "Library / Icons / Collection",
   component: IconCollectionComp,
-
   parameters: {
     design: {
       type: "figma",

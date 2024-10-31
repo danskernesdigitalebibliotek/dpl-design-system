@@ -5,12 +5,14 @@ import DatePicker from "./DatePicker";
 export default {
   title: "Library / Forms / DatePicker",
   component: DatePicker,
-
   argTypes: {
     locale: {
+      control: "select",
       options: ["en", "da"],
-      defaultValue: "en",
     },
+  },
+  args: {
+    locale: "en",
   },
   parameters: {
     design: {

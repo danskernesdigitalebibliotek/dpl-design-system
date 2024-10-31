@@ -5,17 +5,18 @@ import { IconFavourite } from "./IconFavourite";
 export default {
   title: "Library / Icons",
   component: IconFavourite,
-
+  argTypes: {
+    fill: {
+      control: "boolean",
+    },
+  },
+  args: {
+    fill: true,
+  },
   parameters: {
     design: {
       type: "figma",
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=656%3A5407",
-    },
-  },
-  argTypes: {
-    fill: {
-      control: "boolean",
-      defaultValue: true,
     },
   },
 } as Meta<typeof IconFavourite>;

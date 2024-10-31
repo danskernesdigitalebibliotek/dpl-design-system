@@ -7,7 +7,6 @@ type TagProps = typeof TagComp;
 export default {
   title: "Library / Tag / Tag link",
   component: TagComp,
-
   parameters: {
     design: {
       type: "figma",
@@ -19,16 +18,18 @@ export default {
     children: {
       name: "text",
       control: { type: "text" },
-      defaultValue: "Litteratur",
     },
     hasBackground: {
       control: { type: "boolean" },
-      defaultValue: false,
     },
     showCloseIcon: {
       control: { type: "boolean" },
-      defaultValue: false,
     },
+  },
+  args: {
+    children: "Litteratur",
+    hasBackground: false,
+    showCloseIcon: false,
   },
 };
 

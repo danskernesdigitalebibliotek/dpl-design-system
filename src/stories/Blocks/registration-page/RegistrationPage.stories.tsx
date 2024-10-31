@@ -5,13 +5,17 @@ import RegistrationPage, { RegistrationPageProps } from "./RegistrationPage";
 export default {
   title: "Blocks / Registration Page",
   component: RegistrationPage,
-
   argTypes: {
     headline: {
-      name: "Headline",
-      defaultValue: "User registration",
       control: { type: "text" },
     },
+    singleSection: {
+      control: { type: "boolean" },
+    },
+  },
+  args: {
+    headline: "User registration",
+    singleSection: false,
   },
   parameters: {
     design: {
