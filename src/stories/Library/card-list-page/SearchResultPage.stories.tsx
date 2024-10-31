@@ -3,7 +3,7 @@ import { SearchResultPage } from "./SearchResultPage";
 import { SearchResultPageSkeleton } from "./SearchResultPageSkeleton";
 
 export default {
-  title: "Blocks / Search Result Page",
+  title: "Blocks / Search Result Page Skeleton",
   component: SearchResultPage,
   parameters: {
     design: {
