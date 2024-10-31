@@ -13,6 +13,10 @@ export default {
     ...AutosuggestMaterialStories.argTypes,
     ...AutosuggestTextStories.argTypes,
   },
+  args: {
+    ...AutosuggestMaterialStories.args,
+    ...AutosuggestTextStories.args,
+  },
   parameters: {
     design: {
       type: "figma",
@@ -31,7 +35,6 @@ const Template: StoryFn<typeof Autosuggest> = (args: AutosuggestProps) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {};
 
 const getStoryArguments = (suggestions: number) => ({
   args: {
