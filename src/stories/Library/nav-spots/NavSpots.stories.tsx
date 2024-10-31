@@ -26,13 +26,13 @@ const teaserNoImage = (
 export default {
   title: "Library / Nav spots (Navigationsmodul)",
   component: NavSpots,
-
   argTypes: {
     items: {
-      // Disabling controls, as the different card variants are added already.
       control: false,
-      defaultValue: [teaser, teaser],
     },
+  },
+  args: {
+    items: [teaser, teaser],
   },
   parameters: {
     design: {

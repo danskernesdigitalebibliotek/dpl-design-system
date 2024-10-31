@@ -3,7 +3,6 @@ import { Avatar } from "./Avatar";
 
 const StoryBase: StoryBaseType<typeof Avatar> = {
   title: "Library / Avatar",
-
   argTypes: {},
   parameters: {
     design: {

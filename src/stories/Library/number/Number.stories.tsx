@@ -5,7 +5,6 @@ import { Number } from "./Number";
 export default {
   title: "Library / Number",
   component: Number,
-
   argTypes: {},
   parameters: {},
 } as Meta<typeof Number>;

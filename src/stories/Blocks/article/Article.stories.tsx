@@ -5,34 +5,22 @@ import Article from "./Article";
 export default {
   title: "Blocks / Article page",
   component: Article,
-
   argTypes: {
-    title: {
-      defaultValue: "Jesper Stein vinder Læsernes Bogpris for Rampen’",
-    },
-    subtitle: {
-      defaultValue:
-        "Jesper Stein har begået en hudløst ærlig og tankevækkende skildring af en skilsmisseramt familie. En selvbiografisk roman, som har ramt læserne  i hjertet.",
-    },
-    category: {
-      defaultValue: "Netmedier",
-    },
-    author: {
-      defaultValue: "Lene Kuhlmann Frandsen",
-    },
-    date: {
-      defaultValue: "08. April 21",
-    },
-    tags: {
-      defaultValue: [
-        "dans",
-        "contemporary",
-        "modern",
-        "scenekunst",
-        "digt",
-        "3-8 årige",
-      ],
-    },
+    title: { control: "text" },
+    subtitle: { control: "text" },
+    category: { control: "text" },
+    author: { control: "text" },
+    date: { control: "text" },
+    tags: { control: "object" },
+  },
+  args: {
+    title: "Jesper Stein vinder Læsernes Bogpris for Rampen'",
+    subtitle:
+      "Jesper Stein har begået en hudløst ærlig og tankevækkende skildring af en skilsmisseramt familie. En selvbiografisk roman, som har ramt læserne  i hjertet.",
+    category: "Netmedier",
+    author: "Lene Kuhlmann Frandsen",
+    date: "08. April 21",
+    tags: ["dans", "contemporary", "modern", "scenekunst", "digt", "3-8 årige"],
   },
   parameters: {
     design: {

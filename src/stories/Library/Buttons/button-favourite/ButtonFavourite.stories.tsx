@@ -5,7 +5,6 @@ import { ButtonFavourite } from "./ButtonFavourite";
 export default {
   title: "Library / Buttons / Button Favourite",
   component: ButtonFavourite,
-
   parameters: {
     design: {
       type: "figma",
@@ -16,8 +15,10 @@ export default {
   argTypes: {
     fill: {
       control: "boolean",
-      defaultValue: true,
     },
+  },
+  args: {
+    fill: true,
   },
 } as Meta<typeof ButtonFavourite>;
 
@@ -26,4 +27,3 @@ const Template: StoryFn<typeof ButtonFavourite> = (args) => (
 );
 
 export const favourite = Template.bind({});
-favourite.args = {};

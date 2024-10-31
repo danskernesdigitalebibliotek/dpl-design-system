@@ -13,93 +13,10 @@ export default {
     allowFullscreen: true,
   },
   argTypes: {
-    loansTitle: {
-      control: { type: "object" },
-      defaultValue: [
-        {
-          title: "Fysiske lån",
-          href: "/",
-          counter: "12",
-        },
-      ],
-    },
-    loans: {
-      control: { type: "object" },
-      defaultValue: [
-        {
-          label: {
-            label: "overskredet",
-            status: "danger",
-          },
-          number: {
-            label: 1,
-            status: "danger",
-          },
-          title: "Afleveret for sent",
-          showDot: true,
-          href: "/",
-        },
-        {
-          label: {
-            label: "Udløber snart",
-            status: "warning",
-          },
-          number: {
-            label: 3,
-            status: "warning",
-          },
-          title: "Afleveres snart",
-          showDot: true,
-          href: "/",
-        },
-        {
-          number: {
-            label: 8,
-            status: "neutral",
-          },
-          title: "Længere afleveringstid",
-          showDot: false,
-          href: "/",
-        },
-      ],
-    },
-    reservationsTitle: {
-      control: { type: "object" },
-      defaultValue: [
-        {
-          title: "Reserveringer",
-          href: "/",
-          counter: "12",
-        },
-      ],
-    },
-    reservations: {
-      control: { type: "object" },
-      defaultValue: [
-        {
-          label: {
-            label: "klar til lån",
-            status: "info",
-          },
-          number: {
-            label: 2,
-            status: "info",
-          },
-          title: "Klar til dig",
-          showDot: true,
-          href: "/",
-        },
-        {
-          number: {
-            label: 10,
-            status: "neutral",
-          },
-          title: "Stadig i kø",
-          showDot: false,
-          href: "/",
-        },
-      ],
-    },
+    loansTitle: { control: { type: "object" } },
+    loans: { control: { type: "object" } },
+    reservationsTitle: { control: { type: "object" } },
+    reservations: { control: { type: "object" } },
   },
 } as Meta<typeof StatusUserprofileComp>;
 
@@ -108,9 +25,63 @@ const Template: StoryFn<typeof StatusUserprofileComp> = (args) => (
 );
 
 export const StatusUserprofile = Template.bind({});
+StatusUserprofile.args = {
+  loansTitle: [
+    {
+      title: "Fysiske lån",
+      href: "/",
+      counter: "12",
+    },
+  ],
+  loans: [
+    {
+      label: { label: "overskredet", status: "danger" },
+      number: { label: 1, status: "danger" },
+      title: "Afleveret for sent",
+      showDot: true,
+      href: "/",
+    },
+    {
+      label: { label: "Udløber snart", status: "warning" },
+      number: { label: 3, status: "warning" },
+      title: "Afleveres snart",
+      showDot: true,
+      href: "/",
+    },
+    {
+      label: { label: "Længere afleveringstid", status: "neutral" },
+      number: { label: 8, status: "neutral" },
+      title: "Længere afleveringstid",
+      showDot: false,
+      href: "/",
+    },
+  ],
+  reservationsTitle: [
+    {
+      title: "Reserveringer",
+      href: "/",
+      counter: "12",
+    },
+  ],
+  reservations: [
+    {
+      label: { label: "klar til lån", status: "info" },
+      number: { label: 2, status: "info" },
+      title: "Klar til dig",
+      showDot: true,
+      href: "/",
+    },
+    {
+      label: { label: "Stadig i kø", status: "neutral" },
+      number: { label: 10, status: "neutral" },
+      title: "Stadig i kø",
+      showDot: false,
+      href: "/",
+    },
+  ],
+};
 
 export const StatusUserprofileEmpty = Template.bind({});
-
 StatusUserprofileEmpty.parameters = {
   design: {
     type: "figma",
@@ -119,33 +90,21 @@ StatusUserprofileEmpty.parameters = {
   layout: "fullscreen",
   allowFullscreen: true,
 };
-StatusUserprofileEmpty.argTypes = {
-  loansTitle: {
-    control: { type: "object" },
-    defaultValue: [
-      {
-        title: "Fysiske lån",
-        href: "/",
-        counter: "0",
-      },
-    ],
-  },
-  loans: {
-    control: { type: "object" },
-    defaultValue: [],
-  },
-  reservationsTitle: {
-    control: { type: "object" },
-    defaultValue: [
-      {
-        title: "Reserveringer",
-        href: "/",
-        counter: "0",
-      },
-    ],
-  },
-  reservations: {
-    control: { type: "object" },
-    defaultValue: [],
-  },
+StatusUserprofileEmpty.args = {
+  loansTitle: [
+    {
+      title: "Fysiske lån",
+      href: "/",
+      counter: "0",
+    },
+  ],
+  loans: [],
+  reservationsTitle: [
+    {
+      title: "Reserveringer",
+      href: "/",
+      counter: "0",
+    },
+  ],
+  reservations: [],
 };

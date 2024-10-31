@@ -5,13 +5,14 @@ import { BoxedText, BoxedTextProps } from "./BoxedText";
 export default {
   title: "Library / Boxed text",
   component: BoxedText,
-
   argTypes: {
     text: {
       name: "Text string",
-      defaultValue: "I am a boxed line of text!",
       control: { type: "text" },
     },
+  },
+  args: {
+    text: "I am a boxed line of text!",
   },
   parameters: {
     design: {

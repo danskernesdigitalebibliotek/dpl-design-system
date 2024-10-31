@@ -6,20 +6,21 @@ import { groupedOpeningHoursExampleData } from "./OpeningHoursExampleData";
 export default {
   title: "Library / Opening Hours",
   component: OpeningHours,
-
   argTypes: {
     weekCurrentlyDisplayed: {
-      defaultValue: "Uge 4, 2023",
       control: {
         type: "text",
       },
     },
     groupedOpeningHours: {
-      defaultValue: groupedOpeningHoursExampleData,
       control: {
         type: "object",
       },
     },
+  },
+  args: {
+    weekCurrentlyDisplayed: "Uge 4, 2023",
+    groupedOpeningHours: groupedOpeningHoursExampleData,
   },
   parameters: {
     design: {

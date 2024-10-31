@@ -5,7 +5,6 @@ import { ModalCTA } from "./ModalCTA";
 export default {
   title: "Library / Modals / CTA",
   component: ModalCTA,
-
   argTypes: {},
   parameters: {
     design: {

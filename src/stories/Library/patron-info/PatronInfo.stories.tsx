@@ -6,25 +6,17 @@ import PatronInfoSkeleton from "./PatronInfoSkeleton";
 export default {
   title: "Library / User info",
   component: PatronInfo,
-
   argTypes: {
-    address: {
-      control: "text",
-      defaultValue:
-        "The Utonium Residence, 107 Pokey Oaks South, Townsville, USA",
-    },
-    nameLabel: {
-      control: "text",
-      defaultValue: "Navn",
-    },
-    addressLabel: {
-      control: "text",
-      defaultValue: "Adresse",
-    },
-    name: {
-      control: "text",
-      defaultValue: "Professor Utonium",
-    },
+    address: { control: "text" },
+    nameLabel: { control: "text" },
+    addressLabel: { control: "text" },
+    name: { control: "text" },
+  },
+  args: {
+    address: "The Utonium Residence, 107 Pokey Oaks South, Townsville, USA",
+    nameLabel: "Navn",
+    addressLabel: "Adresse",
+    name: "Professor Utonium",
   },
   parameters: {},
 } as Meta<typeof PatronInfo>;

@@ -7,7 +7,6 @@ import CardImages from "../card/CardImages";
 export default {
   title: "Library / Slider",
   component: Slider,
-
   parameters: {
     design: {
       type: "figma",
@@ -15,14 +14,11 @@ export default {
     },
   },
   argTypes: {
-    title: {
-      defaultValue: "Get <u>new</u> Inspiration",
-      type: "string",
-    },
-    items: {
-      // Disabling controls, as the different variations are added already.
-      control: false,
-    },
+    title: { type: "string" },
+    items: { control: false },
+  },
+  args: {
+    title: "Get <u>new</u> Inspiration",
   },
 };
 

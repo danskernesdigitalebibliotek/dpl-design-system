@@ -3,14 +3,15 @@ import EventListStacked from "./EventListStacked";
 
 export default {
   title: "Library/ Stacked Event List",
-
   component: EventListStacked,
   argTypes: {
     title: {
-      defaultValue: "Kommende arrangementer",
       control: "text",
       description: "Title of the section",
     },
+  },
+  args: {
+    title: "Kommende arrangementer",
   },
 } as Meta<typeof EventListStacked>;
 

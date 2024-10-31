@@ -5,7 +5,6 @@ import { WarningStatus } from "./WarningStatus";
 export default {
   title: "Library / Warning Status",
   component: WarningStatus,
-
   argTypes: {},
   parameters: {},
 } as Meta<typeof WarningStatus>;

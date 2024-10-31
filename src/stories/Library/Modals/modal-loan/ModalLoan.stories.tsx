@@ -4,7 +4,6 @@ import { ModalLoan } from "./ModalLoan";
 export default {
   title: "Library / Modals / Loan",
   component: ModalLoan,
-
   argTypes: {},
   parameters: {
     design: {

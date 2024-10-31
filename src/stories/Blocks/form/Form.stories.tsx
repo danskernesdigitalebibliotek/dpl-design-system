@@ -12,19 +12,15 @@ export default {
     layout: "fullscreen",
   },
   argTypes: {
-    title: {
-      control: "text",
-      defaultValue: "Contact Form Title",
-    },
-    subtitle: {
-      control: "text",
-      defaultValue:
-        "I am a subtitle and I am here to help you with your form. I can be short, but also sometimes a bit longer, depending on the specific library wishes.",
-    },
-    withoutSubtitle: {
-      control: "boolean",
-      defaultValue: false,
-    },
+    title: { control: "text" },
+    subtitle: { control: "text" },
+    withoutSubtitle: { control: "boolean" },
+  },
+  args: {
+    title: "Contact Form Title",
+    subtitle:
+      "I am a subtitle and I am here to help you with your form. I can be short, but also sometimes a bit longer, depending on the specific library wishes.",
+    withoutSubtitle: false,
   },
 } as Meta<typeof ContactForm>;
 

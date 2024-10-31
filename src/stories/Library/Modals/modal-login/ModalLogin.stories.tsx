@@ -4,7 +4,6 @@ import { ModalLogin } from "./ModalLogin";
 export default {
   title: "Library / Modals / Login",
   component: ModalLogin,
-
   argTypes: {},
   parameters: {
     design: {
