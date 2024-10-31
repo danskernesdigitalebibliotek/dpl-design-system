@@ -5,7 +5,6 @@ import { Counter } from "./Counter";
 export default {
   title: "Library / Counter",
   component: Counter,
-
   argTypes: {},
   parameters: {},
 } as Meta<typeof Counter>;

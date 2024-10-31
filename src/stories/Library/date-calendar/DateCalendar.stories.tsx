@@ -5,7 +5,6 @@ import DateCalendar from "./DateCalendar";
 export default {
   title: "Library / DateCalendar",
   component: DateCalendar,
-
   argTypes: {},
   parameters: {
     design: {

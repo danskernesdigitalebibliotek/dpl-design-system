@@ -13,19 +13,15 @@ const teaser = (
 export default {
   title: "Library / Nav grid ('Navigationskomponent')",
   component: NavGrid,
-
   argTypes: {
-    title: {
-      defaultValue: "Nyheder",
-    },
-    showSubtitles: {
-      defaultValue: true,
-    },
-    items: {
-      // Disabling controls, as the different teaser variants are added already.
-      control: false,
-      defaultValue: [teaser],
-    },
+    title: { control: "text" },
+    showSubtitles: { control: "boolean" },
+    items: { control: false },
+  },
+  args: {
+    title: "Nyheder",
+    showSubtitles: true,
+    items: [teaser],
   },
   parameters: {
     design: {

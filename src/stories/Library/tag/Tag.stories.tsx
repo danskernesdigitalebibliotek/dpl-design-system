@@ -5,7 +5,6 @@ import Tag, { TagProps } from "./Tag";
 export default {
   title: "Library / Tag / Tag",
   component: Tag,
-
   parameters: {
     design: {
       type: "figma",
@@ -16,12 +15,19 @@ export default {
   argTypes: {
     children: {
       control: { type: "text" },
-      defaultValue: "Litteratur",
     },
     hasBackground: {
       control: { type: "boolean" },
-      defaultValue: false,
     },
+    size: {
+      control: { type: "radio" },
+      options: ["default", "large"],
+    },
+  },
+  args: {
+    children: "Litteratur",
+    hasBackground: false,
+    size: "default",
   },
 };
 

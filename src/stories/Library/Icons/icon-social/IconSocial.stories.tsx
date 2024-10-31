@@ -5,7 +5,6 @@ import { IconSocial as IconSocialComp } from "./IconSocial";
 const StoryBase: Meta = {
   title: "Library / Icons / Social",
   component: IconSocialComp,
-
   parameters: {
     design: {
       type: "figma",

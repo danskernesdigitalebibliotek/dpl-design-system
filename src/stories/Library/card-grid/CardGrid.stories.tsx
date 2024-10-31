@@ -6,19 +6,15 @@ import { card, cardNoImage } from "./card-grid-data";
 export default {
   title: "Library / Card grid ('Nyhedskomponent')",
   component: CardGrid,
-
   argTypes: {
-    title: {
-      defaultValue: "Nyheder",
-    },
-    linkText: {
-      defaultValue: "Se flere nyheder",
-    },
-    items: {
-      // Disabling controls, as the different card variants are added already.
-      control: false,
-      defaultValue: [card, cardNoImage, card],
-    },
+    title: { control: "text" },
+    linkText: { control: "text" },
+    items: { control: false },
+  },
+  args: {
+    title: "Nyheder",
+    linkText: "Se flere nyheder",
+    items: [card, cardNoImage, card],
   },
   parameters: {
     design: {

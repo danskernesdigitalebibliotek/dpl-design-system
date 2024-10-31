@@ -4,7 +4,6 @@ import { ListReservationsAndLoans } from "./ListReservationsAndLoans";
 export default {
   title: "Library / Lists / ReservationAndLoans",
   component: ListReservationsAndLoans,
-
   argTypes: {},
   parameters: {
     design: {

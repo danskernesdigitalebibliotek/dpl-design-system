@@ -5,7 +5,6 @@ import PromoBar from "./PromoBar";
 export default {
   title: "Library / PromoBar",
   component: PromoBar,
-
   parameters: {
     design: {
       type: "figma",
@@ -16,44 +15,35 @@ export default {
     text: {
       name: "PromoBar Text",
       control: "text",
-      defaultValue: "Spring køen over - Materialet findes i en anden udgave",
     },
     type: {
       name: "PromoBar Type",
-      control: {
-        control: { type: "radio" },
-        options: ["none", "info"],
-      },
+      control: "radio",
+      options: ["none", "info"],
     },
     theme: {
       name: "PromoBar Theme",
-      control: {
-        control: { type: "radio" },
-        options: ["none", "dark"],
-      },
+      control: "radio",
+      options: ["none", "dark"],
     },
     sticky: {
       name: "PromoBar Sticky",
       control: "boolean",
-      defaultValue: false,
     },
+  },
+  args: {
+    text: "Spring køen over - Materialet findes i en anden udgave",
+    type: "info",
+    sticky: false,
+    theme: "none",
   },
 } as Meta<typeof PromoBar>;
 
 const Template: StoryFn<typeof PromoBar> = (args) => <PromoBar {...args} />;
 
 export const defaultPromoBar = Template.bind({});
-defaultPromoBar.args = {
-  type: "info",
-  text: "Spring køen over - Materialet findes i en anden udgave",
-  sticky: false,
-  theme: "none",
-};
 
 export const darkThemePromoBar = Template.bind({});
 darkThemePromoBar.args = {
-  type: "info",
-  text: "Spring køen over - Materialet findes i en anden udgave",
-  sticky: false,
   theme: "dark",
 };

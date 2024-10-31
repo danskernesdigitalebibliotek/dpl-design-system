@@ -12,18 +12,16 @@ export default {
     layout: "padded",
   },
   argTypes: {
-    amount: {
-      defaultValue: 1,
-    },
-    fullAmount: {
-      defaultValue: 5,
-    },
-    title: {
-      defaultValue: "Ebøger",
-    },
-    outOf: {
-      defaultValue: "ud af",
-    },
+    amount: { control: "number" },
+    fullAmount: { control: "number" },
+    title: { control: "text" },
+    outOf: { control: "text" },
+  },
+  args: {
+    amount: 1,
+    fullAmount: 5,
+    title: "Ebøger",
+    outOf: "ud af",
   },
 } as Meta<typeof ProgressBarComp>;
 

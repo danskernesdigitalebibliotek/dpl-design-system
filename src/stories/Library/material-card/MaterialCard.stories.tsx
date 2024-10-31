@@ -5,7 +5,6 @@ import { MaterialCard } from "./MaterialCard";
 export default {
   title: "Library / Materials / Card",
   component: MaterialCard,
-
   // We disable the isChecked control, since it is not possible to
   // get the states from the React component to work with Storybook controls.
   argTypes: {

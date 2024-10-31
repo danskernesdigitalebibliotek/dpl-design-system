@@ -6,7 +6,6 @@ import ImageCredited from "../../Library/image-credited/ImageCredited";
 export default {
   title: "Blocks / Pages",
   component: Page,
-
   parameters: {
     design: {
       type: "figma",

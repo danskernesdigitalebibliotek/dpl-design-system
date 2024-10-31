@@ -5,7 +5,6 @@ import { ModalText, textContent } from "./ModalText";
 export default {
   title: "Library / Modals / Text",
   component: ModalText,
-
   parameters: {
     design: {
       type: "figma",

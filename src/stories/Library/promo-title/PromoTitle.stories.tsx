@@ -1,5 +1,4 @@
 import { StoryFn } from "@storybook/react";
-
 import { PromoTitle } from "./PromoTitle";
 
 type PromoTitleProps = typeof PromoTitle;
@@ -7,17 +6,15 @@ type PromoTitleProps = typeof PromoTitle;
 export default {
   title: "Library / PromoTitle",
   component: PromoTitle,
-
   argTypes: {
-    libraryName: {
-      defaultValue: "Hjørring",
-    },
-    text: {
-      defaultValue: "Inspiration",
-    },
-    variant: {
-      defaultValue: "wide",
-    },
+    libraryName: { control: "text" },
+    text: { control: "text" },
+    variant: { control: "radio", options: ["wide", "narrow"] },
+  },
+  args: {
+    libraryName: "Hjørring",
+    text: "Inspiration",
+    variant: "wide",
   },
   parameters: {
     layout: "centered",

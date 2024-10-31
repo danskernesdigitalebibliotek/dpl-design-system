@@ -5,23 +5,19 @@ import { Header as HeaderComp, HeaderProps } from "./Header";
 export default {
   title: "Blocks / Header",
   component: HeaderComp,
-
   argTypes: {
-    signedIn: {
-      defaultValue: false,
-    },
-    haveNotification: {
-      defaultValue: false,
-    },
-    username: {
-      defaultValue: "Christine",
-    },
-    inputPlaceholder: {
-      defaultValue: "Søg blandt bibliotekets materialer",
-    },
-    openDropdown: {
-      defaultValue: false,
-    },
+    signedIn: { control: "boolean" },
+    haveNotification: { control: "boolean" },
+    username: { control: "text" },
+    inputPlaceholder: { control: "text" },
+    openDropdown: { control: "boolean" },
+  },
+  args: {
+    signedIn: false,
+    haveNotification: false,
+    username: "Christine",
+    inputPlaceholder: "Søg blandt bibliotekets materialer",
+    openDropdown: false,
   },
   parameters: {
     design: {

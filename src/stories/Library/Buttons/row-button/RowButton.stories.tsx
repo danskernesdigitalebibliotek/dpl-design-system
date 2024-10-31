@@ -5,11 +5,13 @@ import RowButton from "./RowButton";
 export default {
   title: "Library / Buttons / RowButton",
   component: RowButton,
-
   argTypes: {
     label: {
-      defaultValue: "Netmedier",
+      control: "text",
     },
+  },
+  args: {
+    label: "Netmedier",
   },
   parameters: {
     design: {

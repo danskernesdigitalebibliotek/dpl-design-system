@@ -1,32 +1,22 @@
 import { StoryFn, Meta } from "@storybook/react";
-
 import Input from "./Input";
 
 export default {
   title: "Library / Forms / Input",
   component: Input,
-
   argTypes: {
-    label: {
-      defaultValue: "Navn",
-      control: { type: "text" },
-    },
-    type: {
-      defaultValue: "text",
-      control: { type: "select", options: ["text", "password"] },
-    },
-    id: {
-      defaultValue: "id",
-      control: { type: "text" },
-    },
-    description: {
-      defaultValue: "Dit fulde navn",
-      control: { type: "text" },
-    },
-    validation: {
-      defaultValue: "Fejlbesked lorem ipsum dolor",
-      control: { type: "text" },
-    },
+    label: { control: { type: "text" } },
+    type: { control: { type: "select", options: ["text", "password"] } },
+    id: { control: { type: "text" } },
+    description: { control: { type: "text" } },
+    validation: { control: { type: "text" } },
+  },
+  args: {
+    label: "Navn",
+    type: "text",
+    id: "id",
+    description: "Dit fulde navn",
+    validation: "Fejlbesked lorem ipsum dolor",
   },
   parameters: {
     design: {

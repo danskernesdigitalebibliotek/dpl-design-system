@@ -6,12 +6,13 @@ import recommendedMaterialArgs from "./RecommendedMaterialArgs";
 export default {
   title: "Library / Recommended Material",
   component: RecommendedMaterial,
-
   argTypes: {
     favoriteFill: {
       control: "boolean",
-      defaultValue: true,
     },
+  },
+  args: {
+    favoriteFill: true,
   },
   parameters: {
     design: {

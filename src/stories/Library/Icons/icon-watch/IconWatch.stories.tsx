@@ -5,7 +5,6 @@ import { IconWatch as IconWatchComp } from "./IconWatch";
 const StoryBase: Meta = {
   title: "Library / Icons / Watch",
   component: IconWatchComp,
-
   parameters: {
     design: {
       type: "figma",

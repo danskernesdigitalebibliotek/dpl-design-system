@@ -1,37 +1,37 @@
 import { StoryFn } from "@storybook/react";
-
 import ReservationPage, { ReservationPageProps } from "./ReservationPage";
 
 export default {
   title: "Blocks / Reservation / Reservation Page",
   component: ReservationPage,
-
   argTypes: {
     headline: {
       name: "Headline",
-      defaultValue: "Your reservations",
       control: { type: "text" },
     },
     readyForPickup: {
       name: "Ready for pickup amount",
-      defaultValue: 2,
       control: { type: "number" },
     },
     physicalReservations: {
       name: "Physical reservations amount",
-      defaultValue: 2,
       control: { type: "number" },
     },
     digitalReservations: {
       name: "Digital reservations amount",
-      defaultValue: 2,
       control: { type: "number" },
     },
     skeletonVersion: {
       name: "Is skeleton version?",
-      defaultValue: false,
       control: { type: "boolean" },
     },
+  },
+  args: {
+    headline: "Your reservations",
+    readyForPickup: 2,
+    physicalReservations: 2,
+    digitalReservations: 2,
+    skeletonVersion: false,
   },
   parameters: {
     design: {

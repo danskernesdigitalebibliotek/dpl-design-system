@@ -5,7 +5,6 @@ import { StatusMessage } from "./StatusMessage";
 export default {
   title: "Library / Status Message",
   component: StatusMessage,
-
   argTypes: {},
   parameters: {},
 } as Meta<typeof StatusMessage>;

@@ -5,7 +5,6 @@ import { CardListItemSkeleton } from "./CardListItemSkeleton";
 export default {
   title: "Library / Card List Item",
   component: CardListItem,
-
   parameters: {
     design: {
       type: "figma",
@@ -13,40 +12,29 @@ export default {
     },
   },
   argTypes: {
-    heartFill: {
-      control: "boolean",
-      defaultValue: false,
-    },
-    title: {
-      control: { type: "text" },
-      defaultValue: "Audrey Hepburn",
-    },
-    author: {
-      control: { type: "text" },
-      defaultValue: "Sánchez Vegara, Amaia Arrazola",
-    },
-    year: {
-      control: { type: "text" },
-      defaultValue: "2018",
-    },
+    heartFill: { control: "boolean" },
+    title: { control: { type: "text" } },
+    author: { control: { type: "text" } },
+    year: { control: { type: "text" } },
+    horizontalTermLineData: { control: { type: "object" } },
+    availabilityLabels: { control: { type: "number" } },
+  },
+  args: {
+    heartFill: false,
+    title: "Audrey Hepburn",
+    author: "Sánchez Vegara, Amaia Arrazola",
+    year: "2018",
     horizontalTermLineData: {
-      control: { type: "object" },
-      defaultValue: {
-        title: "Nr. 3",
-        subTitle: "i serien",
-        linkList: [
-          {
-            text: "Små mennesker, store drømme",
-            url: "/",
-          },
-        ],
-      },
+      title: "Nr. 3",
+      subTitle: "i serien",
+      linkList: [
+        {
+          text: "Små mennesker, store drømme",
+          url: "/",
+        },
+      ],
     },
-    availabilityLabels: {
-      // The control is disabled because we use stories to explore different availability label counts.
-      control: { type: "number" },
-      defaultValue: 3,
-    },
+    availabilityLabels: 3,
   },
 } as Meta<typeof CardListItem>;
 

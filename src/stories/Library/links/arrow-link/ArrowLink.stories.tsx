@@ -5,11 +5,13 @@ import ArrowLink from "./ArrowLink";
 export default {
   title: "Library / Links / ArrowLink",
   component: ArrowLink,
-
   argTypes: {
     label: {
-      defaultValue: "Go back",
+      control: "text",
     },
+  },
+  args: {
+    label: "Go back",
   },
   parameters: {
     design: {

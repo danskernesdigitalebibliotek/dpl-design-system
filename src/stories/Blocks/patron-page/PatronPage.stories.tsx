@@ -14,8 +14,10 @@ export default {
   argTypes: {
     skeletonVersion: {
       control: "boolean",
-      defaultValue: false,
     },
+  },
+  args: {
+    skeletonVersion: false,
   },
 } as Meta<typeof PatronPage>;
 

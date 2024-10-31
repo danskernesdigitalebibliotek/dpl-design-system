@@ -8,16 +8,13 @@ import defaultLibraries from "./opening-hours-libraries-data";
 export default {
   title: "Library/Opening Hours Sidebar/With Dialog",
   component: OpeningHoursSidebar,
-
   argTypes: {
     title: {
-      defaultValue: "Åbningstider",
       control: {
         type: "text",
       },
     },
     dateString: {
-      defaultValue: "I dag (fredag 28. maj)",
       control: {
         type: "text",
       },
@@ -26,14 +23,18 @@ export default {
       control: {
         type: "object",
       },
-      defaultValue: defaultLibraries,
     },
     link: {
-      defaultValue: "#",
       control: {
         type: "text",
       },
     },
+  },
+  args: {
+    title: "Åbningstider",
+    dateString: "I dag (fredag 28. maj)",
+    libraries: defaultLibraries,
+    link: "#",
   },
   parameters: {
     design: {

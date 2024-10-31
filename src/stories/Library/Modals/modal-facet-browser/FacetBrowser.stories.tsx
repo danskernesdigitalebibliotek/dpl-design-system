@@ -4,7 +4,6 @@ import FacetBrowser from "./FacetBrowser";
 export default {
   title: "Library / Modals / Facet Browser",
   component: FacetBrowser,
-
   parameters: {
     design: {
       type: "figma",
