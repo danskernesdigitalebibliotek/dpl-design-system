@@ -5,7 +5,6 @@ import Cover from "./Cover";
 export default {
   title: "Library / Cover",
   component: Cover,
-
   argTypes: {
     size: {
       name: "Image size",

@@ -5,26 +5,27 @@ import { Multiselect as MultiselectComp } from "./Multiselect";
 export default {
   title: "Library / Dropdown / Multiselect",
   component: MultiselectComp,
-
   argTypes: {
     options: {
-      defaultValue: ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"],
       control: {
         type: "object",
       },
     },
     isOpen: {
-      defaultValue: true,
       control: {
         type: "boolean",
       },
     },
     withCaption: {
-      defaultValue: false,
       control: {
         type: "boolean",
       },
     },
+  },
+  args: {
+    options: ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"],
+    isOpen: true,
+    withCaption: false,
   },
   parameters: {
     design: {

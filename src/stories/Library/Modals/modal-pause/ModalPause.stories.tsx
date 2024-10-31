@@ -5,7 +5,6 @@ import { ModalPause } from "./ModalPause";
 export default {
   title: "Library / Modals / Pause",
   component: ModalPause,
-
   argTypes: {},
   parameters: {
     design: {

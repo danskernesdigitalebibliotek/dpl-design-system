@@ -12,23 +12,16 @@ export default {
     layout: "fullscreen",
   },
   argTypes: {
-    buttonText: {
-      defaultValue: "Manage consent",
-      type: "string",
-    },
-    acceptCookies: {
-      control: "boolean",
-      defaultValue: false,
-    },
-    info: {
-      defaultValue:
-        "To view this content, we need your consent to use marketing cookies.",
-      type: "string",
-    },
-    src: {
-      defaultValue: "https://www.youtube.com/embed/CmzKQ3PSrow",
-      type: "string",
-    },
+    buttonText: { type: "string" },
+    acceptCookies: { control: "boolean" },
+    info: { type: "string" },
+    src: { type: "string" },
+  },
+  args: {
+    buttonText: "Manage consent",
+    acceptCookies: false,
+    info: "To view this content, we need your consent to use marketing cookies.",
+    src: "https://www.youtube.com/embed/CmzKQ3PSrow",
   },
 } as Meta<typeof VideoEmbed>;
 

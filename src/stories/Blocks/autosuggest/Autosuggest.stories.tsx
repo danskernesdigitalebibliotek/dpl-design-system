@@ -9,7 +9,6 @@ import { autosuggestMaterialSuggestions } from "../../Library/autosuggest-materi
 export default {
   title: "Blocks / Autosuggest",
   component: Autosuggest,
-
   argTypes: {
     ...AutosuggestMaterialStories.argTypes,
     ...AutosuggestTextStories.argTypes,
@@ -32,26 +31,20 @@ const Template: StoryFn<typeof Autosuggest> = (args: AutosuggestProps) => (
 );
 
 export const Default = Template.bind({});
+Default.args = {};
 
-const getStoryArguments = (suggestions: number) => {
-  return {
-    ...AutosuggestTextStories.argTypes,
-    materialSuggestions: {
-      ...{ ...AutosuggestMaterialStories.argTypes?.materialSuggestions },
-      defaultValue: autosuggestMaterialSuggestions.slice(0, suggestions),
-    },
-    classes: {
-      ...{ ...AutosuggestMaterialStories.argTypes?.classes },
-      defaultValue: clsx({
-        "autosuggest__material-item--two": suggestions === 2,
-        "autosuggest__material-item--one": suggestions === 1,
-      }),
-    },
-  };
-};
+const getStoryArguments = (suggestions: number) => ({
+  args: {
+    materialSuggestions: autosuggestMaterialSuggestions.slice(0, suggestions),
+    classes: clsx({
+      "autosuggest__material-item--two": suggestions === 2,
+      "autosuggest__material-item--one": suggestions === 1,
+    }),
+  },
+});
 
 export const TwoMaterials = Template.bind({});
-TwoMaterials.argTypes = getStoryArguments(2);
+TwoMaterials.args = getStoryArguments(2).args;
 
 export const OneMaterial = Template.bind({});
-OneMaterial.argTypes = getStoryArguments(1);
+OneMaterial.args = getStoryArguments(1).args;

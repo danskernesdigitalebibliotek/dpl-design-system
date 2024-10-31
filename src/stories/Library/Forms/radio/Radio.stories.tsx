@@ -5,20 +5,17 @@ import { RadioDrupal } from "./RadioDrupal";
 export default {
   title: "Library / Forms / Radio",
   component: RadioDrupal,
-
   argTypes: {
     legend: {
-      control: {
-        type: "text",
-        defaultValue: "This is a legend.",
-      },
+      control: "text",
     },
     description: {
-      control: {
-        type: "text",
-        defaultValue: "This is a description.",
-      },
+      control: "text",
     },
+  },
+  args: {
+    legend: "This is a legend",
+    description: "This is a description.",
   },
   parameters: {
     layout: "centered",

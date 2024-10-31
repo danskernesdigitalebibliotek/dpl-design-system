@@ -5,32 +5,28 @@ import SimpleLink from "./SimpleLink";
 export default {
   title: "Library / Simple Link",
   component: SimpleLink,
-
   argTypes: {
     linkText: {
       control: {
         type: "text",
-        defaultValue: "Link text",
       },
     },
     href: {
       control: {
         type: "text",
-        defaultValue: "https://www.google.com",
       },
     },
     target: {
       control: {
         type: "select",
-        defaultValue: "_self",
         options: ["_blank", "_self"],
       },
     },
-    args: {
-      linkText: "Link text",
-      href: "https://www.google.com",
-      target: "_self",
-    },
+  },
+  args: {
+    linkText: "Link text",
+    href: "https://www.google.com",
+    target: "_self",
   },
   parameters: {
     design: {

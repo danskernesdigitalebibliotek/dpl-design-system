@@ -4,7 +4,6 @@ import Reservation from "./Reservation";
 export default {
   title: "Library / Modals / Reservation",
   component: Reservation,
-
   parameters: {
     design: {
       type: "figma",
@@ -12,38 +11,24 @@ export default {
     },
   },
   argTypes: {
-    title: {
-      name: "Title",
-      control: { type: "text" },
-    },
-    label: {
-      name: "Label",
-      control: { type: "text" },
-    },
-    author: {
-      name: "Author",
-      control: { type: "text" },
-    },
-    submitInfo: {
-      name: "Submit Info text",
-      control: { type: "text" },
-    },
-    submitButton: {
-      name: "Submit Button text",
-      control: { type: "text" },
-    },
-    state: {
-      name: "State for reservation",
-      defaultValue: "initial",
-    },
-    showPromoBar: {
-      name: "Show PromoBar",
-      defaultValue: false,
-    },
-    showInstantLoan: {
-      name: "Show instant loan",
-      defaultValue: false,
-    },
+    title: { name: "Title", control: { type: "text" } },
+    label: { name: "Label", control: { type: "text" } },
+    author: { name: "Author", control: { type: "text" } },
+    submitInfo: { name: "Submit Info text", control: { type: "text" } },
+    submitButton: { name: "Submit Button text", control: { type: "text" } },
+    state: { name: "State for reservation", control: { type: "text" } },
+    showPromoBar: { name: "Show PromoBar", control: "boolean" },
+    showInstantLoan: { name: "Show instant loan", control: "boolean" },
+  },
+  args: {
+    state: "initial",
+    showPromoBar: false,
+    showInstantLoan: false,
+    label: "bog",
+    title: "Stephen Hawking",
+    author: "Af Isabel Sánchez Vegara, Amaia Arrazola (2018)",
+    submitInfo: "Vi har 8 eksemplarer og 21 står i kø",
+    submitButton: "GODKEND RESERVERING",
   },
 } as Meta<typeof Reservation>;
 

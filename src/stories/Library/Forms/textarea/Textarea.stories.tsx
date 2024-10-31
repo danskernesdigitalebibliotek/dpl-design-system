@@ -5,17 +5,15 @@ import Textarea from "./Textarea";
 export default {
   title: "Library / Forms / Textarea",
   component: Textarea,
-
   argTypes: {
-    id: {
-      defaultValue: "id",
-    },
-    name: {
-      defaultValue: "name",
-    },
-    label: {
-      defaultValue: "Besked",
-    },
+    id: { control: "text" },
+    name: { control: "text" },
+    label: { control: "text" },
+  },
+  args: {
+    id: "id",
+    name: "name",
+    label: "Besked",
   },
   parameters: {
     design: {

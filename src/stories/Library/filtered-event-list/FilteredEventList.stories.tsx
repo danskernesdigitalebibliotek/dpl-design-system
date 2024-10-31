@@ -4,29 +4,30 @@ import FilteredListData from "./FilteredEventListData";
 
 export default {
   title: "Library/ Filtered Event List",
-
   component: FilteredEventList,
   argTypes: {
     title: {
-      defaultValue: "Aktiviteter på biblioteket",
       control: "text",
       description: "Title of the recommendation",
     },
     events: {
-      defaultValue: FilteredListData,
       control: "object",
       description: "List of events to be displayed",
     },
     buttonText: {
-      defaultValue: "Se alle",
       control: "text",
       description: "Text for the button",
     },
     buttonShowLessText: {
-      defaultValue: "Se færre",
       control: "text",
       description: "Text for the button",
     },
+  },
+  args: {
+    title: "Aktiviteter på biblioteket",
+    events: FilteredListData,
+    buttonText: "Se alle",
+    buttonShowLessText: "Se færre",
   },
   parameters: {
     design: {

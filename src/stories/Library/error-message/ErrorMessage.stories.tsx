@@ -5,7 +5,6 @@ import { ErrorMessage } from "./ErrorMessage";
 export default {
   title: "Library / Error Message",
   component: ErrorMessage,
-
   argTypes: {},
   parameters: {},
 } as Meta<typeof ErrorMessage>;

@@ -5,7 +5,6 @@ import AvailabilityLabel from "./AvailabilityLabel";
 export default {
   title: "Library / Availability Label",
   component: AvailabilityLabel,
-
   argTypes: {
     manifestationType: {
       name: "Manifestation Type",

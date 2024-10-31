@@ -8,12 +8,13 @@ import {
 export default {
   title: "Library / Colors / Identity Color",
   component: IdentityColorComp,
-
   argTypes: {
     identityColor: {
-      defaultValue: "#476e57",
       control: { type: "color" },
     },
+  },
+  args: {
+    identityColor: "#476e57",
   },
   parameters: {
     design: {

@@ -6,34 +6,22 @@ export default {
   title: "Library / Review",
   component: ReviewsComp,
   argTypes: {
-    numberOfReviews: {
-      defaultValue: 1,
-      control: { type: "number" },
-    },
-    meta: {
-      defaultValue: "Berlingske tidende, 2021.03.19",
-      control: "text",
-    },
-    hearts: {
-      defaultValue: 5,
-    },
-    headline: {
-      defaultValue: "Anmeldelse af: Efterskælv",
-      control: "text",
-    },
-    body: {
-      defaultValue:
-        "Den anerkendte forfatter tager udgangspunkt i sit ægteskabs nøgne efterskælv. Veloplagt, men rystet, byder hun indenfor - også i de mørkeste kamre. Der har aldrig før været en skilsmisse i denne klan....",
-      control: "text",
-    },
-    linkText: {
-      defaultValue: "Berlingske tidende, 2021.03.19",
-      control: "text",
-    },
-    linkLink: {
-      defaultValue: "/",
-      control: "text",
-    },
+    numberOfReviews: { control: { type: "number" } },
+    meta: { control: "text" },
+    hearts: { control: { type: "number" } },
+    headline: { control: "text" },
+    body: { control: "text" },
+    linkText: { control: "text" },
+    linkLink: { control: "text" },
+  },
+  args: {
+    numberOfReviews: 1,
+    meta: "Berlingske tidende, 2021.03.19",
+    hearts: 5,
+    headline: "Anmeldelse af: Efterskælv",
+    body: "Den anerkendte forfatter tager udgangspunkt i sit ægteskabs nøgne efterskælv. Veloplagt, men rystet, byder hun indenfor - også i de mørkeste kamre. Der har aldrig før været en skilsmisse i denne klan....",
+    linkText: "Berlingske tidende, 2021.03.19",
+    linkLink: "/",
   },
   parameters: {
     design: {

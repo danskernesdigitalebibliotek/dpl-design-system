@@ -5,7 +5,6 @@ import { ModalDetails } from "./ModalDetails";
 export default {
   title: "Library / Modals / Details",
   component: ModalDetails,
-
   argTypes: {},
   parameters: {
     design: {

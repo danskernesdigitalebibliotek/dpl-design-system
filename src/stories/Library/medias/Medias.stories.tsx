@@ -6,7 +6,6 @@ import ImageCredited from "../image-credited/ImageCredited";
 export default {
   title: "Library / Medias",
   component: Medias,
-
   argTypes: {
     items: {
       // Disabling controls, as the different variations are added already.

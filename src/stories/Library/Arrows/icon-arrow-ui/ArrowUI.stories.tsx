@@ -1,21 +1,24 @@
-import { StoryBaseType } from "../../../../types/StorybookHelpers";
+import { Meta, StoryFn } from "@storybook/react";
+import { IconArrow as ArrowComp } from "./ArrowUI";
 
-import { IconArrow as ArrowComp, IconArrowProps } from "./ArrowUI";
-
-const StoryBase: StoryBaseType<IconArrowProps> = {
+export default {
   title: "Library / Arrows / Arrow UI",
   component: ArrowComp,
-
   argTypes: {
     direction: {
-      defaultValue: "right",
+      control: { type: "select" },
     },
     hover: {
-      defaultValue: true,
+      control: { type: "boolean" },
     },
     size: {
-      defaultValue: "large",
+      control: { type: "select" },
     },
+  },
+  args: {
+    direction: "right",
+    hover: true,
+    size: "large",
   },
   parameters: {
     design: {
@@ -24,14 +27,14 @@ const StoryBase: StoryBaseType<IconArrowProps> = {
     },
     layout: "centered",
   },
-};
+} as Meta<typeof ArrowComp>;
 
-export default StoryBase;
-
-export const ArrowUI = (props: IconArrowProps) => (
+const Template: StoryFn<typeof ArrowComp> = (props) => (
   <ArrowComp {...props}>
     <div className="internal-arrow-box">
       To animate the arrow on hover, we have to embed the svg inline
     </div>
   </ArrowComp>
 );
+
+export const ArrowUI = Template.bind({});

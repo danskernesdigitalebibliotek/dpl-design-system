@@ -5,7 +5,6 @@ import { Shadows } from "./Shadows";
 export default {
   title: "Library / Shadows",
   component: Shadows,
-
   parameters: {
     design: {
       type: "figma",
