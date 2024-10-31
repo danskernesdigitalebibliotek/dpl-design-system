@@ -3,7 +3,7 @@ import { StoryFn, Meta } from "@storybook/react";
 import { ButtonUI } from "./ButtonUI";
 
 export default {
-  title: "Library / Buttons / Button",
+  title: "Library / Buttons / ButtonUI",
   component: ButtonUI,
   argTypes: {
     label: { control: "text" },
