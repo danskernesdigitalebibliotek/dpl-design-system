@@ -5,34 +5,43 @@ import PagefoldComp from "./Pagefold";
 export default {
   title: "Library / Pagefold",
   component: PagefoldComp,
-
   argTypes: {
-    isInheriting: {
-      defaultValue: false,
-    },
-    isAContainer: {
-      defaultValue: true,
-    },
-    size: {
-      defaultValue: "medium",
-    },
     className: {
-      // Only used internally
       control: {
         disable: true,
       },
     },
     compProps: {
-      // Only used internally
       control: {
         disable: true,
       },
     },
     type: {
       control: {
-        defaultValue: undefined,
+        type: "select",
       },
     },
+    isInheriting: {
+      control: {
+        type: "boolean",
+      },
+    },
+    isAContainer: {
+      control: {
+        type: "boolean",
+      },
+    },
+    size: {
+      control: {
+        type: "select",
+      },
+    },
+  },
+  args: {
+    type: undefined,
+    isInheriting: false,
+    isAContainer: true,
+    size: "medium",
   },
   parameters: {
     design: {

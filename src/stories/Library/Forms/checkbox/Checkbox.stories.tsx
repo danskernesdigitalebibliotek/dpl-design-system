@@ -6,47 +6,21 @@ import { CheckboxDrupal } from "./CheckboxDrupal";
 export default {
   title: "Library / Forms / Checkbox",
   component: Checkbox,
-
   argTypes: {
-    ariaLabel: {
-      control: {
-        type: "text",
-      },
-    },
-    labelLinkText: {
-      control: {
-        type: "text",
-      },
-    },
-    labelLinkHref: {
-      control: {
-        type: "text",
-      },
-    },
-    validation: {
-      control: {
-        type: "text",
-        defaultValue: "",
-      },
-    },
-    includeHeadline: {
-      control: {
-        type: "null",
-      },
-    },
-    description: {
-      control: {
-        type: "text",
-        defaultValue: "This is a description.",
-      },
-    },
-    // We disable the isChecked control, since it is not possible to
-    // get the states from the React component to work with Storybook controls.
-    isChecked: {
-      control: {
-        disable: true,
-      },
-    },
+    ariaLabel: { control: { type: "text" } },
+    labelLinkText: { control: { type: "text" } },
+    labelLinkHref: { control: { type: "text" } },
+    validation: { control: { type: "text" } },
+    includeHeadline: { control: { type: "null" } },
+    description: { control: { type: "text" } },
+    isChecked: { control: { disable: true } },
+    label: { control: { type: "text" } },
+  },
+  args: {
+    isChecked: false,
+    label: "Toggle this checkbox",
+    description: "This is a description.",
+    validation: "",
   },
   parameters: {
     layout: "centered",

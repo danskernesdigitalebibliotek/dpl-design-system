@@ -6,7 +6,6 @@ import { menuItems } from "../header-menu-list/HeaderMenuListData";
 export default {
   title: "Library / Header Sidebar Nav",
   component: HeaderSidebarNav,
-
   parameters: {
     design: {
       type: "figma",
@@ -20,18 +19,20 @@ export default {
       },
       description: "The links of the menu",
       control: { type: "object" },
-      defaultValue: menuItems,
     },
     menuOpen: {
       description: "The state of the menu",
-      defaultValue: "open",
       control: { type: "select", options: ["open", "closed"] },
     },
     isStorybookContext: {
       name: "Are we in storybook?",
-      defaultValue: true,
       control: { type: "boolean" },
     },
+  },
+  args: {
+    menuLinks: menuItems,
+    menuOpen: "open",
+    isStorybookContext: true,
   },
 } as Meta<typeof HeaderSidebarNav>;
 

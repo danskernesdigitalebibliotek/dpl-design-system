@@ -7,7 +7,6 @@ type TagProps = typeof TagComp;
 export default {
   title: "Library / Tag / Tag button",
   component: TagComp,
-
   parameters: {
     design: {
       type: "figma",
@@ -16,18 +15,25 @@ export default {
     layout: "centered",
   },
   argTypes: {
+    size: {
+      control: { type: "radio" },
+      options: ["small", "medium", "large"],
+    },
     hasBackground: {
       control: { type: "boolean" },
-      defaultValue: false,
     },
     showCloseIcon: {
       control: { type: "boolean" },
-      defaultValue: false,
     },
     isClickable: {
       control: { type: "boolean" },
-      defaultValue: true,
     },
+  },
+  args: {
+    size: "medium",
+    hasBackground: false,
+    showCloseIcon: false,
+    isClickable: true,
   },
 };
 

@@ -7,28 +7,31 @@ import {
 
 export default {
   title: "Blocks / Advanced Search",
+  component: AdvancedSearchComp,
   argTypes: {
     inputPlaceholder: {
       name: "Input placeholder",
-      defaultValue: "Søgeterm",
       control: { type: "text" },
     },
     inputAmount: {
       name: "Amount of input rows",
-      defaultValue: 2,
       control: { type: "number" },
     },
     cqlPreviewText: {
       name: "CQL preview text",
-      defaultValue:
-        "title = harry potter AND subtitle = and the philosophers stone",
       control: { type: "text" },
     },
     isCqlSearch: {
       name: "Is CQL search?",
-      defaultValue: false,
       control: { type: "boolean" },
     },
+  },
+  args: {
+    inputPlaceholder: "Søgeterm",
+    inputAmount: 2,
+    cqlPreviewText:
+      "title = harry potter AND subtitle = and the philosophers stone",
+    isCqlSearch: false,
   },
   parameters: {
     design: {

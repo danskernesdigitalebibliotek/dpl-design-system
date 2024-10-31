@@ -5,18 +5,19 @@ import IconTextLink, { IconTextLinkProps } from "./IconTextLink";
 export default {
   title: "Library / Links / Icon Text Link",
   component: IconTextLink,
-
   argTypes: {
     text: {
       name: "Text",
-      defaultValue: "Read in English",
       control: { type: "text" },
     },
     icon: {
       name: "Icon",
-      defaultValue: "england",
       control: { type: "text" },
     },
+  },
+  args: {
+    text: "Read in English",
+    icon: "england",
   },
   parameters: {
     design: {

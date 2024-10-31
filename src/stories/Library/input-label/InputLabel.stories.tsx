@@ -8,12 +8,12 @@ export default {
   title: "Library / Input label",
   component: InputLabelComp,
   argTypes: {
-    text: {
-      defaultValue: "Her er en label",
-    },
-    required: {
-      defaultValue: false,
-    },
+    text: { control: "text" },
+    required: { control: "boolean" },
+  },
+  args: {
+    text: "Her er en label",
+    required: false,
   },
   parameters: {
     layout: "padded",

@@ -5,7 +5,6 @@ import { Colors as ColorsComp } from "./Colors";
 export default {
   title: "Library / Colors / Colors",
   component: ColorsComp,
-
   parameters: {
     design: {
       type: "figma",

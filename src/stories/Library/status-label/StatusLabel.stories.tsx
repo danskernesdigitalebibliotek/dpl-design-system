@@ -5,7 +5,6 @@ import { StatusLabel } from "./StatusLabel";
 export default {
   title: "Library / Status Label",
   component: StatusLabel,
-
   argTypes: {},
   parameters: {
     layout: "centered",

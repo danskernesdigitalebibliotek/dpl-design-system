@@ -5,7 +5,6 @@ import { LinkButton } from "./LinkButton";
 export default {
   title: "Library / Buttons / Link Button",
   component: LinkButton,
-
   argTypes: {
     href: {
       control: {

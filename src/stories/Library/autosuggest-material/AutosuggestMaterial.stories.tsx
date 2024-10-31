@@ -9,18 +9,17 @@ import { autosuggestMaterialSuggestions } from "./helper";
 export default {
   title: "Library / Autosuggest - Material",
   component: AutosuggestMaterial,
-
   argTypes: {
     materialSuggestions: {
-      name: "Material suggestions",
-      defaultValue: autosuggestMaterialSuggestions,
       control: { type: "object" },
     },
     classes: {
-      name: "Classes",
-      defaultValue: undefined,
       control: { type: "text" },
     },
+  },
+  args: {
+    materialSuggestions: autosuggestMaterialSuggestions,
+    classes: undefined,
   },
   parameters: {
     design: {

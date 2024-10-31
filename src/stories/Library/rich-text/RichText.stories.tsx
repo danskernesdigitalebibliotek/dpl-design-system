@@ -5,7 +5,6 @@ import { RichText } from "./RichText";
 export default {
   title: "Library / Rich Text",
   component: RichText,
-
   parameters: {
     design: {
       type: "figma",

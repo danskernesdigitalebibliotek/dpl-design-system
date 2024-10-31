@@ -1,17 +1,17 @@
 import { StoryFn } from "@storybook/react";
-
 import CreatePatron, { CreatePatronProps } from "./CreatePatron";
 
 export default {
   title: "Blocks / Create Patron",
   component: CreatePatron,
-
   argTypes: {
     headline: {
       name: "Title",
-      defaultValue: "Register as patron",
       control: { type: "text" },
     },
+  },
+  args: {
+    headline: "Register as patron",
   },
   parameters: {
     design: {

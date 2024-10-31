@@ -5,23 +5,17 @@ import { PauseReservation } from "./PauseReservation";
 export default {
   title: "Library / Pause reservation",
   component: PauseReservation,
-
   argTypes: {
-    isChecked: {
-      defaultValue: true,
-    },
-    pauseText: {
-      control: "text",
-      defaultValue: "Sæt fysiske reserveringer på pause",
-    },
-    isPausedtext: {
-      control: "text",
-      defaultValue: "Dine fysiske reserveringer er på pause",
-    },
-    dates: {
-      control: "text",
-      defaultValue: "20.09.2021 - 12.10.2021",
-    },
+    isChecked: { control: "boolean" },
+    pauseText: { control: "text" },
+    isPausedtext: { control: "text" },
+    dates: { control: "text" },
+  },
+  args: {
+    isChecked: true,
+    pauseText: "Sæt fysiske reserveringer på pause",
+    isPausedtext: "Dine fysiske reserveringer er på pause",
+    dates: "20.09.2021 - 12.10.2021",
   },
   parameters: {
     design: {

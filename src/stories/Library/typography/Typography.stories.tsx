@@ -5,7 +5,6 @@ import { Typography } from "./Typography";
 export default {
   title: "Library / Typography",
   component: Typography,
-
   parameters: {
     design: {
       type: "figma",

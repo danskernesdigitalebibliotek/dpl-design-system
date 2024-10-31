@@ -4,7 +4,6 @@ import { ModalHeader } from "./ModalHeader";
 export default {
   title: "Library / Modals / Header",
   component: ModalHeader,
-
   argTypes: {},
   parameters: {
     design: {

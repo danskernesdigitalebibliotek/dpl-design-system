@@ -1,20 +1,20 @@
 import { StoryFn, Meta } from "@storybook/react";
-
 import IconButton from "./IconButton";
 
 export default {
   title: "Library / Buttons / Button icon",
   component: IconButton,
-
   argTypes: {
     src: {
-      defaultValue: "icons/collection/Menu.svg",
       control: "text",
     },
     altText: {
-      defaultValue: "Denne knap sorterer listen efter dato",
       control: "text",
     },
+  },
+  args: {
+    src: "icons/collection/Menu.svg",
+    altText: "Denne knap sorterer listen efter dato",
   },
   parameters: {
     design: {

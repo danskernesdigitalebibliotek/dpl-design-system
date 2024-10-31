@@ -5,7 +5,6 @@ import fakeData from "./ListDescriptionFakeData";
 export default {
   title: "Library / Lists / Description",
   component: ListDescription,
-
   parameters: {
     design: {
       type: "figma",
@@ -15,8 +14,10 @@ export default {
   argTypes: {
     data: {
       control: { type: "object" },
-      defaultValue: fakeData,
     },
+  },
+  args: {
+    data: fakeData,
   },
 } as Meta<typeof ListDescription>;
 

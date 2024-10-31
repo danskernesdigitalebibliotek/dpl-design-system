@@ -5,7 +5,6 @@ import { SearchResultPage } from "../card-list-page/SearchResultPage";
 export default {
   title: "Blocks / Search Result Page",
   component: SearchResultPage,
-
   parameters: {
     design: {
       type: "figma",
@@ -15,29 +14,30 @@ export default {
   argTypes: {
     title: {
       control: { type: "text" },
-      defaultValue: "harry potter",
     },
     totalResults: {
       control: { type: "number" },
-      defaultValue: 3576,
     },
     linkName: {
       control: { type: "text" },
-      defaultValue: "bibliotekets hjemmeside",
     },
     linkTotalResults: {
       control: { type: "text" },
-      defaultValue: "8",
     },
     currentResults: {
       control: { type: "number" },
-      defaultValue: 10,
     },
-
     zeroResult: {
       control: { type: "boolean" },
-      defaultValue: false,
     },
+  },
+  args: {
+    title: "harry potter",
+    totalResults: 3576,
+    linkName: "bibliotekets hjemmeside",
+    linkTotalResults: "8",
+    currentResults: 10,
+    zeroResult: false,
   },
 } as Meta<typeof SearchResultPage>;
 

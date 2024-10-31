@@ -5,24 +5,17 @@ import ContentListItemStacked from "./ContentListItemStacked";
 export default {
   title: "Library / Content List Item Stacked",
   component: ContentListItemStacked,
-
   argTypes: {
-    title: {
-      defaultValue: "Hidden Title",
-      control: { type: "text" },
-    },
-    date: {
-      defaultValue: "01 Feb 2023",
-      control: { type: "text" },
-    },
-    time: {
-      defaultValue: "19:30 - 21:00",
-      control: { type: "text" },
-    },
-    href: {
-      defaultValue: "/",
-      control: { type: "text" },
-    },
+    title: { control: { type: "text" } },
+    date: { control: { type: "text" } },
+    time: { control: { type: "text" } },
+    href: { control: { type: "text" } },
+  },
+  args: {
+    title: "Hidden Title",
+    date: "01 Feb 2023",
+    time: "19:30 - 21:00",
+    href: "/",
   },
   parameters: {
     design: {

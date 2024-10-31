@@ -5,14 +5,13 @@ import { Links as LinksComp } from "./Links";
 export default {
   title: "Library / Links / Text link",
   component: LinksComp,
-
   argTypes: {
-    href: {
-      defaultValue: "/",
-    },
-    linkText: {
-      defaultValue: "Hello world",
-    },
+    href: { control: "text" },
+    linkText: { control: "text" },
+  },
+  args: {
+    href: "/",
+    linkText: "Hello world",
   },
   parameters: {
     design: {

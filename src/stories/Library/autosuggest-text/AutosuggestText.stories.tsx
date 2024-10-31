@@ -5,18 +5,19 @@ import { AutosuggestText, AutosuggestTextProps } from "./AutosuggestText";
 export default {
   title: "Library / Autosuggest - Text",
   component: AutosuggestText,
-
   argTypes: {
     textSuggestions: {
       name: "Text suggestions",
-      defaultValue: ["Item one (author)", "Item two (work)"],
       control: { type: "object" },
     },
     categoryText: {
       name: "Category text",
-      defaultValue: undefined,
       control: { type: "text" },
     },
+  },
+  args: {
+    textSuggestions: ["Item one (author)", "Item two (work)"],
+    categoryText: undefined,
   },
   parameters: {
     design: {
