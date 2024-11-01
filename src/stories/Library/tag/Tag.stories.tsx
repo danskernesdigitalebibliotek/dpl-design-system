@@ -21,13 +21,12 @@ export default {
     },
     size: {
       control: { type: "radio" },
-      options: ["default", "large"],
     },
   },
   args: {
     children: "Litteratur",
     hasBackground: false,
-    size: "default",
+    size: "small",
   },
 };
 
