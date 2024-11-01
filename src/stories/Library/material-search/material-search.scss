@@ -184,7 +184,9 @@ $list_header_height: 50px;
   column-gap: $_gin_m_spacing;
   justify-items: baseline;
   align-items: center;
-  transition: scale 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  transition:
+    scale 0.1s ease-in-out,
+    box-shadow 0.1s ease-in-out;
   background-color: transparent;
 
   &:hover,
