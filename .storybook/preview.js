@@ -1,3 +1,5 @@
+import "../src/styles/css/base.css";
+
 export const parameters = {
   layout: "fullscreen",
   actions: { argTypesRegex: "^on[A-Z].*" },
