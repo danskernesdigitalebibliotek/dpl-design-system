@@ -1,3 +1,5 @@
+@use "sass:list";
+
 /**
  * Set styling across breakpoints, with possibility to exclude.
  *
@@ -20,7 +22,7 @@
 
     @include media-query__name($breakpoint-name) {
       @each $property, $value in $map-inner {
-        @if not(index($excludes, $property)) {
+        @if not(list.index($excludes, $property)) {
           #{$property}: $value;
         }
       }
