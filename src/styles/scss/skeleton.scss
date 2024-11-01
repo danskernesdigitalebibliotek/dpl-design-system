@@ -3,4 +3,4 @@ $skeleton-line-border-radius: 3px;
 // Es lint in CI is complaing and something else is complaining locally.
 // I choose to shut up es lint in CI.
 // stylelint-disable-next-line scss/at-import-partial-extension
-@import "../../../node_modules/skeleton-screen-css/dist/index.scss";
+@import "../../../node_modules/skeleton-screen-css/dist/index";
