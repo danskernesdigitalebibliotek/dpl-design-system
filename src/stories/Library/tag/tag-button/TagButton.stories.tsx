@@ -15,10 +15,6 @@ export default {
     layout: "centered",
   },
   argTypes: {
-    size: {
-      control: { type: "radio" },
-      options: ["small", "medium", "large"],
-    },
     hasBackground: {
       control: { type: "boolean" },
     },
@@ -30,7 +26,6 @@ export default {
     },
   },
   args: {
-    size: "medium",
     hasBackground: false,
     showCloseIcon: false,
     isClickable: true,
