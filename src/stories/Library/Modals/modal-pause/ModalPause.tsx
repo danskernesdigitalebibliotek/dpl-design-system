@@ -2,6 +2,7 @@ import React, { MutableRefObject, useCallback, useRef } from "react";
 
 import { BaseOptions } from "flatpickr/dist/types/options";
 import { Instance } from "flatpickr/dist/types/instance";
+import "flatpickr/dist/flatpickr.css";
 import flatpickr from "flatpickr";
 import { Button } from "../../Buttons/button/Button";
 import { Links } from "../../links/Links";
