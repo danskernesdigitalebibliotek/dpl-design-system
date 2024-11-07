@@ -9,4 +9,8 @@
   * {
     font-size: 12px;
   }
+
+  &.horizontal-term-line--no-wrap {
+    flex-wrap: nowrap;
+  }
 }
