@@ -1,28 +1,31 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
 
-import { ButtonUI } from "./ButtonUI";
+import { ButtonUI, ButtonUIProps } from "./ButtonUI";
 
 export default {
-  title: "Library / Buttons / Button",
+  title: "Library / Buttons / ButtonUI",
   component: ButtonUI,
-  decorators: [withDesign],
   argTypes: {
-    label: {
-      defaultValue: "Se hele kalenderen",
+    content: {
+      control: "object",
     },
-    disabled: {
-      defaultValue: false,
+    ariaLabel: { control: "text" },
+    label: { control: "text" },
+    disabled: { control: "boolean" },
+    collapsible: { control: "boolean" },
+    size: { control: "select" },
+    variant: { control: "select" },
+  },
+  args: {
+    content: {
+      kind: "LABEL",
+      label: "Se hele kalenderen",
     },
-    collapsible: {
-      defaultValue: false,
-    },
-    size: {
-      defaultValue: "medium",
-    },
-    variant: {
-      defaultValue: "outline",
-    },
+    ariaLabel: "Calendar button",
+    disabled: false,
+    collapsible: false,
+    size: "medium",
+    variant: "outline",
   },
   parameters: {
     design: {
@@ -31,9 +34,9 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof ButtonUI>;
+} as Meta<typeof ButtonUI>;
 
-const Template: ComponentStory<typeof ButtonUI> = (args) => (
+const Template: StoryFn<typeof ButtonUI> = (args: ButtonUIProps) => (
   <ButtonUI {...args} />
 );
 

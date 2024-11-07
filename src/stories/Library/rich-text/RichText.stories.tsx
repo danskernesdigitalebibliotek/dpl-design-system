@@ -1,11 +1,10 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import { RichText } from "./RichText";
 
 export default {
   title: "Library / Rich Text",
   component: RichText,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
@@ -13,8 +12,8 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof RichText>;
+} as Meta<typeof RichText>;
 
-const Template: ComponentStory<typeof RichText> = () => <RichText />;
+const Template: StoryFn<typeof RichText> = () => <RichText />;
 
 export const Default = Template.bind({});

@@ -13,7 +13,7 @@ type PropsProcessedComponent<T> = Omit<
 };
 
 export const withAvailabilityProps = <T extends PageFoldType>(
-  Component: React.FC<T>
+  Component: React.FC<T>,
 ): React.FC<PropsProcessedComponent<T>> => {
   const defaultClasses = ["availability-label", "text-label"];
 

@@ -1,12 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import Page from "./Page";
 import ImageCredited from "../../Library/image-credited/ImageCredited";
 
 export default {
   title: "Blocks / Pages",
   component: Page,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
@@ -19,9 +18,9 @@ export default {
       description: "Object containing hero details",
     },
   },
-} as ComponentMeta<typeof Page>;
+} as Meta<typeof Page>;
 
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
+const Template: StoryFn<typeof Page> = (args) => <Page {...args} />;
 
 export const frontPage = Template.bind({});
 frontPage.args = {

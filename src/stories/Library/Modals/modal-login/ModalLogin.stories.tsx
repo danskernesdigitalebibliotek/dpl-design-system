@@ -1,11 +1,9 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { ModalLogin } from "./ModalLogin";
 
 export default {
   title: "Library / Modals / Login",
   component: ModalLogin,
-  decorators: [withDesign],
   argTypes: {},
   parameters: {
     design: {
@@ -13,11 +11,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=2137%3A11410",
     },
   },
-} as ComponentMeta<typeof ModalLogin>;
+} as Meta<typeof ModalLogin>;
 
-const Template: ComponentStory<typeof ModalLogin> = (args) => (
-  <ModalLogin {...args} />
-);
+const Template: StoryFn<typeof ModalLogin> = (args) => <ModalLogin {...args} />;
 
 export const Item = Template.bind({});
 Item.args = {

@@ -1,5 +1,5 @@
 // Recommendation.stories.tsx
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Recommendation } from "./Recommendation";
 import recommendedMaterialArgs from "../recommended-material/RecommendedMaterialArgs";
 
@@ -30,9 +30,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=434-6424&mode=design&t=ADgZ8H4KNumis8iG-4",
     },
   },
-} as ComponentMeta<typeof Recommendation>;
+} as Meta<typeof Recommendation>;
 
-const Template: ComponentStory<typeof Recommendation> = (args) => (
+const Template: StoryFn<typeof Recommendation> = (args) => (
   <Recommendation {...args} />
 );
 

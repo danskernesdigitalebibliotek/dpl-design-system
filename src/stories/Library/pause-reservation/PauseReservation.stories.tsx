@@ -1,27 +1,21 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import { PauseReservation } from "./PauseReservation";
 
 export default {
   title: "Library / Pause reservation",
   component: PauseReservation,
-  decorators: [withDesign],
   argTypes: {
-    isChecked: {
-      defaultValue: true,
-    },
-    pauseText: {
-      control: "text",
-      defaultValue: "Sæt fysiske reserveringer på pause",
-    },
-    isPausedtext: {
-      control: "text",
-      defaultValue: "Dine fysiske reserveringer er på pause",
-    },
-    dates: {
-      control: "text",
-      defaultValue: "20.09.2021 - 12.10.2021",
-    },
+    isChecked: { control: "boolean" },
+    pauseText: { control: "text" },
+    isPausedtext: { control: "text" },
+    dates: { control: "text" },
+  },
+  args: {
+    isChecked: true,
+    pauseText: "Sæt fysiske reserveringer på pause",
+    isPausedtext: "Dine fysiske reserveringer er på pause",
+    dates: "20.09.2021 - 12.10.2021",
   },
   parameters: {
     design: {
@@ -29,9 +23,9 @@ export default {
       url: "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=607%3A35282",
     },
   },
-} as ComponentMeta<typeof PauseReservation>;
+} as Meta<typeof PauseReservation>;
 
-const Template: ComponentStory<typeof PauseReservation> = (args) => (
+const Template: StoryFn<typeof PauseReservation> = (args) => (
   <PauseReservation {...args} />
 );
 

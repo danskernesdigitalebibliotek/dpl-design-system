@@ -1,25 +1,24 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import { LinkWithIcon } from "./LinkWithIcon";
 
 export default {
   title: "Library / Link with icon",
   component: LinkWithIcon,
-  decorators: [withDesign],
   argTypes: {
-    href: {
-      defaultValue: "/",
-    },
-    linkText: {
-      defaultValue: "Følg prisoverrækkelsen live fra kl. 15:30",
-    },
+    href: {},
+    linkText: {},
     linkType: {
       control: {
         type: "select",
         options: ["internal", "external", "download", "search"],
       },
-      defaultValue: "internal",
     },
+  },
+  args: {
+    href: "/",
+    linkText: "Følg prisoverrækkelsen live fra kl. 15:30",
+    linkType: "internal",
   },
   parameters: {
     design: {
@@ -28,17 +27,15 @@ export default {
     },
     layout: "full",
   },
-} as ComponentMeta<typeof LinkWithIcon>;
+} as Meta<typeof LinkWithIcon>;
 
-const Template: ComponentStory<typeof LinkWithIcon> = (args) => (
+const Template: StoryFn<typeof LinkWithIcon> = (args) => (
   <LinkWithIcon {...args} />
 );
 
 export const Default = Template.bind({});
 
-const LinkWithIconListComponentTemplate: ComponentStory<
-  typeof LinkWithIcon
-> = () => (
+const LinkWithIconListComponentTemplate: StoryFn<typeof LinkWithIcon> = () => (
   <div>
     <LinkWithIcon href="#" linkText="Internal Link" linkType="internal" />
     <LinkWithIcon

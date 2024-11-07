@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import ContentList from "./ContentList";
 import ContentListData from "./ContentListData";
 
@@ -12,8 +12,8 @@ export default {
     },
     layout: "fullscreen",
   },
-} as ComponentMeta<typeof ContentList>;
-const Template: ComponentStory<typeof ContentList> = (args) => (
+} as Meta<typeof ContentList>;
+const Template: StoryFn<typeof ContentList> = (args) => (
   <ContentList {...args} />
 );
 

@@ -1,12 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import HeaderSidebarNav, { HeaderSidebarNavProps } from "./header-sidebar-nav";
 import { menuItems } from "../header-menu-list/HeaderMenuListData";
 
 export default {
   title: "Library / Header Sidebar Nav",
   component: HeaderSidebarNav,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
@@ -20,23 +19,25 @@ export default {
       },
       description: "The links of the menu",
       control: { type: "object" },
-      defaultValue: menuItems,
     },
     menuOpen: {
       description: "The state of the menu",
-      defaultValue: "open",
       control: { type: "select", options: ["open", "closed"] },
     },
     isStorybookContext: {
       name: "Are we in storybook?",
-      defaultValue: true,
-      control: { type: "none" },
+      control: { type: "boolean" },
     },
   },
-} as ComponentMeta<typeof HeaderSidebarNav>;
+  args: {
+    menuLinks: menuItems,
+    menuOpen: "open",
+    isStorybookContext: true,
+  },
+} as Meta<typeof HeaderSidebarNav>;
 
-const Template: ComponentStory<typeof HeaderSidebarNav> = (
-  args: HeaderSidebarNavProps
+const Template: StoryFn<typeof HeaderSidebarNav> = (
+  args: HeaderSidebarNavProps,
 ) => <HeaderSidebarNav {...args} />;
 
 export const Default = Template.bind({});

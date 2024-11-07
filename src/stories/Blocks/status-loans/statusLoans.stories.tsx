@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { StatusLoans as StatusLoansComp } from "./statusLoans";
 
 export default {
@@ -11,37 +11,34 @@ export default {
     },
   },
   argTypes: {
-    statusBarsData: {
-      defaultValue: [
-        {
-          title: "Lån pr. måned",
-          statusBars: [
-            { amount: 1, fullAmount: 4, title: "Ebøger", outOf: "ud af" },
-            { amount: 2, fullAmount: 10, title: "Lydbøger", outOf: "ud af" },
-          ],
-        },
-      ],
-    },
-    title: {
-      defaultValue: "Digitale lån (Ereolen)",
-    },
-    bread: {
-      defaultValue:
-        "På mange digitale materialer, er der er begrænsning på, hvor mange du kan låne pr. måned. Der findes dog en række materialer uden begrænsning.",
-    },
-    reservationsText: {
-      defaultValue: "You can reserve 3 ebooks and 3 audiobooks",
-    },
-    link: {
-      defaultValue: {
-        text: "Se titler du altid kan låne",
-        link: "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=1239%3A66855",
+    statusBarsData: { control: "object" },
+    title: { control: "text" },
+    bread: { control: "text" },
+    reservationsText: { control: "text" },
+    link: { control: "object" },
+  },
+  args: {
+    statusBarsData: [
+      {
+        title: "Lån pr. måned",
+        statusBars: [
+          { amount: 1, fullAmount: 4, title: "Ebøger", outOf: "ud af" },
+          { amount: 2, fullAmount: 10, title: "Lydbøger", outOf: "ud af" },
+        ],
       },
+    ],
+    title: "Digitale lån (Ereolen)",
+    bread:
+      "På mange digitale materialer, er der er begrænsning på, hvor mange du kan låne pr. måned. Der findes dog en række materialer uden begrænsning.",
+    reservationsText: "You can reserve 3 ebooks and 3 audiobooks",
+    link: {
+      text: "Se titler du altid kan låne",
+      link: "https://www.figma.com/file/xouARmJCONbzbZhpD8XpcM/Brugerprofil?node-id=1239%3A66855",
     },
   },
-} as ComponentMeta<typeof StatusLoansComp>;
+} as Meta<typeof StatusLoansComp>;
 
-const Template: ComponentStory<typeof StatusLoansComp> = (args) => (
+const Template: StoryFn<typeof StatusLoansComp> = (args) => (
   <StatusLoansComp {...args} />
 );
 

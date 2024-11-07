@@ -1,20 +1,21 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import EventListStacked from "./EventListStacked";
 
 export default {
   title: "Library/ Stacked Event List",
-
   component: EventListStacked,
   argTypes: {
     title: {
-      defaultValue: "Kommende arrangementer",
       control: "text",
       description: "Title of the section",
     },
   },
-} as ComponentMeta<typeof EventListStacked>;
+  args: {
+    title: "Kommende arrangementer",
+  },
+} as Meta<typeof EventListStacked>;
 
-const Template: ComponentStory<typeof EventListStacked> = (args) => (
+const Template: StoryFn<typeof EventListStacked> = (args) => (
   <EventListStacked {...args} />
 );
 

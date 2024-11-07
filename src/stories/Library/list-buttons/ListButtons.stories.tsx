@@ -1,11 +1,10 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import { ListButton } from "./ListButtons";
 
 export default {
   title: "Library / List buttons",
   component: ListButton,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
@@ -13,23 +12,17 @@ export default {
     },
   },
   argTypes: {
-    buttonLabel: {
-      control: "text",
-      defaultValue: "Forny alle",
-    },
-    header: {
-      control: "text",
-      defaultValue: "Forny lån",
-    },
-    number: {
-      control: "text",
-      defaultValue: "10",
-    },
+    buttonLabel: { control: "text" },
+    header: { control: "text" },
+    number: { control: "text" },
   },
-} as ComponentMeta<typeof ListButton>;
+  args: {
+    buttonLabel: "Forny alle",
+    header: "Forny lån",
+    number: "10",
+  },
+} as Meta<typeof ListButton>;
 
-const Template: ComponentStory<typeof ListButton> = (args) => (
-  <ListButton {...args} />
-);
+const Template: StoryFn<typeof ListButton> = (args) => <ListButton {...args} />;
 
 export const ListButtonsExample = Template.bind({});

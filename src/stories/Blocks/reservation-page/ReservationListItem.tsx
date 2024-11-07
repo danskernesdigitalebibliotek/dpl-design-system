@@ -20,7 +20,7 @@ const ReservationListItem: React.FC<ReservationListItemProps> = ({
         <div
           className={clsx(
             "list-reservation my-32 cursor-pointer arrow__hover--right-small",
-            [{ "list-reservation--stacked": isStacked }]
+            [{ "list-reservation--stacked": isStacked }],
           )}
         >
           <div className="list-reservation__material">

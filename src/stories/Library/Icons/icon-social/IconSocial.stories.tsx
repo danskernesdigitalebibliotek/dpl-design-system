@@ -1,13 +1,10 @@
 import { Meta } from "@storybook/react";
 
-import { withDesign } from "storybook-addon-designs";
-
 import { IconSocial as IconSocialComp } from "./IconSocial";
 
 const StoryBase: Meta = {
   title: "Library / Icons / Social",
   component: IconSocialComp,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",

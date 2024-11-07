@@ -1,12 +1,10 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
 
 import Cover from "./Cover";
 
 export default {
   title: "Library / Cover",
   component: Cover,
-  decorators: [withDesign],
   argTypes: {
     size: {
       name: "Image size",
@@ -42,9 +40,9 @@ export default {
     description: "/",
   },
   parameters: {},
-} as ComponentMeta<typeof Cover>;
+} as Meta<typeof Cover>;
 
-const Template: ComponentStory<typeof Cover> = (args) => <Cover {...args} />;
+const Template: StoryFn<typeof Cover> = (args) => <Cover {...args} />;
 
 export const CoverVisible = Template.bind({});
 CoverVisible.args = {};

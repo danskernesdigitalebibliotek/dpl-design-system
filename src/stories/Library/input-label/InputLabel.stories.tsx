@@ -1,4 +1,4 @@
-import { ComponentStory } from "@storybook/react";
+import { StoryFn } from "@storybook/react";
 
 import { InputLabel as InputLabelComp } from "./InputLabel";
 
@@ -8,21 +8,19 @@ export default {
   title: "Library / Input label",
   component: InputLabelComp,
   argTypes: {
-    text: {
-      defaultValue: "Her er en label",
-    },
-    required: {
-      defaultValue: false,
-    },
+    text: { control: "text" },
+    required: { control: "boolean" },
+  },
+  args: {
+    text: "Her er en label",
+    required: false,
   },
   parameters: {
     layout: "padded",
   },
 };
 
-const Template: ComponentStory<DropdownProps> = (args) => (
-  <InputLabelComp {...args} />
-);
+const Template: StoryFn<DropdownProps> = (args) => <InputLabelComp {...args} />;
 
 export const InputLabel = Template.bind({});
 

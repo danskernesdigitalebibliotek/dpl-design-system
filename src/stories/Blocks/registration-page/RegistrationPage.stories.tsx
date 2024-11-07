@@ -1,17 +1,21 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
+
 import RegistrationPage, { RegistrationPageProps } from "./RegistrationPage";
 
 export default {
   title: "Blocks / Registration Page",
   component: RegistrationPage,
-  decorators: [withDesign],
   argTypes: {
     headline: {
-      name: "Headline",
-      defaultValue: "User registration",
       control: { type: "text" },
     },
+    singleSection: {
+      control: { type: "boolean" },
+    },
+  },
+  args: {
+    headline: "User registration",
+    singleSection: false,
   },
   parameters: {
     design: {
@@ -21,8 +25,8 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof RegistrationPage> = (
-  args: RegistrationPageProps
+const Template: StoryFn<typeof RegistrationPage> = (
+  args: RegistrationPageProps,
 ) => <RegistrationPage {...args} />;
 
 export const Default = Template.bind({});

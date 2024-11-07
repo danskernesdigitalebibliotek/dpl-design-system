@@ -1,11 +1,9 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import FacetBrowser from "./FacetBrowser";
 
 export default {
   title: "Library / Modals / Facet Browser",
   component: FacetBrowser,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
@@ -35,13 +33,13 @@ export default {
     },
     showResults: {
       control: {
-        type: "null",
+        type: "boolean",
       },
     },
   },
-} as ComponentMeta<typeof FacetBrowser>;
+} as Meta<typeof FacetBrowser>;
 
-const Template: ComponentStory<typeof FacetBrowser> = (args) => {
+const Template: StoryFn<typeof FacetBrowser> = (args) => {
   return <FacetBrowser {...args} />;
 };
 

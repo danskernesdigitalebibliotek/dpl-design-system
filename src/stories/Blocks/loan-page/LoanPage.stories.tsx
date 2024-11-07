@@ -1,37 +1,38 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
+
 import LoanPage, { LoanPageProps } from "./LoanPage";
 
 export default {
   title: "Blocks / Loan Page",
   component: LoanPage,
-  decorators: [withDesign],
   argTypes: {
     headline: {
       name: "Headline",
-      defaultValue: "Your loans",
       control: { type: "text" },
     },
     isStacked: {
       name: "Is stacked?",
-      defaultValue: false,
       control: { type: "boolean" },
     },
     physicalLoans: {
       name: "Physical loans amount",
-      defaultValue: 2,
       control: { type: "number" },
     },
     digitalLoans: {
       name: "Digital loans amount",
-      defaultValue: 2,
       control: { type: "number" },
     },
     skeletonVersion: {
       name: "Is skeleton version?",
-      defaultValue: false,
       control: { type: "boolean" },
     },
+  },
+  args: {
+    headline: "Your loans",
+    isStacked: false,
+    physicalLoans: 2,
+    digitalLoans: 2,
+    skeletonVersion: false,
   },
   parameters: {
     design: {
@@ -41,7 +42,7 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof LoanPage> = (args: LoanPageProps) => (
+const Template: StoryFn<typeof LoanPage> = (args: LoanPageProps) => (
   <LoanPage {...args} />
 );
 
