@@ -1,23 +1,23 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
 
 import { AutosuggestText, AutosuggestTextProps } from "./AutosuggestText";
 
 export default {
   title: "Library / Autosuggest - Text",
   component: AutosuggestText,
-  decorators: [withDesign],
   argTypes: {
     textSuggestions: {
       name: "Text suggestions",
-      defaultValue: ["Item one (author)", "Item two (work)"],
-      control: { type: "array" },
+      control: { type: "object" },
     },
     categoryText: {
       name: "Category text",
-      defaultValue: undefined,
       control: { type: "text" },
     },
+  },
+  args: {
+    textSuggestions: ["Item one (author)", "Item two (work)"],
+    categoryText: undefined,
   },
   parameters: {
     design: {
@@ -25,10 +25,10 @@ export default {
       url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4709%3A24976",
     },
   },
-} as ComponentMeta<typeof AutosuggestText>;
+} as Meta<typeof AutosuggestText>;
 
-const Template: ComponentStory<typeof AutosuggestText> = (
-  args: AutosuggestTextProps
+const Template: StoryFn<typeof AutosuggestText> = (
+  args: AutosuggestTextProps,
 ) => (
   <div className="header__menu-search">
     <ul className="autosuggest pb-16">

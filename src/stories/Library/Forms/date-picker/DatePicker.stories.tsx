@@ -1,16 +1,18 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import DatePicker from "./DatePicker";
 
 export default {
   title: "Library / Forms / DatePicker",
   component: DatePicker,
-  decorators: [withDesign],
   argTypes: {
     locale: {
+      control: "select",
       options: ["en", "da"],
-      defaultValue: "en",
     },
+  },
+  args: {
+    locale: "en",
   },
   parameters: {
     design: {
@@ -19,10 +21,8 @@ export default {
     },
     layout: "padded",
   },
-} as ComponentMeta<typeof DatePicker>;
+} as Meta<typeof DatePicker>;
 
-const Template: ComponentStory<typeof DatePicker> = (args) => (
-  <DatePicker {...args} />
-);
+const Template: StoryFn<typeof DatePicker> = (args) => <DatePicker {...args} />;
 
 export const Default = Template.bind({});

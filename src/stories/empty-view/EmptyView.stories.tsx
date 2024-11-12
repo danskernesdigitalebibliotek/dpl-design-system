@@ -1,11 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import EmptyView from "./EmptyView";
 
 export default {
   title: "Library / Empty view",
   component: EmptyView,
-} as ComponentMeta<typeof EmptyView>;
+} as Meta<typeof EmptyView>;
 
-const Template: ComponentStory<typeof EmptyView> = () => <EmptyView />;
+const Template: StoryFn<typeof EmptyView> = () => <EmptyView />;
 
 export const Default = Template.bind({});

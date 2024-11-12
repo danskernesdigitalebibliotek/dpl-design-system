@@ -1,15 +1,17 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import RowButton from "./RowButton";
 
 export default {
   title: "Library / Buttons / RowButton",
   component: RowButton,
-  decorators: [withDesign],
   argTypes: {
     label: {
-      defaultValue: "Netmedier",
+      control: "text",
     },
+  },
+  args: {
+    label: "Netmedier",
   },
   parameters: {
     design: {
@@ -18,10 +20,8 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof RowButton>;
+} as Meta<typeof RowButton>;
 
-const Template: ComponentStory<typeof RowButton> = (args) => (
-  <RowButton {...args} />
-);
+const Template: StoryFn<typeof RowButton> = (args) => <RowButton {...args} />;
 
 export const Default = Template.bind({});

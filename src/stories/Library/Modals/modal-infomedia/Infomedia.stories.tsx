@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Infomedia } from "./Infomedia";
 
 export default {
@@ -21,11 +21,9 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Infomedia>;
+} as Meta<typeof Infomedia>;
 
-const Template: ComponentStory<typeof Infomedia> = (args) => (
-  <Infomedia {...args} />
-);
+const Template: StoryFn<typeof Infomedia> = (args) => <Infomedia {...args} />;
 
 export const Text = Template.bind({});
 Text.args = {

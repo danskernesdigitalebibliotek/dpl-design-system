@@ -1,13 +1,10 @@
 import { Meta } from "@storybook/react";
 
-import { withDesign } from "storybook-addon-designs";
-
 import { IconCollection as IconCollectionComp } from "./IconCollection";
 
 const StoryBase: Meta = {
   title: "Library / Icons / Collection",
   component: IconCollectionComp,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",

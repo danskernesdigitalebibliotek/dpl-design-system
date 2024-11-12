@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import ContentListPage from "./ContentListPage";
 
 export default {
@@ -11,10 +11,8 @@ export default {
     },
     layout: "fullscreen",
   },
-} as ComponentMeta<typeof ContentListPage>;
+} as Meta<typeof ContentListPage>;
 
-const Template: ComponentStory<typeof ContentListPage> = () => (
-  <ContentListPage />
-);
+const Template: StoryFn<typeof ContentListPage> = () => <ContentListPage />;
 
 export const Default = Template.bind({});

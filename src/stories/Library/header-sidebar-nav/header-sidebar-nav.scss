@@ -79,8 +79,8 @@ $_menu_animation_delay: 0.2s;
   height: 100%;
   opacity: 0;
   transform: translateX(-100%);
-  transition: opacity $_transition_speed $_bezier_transition
-      $_menu_animation_delay,
+  transition:
+    opacity $_transition_speed $_bezier_transition $_menu_animation_delay,
     transform $_transition_speed $_bezier_transition $_menu_animation_delay;
   cursor: initial;
 }

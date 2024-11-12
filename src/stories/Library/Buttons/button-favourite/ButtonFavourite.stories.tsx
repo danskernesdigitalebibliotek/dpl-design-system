@@ -1,12 +1,10 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
 
 import { ButtonFavourite } from "./ButtonFavourite";
 
 export default {
   title: "Library / Buttons / Button Favourite",
   component: ButtonFavourite,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
@@ -17,14 +15,15 @@ export default {
   argTypes: {
     fill: {
       control: "boolean",
-      defaultValue: true,
     },
   },
-} as ComponentMeta<typeof ButtonFavourite>;
+  args: {
+    fill: true,
+  },
+} as Meta<typeof ButtonFavourite>;
 
-const Template: ComponentStory<typeof ButtonFavourite> = (args) => (
+const Template: StoryFn<typeof ButtonFavourite> = (args) => (
   <ButtonFavourite {...args} />
 );
 
 export const favourite = Template.bind({});
-favourite.args = {};

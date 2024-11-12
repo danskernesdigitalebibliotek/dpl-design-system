@@ -1,10 +1,8 @@
-import { withDesign } from "storybook-addon-designs";
 import { StoryBaseType } from "../../../types/StorybookHelpers";
 import { Avatar } from "./Avatar";
 
 const StoryBase: StoryBaseType<typeof Avatar> = {
   title: "Library / Avatar",
-  decorators: [withDesign],
   argTypes: {},
   parameters: {
     design: {

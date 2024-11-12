@@ -1,32 +1,21 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import Campaign, { CampaignProps } from "./Campaign";
 
 export default {
   title: "Library / Campaign",
   component: Campaign,
-  decorators: [withDesign],
   argTypes: {
-    title: {
-      control: { type: "text" },
-      defaultValue: "10 gode bøger om Venner & Veninder",
-    },
-    imageUrl: {
-      control: { type: "text" },
-      defaultValue: "https://picsum.photos/id/777/300/200",
-    },
-    reverse: {
-      control: {
-        type: "boolean",
-        default: false,
-      },
-    },
-    ellipsis: {
-      control: {
-        type: "boolean",
-        default: false,
-      },
-    },
+    title: { control: { type: "text" } },
+    imageUrl: { control: { type: "text" } },
+    reverse: { control: { type: "boolean" } },
+    ellipsis: { control: { type: "boolean" } },
+  },
+  args: {
+    title: "10 gode bøger om Venner & Veninder",
+    imageUrl: "https://picsum.photos/id/777/300/200",
+    reverse: false,
+    ellipsis: false,
   },
   parameters: {
     design: {
@@ -34,9 +23,9 @@ export default {
       url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4525%3A14602",
     },
   },
-} as ComponentMeta<typeof Campaign>;
+} as Meta<typeof Campaign>;
 
-const Template: ComponentStory<typeof Campaign> = (args: CampaignProps) => (
+const Template: StoryFn<typeof Campaign> = (args: CampaignProps) => (
   <Campaign {...args} />
 );
 

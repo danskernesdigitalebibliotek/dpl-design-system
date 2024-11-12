@@ -1,5 +1,5 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
+
 import {
   AdvancedSearch as AdvancedSearchComp,
   AdvancedSearchProps,
@@ -8,29 +8,30 @@ import {
 export default {
   title: "Blocks / Advanced Search",
   component: AdvancedSearchComp,
-  decorators: [withDesign],
   argTypes: {
     inputPlaceholder: {
       name: "Input placeholder",
-      defaultValue: "Søgeterm",
       control: { type: "text" },
     },
     inputAmount: {
       name: "Amount of input rows",
-      defaultValue: 2,
       control: { type: "number" },
     },
     cqlPreviewText: {
       name: "CQL preview text",
-      defaultValue:
-        "title = harry potter AND subtitle = and the philosophers stone",
       control: { type: "text" },
     },
     isCqlSearch: {
       name: "Is CQL search?",
-      defaultValue: false,
       control: { type: "boolean" },
     },
+  },
+  args: {
+    inputPlaceholder: "Søgeterm",
+    inputAmount: 2,
+    cqlPreviewText:
+      "title = harry potter AND subtitle = and the philosophers stone",
+    isCqlSearch: false,
   },
   parameters: {
     design: {
@@ -40,8 +41,8 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof AdvancedSearchComp> = (
-  args: AdvancedSearchProps
+const Template: StoryFn<typeof AdvancedSearchComp> = (
+  args: AdvancedSearchProps,
 ) => <AdvancedSearchComp {...args} />;
 
 export const AdvancedSearch = Template.bind({});

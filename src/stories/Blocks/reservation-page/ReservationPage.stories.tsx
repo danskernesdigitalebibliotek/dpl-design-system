@@ -1,37 +1,37 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
 import ReservationPage, { ReservationPageProps } from "./ReservationPage";
 
 export default {
   title: "Blocks / Reservation / Reservation Page",
   component: ReservationPage,
-  decorators: [withDesign],
   argTypes: {
     headline: {
       name: "Headline",
-      defaultValue: "Your reservations",
       control: { type: "text" },
     },
     readyForPickup: {
       name: "Ready for pickup amount",
-      defaultValue: 2,
       control: { type: "number" },
     },
     physicalReservations: {
       name: "Physical reservations amount",
-      defaultValue: 2,
       control: { type: "number" },
     },
     digitalReservations: {
       name: "Digital reservations amount",
-      defaultValue: 2,
       control: { type: "number" },
     },
     skeletonVersion: {
       name: "Is skeleton version?",
-      defaultValue: false,
       control: { type: "boolean" },
     },
+  },
+  args: {
+    headline: "Your reservations",
+    readyForPickup: 2,
+    physicalReservations: 2,
+    digitalReservations: 2,
+    skeletonVersion: false,
   },
   parameters: {
     design: {
@@ -41,8 +41,8 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof ReservationPage> = (
-  args: ReservationPageProps
+const Template: StoryFn<typeof ReservationPage> = (
+  args: ReservationPageProps,
 ) => <ReservationPage {...args} />;
 
 export const Default = Template.bind({});

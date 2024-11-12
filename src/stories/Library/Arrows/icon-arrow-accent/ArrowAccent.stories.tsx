@@ -1,11 +1,10 @@
 import { Meta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+
 import { ReactComponent as ArrowAccentIcon } from "../../../../public/icons/arrow-accent/icon-arrow-accent.svg";
 
 const StoryBase: Meta = {
   title: "Library / Arrows / Arrow Accent",
   component: ArrowAccentIcon,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",

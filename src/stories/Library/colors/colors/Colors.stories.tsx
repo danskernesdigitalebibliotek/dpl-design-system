@@ -1,4 +1,3 @@
-import { withDesign } from "storybook-addon-designs";
 import { Meta } from "@storybook/react";
 
 import { Colors as ColorsComp } from "./Colors";
@@ -6,7 +5,6 @@ import { Colors as ColorsComp } from "./Colors";
 export default {
   title: "Library / Colors / Colors",
   component: ColorsComp,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",

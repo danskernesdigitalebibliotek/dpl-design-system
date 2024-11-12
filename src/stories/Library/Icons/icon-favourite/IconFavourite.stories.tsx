@@ -1,27 +1,27 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
 
 import { IconFavourite } from "./IconFavourite";
 
 export default {
   title: "Library / Icons",
   component: IconFavourite,
-  decorators: [withDesign],
+  argTypes: {
+    fill: {
+      control: "boolean",
+    },
+  },
+  args: {
+    fill: true,
+  },
   parameters: {
     design: {
       type: "figma",
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=656%3A5407",
     },
   },
-  argTypes: {
-    fill: {
-      control: "boolean",
-      defaultValue: true,
-    },
-  },
-} as ComponentMeta<typeof IconFavourite>;
+} as Meta<typeof IconFavourite>;
 
-const Template: ComponentStory<typeof IconFavourite> = (args) => (
+const Template: StoryFn<typeof IconFavourite> = (args) => (
   <IconFavourite {...args} />
 );
 

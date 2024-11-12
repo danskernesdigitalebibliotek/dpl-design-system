@@ -29,7 +29,7 @@ const DatePicker = (props: DatePickerProps) => {
         picker.current = flatpickr(node, options);
       }
     },
-    [locale]
+    [locale],
   );
 
   return (

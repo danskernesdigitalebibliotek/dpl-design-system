@@ -1,12 +1,12 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import FeeListPage from "./FeeListPage";
 
 export default {
   title: "Blocks / Fee List",
   component: FeeListPage,
-} as ComponentMeta<typeof FeeListPage>;
+} as Meta<typeof FeeListPage>;
 
-const Template: ComponentStory<typeof FeeListPage> = (args) => {
+const Template: StoryFn<typeof FeeListPage> = (args) => {
   return <FeeListPage {...args} />;
 };
 

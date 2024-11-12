@@ -1,5 +1,5 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import {
   AutosuggestMaterial,
   AutosuggestMaterialProps,
@@ -9,18 +9,17 @@ import { autosuggestMaterialSuggestions } from "./helper";
 export default {
   title: "Library / Autosuggest - Material",
   component: AutosuggestMaterial,
-  decorators: [withDesign],
   argTypes: {
     materialSuggestions: {
-      name: "Material suggestions",
-      defaultValue: autosuggestMaterialSuggestions,
-      control: { type: "array" },
+      control: { type: "object" },
     },
     classes: {
-      name: "Classes",
-      defaultValue: undefined,
       control: { type: "text" },
     },
+  },
+  args: {
+    materialSuggestions: autosuggestMaterialSuggestions,
+    classes: undefined,
   },
   parameters: {
     design: {
@@ -28,10 +27,10 @@ export default {
       url: "https://www.figma.com/file/ETOZIfmgGS1HUfio57SOh7/S%C3%B8gning?node-id=4709%3A24976",
     },
   },
-} as ComponentMeta<typeof AutosuggestMaterial>;
+} as Meta<typeof AutosuggestMaterial>;
 
-const Template: ComponentStory<typeof AutosuggestMaterial> = (
-  args: AutosuggestMaterialProps
+const Template: StoryFn<typeof AutosuggestMaterial> = (
+  args: AutosuggestMaterialProps,
 ) => (
   <div className="header__menu-search">
     <ul className="autosuggest pb-16">

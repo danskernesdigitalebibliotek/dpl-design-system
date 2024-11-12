@@ -28,12 +28,12 @@ export const getPagefoldClasses = ({
     wrapper: clsx(
       `pagefold-parent--${size}`,
       { "internal-pagefold-parent": isAContainer },
-      className
+      className,
     ),
     triangle: clsx(
       `pagefold-triangle--${size}`,
       { [`pagefold-triangle--${type}`]: type },
-      { "pagefold-inherit-parent": isInheriting }
+      { "pagefold-inherit-parent": isInheriting },
     ),
   };
 };

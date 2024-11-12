@@ -1,61 +1,33 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import { Checkbox } from "./Checkbox";
 import { CheckboxDrupal } from "./CheckboxDrupal";
 
 export default {
   title: "Library / Forms / Checkbox",
   component: Checkbox,
-  decorators: [withDesign],
   argTypes: {
-    ariaLabel: {
-      control: {
-        type: "text",
-      },
-    },
-    labelLinkText: {
-      control: {
-        type: "text",
-      },
-    },
-    labelLinkHref: {
-      control: {
-        type: "text",
-      },
-    },
-    validation: {
-      control: {
-        type: "text",
-        defaultValue: "",
-      },
-    },
-    includeHeadline: {
-      control: {
-        type: "null",
-      },
-    },
-    description: {
-      control: {
-        type: "text",
-        defaultValue: "This is a description.",
-      },
-    },
-    // We disable the isChecked control, since it is not possible to
-    // get the states from the React component to work with Storybook controls.
-    isChecked: {
-      control: {
-        disable: true,
-      },
-    },
+    ariaLabel: { control: { type: "text" } },
+    labelLinkText: { control: { type: "text" } },
+    labelLinkHref: { control: { type: "text" } },
+    validation: { control: { type: "text" } },
+    includeHeadline: { control: { type: "null" } },
+    description: { control: { type: "text" } },
+    isChecked: { control: { disable: true } },
+    label: { control: { type: "text" } },
+  },
+  args: {
+    isChecked: false,
+    label: "Toggle this checkbox",
+    description: "This is a description.",
+    validation: "",
   },
   parameters: {
     layout: "centered",
   },
-} as ComponentMeta<typeof Checkbox>;
+} as Meta<typeof Checkbox>;
 
-const Template: ComponentStory<typeof Checkbox> = (args) => (
-  <Checkbox {...args} />
-);
+const Template: StoryFn<typeof Checkbox> = (args) => <Checkbox {...args} />;
 
 export const Checked = Template.bind({});
 Checked.args = {
@@ -86,7 +58,7 @@ hiddenLabel.args = {
 };
 
 // Show multiple checkboxes to make it easier to test keyboard navigation.
-const Several: ComponentStory<typeof Checkbox> = (args) => (
+const Several: StoryFn<typeof Checkbox> = (args) => (
   <>
     {[1, 2, 3, 4, 5].map((value) => {
       const { label } = args;
@@ -104,7 +76,7 @@ Multiple.args = {
 };
 
 // The stories below mimic HTML structure from Drupal for checkbox usage.
-const DrupalCheckboxExample: ComponentStory<typeof CheckboxDrupal> = (args) => (
+const DrupalCheckboxExample: StoryFn<typeof CheckboxDrupal> = (args) => (
   <CheckboxDrupal {...args} />
 );
 

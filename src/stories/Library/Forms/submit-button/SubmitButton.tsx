@@ -15,7 +15,7 @@ const SubmitButton: FC<SubmitButtonProps> = ({ buttonText, classNames }) => {
       "arrow__hover--right-small",
       "dpl-button",
     ],
-    classNames
+    classNames,
   );
 
   return <input type="submit" value={buttonText} className={classes} />;

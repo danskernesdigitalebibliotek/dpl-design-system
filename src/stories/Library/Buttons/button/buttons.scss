@@ -20,7 +20,9 @@ $color__btn-filled-hover: $color__text-secondary-gray;
   border: 1px solid $color__btn-border-active;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.4s ease-in-out, color 0.2s ease-in-out,
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.2s ease-in-out,
     opacity 0.4s ease-in-out;
   text-decoration: none;
 

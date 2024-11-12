@@ -1,12 +1,10 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import ListDescription from "./ListDescription";
 import fakeData from "./ListDescriptionFakeData";
 
 export default {
   title: "Library / Lists / Description",
   component: ListDescription,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
@@ -16,12 +14,14 @@ export default {
   argTypes: {
     data: {
       control: { type: "object" },
-      defaultValue: fakeData,
     },
   },
-} as ComponentMeta<typeof ListDescription>;
+  args: {
+    data: fakeData,
+  },
+} as Meta<typeof ListDescription>;
 
-const Template: ComponentStory<typeof ListDescription> = (args) => {
+const Template: StoryFn<typeof ListDescription> = (args) => {
   return <ListDescription {...args} />;
 };
 

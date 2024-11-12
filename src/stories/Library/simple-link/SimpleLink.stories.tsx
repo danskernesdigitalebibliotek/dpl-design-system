@@ -1,36 +1,32 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import SimpleLink from "./SimpleLink";
 
 export default {
   title: "Library / Simple Link",
   component: SimpleLink,
-  decorators: [withDesign],
   argTypes: {
     linkText: {
       control: {
         type: "text",
-        defaultValue: "Link text",
       },
     },
     href: {
       control: {
         type: "text",
-        defaultValue: "https://www.google.com",
       },
     },
     target: {
       control: {
         type: "select",
-        defaultValue: "_self",
         options: ["_blank", "_self"],
       },
     },
-    args: {
-      linkText: "Link text",
-      href: "https://www.google.com",
-      target: "_self",
-    },
+  },
+  args: {
+    linkText: "Link text",
+    href: "https://www.google.com",
+    target: "_self",
   },
   parameters: {
     design: {
@@ -38,11 +34,9 @@ export default {
       url: "https://www.figma.com/design/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=7741-58648&t=Facl3aeVt0fs5t5v-0",
     },
   },
-} as ComponentMeta<typeof SimpleLink>;
+} as Meta<typeof SimpleLink>;
 
-const Template: ComponentStory<typeof SimpleLink> = (args) => (
-  <SimpleLink {...args} />
-);
+const Template: StoryFn<typeof SimpleLink> = (args) => <SimpleLink {...args} />;
 
 export const OpensInSameWindow = Template.bind({});
 OpensInSameWindow.args = {

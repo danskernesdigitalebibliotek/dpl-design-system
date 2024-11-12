@@ -1,5 +1,4 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
 
 import { TagLink as TagComp } from "./TagLink";
 
@@ -8,7 +7,6 @@ type TagProps = typeof TagComp;
 export default {
   title: "Library / Tag / Tag link",
   component: TagComp,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
@@ -20,24 +18,26 @@ export default {
     children: {
       name: "text",
       control: { type: "text" },
-      defaultValue: "Litteratur",
     },
     hasBackground: {
       control: { type: "boolean" },
-      defaultValue: false,
     },
     showCloseIcon: {
       control: { type: "boolean" },
-      defaultValue: false,
     },
+  },
+  args: {
+    children: "Litteratur",
+    hasBackground: false,
+    showCloseIcon: false,
   },
 };
 
-export const Default: ComponentStory<TagProps> = ({ children, ...args }) => (
+export const Default: StoryFn<TagProps> = ({ children, ...args }) => (
   <TagComp {...args}>{children}</TagComp>
 );
 
-export const LargeWithBackground: ComponentStory<TagProps> = ({
+export const LargeWithBackground: StoryFn<TagProps> = ({
   children,
   ...args
 }) => <TagComp {...args}>{children}</TagComp>;
@@ -46,7 +46,7 @@ LargeWithBackground.args = {
   hasBackground: true,
 };
 
-export const Removable: ComponentStory<TagProps> = ({ children, ...args }) => (
+export const Removable: StoryFn<TagProps> = ({ children, ...args }) => (
   <TagComp {...args}>{children}</TagComp>
 );
 Removable.args = {

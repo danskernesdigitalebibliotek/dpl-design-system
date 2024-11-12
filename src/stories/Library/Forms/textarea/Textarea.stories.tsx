@@ -1,21 +1,19 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import Textarea from "./Textarea";
 
 export default {
   title: "Library / Forms / Textarea",
   component: Textarea,
-  decorators: [withDesign],
   argTypes: {
-    id: {
-      defaultValue: "id",
-    },
-    name: {
-      defaultValue: "name",
-    },
-    label: {
-      defaultValue: "Besked",
-    },
+    id: { control: "text" },
+    name: { control: "text" },
+    label: { control: "text" },
+  },
+  args: {
+    id: "id",
+    name: "name",
+    label: "Besked",
   },
   parameters: {
     design: {
@@ -24,9 +22,9 @@ export default {
     },
     layout: "padded",
   },
-} as ComponentMeta<typeof Textarea>;
+} as Meta<typeof Textarea>;
 
-const Template: ComponentStory<typeof Textarea> = (args) => (
+const Template: StoryFn<typeof Textarea> = (args) => (
   <div className="dpl-form">
     <Textarea {...args} />
   </div>

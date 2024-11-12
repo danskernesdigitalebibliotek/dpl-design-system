@@ -1,41 +1,33 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import PatronInfo from "./PatronInfo";
 import PatronInfoSkeleton from "./PatronInfoSkeleton";
 
 export default {
   title: "Library / User info",
   component: PatronInfo,
-  decorators: [withDesign],
   argTypes: {
-    address: {
-      control: "text",
-      defaultValue:
-        "The Utonium Residence, 107 Pokey Oaks South, Townsville, USA",
-    },
-    nameLabel: {
-      control: "text",
-      defaultValue: "Navn",
-    },
-    addressLabel: {
-      control: "text",
-      defaultValue: "Adresse",
-    },
-    name: {
-      control: "text",
-      defaultValue: "Professor Utonium",
-    },
+    address: { control: "text" },
+    nameLabel: { control: "text" },
+    addressLabel: { control: "text" },
+    name: { control: "text" },
+  },
+  args: {
+    address: "The Utonium Residence, 107 Pokey Oaks South, Townsville, USA",
+    nameLabel: "Navn",
+    addressLabel: "Adresse",
+    name: "Professor Utonium",
   },
   parameters: {},
-} as ComponentMeta<typeof PatronInfo>;
+} as Meta<typeof PatronInfo>;
 
-const Template: ComponentStory<typeof PatronInfo> = (props) => (
+const Template: StoryFn<typeof PatronInfo> = (props) => (
   <PatronInfo {...props} />
 );
 
 export const PatronInfoExample = Template.bind({});
 
-const SkeletonTemplate: ComponentStory<typeof PatronInfoSkeleton> = () => (
+const SkeletonTemplate: StoryFn<typeof PatronInfoSkeleton> = () => (
   <PatronInfoSkeleton />
 );
 

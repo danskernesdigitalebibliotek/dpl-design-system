@@ -1,22 +1,23 @@
-import { ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn } from "@storybook/react";
+
 import IconTextLink, { IconTextLinkProps } from "./IconTextLink";
 
 export default {
   title: "Library / Links / Icon Text Link",
   component: IconTextLink,
-  decorators: [withDesign],
   argTypes: {
     text: {
       name: "Text",
-      defaultValue: "Read in English",
       control: { type: "text" },
     },
     icon: {
       name: "Icon",
-      defaultValue: "england",
       control: { type: "text" },
     },
+  },
+  args: {
+    text: "Read in English",
+    icon: "england",
   },
   parameters: {
     design: {
@@ -27,8 +28,8 @@ export default {
   },
 };
 
-const Template: ComponentStory<typeof IconTextLink> = (
-  args: IconTextLinkProps
-) => <IconTextLink {...args} />;
+const Template: StoryFn<typeof IconTextLink> = (args: IconTextLinkProps) => (
+  <IconTextLink {...args} />
+);
 
 export const Default = Template.bind({});

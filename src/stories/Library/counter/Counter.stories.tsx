@@ -1,18 +1,15 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { Meta, StoryFn } from "@storybook/react";
+
 import { Counter } from "./Counter";
 
 export default {
   title: "Library / Counter",
   component: Counter,
-  decorators: [withDesign],
   argTypes: {},
   parameters: {},
-} as ComponentMeta<typeof Counter>;
+} as Meta<typeof Counter>;
 
-const Template: ComponentStory<typeof Counter> = (args) => (
-  <Counter {...args} />
-);
+const Template: StoryFn<typeof Counter> = (args) => <Counter {...args} />;
 
 export const Danger = Template.bind({});
 Danger.args = {

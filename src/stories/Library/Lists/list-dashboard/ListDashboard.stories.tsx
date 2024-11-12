@@ -1,43 +1,43 @@
-import { withDesign } from "storybook-addon-designs";
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 
 import { ListDashboard } from "./ListDashboard";
 
 export default {
   title: "Library / Lists / Dashboard",
   component: ListDashboard,
-  decorators: [withDesign],
   argTypes: {
     label: {
       control: "object",
-      defaultValue: {
-        label: "overskredet",
-        status: "danger",
-      },
     },
     number: {
       control: "object",
-      defaultValue: {
-        label: "2",
-        status: "danger",
-      },
     },
     title: {
       control: "text",
-      defaultValue: "Afleveret for sent",
     },
     showDot: {
       control: "boolean",
-      defaultValue: "true",
     },
     href: {
-      control: "string",
-      defaultValue: "/",
+      control: "text",
     },
     isSkeleton: {
       control: "boolean",
-      defaultValue: false,
     },
+  },
+  args: {
+    label: {
+      label: "overskredet",
+      status: "danger",
+    },
+    number: {
+      label: 2,
+      status: "danger",
+    },
+    title: "Afleveret for sent",
+    showDot: true,
+    href: "/",
+    isSkeleton: false,
   },
   parameters: {
     design: {
@@ -45,9 +45,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?node-id=1543%3A5965",
     },
   },
-} as ComponentMeta<typeof ListDashboard>;
+} as Meta<typeof ListDashboard>;
 
-const Template: ComponentStory<typeof ListDashboard> = (args) => (
+const Template: StoryFn<typeof ListDashboard> = (args) => (
   <div className="m-24">
     <ListDashboard {...args} />
   </div>

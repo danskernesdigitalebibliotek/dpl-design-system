@@ -1,12 +1,11 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
+
 import Medias from "./Medias";
 import ImageCredited from "../image-credited/ImageCredited";
 
 export default {
   title: "Library / Medias",
   component: Medias,
-  decorators: [withDesign],
   argTypes: {
     items: {
       // Disabling controls, as the different variations are added already.
@@ -19,9 +18,9 @@ export default {
       url: "https://www.figma.com/file/Zx9GrkFA3l4ISvyZD2q0Qi/Designsystem?type=design&node-id=7477-39100&mode=design&t=SREzD6mFi3A15ap4-4",
     },
   },
-} as ComponentMeta<typeof Medias>;
+} as Meta<typeof Medias>;
 
-const Template: ComponentStory<typeof Medias> = (args) => <Medias {...args} />;
+const Template: StoryFn<typeof Medias> = (args) => <Medias {...args} />;
 
 export const Multiple = Template.bind({});
 Multiple.args = {

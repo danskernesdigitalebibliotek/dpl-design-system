@@ -1,28 +1,25 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { withDesign } from "storybook-addon-designs";
+import { StoryFn, Meta } from "@storybook/react";
 
-import { Button } from "./Button";
+import { Button, ButtonProps } from "./Button";
 
 export default {
   title: "Library / Buttons / Button",
   component: Button,
-  decorators: [withDesign],
   argTypes: {
-    label: {
-      defaultValue: "Se hele kalenderen",
-    },
-    disabled: {
-      defaultValue: false,
-    },
-    collapsible: {
-      defaultValue: false,
-    },
-    size: {
-      defaultValue: "medium",
-    },
-    variant: {
-      defaultValue: "outline",
-    },
+    buttonType: { control: "select" },
+    label: { control: "text" },
+    disabled: { control: "boolean" },
+    collapsible: { control: "boolean" },
+    size: { control: "select" },
+    variant: { control: "select" },
+  },
+  args: {
+    buttonType: "none",
+    label: "Se hele kalenderen",
+    disabled: false,
+    collapsible: false,
+    size: "medium",
+    variant: "outline",
   },
   parameters: {
     design: {
@@ -31,9 +28,11 @@ export default {
     },
     layout: "centered",
   },
-} as ComponentMeta<typeof Button>;
+} as Meta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: StoryFn<typeof Button> = (args: ButtonProps) => (
+  <Button {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {

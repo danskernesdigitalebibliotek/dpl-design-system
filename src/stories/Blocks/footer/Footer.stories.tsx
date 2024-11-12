@@ -1,11 +1,9 @@
-import { withDesign } from "storybook-addon-designs";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import Footer, { FooterType } from "./Footer";
 
 export default {
   title: "Blocks / Footer",
   component: Footer,
-  decorators: [withDesign],
   parameters: {
     design: {
       type: "figma",
@@ -151,5 +149,5 @@ export default {
   },
 } as Meta;
 
-const Template: Story<FooterType> = (args) => <Footer {...args} />;
+const Template: StoryFn<FooterType> = (args) => <Footer {...args} />;
 export const Default = Template.bind({});
