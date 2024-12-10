@@ -1,0 +1,41 @@
+.button-share {
+  display: flex;
+
+  &:not(&--fixed) {
+    gap: $s-md;
+    flex-wrap: wrap;
+  }
+
+  &--fixed {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    z-index: $z-10;
+    flex-direction: column;
+    transform: translateY(-50%);
+
+    @include media-query__small {
+      display: flex;
+    }
+  }
+
+  &__button {
+    /* stylelint-disable scss/at-extend-no-missing-placeholder*/
+    @extend .btn-primary;
+    @extend .btn-outline;
+    @extend .btn-medium;
+
+    gap: $s-sm;
+    background-color: $color__global-primary;
+
+    &--fixed {
+      padding: 0;
+      aspect-ratio: 1;
+
+      &:first-child {
+        border-bottom: unset;
+      }
+    }
+  }
+}
