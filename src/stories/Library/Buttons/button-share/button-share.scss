@@ -15,7 +15,7 @@
     flex-direction: column;
     transform: translateY(-50%);
 
-    @include media-query__small {
+    @include media-query__medium {
       display: flex;
     }
   }
