@@ -1,8 +1,9 @@
 globs:
-  - './**/*.{md,markdown}'
+  - "./**/*.{md,markdown}"
 
 ignores:
   - node_modules
+  - "./.github/**/*"
 
 config:
   MD033:
