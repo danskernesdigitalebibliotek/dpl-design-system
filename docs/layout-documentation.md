@@ -5,7 +5,6 @@
 - [Introduction](#introduction)
 - [Variables](#variables)
 - [Mixins](#mixins)
-- [Utility classes](#utility-classes)
 - [Example Usage](#example-usage)
 
 ## Introduction
