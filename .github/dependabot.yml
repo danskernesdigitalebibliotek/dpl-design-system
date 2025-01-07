@@ -18,6 +18,12 @@ updates:
     labels:
       - dependencies
     groups:
+      react:
+        patterns:
+          - "react"
+          - "@types/react"
+          - "react-dom"
+          - "@types/react-dom"
       storybook:
         patterns:
           - "storybook"

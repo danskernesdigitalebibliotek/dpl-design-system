@@ -72,12 +72,12 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-webpack-plugin": "^4.2.0",
     "flatpickr": "^4.6.13",
     "json": "^11.0.0",
-    "markdownlint-cli2": "^0.4.0",
+    "markdownlint-cli2": "^0.16.0",
     "postcss": "^8.4.49",
     "prettier": "^3.3.3",
     "react": "^17.0.2",
@@ -89,7 +89,7 @@
     "sass": "1.78.0",
     "skeleton-screen-css": "^1.1.0",
     "storybook": "^8.4.7",
-    "stylelint": "^16.11.0",
+    "stylelint": "^16.12.0",
     "stylelint-config-recommended-scss": "^14.0.0",
     "stylelint-prettier": "^5.0.2",
     "stylelint-scss": "^6.10.0",
@@ -102,5 +102,6 @@
   "files": [
     "build/**/*"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
