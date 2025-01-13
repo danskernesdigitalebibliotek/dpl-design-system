@@ -89,7 +89,7 @@
     "sass": "1.78.0",
     "skeleton-screen-css": "^1.1.0",
     "storybook": "^8.4.7",
-    "stylelint": "^16.12.0",
+    "stylelint": "^16.13.0",
     "stylelint-config-recommended-scss": "^14.0.0",
     "stylelint-prettier": "^5.0.2",
     "stylelint-scss": "^6.10.0",
