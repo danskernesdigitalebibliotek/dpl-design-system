@@ -8,7 +8,7 @@
   opacity: 0;
   display: none;
   transition: opacity 0.3s;
-  height: 100vh;
+  height: 100dvh;
   overflow: auto;
 
   &__screen-reader-description {
@@ -51,7 +51,7 @@
   right: 0;
   max-width: 560px;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   margin: 0;
 }
 
