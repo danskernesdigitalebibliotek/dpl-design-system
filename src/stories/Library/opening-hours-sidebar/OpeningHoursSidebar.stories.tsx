@@ -45,7 +45,7 @@ export default {
 const Template: StoryFn<typeof OpeningHoursSidebar> = (args) => {
   return (
     <div className="storybook-dialog-sidebar">
-      <OpeningHoursSidebar {...args} />;
+      <OpeningHoursSidebar {...args} />
     </div>
   );
 };
