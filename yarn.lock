@@ -2261,21 +2261,6 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.1.tgz#de633db3ec2ef6a3c89e2f19038063e8a122e2c2"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
-"@figspec/components@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@figspec/components/-/components-1.0.1.tgz#47d7e24999974b18c6daa810299624d4370fc7da"
-  integrity sha512-UvnEamPEAMh9HExViqpobWmX25g1+soA9kcJu+It3VerMa7CeVyaIbQydNf1Gys5v/rxJVdTDRgQ7OXW2zAAig==
-  dependencies:
-    lit "^2.1.3"
-
-"@figspec/react@^1.0.0":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@figspec/react/-/react-1.0.2.tgz#56dbd409ac420f754eda41ecfeb89f41bb8bd48d"
-  integrity sha512-BG6TTySyyDPDeER1oHNNj7+UYu7NzXwqJM6Z2utJtvGGk/Vn4NzrSdDU+HVp04o0kDEEJd5hJbFgkH3uzqimPQ==
-  dependencies:
-    "@figspec/components" "^1.0.0"
-    "@lit-labs/react" "^1.0.2"
-
 "@humanwhocodes/config-array@^0.13.0":
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.13.0.tgz#fb907624df3256d04b9aa2df50d7aa97ec648748"
@@ -2664,16 +2649,6 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz#4fc56c15c580b9adb7dc3c333a134e540b44bfb1"
   integrity sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==
 
-"@lit-labs/react@^1.0.2":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@lit-labs/react/-/react-1.0.6.tgz#4cd861cfac92c3f2e0ab78921d4d0e223949665a"
-  integrity sha512-uDtfJv5XunmsydTNRST+MU8U6QyETCw8BKoeMw2Q4Te1r5paAD9sVJfxESP7Dbk0G4tqCRS0BsyNmYJSGCrJyQ==
-
-"@lit/reactive-element@^1.3.0":
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/@lit/reactive-element/-/reactive-element-1.3.3.tgz#851de2bd28d6c3378a816a28d2505075931559c2"
-  integrity sha512-ukelZ49tzUqgOAEbVujl/U62JNK3wdn5kKtXVqrjKND4QvHACZOMOYaZI6/5Jd8vsg+Fq9HDwiib70FBLydOiQ==
-
 "@mdx-js/react@^3.0.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-3.1.0.tgz#c4522e335b3897b9a845db1dbdd2f966ae8fb0ed"
@@ -2868,12 +2843,10 @@
     lodash "^4.17.21"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-designs@^8.0.4":
-  version "8.0.4"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-designs/-/addon-designs-8.0.4.tgz#354de98ea99e5feed5f77cfca52766dd246243af"
-  integrity sha512-BrEWks1BRnZis2e8OoE1LhFS+x2d094Tzpbb3jQBve2IfDv/X006RSuy1WyplNxskdYdBESCH45MlRn4lhP5ew==
-  dependencies:
-    "@figspec/react" "^1.0.0"
+"@storybook/addon-designs@^8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-designs/-/addon-designs-8.1.0.tgz#5d51204f7c5691ffd3261b32c350bc58a0bc17af"
+  integrity sha512-mtKzlThdFW2xc8XZNUbKjUAJ6e3lvg34wzpiSnWa3ANBk9TDdD4gTCu7hBNGb5eljDjndqywpZqShUB8kml+lQ==
 
 "@storybook/addon-docs@8.3.6":
   version "8.3.6"
@@ -2973,12 +2946,12 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/builder-webpack5@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/builder-webpack5/-/builder-webpack5-8.5.0.tgz#e44f0a197b40e8d3caae21e9459cb9cd4accf57c"
-  integrity sha512-MyCj11cktyN2HeK8NsLv+L0Km36qAz2UGqu6j1VKJUgPelgpCCi4StCW/KaSBeOFAwGD52xjAdNu+c1h/vfiMg==
+"@storybook/builder-webpack5@8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/builder-webpack5/-/builder-webpack5-8.5.3.tgz#40536ecae06c09494d0e828953ae562ebf9ada39"
+  integrity sha512-5d892u2pWIN9Xp5i6ZoSYJ799C0voscmkGOLrjaWC/gqFJ6AT697z/xu3HMTFkt/mS+0cz/yFimaN8nzXwktrw==
   dependencies:
-    "@storybook/core-webpack" "8.5.0"
+    "@storybook/core-webpack" "8.5.3"
     "@types/semver" "^7.3.4"
     browser-assert "^1.2.1"
     case-sensitive-paths-webpack-plugin "^2.4.0"
@@ -3003,22 +2976,22 @@
     webpack-hot-middleware "^2.25.1"
     webpack-virtual-modules "^0.6.0"
 
-"@storybook/components@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-8.5.0.tgz#fab176ee7b863e4abc3c8581f6cb7b3d46bf80b0"
-  integrity sha512-DhaHtwfEcfWYj3ih/5RBSDHe3Idxyf+oHw2/DmaLKJX6MluhdK3ZqigjRcTmA9Gj/SbR4CkHEEtDzAvBlW0BYw==
+"@storybook/components@8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-8.5.3.tgz#8a7a17f01aeda6ae6fddadfa7e76a5a30bd333e1"
+  integrity sha512-iC9VbpM8Equ8wXI2syBzov+8wys4sGYW7Xfz67LdSVbCMhsH9FRtvgbDppJQC/ZDCofg4sTAHhWpDV/KAQ385A==
 
-"@storybook/core-webpack@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/core-webpack/-/core-webpack-8.5.0.tgz#4d4b355d3eeb8b8b1056dd98540d47b3db07bc61"
-  integrity sha512-bJAcF9TwNO2qNa7Jef4h5U9ka4399HDiHiQec1AxdqUIy/2zfbetgV6+2Fr5mtejPqJgbs7kXNGErI+fFByLGg==
+"@storybook/core-webpack@8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/core-webpack/-/core-webpack-8.5.3.tgz#a8ada062149c61066c46bccf44762b0898be24cf"
+  integrity sha512-r1Ogdk3/cHUUbGG7QcGUwygCYfFt+4R59jx5NGrrQ2dXNANINVgPY9EATuqfIkLjFq5yvHxAQ/C5qtLfJi1SSg==
   dependencies:
     ts-dedent "^2.0.0"
 
-"@storybook/core@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/core/-/core-8.5.0.tgz#16125d1cb3f4a26c0af4f0b8e56d7eaffed2e951"
-  integrity sha512-apborO6ynns7SeydBSqE9o0zT6JSU+VY4gLFPJROGcconvSW4bS5xtJCsgjlulceyWVxepFHGXl4jEZw+SktXA==
+"@storybook/core@8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/core/-/core-8.5.3.tgz#a353472e5069d127af7ada97f9db601c3d3cd1b5"
+  integrity sha512-ZLlr2pltbj/hmC54lggJTnh09FCAJR62lIdiXNwa+V+/eJz0CfD8tfGmZGKPSmaQeZBpMwAOeRM97k2oLPF+0w==
   dependencies:
     "@storybook/csf" "0.1.12"
     better-opn "^3.0.2"
@@ -3063,10 +3036,10 @@
   resolved "https://registry.yarnpkg.com/@storybook/icons/-/icons-1.2.12.tgz#3e4c939113b67df7ab17b78f805dbb57f4acf0db"
   integrity sha512-UxgyK5W3/UV4VrI3dl6ajGfHM4aOqMAkFLWe2KibeQudLf6NJpDrDMSHwZj+3iKC4jFU7dkKbbtH2h/al4sW3Q==
 
-"@storybook/manager-api@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/manager-api/-/manager-api-8.5.0.tgz#4024ff316677ca9f4175eb4d1818488dd6f18095"
-  integrity sha512-Ildriueo3eif4M+gMlMxu/mrBIbAnz8+oesmQJKdzZfe/U9eQTI9OUqJsxx/IVBmdzQ3ySsgNmzj5VweRkse4A==
+"@storybook/manager-api@8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/manager-api/-/manager-api-8.5.3.tgz#2a5c1b2e7d14b54d91ed75c94d9618198629cd40"
+  integrity sha512-JtfuMgQpKIPU0ARn1jNPce8FmknpM0Ap0mppWl+KGAWWGadJPDaX/nrY/19dT1kRgIhyOnbX6tgJxII4E9dE5w==
 
 "@storybook/node-logger@^8.3.6":
   version "8.3.6"
@@ -3084,13 +3057,13 @@
     pnp-webpack-plugin "^1.7.0"
     semver "^7.5.4"
 
-"@storybook/preset-react-webpack@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/preset-react-webpack/-/preset-react-webpack-8.5.0.tgz#59da1eb0dc8a5981c8f793900a299b8bd2437ba6"
-  integrity sha512-KJwVcQVYQWuMT5QUF06be60UuBfazBIO+90erfoYoIx0UwOxKMVnQz0HfG2JMc4EIoNLIl0/cm5mb2k4BWyhbA==
+"@storybook/preset-react-webpack@8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/preset-react-webpack/-/preset-react-webpack-8.5.3.tgz#ef8ab6b30a26b75064869be35dd1bcbce27b2ae6"
+  integrity sha512-+I6uFcmR2dy3J8OagQLfLMCyQ/zo4O5FrzbCd5TaLxJ2q+VeWp8EIaVxracN02JabmpwhD8NcjXGD+ykUha2cw==
   dependencies:
-    "@storybook/core-webpack" "8.5.0"
-    "@storybook/react" "8.5.0"
+    "@storybook/core-webpack" "8.5.3"
+    "@storybook/react" "8.5.3"
     "@storybook/react-docgen-typescript-plugin" "1.0.6--canary.9.0c3f3b7.0"
     "@types/semver" "^7.3.4"
     find-up "^5.0.0"
@@ -3101,10 +3074,10 @@
     tsconfig-paths "^4.2.0"
     webpack "5"
 
-"@storybook/preview-api@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/preview-api/-/preview-api-8.5.0.tgz#32dbff12d5299897df2ccf68ad5007e814b8b067"
-  integrity sha512-g0XbD54zMUkl6bpuA7qEBCE9rW1QV6KKmwkO4bkxMOJcMke3x9l00JTaYn7Un8wItjXiS3BIG15B6mnfBG7fng==
+"@storybook/preview-api@8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/preview-api/-/preview-api-8.5.3.tgz#8040c9c999154fe8a267db34d4f9064cc13e6e13"
+  integrity sha512-dUsuXW+KgDg4tWXOB6dk5j5gwwRUzbPvicHAY9mzbpSVScbWXuE5T/S/9hHlbtfkhFroWQgPx2eB8z3rai+7RQ==
 
 "@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0":
   version "1.0.6--canary.9.0c3f3b7.0"
@@ -3124,36 +3097,36 @@
   resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-8.3.6.tgz#40ce82a4e6559a617c4a7288b532652fefcd271e"
   integrity sha512-9BO6VXIdli4GHSfiP/Z0gwAf7oQig3D/yWK2U1+91UWDV8nIAgnNBAi76U4ORC6MiK5MdkDfIikIxnLLeLnahA==
 
-"@storybook/react-dom-shim@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-8.5.0.tgz#ada85ed027113b0e05debfd5c5e6ffa44843b069"
-  integrity sha512-7P8xg4FiuFpM6kQOzZynno+0zyLVs8NgsmRK58t3JRZXbda1tzlxTXzvqx4hUevvbPJGjmrB0F3xTFH+8Otnvw==
+"@storybook/react-dom-shim@8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-8.5.3.tgz#422d6437872c69dda482016a06cad18f42325992"
+  integrity sha512-kNIGk6mpXW3Wy+uS9pH9b9w/54EPJnH+QXA6MX4EQgmxhMQlGlS/l/YZp+3jsVQW4YgTmqe740qB+ccJAKZxBQ==
 
-"@storybook/react-webpack5@^8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/react-webpack5/-/react-webpack5-8.5.0.tgz#327f4b1b30f9f6ed54b955de49444bcc306e6be6"
-  integrity sha512-L2KIR458Q2+5VOOh0wf84vla3gSsuq9C/266GmHZovlDClVlnaQTg8lc8ug52K2+rOChdz8MQqZjGO+Bg0OvLw==
+"@storybook/react-webpack5@^8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/react-webpack5/-/react-webpack5-8.5.3.tgz#481e7c1724a4b7048329de9457f6387181cdb56a"
+  integrity sha512-zxdjOzi57mFiOkczMFRTEurCs7Ax2XS8D1W+JpmLoKqNgf7rKtiCU0SuPwjpcAN9iDlky0rCbSj9+dzd4tDr4Q==
   dependencies:
-    "@storybook/builder-webpack5" "8.5.0"
-    "@storybook/preset-react-webpack" "8.5.0"
-    "@storybook/react" "8.5.0"
+    "@storybook/builder-webpack5" "8.5.3"
+    "@storybook/preset-react-webpack" "8.5.3"
+    "@storybook/react" "8.5.3"
 
-"@storybook/react@8.5.0", "@storybook/react@^8.3.6":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-8.5.0.tgz#da6667d8a6f49d5ea4ec95c75f1ab853edada2a4"
-  integrity sha512-/jbkmGGc95N7KduIennL/k8grNTP5ye/YBnkcS4TbF7uDWBtKy3/Wqvx5BIlFXq3qeUnZJ8YtZc0lPIYeCY8XQ==
+"@storybook/react@8.5.3", "@storybook/react@^8.3.6":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-8.5.3.tgz#4f1c6cf68081b50434edbf9f6c0585c9f5121dee"
+  integrity sha512-QIdBSjsnwV/J919i4Fi7DlwxDKHU815t0c4B/w2KTMtKKBkk+Bge+vgVi0/lNqD3eF4w3yjVWGbkzUQZ63yiPg==
   dependencies:
-    "@storybook/components" "8.5.0"
+    "@storybook/components" "8.5.3"
     "@storybook/global" "^5.0.0"
-    "@storybook/manager-api" "8.5.0"
-    "@storybook/preview-api" "8.5.0"
-    "@storybook/react-dom-shim" "8.5.0"
-    "@storybook/theming" "8.5.0"
+    "@storybook/manager-api" "8.5.3"
+    "@storybook/preview-api" "8.5.3"
+    "@storybook/react-dom-shim" "8.5.3"
+    "@storybook/theming" "8.5.3"
 
-"@storybook/theming@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-8.5.0.tgz#c51c938ae6d695ecb73604e46d19d9db33859408"
-  integrity sha512-591LbOj/HMmHYUfLgrMerxhF1A9mY61HWKxcRpB6xxalc1Xw1kRtQ49DcwuTXnUu9ktBB3nuOzPNPQPFSh/7PQ==
+"@storybook/theming@8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-8.5.3.tgz#44462cc59a0ce66d2e714330399fae4672afda2e"
+  integrity sha512-Jvzw+gT1HNarkJo21WZBq5pU89qDN8u/pD3woSh/1c2h5RS6UylWjQHotPFpcBIQiUSrDFtvCU9xugJm4MD0+w==
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
@@ -9161,30 +9134,6 @@ linkify-it@^5.0.0:
   dependencies:
     uc.micro "^2.0.0"
 
-lit-element@^3.2.0:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-3.2.1.tgz#f917d22451b848768f84164d41eb5e18903986e3"
-  integrity sha512-2PxyE9Yq9Jyo/YBK2anycaHcqo93YvB5D+24JxloPVqryW/BOXekne+jGsm0Ke3E5E2v7CDgkmpEmCAzYfrHCQ==
-  dependencies:
-    "@lit/reactive-element" "^1.3.0"
-    lit-html "^2.2.0"
-
-lit-html@^2.2.0:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-2.2.6.tgz#e70679605420a34c4f3cbd0c483b2fb1fff781df"
-  integrity sha512-xOKsPmq/RAKJ6dUeOxhmOYFjcjf0Q7aSdfBJgdJkOfCUnkmmJPxNrlZpRBeVe1Gg50oYWMlgm6ccAE/SpJgSdw==
-  dependencies:
-    "@types/trusted-types" "^2.0.2"
-
-lit@^2.1.3:
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/lit/-/lit-2.2.7.tgz#a563e8851db1f131912f510129dcc9a42324e838"
-  integrity sha512-WXYujlKFwme5ZqXOZoWuRVZQAwy7scbcVT3wCbAOHefOxyscqjywWGlF2e6nnC9E64yP9l2ZQlN8wZcRlrjUMQ==
-  dependencies:
-    "@lit/reactive-element" "^1.3.0"
-    lit-element "^3.2.0"
-    lit-html "^2.2.0"
-
 loader-runner@^4.2.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-4.3.0.tgz#c1b4a163b99f614830353b16755e7149ac2314e1"
@@ -12083,12 +12032,12 @@ stop-iteration-iterator@^1.0.0:
   dependencies:
     internal-slot "^1.0.4"
 
-storybook@^8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/storybook/-/storybook-8.5.0.tgz#cb48ff743a98229f6d18e8b7017913ecb0d703fa"
-  integrity sha512-cEx42OlCetManF+cONVJVYP7SYsnI2K922DfWKmZhebP0it0n6TUof4y5/XzJ8YUruwPgyclGLdX8TvdRuNSfw==
+storybook@^8.5.3:
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/storybook/-/storybook-8.5.3.tgz#9758f0da8a9ee4f6a600370f64833fa5d3079c96"
+  integrity sha512-2WtNBZ45u1AhviRU+U+ld588tH8gDa702dNSq5C8UBaE9PlOsazGsyp90dw1s9YRvi+ejrjKAupQAU0GwwUiVg==
   dependencies:
-    "@storybook/core" "8.5.0"
+    "@storybook/core" "8.5.3"
 
 string-length@^4.0.1:
   version "4.0.2"
