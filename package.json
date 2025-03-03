@@ -74,7 +74,7 @@
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-webpack-plugin": "^4.2.0",
+    "eslint-webpack-plugin": "^5.0.0",
     "flatpickr": "^4.6.13",
     "json": "^11.0.0",
     "markdownlint-cli2": "^0.16.0",
