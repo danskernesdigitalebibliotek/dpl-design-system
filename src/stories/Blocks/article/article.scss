@@ -1,3 +1,7 @@
 .article {
   background-color: $color__global-primary;
 }
+
+.article__tags {
+  @include layout-container;
+}
