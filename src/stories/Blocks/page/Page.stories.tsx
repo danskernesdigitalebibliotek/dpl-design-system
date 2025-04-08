@@ -17,6 +17,7 @@ export default {
       control: "object",
       description: "Object containing hero details",
     },
+    tags: { control: "object" },
   },
 } as Meta<typeof Page>;
 
@@ -53,4 +54,17 @@ branchPage.args = {
       Sprog: { value: ["Dansk"], type: "standard" },
     },
   },
+};
+
+export const PageWithTags = Template.bind({});
+PageWithTags.args = {
+  hero: {
+    placeholderText: "Denne side har tags, men intet billede",
+    contentType: "Artikel",
+    date: "12 Jan 2025",
+    title: "Alt du skal vide om moderne scenekunst",
+    description:
+      "En introduktion til de mest populære emner i dansk scenekunst lige nu, med fokus på dans, poesi og samtidskunst.",
+  },
+  tags: ["dans", "contemporary", "modern", "scenekunst", "digt", "3-8 årige"],
 };
