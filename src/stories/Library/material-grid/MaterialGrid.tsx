@@ -5,12 +5,15 @@ import {
   RecommendedMaterialProps,
 } from "../recommended-material/RecommendedMaterial";
 
+type AllowedDisplayAmount = 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32;
+
 export type MaterialGridProps = {
-  title: string;
-  description: string;
-  selectedAmountOfMaterialsForDisplay: 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32;
+  title?: string;
+  description?: string;
+  selectedAmountOfMaterialsForDisplay: AllowedDisplayAmount;
+  initialMaximumDisplay?: AllowedDisplayAmount;
   materials: RecommendedMaterialProps[];
-  buttonText: string;
+  buttonText?: string;
 };
 
 export const MaterialGrid: React.FC<MaterialGridProps> = ({
@@ -19,10 +22,8 @@ export const MaterialGrid: React.FC<MaterialGridProps> = ({
   selectedAmountOfMaterialsForDisplay,
   materials,
   buttonText,
+  initialMaximumDisplay = 4,
 }) => {
-  // The JS code here is just an example of how this works.
-  // The proper implementation is in the react repo.
-  const initialMaximumDisplay = 4;
   const initialMaterialsToDisplay =
     selectedAmountOfMaterialsForDisplay > initialMaximumDisplay
       ? initialMaximumDisplay
@@ -64,7 +65,7 @@ export const MaterialGrid: React.FC<MaterialGridProps> = ({
             </li>
           ))}
       </ul>
-      {moreMaterialsThanInitialMaximum && !showAllMaterials && (
+      {moreMaterialsThanInitialMaximum && !showAllMaterials && buttonText && (
         <button
           className="material-grid__show-more btn-primary btn-outline btn-medium"
           data-show-more
