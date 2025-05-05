@@ -40,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "@chanzuckerberg/axe-storybook-testing": "^8.2.2",
+    "@chanzuckerberg/axe-storybook-testing": "^8.2.3",
     "@storybook/addon-a11y": "^8.3.6",
     "@storybook/addon-actions": "^8.3.6",
     "@storybook/addon-designs": "^8.2.1",
