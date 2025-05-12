@@ -60,7 +60,7 @@
     "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "@whitespace/storybook-addon-html": "^6.1.1",
+    "@whitespace/storybook-addon-html": "^7.0.0",
     "chokidar-cli": "^3.0.0",
     "clsx": "^2.1.1",
     "concurrently": "^9.0.0",
