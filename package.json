@@ -60,18 +60,18 @@
     "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "@whitespace/storybook-addon-html": "^6.1.1",
+    "@whitespace/storybook-addon-html": "^7.0.0",
     "chokidar-cli": "^3.0.0",
     "clsx": "^2.1.1",
     "concurrently": "^9.0.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-prettier": "^10.1.2",
+    "eslint-config-prettier": "^10.1.5",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
-    "eslint-plugin-prettier": "^5.3.1",
+    "eslint-plugin-prettier": "^5.4.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-webpack-plugin": "^5.0.1",
@@ -92,9 +92,9 @@
     "stylelint": "^16.19.1",
     "stylelint-config-recommended-scss": "^14.0.0",
     "stylelint-prettier": "^5.0.3",
-    "stylelint-scss": "^6.11.1",
+    "stylelint-scss": "^6.12.0",
     "typescript": "^5.6.0",
-    "web-vitals": "^4.2.4"
+    "web-vitals": "^5.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
