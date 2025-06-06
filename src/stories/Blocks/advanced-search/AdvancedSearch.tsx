@@ -10,12 +10,14 @@ import { ReactComponent as PlusButtonIcon } from "../../../public/icons/collecti
 import Input from "../../Library/Forms/input/Input";
 import { Checkbox } from "../../Library/Forms/checkbox/Checkbox";
 import Textarea from "../../Library/Forms/textarea/Textarea";
+import { Links } from "../../Library/links/Links";
 
 export interface AdvancedSearchProps {
   inputPlaceholder: string;
   inputAmount: number;
   cqlPreviewText: string;
   isCqlSearch: boolean;
+  cqlSearchExternalHelpLinkText: string;
 }
 
 export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
@@ -23,6 +25,7 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
   inputAmount,
   cqlPreviewText,
   isCqlSearch,
+  cqlSearchExternalHelpLinkText,
 }) => {
   return (
     <div className="advanced-search">
@@ -96,15 +99,22 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
       )}
       {isCqlSearch && (
         <form className="advanced-search-cql-form">
-          <Textarea
-            id="cql"
-            name="name"
-            label="CQL"
-            className="advanced-search-cql-form__input focus-styling__input"
-            cols={100}
-            rows={5}
-            placeholder="e.g. 'harry potter'"
-          />
+          <div>
+            <Textarea
+              id="cql"
+              name="name"
+              label="CQL"
+              className="advanced-search-cql-form__input focus-styling__input"
+              cols={100}
+              rows={5}
+              placeholder="e.g. 'harry potter'"
+            />
+            <Links
+              classNames="link-tag"
+              href="https://danbib.dk/soegekoder-complex-search"
+              linkText={cqlSearchExternalHelpLinkText}
+            />
+          </div>
           <Input
             label="Location"
             type="text"
