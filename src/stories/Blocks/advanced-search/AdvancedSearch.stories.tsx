@@ -25,6 +25,10 @@ export default {
       name: "Is CQL search?",
       control: { type: "boolean" },
     },
+    cqlSearchExternalHelpLinkText: {
+      name: "CQL search external help link text",
+      control: { type: "text" },
+    },
   },
   args: {
     inputPlaceholder: "Søgeterm",
@@ -32,6 +36,7 @@ export default {
     cqlPreviewText:
       "title = harry potter AND subtitle = and the philosophers stone",
     isCqlSearch: false,
+    cqlSearchExternalHelpLinkText: "Læs mere om CQL-søgning",
   },
   parameters: {
     design: {
