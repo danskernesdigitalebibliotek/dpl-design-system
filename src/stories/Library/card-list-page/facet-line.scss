@@ -28,6 +28,7 @@
   margin-right: $s-sm;
   margin-top: 0px;
   white-space: nowrap;
+  max-width: 200px;
 
   @include media-query__small() {
     margin-top: $s-sm;
