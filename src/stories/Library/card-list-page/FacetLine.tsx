@@ -46,7 +46,10 @@ const FacetLine: FC<FacetLineProps> = ({ items }) => {
         return null;
       })}
       <li className="facet-line__item">
-        <TagButton isClickable={false}>+ Flere filtre</TagButton>
+        <TagButton isClickable={false}>
+          <img src="icons/basic/icon-filter.svg" alt="Filter icon" />
+          Flere filtre
+        </TagButton>
       </li>
     </ul>
   );
