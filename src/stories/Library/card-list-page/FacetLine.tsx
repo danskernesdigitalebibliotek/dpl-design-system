@@ -16,13 +16,11 @@ export interface FacetLineProps {
 const FacetLine: FC<FacetLineProps> = ({ items }) => {
   return (
     <ul className="facet-line mt-48">
-      {items.map(({ type, title, terms, score }, index) => {
+      {items.map(({ type, title, terms }, index) => {
         if (type === "term") {
           return (
             <li key={index} className="facet-line__item">
-              <TagButton isClickable={false}>
-                {title} ({score})
-              </TagButton>
+              <TagButton isClickable={false}>{title}</TagButton>
             </li>
           );
         }
@@ -45,12 +43,6 @@ const FacetLine: FC<FacetLineProps> = ({ items }) => {
 
         return null;
       })}
-      <li className="facet-line__item">
-        <TagButton isClickable={false}>
-          <img src="icons/basic/icon-filter.svg" alt="Filter icon" />
-          Flere filtre
-        </TagButton>
-      </li>
     </ul>
   );
 };
