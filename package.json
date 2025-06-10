@@ -71,14 +71,14 @@
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
-    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-prettier": "^5.4.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-webpack-plugin": "^5.0.1",
     "flatpickr": "^4.6.13",
     "json": "^11.0.0",
     "markdownlint-cli2": "^0.16.0",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.4",
     "prettier": "^3.3.3",
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.1.0",
@@ -89,12 +89,12 @@
     "sass": "1.78.0",
     "skeleton-screen-css": "^1.1.0",
     "storybook": "^8.6.14",
-    "stylelint": "^16.19.1",
+    "stylelint": "^16.20.0",
     "stylelint-config-recommended-scss": "^14.0.0",
     "stylelint-prettier": "^5.0.3",
     "stylelint-scss": "^6.12.0",
     "typescript": "^5.6.0",
-    "web-vitals": "^5.0.1"
+    "web-vitals": "^5.0.2"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
