@@ -104,7 +104,6 @@ const facetLineItems = [
       { title: "troldmænd", facet: "emner", type: "term", score: 28 },
     ],
   },
-  { title: "Musik", type: "term", score: 12 },
 ] as (FacetLineItem<"term"> | FacetLineItem<"facet">)[];
 
 const selectedTerms = [
