@@ -148,6 +148,7 @@
   height: 100%;
   padding: 0 $s-lg;
   border: 0 solid transparent;
+  background-color: $color__global-primary;
 
   ::placeholder {
     color: $color__text-secondary-gray;
