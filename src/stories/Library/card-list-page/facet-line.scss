@@ -28,6 +28,8 @@
   margin-top: 0px;
   margin-bottom: $s-sm;
   white-space: nowrap;
+  max-width: 200px;
+  text-overflow: ellipsis;
 
   @include media-query__small() {
     margin-top: $s-sm;
@@ -61,6 +63,13 @@
   border: none;
   margin-right: 0px;
   margin-left: auto;
+}
+.facet-line .facet-line__item .tag {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 //  Todo should be merged with .content-list-page__filters
