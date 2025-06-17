@@ -42,9 +42,8 @@
 
 .facet-line__item {
   // This magic number (19.35%) makes sure inteligent facets always fit in one line on desktop
-  width: 19.35%;
+  width: 100%;
   max-width: 19.35%;
-  min-width: 19.35%;
   margin-right: 0;
 
   @include media-query__medium("max-width") {
