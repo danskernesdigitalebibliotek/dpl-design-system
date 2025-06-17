@@ -28,6 +28,8 @@
   margin-right: $s-sm;
   margin-top: 0px;
   white-space: nowrap;
+  max-width: 200px;
+  text-overflow: ellipsis;
 
   @include media-query__small() {
     margin-top: $s-sm;
@@ -36,6 +38,14 @@
   .tag {
     color: $color__global-grey;
   }
+}
+
+.facet-line .facet-line__item .tag {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .facet-line-selected-terms__item {

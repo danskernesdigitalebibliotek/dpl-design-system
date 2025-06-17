@@ -86,7 +86,12 @@ const searchResult = [
 ];
 
 const facetLineItems = [
-  { title: "fantasy", facet: "genreAndForm", type: "term", score: 96 },
+  {
+    title: "fantasy og bøger om magi",
+    facet: "genreAndForm",
+    type: "term",
+    score: 96,
+  },
   {
     title: "Faglitteratur",
     facet: "fictionNonfiction",
@@ -102,6 +107,12 @@ const facetLineItems = [
       { title: "Børnebøger", facet: "emner", type: "term", score: 96 },
       { title: "magi", facet: "emner", type: "term", score: 302 },
       { title: "troldmænd", facet: "emner", type: "term", score: 28 },
+      {
+        title: "børnebøger om magi, kærlighed, og trolmænd",
+        facet: "emner",
+        type: "term",
+        score: 28,
+      },
     ],
   },
   { title: "Musik", type: "term", score: 12 },
