@@ -74,14 +74,14 @@
     "eslint-plugin-prettier": "^5.4.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-webpack-plugin": "^5.0.1",
+    "eslint-webpack-plugin": "^5.0.2",
     "flatpickr": "^4.6.13",
     "json": "^11.0.0",
     "markdownlint-cli2": "^0.16.0",
-    "postcss": "^8.5.4",
+    "postcss": "^8.5.5",
     "prettier": "^3.3.3",
     "react": "^17.0.2",
-    "react-docgen-typescript": "^2.1.0",
+    "react-docgen-typescript": "^2.4.0",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-scripts": "^5.0.0",
@@ -92,9 +92,9 @@
     "stylelint": "^16.20.0",
     "stylelint-config-recommended-scss": "^14.0.0",
     "stylelint-prettier": "^5.0.3",
-    "stylelint-scss": "^6.12.0",
+    "stylelint-scss": "^6.12.1",
     "typescript": "^5.6.0",
-    "web-vitals": "^5.0.2"
+    "web-vitals": "^5.0.3"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
