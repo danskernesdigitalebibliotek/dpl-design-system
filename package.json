@@ -69,7 +69,7 @@
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-prettier": "^5.5.0",
     "eslint-plugin-react": "^7.37.5",
