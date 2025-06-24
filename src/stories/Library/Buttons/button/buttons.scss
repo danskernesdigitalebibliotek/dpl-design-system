@@ -102,3 +102,16 @@ $color__btn-filled-hover: $color__text-secondary-gray;
     color: $color__text-primary-white;
   }
 }
+
+// This is for achieving button functionality that has a styling of a link
+// We need this for example in the inteligent facet line to differentiate
+// the button that opens more filters slider.
+.btn--link-styling,
+.tag.btn--link-styling {
+  border: none;
+  padding: 4px;
+
+  span {
+    @include typography($typo__tags);
+  }
+}

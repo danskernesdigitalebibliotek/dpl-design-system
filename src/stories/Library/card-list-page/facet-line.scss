@@ -1,12 +1,13 @@
 //  Todo should be merged with .content-list-page__filters
 .facet-line {
   @include layout-container($block-max-width__large);
-  max-height: $s-xl;
   overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y: visible;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
+  gap: $s-sm;
+  align-items: flex-start;
   // Hide scrollbar
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -15,19 +16,20 @@
     display: none; /* for Chrome, Safari, and Opera */
   }
 
-  @include media-query__small() {
+  @include media-query__small("max-width") {
     overflow-y: visible;
     max-height: none;
-    flex-wrap: wrap;
   }
 }
 
-.facet-line-selected-terms__item,
-.facet-line__item {
+.facet-line-selected-terms__item {
   display: inline-block;
   margin-right: $s-sm;
   margin-top: 0px;
+  margin-bottom: $s-sm;
   white-space: nowrap;
+  max-width: 200px;
+  text-overflow: ellipsis;
 
   @include media-query__small() {
     margin-top: $s-sm;
@@ -38,12 +40,42 @@
   }
 }
 
-.facet-line-selected-terms__item {
-  margin-bottom: $s-sm;
+.facet-line__item {
+  // This magic number (19.35%) makes sure inteligent facets always fit in one line on desktop
+  width: 100%;
+  max-width: 19.35%;
+  margin-right: 0;
+
+  @include media-query__medium("max-width") {
+    width: auto;
+    max-width: 200px;
+    min-width: auto;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.facet-line-more-filters {
+  display: flex;
+  border: none;
+  margin-right: 0px;
+  margin-left: auto;
+}
+.facet-line .facet-line__item .tag {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 //  Todo should be merged with .content-list-page__filters
 .facet-line-selected-terms {
   @include layout-container($block-max-width__large);
   margin-top: $s-md;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
