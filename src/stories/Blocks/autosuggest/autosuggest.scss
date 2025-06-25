@@ -5,9 +5,20 @@
   left: 0;
   right: 0;
   top: calc(100% + 1px);
-  z-index: $z-5;
+  z-index: $z-10;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: $s-md;
+}
+
+.autosuggest-backdrop {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: $color__global-black;
+  opacity: 0.5;
+  z-index: $z-5;
 }
