@@ -3033,7 +3033,7 @@
     "@storybook/preset-react-webpack" "9.0.16"
     "@storybook/react" "9.0.16"
 
-"@storybook/react@9.0.16":
+"@storybook/react@9.0.16", "@storybook/react@^9.0.16":
   version "9.0.16"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-9.0.16.tgz#7030f0c1af3f807c7fc117fe8a4f979842d049da"
   integrity sha512-1jk9fBe8vEoZrba9cK19ZDdZgYMXUNl3Egjj5RsTMYMc1L2mtIu9o56VyK/1V4Q52N9IyawHvmIIuxc5pCZHkQ==
