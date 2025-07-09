@@ -1,5 +1,5 @@
 // Recommendation.stories.tsx
-import { Meta, StoryFn } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-webpack5";
 import { Recommendation } from "./Recommendation";
 import recommendedMaterialArgs from "../recommended-material/RecommendedMaterialArgs";
 

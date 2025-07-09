@@ -1,4 +1,4 @@
-import { StoryFn, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react-webpack5";
 
 import NavSpots from "./NavSpots";
 import NavSpot from "../nav-spot/NavSpot";

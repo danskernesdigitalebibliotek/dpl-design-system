@@ -1,4 +1,4 @@
-import { Meta, StoryFn } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-webpack5";
 import ContentList from "./ContentList";
 import ContentListData from "./ContentListData";
 

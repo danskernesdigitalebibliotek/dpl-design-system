@@ -1,4 +1,4 @@
-import { StoryFn } from "@storybook/react";
+import { StoryFn } from "@storybook/react-webpack5";
 
 import Slider from "./Slider";
 import Card from "../card/Card";

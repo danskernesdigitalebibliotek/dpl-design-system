@@ -1,4 +1,4 @@
-import { StoryFn, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react-webpack5";
 
 import Event from "./EventPage";
 import ImageCredited from "../../Library/image-credited/ImageCredited";
