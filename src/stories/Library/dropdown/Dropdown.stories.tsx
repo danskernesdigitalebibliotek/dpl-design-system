@@ -1,4 +1,4 @@
-import { StoryFn } from "@storybook/react";
+import { StoryFn } from "@storybook/react-webpack5";
 
 import { Dropdown as DropdownComp } from "./Dropdown";
 

@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/react";
+import { Meta } from "@storybook/react-webpack5";
 
 import { IconBasic as IconBasicComp } from "./IconBasic";
 

@@ -1,4 +1,4 @@
-import { Meta, StoryFn } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-webpack5";
 import { SearchResultPageSkeleton } from "../card-list-page/SearchResultPageSkeleton";
 import { SearchResultPage } from "../card-list-page/SearchResultPage";
 

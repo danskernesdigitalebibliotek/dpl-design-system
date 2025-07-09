@@ -4,11 +4,11 @@ module.exports = {
 
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
     "@storybook/preset-create-react-app",
     "@whitespace/storybook-addon-html",
     "@storybook/addon-designs",
     "@storybook/addon-a11y",
+    "@storybook/addon-docs"
   ],
 
   typescript: {
