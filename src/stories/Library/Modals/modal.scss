@@ -10,6 +10,7 @@
   transition: opacity 0.3s;
   height: 100dvh;
   overflow: auto;
+  z-index: $z-modal;
 
   &__screen-reader-description {
     @include hide-visually;
