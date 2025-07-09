@@ -43,9 +43,11 @@
     "@chanzuckerberg/axe-storybook-testing": "^9.0.0",
     "@storybook/addon-a11y": "^9.0.16",
     "@storybook/addon-designs": "^10.0.1",
+    "@storybook/addon-docs": "^9.0.16",
     "@storybook/addon-links": "^9.0.16",
     "@storybook/preset-create-react-app": "^9.0.16",
     "@storybook/react-webpack5": "^9.0.16",
+    "@storybook/react": "^9.0.16",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.6.1",
@@ -90,9 +92,7 @@
     "stylelint-prettier": "^5.0.3",
     "stylelint-scss": "^6.12.1",
     "typescript": "^5.6.0",
-    "web-vitals": "^5.0.3",
-    "@storybook/addon-docs": "^9.0.16",
-    "@storybook/react": "^9.0.16"
+    "web-vitals": "^5.0.3"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
