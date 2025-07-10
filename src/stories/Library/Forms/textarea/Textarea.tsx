@@ -9,6 +9,7 @@ export interface TextareaProps {
   rows?: number;
   cols?: number;
   className?: string;
+  labelClassName?: string;
   placeholder?: string;
 }
 
@@ -20,10 +21,13 @@ const Textarea: FC<TextareaProps> = ({
   cols = 80,
   className,
   placeholder,
+  labelClassName,
 }) => {
   return (
     <div className="dpl-input">
-      <Label id={id}>{label}</Label>
+      <Label id={id} className={labelClassName}>
+        {label}
+      </Label>
       <div>
         <textarea
           className={clsx(className)}

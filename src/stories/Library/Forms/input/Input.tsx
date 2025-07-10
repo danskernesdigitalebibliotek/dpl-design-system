@@ -8,10 +8,19 @@ export type InputProps = {
   description?: string;
   validation?: string;
   classNames?: string;
+  labelClassName?: string;
 };
 
 const Input = (props: InputProps) => {
-  const { label, type, id, description, validation, classNames } = props;
+  const {
+    label,
+    type,
+    id,
+    description,
+    validation,
+    classNames,
+    labelClassName,
+  } = props;
   const invalid = validation ? "true" : "false";
   return (
     <div
@@ -19,7 +28,9 @@ const Input = (props: InputProps) => {
         "dpl-input--invalid": !!validation,
       })}
     >
-      <Label id={id}>{label}</Label>
+      <Label id={id} className={labelClassName}>
+        {label}
+      </Label>
       <input
         aria-invalid={invalid}
         aria-describedby={`description-${id}`}
