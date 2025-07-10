@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React, { useState, useRef } from "react";
 
 export type CheckboxProps = {
@@ -10,6 +11,7 @@ export type CheckboxProps = {
   callback?: (isChecked: boolean) => void;
   hiddenLabel: boolean;
   classNames?: string;
+  labelClassName?: string;
 };
 
 export const Checkbox: React.FC<CheckboxProps> = ({
@@ -22,6 +24,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   validation,
   hiddenLabel = false,
   classNames,
+  labelClassName,
 }) => {
   const checkboxId = useRef(`checkbox_id__${Math.random()}`);
   const [checked, setChecked] = useState(isChecked);
@@ -43,7 +46,10 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         checked={checked}
         onClick={handleClick}
       />
-      <label className="checkbox__label" htmlFor={checkboxId.current}>
+      <label
+        className={clsx("checkbox__label", labelClassName)}
+        htmlFor={checkboxId.current}
+      >
         <span className="checkbox__icon">
           {/* The svg is inline since it should be white.
           The stroke color is manipulated with css. */}
@@ -59,9 +65,10 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         <div>
           {label && (
             <span
-              className={`checkbox__text text-small-caption color-secondary-gray ${
-                hiddenLabel ? "checkbox__text--hide-visually" : ""
-              }`}
+              className={clsx(
+                "checkbox__text text-small-caption color-secondary-gray",
+                hiddenLabel && "checkbox__text--hide-visually",
+              )}
             >
               {label}
             </span>

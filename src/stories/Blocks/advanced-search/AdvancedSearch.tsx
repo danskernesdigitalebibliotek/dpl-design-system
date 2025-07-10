@@ -105,29 +105,33 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
               name="name"
               label="CQL"
               className="advanced-search-cql-form__input focus-styling__input"
+              labelClassName="advanced-search-cql-form__label"
               cols={100}
               rows={5}
               placeholder="e.g. 'harry potter'"
             />
             <Links
-              classNames="link-tag"
+              classNames="link-tag advanced-search-cql-form__external-help-link"
               href="https://danbib.dk/soegekoder-complex-search"
               linkText={cqlSearchExternalHelpLinkText}
             />
           </div>
           <Input
+            labelClassName="advanced-search-cql-form__label"
             label="Location"
             type="text"
             id="location"
             description="Add a comma separated list for multiple locations"
           />
           <Input
+            labelClassName="advanced-search-cql-form__label"
             label="Sublocation"
             type="text"
             id="sublocation"
             description="Add a comma separated list for multiple sublocations"
           />
           <Checkbox
+            labelClassName="advanced-search-cql-form__label"
             isChecked={false}
             hiddenLabel={false}
             label=" Holding Status On Shelf"
