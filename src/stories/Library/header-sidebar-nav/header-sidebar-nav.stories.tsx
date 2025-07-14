@@ -1,4 +1,4 @@
-import { Meta, StoryFn } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-webpack5";
 
 import HeaderSidebarNav, { HeaderSidebarNavProps } from "./header-sidebar-nav";
 import { menuItems } from "../header-menu-list/HeaderMenuListData";

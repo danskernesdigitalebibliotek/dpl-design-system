@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/react";
+import { Meta } from "@storybook/react-webpack5";
 
 import { ReactComponent as ArrowAccentIcon } from "../../../../public/icons/arrow-accent/icon-arrow-accent.svg";
 
