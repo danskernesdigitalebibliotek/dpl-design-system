@@ -13,8 +13,9 @@ export const Infomedia = (props: InfomediaProps) => {
     <Modal shownModal={showModal} classNames="">
       <article className="infomedia-article">
         <InfomediaIcon className="infomedia-logo" />
-        <h2>{title}</h2>
+        <h2 className="infomedia-headline">{title}</h2>
         <div
+          className="infomedia-content"
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: text }}
         />
