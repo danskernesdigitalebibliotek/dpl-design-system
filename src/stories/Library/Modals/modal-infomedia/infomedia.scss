@@ -16,15 +16,31 @@
   margin-bottom: $s-lg;
 }
 
-.infomedia-content {
-  padding-bottom: $s-xl;
+.infomedia-hedline {
+  @include typography($typo__h4);
+  margin-bottom: $s-md;
+}
 
+.infomedia-byline {
+  @include typography($typo__body-large);
+  margin-bottom: $s-sm;
+}
+
+.infomedia-meta {
+  display: flex;
+  gap: $s-md;
+  margin-bottom: $s-md;
+}
+
+.infomedia-content {
   > * {
     @include typography($typo__body-large);
     margin-bottom: $s-md;
-
-    &:first-child {
-      @include typography($typo__h4);
-    }
   }
+}
+
+.infomedia-copyright {
+  @include typography($typo__byline-tags--small);
+  text-align: center;
+  padding-bottom: $s-xl;
 }
