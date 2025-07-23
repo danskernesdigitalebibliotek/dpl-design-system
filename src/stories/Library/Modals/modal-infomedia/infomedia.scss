@@ -9,6 +9,7 @@
 .infomedia-article {
   max-width: $layout__max-width--small;
   margin: 0 auto;
+  font-family: $font__title;
 }
 
 .infomedia-headline {
@@ -22,13 +23,11 @@
 }
 
 .infomedia-byline {
-  @include typography($typo__body-large);
+  font-weight: $font__weight--bold;
   margin-bottom: $s-sm;
 }
 
 .infomedia-meta {
-  display: flex;
-  gap: $s-md;
   margin-bottom: $s-md;
 }
 
@@ -40,7 +39,8 @@
 }
 
 .infomedia-copyright {
-  @include typography($typo__byline-tags--small);
+  font-weight: $font__weight--bold;
+  font-size: 14px;
   text-align: center;
   padding-bottom: $s-xl;
 }
