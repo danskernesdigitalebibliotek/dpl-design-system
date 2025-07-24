@@ -1,11 +1,46 @@
 .infomedia-logo {
   display: block;
   margin-left: auto;
-  margin-right: $s-2xl;
   object-fit: contain;
   height: $s-lg;
+  margin-bottom: $s-lg;
 }
 
-.infomedia-article > * + * {
-  margin-top: 1em;
+.infomedia-article {
+  max-width: $layout__max-width--small;
+  margin: 0 auto;
+  font-family: $font__title;
+}
+
+.infomedia-headline {
+  @include typography($typo__h2);
+  margin-bottom: $s-lg;
+}
+
+.infomedia-hedline {
+  @include typography($typo__h4);
+  margin-bottom: $s-md;
+}
+
+.infomedia-byline {
+  font-weight: $font__weight--bold;
+  margin-bottom: $s-sm;
+}
+
+.infomedia-meta {
+  margin-bottom: $s-md;
+}
+
+.infomedia-content {
+  > * {
+    @include typography($typo__body-large);
+    margin-bottom: $s-md;
+  }
+}
+
+.infomedia-copyright {
+  font-weight: $font__weight--bold;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: $s-xl;
 }
