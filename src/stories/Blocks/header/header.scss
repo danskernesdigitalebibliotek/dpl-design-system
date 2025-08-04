@@ -7,7 +7,7 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-  z-index: $z-20;
+  z-index: $z-header;
 }
 
 .header__logo-desktop {
@@ -135,6 +135,7 @@
   align-items: center;
   position: relative;
   height: 100%;
+  width: 100%;
 }
 
 .header__menu-search-input {
