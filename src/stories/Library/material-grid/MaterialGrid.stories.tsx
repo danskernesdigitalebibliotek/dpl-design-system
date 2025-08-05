@@ -1,4 +1,4 @@
-import { Meta, StoryFn } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react-webpack5";
 import { MaterialGrid } from "./MaterialGrid";
 import MaterialGridData from "./MaterialGridData";
 

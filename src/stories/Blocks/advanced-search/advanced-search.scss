@@ -104,6 +104,11 @@
   }
 }
 
+.dpl-input .advanced-search-cql-form__label {
+  @include typography($typo__h4);
+  margin-bottom: $s-sm;
+}
+
 .advanced-search-cql-form__input {
   @include typography($typo__body-placeholder);
   border: solid 1px $color__global-tertiary-1;
@@ -112,6 +117,10 @@
   padding: $s-md;
   resize: none;
   background-color: $color__global-primary;
+}
+
+.advanced-search-cql-form__external-help-link {
+  @include typography($typo__small-caption);
 }
 
 .input-and-preview {
