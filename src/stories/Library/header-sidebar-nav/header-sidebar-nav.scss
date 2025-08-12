@@ -12,7 +12,7 @@ $_menu_animation_delay: 0.2s;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: $z-20;
+  z-index: $z-sidebar-nav;
   transform: translateX(-100%);
   transition: transform $_transition_speed $_bezier_transition;
 
