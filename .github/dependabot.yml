@@ -21,6 +21,9 @@ updates:
     labels:
       - dependencies
     groups:
+      node:
+        patterns: ["@types/node"]
+        update-types: ["minor", "patch"]
       react:
         patterns:
           - "react"
