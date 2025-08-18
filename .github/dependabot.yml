@@ -19,6 +19,7 @@ updates:
       day: monday
       time: '04:00'
       timezone: Europe/Copenhagen
+    versioning-strategy: increase
     labels:
       - dependencies
     groups:
