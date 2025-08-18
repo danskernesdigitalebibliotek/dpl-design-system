@@ -21,9 +21,6 @@ updates:
     labels:
       - dependencies
     groups:
-      node:
-        patterns: ["@types/node"]
-        update-types: ["minor", "patch"]
       react:
         patterns:
           - "react"
@@ -35,6 +32,8 @@ updates:
           - "storybook"
           - "@storybook/*"
     ignore:
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
       - dependency-name: "react"
         versions: [">=18"]
       - dependency-name: "@types/react"
