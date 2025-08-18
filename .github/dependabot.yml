@@ -40,3 +40,5 @@ updates:
         versions: [">=18"]
       - dependency-name: "@types/react-dom"
         versions: [">=18"]
+      - dependency-name: "stylelint-config-recommended-scss"
+        versions: [">=16"]
