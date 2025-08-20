@@ -2,19 +2,22 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
-    open-pull-requests-limit: 10
     schedule:
       interval: weekly
+      day: monday
+      time: '04:00'
       timezone: Europe/Copenhagen
     labels:
       - dependencies
       - github_actions
   - package-ecosystem: npm
     directory: /
-    open-pull-requests-limit: 10
     schedule:
       interval: weekly
+      day: monday
+      time: '04:00'
       timezone: Europe/Copenhagen
+    versioning-strategy: increase
     labels:
       - dependencies
     groups:
@@ -28,3 +31,16 @@ updates:
         patterns:
           - "storybook"
           - "@storybook/*"
+    ignore:
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react"
+        versions: [">=18"]
+      - dependency-name: "@types/react"
+        versions: [">=18"]
+      - dependency-name: "react-dom"
+        versions: [">=18"]
+      - dependency-name: "@types/react-dom"
+        versions: [">=18"]
+      - dependency-name: "stylelint-config-recommended-scss"
+        versions: [">=16"]
