@@ -48,7 +48,7 @@
     "@storybook/preset-create-react-app": "^9.0.16",
     "@storybook/react-webpack5": "^9.1.2",
     "@storybook/react": "^9.0.16",
-    "@testing-library/jest-dom": "^6.7.0",
+    "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^30.0.0",
