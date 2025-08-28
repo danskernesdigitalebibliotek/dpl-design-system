@@ -15,6 +15,7 @@ dl.list-description {
   }
 
   .list-description__value {
+    color: $color__text-primary-black;
     display: grid;
     @include media-query__small() {
       display: flex;

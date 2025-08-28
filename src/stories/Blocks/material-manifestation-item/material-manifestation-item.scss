@@ -38,7 +38,7 @@
 
   &__title {
     color: $color__text-primary-black;
-    margin-top: 22px;
+    margin-top: 16px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -51,7 +51,7 @@
   }
 
   &__details {
-    margin-top: 19px;
+    margin-top: 16px;
     display: flex;
     align-items: center;
     gap: 9px;
@@ -72,10 +72,11 @@
   }
 
   &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     @include media-query__small {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-self: end;
     }
     .reserve-button {
@@ -88,7 +89,7 @@
     }
   }
   &__find {
-    margin-top: 12px;
+    margin-top: 20px;
     text-align: center;
   }
 }
