@@ -13,6 +13,7 @@ export type MaterialMainfestationItemProps = {
   author: string;
   year: string;
   detailsData: ListData;
+  defaultOpen?: boolean;
 };
 
 export const MaterialMainfestationItem = ({
@@ -20,8 +21,9 @@ export const MaterialMainfestationItem = ({
   author,
   year,
   detailsData,
+  defaultOpen = false,
 }: MaterialMainfestationItemProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
     <div className="material-manifestation-item">

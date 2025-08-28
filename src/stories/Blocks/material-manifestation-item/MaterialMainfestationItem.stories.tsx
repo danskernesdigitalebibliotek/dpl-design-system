@@ -15,11 +15,13 @@ export default {
     author: { control: { type: "text" } },
     year: { control: { type: "text" } },
     detailsData: { control: { type: "object" } },
+    defaultOpen: { control: { type: "boolean" } },
   },
   args: {
     title: "Audrey Hepburn",
     author: "Sánchez Vegara, Amaia Arrazola",
     year: "2018",
+    defaultOpen: false,
     detailsData: {
       Type: { value: ["Bog"], type: "standard" },
       Sprog: { value: ["Dansk"], type: "standard" },
@@ -38,4 +40,12 @@ const Template: StoryFn<typeof MaterialMainfestationItem> = (args) => {
   return <MaterialMainfestationItem {...args} />;
 };
 
-export const Item = Template.bind({});
+export const Closed = Template.bind({});
+Closed.args = {
+  defaultOpen: false,
+};
+
+export const Open = Template.bind({});
+Open.args = {
+  defaultOpen: true,
+};
