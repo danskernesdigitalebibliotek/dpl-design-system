@@ -1,0 +1,15 @@
+.copy-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  &--success {
+    color: $color__copy-success;
+  }
+}
