@@ -27,6 +27,9 @@ export default {
     description: {
       control: { type: "text" },
     },
+    editionsDisclosureOpen: {
+      control: { type: "boolean" },
+    },
   },
   args: {
     title: "Audrey Hepburn",
@@ -43,6 +46,11 @@ const Template: StoryFn<typeof MaterialPage> = (args) => {
 };
 
 export const Item = Template.bind({});
+
+export const WithUdgaverOpen = Template.bind({});
+WithUdgaverOpen.args = {
+  editionsDisclosureOpen: true,
+};
 
 export const SkeletonVersion: StoryFn<typeof MaterialPageSkeleton> = () => (
   <MaterialPageSkeleton />

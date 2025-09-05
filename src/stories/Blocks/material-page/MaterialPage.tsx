@@ -15,6 +15,7 @@ export interface MaterialPageProps {
   periodical?: boolean;
   ctaText?: string;
   description?: string;
+  editionsDisclosureOpen?: boolean;
 }
 
 const MaterialPage: React.FC<MaterialPageProps> = ({
@@ -23,6 +24,7 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
   periodical,
   ctaText,
   description,
+  editionsDisclosureOpen = false,
 }) => {
   const amountOfRenders = [1, 2];
   return (
@@ -34,8 +36,13 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
         ctaText={ctaText}
       />
       <MaterialDescription description={description} />
-      <Disclosure headline="Udgaver (2)" icon="Various" headingLevel="h2">
-        {amountOfRenders.map((item) => {
+      <Disclosure
+        headline="Udgaver (2)"
+        icon="Various"
+        headingLevel="h2"
+        defaultOpen={editionsDisclosureOpen}
+      >
+        {amountOfRenders.map((item, index) => {
           return (
             <MaterialMainfestationItem
               key={generateId(item)}
@@ -43,6 +50,7 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
               author="Author"
               year="2022"
               detailsData={fakeData as ListData}
+              defaultOpen={editionsDisclosureOpen && index === 0}
             />
           );
         })}

@@ -13,6 +13,7 @@ export type DisclosureProps = {
   removeHeadlinePadding?: boolean;
   headingLevel: HeadingLevelType;
   contentPadding?: boolean;
+  defaultOpen?: boolean;
 };
 
 const Disclosure: React.FC<DisclosureProps> = ({
@@ -24,14 +25,16 @@ const Disclosure: React.FC<DisclosureProps> = ({
   removeHeadlinePadding,
   headingLevel,
   contentPadding = false,
+  defaultOpen = false,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(defaultOpen);
   return (
     <details
       className={clsx(
         "disclosure text-body-large",
         fullWidth && "disclosure--full-width",
       )}
+      open={defaultOpen}
     >
       <summary
         className={clsx(
