@@ -1,12 +1,12 @@
 .copy-link {
   display: flex;
-  align-items: center;
   gap: 4px;
 
-  svg {
-    width: 16px;
-    height: 16px;
+  svg,
+  img {
     flex-shrink: 0;
+    object-fit: contain;
+    object-position: center;
   }
 
   &--success {

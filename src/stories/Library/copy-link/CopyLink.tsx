@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 import { ReactComponent as LinkIcon } from "../../../public/icons/collection/link.svg";
-import { ReactComponent as CheckIcon } from "../../../public/icons/basic/icon-check.svg";
+import { ReactComponent as CheckIcon } from "../../../public/icons/basic/icon-check_small.svg";
 
 export type CopyLinkProps = {
   label?: string;
@@ -31,13 +31,15 @@ export const CopyLink = ({
 
   return (
     <button
-      className={clsx("copy-link", className, {
-        "copy-link--success": isCopied,
-      })}
+      className={clsx("copy-link", className)}
       onClick={handleCopyLink}
       type="button"
     >
-      <span className="link-tag text-small-caption">
+      <span
+        className={clsx("link-tag text-small-caption", {
+          "copy-link--success": isCopied,
+        })}
+      >
         {isCopied ? successLabel : label}
       </span>
       {isCopied ? <CheckIcon /> : <LinkIcon />}
