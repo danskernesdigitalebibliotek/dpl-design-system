@@ -5,6 +5,7 @@ import ListDescription, {
   ListData,
 } from "../../Library/Lists/list-description/ListDescription";
 import Cover from "../../Library/cover/Cover";
+import { CopyLink } from "../../Library/copy-link/CopyLink";
 import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
 
 export type MaterialMainfestationItemProps = {
@@ -12,6 +13,7 @@ export type MaterialMainfestationItemProps = {
   author: string;
   year: string;
   detailsData: ListData;
+  defaultOpen?: boolean;
 };
 
 export const MaterialMainfestationItem = ({
@@ -19,8 +21,10 @@ export const MaterialMainfestationItem = ({
   author,
   year,
   detailsData,
+  defaultOpen = false,
 }: MaterialMainfestationItemProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+
   return (
     <div className="material-manifestation-item">
       <div className="material-manifestation-item__availability">
@@ -54,7 +58,12 @@ export const MaterialMainfestationItem = ({
           <p className="link-tag text-small-caption">Detaljer om materialet </p>
           <ExpandMoreIcon />
         </div>
-        {isOpen && <ListDescription className="mt-24" data={detailsData} />}
+        {isOpen && (
+          <>
+            <ListDescription className="mt-24" data={detailsData} />
+            <CopyLink label="Kopiér link til udgave" className="mt-24 mb-24" />
+          </>
+        )}
       </div>
 
       <div className="material-manifestation-item__buttons">
