@@ -33,6 +33,7 @@ export default {
     infoBoxTitle: { control: { type: "text" } },
     infoBoxHtml: { control: { type: "text" } },
     infoBoxButtonText: { control: { type: "text" } },
+    infoBoxListPosition: { control: { type: "number" } },
   },
   args: {
     title: "harry potter",
@@ -45,6 +46,7 @@ export default {
     infoBoxHtml:
       "<p>Brug vores avancerede søgning eller kontakt os og få hjælp!</p><p><a href=\"tel:33663000\">Telefon 33 66 30 00</a> eller besøg os i <a href='/biblioteker'>bibliotekets betjente åbningstid</a>.</p>",
     infoBoxButtonText: "Advanceret søgning",
+    infoBoxListPosition: 8,
   },
 } as Meta<typeof SearchResultPage>;
 

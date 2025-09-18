@@ -18,6 +18,7 @@ export type SearchResultPageProps = {
   infoBoxTitle?: string;
   infoBoxHtml?: string;
   infoBoxButtonText?: string;
+  infoBoxListPosition?: number;
 };
 
 export const SearchResultPage = ({
@@ -30,6 +31,7 @@ export const SearchResultPage = ({
   infoBoxTitle,
   infoBoxHtml,
   infoBoxButtonText,
+  infoBoxListPosition = 5,
 }: SearchResultPageProps) => {
   return (
     <div className="content-list-page">
@@ -53,7 +55,7 @@ export const SearchResultPage = ({
           <FacetLineSelected items={data.selectedTerms} />
           <ul className="content-list">
             {data.searchResult.map((item, i) => {
-              if (i === 5) {
+              if (i === infoBoxListPosition) {
                 return (
                   <>
                     <li className="content-list__item">
