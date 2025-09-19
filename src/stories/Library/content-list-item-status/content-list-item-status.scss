@@ -1,0 +1,22 @@
+.content-list-item--status-parent {
+  position: relative;
+
+  .status {
+    border: none;
+    z-index: 10;
+    position: absolute;
+    top: $s-md;
+    left: $s-md;
+  }
+
+  .status--cancelled,
+  .status--sold-out {
+    background-color: $color__signal-alert;
+    color: white;
+  }
+
+  .status--occurred {
+    background-color: black;
+    color: white;
+  }
+}

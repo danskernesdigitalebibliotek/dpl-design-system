@@ -1,7 +1,11 @@
+import { clsx } from "clsx";
 import { ReactNode } from "react";
 import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-arrow-ui-small-right.svg";
 import Tag from "../tag/Tag";
 import MediaContainer from "../media-container/MediaContainer";
+import ContentListItemStatus, {
+  ContentListItemStatuses,
+} from "../content-list-item-status/ContentListItemStatus";
 
 export type ContentListItemProps = {
   eventSeriesId?: string;
@@ -16,6 +20,7 @@ export type ContentListItemProps = {
   price: string;
   href: string;
   isStacked?: boolean;
+  status?: ContentListItemStatuses;
 };
 
 export const ContentListItem: React.FC<ContentListItemProps> = ({
@@ -29,13 +34,21 @@ export const ContentListItem: React.FC<ContentListItemProps> = ({
   location,
   price,
   href,
+  status,
 }) => {
   // Hardcoded placeholders for datetime
   // These are calculated in the corresponding template in the CMS
   const placeholderDateTime = "2023-03-10T15:00"; // ISO format date and time
 
   return (
-    <a href={href} className="content-list-item arrow__hover--right-small">
+    <a
+      href={href}
+      className={clsx(
+        "content-list-item arrow__hover--right-small",
+        status && "content-list-item--status-parent",
+      )}
+    >
+      {status && <ContentListItemStatus status={status} />}
       <div className="content-list-item__image-container">
         <MediaContainer media={image} placeholderText={placeholderText} />
       </div>
