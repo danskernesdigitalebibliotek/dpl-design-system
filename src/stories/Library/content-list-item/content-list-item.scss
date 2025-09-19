@@ -45,10 +45,7 @@ $_stacked-reduce-width: 20px;
 
 .content-list-item {
   @include content-list-item-grid;
-  padding-top: $s-lg;
-  padding-bottom: $s-lg;
-  padding-left: $s-lg;
-  padding-right: $s-lg;
+  padding: $s-lg;
   background-color: $color__global-white;
   margin: 0 auto;
   grid-template-areas:
