@@ -3,7 +3,7 @@
 
   .status {
     border: none;
-    z-index: 10;
+    z-index: $z-10;
     position: absolute;
     top: $s-md;
     left: $s-md;
@@ -12,11 +12,11 @@
   .status--cancelled,
   .status--sold-out {
     background-color: $color__signal-alert;
-    color: white;
+    color: $color__global-white;
   }
 
   .status--occurred {
-    background-color: black;
-    color: white;
+    background-color: $color__global-black;
+    color: $color__global-white;
   }
 }
