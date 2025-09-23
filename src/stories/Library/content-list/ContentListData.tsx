@@ -31,7 +31,6 @@ const contentListData: ContentListItemProps[] = [
     href: "/",
     date: "2023-01-12",
     time: "18:00 - 20:00",
-    status: ContentListItemStatuses.CANCELLED,
   },
   {
     eventSeriesId: "b",
@@ -46,6 +45,7 @@ const contentListData: ContentListItemProps[] = [
     href: "/",
     date: "2023-01-13",
     time: "18:00 - 20:00",
+    status: ContentListItemStatuses.CANCELLED,
   },
   {
     eventSeriesId: "b",
@@ -74,6 +74,7 @@ const contentListData: ContentListItemProps[] = [
     href: "/",
     date: "2023-01-15",
     time: "18:00 - 20:00",
+    status: ContentListItemStatuses.CANCELLED,
   },
   {
     eventSeriesId: "a",

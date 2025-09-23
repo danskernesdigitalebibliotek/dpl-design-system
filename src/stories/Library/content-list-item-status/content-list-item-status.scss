@@ -1,22 +1,32 @@
+.status {
+  border: none;
+
+  &.status--cancelled,
+  &.status--sold-out {
+    background-color: $color__signal-alert;
+    color: $color__global-white;
+  }
+
+  &.status--occurred {
+    background-color: $color__global-black;
+    color: $color__global-white;
+  }
+}
+
 .content-list-item--status-parent {
   position: relative;
 
   .status {
-    border: none;
     z-index: $z-10;
     position: absolute;
     top: $s-md;
     left: $s-md;
   }
+}
 
-  .status--cancelled,
-  .status--sold-out {
-    background-color: $color__signal-alert;
-    color: $color__global-white;
-  }
-
-  .status--occurred {
-    background-color: $color__global-black;
-    color: $color__global-white;
+.content-list-item-stacked__content {
+  .status {
+    height: auto;
+    margin-left: $s-md;
   }
 }

@@ -144,11 +144,13 @@ $_stacked-reduce-width: 20px;
   @include content-list-item-content-grid;
   z-index: $z-10;
   grid-area: contentStacked;
-  grid-template-areas: "dateStacked . timeStacked";
+  grid-template-areas: "date-status . timeStacked";
 }
 
-.content-list-item-stacked__date {
-  grid-area: dateStacked;
+.content-list-item-stacked__date-status {
+  grid-area: date-status;
+  display: grid;
+  grid-template-columns: 115px max-content 1fr;
 }
 
 .content-list-item-stacked__time {
@@ -224,7 +226,7 @@ $_stacked-reduce-width: 20px;
   }
 
   .content-list-item-stacked__content {
-    grid-template-areas: "dateStacked . timeStacked";
+    grid-template-areas: "date-status . timeStacked";
   }
 }
 
@@ -246,7 +248,7 @@ $_stacked-reduce-width: 20px;
   }
 
   .content-list-item-stacked__content {
-    grid-template-areas: "dateStacked . timeStacked";
+    grid-template-areas: "date-status . timeStacked";
   }
 
   .content-list-item-stacked__time {
