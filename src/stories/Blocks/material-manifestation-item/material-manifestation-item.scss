@@ -72,15 +72,16 @@
   }
 
   &__buttons {
+    margin-top: $s-lg;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @include media-query__small {
+      margin-top: 0;
       justify-self: end;
     }
     .reserve-button {
-      margin-top: $s-md;
       max-width: 158px;
 
       @include media-query__small {
