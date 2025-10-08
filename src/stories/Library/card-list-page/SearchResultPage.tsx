@@ -6,6 +6,7 @@ import { SearchResultZero } from "./SearchResultZero";
 import FacetLine from "./FacetLine";
 import FacetLineSelected from "./FacetLineSelectedTerms";
 import data from "./SearchResultPageData";
+import CardListInfoBox from "../card-list-info-box/CardListInfoBox";
 
 export type SearchResultPageProps = {
   title: string;
@@ -14,15 +15,11 @@ export type SearchResultPageProps = {
   linkName: string;
   linkTotalResults: string;
   zeroResult: boolean;
+  infoBoxTitle?: string;
+  infoBoxHtml?: string;
+  infoBoxButtonText?: string;
+  infoBoxListPosition?: number;
 };
-
-const SearchResultList = data.searchResult.map((item, i) => {
-  return (
-    <li className="content-list__item" key={i}>
-      <CardListItem {...item} tintIndex={i} />
-    </li>
-  );
-});
 
 export const SearchResultPage = ({
   title,
@@ -31,6 +28,10 @@ export const SearchResultPage = ({
   currentResults,
   totalResults,
   zeroResult,
+  infoBoxTitle,
+  infoBoxHtml,
+  infoBoxButtonText,
+  infoBoxListPosition = 5,
 }: SearchResultPageProps) => {
   return (
     <div className="content-list-page">
@@ -52,7 +53,32 @@ export const SearchResultPage = ({
           />
           <FacetLine items={data.facetLineItems} />
           <FacetLineSelected items={data.selectedTerms} />
-          <ul className="content-list">{SearchResultList}</ul>
+          <ul className="content-list">
+            {data.searchResult.map((item, i) => {
+              if (i === infoBoxListPosition) {
+                return (
+                  <>
+                    <li className="content-list__item">
+                      <CardListInfoBox
+                        title={infoBoxTitle}
+                        html={infoBoxHtml}
+                        buttonText={infoBoxButtonText}
+                      />
+                    </li>
+                    <li className="content-list__item" key={i}>
+                      <CardListItem {...item} tintIndex={i} />
+                    </li>
+                  </>
+                );
+              }
+
+              return (
+                <li className="content-list__item" key={i}>
+                  <CardListItem {...item} tintIndex={i} />
+                </li>
+              );
+            })}
+          </ul>
           <ResultPager
             currentResults={currentResults}
             totalResults={totalResults}
