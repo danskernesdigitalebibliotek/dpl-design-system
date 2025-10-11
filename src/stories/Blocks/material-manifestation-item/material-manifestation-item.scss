@@ -82,8 +82,6 @@
       justify-self: end;
     }
     .reserve-button {
-      max-width: 158px;
-
       @include media-query__small {
         margin-top: 0;
       }
