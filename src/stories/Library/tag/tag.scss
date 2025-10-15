@@ -4,10 +4,7 @@ a.tag {
 
 .tag {
   color: $color__global-black;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid $color__global-tertiary-1;
+  display: inline-block;
   padding: $s-sm $s-md;
   @include typography($typo__tags);
   text-decoration: none;
@@ -17,8 +14,7 @@ a.tag {
   }
 
   &.tag--small {
-    height: $s-xl;
-    padding: 0 $s-md;
+    height: $s-lg;
   }
 
   &.tag--large {

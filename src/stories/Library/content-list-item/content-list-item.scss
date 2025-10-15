@@ -4,25 +4,9 @@ $_content-list-item--image-width: 222px;
 $_content-list-item--max-width: 1126px;
 $_stacked-reduce-width: 20px;
 
-@mixin content-list-item-stacked-shadow-box {
-  position: relative;
-  &::before {
-    content: "";
-    background-color: $color__global-white;
-    position: absolute;
-    width: calc(100% - $_stacked-reduce-width);
-    height: 100%;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.1);
-  }
-}
-
-@mixin content-list-item-grid {
+.content-list-item-grid {
   @include show-svg-on-hover();
   @include layout-container($block-max-width__large);
-  text-decoration: none;
   display: grid;
   grid-template-columns: 1fr;
 
@@ -44,15 +28,10 @@ $_stacked-reduce-width: 20px;
 }
 
 .content-list-item {
-  @include content-list-item-grid;
+  text-decoration: none;
   padding: $s-lg;
   background-color: $color__global-white;
   margin: 0 auto;
-  grid-template-areas:
-    "image"
-    "content";
-  grid-template-rows: auto;
-  gap: $s-md;
 }
 
 .content-list-item,
@@ -67,54 +46,111 @@ $_stacked-reduce-width: 20px;
 }
 
 .content-list-item__image-container {
-  grid-area: image;
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
 }
 
 .content-list-item__content {
-  display: grid;
-  grid-template-areas:
-    "tag date date"
-    "title title title"
-    "description description description"
-    "location schedule schedule";
   @include typography($typo__small-caption);
+  display: flex;
+  flex-direction: column;
+  gap: $s-md;
+  overflow: hidden;
+  line-height: normal;
+  margin-top: $s-md;
+
+  @include media-query__small {
+    margin-top: 0;
+  }
 }
 
 .content-list-item__tag {
-  grid-area: tag;
-  width: max-content;
-  margin-bottom: $s-sm;
-}
-.content-list-item__pricing {
-  font-weight: $font__weight--semi-bold;
+  width: fit-content;
 }
 
-.content-list-item__date {
-  grid-area: date;
+.content-list-item__pricing {
+  @include typography($typo__h5);
   justify-self: end;
+  // align-self: flex-end;
 }
 
 .content-list-item__title {
-  grid-area: title;
   @include typography($typo__h4);
   @extend %text-truncate;
 }
 
 .content-list-item__description {
-  grid-area: description;
-  margin-bottom: $s-lg;
-  @include text-ellipsis-truncation(3);
+  @include text-ellipsis-truncation(2);
+  color: $color__text-secondary-gray;
+}
+
+.content-list-item__content__price {
+  @include typography($typo__h5);
+  white-space: nowrap;
+  align-content: center;
+  display: inline-block;
+  margin-left: auto;
+
+  @include media-query__small {
+    display: none;
+  }
+}
+
+.content-list-item__content-top-container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  gap: $s-md;
+}
+
+.content-list-item__content-top-container__inner {
+  display: flex;
+  flex-direction: column;
+  gap: $s-sm;
+  overflow: hidden;
+}
+
+.content-list-item__content-top-container__price {
+  @include typography($typo__h5);
+  white-space: nowrap;
+  align-content: center;
+  display: none;
+
+  @include media-query__small {
+    display: block;
+  }
 }
 
 .content-list-item__content-bottom-container {
-  grid-area: location;
-  display: flex;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: 1fr;
   flex-wrap: wrap;
+  gap: $s-sm;
+
+  @include media-query__small {
+    grid-template-columns: 40% 40% 20%;
+    gap: 0;
+  }
+}
+.content-list-item__content-bottom-container__item {
+  display: flex;
   gap: $s-xs;
+  margin-right: $s-sm;
+
+  & > svg {
+    align-self: first baseline;
+  }
+
+  &:last-child {
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    margin-right: 0;
+
+    @include media-query__small {
+      justify-self: end;
+    }
+  }
 }
 
 .content-list-item__location {
@@ -122,136 +158,34 @@ $_stacked-reduce-width: 20px;
 }
 
 .content-list-item__content-right-container {
-  grid-area: schedule;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  @include typography($typo__body-placeholder);
 }
 
 .content-list-item-stacked {
-  @include content-list-item-grid;
-  @include content-list-item-stacked-shadow-box;
-  padding-top: $s-sm;
-  padding-bottom: $s-sm;
-  grid-template-areas: "contentStacked";
-  align-items: center;
+  padding: $s-lg;
+  background-color: $color__global-white;
+  display: flex;
+  flex-direction: column;
+  gap: $s-md;
+  border-top: 1px solid $color__global-tertiary-1;
 }
 
 .content-list-item-stacked__content {
-  @include typography($typo__small-caption);
-  @include content-list-item-content-grid;
-  z-index: $z-10;
-  grid-area: contentStacked;
-  grid-template-areas: "date-status . timeStacked";
-}
-
-.content-list-item-stacked__date-status {
-  grid-area: date-status;
+  @include layout-container($block-max-width__large);
   display: grid;
-  grid-template-columns: 115px max-content 1fr;
-}
+  grid-template-columns: 1fr;
 
-.content-list-item-stacked__time {
-  grid-area: timeStacked;
-  justify-self: end;
-}
-
-.content-list-item-stacked > svg {
-  z-index: $z-10;
-  grid-area: arrowStacked;
-}
-
-@include media-query__small {
-  .content-list-item {
-    grid-template-areas: "image content";
+  @include media-query__small {
+    grid-template-columns: $_content-list-item--image-width 1fr;
+    gap: $s-lg;
   }
-
-  .content-list-item__content {
-    @include content-list-item-content-grid;
-    grid-area: content;
-    grid-template-areas:
-      "tag . schedule"
-      "date . schedule"
-      "title . schedule"
-      "description . schedule"
-      "location . schedule";
-    grid-template-rows: repeat(
-      $_desktop-content-rows,
-      minmax(
-        calc($_content-list-item--image-height / $_desktop-content-rows),
-        auto
-      )
-    );
-  }
-
-  .content-list-item__image-container {
-    @include media-container--small;
-
-    grid-area: image;
-    max-height: $_content-list-item--image-height;
-    min-height: $_content-list-item--image-height;
-  }
-
-  .content-list-item__tag {
-    margin-bottom: unset;
-    grid-area: tag;
-  }
-
-  .content-list-item__date {
-    justify-self: start;
-    align-self: center;
-  }
-
-  .content-list-item__title {
-    grid-area: title;
-    line-height: 100%;
-  }
-
-  .content-list-item__description {
-    margin-bottom: auto;
-    grid-area: description;
-    @include text-ellipsis-truncation(2);
-  }
-
-  .content-list-item__content-right-container {
-    grid-area: schedule;
-    grid-row: 3 / span 3;
-    justify-content: unset;
-  }
-
-  .content-list-item-stacked {
-    grid-template-areas: ". contentStacked";
-  }
-
-  .content-list-item-stacked__content {
-    grid-template-areas: "date-status . timeStacked";
-  }
-}
-
-@include media-query__medium {
-  .content-list-item {
-    grid-template-areas: "image content arrow";
-  }
-
-  .content-list-item__content-right-container {
-    align-items: flex-start;
-  }
-
-  .content-list-item > svg {
-    grid-area: arrow;
-  }
-
-  .content-list-item-stacked {
-    grid-template-areas: ". contentStacked arrowStacked";
-  }
-
-  .content-list-item-stacked__content {
-    grid-template-areas: "date-status . timeStacked";
-  }
-
-  .content-list-item-stacked__time {
-    justify-self: start;
+  @include media-query__medium {
+    grid-template-columns:
+      $_content-list-item--image-width 1fr
+      max-content;
+    gap: $s-2xl;
   }
 }

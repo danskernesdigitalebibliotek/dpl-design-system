@@ -6,6 +6,9 @@ import MediaContainer from "../media-container/MediaContainer";
 import ContentListItemStatus, {
   ContentListItemStatuses,
 } from "../content-list-item-status/ContentListItemStatus";
+import { ReactComponent as IconPin } from "../Icons/icon-pin/icon-pin.svg";
+import { ReactComponent as IconEvent } from "../Icons/icon-event/icon-event.svg";
+import { ReactComponent as IconTime } from "../Icons/icon-time/icon-time.svg";
 
 export type ContentListItemProps = {
   eventSeriesId?: string;
@@ -44,12 +47,12 @@ export const ContentListItem: React.FC<ContentListItemProps> = ({
     <a
       href={href}
       className={clsx(
-        "content-list-item arrow__hover--right-small",
+        "content-list-item-grid content-list-item arrow__hover--right-small",
         status && "content-list-item--status-parent",
       )}
     >
-      {status && <ContentListItemStatus status={status} />}
       <div className="content-list-item__image-container">
+        {status && <ContentListItemStatus status={status} />}
         <MediaContainer media={image} placeholderText={placeholderText} />
       </div>
       <div className="content-list-item__content">
@@ -58,21 +61,37 @@ export const ContentListItem: React.FC<ContentListItemProps> = ({
             {tagText}
           </Tag>
         )}
-        <div className="content-list-item__date">{date}</div>
-        <h2 className="content-list-item__title">{title}</h2>
-        <div className="content-list-item__description">{description}</div>
+
+        <div className="content-list-item__content-top-container">
+          <div className="content-list-item__content-top-container__inner">
+            <h2 className="content-list-item__title">{title}</h2>
+            <div className="content-list-item__description">{description}</div>
+          </div>
+          <div className="content-list-item__content-top-container__price">
+            {price}
+          </div>
+        </div>
+
         <div className="content-list-item__content-bottom-container">
-          <p className="content-list-item__location">{location}</p>
+          <div className="content-list-item__content-bottom-container__item">
+            <IconPin />
+            <p className="content-list-item__location">{location}</p>
+          </div>
+          <div className="content-list-item__content-bottom-container__item">
+            <IconEvent />
+            <p className="content-list-item__date">{date}</p>
+          </div>
+          <div className="content-list-item__content-bottom-container__item">
+            <IconTime />
+            <time
+              className="content-list-item__time"
+              dateTime={placeholderDateTime}
+            >
+              {time}
+            </time>
+          </div>
         </div>
-        <div className="content-list-item__content-right-container">
-          <time
-            className="content-list-item__time"
-            dateTime={placeholderDateTime}
-          >
-            {time}
-          </time>
-          <p className="content-list-item__pricing">{price}</p>
-        </div>
+        <div className="content-list-item__content__price">{price}</div>
       </div>
       <ArrowSmallRight />
     </a>
