@@ -6,7 +6,6 @@ $_stacked-reduce-width: 20px;
 
 .content-list-item-grid {
   @include show-svg-on-hover();
-  @include layout-container($block-max-width__large);
   display: grid;
   grid-template-columns: 1fr;
 
@@ -165,20 +164,19 @@ $_stacked-reduce-width: 20px;
 }
 
 .content-list-item-stacked {
-  padding: $s-lg;
-  background-color: $color__global-white;
+  @include show-svg-on-hover();
+  text-decoration: none;
   display: flex;
-  flex-direction: column;
   gap: $s-md;
   border-top: 1px solid $color__global-tertiary-1;
-}
-
-.content-list-item-stacked__content {
-  @include layout-container($block-max-width__large);
-  display: grid;
-  grid-template-columns: 1fr;
+  background-color: $color__global-white;
+  padding: $s-md $s-lg;
+  justify-content: space-between;
 
   @include media-query__small {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
     grid-template-columns: $_content-list-item--image-width 1fr;
     gap: $s-lg;
   }
@@ -187,5 +185,85 @@ $_stacked-reduce-width: 20px;
       $_content-list-item--image-width 1fr
       max-content;
     gap: $s-2xl;
+  }
+}
+
+.content-list-item-stacked__content {
+  @include typography($typo__small-caption);
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-wrap: wrap;
+  gap: $s-sm;
+
+  @include media-query__small {
+    grid-template-columns: 40% 40% 20%;
+    gap: 0;
+  }
+}
+
+.content-list-item-stacked__content__item {
+  display: flex;
+  gap: $s-xs;
+  margin-right: $s-sm;
+
+  & > svg {
+    align-self: first baseline;
+  }
+
+  &:last-child {
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    margin-right: 0;
+
+    @include media-query__small {
+      justify-self: end;
+    }
+  }
+}
+
+.content-list-item-stacked__status {
+  order: 1;
+
+  @include media-query__small {
+    order: 0;
+  }
+}
+
+.content-list-item-stacked__status--hidden {
+  display: none;
+
+  @include media-query__small {
+    display: block;
+  }
+}
+
+.status {
+  border: none;
+
+  &.status--cancelled,
+  &.status--sold-out {
+    background-color: $color__signal-alert;
+    color: $color__global-white;
+  }
+
+  &.status--occurred {
+    background-color: $color__global-black;
+    color: $color__global-white;
+  }
+}
+
+.content-list-item--status-parent {
+  position: relative;
+
+  .status {
+    z-index: $z-10;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include media-query__small {
+      left: 0;
+      right: auto;
+    }
   }
 }
