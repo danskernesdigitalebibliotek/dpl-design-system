@@ -175,7 +175,6 @@ $_stacked-reduce-width: 20px;
 
   @include media-query__small {
     display: grid;
-    grid-template-columns: 1fr;
     align-items: center;
     grid-template-columns: $_content-list-item--image-width 1fr;
     gap: $s-lg;
