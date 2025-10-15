@@ -12,15 +12,6 @@ a.tag {
   &.tag--fill {
     background-color: $color__global-secondary;
   }
-
-  &.tag--small {
-    height: $s-lg;
-  }
-
-  &.tag--large {
-    height: 40px;
-    padding: 0 $s-md;
-  }
 }
 
 .tag-icon {
