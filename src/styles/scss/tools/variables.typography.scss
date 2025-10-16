@@ -242,7 +242,19 @@ $typo__tags: (
     font-style: normal,
     font-weight: $font__weight--semi-bold,
     font-size: 10px,
-    line-height: 100%,
+    line-height: normal,
+    letter-spacing: 0.02em,
+    text-transform: uppercase,
+  ),
+);
+
+$typo__tags-large: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--semi-bold,
+    font-size: 12px,
+    line-height: 18px,
     letter-spacing: 0.02em,
     text-transform: uppercase,
   ),

@@ -37,10 +37,7 @@
   white-space: nowrap;
   max-width: 200px;
   text-overflow: ellipsis;
-
-  @include media-query__small() {
-    margin-top: $s-sm;
-  }
+  gap: $s-sm;
 
   .tag {
     color: $color__global-grey;

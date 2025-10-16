@@ -1,17 +1,22 @@
-a.tag {
-  @extend %text-inline-link;
-}
-
 .tag {
   color: $color__global-black;
   display: inline-flex;
   padding: $s-sm $s-md;
   @include typography($typo__tags);
   text-decoration: none;
+  align-items: center;
 
   &.tag--fill {
     background-color: $color__global-secondary;
   }
+}
+
+.tag--small {
+  height: 24px;
+}
+
+.tag--large {
+  @include typography($typo__tags-large);
 }
 
 .tag--outline {
