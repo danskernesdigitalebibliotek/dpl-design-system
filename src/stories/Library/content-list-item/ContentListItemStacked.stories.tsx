@@ -1,6 +1,7 @@
 import { StoryFn, Meta } from "@storybook/react-webpack5";
 
 import ContentListItemStacked from "./ContentListItemStacked";
+import { ContentListItemStatuses } from "../content-list-item-status/ContentListItemStatus";
 
 export default {
   title: "Library / Content List Item Stacked",
@@ -15,6 +16,8 @@ export default {
     title: "Hidden Title",
     date: "01 Feb 2023",
     time: "19:30 - 21:00",
+    location: "Kulturhuset",
+    status: undefined,
     href: "/",
   },
   parameters: {
@@ -31,3 +34,8 @@ const Template: StoryFn<typeof ContentListItemStacked> = (args) => (
 );
 
 export const Default = Template.bind({});
+
+export const WithStatus = Template.bind({});
+WithStatus.args = {
+  status: ContentListItemStatuses.OCCURRED,
+};
