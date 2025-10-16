@@ -82,6 +82,7 @@ $_stacked-reduce-width: 20px;
 .content-list-item__description {
   @include text-ellipsis-truncation(2);
   color: $color__text-secondary-gray;
+  max-width: 65ch;
 }
 
 .content-list-item__content__price {
