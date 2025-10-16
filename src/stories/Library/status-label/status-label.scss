@@ -1,17 +1,10 @@
 .status-label {
   @include typography($typo__label);
-
-  min-height: 28px;
-  padding: 0 $s-xs;
+  padding: $s-sm $s-md;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-weight: $font__weight--semi-bold;
-
-  @include media-query__small {
-    padding: 0 16px;
-  }
 
   &--danger {
     background-color: $color__signal-alert;

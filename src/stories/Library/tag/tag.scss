@@ -4,7 +4,7 @@ a.tag {
 
 .tag {
   color: $color__global-black;
-  display: inline-block;
+  display: inline-flex;
   padding: $s-sm $s-md;
   @include typography($typo__tags);
   text-decoration: none;
@@ -12,6 +12,10 @@ a.tag {
   &.tag--fill {
     background-color: $color__global-secondary;
   }
+}
+
+.tag--outline {
+  border: 1px solid $color__global-tertiary-1;
 }
 
 .tag-icon {

@@ -27,7 +27,7 @@ export const TagButton = ({
       aria-pressed={selected}
       onClick={() => isClickable && setSelected(!selected)}
       className={clsx(
-        "tag",
+        "tag tag--outline",
         (hasBackground || selected) && "tag--fill",
         usesCursor && "cursor-pointer",
         `tag--${size}`,

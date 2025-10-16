@@ -61,7 +61,6 @@ export const ContentListItem: React.FC<ContentListItemProps> = ({
             {tagText}
           </Tag>
         )}
-
         <div className="content-list-item__content-top-container">
           <div className="content-list-item__content-top-container__inner">
             <h2 className="content-list-item__title">{title}</h2>

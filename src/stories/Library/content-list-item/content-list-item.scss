@@ -195,6 +195,7 @@ $_stacked-reduce-width: 20px;
   gap: $s-sm;
 
   @include media-query__small {
+    align-items: center;
     grid-template-columns: 40% 40% 20%;
     gap: 0;
   }
