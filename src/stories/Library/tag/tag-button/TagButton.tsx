@@ -14,7 +14,7 @@ type TagProps = {
 export const TagButton = ({
   children,
   hasBackground = false,
-  size = "small",
+  size,
   usesCursor = true,
   showCloseIcon = false,
   isClickable = true,
@@ -30,7 +30,7 @@ export const TagButton = ({
         "tag tag--outline",
         (hasBackground || selected) && "tag--fill",
         usesCursor && "cursor-pointer",
-        `tag--${size}`,
+        size && `tag--${size}`,
         className,
       )}
     >
