@@ -3,9 +3,9 @@ import { ReactComponent as ArrowSmallRight } from "../Arrows/icon-arrow-ui/icon-
 import ContentListItemStatus, {
   ContentListItemStatuses,
 } from "../content-list-item-status/ContentListItemStatus";
-import { ReactComponent as IconPin } from "../Icons/icon-pin/icon-pin.svg";
-import { ReactComponent as IconEvent } from "../Icons/icon-event/icon-event.svg";
-import { ReactComponent as IconTime } from "../Icons/icon-time/icon-time.svg";
+import { ReactComponent as IconPin } from "../../../../public/icons/collection/icon-pin.svg";
+import { ReactComponent as IconEvent } from "../../../../public/icons/collection/icon-event.svg";
+import { ReactComponent as IconTime } from "../../../../public/icons/collection/icon-time.svg";
 
 interface ContentListItemStackedProps {
   title: string;
