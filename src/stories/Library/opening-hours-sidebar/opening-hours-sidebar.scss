@@ -1,16 +1,12 @@
-@mixin opening-hours-sidebar-padding {
-  padding: $s-lg $s-md;
-
-  @include media-query__small {
-    padding: $s-lg $s-xl;
-  }
+.opening-hours-sidebar {
+  margin: 0 -24px -24px -24px;
 }
 
 .opening-hours-sidebar__header {
-  @include opening-hours-sidebar-padding;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 $s-lg $s-lg;
 }
 
 .opening-hours-sidebar__texts {
@@ -28,8 +24,8 @@
 }
 
 .opening-hours-sidebar-details {
-  @include opening-hours-sidebar-padding;
   border-top: 1px solid $color__global-tertiary-1;
+  padding: $s-lg;
 }
 
 .opening-hours-sidebar-summary {
