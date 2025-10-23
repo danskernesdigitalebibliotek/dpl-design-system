@@ -1,0 +1,68 @@
+.dawa-input {
+  display: flex;
+  flex-direction: column;
+  gap: $s-sm;
+
+  label {
+    @include typography($typo__lib-label);
+    color: $color__text-secondary-gray;
+  }
+
+  input {
+    @include typography($typo__lib-input);
+    background-color: transparent;
+    border: 1px solid $color__global-tertiary-1;
+    height: 48px;
+    outline: none;
+    padding: $s-md;
+
+    &::placeholder {
+      color: $color__global-tertiary-2;
+    }
+
+    &:focus {
+      border-color: $color__global-black;
+      background-color: white;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+
+    @include media-query__small {
+      flex-direction: row;
+    }
+  }
+
+  &.dawa-input--invalid {
+    input {
+      background-color: $color__global-secondary;
+    }
+  }
+
+  &__description {
+    @include typography($typo__lib-label);
+    color: $color__text-secondary-gray;
+    margin-top: $s-md;
+  }
+
+  &__validation {
+    @include typography($typo__lib-label);
+    color: $color__signal-alert;
+    margin-top: $s-md;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+}

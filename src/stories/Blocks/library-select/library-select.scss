@@ -1,0 +1,31 @@
+.library-select-button {
+  border: 1px solid $color__global-tertiary-1;
+  padding: 16px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 92px;
+
+  &:focus,
+  &:hover {
+    outline: 2px solid $color__global-black;
+    outline-offset: -1px;
+    border-radius: 2px;
+  }
+}
+
+.library-select-button__icon {
+  rotate: -90deg;
+}
+
+.library-select-button__name {
+  @include typography($typo__body-medium);
+  color: $color__text-primary-black;
+}
+
+.library-select-button__address {
+  @include typography($typo__small-caption);
+  color: $color__text-secondary-gray;
+}
