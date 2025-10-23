@@ -20,9 +20,10 @@
     }
   }
 
-  &__flex {
+  &__double-row {
     display: flex;
     flex-direction: column;
+    gap: $s-lg;
 
     @include media-query__small {
       flex-direction: row;
@@ -37,11 +38,6 @@
 
   &.dpl-input--double {
     width: 100%;
-    margin-bottom: $s-xl;
-
-    @include media-query__small {
-      margin-bottom: 0px;
-    }
   }
 
   &__description {
