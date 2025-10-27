@@ -44,15 +44,8 @@
   outline: none;
 
   &:focus,
-  &:hover {
-    outline: 2px solid $color__global-tertiary-1;
-    outline-offset: -1px;
-    border-radius: 2px;
-  }
-
-  &--selected,
-  &--selected:focus,
-  &--selected:hover {
+  &:hover,
+  &--selected {
     outline: 2px solid $color__global-black;
     outline-offset: -1px;
     border-radius: 2px;
@@ -83,7 +76,7 @@
   align-items: center;
   gap: $s-sm;
 
-  svg {
+  img {
     height: 24px;
     width: 24px;
     min-height: 24px;
