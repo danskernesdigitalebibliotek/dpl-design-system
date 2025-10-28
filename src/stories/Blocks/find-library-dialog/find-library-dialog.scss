@@ -42,6 +42,8 @@
   justify-content: space-between;
   text-align: left;
   outline: none;
+  min-height: 92px;
+  align-items: center;
 
   &:focus,
   &:hover,
@@ -70,7 +72,7 @@
 
 .find-library-dialog__error-message {
   @include typography($typo__small-caption);
-  background-color: $color__error-red-background;
+  background-color: $color__global-secondary;
   padding: $s-md;
   display: flex;
   align-items: center;

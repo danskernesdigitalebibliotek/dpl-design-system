@@ -1,43 +1,30 @@
-.dawa-input {
+.dawa-input-wrapper {
   display: flex;
   flex-direction: column;
   gap: $s-sm;
+}
 
-  label {
-    @include typography($typo__lib-label);
-    color: $color__text-secondary-gray;
+.dawa-input-wrapper__label {
+  @include typography($typo__lib-label);
+  color: $color__text-secondary-gray;
+}
+
+.dawa-input {
+  @include typography($typo__lib-input);
+  background-color: transparent;
+  border: 1px solid $color__global-tertiary-1;
+  height: 48px;
+  outline: none;
+  padding: $s-md;
+  width: 100%;
+
+  &::placeholder {
+    color: $color__global-tertiary-2;
   }
 
-  input {
-    @include typography($typo__lib-input);
-    background-color: transparent;
-    border: 1px solid $color__global-tertiary-1;
-    height: 48px;
-    outline: none;
-    padding: $s-md;
-    width: 100%;
-
-    &::placeholder {
-      color: $color__global-tertiary-2;
-    }
-
-    &:focus {
-      border-color: $color__global-black;
-      background-color: white;
-    }
-  }
-
-  /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  /* Firefox */
-  input[type="number"] {
-    appearance: textfield;
-    -moz-appearance: textfield;
+  &:focus {
+    border-color: $color__global-black;
+    background-color: white;
   }
 }
 
@@ -52,6 +39,8 @@
 
 .dawa-input__address-suggestions {
   position: absolute;
+  border: 1px solid $color__global-black;
+  border-top: 0;
   top: 100%;
   left: 0;
   right: 0;
@@ -61,15 +50,19 @@
 
 .dawa-input__address-suggestions__item {
   @include typography($typo__lib-input);
-  background-color: white;
-  border: 1px solid $color__global-black;
+  background-color: #f5f4ef;
   border-top: none;
   padding: $s-md;
   width: 100%;
   text-align: left;
+  outline: none;
 
   &:hover {
-    background-color: $color__global-tertiary-1;
     cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color__global-secondary;
   }
 }
