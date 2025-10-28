@@ -35,3 +35,9 @@ $placeholder-paddings--small: (
   small: $s-lg,
   medium: $s-xl,
 );
+
+$page-left-padding-small: $s-md;
+$page-left-padding-large: $s-7xl;
+
+$hero-left-padding: $s-4xl $s-2xl $s-4xl $page-left-padding-large;
+$hero-right-padding: $s-4xl $s-2xl $s-4xl $s-2xl;
