@@ -11,7 +11,7 @@ const HeroVisual: React.FunctionComponent<HeroInnerProps> = ({
   placeholderText,
 }) => {
   return (
-    <div className="hero__visual">
+    <div className="hero__visual hero-grid__visual">
       <div className="hero__visual-inner">
         <MediaContainer placeholderText={placeholderText} media={image} />
       </div>
