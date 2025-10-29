@@ -6,13 +6,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: calc(550px + ($layout__edge-spacing * 2));
+  max-width: calc(555px + ($layout__edge-spacing * 2));
 }
 
 .create-patron-page__form {
   display: flex;
   flex-direction: column;
-  gap: $s-lg;
+  gap: $s-xl;
 }
 
 .create-patron-page__title {
