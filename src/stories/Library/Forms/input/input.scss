@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: column;
     gap: $s-lg;
+    width: 100%;
 
     @include media-query__small {
       flex-direction: row;
