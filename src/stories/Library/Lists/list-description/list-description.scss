@@ -7,18 +7,14 @@ dl.list-description {
   .list-description__item {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin-bottom: 12px;
-  }
-
-  .list-description__key,
-  .list-description__value {
-    padding: 2px $s-xs;
+    margin-bottom: 16px;
   }
 
   .list-description__value {
     color: $color__text-primary-black;
     display: grid;
     gap: $s-sm;
+
     @include media-query__small() {
       display: flex;
       flex-wrap: wrap;
@@ -36,13 +32,14 @@ dl.list-description {
 
   .link-tag {
     @include typography($typo__small-caption);
-
     color: $color__text-primary-black;
   }
 
   &.list-description--hero,
-  &.list-description--event {
+  &.list-description--event,
+  &.list-description--relations {
     height: max-content;
+    max-width: unset;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $s-md;
@@ -51,6 +48,7 @@ dl.list-description {
     line-height: 120%;
 
     .list-description__item {
+      gap: $s-sm;
       grid-template-columns: 1fr;
     }
 
@@ -59,6 +57,7 @@ dl.list-description {
       grid-gap: 8px;
       gap: 8px;
     }
+
     .link-tag {
       @include typography($typo__body-placeholder);
       line-height: 120%;
@@ -72,5 +71,34 @@ dl.list-description {
         grid-template-columns: 1fr 2fr;
       }
     }
+  }
+
+  &.list-description--event,
+  &.list-description--relations {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  &.list-description--relations {
+    padding: $s-lg;
+    max-width: 420px;
+
+    .list-description__item {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &.list-description--event {
+    .list-description__item {
+      grid-template-columns: 25px 1fr;
+    }
+  }
+
+  // Reduce margin-bottom if the next item’s key contains a visually hidden
+  // element (e.g., hidden address label)
+  .list-description__item:has(
+      + .list-description__item .list-description__key .hide-visually
+    ) {
+    margin-bottom: 8px;
   }
 }

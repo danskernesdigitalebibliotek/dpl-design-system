@@ -1,11 +1,15 @@
 .event-description {
-  @include layout-container;
-  @include block-spacing();
-  @include media-query__small {
-    @include layout-container($block-max-width__medium);
+  padding: $s-lg $page-left-spacing-small;
+
+  @include media-query__medium {
+    padding: $hero-left-padding;
     display: grid;
     column-gap: $s-xl;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 320px;
+  }
+
+  @include media-query__medium {
+    grid-template-columns: 1fr 460px;
   }
 }
 
@@ -19,15 +23,38 @@
   }
 }
 
-.event-description__description {
-  @include typography($typo__subtitle);
-  margin-bottom: $s-md;
+.event-description__info {
+  display: grid;
+  gap: $s-2xl;
 }
 
-.event-description__links {
+.event-description__description {
+  @include typography($typo__subtitle);
+  max-width: $description-max-width;
   margin-bottom: $s-2xl;
 
   @include media-query__small {
+    margin-bottom: $s-3xl;
+  }
+}
+
+.event-description__links {
+  margin-bottom: $s-xl;
+
+  @include media-query__medium {
     margin-bottom: 0;
+  }
+}
+
+.event-description__card {
+  background-color: $color__global-secondary;
+  padding: $s-lg;
+}
+
+.event-description__price {
+  @include typography($typo__h4);
+
+  .ticket-category {
+    text-align: end;
   }
 }

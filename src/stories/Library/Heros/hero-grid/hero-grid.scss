@@ -6,8 +6,10 @@
   display: grid;
   grid-template-areas: "content" "visual";
   gap: $s-lg;
+  padding: $s-lg $page-left-spacing-small;
 
   @include media-query__medium {
+    padding: 0;
     min-height: 600px;
     grid-template-areas: "visual content";
     grid-template-columns: repeat(2, 1fr);
@@ -17,17 +19,15 @@
 
 .hero-grid__visual {
   grid-area: visual;
-  padding: $page-left-padding-small;
-  border-right: 1px solid $color__global-tertiary-1;
 
   @include media-query__medium {
     padding: $hero-left-padding;
+    border-right: 1px solid $color__global-tertiary-1;
   }
 }
 
 .hero-grid__content {
   grid-area: content;
-  padding: $page-left-padding-small;
 
   @include media-query__medium {
     padding: $hero-right-padding;
