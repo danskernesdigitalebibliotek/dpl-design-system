@@ -18,14 +18,15 @@ const HeroLink: React.FunctionComponent<HeroProps> = ({
   descriptionItems,
   cta,
   tag,
+  price,
 }) => {
-  const classes = clsx("hero", {
+  const classes = clsx("hero hero-grid", {
     "hero--has-no-media": !image,
   });
 
   return (
     <section className={classes}>
-      <div className="hero__content">
+      <div className="hero__content hero-grid__content">
         <HeroInner
           contentType={contentType}
           date={date}
@@ -34,6 +35,7 @@ const HeroLink: React.FunctionComponent<HeroProps> = ({
           descriptionItems={descriptionItems}
           cta={cta}
           tag={tag}
+          price={price}
         />
       </div>
 

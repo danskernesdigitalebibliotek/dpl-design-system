@@ -7,6 +7,8 @@ export type ListData = {
     value: string[];
     type: "standard" | "link" | "list";
     layout?: "default" | "column";
+    icon?: string;
+    hideKey?: boolean;
   };
 };
 
@@ -17,10 +19,25 @@ const ListDescription: React.FC<{ data: ListData; className?: string }> = ({
   return (
     <dl className={`list-description ${className ?? ""}`}>
       {Object.keys(data).map((key, index) => {
-        const { value, type, layout = "default" } = data[key as keyof ListData];
+        const {
+          value,
+          type,
+          layout = "default",
+          icon,
+          hideKey = false,
+        } = data[key as keyof ListData];
+        let keyContent;
+        if (hideKey) {
+          keyContent = <span className="hide-visually">{key}</span>;
+        } else if (icon) {
+          keyContent = <img src={icon} alt={key} />;
+        } else {
+          keyContent = <>{key}:</>;
+        }
+
         return (
           <div className="list-description__item" key={generateId(index)}>
-            <dt className="list-description__key">{key}:</dt>
+            <dt className="list-description__key">{keyContent}</dt>
             <dd
               className={clsx(
                 "list-description__value",

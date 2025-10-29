@@ -1,5 +1,6 @@
 .material-description {
-  padding: $s-md;
+  padding: $page-left-spacing-small;
+  padding-left: $page-left-spacing-small;
   padding-top: $s-3xl;
   padding-bottom: $s-2xl;
 
@@ -8,13 +9,13 @@
   }
 
   &__content {
-    max-width: 750px;
+    max-width: $description-max-width;
     line-height: 160%;
   }
 
   @include media-query__medium {
     padding-top: $s-4xl;
-    padding-left: $s-7xl;
+    padding-left: $page-left-spacing-large;
     padding-bottom: $s-5xl;
   }
 

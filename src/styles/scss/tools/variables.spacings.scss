@@ -36,8 +36,13 @@ $placeholder-paddings--small: (
   medium: $s-xl,
 );
 
-$page-left-padding-small: $s-md;
-$page-left-padding-large: $s-7xl;
+$page-left-spacing-small: $s-md;
+$page-left-spacing-large: $s-7xl;
 
-$hero-left-padding: $s-4xl $s-2xl $s-4xl $page-left-padding-large;
-$hero-right-padding: $s-4xl $s-2xl $s-4xl $s-2xl;
+$hero-side-padding-small: $s-2xl;
+$hero-left-padding: $s-4xl $hero-side-padding-small $s-4xl
+  $page-left-spacing-large;
+$hero-right-padding: $s-4xl $hero-side-padding-small $s-4xl
+  $hero-side-padding-small;
+
+$description-max-width: 750px;
