@@ -1,3 +1,4 @@
+import { ContentListItemStatuses } from "../content-list-item-status/ContentListItemStatus";
 import { ContentListItemProps } from "../content-list-item/ContentListItem";
 import ImageCredited from "../image-credited/ImageCredited";
 
@@ -10,11 +11,12 @@ const contentListData: ContentListItemProps[] = [
     tagText: "Foredrag",
     title: "Kunst og kultur i middelalderen",
     description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
-    location: "Kulturhuset",
-    price: "50 - 100 KR",
+    location: "Vesterbro Bibliotek og Kulturhus",
+    price: "50 - 100 kr",
     href: "/",
     date: "2023-01-10",
     time: "15:00 - 17:00",
+    status: ContentListItemStatuses.OCCURRED,
   },
   {
     eventSeriesId: "b",
@@ -43,6 +45,7 @@ const contentListData: ContentListItemProps[] = [
     href: "/",
     date: "2023-01-13",
     time: "18:00 - 20:00",
+    status: ContentListItemStatuses.CANCELLED,
   },
   {
     eventSeriesId: "b",
@@ -71,6 +74,7 @@ const contentListData: ContentListItemProps[] = [
     href: "/",
     date: "2023-01-15",
     time: "18:00 - 20:00",
+    status: ContentListItemStatuses.CANCELLED,
   },
   {
     eventSeriesId: "a",
@@ -79,10 +83,11 @@ const contentListData: ContentListItemProps[] = [
     title: "Kunst og kultur i middelalderen",
     description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
     location: "Kulturhuset",
-    price: "50 - 100 KR",
+    price: "50 - 100 kr",
     href: "/",
     date: "2023-01-20",
     time: "15:00 - 17:00",
+    status: ContentListItemStatuses.SOLD_OUT,
   },
   {
     eventSeriesId: "a",
@@ -93,7 +98,7 @@ const contentListData: ContentListItemProps[] = [
     title: "Kunst og kultur i middelalderen",
     description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
     location: "Kulturhuset",
-    price: "50 - 100 KR",
+    price: "50 - 100 kr",
     href: "/",
     date: "2023-01-21",
     time: "15:00 - 17:00",
@@ -105,7 +110,7 @@ const contentListData: ContentListItemProps[] = [
     title: "Kunst og kultur i middelalderen",
     description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
     location: "Kulturhuset",
-    price: "50 - 100 KR",
+    price: "50 - 100 kr",
     href: "/",
     date: "2023-01-25",
     time: "15:00 - 17:00",
@@ -121,6 +126,7 @@ const contentListData: ContentListItemProps[] = [
     href: "/",
     date: "2023-01-30",
     time: "18:00 - 20:00",
+    status: ContentListItemStatuses.NOT_FOR_SALE,
   },
 ]
   .sort((a, b) => {

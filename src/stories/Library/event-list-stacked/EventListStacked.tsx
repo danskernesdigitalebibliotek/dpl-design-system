@@ -18,6 +18,8 @@ const EventListStacked: React.FC<PromoteEventsListProps> = ({ title }) => {
           href={event.href}
           time={event.time}
           date={event.date}
+          location={event.location}
+          status={event.status}
         />
       ))}
     </section>
