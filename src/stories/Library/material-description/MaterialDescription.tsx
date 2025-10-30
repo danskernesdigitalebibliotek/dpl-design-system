@@ -68,7 +68,7 @@ const MaterialDescription: React.FC<MaterialDescriptionProps> = ({
   return (
     <section className="material-description">
       <h2 className="text-header-h4 pb-16">Beskrivelse</h2>
-      <p className="text-body-large material-description__content">
+      <p className="text-body-large material-description__abstract">
         {description}
       </p>
       <div className="material-description__links mt-32">
