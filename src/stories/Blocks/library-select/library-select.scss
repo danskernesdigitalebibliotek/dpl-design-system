@@ -1,0 +1,58 @@
+.library-select-button-wrapper {
+  @include typography($typo__body-medium);
+  display: flex;
+  flex-direction: column;
+  gap: $s-sm;
+
+  label {
+    @include typography($typo__body-medium);
+    color: $color__text-secondary-gray;
+  }
+}
+
+.library-select-button-wrapper__description {
+  color: $color__text-secondary-gray;
+  @include typography($typo__body-small);
+}
+
+.library-select-button__hidden-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.library-select-button {
+  border: 1px solid $color__global-tertiary-1;
+  padding: 16px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 92px;
+  position: relative;
+  transition: outline-color 0.3s ease-in-out;
+
+  &:focus,
+  &:hover {
+    outline: 1px solid $color__global-black;
+    outline-offset: -1px;
+    border-radius: 2px;
+  }
+}
+
+.library-select-button__icon {
+  rotate: -90deg;
+}
+
+.library-select-button__name {
+  @include typography($typo__body-medium);
+  color: $color__text-primary-black;
+}
+
+.library-select-button__address {
+  @include typography($typo__small-caption);
+  color: $color__text-secondary-gray;
+}
