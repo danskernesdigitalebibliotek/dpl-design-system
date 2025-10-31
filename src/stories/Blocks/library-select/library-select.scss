@@ -33,10 +33,11 @@
   align-items: center;
   min-height: 92px;
   position: relative;
+  transition: outline-color 0.3s ease-in-out;
 
   &:focus,
   &:hover {
-    outline: 2px solid $color__global-black;
+    outline: 1px solid $color__global-black;
     outline-offset: -1px;
     border-radius: 2px;
   }

@@ -45,9 +45,14 @@
   min-height: 92px;
 
   &:focus,
-  &:hover,
+  &:hover {
+    outline: 1px solid $color__global-black;
+    outline-offset: -1px;
+    border-radius: 2px;
+  }
+
   &--selected {
-    outline: 2px solid $color__global-black;
+    border: 2px solid $color__global-black;
     outline-offset: -1px;
     border-radius: 2px;
   }
