@@ -39,7 +39,7 @@ export default {
         Dato: {
           value: ["04 oktober 2028"],
           type: "standard",
-          icon: "icons/collection/icon-event.svg",
+          icon: "icons/collection/Calendar.svg",
         },
         Tid: {
           value: ["08:00 - 08:15"],
