@@ -46,6 +46,10 @@
   right: 0;
   z-index: 10;
   width: 100%;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .dawa-input__address-suggestions__item {
@@ -62,7 +66,8 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &--highlighted {
     background-color: $color__global-secondary;
   }
 }
