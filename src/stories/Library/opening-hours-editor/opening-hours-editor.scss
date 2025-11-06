@@ -103,6 +103,25 @@
   height: 2rem;
 }
 
+.opening-hours-editor__loading {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 10;
+
+  > img {
+    display: block;
+    width: 64px;
+    height: 64px;
+  }
+}
+
 // Override Drupal's default margin for tables inside .fc to eliminate top and bottom spacing
 // Fixes the issue where the selected hour starts half an hour later than the actual selection.
 .fc table {
