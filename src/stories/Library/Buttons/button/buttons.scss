@@ -114,4 +114,9 @@ $color__btn-filled-hover: $color__text-secondary-gray;
   span {
     @include typography($typo__tags);
   }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
 }
