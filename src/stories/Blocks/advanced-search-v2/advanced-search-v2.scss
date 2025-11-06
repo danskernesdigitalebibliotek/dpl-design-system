@@ -4,6 +4,38 @@ $adv2-border: $adv2-border-size solid $color__global-tertiary-1;
 $default-padding: $s-sm $s-md;
 $default-height: $s-2xl;
 
+// Shared styles
+////////////////////////////////
+
+.advanced-search-combobox-input {
+  width: 100%;
+  border: $adv2-border;
+  padding: $default-padding;
+  background-color: white;
+}
+
+.advanced-search-combobox-option {
+  padding: $default-padding;
+  cursor: pointer;
+
+  &.is-focus {
+    background-color: $color__global-secondary;
+  }
+
+  &.is-selected {
+    font-weight: 600;
+  }
+}
+
+.advanced-search-dropdown {
+  position: absolute;
+  z-index: 100;
+  background-color: $color__global-primary;
+  border: $adv2-border;
+}
+
+// advanced-search-suggest
+////////////////////////////////
 .advanced-search-suggest {
   display: flex;
   gap: $s-sm;
@@ -14,23 +46,17 @@ $default-height: $s-2xl;
   width: 100%;
 }
 
-.advanced-search-suggest__combobox-input {
-  width: 100%;
-  height: 100%;
-  border: $adv2-border;
-  padding: $default-padding;
-  background-color: transparent;
+.advanced-search-select-search__combobox-input {
+  background-color: $color__global-primary;
 }
 
-.advanced-search-suggest__combobox-dropdown {
-  position: absolute;
-  z-index: 100;
+.advanced-search-suggest__combobox-options {
   //   --input-width comes from headless ui combobox
   width: var(--input-width);
-  background-color: white;
 }
 
-//  NEW NEW NEW
+//  advanced-search-select-search
+////////////////////////////////
 .advanced-search-select-search {
   height: $default-height;
 }
@@ -39,32 +65,25 @@ $default-height: $s-2xl;
   height: 100%;
 }
 
-.advanced-search-select-search__dropdown {
-  position: absolute;
-  z-index: 100;
+.advanced-search-select-search__popover-panel {
   //   --button-width comes from headless ui combobox
   width: var(--button-width);
-  background-color: white;
   max-height: 300px !important;
   overflow-y: auto !important;
 }
 
-.advanced-search-select-search__dropdown-input {
-  width: 100%;
+.advanced-search-select-search__combobox-options {
   border: $adv2-border;
-  padding: $default-padding;
 }
 
-// Shared styles
+// advanced-search-facets
+////////////////////////////////
+.advanced-search-facets {
+  border: $adv2-border;
+}
 
-.advanced-search-combobox-option {
-  cursor: pointer;
-
-  &.is-focus {
-    background-color: $color__global-secondary;
-  }
-
-  &.is-selected {
-    font-weight: 600;
-  }
+.advanced-search-facets__combobox-options {
+  background-color: white;
+  height: 300px;
+  overflow-y: auto;
 }
