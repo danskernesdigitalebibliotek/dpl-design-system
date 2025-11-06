@@ -39,6 +39,9 @@
   white-space: nowrap;
   text-transform: none;
 
+  display: grid;
+  place-content: center;
+
   // Chromeium based browsers will trigger focus when opening the dropdown
   @extend %default-focus-visible;
 
@@ -62,10 +65,8 @@
   top: 0;
   height: $form_input_height;
   width: $form_input_height;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  place-content: center;
   border-left: 1px solid;
   border-color: inherit;
 
