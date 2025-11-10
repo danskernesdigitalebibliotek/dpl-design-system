@@ -65,10 +65,7 @@ $typo__h4: (
     font-style: normal,
     font-weight: $font__weight--normal,
     font-size: 18px,
-    line-height: 24px,
-  ),
-  small: (
-    line-height: 120%,
+    line-height: normal,
   ),
   medium: (
     font-size: 24px,
@@ -244,16 +241,22 @@ $typo__tags: (
     font-family: $font__body,
     font-style: normal,
     font-weight: $font__weight--semi-bold,
-    font-size: 12px,
-    line-height: 120%,
+    font-size: 10px,
+    line-height: normal,
     letter-spacing: 0.02em,
     text-transform: uppercase,
   ),
-  small: (
-    line-height: 120%,
-  ),
-  x-large: (
-    font-size: 14px,
+);
+
+$typo__tags-large: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: $font__weight--semi-bold,
+    font-size: 12px,
+    line-height: 18px,
+    letter-spacing: 0.02em,
+    text-transform: uppercase,
   ),
 );
 
@@ -266,12 +269,6 @@ $typo__small-caption: (
     font-size: 12px,
     line-height: 16px,
   ),
-  small: (
-    line-height: 160%,
-  ),
-  medium: (
-    line-height: 120%,
-  ),
 );
 
 // "Label"
@@ -281,7 +278,7 @@ $typo__label: (
     font-style: normal,
     font-weight: $font__weight--normal,
     font-size: 10px,
-    line-height: 18px,
+    line-height: normal,
     letter-spacing: 0.02em,
   ),
 );
