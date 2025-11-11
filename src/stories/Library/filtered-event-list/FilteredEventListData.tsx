@@ -10,7 +10,7 @@ const FilteredListData: ContentListItemProps[] = [
     title: "Kunst og kultur i middelalderen",
     description: "En dybdegåendenalysef kunst og kultur i middelalderen.",
     location: "Kulturhuset",
-    price: "50 - 100 KR",
+    price: "50 - 100 kr",
     href: "/",
     date: "2023-01-10",
     time: "15:00 - 17:00",

@@ -22,18 +22,22 @@
   }
 }
 
+//  Todo should be merged with .content-list-page__filters
+.facet-line-selected-terms {
+  @include layout-container($block-max-width__large);
+  margin-top: $s-md;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: $s-sm;
+}
+
 .facet-line-selected-terms__item {
   display: inline-block;
-  margin-right: $s-sm;
-  margin-top: 0px;
-  margin-bottom: $s-sm;
   white-space: nowrap;
   max-width: 200px;
   text-overflow: ellipsis;
-
-  @include media-query__small() {
-    margin-top: $s-sm;
-  }
+  gap: $s-sm;
 
   .tag {
     color: $color__global-grey;
@@ -59,23 +63,22 @@
 
 .facet-line-more-filters {
   display: flex;
-  border: none;
-  margin-right: 0px;
   margin-left: auto;
 }
+
+.facet-line-more-filters button {
+  display: flex;
+  align-items: center;
+  gap: $s-sm;
+  cursor: pointer;
+  color: $color__global-primary;
+  @include typography($typo__label);
+}
+
 .facet-line .facet-line__item .tag {
   display: inline-block;
   max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-//  Todo should be merged with .content-list-page__filters
-.facet-line-selected-terms {
-  @include layout-container($block-max-width__large);
-  margin-top: $s-md;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }

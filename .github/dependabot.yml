@@ -46,3 +46,7 @@ updates:
         versions: [">=18"]
       - dependency-name: "stylelint-config-recommended-scss"
         versions: [">=16"]
+      - dependency-name: "storybook"
+        versions: [">=10"]
+      - dependency-name: "@storybook/*"
+        versions: [">=10"]
