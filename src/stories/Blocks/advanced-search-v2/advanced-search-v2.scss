@@ -15,7 +15,41 @@ $default-height: $s-2xl;
 ////////////////////////////////
 .advanced-search-v2__form {
   display: grid;
-  gap: 1rem;
+  gap: $s-2xl;
+}
+
+.advanced-search-v2__suggests {
+  display: flex;
+  flex-direction: column;
+  gap: $s-md;
+}
+
+.advanced-search-v2__add-suggest {
+  display: inline-flex;
+  align-items: center;
+  gap: $s-sm;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: $color__global-black;
+  font-family: $font__body;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.24px;
+  cursor: pointer;
+  align-self: flex-start;
+
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 // advanced-search-v2 buttons
@@ -96,15 +130,81 @@ $default-height: $s-2xl;
   display: flex;
   gap: $s-sm;
   height: $default-height;
+  align-items: center;
 }
 
 .advanced-search-suggest__combobox-wrapper {
-  width: 100%;
+  flex: 1;
 }
 
 .advanced-search-suggest__combobox-options {
   //   --input-width comes from headless ui combobox
   width: var(--input-width);
+}
+
+.advanced-search-suggest__remove-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.advanced-search-suggest__operators {
+  display: flex;
+  gap: $s-sm;
+  align-items: center;
+}
+
+.advanced-search-suggest__operator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $s-sm;
+  height: 24px;
+  border: none;
+  border-radius: 24px;
+  background-color: $color__global-secondary;
+  color: $color__global-tertiary-2;
+  font-family: $font__body;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.24px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+
+  &:hover {
+    background-color: darken($color__global-secondary, 5%);
+  }
+
+  &--active {
+    background-color: $color__global-black;
+    color: $color__global-white;
+    border: 1px solid $color__global-black;
+
+    &:hover {
+      background-color: lighten($color__global-black, 10%);
+    }
+  }
 }
 
 //  advanced-search-select-search
