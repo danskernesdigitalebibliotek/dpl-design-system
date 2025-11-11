@@ -69,6 +69,25 @@ $default-height: $s-2xl;
 ////////////////////////////////
 .advanced-search-v2__multiselect-button {
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: $s-sm;
+}
+
+.advanced-search-v2__count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  padding: 0 4px;
+  background-color: $color__global-black;
+  color: $color__global-white;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 400;
 }
 
 // advanced-search-suggest
@@ -90,6 +109,20 @@ $default-height: $s-2xl;
 
 //  advanced-search-select-search
 ////////////////////////////////
+.advanced-search-select-search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $s-xs;
+}
+
+.advanced-search-select-search__label {
+  font-family: $font__body;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  color: $color__global-black;
+}
+
 .advanced-search-select-search {
   height: $default-height;
 }
