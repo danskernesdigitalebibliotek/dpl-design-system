@@ -1,0 +1,34 @@
+// ComboBox shared styles
+// Variables are defined in advanced-search-v2.scss
+
+.advanced-search-combobox-input {
+  width: 100%;
+  border: $adv2-border;
+  padding: $default-padding;
+  background-color: white;
+}
+
+// Override for suggest input
+.advanced-search-select-search__combobox-input {
+  background-color: $color__global-primary;
+}
+
+.advanced-search-combobox-option {
+  padding: $default-padding;
+  cursor: pointer;
+
+  &.is-focus {
+    background-color: $color__global-secondary;
+  }
+
+  &.is-selected {
+    font-weight: 600;
+  }
+}
+
+.advanced-search-dropdown {
+  position: absolute;
+  z-index: 100;
+  background-color: $color__global-primary;
+  border: $adv2-border;
+}
