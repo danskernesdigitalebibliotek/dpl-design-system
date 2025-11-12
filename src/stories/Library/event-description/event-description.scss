@@ -1,8 +1,10 @@
 .event-description {
-  padding: $s-lg $page-left-spacing-small;
+  @include layout-container($layout__max-width--large);
+  padding: $hero-padding-small;
+  padding-top: $s-2xl;
 
   @include media-query__medium {
-    padding: $hero-left-padding;
+    padding: $hero-padding-large;
     display: grid;
     column-gap: $s-xl;
     grid-template-columns: 1fr 320px;

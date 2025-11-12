@@ -1,8 +1,6 @@
 .material-description {
-  padding: $page-left-spacing-small;
-  padding-left: $page-left-spacing-small;
-  padding-top: $s-3xl;
-  padding-bottom: $s-2xl;
+  @include layout-container($layout__max-width--large);
+  padding: $hero-padding-small;
 
   > h2.text-header-h4 {
     font-size: 24px;
@@ -14,9 +12,7 @@
   }
 
   @include media-query__medium {
-    padding-top: $s-4xl;
-    padding-left: $page-left-spacing-large;
-    padding-bottom: $s-5xl;
+    padding: $hero-padding-large;
   }
 
   // spacing between the description links

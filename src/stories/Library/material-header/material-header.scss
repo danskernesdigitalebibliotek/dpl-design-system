@@ -1,6 +1,4 @@
 .material-header {
-  border-bottom: 1px solid $color__global-tertiary-1;
-
   @include media-query__medium {
     min-height: 800px;
   }

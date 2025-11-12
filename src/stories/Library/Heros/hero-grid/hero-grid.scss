@@ -3,10 +3,12 @@
 }
 
 .hero-grid {
+  @include layout-container($layout__max-width--large);
+  padding-top: $s-lg;
+  padding-bottom: $s-lg;
   display: grid;
   grid-template-areas: "content" "visual";
   gap: $s-lg;
-  padding: $s-lg $page-left-spacing-small;
 
   @include media-query__medium {
     padding: 0;
@@ -21,7 +23,7 @@
   grid-area: visual;
 
   @include media-query__medium {
-    padding: $hero-left-padding;
+    padding: $hero-padding-large;
     border-right: 1px solid $color__global-tertiary-1;
   }
 }
@@ -30,7 +32,7 @@
   grid-area: content;
 
   @include media-query__medium {
-    padding: $hero-right-padding;
+    padding: $hero-padding-large;
   }
 }
 
@@ -38,17 +40,19 @@
 .hero-grid--material {
   grid-template-areas: "visual" "content";
 
+  .hero-grid__content {
+    padding-bottom: $s-3xl;
+  }
+
   @include media-query__medium {
     grid-template-areas: "content visual";
 
     .hero-grid__content {
       border-right: 1px solid $color__global-tertiary-1;
-      padding: $hero-left-padding;
     }
 
     .hero-grid__visual {
       border-right: none;
-      padding: $hero-right-padding;
     }
   }
 }
