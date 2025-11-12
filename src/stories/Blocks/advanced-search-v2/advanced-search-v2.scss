@@ -253,3 +253,21 @@ $default-height: $s-2xl;
   height: 300px;
   overflow-y: auto;
 }
+
+.advanced-search-facet__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: $s-sm;
+}
+
+.advanced-search-facet__count {
+  font-family: $font__body;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color__global-black;
+  text-align: right;
+  flex-shrink: 0;
+}
