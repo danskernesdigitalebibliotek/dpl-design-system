@@ -12,7 +12,6 @@
 
   @include media-query__small {
     padding: 0;
-    min-height: 600px;
     grid-template-areas: "visual content";
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
