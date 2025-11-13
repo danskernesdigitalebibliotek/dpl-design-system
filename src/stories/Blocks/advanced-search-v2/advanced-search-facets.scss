@@ -1,0 +1,26 @@
+.advanced-search-facets {
+  border: $adv2-border;
+}
+
+.advanced-search-facets__combobox-options {
+  background-color: $color__global-white;
+  height: 300px; // Fixed height for scrollable facet list
+  overflow-y: auto;
+}
+
+.advanced-search-facet__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: $s-sm;
+}
+
+.advanced-search-facet__count {
+  @include typography($typo__body-small, (excludes: ('line-height')));
+
+  line-height: $s-lg;
+  color: $color__global-black;
+  text-align: right;
+  flex-shrink: 0;
+}

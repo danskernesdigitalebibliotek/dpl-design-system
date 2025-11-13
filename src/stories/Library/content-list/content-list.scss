@@ -12,3 +12,8 @@
 .content-list__item--stacked {
   margin-top: -$s-md;
 }
+
+// Modifier to remove top margin (e.g., when used in grid layouts)
+.content-list--no-top-margin {
+  margin-top: 0;
+}
