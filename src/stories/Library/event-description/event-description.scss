@@ -3,14 +3,14 @@
   padding: $hero-padding-small;
   padding-top: $s-2xl;
 
-  @include media-query__medium {
+  @include media-query__small {
     padding: $hero-padding-large;
     display: grid;
     column-gap: $s-xl;
     grid-template-columns: 1fr 320px;
   }
 
-  @include media-query__medium {
+  @include media-query__small {
     grid-template-columns: 1fr 460px;
   }
 }
@@ -43,7 +43,7 @@
 .event-description__links {
   margin-bottom: $s-xl;
 
-  @include media-query__medium {
+  @include media-query__small {
     margin-bottom: 0;
   }
 }

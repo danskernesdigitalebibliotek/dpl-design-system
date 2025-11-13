@@ -10,7 +10,7 @@
   grid-template-areas: "content" "visual";
   gap: $s-lg;
 
-  @include media-query__medium {
+  @include media-query__small {
     padding: 0;
     min-height: 600px;
     grid-template-areas: "visual content";
@@ -22,7 +22,7 @@
 .hero-grid__visual {
   grid-area: visual;
 
-  @include media-query__medium {
+  @include media-query__small {
     padding: $hero-padding-large;
     border-right: 1px solid $color__global-tertiary-1;
   }
@@ -31,7 +31,7 @@
 .hero-grid__content {
   grid-area: content;
 
-  @include media-query__medium {
+  @include media-query__small {
     padding: $hero-padding-large;
   }
 }
@@ -44,7 +44,7 @@
     padding-bottom: $s-3xl;
   }
 
-  @include media-query__medium {
+  @include media-query__small {
     grid-template-areas: "content visual";
 
     .hero-grid__content {

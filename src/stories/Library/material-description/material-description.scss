@@ -11,7 +11,7 @@
     line-height: 160%;
   }
 
-  @include media-query__medium {
+  @include media-query__small {
     padding: $hero-padding-large;
   }
 
