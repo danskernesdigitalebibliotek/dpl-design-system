@@ -56,25 +56,19 @@ $default-height: $s-2xl;
 ////////////////////////////////
 .advanced-search-v2__action-buttons {
   display: flex;
-  gap: 1rem;
+  gap: $s-3xl;
+  align-items: center;
 }
 
-.advanced-search-v2__button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
+.advanced-search-v2__reset-button.btn-outline {
+  border-color: transparent !important;
+  background: transparent !important;
 
-  &--primary {
-    background-color: #0066cc;
-    color: white;
-    font-weight: bold;
-  }
-
-  &--secondary {
-    background-color: #dc3545;
-    color: white;
+  &:not([disabled]):hover,
+  &:not([disabled]):focus-visible {
+    background: transparent !important;
+    border-color: $color__global-black !important;
+    color: $color__global-black !important;
   }
 }
 
@@ -97,6 +91,7 @@ $default-height: $s-2xl;
 ////////////////////////////////
 .advanced-search-v2__search-index-select {
   max-width: 260px;
+  height: 100%;
 }
 
 // advanced-search-v2 multiselect
@@ -135,6 +130,7 @@ $default-height: $s-2xl;
 
 .advanced-search-suggest__combobox-wrapper {
   flex: 1;
+  height: 100%;
 }
 
 .advanced-search-suggest__combobox-options {
@@ -177,10 +173,10 @@ $default-height: $s-2xl;
   justify-content: center;
   padding: 0 $s-sm;
   height: 24px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 24px;
   background-color: $color__global-secondary;
-  color: $color__global-tertiary-2;
+  color: #707070;
   font-family: $font__body;
   font-size: 12px;
   font-weight: 500;
@@ -190,7 +186,8 @@ $default-height: $s-2xl;
   cursor: pointer;
   transition:
     background-color 0.2s,
-    color 0.2s;
+    color 0.2s,
+    border-color 0.2s;
 
   &:hover {
     background-color: darken($color__global-secondary, 5%);
@@ -199,7 +196,7 @@ $default-height: $s-2xl;
   &--active {
     background-color: $color__global-black;
     color: $color__global-white;
-    border: 1px solid $color__global-black;
+    border-color: $color__global-black;
 
     &:hover {
       background-color: lighten($color__global-black, 10%);
@@ -270,4 +267,77 @@ $default-height: $s-2xl;
   color: $color__global-black;
   text-align: right;
   flex-shrink: 0;
+}
+
+// advanced-search-summary
+////////////////////////////////
+.advanced-search-summary {
+  border-top: $adv2-border;
+  border-bottom: $adv2-border;
+  padding: $s-xl 0;
+}
+
+.advanced-search-summary__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $s-sm $s-md;
+  align-items: center;
+}
+
+.advanced-search-summary__item {
+  display: flex;
+  gap: $s-sm;
+  align-items: flex-start;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.advanced-search-summary__label {
+  font-family: $font__body;
+  font-weight: 400;
+  color: $color__global-black;
+}
+
+.advanced-search-summary__value {
+  font-family: $font__body;
+  font-weight: 500;
+  color: $color__global-black;
+}
+
+.advanced-search-summary__operator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $s-sm;
+  height: 24px;
+  background-color: $color__global-secondary;
+  border-radius: 24px;
+  font-family: $font__body;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.24px;
+  color: $color__global-black;
+  flex-shrink: 0;
+}
+
+.advanced-search-summary__edit-link {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-family: $font__body;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color__global-black;
+  text-decoration: underline;
+  text-underline-offset: 50%;
+  cursor: pointer;
+  margin-left: auto;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
