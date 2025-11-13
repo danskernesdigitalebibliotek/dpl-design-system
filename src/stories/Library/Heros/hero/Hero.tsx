@@ -25,21 +25,23 @@ const HeroLink: React.FunctionComponent<HeroProps> = ({
   });
 
   return (
-    <section className={classes}>
-      <div className="hero__content hero-grid__content">
-        <HeroInner
-          contentType={contentType}
-          date={date}
-          title={title}
-          description={description}
-          descriptionItems={descriptionItems}
-          cta={cta}
-          tag={tag}
-          price={price}
-        />
-      </div>
+    <section className="border-bottom">
+      <div className={classes}>
+        <div className="hero__content hero-grid__content">
+          <HeroInner
+            contentType={contentType}
+            date={date}
+            title={title}
+            description={description}
+            descriptionItems={descriptionItems}
+            cta={cta}
+            tag={tag}
+            price={price}
+          />
+        </div>
 
-      <HeroVisual image={image} placeholderText={placeholderText} />
+        <HeroVisual image={image} placeholderText={placeholderText} />
+      </div>
     </section>
   );
 };
