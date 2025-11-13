@@ -8,7 +8,8 @@ $_hero-column-breakpoint: "small";
   }
 }
 
-.hero__visual-inner .image-credited__image {
+.hero__visual-inner .image-credited__image,
+.hero__visual-inner .media-container--placeholder {
   width: 100%;
   aspect-ratio: 5/4;
 }
