@@ -165,8 +165,15 @@
 @import "./src/stories/Blocks/status-userprofile/status-userprofile";
 @import "./src/stories/Blocks/material-manifestation-item/material-manifestation-item";
 @import "./src/stories/Blocks/advanced-search/advanced-search";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-v2";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-v2.variables";
 @import "./src/stories/Blocks/advanced-search-v2/combobox";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-v2";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-suggest";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-select-search";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-facets";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-summary";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-filters";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-filter-group";
 @import "./src/stories/Blocks/article/article";
 @import "./src/stories/Blocks/page/page";
 @import "./src/stories/Blocks/event-page/event-page";
