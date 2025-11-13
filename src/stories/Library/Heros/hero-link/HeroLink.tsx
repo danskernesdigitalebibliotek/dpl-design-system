@@ -18,7 +18,7 @@ const HeroLink: React.FunctionComponent<HeroLinkProps> = ({
   description,
   descriptionItems,
 }) => {
-  const classes = clsx("hero", {
+  const classes = clsx("hero hero-grid", {
     "hero--has-no-media": !image,
   });
 
