@@ -1,3 +1,6 @@
+$_header-button-size--small: 56px;
+$_header-button-size--large: 70px;
+
 .header {
   border: 1px solid $color__global-tertiary-1;
   display: grid;
@@ -59,16 +62,16 @@
 .header__button {
   cursor: pointer;
   position: relative;
-  height: 56px;
-  width: 56px;
+  height: $_header-button-size--small;
+  width: $_header-button-size--small;
   display: flex;
   justify-content: center;
   align-items: center;
   color: $color__text-primary-black;
 
   @include media-query__small {
-    height: 70px;
-    width: 70px;
+    height: $_header-button-size--large;
+    width: $_header-button-size--large;
   }
 }
 
@@ -144,8 +147,14 @@
   width: 100%;
   height: 100%;
   padding: 0 $s-lg;
+  // Making sure the text does not show up under the icons.
+  padding-right: ($_header-button-size--small * 2);
   border: 0 solid transparent;
   background-color: transparent;
+
+  @include media-query__small {
+    padding-right: $_header-button-size--large;
+  }
 
   ::placeholder {
     color: $color__text-secondary-gray;
@@ -159,6 +168,7 @@
 }
 
 .header__menu-search-form {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -167,8 +177,44 @@
 
 .header__menu-search-icon {
   position: absolute;
-  right: $s-3xl;
   cursor: pointer;
+  // Leaving space for dropdown.
+  right: $_header-button-size--small;
+
+  // Only leaving a small padding when no drop-down.
+  @include media-query__small {
+    right: $s-md;
+  }
+}
+
+.header__advanced-desktop {
+  @include typography($typo__small-caption);
+  position: relative;
+  display: none;
+  height: 100%;
+  min-width: $_header-button-size--large * 2;
+  text-align: center;
+  border-left: 1px solid $color__global-tertiary-1;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      height: 1px;
+      width: 100%;
+      background: $color__global-black;
+    }
+  }
+
+  @include media-query__small {
+    display: flex;
+  }
 }
 
 .header__menu-dropdown {
@@ -182,6 +228,8 @@
   z-index: $z-10;
 
   @include media-query__small {
+    // Never show on large display - we have a dedicated button.
+    display: none;
     padding: $s-sm 0;
     right: 0;
     top: 72px;
@@ -202,11 +250,16 @@
 }
 
 .header__menu-dropdown-icon {
+  display: block;
   position: absolute;
   cursor: pointer;
   right: $s-lg;
   transition: transform 0.3s ease-in-out;
   transform: scaleY(1);
+
+  @include media-query__small {
+    display: none;
+  }
 
   &.header__menu-dropdown-icon--expanded {
     transition: transform 0.3s ease-in-out;
