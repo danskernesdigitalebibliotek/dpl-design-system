@@ -10,7 +10,7 @@
     grid-template-columns: 1fr 320px;
   }
 
-  @include media-query__small {
+  @include media-query__large {
     grid-template-columns: 1fr 460px;
   }
 }
