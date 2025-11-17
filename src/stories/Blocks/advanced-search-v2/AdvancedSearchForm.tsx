@@ -1,7 +1,7 @@
 import { FC } from "react";
 import AdvancedSearchSuggest from "./AdvancedSearchSuggest";
 import AdvancedSearchSummary, { SummaryItem } from "./AdvancedSearchSummary";
-import HeadlessMultiSelect from "./HeadlessMultiSelect";
+import AdvancedSearchMultiSelect from "./AdvancedSearchMultiSelect";
 import { SearchData } from "./AdvancedSearchV2";
 import { ReactComponent as PlusButtonIcon } from "../../../public/icons/collection/PlusButton.svg";
 
@@ -56,13 +56,22 @@ const AdvancedSearchForm: FC<AdvancedSearchFormType> = ({
 
           {/* Filter selects */}
           <div className="advanced-search-v2__selects-grid">
-            <HeadlessMultiSelect label="Material type" selectedCount={0} />
+            <AdvancedSearchMultiSelect
+              label="Material type"
+              selectedCount={0}
+            />
 
-            <HeadlessMultiSelect label="Literature form" selectedCount={0} />
+            <AdvancedSearchMultiSelect
+              label="Literature form"
+              selectedCount={0}
+            />
 
-            <HeadlessMultiSelect label="Access" selectedCount={2} />
+            <AdvancedSearchMultiSelect label="Access" selectedCount={2} />
 
-            <HeadlessMultiSelect label="Holding status" selectedCount={0} />
+            <AdvancedSearchMultiSelect
+              label="Holding status"
+              selectedCount={0}
+            />
           </div>
 
           {/* Action buttons */}
