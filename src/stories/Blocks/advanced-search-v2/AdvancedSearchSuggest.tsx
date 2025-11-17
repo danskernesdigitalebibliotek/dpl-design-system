@@ -34,7 +34,7 @@ const AdvancedSearchSuggest: FC<AdvancedSearchSuggestType> = ({
         <div className="advanced-search-suggest__combobox-wrapper">
           <input
             type="text"
-            className="advanced-search-combobox-input advanced-search-select-search__combobox-input"
+            className="advanced-search-combobox-input advanced-search-suggest__combobox-input"
             placeholder="Search for something..."
             value={query}
             readOnly
