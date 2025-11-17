@@ -1,29 +1,29 @@
-.advanced-search-select-search-wrapper {
+.advanced-search-multi-select-wrapper {
   display: flex;
   flex-direction: column;
   gap: $s-xs;
 }
 
-.advanced-search-select-search__label {
+.advanced-search-multi-select__label {
   @include typography($typo__tags);
   color: $color__global-black;
 }
 
-.advanced-search-select-search {
+.advanced-search-multi-select {
   height: $default-height;
 }
 
-.advanced-search-select-search__button {
+.advanced-search-multi-select__button {
   height: 100%;
 }
 
-.advanced-search-select-search__popover-panel {
+.advanced-search-multi-select__popover-panel {
   //   --button-width comes from headless ui combobox
   width: var(--button-width);
   max-height: 300px !important; // Fixed max height for scrollable dropdown
   overflow-y: auto !important;
 }
 
-.advanced-search-select-search__combobox-options {
+.advanced-search-multi-select__combobox-options {
   border: $adv2-border;
 }
