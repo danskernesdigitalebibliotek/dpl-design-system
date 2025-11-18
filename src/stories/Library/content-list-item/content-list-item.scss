@@ -64,6 +64,12 @@ $_stacked-reduce-width: 20px;
   }
 }
 
+.content-list-item__tag-container {
+  @include media-query__small {
+    min-height: 27px;
+  }
+}
+
 .content-list-item__tag {
   width: fit-content;
 }
@@ -111,7 +117,7 @@ $_stacked-reduce-width: 20px;
   overflow: hidden;
 }
 
-.content-list-item__content-top-container__price {
+.content-list-item__content-top-container__meta {
   @include typography($typo__h5);
   white-space: nowrap;
   align-content: center;
@@ -142,7 +148,7 @@ $_stacked-reduce-width: 20px;
     align-self: first baseline;
   }
 
-  &:last-child {
+  &--time {
     flex-wrap: nowrap;
     text-wrap: nowrap;
     margin-right: 0;

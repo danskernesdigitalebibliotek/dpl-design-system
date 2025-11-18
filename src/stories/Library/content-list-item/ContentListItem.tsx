@@ -14,13 +14,14 @@ export type ContentListItemProps = {
   eventSeriesId?: string;
   image?: ReactNode;
   placeholderText?: string;
-  tagText: string;
+  tagText?: string;
   title: string;
   description: string;
-  date: string;
-  time: string;
-  location: string;
-  price: string;
+  publicationDate?: string;
+  date?: string;
+  time?: string;
+  location?: string;
+  price?: string;
   href: string;
   isStacked?: boolean;
   status?: ContentListItemStatuses;
@@ -33,6 +34,7 @@ export const ContentListItem: React.FC<ContentListItemProps> = ({
   title,
   description,
   date,
+  publicationDate,
   time,
   location,
   price,
@@ -56,41 +58,57 @@ export const ContentListItem: React.FC<ContentListItemProps> = ({
         <MediaContainer media={image} placeholderText={placeholderText} />
       </div>
       <div className="content-list-item__content">
-        {tagText && (
-          <Tag hasBackground className="content-list-item__tag">
-            {tagText}
-          </Tag>
-        )}
+        <div className="content-list-item__tag-container">
+          {tagText && (
+            <Tag hasBackground className="content-list-item__tag">
+              {tagText}
+            </Tag>
+          )}
+        </div>
         <div className="content-list-item__content-top-container">
           <div className="content-list-item__content-top-container__inner">
             <h2 className="content-list-item__title">{title}</h2>
             <div className="content-list-item__description">{description}</div>
           </div>
-          <div className="content-list-item__content-top-container__price">
+          <div className="content-list-item__content-top-container__meta">
             {price}
           </div>
         </div>
 
         <div className="content-list-item__content-bottom-container">
-          <div className="content-list-item__content-bottom-container__item">
-            <IconPin />
-            <p className="content-list-item__location">{location}</p>
-          </div>
-          <div className="content-list-item__content-bottom-container__item">
-            <IconEvent />
-            <p className="content-list-item__date">{date}</p>
-          </div>
-          <div className="content-list-item__content-bottom-container__item">
-            <IconTime />
-            <time
-              className="content-list-item__time"
-              dateTime={placeholderDateTime}
-            >
-              {time}
-            </time>
-          </div>
+          {location && (
+            <div className="content-list-item__content-bottom-container__item">
+              <IconPin />
+              <p className="content-list-item__location">{location}</p>
+            </div>
+          )}
+          {publicationDate && (
+            <div className="content-list-item__content-bottom-container__item">
+              <p className="content-list-item__date">{publicationDate}</p>
+            </div>
+          )}
+          {date && (
+            <div className="content-list-item__content-bottom-container__item">
+              <IconEvent />
+              <p className="content-list-item__date">{date}</p>
+            </div>
+          )}
+          {time && (
+            <div className="content-list-item__content-bottom-container__item content-list-item__content-bottom-container__item--time">
+              <IconTime />
+              <time
+                className="content-list-item__time"
+                dateTime={placeholderDateTime}
+              >
+                {time}
+              </time>
+            </div>
+          )}
         </div>
-        <div className="content-list-item__content__price">{price}</div>
+
+        {price && (
+          <div className="content-list-item__content__price">{price}</div>
+        )}
       </div>
       <ArrowSmallRight />
     </a>
