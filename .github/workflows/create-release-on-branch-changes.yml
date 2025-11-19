@@ -80,6 +80,7 @@ jobs:
         uses: softprops/action-gh-release@v2.4.2
         with:
           prerelease: true
+          draft: false
           target_commitish: ${{ env.RELEASE_SHA }}
           tag_name: ${{ env.TAG_NAME }}
           body: ${{ env.RELEASE_DESCRIPTION }}
