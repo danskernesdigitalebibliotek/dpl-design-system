@@ -7,11 +7,7 @@
     padding: $hero-padding-large;
     display: grid;
     column-gap: $s-xl;
-    grid-template-columns: 1fr 320px;
-  }
-
-  @include media-query__large {
-    grid-template-columns: 1fr 460px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -30,9 +26,18 @@
   gap: $s-2xl;
 }
 
+.event-description__card,
+.list-description--relations {
+  @include media-query__small {
+    width: 50%;
+    min-width: $s-7xl;
+    place-self: end;
+  }
+}
+
 .event-description__description {
-  @include typography($typo__subtitle);
-  max-width: $description-max-width;
+  @include typography($typo__body-large);
+
   margin-bottom: $s-2xl;
 
   @include media-query__small {

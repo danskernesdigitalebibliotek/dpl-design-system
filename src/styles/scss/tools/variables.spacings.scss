@@ -42,7 +42,8 @@ $page-left-spacing-large: $s-2xl;
 $hero-padding-small: $s-5xl $page-left-spacing-small $s-5xl
   $page-left-spacing-small;
 
-$hero-padding-large: $s-5xl $page-left-spacing-large $s-3xl
+$hero-padding-large: $s-2xl $page-left-spacing-large $s-2xl
   $page-left-spacing-large;
 
-$description-max-width: 750px;
+$hero-padding-large-content: $s-4xl $page-left-spacing-large $s-4xl
+  $page-left-spacing-large;

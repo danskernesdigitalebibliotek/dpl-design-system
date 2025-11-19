@@ -31,6 +31,21 @@
   grid-area: content;
 
   @include media-query__small {
+    padding: $hero-padding-large-content;
+  }
+}
+
+.hero-grid__mixed-left {
+  grid-area: visual;
+}
+
+.hero-grid__mixed-right {
+  grid-area: content;
+}
+
+.hero-grid__mixed-left,
+.hero-grid__mixed-right {
+  @include media-query__small {
     padding: $hero-padding-large;
   }
 }
@@ -51,6 +66,7 @@
     }
 
     .hero-grid__visual {
+      padding: unset;
       border-right: none;
     }
   }
