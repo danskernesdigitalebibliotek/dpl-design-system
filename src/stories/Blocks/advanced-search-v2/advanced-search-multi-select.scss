@@ -18,12 +18,24 @@
 }
 
 .advanced-search-multi-select__popover-panel {
-  //   --button-width comes from headless ui combobox
+  // --button-width comes from headless ui combobox
   width: var(--button-width);
-  max-height: 300px !important; // Fixed max height for scrollable dropdown
-  overflow-y: auto !important;
+  max-height: none !important; // override headlessui inline max-height
+  overflow: visible !important; // prevent outer panel from scrolling
 }
 
 .advanced-search-multi-select__combobox-options {
-  border: $adv2-border;
+  max-height: 200px !important;
+  overflow-y: auto !important;
+}
+
+.advanced-search-multi-select__footer {
+}
+
+.advanced-search-multi-select__reset-button {
+  padding: $s-sm 0 $s-xl;
+  @include typography($typo__small-caption);
+  background-color: $color__global-primary;
+
+  background: transparent;
 }
