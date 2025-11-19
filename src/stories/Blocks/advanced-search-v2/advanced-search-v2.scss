@@ -3,8 +3,6 @@
 
   margin-top: $s-lg;
   margin-bottom: $s-lg;
-  display: grid;
-  gap: $s-2xl;
 }
 
 .advanced-search-v2__form {
@@ -78,7 +76,8 @@
 
   line-height: $s-lg;
   color: $color__global-black;
-  margin: 0 0 $s-lg;
+  margin-top: $s-xl;
+  margin-bottom: $s-md;
 }
 
 .advanced-search-v2__grid {
