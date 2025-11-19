@@ -1,5 +1,5 @@
 .material-description {
-  @include layout-container($layout__max-width--large);
+  max-width: 750px;
   padding: $hero-padding-small;
 
   > h2.text-header-h4 {
@@ -11,7 +11,7 @@
   }
 
   @include media-query__small {
-    padding: $hero-padding-large;
+    padding: $hero-padding-large-content;
   }
 
   // spacing between the description links

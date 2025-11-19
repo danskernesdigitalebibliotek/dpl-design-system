@@ -3,9 +3,7 @@
 }
 
 .hero-grid {
-  @include layout-container($layout__max-width--large);
-  padding-top: $s-lg;
-  padding-bottom: $s-lg;
+  padding: $s-md;
   display: grid;
   grid-template-areas: "content" "visual";
   gap: $s-lg;
