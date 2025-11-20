@@ -1,16 +1,7 @@
 import { FC } from "react";
 import AdvancedSearchToggle from "./AdvancedSearchToggle";
-import AdvancedSearchFilterGroup, {
-  FilterItem,
-} from "./AdvancedSearchFilterGroup";
-import { ToggleState } from "./AdvancedSearchV2";
-
-export type FilterGroupData = {
-  label: string;
-  facetField: string;
-  selectedValues: string[];
-  items: FilterItem[];
-};
+import AdvancedSearchFilterGroup from "./AdvancedSearchFilterGroup";
+import { ToggleState, FilterGroupData } from "./types";
 
 export type AdvancedSearchFiltersType = {
   showToggles?: boolean;

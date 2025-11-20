@@ -1,21 +1,7 @@
 import { FC } from "react";
-import AdvancedSearchForm, { SuggestData } from "./AdvancedSearchForm";
+import AdvancedSearchForm from "./AdvancedSearchForm";
 import AdvancedSearchResults from "./AdvancedSearchResults";
-import { SummaryItem } from "./AdvancedSearchSummary";
-import { FilterGroupData } from "./AdvancedSearchFilters";
-
-export type ToggleState = {
-  onShelf?: boolean;
-  onlyExtraTitles?: boolean;
-};
-
-export type SearchData = {
-  suggests?: SuggestData[];
-  summaryItems?: SummaryItem[];
-  filterGroups?: FilterGroupData[];
-  toggles?: ToggleState;
-  cql?: string;
-};
+import { SearchData } from "./types";
 
 export type AdvancedSearchV2Type = {
   showSummary?: boolean;

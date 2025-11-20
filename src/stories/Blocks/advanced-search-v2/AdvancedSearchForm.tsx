@@ -1,15 +1,9 @@
 import { FC } from "react";
 import AdvancedSearchSuggest from "./AdvancedSearchSuggest";
-import AdvancedSearchSummary, { SummaryItem } from "./AdvancedSearchSummary";
+import AdvancedSearchSummary from "./AdvancedSearchSummary";
 import AdvancedSearchMultiSelect from "./AdvancedSearchMultiSelect";
-import { SearchData } from "./AdvancedSearchV2";
+import { SearchData } from "./types";
 import { ReactComponent as PlusButtonIcon } from "../../../public/icons/collection/PlusButton.svg";
-
-export type SuggestData = {
-  selectedIndexLabel?: string;
-  query?: string;
-  operator?: "and" | "or" | "not";
-};
 
 export type AdvancedSearchFormType = {
   showSummary?: boolean;

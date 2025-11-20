@@ -2,7 +2,7 @@ import { FC } from "react";
 import AdvancedSearchFilters from "./AdvancedSearchFilters";
 import { CardListItem } from "../../Library/card-list-item/CardListItem";
 import ResultPager from "../../Library/card-list-page/ResultPager";
-import { SearchData } from "./AdvancedSearchV2";
+import { SearchData } from "./types";
 
 export type AdvancedSearchResultsType = {
   showFilters?: boolean;
