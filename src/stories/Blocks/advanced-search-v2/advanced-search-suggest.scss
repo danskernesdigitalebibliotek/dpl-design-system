@@ -1,18 +1,12 @@
 .advanced-search-suggest {
   display: flex;
   gap: $s-sm;
-  height: $default-height;
   align-items: center;
 }
 
 .advanced-search-suggest__combobox-wrapper {
   flex: 1;
   height: 100%;
-}
-
-.advanced-search-suggest__combobox-options {
-  //   --input-width comes from headless ui combobox
-  width: var(--input-width);
 }
 
 .advanced-search-suggest__remove-button {
