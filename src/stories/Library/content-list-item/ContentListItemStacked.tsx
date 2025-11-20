@@ -10,9 +10,9 @@ import { ReactComponent as IconTime } from "../../../../public/icons/collection/
 interface ContentListItemStackedProps {
   title: string;
   href: string;
-  time: string;
-  date: string;
-  location: string;
+  time?: string;
+  date?: string;
+  location?: string;
   status?: ContentListItemStatuses;
 }
 
