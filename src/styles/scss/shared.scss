@@ -85,6 +85,12 @@
   }
 }
 
+.hr {
+  border: none;
+  border-top: 1px solid $color__global-tertiary-1;
+  margin: 0;
+}
+
 .inline-icon {
   display: inline;
   margin: 0 0 -5px 5px;
