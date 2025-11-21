@@ -64,13 +64,14 @@
 }
 
 .select-option {
-  @include typography($typo__lib-input);
+  @include typography($typo__lib-base);
   border-top: none;
-  padding: $s-md;
+  padding: $s-sm $s-md;
   text-align: left;
   outline: none;
   background-color: $color__global-primary;
   white-space: nowrap;
+  height: 40px;
 
   &:hover {
     cursor: pointer;
