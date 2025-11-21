@@ -1,41 +1,164 @@
-.advanced-search-multi-select-wrapper {
+.hui-multiselect-wrapper {
   display: flex;
   flex-direction: column;
-  gap: $s-xs;
+  gap: $s-sm;
 }
 
-.advanced-search-multi-select__label {
-  @include typography($typo__tags);
+.hui-multiselect-wrapper__label {
+  @include typography($typo__lib-label--small);
   color: $color__global-black;
 }
 
-.advanced-search-multi-select {
-  height: $default-height;
+.hui-multiselect {
+  height: 48px;
 }
 
-.advanced-search-multi-select__button {
-  height: 100%;
+.hui-multiselect__button {
+  @include typography($typo__lib-input);
+  padding: $s-md;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  min-width: 200px;
+  border: 1px solid $color__global-tertiary-1;
+  text-overflow: ellipsis;
+  position: relative;
+  justify-content: space-between;
+
+  &:focus-within,
+  &:hover,
+  &--open {
+    border: 1px solid $color__global-black;
+
+    .hui-multiselect__button-arrow {
+      border-left-color: $color__global-black;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.advanced-search-multi-select__popover-panel {
+.hui-multiselect__button-label {
+  @include typography($typo__lib-input);
+  display: flex;
+  gap: $s-sm;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.hui-multiselect__button-label__count-badge {
+  @include typography($typo__body-small);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  min-width: 24px;
+  padding: 0 $s-xs;
+  background-color: $color__global-black;
+  color: $color__global-white;
+  border-radius: $s-xs;
+  line-height: $s-lg;
+}
+
+.hui-multiselect__button-arrow {
+  margin-right: -$s-md;
+  pointer-events: none;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid $color__global-tertiary-1;
+}
+
+.hui-multiselect__popover-panel {
   // --button-width comes from headless ui combobox
   width: var(--button-width);
-  max-height: none !important; // override headlessui inline max-height
-  overflow: visible !important; // prevent outer panel from scrolling
-}
-
-.advanced-search-multi-select__combobox-options {
-  max-height: 200px !important;
-  overflow-y: auto !important;
-}
-
-.advanced-search-multi-select__footer {
-}
-
-.advanced-search-multi-select__reset-button {
-  padding: $s-sm 0 $s-xl;
-  @include typography($typo__small-caption);
   background-color: $color__global-primary;
+  border: 1px solid $color__global-black;
+  border-top: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
 
-  background: transparent;
+.hui-multiselect__input {
+  @include typography($typo__lib-input);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $color__global-tertiary-1;
+  height: 48px;
+  outline: none;
+  padding: $s-md;
+  width: 100%;
+
+  &::placeholder {
+    color: $color__global-tertiary-2;
+  }
+
+  &:focus {
+    border-color: $color__global-black;
+    background-color: white;
+  }
+}
+
+.hui-multiselect__options {
+  max-height: 200px !important;
+  overflow-y: scroll !important;
+  outline: none;
+}
+
+.hui-multiselect__options__option {
+  @include typography($typo__lib-base);
+  border-top: none;
+  text-align: left;
+  height: 40px;
+  outline: none;
+  background-color: $color__global-primary;
+  white-space: nowrap;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus,
+  &--focused {
+    background-color: $color__global-secondary;
+  }
+}
+
+.hui-multiselect__options__option .checkbox {
+  height: 100%;
+
+  &__label {
+    height: 100%;
+    width: 100%;
+    padding: $s-sm $s-md;
+    display: flex;
+    align-items: center;
+    gap: $s-sm;
+    outline: none !important;
+
+    .checkbox__text {
+      @include typography($typo__lib-base);
+      text-transform: capitalize;
+    }
+  }
+}
+
+.hui-multiselect__reset-button {
+  @include typography($typo__small-caption);
+  padding: $s-sm $s-md $s-lg;
+  background-color: $color__global-primary;
+  border-top: 1px solid $color__global-tertiary-1;
+  width: 100%;
+  text-align: left;
+  text-decoration: underline;
 }
