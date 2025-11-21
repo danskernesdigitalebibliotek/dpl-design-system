@@ -102,6 +102,11 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: $s-md;
+
+  .content-list {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .advanced-search-v2__search-index-select {

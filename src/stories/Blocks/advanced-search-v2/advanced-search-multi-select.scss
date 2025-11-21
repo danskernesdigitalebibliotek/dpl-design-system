@@ -52,7 +52,7 @@
 }
 
 .hui-multiselect__button-label__count-badge {
-  @include typography($typo__body-small);
+  @include typography($typo__lib-input);
 
   display: inline-flex;
   align-items: center;
@@ -86,6 +86,10 @@
   overflow: hidden;
   position: relative;
   z-index: 10;
+
+  hr {
+    margin: 0 $s-md;
+  }
 }
 
 .hui-multiselect__input {
@@ -153,12 +157,14 @@
   }
 }
 
-.hui-multiselect__reset-button {
-  @include typography($typo__small-caption);
-  padding: $s-sm $s-md $s-lg;
-  background-color: $color__global-primary;
+.hui-multiselect__footer {
   border-top: 1px solid $color__global-tertiary-1;
-  width: 100%;
-  text-align: left;
+  padding: $s-sm $s-md $s-lg;
+}
+
+.hui-multiselect__reset-button {
+  @include typography($typo__lib-label--small);
   text-decoration: underline;
+  border: none;
+  cursor: pointer;
 }
