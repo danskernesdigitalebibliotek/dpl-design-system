@@ -3,7 +3,7 @@ import AdvancedSearchToggle from "./AdvancedSearchToggle";
 import AdvancedSearchFilterGroup, {
   FilterItem,
 } from "./AdvancedSearchFilterGroup";
-import { ToggleState } from "./AdvancedSearchV2";
+import type { ToggleState } from "./AdvancedSearchV2";
 
 export type FilterGroupData = {
   label: string;
