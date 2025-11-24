@@ -41,8 +41,8 @@
   height: 20px;
   background-color: $color__global-white;
   border-radius: 50%;
-  top: $s-xs / 2;
-  left: $s-xs / 2;
+  top: $s-xs * 0.5;
+  left: $s-xs * 0.5;
   transition: transform 0.2s;
 
   .advanced-search-toggle__button--checked & {
