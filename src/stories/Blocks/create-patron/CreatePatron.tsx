@@ -1,17 +1,24 @@
 import { Button } from "../../Library/Buttons/button/Button";
 import DoubleInputRow from "../../Library/Forms/input/DoubleInputRow";
-import { Dropdown } from "../../Library/dropdown/Dropdown";
+import Dialog from "../../Library/dialog/Dialog";
+import useDialog from "../../Library/dialog/useDialog";
 import { Links } from "../../Library/links/Links";
+import FindLibraryDialog from "../find-library-dialog/FindLibraryDialog";
+
+import LibrarySelect from "../library-select/LibrarySelect";
 
 export interface CreatePatronProps {
   headline: string;
 }
 
 const CreatePatron: React.FC<CreatePatronProps> = ({ headline }) => {
+  const { dialogContent, openDialogWithContent, closeDialog, dialogRef } =
+    useDialog();
+
   return (
     <div className="create-patron-page">
       <h1 className="create-patron-page__title">{headline}</h1>
-      <form>
+      <form className="create-patron-page__form">
         <section className="create-patron-page__row">
           <DoubleInputRow leftLabel="Phone number*" rightLabel="Email*" />
         </section>
@@ -24,22 +31,20 @@ const CreatePatron: React.FC<CreatePatronProps> = ({ headline }) => {
             validationRight="Pin doesn't match"
           />
         </section>
-        <Dropdown
-          ariaLabel="Choose pickup branch"
-          arrowIcon="chevron"
-          list={[
-            { title: "Nothing selected" },
-            { title: "Option 1" },
-            { title: "Option 2" },
-          ]}
-          classNames="dropdown--grey-borders"
-          labelComponent={
-            <label className="text-body-medium-medium mb-8">
-              Choose pickup branch*
-            </label>
-          }
-          footnote="Choose preferred library for pickup of your future reservations."
-        />
+        <section className="create-patron-page__row">
+          <LibrarySelect
+            label="Choose library*"
+            id="library-select"
+            description="Select the library you want to borrow from."
+            validation="Please select a library*"
+            onClickCallback={() => openDialogWithContent(<FindLibraryDialog />)}
+          />
+
+          <Dialog isSidebar closeDialog={closeDialog} ref={dialogRef}>
+            {dialogContent}
+          </Dialog>
+        </section>
+
         <div className="create-patron-page__buttons">
           <Button
             buttonType="none"

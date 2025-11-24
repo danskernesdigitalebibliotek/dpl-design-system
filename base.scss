@@ -25,6 +25,7 @@
 @import "./src/stories/Library/Forms/radio/radio";
 @import "./src/stories/Library/cover/cover";
 @import "./src/stories/Library/Forms/input/input";
+@import "./src/stories/Library/Forms/dawa-input/dawa-input";
 @import "./src/stories/Library/Forms/textarea/textarea";
 @import "./src/stories/Library/Forms/submit-button/submit-button";
 @import "./src/stories/Library/Forms/date-picker/date-picker";
@@ -176,6 +177,8 @@
 @import "./src/stories/Blocks/registration-form-page/registration-form-page";
 @import "./src/stories/Blocks/form/form";
 @import "./src/stories/Blocks/create-patron/create-patron";
+@import "./src/stories/Blocks/library-select/library-select";
+@import "./src/stories/Blocks/find-library-dialog/find-library-dialog";
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";

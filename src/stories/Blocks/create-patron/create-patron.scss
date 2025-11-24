@@ -1,29 +1,24 @@
 .create-patron-page {
+  @include layout-container($block-max-width__large);
   background: $color__global-primary;
-  padding: $s-2xl $s-sm $s-6xl $s-sm;
+  margin: $s-3xl auto $s-lg auto;
+  gap: $s-3xl;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: calc(555px + ($layout__edge-spacing * 2));
+}
 
-  @include media-query__small {
-    margin: auto;
-    max-width: 550px;
-    padding: $s-5xl 0 $s-2xl 0;
-  }
+.create-patron-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: $s-xl;
+}
 
-  &__title {
-    @include typography($typo__h1);
-    margin-bottom: $s-2xl;
+.create-patron-page__title {
+  @include typography($typo__h1);
+}
 
-    @include media-query__small {
-      margin-bottom: $s-5xl;
-    }
-  }
-
-  &__row {
-    @include media-query__small {
-      margin-bottom: $s-3xl;
-    }
-  }
-
-  &__buttons {
-    display: flex;
-  }
+.create-patron-page__buttons {
+  display: flex;
 }
