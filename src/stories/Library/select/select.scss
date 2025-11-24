@@ -31,10 +31,6 @@
   border: 1px solid $color__global-black;
 }
 
-.select--focused .select-button__arrow {
-  border-left-color: $color__global-black;
-}
-
 .select-button__arrow {
   margin-right: -$s-md;
   pointer-events: none;
@@ -44,6 +40,10 @@
   align-items: center;
   justify-content: center;
   border-left: 1px solid $color__global-tertiary-1;
+}
+
+.select--focused .select-button__arrow {
+  border-left-color: $color__global-black;
 }
 
 .select-button:focus-within .select-button__arrow,
