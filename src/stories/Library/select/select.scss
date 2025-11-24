@@ -1,15 +1,5 @@
 .select {
   position: relative;
-
-  &--focused {
-    .select-button {
-      border: 1px solid $color__global-black;
-    }
-
-    .select-button__arrow {
-      border-left-color: $color__global-black;
-    }
-  }
 }
 
 .select-button {
@@ -30,15 +20,19 @@
   &:focus-within,
   &:hover {
     border: 1px solid $color__global-black;
-
-    .select-button__arrow {
-      border-left-color: $color__global-black;
-    }
   }
 
   &:hover {
     cursor: pointer;
   }
+}
+
+.select--focused .select-button {
+  border: 1px solid $color__global-black;
+}
+
+.select--focused .select-button__arrow {
+  border-left-color: $color__global-black;
 }
 
 .select-button__arrow {
@@ -50,6 +44,11 @@
   align-items: center;
   justify-content: center;
   border-left: 1px solid $color__global-tertiary-1;
+}
+
+.select-button:focus-within .select-button__arrow,
+.select-button:hover .select-button__arrow {
+  border-left-color: $color__global-black;
 }
 
 .select-options {

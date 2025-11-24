@@ -9,6 +9,21 @@
   color: $color__global-black;
 }
 
+.range-select__button-arrow {
+  margin-right: -$s-md;
+  pointer-events: none;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid $color__global-tertiary-1;
+}
+
+.range-select__button--open .range-select__button-arrow {
+  border-left-color: $color__global-black;
+}
+
 .range-select__button {
   @include typography($typo__lib-input);
   padding: $s-md;
@@ -28,10 +43,6 @@
   &:hover,
   &--open {
     border: 1px solid $color__global-black;
-
-    .hui-multiselect__button-arrow {
-      border-left-color: $color__global-black;
-    }
   }
 
   &:hover {

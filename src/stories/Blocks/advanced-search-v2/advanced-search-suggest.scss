@@ -57,7 +57,7 @@
     border-color 0.2s;
 
   &:hover {
-    background-color: darken($color__global-secondary, 5%);
+    background-color: color.adjust($color__global-secondary, $lightness: -5%);
   }
 
   &--active {
@@ -66,7 +66,7 @@
     border-color: $color__global-black;
 
     &:hover {
-      background-color: lighten($color__global-black, 10%);
+      background-color: color.adjust($color__global-black, $lightness: 10%);
     }
   }
 }

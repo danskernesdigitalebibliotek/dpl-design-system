@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
+import { Meta, StoryObj } from "@storybook/react/*";
 import AdvancedSearchV2 from "./AdvancedSearchV2";
 import { prepareSearchData } from "./cql-utils";
 

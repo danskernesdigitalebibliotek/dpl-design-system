@@ -13,6 +13,21 @@
   height: 48px;
 }
 
+.hui-multiselect__button-arrow {
+  margin-right: -$s-md;
+  pointer-events: none;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid $color__global-tertiary-1;
+}
+
+.hui-multiselect__button--open .hui-multiselect__button-arrow {
+  border-left-color: $color__global-black;
+}
+
 .hui-multiselect__button {
   @include typography($typo__lib-input);
   padding: $s-md;
@@ -32,10 +47,6 @@
   &:hover,
   &--open {
     border: 1px solid $color__global-black;
-
-    .hui-multiselect__button-arrow {
-      border-left-color: $color__global-black;
-    }
   }
 
   &:hover {
@@ -64,17 +75,6 @@
   color: $color__global-white;
   border-radius: $s-xs;
   line-height: $s-lg;
-}
-
-.hui-multiselect__button-arrow {
-  margin-right: -$s-md;
-  pointer-events: none;
-  height: 48px;
-  width: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-left: 1px solid $color__global-tertiary-1;
 }
 
 .hui-multiselect__popover-panel {
