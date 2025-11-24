@@ -19,7 +19,7 @@
   }
 
   &:hover {
-    background-color: darken($color__global-primary, 2%);
+    background-color: color.adjust($color__global-primary, $lightness: -2%);
   }
 }
 
