@@ -2,7 +2,7 @@ import { FC } from "react";
 import AdvancedSearchSuggest from "./AdvancedSearchSuggest";
 import AdvancedSearchSummary from "./AdvancedSearchSummary";
 import AdvancedSearchMultiSelect from "./AdvancedSearchMultiSelect";
-import { SearchData } from "./AdvancedSearchV2";
+import type { SearchData } from "./AdvancedSearchV2";
 import { ReactComponent as PlusButtonIcon } from "../../../public/icons/collection/PlusButton.svg";
 
 export type SuggestData = {
