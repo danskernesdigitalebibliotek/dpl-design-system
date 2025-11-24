@@ -12,7 +12,14 @@
 }
 
 .advanced-search-summary__item {
-  @include typography($typo__body-small, (excludes: ('line-height')));
+  @include typography(
+    $typo__body-small,
+    (
+      excludes: (
+        "line-height",
+      ),
+    )
+  );
 
   display: flex;
   gap: $s-sm;
@@ -45,7 +52,14 @@
 }
 
 .advanced-search-summary__edit-link {
-  @include typography($typo__body-small, (excludes: ('line-height')));
+  @include typography(
+    $typo__body-small,
+    (
+      excludes: (
+        "line-height",
+      ),
+    )
+  );
 
   padding: 0;
   border: none;

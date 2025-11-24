@@ -30,7 +30,14 @@
 }
 
 .advanced-search-filter-group__label {
-  @include typography($typo__body-small, (excludes: ('line-height')));
+  @include typography(
+    $typo__body-small,
+    (
+      excludes: (
+        "line-height",
+      ),
+    )
+  );
 
   font-weight: 500;
   line-height: $s-lg;
@@ -39,7 +46,14 @@
 }
 
 .advanced-search-filter-group__count-badge {
-  @include typography($typo__body-small, (excludes: ('line-height')));
+  @include typography(
+    $typo__body-small,
+    (
+      excludes: (
+        "line-height",
+      ),
+    )
+  );
 
   display: inline-flex;
   align-items: center;
@@ -82,7 +96,14 @@
 }
 
 .advanced-search-filter-group__item-count {
-  @include typography($typo__body-small, (excludes: ('line-height')));
+  @include typography(
+    $typo__body-small,
+    (
+      excludes: (
+        "line-height",
+      ),
+    )
+  );
 
   line-height: $s-lg;
   color: $color__global-black;
