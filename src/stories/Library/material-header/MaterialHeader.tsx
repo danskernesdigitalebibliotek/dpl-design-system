@@ -53,44 +53,46 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
   ctaText,
 }) => {
   return (
-    <header className="material-header">
-      <div className="material-header__cover">
-        <Cover
-          src="images/book_cover_3_large.jpeg"
-          size="xlarge"
-          tint="120"
-          animate
-          shadow="small"
-        />
-      </div>
-      <div className="material-header__content">
-        <ButtonFavourite />
-        <MaterialHeaderText title={title} author={author} />
-        <div className="material-header__availability-label">
-          {listOfAvailabilityLabels}
-        </div>
-        {periodical && <MaterialPeriodicalSelect />}
-        <div className="material-header__button">
-          <Button
-            label={periodical ? "RESERVER MAGASIN" : "RESERVER BOG"}
-            buttonType="none"
-            variant="filled"
-            disabled={false}
-            collapsible={false}
-            size="large"
-            classNames="capitalize-all"
-          />
-          <Button
-            label="FIND PÅ HYLDEN"
-            buttonType="none"
-            variant="outline"
-            disabled={false}
-            collapsible={false}
-            size="large"
-            classNames="capitalize-all"
+    <header className="border-bottom">
+      <div className="material-header hero-grid hero-grid--material">
+        <div className="material-header__cover hero-grid__visual">
+          <Cover
+            src="images/book_cover_3_large.jpeg"
+            size="xlarge"
+            tint="120"
+            animate
+            shadow="small"
           />
         </div>
-        {ctaText && <p className="mt-16 text-small-caption">{ctaText}</p>}
+        <div className="material-header__content hero-grid__content">
+          <ButtonFavourite />
+          <MaterialHeaderText title={title} author={author} />
+          <div className="material-header__availability-label">
+            {listOfAvailabilityLabels}
+          </div>
+          {periodical && <MaterialPeriodicalSelect />}
+          <div className="material-header__button">
+            <Button
+              label={periodical ? "RESERVER MAGASIN" : "RESERVER BOG"}
+              buttonType="none"
+              variant="filled"
+              disabled={false}
+              collapsible={false}
+              size="large"
+              classNames="capitalize-all"
+            />
+            <Button
+              label="FIND PÅ HYLDEN"
+              buttonType="none"
+              variant="outline"
+              disabled={false}
+              collapsible={false}
+              size="large"
+              classNames="capitalize-all"
+            />
+          </div>
+          {ctaText && <p className="mt-16 text-small-caption">{ctaText}</p>}
+        </div>
       </div>
     </header>
   );

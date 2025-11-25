@@ -21,21 +21,42 @@ const EventPage: FC<EventPageProps> = ({
   horizontalTermLineData,
   listDescriptionData,
 }) => {
+  const { price } = listDescriptionData;
+  const priceContent = price?.tickets ? (
+    <>
+      {price.tickets.map((ticket, index) => (
+        <div
+          className="ticket-category"
+          key={index}
+          data-ticket-label={ticket.label}
+          data-ticket-price={ticket.price}
+        >
+          {ticket.label}: {ticket.price}
+        </div>
+      ))}
+    </>
+  ) : null;
+
   return (
     <article className="event-page">
-      <Hero
-        title={title}
-        date={date}
-        image={image}
-        placeholderText={placeholderText}
-        cta="Køb billet"
-        tag="Arrangement"
-      />
+      <header className="border-bottom">
+        <Hero
+          title={title}
+          date={date}
+          image={image}
+          placeholderText={placeholderText}
+          cta="Køb billet"
+          tag="Arrangement"
+          price={priceContent}
+        />
+      </header>
+
       <EventDescription
         descriptionDescription={descriptionDescription}
         horizontalTermLineData={horizontalTermLineData}
         listDescriptionData={listDescriptionData}
       />
+
       <EventParagraphs />
     </article>
   );

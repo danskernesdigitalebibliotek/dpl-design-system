@@ -14,6 +14,7 @@ export type HeroInnerProps = {
   cta?: string;
   tag?: string;
   arrow?: boolean;
+  price?: React.ReactNode;
 };
 
 const HeroInner: React.FunctionComponent<HeroInnerProps> = ({
@@ -25,6 +26,7 @@ const HeroInner: React.FunctionComponent<HeroInnerProps> = ({
   cta,
   tag,
   arrow,
+  price,
 }) => {
   return (
     <div className="hero__inner">
@@ -44,6 +46,7 @@ const HeroInner: React.FunctionComponent<HeroInnerProps> = ({
         <time className="hero__details__date">{date}</time>
       </div>
       <h1 className="hero__title">{title}</h1>
+      {price && <div className="hero__price">{price}</div>}
       {description && (
         <div className="hero__description">
           <p>{description} </p>

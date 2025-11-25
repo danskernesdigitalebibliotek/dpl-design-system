@@ -23,11 +23,7 @@ export default {
       vil have en statsminister.`,
     horizontalTermLineData: [
       {
-        title: "I samme serie ",
-        linkList: [{ text: "Litteratur & Aktivisme", url: "/" }],
-      },
-      {
-        title: "Emneord",
+        title: "Tags",
         linkList: [
           { text: "dans", url: "/" },
           { text: "contemporary", url: "/" },
@@ -39,26 +35,47 @@ export default {
       },
     ],
     listDescriptionData: {
-      Tid: { value: ["19:30 — 21:00"], type: "standard" },
-      Pris: {
-        value: ["Standard: 65 kr.", "Børn: Gratis"],
-        type: "standard",
-        layout: "column",
+      descriptionItems: {
+        Dato: {
+          value: ["04 oktober 2028"],
+          type: "standard",
+          icon: "icons/collection/Calendar.svg",
+        },
+        Tid: {
+          value: ["08:00 - 08:15"],
+          type: "standard",
+          icon: "icons/collection/Opening hours.svg",
+        },
+        Sted: {
+          value: ["Hovedbibliotek", "Greve bibliotek"],
+          type: "standard",
+          icon: "icons/collection/Location.svg",
+        },
+        Adresse: {
+          value: ["Kampmanns Plads 2, 8000 Aarhus, Danmark"],
+          type: "standard",
+          hideKey: true,
+        },
       },
-      Sted: {
-        value: [
-          "Hovedbibliotek",
-          "Greve bibliotek",
-          "Hovedbibliotek",
-          "Greve bibliotek",
+      price: {
+        tickets: [
+          { label: "Børn", price: "Gratis" },
+          { label: "Voksne", price: "65 DKK" },
         ],
-        type: "link",
       },
-      Adresse: {
-        value: ["Kampmanns Plads 2, 8000, Aarhus"],
-        type: "standard",
+      relationsItems: {
+        Bibliotek: {
+          value: ["Brønshøj Bibliotek"],
+          type: "link",
+        },
+        "I samarbejde med": {
+          value: [
+            "Aarhus Musikskole",
+            "Den Vestdanske Filmpulje sammen med Åby Biblioteks venner",
+          ],
+          type: "list",
+        },
       },
-      Målgruppe: { value: ["Alle"], type: "standard" },
     },
   },
   argTypes: {

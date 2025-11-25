@@ -18,25 +18,30 @@ const HeroLink: React.FunctionComponent<HeroLinkProps> = ({
   description,
   descriptionItems,
 }) => {
-  const classes = clsx("hero", {
+  const classes = clsx("hero hero-grid", {
     "hero--has-no-media": !image,
   });
 
   return (
-    <section className={classes}>
-      <a href={url} className="hero__content arrow arrow__hover--right-large">
-        <HeroInner
-          contentType={contentType}
-          date={date}
-          title={title}
-          description={description}
-          descriptionItems={descriptionItems}
-          arrow
-        />
-      </a>
+    <div className="border-bottom">
+      <section className={classes}>
+        <a
+          href={url}
+          className="hero__content hero-grid__content arrow arrow__hover--right-large"
+        >
+          <HeroInner
+            contentType={contentType}
+            date={date}
+            title={title}
+            description={description}
+            descriptionItems={descriptionItems}
+            arrow
+          />
+        </a>
 
-      <HeroVisual image={image} placeholderText={placeholderText} />
-    </section>
+        <HeroVisual image={image} placeholderText={placeholderText} />
+      </section>
+    </div>
   );
 };
 

@@ -1,14 +1,18 @@
 .breadcrumb {
-  @include layout-container($layout__max-width--large);
-
   display: flex;
   flex-wrap: wrap;
-  margin-top: $s-lg;
-  margin-bottom: $s-lg;
+  padding: $s-md;
+  padding-left: $page-left-spacing-small;
+
   row-gap: $s-sm;
+  border-bottom: 1px solid $color__global-tertiary-1;
 
   > a {
     @extend %text-inline-link;
+  }
+
+  @include media-query__medium {
+    padding-left: $page-left-spacing-large;
   }
 }
 
