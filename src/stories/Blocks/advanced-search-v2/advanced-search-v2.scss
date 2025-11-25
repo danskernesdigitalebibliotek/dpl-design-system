@@ -49,8 +49,13 @@
 
 .advanced-search-v2__action-buttons {
   display: flex;
-  gap: $s-3xl;
   align-items: center;
+  gap: $s-md;
+  flex-wrap: wrap;
+
+  button {
+    width: 100%;
+  }
 }
 
 .advanced-search-v2__reset-button.btn-outline {
@@ -79,7 +84,11 @@
 .advanced-search-v2__selects-grid {
   display: grid;
   gap: $s-md;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+
+  @include media-query__small {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .advanced-search-v2__result-heading {

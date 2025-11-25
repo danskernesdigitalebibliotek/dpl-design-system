@@ -1,12 +1,26 @@
-.advanced-search-suggest {
+@use "sass:color";
+
+.advanced-search-suggest-wrapper {
   display: flex;
   gap: $s-sm;
   align-items: center;
 }
 
+.advanced-search-suggest {
+  display: flex;
+  gap: $s-sm;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  @include media-query__small {
+    flex-direction: row;
+  }
+}
+
 .advanced-search-suggest__combobox-wrapper {
-  flex: 1;
-  height: 100%;
+  width: 100%;
+  flex: 2;
 }
 
 .advanced-search-suggest__remove-button {
