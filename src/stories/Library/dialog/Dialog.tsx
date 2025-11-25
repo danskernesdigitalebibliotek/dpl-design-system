@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import React, { forwardRef } from "react";
+import { ReactComponent as CloseLarge } from "../../../public/icons/collection/CloseLarge.svg";
 
 export type DialogType = {
   children: React.ReactNode;
@@ -20,14 +21,16 @@ const Dialog = forwardRef<HTMLDialogElement, DialogType>(
           }
         }}
       >
-        <button
-          type="button"
-          onClick={closeDialog}
-          className="dialog__close-button"
-          aria-label="Close dialog"
-        >
-          <img src="/icons/basic/icon-cross.svg" alt="" />
-        </button>
+        <div className="dialog__top-bar">
+          <button
+            type="button"
+            onClick={closeDialog}
+            className="dialog__close-button"
+            aria-label="Close dialog"
+          >
+            <CloseLarge />
+          </button>
+        </div>
         {children}
       </dialog>
     );

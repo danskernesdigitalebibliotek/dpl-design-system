@@ -41,8 +41,39 @@ export default {
   },
 } as Meta<typeof ContentListItem>;
 
-const Template: StoryFn<typeof ContentListItem> = (args) => (
+export const TemplateEvent: StoryFn<typeof ContentListItem> = (args) => (
   <ContentListItem {...args} />
 );
 
-export const Default = Template.bind({});
+const TemplateArticle: StoryFn<typeof ContentListItem> = () => (
+  <ContentListItem
+    {...{
+      href: "#",
+      tagText: "True Crime",
+      title: "Peter Plys og honning-kuppet",
+      publicationDate: "15 Maj 2025",
+      description:
+        "Da honningen tog overhånd - en historie om Peter Plys og hans fald ind i afhængighedens mørke væsen.",
+      image: (
+        <ImageCredited src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHN0b2xlbiUyMGhvbmV5fGVufDB8fDB8fHww" />
+      ),
+    }}
+  />
+);
+
+const TemplateBranch: StoryFn<typeof ContentListItem> = () => (
+  <ContentListItem
+    {...{
+      href: "#",
+      title: "Hovedbiblioteket",
+      description: "Krystalgade 15, 1172 København K, Danmark",
+      image: (
+        <ImageCredited src="https://plus.unsplash.com/premium_photo-1661875977781-adbb21036841?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGxpYnJhcnl8ZW58MHx8MHx8fDA%3D" />
+      ),
+    }}
+  />
+);
+
+export const Event = TemplateEvent.bind({});
+export const Article = TemplateArticle.bind({});
+export const Branch = TemplateBranch.bind({});

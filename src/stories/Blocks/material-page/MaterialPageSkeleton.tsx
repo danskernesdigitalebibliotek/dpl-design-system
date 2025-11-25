@@ -1,23 +1,25 @@
 const MaterialPageSkeleton: React.FC = () => {
   return (
     <section className="material-page ssc">
-      <header className="material-header">
-        <div className="material-header__cover">
-          <div className="ssc-square cover cover--size-xlarge cover--aspect-xlarge" />
-        </div>
-        <div className="material-header__content">
-          <div>
-            <div className="scc-wrapper">
-              <div className="ssc-square mb-32" />
-              <div className="ssc-head-line mbs" />
-              <div className="ssc-head-line mbs" />
-              <div className="ssc-head-line mb-48" />
-              <div className="ssc-line w-30">&nbsp;</div>
-            </div>
-            <div className="scc-wrapper pt-48">
-              <div className="ssc-head-line w-80 mbs" />
-              <div className="ssc-head-line w-80 mbs" />
-              <div className="ssc-line" />
+      <header className="border-bottom">
+        <div className="material-header hero-grid hero-grid--material">
+          <div className="material-header__cover hero-grid__visual">
+            <div className="ssc-square cover cover--size-xlarge cover--aspect-xlarge" />
+          </div>
+          <div className="material-header__content hero-grid__content">
+            <div>
+              <div className="scc-wrapper">
+                <div className="ssc-square mb-32" />
+                <div className="ssc-head-line mbs" />
+                <div className="ssc-head-line mbs" />
+                <div className="ssc-head-line mb-48" />
+                <div className="ssc-line w-30">&nbsp;</div>
+              </div>
+              <div className="scc-wrapper pt-48">
+                <div className="ssc-head-line w-80 mbs" />
+                <div className="ssc-head-line w-80 mbs" />
+                <div className="ssc-line" />
+              </div>
             </div>
           </div>
         </div>

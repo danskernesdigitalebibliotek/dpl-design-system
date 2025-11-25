@@ -30,14 +30,14 @@ jobs:
           echo "DIST_FILENAME=dist-${RELEASE_BRANCH_SLUGGED}.zip" >> "$GITHUB_ENV"
 
       # Checkout the HEAD of the PR branch to get the latest commit message.
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Get release description
         run: |
           echo "RELEASE_DESCRIPTION=$(git show -s --format=%s)" >> "$GITHUB_ENV"
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v5
         with:
           node-version-file: '.nvmrc'
@@ -80,6 +80,7 @@ jobs:
         uses: softprops/action-gh-release@v2.4.2
         with:
           prerelease: true
+          draft: false
           target_commitish: ${{ env.RELEASE_SHA }}
           tag_name: ${{ env.TAG_NAME }}
           body: ${{ env.RELEASE_DESCRIPTION }}

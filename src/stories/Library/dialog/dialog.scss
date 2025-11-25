@@ -1,17 +1,25 @@
 .dialog {
   position: relative;
-  padding: 0;
   border-radius: 4px;
+  padding: $s-lg;
+}
+
+.dialog__top-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 16px;
 }
 
 .dialog__close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
   border: 0;
   cursor: pointer;
   background-color: transparent;
-  padding: 10px;
+  display: flex;
+
+  img {
+    height: 16px;
+    width: 16px;
+  }
 }
 
 .dialog--sidebar {
@@ -24,41 +32,42 @@
   background-color: $color__global-primary;
   position: fixed;
   height: 100dvh;
+  top: 0;
   width: 100%;
   left: auto;
+  transition:
+    transform 0.5s ease-out allow-discrete,
+    display 0.5s 0.5s ease-out allow-discrete,
+    overlay 0.3s ease-out allow-discrete;
+  transform: translateX(100vw);
 
   @include media-query__small {
     width: 435px;
   }
-  // Apply animation
-  // The 'allow-discrete' property is necessary for animating the dialog
-  transition-behavior: allow-discrete;
-  transition-property: translate overlay display;
-  transition-duration: 0.7s;
-  transition-timing-function: ease-out;
-  translate: 100vw 0;
 }
 
 .dialog--sidebar[open] {
-  translate: 0 0;
+  transform: translateX(0vw);
 }
 
 @starting-style {
   .dialog--sidebar[open] {
-    translate: 100vw 0;
+    transform: translateX(100vw);
   }
+}
+
+.dialog--sidebar::backdrop {
+  background-color: transparent;
+  transition: background-color 0.3s;
 }
 
 .dialog--sidebar[open]::backdrop {
-  animation: backdrop-fade-in 0.25s forwards;
+  background-color: rgb(0 0 0 / 25%);
 }
 
-@keyframes backdrop-fade-in {
-  from {
-    background-color: rgb(0 0 0 / 0%);
-  }
-  to {
-    background-color: rgb(0 0 0 / 25%);
+@starting-style {
+  .dialog--sidebar[open]::backdrop {
+    background-color: transparent;
   }
 }
 

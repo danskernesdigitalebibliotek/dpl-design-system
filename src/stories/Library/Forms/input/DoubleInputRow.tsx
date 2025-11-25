@@ -18,7 +18,7 @@ const DoubleInputRow: React.FC<DoubleInputRowProps> = ({
   validationRight,
 }) => {
   return (
-    <div className="dpl-input__flex">
+    <div className="dpl-input__double-row">
       <Input
         id={leftLabel}
         label={leftLabel}

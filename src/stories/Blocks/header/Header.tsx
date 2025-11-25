@@ -123,13 +123,17 @@ export const Header = ({
                   placeholder={inputPlaceholder}
                 />
                 <SearchIcon className="header__menu-search-icon" />
+                <ExpandMoreIcon
+                  className={clsx("header__menu-dropdown-icon", {
+                    "header__menu-dropdown-icon--expanded": isDropdownOpen,
+                  })}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                />
               </form>
-              <ExpandMoreIcon
-                className={clsx("header__menu-dropdown-icon", {
-                  "header__menu-dropdown-icon--expanded": isDropdownOpen,
-                })}
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              />
+              <a className="header__advanced-desktop" href="/advanced-search">
+                Avanceret søgning
+              </a>
+
               {isDropdownOpen && (
                 <div className="header__menu-dropdown">
                   <ul>
