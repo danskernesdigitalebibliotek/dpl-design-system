@@ -24,7 +24,9 @@
   border-left: 1px solid $color__global-tertiary-1;
 }
 
-.hui-multiselect__button--open .hui-multiselect__button-arrow {
+.hui-multiselect__button--open .hui-multiselect__button-arrow,
+.hui-multiselect__button:focus-within .hui-multiselect__button-arrow,
+.hui-multiselect__button:hover .hui-multiselect__button-arrow {
   border-left-color: $color__global-black;
 }
 
