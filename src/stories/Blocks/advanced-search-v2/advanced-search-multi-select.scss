@@ -85,7 +85,7 @@
   background-color: $color__global-primary;
   border: 1px solid $color__global-black;
   border-top: none;
-  overflow: hidden;
+  overflow: hidden !important;
   position: relative;
   z-index: 10;
 
