@@ -20,7 +20,9 @@
   border-left: 1px solid $color__global-tertiary-1;
 }
 
-.range-select__button--open .range-select__button-arrow {
+.range-select__button--open .range-select__button-arrow,
+.range-select__button:focus-within .range-select__button-arrow,
+.range-select__button:hover .range-select__button-arrow {
   border-left-color: $color__global-black;
 }
 
@@ -138,6 +140,11 @@
   align-items: flex-end;
   gap: $s-sm;
   padding: 0 $s-md;
+  flex-direction: column;
+
+  @include media-query__small {
+    flex-direction: row;
+  }
 }
 
 .range-select__field {
@@ -145,6 +152,7 @@
   display: flex;
   flex-direction: column;
   gap: $s-xs;
+  width: 100%;
 }
 
 .range-select__input {
@@ -171,6 +179,11 @@
   height: 40px;
   display: flex;
   align-items: center;
+  display: none;
+
+  @include media-query__small {
+    display: flex;
+  }
 }
 
 .range-select__footer {
