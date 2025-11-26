@@ -56,17 +56,13 @@
   button {
     width: 100%;
   }
-}
 
-.advanced-search-v2__reset-button.btn-outline {
-  border-color: transparent !important;
-  background: transparent !important;
+  @include media-query__small {
+    flex-wrap: nowrap;
 
-  &:not([disabled]):hover,
-  &:not([disabled]):focus-visible {
-    background: transparent !important;
-    border-color: $color__global-black !important;
-    color: $color__global-black !important;
+    button {
+      width: auto;
+    }
   }
 }
 
