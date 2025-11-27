@@ -58,12 +58,12 @@
 }
 
 .advanced-search-toggle__label {
-  @include typography($typo__tags);
+  @include typography($typo__lib-label--small);
   margin: 0;
 }
 
 .advanced-search-toggle__description {
-  @include typography($typo__small-caption);
+  @include typography($typo__lib-label--small);
   color: $color__text-secondary-gray;
   margin: 0;
   white-space: pre-wrap;
