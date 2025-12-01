@@ -154,7 +154,10 @@
 
     .checkbox__text {
       @include typography($typo__lib-base);
-      text-transform: capitalize;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
     }
   }
 }
