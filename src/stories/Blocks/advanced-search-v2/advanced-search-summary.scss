@@ -34,8 +34,11 @@
 
 .advanced-search-summary__value {
   font-weight: 500;
-  text-transform: capitalize;
   color: $color__global-black;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 .advanced-search-summary__operator {
