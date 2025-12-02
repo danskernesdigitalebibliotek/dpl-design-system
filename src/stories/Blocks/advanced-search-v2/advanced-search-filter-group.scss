@@ -1,4 +1,4 @@
-@use 'sass:color';
+@use "sass:color";
 
 .advanced-search-filter-group {
   border-top: $adv2-border;
@@ -90,7 +90,7 @@
   align-items: center;
   justify-content: space-between;
   gap: $s-sm;
-  padding: $s-xs $s-md;
+  padding: 0 $s-md;
 
   &:hover {
     background-color: $color__global-secondary;
@@ -125,7 +125,7 @@
   border-right: none;
   border-bottom: none;
   background: transparent;
-  padding: $s-sm 0 $s-xl;
+  padding: $s-sm 0 $s-lg;
   display: flex;
   align-items: center;
   gap: $s-sm;
