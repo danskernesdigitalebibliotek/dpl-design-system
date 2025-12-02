@@ -3,9 +3,13 @@
 
   display: flex;
   flex-direction: column;
-  gap: $s-2xl;
+  gap: $s-lg;
   margin-top: $s-lg;
   margin-bottom: $s-lg;
+
+  @include media-query__medium {
+    gap: $s-xl;
+  }
 }
 
 .advanced-search-v2__title {
@@ -57,7 +61,7 @@
     width: 100%;
   }
 
-  @include media-query__small {
+  @include media-query__medium {
     flex-wrap: nowrap;
 
     button {
@@ -82,7 +86,7 @@
   gap: $s-md;
   grid-template-columns: 1fr;
 
-  @include media-query__small {
+  @include media-query__medium {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -90,21 +94,47 @@
 .advanced-search-v2__results {
   display: flex;
   flex-direction: column;
-  gap: $s-2xl;
+  gap: $s-lg;
+
+  @include media-query__medium {
+    gap: $s-xl;
+  }
 }
 
 .advanced-search-v2__results-top-bar {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: $s-md;
+  gap: $s-lg;
   margin-bottom: $s-md;
+  flex-wrap: wrap;
+
+  @include media-query__medium {
+    gap: $s-md;
+  }
 }
 
 .advanced-search-v2__results-top-bar__left {
   display: flex;
   align-items: baseline;
   gap: $s-md;
+  width: 100%;
+
+  @include media-query__medium {
+    width: auto;
+  }
+}
+
+.advanced-search-v2__results-top-bar__right {
+  display: flex;
+  align-items: center;
+  gap: $s-md;
+  width: 100%;
+  justify-content: space-between;
+
+  @include media-query__medium {
+    width: auto;
+  }
 }
 
 .advanced-search-v2__results-heading {
@@ -113,8 +143,12 @@
 
 .advanced-search-v2__grid {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr;
   gap: $s-md;
+
+  @include media-query__medium {
+    grid-template-columns: 1fr 3fr;
+  }
 
   .content-list {
     padding: 0;
@@ -205,4 +239,25 @@
 .advanced-search-v2__copy-link .text-small-caption {
   @include typography($typo__lib-label--small);
   font-weight: 500;
+}
+
+.advanced-search-v2__modify-filters-button {
+  @include typography($typo__lib-label--small);
+  display: flex;
+  align-items: center;
+  gap: $s-xs;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: $color__global-black;
+  cursor: pointer;
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+
+  @include media-query__medium {
+    display: none;
+  }
 }

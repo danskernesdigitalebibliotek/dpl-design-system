@@ -2,7 +2,7 @@
   display: none;
   margin-bottom: auto;
 
-  @include media-query__small {
+  @include media-query__medium {
     display: flex;
   }
 }
