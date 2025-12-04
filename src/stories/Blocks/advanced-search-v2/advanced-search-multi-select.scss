@@ -162,6 +162,12 @@
   }
 }
 
+.hui-multiselect__divider {
+  height: 2px;
+  background-color: $color__global-tertiary-1;
+  margin: $s-xs $s-md;
+}
+
 .hui-multiselect__footer {
   border-top: 1px solid $color__global-tertiary-1;
   padding: $s-sm $s-md $s-lg;
