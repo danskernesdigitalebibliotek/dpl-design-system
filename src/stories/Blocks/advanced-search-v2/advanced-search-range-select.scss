@@ -177,7 +177,6 @@
 .range-select__separator {
   @include typography($typo__lib-label--small);
   height: 40px;
-  display: flex;
   align-items: center;
   display: none;
 
