@@ -67,6 +67,10 @@
   }
 }
 
+.checkbox.checkbox--preserve-case .checkbox__text::first-letter {
+  text-transform: unset !important;
+}
+
 .checkbox__label:hover .checkbox__icon:first-of-type {
   border-color: $color__global-grey;
 }
