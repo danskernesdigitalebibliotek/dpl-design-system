@@ -6,7 +6,7 @@
   gap: $s-sm;
 
   @include media-query__medium {
-    padding: $s-md;
+    padding: $s-lg $s-md;
   }
 }
 
