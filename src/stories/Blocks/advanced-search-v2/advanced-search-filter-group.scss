@@ -71,12 +71,12 @@
 .advanced-search-filter-group__chevron {
   width: $s-lg;
   height: $s-lg;
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   transition: transform 0.2s;
   flex-shrink: 0;
 
   &--expanded {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
 }
 
