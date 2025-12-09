@@ -381,6 +381,16 @@ $typo__lib-label: (
   ),
 );
 
+$typo__lib-label--small: (
+  mobile: (
+    font-family: $font__body,
+    font-style: normal,
+    font-weight: 500,
+    font-size: 12px,
+    line-height: 16px,
+  ),
+);
+
 $typo__lib-input: (
   mobile: (
     font-family: $font__body,

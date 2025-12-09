@@ -1,0 +1,198 @@
+.range-select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $s-sm;
+}
+
+.range-select-wrapper__label {
+  @include typography($typo__lib-label--small);
+  color: $color__global-black;
+}
+
+.range-select__button-arrow {
+  margin-right: -$s-md;
+  pointer-events: none;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid $color__global-tertiary-1;
+}
+
+.range-select__button--open .range-select__button-arrow,
+.range-select__button:focus-within .range-select__button-arrow,
+.range-select__button:hover .range-select__button-arrow {
+  border-left-color: $color__global-black;
+}
+
+.range-select__button {
+  @include typography($typo__lib-input);
+  padding: $s-md;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  min-width: 200px;
+  border: 1px solid $color__global-tertiary-1;
+  text-overflow: ellipsis;
+  position: relative;
+  justify-content: space-between;
+
+  &:focus-within,
+  &:hover,
+  &--open {
+    border: 1px solid $color__global-black;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.range-select__button-label {
+  @include typography($typo__lib-input);
+  display: flex;
+  gap: $s-sm;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.range-select__button-label__count-badge {
+  @include typography($typo__lib-input);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  min-width: 24px;
+  padding: 0 $s-xs;
+  background-color: $color__global-black;
+  color: $color__global-white;
+  border-radius: $s-xs;
+  line-height: $s-lg;
+}
+
+.range-select__popover-panel {
+  // --button-width comes from headless ui combobox
+  width: var(--button-width);
+  background-color: $color__global-primary;
+  border: 1px solid $color__global-black;
+  border-top: none;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.range-select__content {
+  display: flex;
+  flex-direction: column;
+  gap: $s-md;
+}
+
+.range-select__options {
+  display: flex;
+  flex-direction: column;
+}
+
+.range-select__option {
+  padding: $s-sm $s-md;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-align: left;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.range-select__option-inner {
+  @include typography($typo__lib-input);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: $s-sm;
+}
+
+.range-select__option__bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  &--checked {
+    background: $color__global-black;
+  }
+}
+
+.range-select__range {
+  display: flex;
+  align-items: flex-end;
+  gap: $s-sm;
+  padding: 0 $s-md;
+  flex-direction: column;
+
+  @include media-query__small {
+    flex-direction: row;
+  }
+}
+
+.range-select__field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $s-xs;
+  width: 100%;
+}
+
+.range-select__input {
+  @include typography($typo__lib-input);
+  background-color: transparent;
+  border: none;
+  border: 1px solid $color__global-tertiary-1;
+  height: 40px;
+  outline: none;
+  padding: $s-md;
+
+  &::placeholder {
+    color: $color__global-tertiary-2;
+  }
+
+  &:focus {
+    border-color: $color__global-black;
+    background-color: white;
+  }
+}
+
+.range-select__separator {
+  @include typography($typo__lib-label--small);
+  height: 40px;
+  align-items: center;
+  display: none;
+
+  @include media-query__small {
+    display: flex;
+  }
+}
+
+.range-select__footer {
+  border-top: 1px solid $color__global-tertiary-1;
+  padding: $s-sm $s-md $s-lg;
+}
+
+.range-select__reset-button {
+  @include typography($typo__lib-label--small);
+  cursor: pointer;
+  text-decoration: underline;
+  border: none;
+}
