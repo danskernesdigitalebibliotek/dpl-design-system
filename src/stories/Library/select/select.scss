@@ -1,0 +1,86 @@
+.select {
+  position: relative;
+  width: 100%;
+  flex: 1;
+}
+
+.select-button {
+  @include typography($typo__lib-input);
+  padding: $s-md;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  min-width: 200px;
+  border: 1px solid $color__global-tertiary-1;
+  text-overflow: ellipsis;
+  position: relative;
+  justify-content: space-between;
+
+  &:focus-within,
+  &:hover {
+    border: 1px solid $color__global-black;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.select--focused .select-button {
+  border: 1px solid $color__global-black;
+}
+
+.select-button__arrow {
+  margin-right: -$s-md;
+  pointer-events: none;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid $color__global-tertiary-1;
+}
+
+.select--focused .select-button__arrow {
+  border-left-color: $color__global-black;
+}
+
+.select-button:focus-within .select-button__arrow,
+.select-button:hover .select-button__arrow {
+  border-left-color: $color__global-black;
+}
+
+.select-options {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  background-color: $color__global-primary;
+  border: 1px solid $color__global-black;
+  border-top: none;
+  outline: none;
+  width: var(--button-width);
+}
+
+.select-option {
+  @include typography($typo__lib-base);
+  border-top: none;
+  padding: $s-sm $s-md;
+  text-align: left;
+  outline: none;
+  background-color: $color__global-primary;
+  white-space: nowrap;
+  height: 40px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus,
+  &--focused {
+    background-color: $color__global-secondary;
+  }
+}

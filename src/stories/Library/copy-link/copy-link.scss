@@ -1,6 +1,7 @@
 .copy-link {
   display: flex;
   gap: 4px;
+  cursor: pointer;
 
   svg,
   img {
@@ -11,5 +12,10 @@
 
   &--success {
     color: $color__copy-success;
+  }
+
+  img {
+    width: 14px;
+    height: 14px;
   }
 }
