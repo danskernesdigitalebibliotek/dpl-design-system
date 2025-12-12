@@ -14,7 +14,7 @@ const Template: StoryFn<typeof AdvancedSearchAgeSelect> = ({
 }: {
   open?: boolean;
 }) => (
-  <div style={{ maxWidth: 500, margin: "auto" }}>
+  <div style={{ margin: "auto" }}>
     <AdvancedSearchAgeSelect open={open} />
   </div>
 );

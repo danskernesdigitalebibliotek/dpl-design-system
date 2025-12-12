@@ -14,7 +14,7 @@ const Template: StoryFn<typeof AdvancedSearchPublicationYearSelect> = ({
 }: {
   open?: boolean;
 }) => (
-  <div style={{ maxWidth: 500, margin: "auto" }}>
+  <div style={{ margin: "auto" }}>
     <AdvancedSearchPublicationYearSelect open={open} />
   </div>
 );

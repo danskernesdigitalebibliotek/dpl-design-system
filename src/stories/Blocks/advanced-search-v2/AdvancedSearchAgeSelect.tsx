@@ -28,7 +28,11 @@ const AdvancedSearchAgeSelect: React.FC<{ open?: boolean }> = ({
           <div
             className="range-select__popover-panel"
             data-open=""
-            style={{ "--button-width": "500px" } as React.CSSProperties}
+            style={
+              {
+                "--button-width": "100%",
+              } as React.CSSProperties
+            }
           >
             <div className="range-select__content">
               <div role="radiogroup">
