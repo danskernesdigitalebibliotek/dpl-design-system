@@ -33,9 +33,9 @@ const AdvancedSearchSummary: React.FC = () => {
         </div>
       </div>
       <div className="advanced-search-v2__grid">
-        <aside className="advanced-search-filters">
-          <div className="advanced-search-filters__container">
-            <ul className="advanced-search-filters__toggles">
+        <aside className="advanced-search-facets">
+          <div className="advanced-search-facets__container">
+            <ul className="advanced-search-facets__toggles">
               <li>
                 <div className="advanced-search-toggle">
                   <button
@@ -86,33 +86,33 @@ const AdvancedSearchSummary: React.FC = () => {
                 </div>
               </li>
             </ul>
-            <ul className="advanced-search-filters__groups">
-              <li className="advanced-search-filter-group">
+            <ul className="advanced-search-facets__groups">
+              <li className="advanced-search-facet-group">
                 <button
                   type="button"
-                  className="advanced-search-filter-group__header"
+                  className="advanced-search-facet-group__header"
                   aria-expanded="true"
                   aria-controls="filter-group-content-ACCESSTYPE"
                 >
-                  <div className="advanced-search-filter-group__header-content">
-                    <span className="advanced-search-filter-group__label">
+                  <div className="advanced-search-facet-group__header-content">
+                    <span className="advanced-search-facet-group__label">
                       Fysisk / online
                     </span>
-                    <span className="advanced-search-filter-group__count-badge">
+                    <span className="advanced-search-facet-group__count-badge">
                       1
                     </span>
                   </div>
                   <img
                     alt=""
-                    className="advanced-search-filter-group__chevron advanced-search-filter-group__chevron--expanded"
+                    className="advanced-search-facet-group__chevron advanced-search-facet-group__chevron--expanded"
                     src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.46967 9.53033C5.17678 9.23744 5.17678 8.76256 5.46967 8.46967C5.73594 8.2034 6.1526 8.1792 6.44621 8.39705L6.53033 8.46967L12 13.939L17.4697 8.46967C17.7359 8.2034 18.1526 8.1792 18.4462 8.39705L18.5303 8.46967C18.7966 8.73594 18.8208 9.1526 18.6029 9.44621L18.5303 9.53033L12.5303 15.5303C12.2641 15.7966 11.8474 15.8208 11.5538 15.6029L11.4697 15.5303L5.46967 9.53033Z' fill='black'/%3e %3c/svg%3e"
                   />
                 </button>
                 <ul
                   id="filter-group-content-ACCESSTYPE"
-                  className="advanced-search-filter-group__content"
+                  className="advanced-search-facet-group__content"
                 >
-                  <li className="advanced-search-filter-group__item">
+                  <li className="advanced-search-facet-group__item">
                     <div className="checkbox">
                       <input
                         id="filter-ACCESSTYPE-fysisk"
@@ -146,12 +146,12 @@ const AdvancedSearchSummary: React.FC = () => {
                     </div>
                     <span
                       id="filter-ACCESSTYPE-fysisk-count"
-                      className="advanced-search-filter-group__item-count"
+                      className="advanced-search-facet-group__item-count"
                     >
                       2
                     </span>
                   </li>
-                  <li className="advanced-search-filter-group__item">
+                  <li className="advanced-search-facet-group__item">
                     <div className="checkbox">
                       <input
                         id="filter-ACCESSTYPE-online"
@@ -184,161 +184,161 @@ const AdvancedSearchSummary: React.FC = () => {
                     </div>
                     <span
                       id="filter-ACCESSTYPE-online-count"
-                      className="advanced-search-filter-group__item-count"
+                      className="advanced-search-facet-group__item-count"
                     >
                       1
                     </span>
                   </li>
                 </ul>
               </li>
-              <li className="advanced-search-filter-group">
+              <li className="advanced-search-facet-group">
                 <button
                   type="button"
-                  className="advanced-search-filter-group__header"
+                  className="advanced-search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-SPECIFICMATERIALTYPE"
                 >
-                  <div className="advanced-search-filter-group__header-content">
-                    <span className="advanced-search-filter-group__label">
+                  <div className="advanced-search-facet-group__header-content">
+                    <span className="advanced-search-facet-group__label">
                       Format
                     </span>
                   </div>
                   <img
                     alt=""
-                    className="advanced-search-filter-group__chevron"
+                    className="advanced-search-facet-group__chevron"
                     src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.46967 9.53033C5.17678 9.23744 5.17678 8.76256 5.46967 8.46967C5.73594 8.2034 6.1526 8.1792 6.44621 8.39705L6.53033 8.46967L12 13.939L17.4697 8.46967C17.7359 8.2034 18.1526 8.1792 18.4462 8.39705L18.5303 8.46967C18.7966 8.73594 18.8208 9.1526 18.6029 9.44621L18.5303 9.53033L12.5303 15.5303C12.2641 15.7966 11.8474 15.8208 11.5538 15.6029L11.4697 15.5303L5.46967 9.53033Z' fill='black'/%3e %3c/svg%3e"
                   />
                 </button>
               </li>
-              <li className="advanced-search-filter-group">
+              <li className="advanced-search-facet-group">
                 <button
                   type="button"
-                  className="advanced-search-filter-group__header"
+                  className="advanced-search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-CREATOR"
                 >
-                  <div className="advanced-search-filter-group__header-content">
-                    <span className="advanced-search-filter-group__label">
+                  <div className="advanced-search-facet-group__header-content">
+                    <span className="advanced-search-facet-group__label">
                       Forfatter / ophav
                     </span>
                   </div>
                   <img
                     alt=""
-                    className="advanced-search-filter-group__chevron"
+                    className="advanced-search-facet-group__chevron"
                     src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.46967 9.53033C5.17678 9.23744 5.17678 8.76256 5.46967 8.46967C5.73594 8.2034 6.1526 8.1792 6.44621 8.39705L6.53033 8.46967L12 13.939L17.4697 8.46967C17.7359 8.2034 18.1526 8.1792 18.4462 8.39705L18.5303 8.46967C18.7966 8.73594 18.8208 9.1526 18.6029 9.44621L18.5303 9.53033L12.5303 15.5303C12.2641 15.7966 11.8474 15.8208 11.5538 15.6029L11.4697 15.5303L5.46967 9.53033Z' fill='black'/%3e %3c/svg%3e"
                   />
                 </button>
               </li>
-              <li className="advanced-search-filter-group">
+              <li className="advanced-search-facet-group">
                 <button
                   type="button"
-                  className="advanced-search-filter-group__header"
+                  className="advanced-search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-PUBLICATIONYEAR"
                 >
-                  <div className="advanced-search-filter-group__header-content">
-                    <span className="advanced-search-filter-group__label">
+                  <div className="advanced-search-facet-group__header-content">
+                    <span className="advanced-search-facet-group__label">
                       Udgivelsesår
                     </span>
                   </div>
                   <img
                     alt=""
-                    className="advanced-search-filter-group__chevron"
+                    className="advanced-search-facet-group__chevron"
                     src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.46967 9.53033C5.17678 9.23744 5.17678 8.76256 5.46967 8.46967C5.73594 8.2034 6.1526 8.1792 6.44621 8.39705L6.53033 8.46967L12 13.939L17.4697 8.46967C17.7359 8.2034 18.1526 8.1792 18.4462 8.39705L18.5303 8.46967C18.7966 8.73594 18.8208 9.1526 18.6029 9.44621L18.5303 9.53033L12.5303 15.5303C12.2641 15.7966 11.8474 15.8208 11.5538 15.6029L11.4697 15.5303L5.46967 9.53033Z' fill='black'/%3e %3c/svg%3e"
                   />
                 </button>
               </li>
-              <li className="advanced-search-filter-group">
+              <li className="advanced-search-facet-group">
                 <button
                   type="button"
-                  className="advanced-search-filter-group__header"
+                  className="advanced-search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-SOURCE"
                 >
-                  <div className="advanced-search-filter-group__header-content">
-                    <span className="advanced-search-filter-group__label">
+                  <div className="advanced-search-facet-group__header-content">
+                    <span className="advanced-search-facet-group__label">
                       Kilde
                     </span>
                   </div>
                   <img
                     alt=""
-                    className="advanced-search-filter-group__chevron"
+                    className="advanced-search-facet-group__chevron"
                     src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.46967 9.53033C5.17678 9.23744 5.17678 8.76256 5.46967 8.46967C5.73594 8.2034 6.1526 8.1792 6.44621 8.39705L6.53033 8.46967L12 13.939L17.4697 8.46967C17.7359 8.2034 18.1526 8.1792 18.4462 8.39705L18.5303 8.46967C18.7966 8.73594 18.8208 9.1526 18.6029 9.44621L18.5303 9.53033L12.5303 15.5303C12.2641 15.7966 11.8474 15.8208 11.5538 15.6029L11.4697 15.5303L5.46967 9.53033Z' fill='black'/%3e %3c/svg%3e"
                   />
                 </button>
               </li>
-              <li className="advanced-search-filter-group">
+              <li className="advanced-search-facet-group">
                 <button
                   type="button"
-                  className="advanced-search-filter-group__header"
+                  className="advanced-search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-HOSTPUBLICATION"
                 >
-                  <div className="advanced-search-filter-group__header-content">
-                    <span className="advanced-search-filter-group__label">
+                  <div className="advanced-search-facet-group__header-content">
+                    <span className="advanced-search-facet-group__label">
                       Værtspublikation
                     </span>
                   </div>
                   <img
                     alt=""
-                    className="advanced-search-filter-group__chevron"
+                    className="advanced-search-facet-group__chevron"
                     src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.46967 9.53033C5.17678 9.23744 5.17678 8.76256 5.46967 8.46967C5.73594 8.2034 6.1526 8.1792 6.44621 8.39705L6.53033 8.46967L12 13.939L17.4697 8.46967C17.7359 8.2034 18.1526 8.1792 18.4462 8.39705L18.5303 8.46967C18.7966 8.73594 18.8208 9.1526 18.6029 9.44621L18.5303 9.53033L12.5303 15.5303C12.2641 15.7966 11.8474 15.8208 11.5538 15.6029L11.4697 15.5303L5.46967 9.53033Z' fill='black'/%3e %3c/svg%3e"
                   />
                 </button>
               </li>
-              <li className="advanced-search-filter-group">
+              <li className="advanced-search-facet-group">
                 <button
                   type="button"
-                  className="advanced-search-filter-group__header"
+                  className="advanced-search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-MAINLANGUAGE"
                 >
-                  <div className="advanced-search-filter-group__header-content">
-                    <span className="advanced-search-filter-group__label">
+                  <div className="advanced-search-facet-group__header-content">
+                    <span className="advanced-search-facet-group__label">
                       Sprog
                     </span>
                   </div>
                   <img
                     alt=""
-                    className="advanced-search-filter-group__chevron"
+                    className="advanced-search-facet-group__chevron"
                     src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.46967 9.53033C5.17678 9.23744 5.17678 8.76256 5.46967 8.46967C5.73594 8.2034 6.1526 8.1792 6.44621 8.39705L6.53033 8.46967L12 13.939L17.4697 8.46967C17.7359 8.2034 18.1526 8.1792 18.4462 8.39705L18.5303 8.46967C18.7966 8.73594 18.8208 9.1526 18.6029 9.44621L18.5303 9.53033L12.5303 15.5303C12.2641 15.7966 11.8474 15.8208 11.5538 15.6029L11.4697 15.5303L5.46967 9.53033Z' fill='black'/%3e %3c/svg%3e"
                   />
                 </button>
               </li>
-              <li className="advanced-search-filter-group">
+              <li className="advanced-search-facet-group">
                 <button
                   type="button"
-                  className="advanced-search-filter-group__header"
+                  className="advanced-search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-SUBJECT"
                 >
-                  <div className="advanced-search-filter-group__header-content">
-                    <span className="advanced-search-filter-group__label">
+                  <div className="advanced-search-facet-group__header-content">
+                    <span className="advanced-search-facet-group__label">
                       Emne
                     </span>
                   </div>
                   <img
                     alt=""
-                    className="advanced-search-filter-group__chevron"
+                    className="advanced-search-facet-group__chevron"
                     src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.46967 9.53033C5.17678 9.23744 5.17678 8.76256 5.46967 8.46967C5.73594 8.2034 6.1526 8.1792 6.44621 8.39705L6.53033 8.46967L12 13.939L17.4697 8.46967C17.7359 8.2034 18.1526 8.1792 18.4462 8.39705L18.5303 8.46967C18.7966 8.73594 18.8208 9.1526 18.6029 9.44621L18.5303 9.53033L12.5303 15.5303C12.2641 15.7966 11.8474 15.8208 11.5538 15.6029L11.4697 15.5303L5.46967 9.53033Z' fill='black'/%3e %3c/svg%3e"
                   />
                 </button>
               </li>
-              <li className="advanced-search-filter-group">
+              <li className="advanced-search-facet-group">
                 <button
                   type="button"
-                  className="advanced-search-filter-group__header"
+                  className="advanced-search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-PRIMARYTARGET"
                 >
-                  <div className="advanced-search-filter-group__header-content">
-                    <span className="advanced-search-filter-group__label">
+                  <div className="advanced-search-facet-group__header-content">
+                    <span className="advanced-search-facet-group__label">
                       Fagligt niveau
                     </span>
                   </div>
                   <img
                     alt=""
-                    className="advanced-search-filter-group__chevron"
+                    className="advanced-search-facet-group__chevron"
                     src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.46967 9.53033C5.17678 9.23744 5.17678 8.76256 5.46967 8.46967C5.73594 8.2034 6.1526 8.1792 6.44621 8.39705L6.53033 8.46967L12 13.939L17.4697 8.46967C17.7359 8.2034 18.1526 8.1792 18.4462 8.39705L18.5303 8.46967C18.7966 8.73594 18.8208 9.1526 18.6029 9.44621L18.5303 9.53033L12.5303 15.5303C12.2641 15.7966 11.8474 15.8208 11.5538 15.6029L11.4697 15.5303L5.46967 9.53033Z' fill='black'/%3e %3c/svg%3e"
                   />
                 </button>

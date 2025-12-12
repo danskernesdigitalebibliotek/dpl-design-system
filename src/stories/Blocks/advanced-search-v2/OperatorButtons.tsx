@@ -2,17 +2,17 @@ import React from "react";
 
 const OperatorButtons: React.FC = () => {
   return (
-    <div className="advanced-search-suggest__operators">
-      <button type="button" className="advanced-search-suggest__operator">
+    <div className="advanced-search-filter__operators">
+      <button type="button" className="advanced-search-filter__operator">
         OG
       </button>
       <button
         type="button"
-        className="advanced-search-suggest__operator advanced-search-suggest__operator--active"
+        className="advanced-search-filter__operator advanced-search-filter__operator--active"
       >
         ELLER
       </button>
-      <button type="button" className="advanced-search-suggest__operator">
+      <button type="button" className="advanced-search-filter__operator">
         IKKE
       </button>
     </div>

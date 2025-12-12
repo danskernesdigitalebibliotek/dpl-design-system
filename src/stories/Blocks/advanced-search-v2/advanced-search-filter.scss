@@ -1,12 +1,12 @@
 @use "sass:color";
 
-.advanced-search-suggest-wrapper {
+.advanced-search-filter-wrapper {
   display: flex;
   gap: $s-sm;
   align-items: center;
 }
 
-.advanced-search-suggest {
+.advanced-search-filter {
   display: flex;
   gap: $s-sm;
   align-items: center;
@@ -18,12 +18,12 @@
   }
 }
 
-.advanced-search-suggest__combobox-wrapper {
+.advanced-search-filter__combobox-wrapper {
   width: 100%;
   flex: 2;
 }
 
-.advanced-search-suggest__remove-button {
+.advanced-search-filter__remove-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,13 +46,13 @@
   }
 }
 
-.advanced-search-suggest__operators {
+.advanced-search-filter__operators {
   display: flex;
   gap: $s-sm;
   align-items: center;
 }
 
-.advanced-search-suggest__operator {
+.advanced-search-filter__operator {
   @include typography($typo__tags);
 
   display: flex;

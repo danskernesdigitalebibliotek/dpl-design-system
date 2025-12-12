@@ -4,8 +4,8 @@ const AdvancedSearchForm: React.FC = () => {
   return (
     <section className="advanced-search-v2__form">
       <div className="advanced-search-v2__suggests">
-        <div className="advanced-search-suggest-wrapper">
-          <div className="advanced-search-suggest">
+        <div className="advanced-search-filter-wrapper">
+          <div className="advanced-search-filter">
             <div className="select">
               <button
                 className="select-button"
@@ -22,7 +22,7 @@ const AdvancedSearchForm: React.FC = () => {
                 </div>
               </button>
             </div>
-            <div className="advanced-search-suggest__combobox-wrapper">
+            <div className="advanced-search-filter__combobox-wrapper">
               <input
                 className="combobox-input"
                 placeholder="Søg efter bøger, film, musik og mere"
@@ -32,7 +32,7 @@ const AdvancedSearchForm: React.FC = () => {
           </div>
           <button
             type="button"
-            className="advanced-search-suggest__remove-button"
+            className="advanced-search-filter__remove-button"
             aria-label="Fjern række @inputNumber"
           >
             <img
@@ -41,22 +41,22 @@ const AdvancedSearchForm: React.FC = () => {
             />
           </button>
         </div>
-        <div className="advanced-search-suggest__operators">
+        <div className="advanced-search-filter__operators">
           <button
             type="button"
-            className="advanced-search-suggest__operator advanced-search-suggest__operator--active"
+            className="advanced-search-filter__operator advanced-search-filter__operator--active"
           >
             OG
           </button>
-          <button type="button" className="advanced-search-suggest__operator">
+          <button type="button" className="advanced-search-filter__operator">
             ELLER
           </button>
-          <button type="button" className="advanced-search-suggest__operator">
+          <button type="button" className="advanced-search-filter__operator">
             IKKE
           </button>
         </div>
-        <div className="advanced-search-suggest-wrapper">
-          <div className="advanced-search-suggest">
+        <div className="advanced-search-filter-wrapper">
+          <div className="advanced-search-filter">
             <div className="select">
               <button
                 className="select-button"
@@ -75,7 +75,7 @@ const AdvancedSearchForm: React.FC = () => {
                 </div>
               </button>
             </div>
-            <div className="advanced-search-suggest__combobox-wrapper">
+            <div className="advanced-search-filter__combobox-wrapper">
               <input
                 className="combobox-input"
                 placeholder="Søg efter bøger, film, musik og mere"
@@ -85,7 +85,7 @@ const AdvancedSearchForm: React.FC = () => {
           </div>
           <button
             type="button"
-            className="advanced-search-suggest__remove-button"
+            className="advanced-search-filter__remove-button"
             aria-label="Fjern række @inputNumber"
           >
             <img

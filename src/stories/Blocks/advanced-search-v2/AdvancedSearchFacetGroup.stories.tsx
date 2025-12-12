@@ -1,22 +1,22 @@
 import { StoryFn, Meta } from "@storybook/react-webpack5";
-import AdvancedSearchFilterGroup from "./AdvancedSearchFilterGroup";
+import AdvancedSearchFacetGroup from "./AdvancedSearchFacetGroup";
 
 export default {
   title: "Blocks / Advanced Search v2 / Filter Group",
-  component: AdvancedSearchFilterGroup,
+  component: AdvancedSearchFacetGroup,
   parameters: {
     layout: "fullscreen",
   },
-} as Meta<typeof AdvancedSearchFilterGroup>;
+} as Meta<typeof AdvancedSearchFacetGroup>;
 
-const Template: StoryFn<typeof AdvancedSearchFilterGroup> = ({
+const Template: StoryFn<typeof AdvancedSearchFacetGroup> = ({
   open,
 }: {
   open?: boolean;
 }) => (
   <div style={{ maxWidth: 500, margin: "auto", padding: "2rem" }}>
     <ul>
-      <AdvancedSearchFilterGroup open={open} />
+      <AdvancedSearchFacetGroup open={open} />
     </ul>
   </div>
 );

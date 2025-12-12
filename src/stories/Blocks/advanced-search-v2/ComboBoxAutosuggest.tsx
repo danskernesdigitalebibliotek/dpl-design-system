@@ -2,7 +2,7 @@ import React from "react";
 
 const ComboBoxAutosuggest: React.FC<{ open?: boolean }> = ({ open }) => {
   return (
-    <div className="advanced-search-suggest__combobox-wrapper">
+    <div className="advanced-search-filter__combobox-wrapper">
       <input
         className="combobox-input"
         placeholder="Search in all material…"
