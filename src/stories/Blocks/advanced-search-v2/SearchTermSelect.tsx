@@ -23,6 +23,7 @@ const SearchTermSelect: React.FC<{ open?: boolean }> = ({ open }) => {
         <div
           className="select-options"
           aria-orientation="vertical"
+          aria-label="Select search term"
           role="listbox"
           data-open=""
           style={{ "--button-width": "370px" } as React.CSSProperties}
