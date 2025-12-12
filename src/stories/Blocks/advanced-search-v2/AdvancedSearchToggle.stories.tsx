@@ -12,7 +12,7 @@ export default {
 const Template: StoryFn<typeof AdvancedSearchToggle> = ({
   checked,
 }: {
-  checked: boolean;
+  checked?: boolean;
 }) => (
   <div style={{ maxWidth: 500, margin: "auto", padding: "2rem" }}>
     <AdvancedSearchToggle checked={checked} />
