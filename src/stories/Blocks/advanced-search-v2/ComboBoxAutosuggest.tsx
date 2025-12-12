@@ -18,7 +18,7 @@ const ComboBoxAutosuggest: React.FC<{ open?: boolean }> = ({ open }) => {
           data-open=""
           style={
             {
-              "--input-width": "500px",
+              "--input-width": "100%",
               "--button-width": "0px",
             } as React.CSSProperties
           }

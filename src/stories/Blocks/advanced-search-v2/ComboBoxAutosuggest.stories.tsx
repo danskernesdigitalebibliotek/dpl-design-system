@@ -14,7 +14,7 @@ const Template: StoryFn<typeof ComboBoxAutosuggest> = ({
 }: {
   open?: boolean;
 }) => (
-  <div style={{ maxWidth: 500, margin: "auto" }}>
+  <div style={{ margin: "auto" }}>
     <ComboBoxAutosuggest open={open} />
   </div>
 );
