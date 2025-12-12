@@ -3,7 +3,10 @@ import React from "react";
 const AdvancedSortSelect: React.FC = () => {
   return (
     <div className="advanced-search-v2__sort-select">
-      <label className="advanced-search-v2__sort-select__label">
+      <label
+        className="advanced-search-v2__sort-select__label"
+        htmlFor="advanced-sort-select"
+      >
         Sorter efter
       </label>
       <div className="advanced-search-v2__sort-select__select-wrapper">

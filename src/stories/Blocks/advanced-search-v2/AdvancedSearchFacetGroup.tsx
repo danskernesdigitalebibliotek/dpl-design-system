@@ -6,8 +6,7 @@ const AdvancedSearchFacetGroup: React.FC<{ open?: boolean }> = ({ open }) => {
       <button
         type="button"
         className="advanced-search-facet-group__header"
-        aria-expanded="true"
-        aria-controls="filter-group-content-ACCESSTYPE"
+        aria-expanded={open ? "true" : "false"}
       >
         <div className="advanced-search-facet-group__header-content">
           <span className="advanced-search-facet-group__label">

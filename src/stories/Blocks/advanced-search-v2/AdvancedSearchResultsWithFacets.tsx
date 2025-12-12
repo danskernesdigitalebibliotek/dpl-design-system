@@ -474,8 +474,6 @@ const AdvancedSearchSummary: React.FC = () => {
                   <h2
                     className="card-list-item__title text-header-h4 mb-4"
                     data-cy="card-list-item-title"
-                    lang="dan"
-                    id="_r_3n_"
                   >
                     <a
                       href="https://staging.dplplat01.dpl.reload.dk/work/work-of:870971-tsart:142355817"
@@ -583,7 +581,7 @@ const AdvancedSearchSummary: React.FC = () => {
                   <h2
                     className="card-list-item__title text-header-h4 mb-4"
                     data-cy="card-list-item-title"
-                    lang="dan"
+                    lang="da"
                     id="_r_3o_"
                   >
                     <a

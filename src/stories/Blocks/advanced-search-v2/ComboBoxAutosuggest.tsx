@@ -13,7 +13,7 @@ const ComboBoxAutosuggest: React.FC<{ open?: boolean }> = ({ open }) => {
       {open && (
         <div
           className="combobox-options"
-          aria-labelledby=""
+          aria-label="Search suggestions"
           role="listbox"
           data-open=""
           style={

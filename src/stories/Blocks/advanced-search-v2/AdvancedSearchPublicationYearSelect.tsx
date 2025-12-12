@@ -10,10 +10,10 @@ const AdvancedSearchPublicationYearSelect: React.FC<{ open?: boolean }> = ({
         <button
           className="range-select__button range-select__button--open"
           type="button"
-          aria-expanded="true"
+          aria-expanded={open ? "true" : "false"}
           data-open=""
           data-active=""
-          aria-controls="headlessui-popover-panel-_r_1q_"
+          {...(open && { "aria-controls": "headlessui-popover-panel-_r_1q_" })}
         >
           <div className="range-select__button-label">
             Selected
@@ -30,6 +30,7 @@ const AdvancedSearchPublicationYearSelect: React.FC<{ open?: boolean }> = ({
         </button>
         {open && (
           <div
+            id="headlessui-popover-panel-_r_1q_"
             className="range-select__popover-panel"
             data-open=""
             style={{ "--button-width": "100%" } as React.CSSProperties}
