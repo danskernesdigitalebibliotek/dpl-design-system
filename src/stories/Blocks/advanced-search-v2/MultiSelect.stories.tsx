@@ -14,7 +14,7 @@ const Template: StoryFn<typeof MultiSelect> = ({
 }: {
   open?: boolean;
 }) => (
-  <div style={{ maxWidth: 500, margin: "auto" }}>
+  <div style={{ margin: "auto" }}>
     <MultiSelect open={open} />
   </div>
 );

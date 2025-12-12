@@ -32,7 +32,7 @@ const MultiSelect: React.FC<{ open?: boolean }> = ({ open }) => {
             className="hui-multiselect__popover-panel"
             data-headlessui-state="open"
             data-open=""
-            style={{ "--button-width": "500px" } as React.CSSProperties}
+            style={{ "--button-width": "100%" } as React.CSSProperties}
           >
             <input
               readOnly
