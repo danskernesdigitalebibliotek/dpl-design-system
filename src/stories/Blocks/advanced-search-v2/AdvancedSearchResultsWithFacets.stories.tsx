@@ -2,7 +2,7 @@ import { StoryFn, Meta } from "@storybook/react-webpack5";
 import AdvancedSearchResultsWithFacets from "./AdvancedSearchResultsWithFacets";
 
 export default {
-  title: "Blocks / Advanced Search v2 / Summary",
+  title: "Blocks / Advanced Search v2 / Results with Facets",
   component: AdvancedSearchResultsWithFacets,
   parameters: {
     layout: "fullscreen",
