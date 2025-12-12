@@ -4,20 +4,15 @@ const MultiSelect: React.FC<{ open?: boolean }> = ({ open }) => {
   return (
     <div className="hui-multiselect-wrapper">
       <label className="hui-multiselect-wrapper__label">Materialetype</label>
-      <div className="hui-multiselect" data-open="">
+      <div className="hui-multiselect">
         <button
           className="hui-multiselect__button hui-multiselect__button--open"
           type="button"
-          aria-expanded={open ? "true" : "false"}
-          data-headlessui-state="open active"
-          data-open=""
-          data-active=""
-          {...(open && { "aria-controls": "headlessui-popover-panel-_r_12_" })}
         >
           <div className="hui-multiselect__button-label">
             Valgt
             <span className="hui-multiselect__button-label__count-badge">
-              2
+              3
             </span>
           </div>
           <div className="hui-multiselect__button-arrow">
@@ -30,28 +25,15 @@ const MultiSelect: React.FC<{ open?: boolean }> = ({ open }) => {
         {open && (
           <div
             className="hui-multiselect__popover-panel"
-            id="headlessui-popover-panel-_r_12_"
-            data-headlessui-state="open"
-            data-open=""
             style={{ "--button-width": "100%" } as React.CSSProperties}
           >
             <input
-              readOnly
               className="hide-visually"
-              role="combobox"
-              aria-expanded="false"
-              aria-autocomplete="list"
-              aria-label="Material type filter"
-              data-autofocus=""
               type="text"
-              aria-controls="headlessui-combobox-options-_r_gv_"
+              aria-label="Search options"
             />
             <div className="hui-multiselect__options">
               <div
-                aria-label="Material type options"
-                role="listbox"
-                aria-multiselectable="true"
-                tabIndex={0}
                 style={
                   {
                     "--input-width": "0px",
@@ -59,187 +41,369 @@ const MultiSelect: React.FC<{ open?: boolean }> = ({ open }) => {
                   } as React.CSSProperties
                 }
               >
-                <div role="option" aria-selected="false" aria-label="Bøger">
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true">
-                        <svg width="20px" height="20px">
-                          <polyline
-                            points="1.5 6 4.5 9 10.5 1"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-bøger"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-bøger"
+                        data-cy="multiselect-bøger"
                       >
-                        Bøger
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          Bøger
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div role="option" aria-selected="false" aria-label="E-bøger">
-                  <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                <div>
+                  <div className="hui-multiselect__options__option hui-multiselect__options__option--selected">
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-e-bøger"
+                        className="checkbox__input"
+                        type="checkbox"
+                        checked
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-e-bøger"
+                        data-cy="multiselect-e-bøger"
                       >
-                        E-bøger
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          E-bøger
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div role="option" aria-selected="false" aria-label="Lydbøger">
-                  <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true">
-                        <svg width="20px" height="20px">
-                          <polyline
-                            points="1.5 6 4.5 9 10.5 1"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                <div>
+                  <div className="hui-multiselect__options__option hui-multiselect__options__option--selected">
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-lydbøger"
+                        className="checkbox__input"
+                        type="checkbox"
+                        checked
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-lydbøger"
+                        data-cy="multiselect-lydbøger"
                       >
-                        Lydbøger
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          Lydbøger
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div role="option" aria-selected="false" aria-label="Podcasts">
-                  <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                <div>
+                  <div className="hui-multiselect__options__option hui-multiselect__options__option--selected">
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-podcasts"
+                        className="checkbox__input"
+                        type="checkbox"
+                        checked
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-podcasts"
+                        data-cy="multiselect-podcasts"
                       >
-                        Podcasts
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          Podcasts
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div role="option" aria-selected="false" aria-label="Film">
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-film"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-film"
+                        data-cy="multiselect-film"
                       >
-                        Film
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          Film
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div role="option" aria-selected="false" aria-label="Tv-serier">
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-tv-serier"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-tv-serier"
+                        data-cy="multiselect-tv-serier"
                       >
-                        Tv-serier
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          Tv-serier
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div role="option" aria-selected="false" aria-label="Musik">
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-musik"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-musik"
+                        data-cy="multiselect-musik"
                       >
-                        Musik
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          Musik
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div role="option" aria-selected="false" aria-label="Noder">
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-noder"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-noder"
+                        data-cy="multiselect-noder"
                       >
-                        Noder
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          Noder
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div
-                  role="option"
-                  aria-selected="false"
-                  aria-label="Aviser og tidsskrifter"
-                >
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-aviser og tidsskrifter"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-aviser og tidsskrifter"
+                        data-cy="multiselect-aviser og tidsskrifter"
                       >
-                        Aviser og tidsskrifter
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          Aviser og tidsskrifter
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div
-                  role="option"
-                  aria-selected="false"
-                  aria-label="Tegneserier"
-                >
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox">
+                      <input
+                        id="multiselect-tegneserier"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-tegneserier"
+                        data-cy="multiselect-tegneserier"
                       >
-                        Tegneserier
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          Tegneserier
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div
-                  role="option"
-                  aria-selected="false"
-                  aria-label="Computerspil"
-                >
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-computerspil"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-computerspil"
+                        data-cy="multiselect-computerspil"
                       >
-                        Computerspil
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          Computerspil
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -248,63 +412,135 @@ const MultiSelect: React.FC<{ open?: boolean }> = ({ open }) => {
                   role="separator"
                   aria-hidden="true"
                 />
-                <div role="option" aria-selected="false" aria-label="artikler">
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-artikler"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-artikler"
+                        data-cy="multiselect-artikler"
                       >
-                        artikler
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          artikler
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div
-                  role="option"
-                  aria-selected="false"
-                  aria-label="billedmaterialer"
-                >
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-billedmaterialer"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-billedmaterialer"
+                        data-cy="multiselect-billedmaterialer"
                       >
-                        billedmaterialer
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          billedmaterialer
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div role="option" aria-selected="false" aria-label="brætspil">
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-brætspil"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-brætspil"
+                        data-cy="multiselect-brætspil"
                       >
-                        brætspil
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          brætspil
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div role="option" aria-selected="false" aria-label="øvrige">
+                <div>
                   <div className="hui-multiselect__options__option">
-                    <div className="checkbox" aria-hidden="true">
-                      <span className="checkbox__input" aria-hidden="true" />
-                      <span
-                        data-cy="checkbox-text"
-                        className="checkbox__text text-small-caption color-secondary-gray "
-                        aria-hidden="true"
+                    <div className="checkbox" style={{ pointerEvents: "none" }}>
+                      <input
+                        id="multiselect-øvrige"
+                        className="checkbox__input"
+                        type="checkbox"
+                      />
+                      <label
+                        className="checkbox__label"
+                        htmlFor="multiselect-øvrige"
+                        data-cy="multiselect-øvrige"
                       >
-                        øvrige
-                      </span>
+                        <span className="checkbox__icon">
+                          <svg width="20px" height="20px">
+                            <polyline
+                              points="1.5 6 4.5 9 10.5 1"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          data-cy="checkbox-text"
+                          className="checkbox__text text-small-caption color-secondary-gray "
+                        >
+                          øvrige
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -312,7 +548,7 @@ const MultiSelect: React.FC<{ open?: boolean }> = ({ open }) => {
             </div>
             <div className="hui-multiselect__footer">
               <button type="button" className="hui-multiselect__reset-button">
-                Reset
+                Nulstil
               </button>
             </div>
           </div>
