@@ -3,7 +3,7 @@ import React from "react";
 const AdvancedSearchForm: React.FC = () => {
   return (
     <section className="advanced-search-v2__form">
-      <div className="advanced-search-v2__suggests">
+      <div className="advanced-search-v2__filters">
         <div className="advanced-search-filter-wrapper">
           <div className="advanced-search-filter">
             <div className="select">
@@ -94,7 +94,7 @@ const AdvancedSearchForm: React.FC = () => {
             />
           </button>
         </div>
-        <button type="button" className="advanced-search-v2__add-suggest">
+        <button type="button" className="advanced-search-v2__add-filter">
           <img
             alt=""
             src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3ccircle cx='12' cy='12' r='10' fill='black'/%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 7C11.4477 7 11 7.44772 11 8L11 11H8C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H11L11 16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16V13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H13V8C13 7.44772 12.5523 7 12 7Z' fill='white'/%3e %3c/svg%3e"
