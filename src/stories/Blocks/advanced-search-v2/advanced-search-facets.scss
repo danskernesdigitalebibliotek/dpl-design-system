@@ -68,7 +68,7 @@
 
 .advanced-search-toggle__label {
   @include typography($typo__lib-base);
-  line-height: normal;
+  font-weight: 500;
   margin: 0;
 }
 
