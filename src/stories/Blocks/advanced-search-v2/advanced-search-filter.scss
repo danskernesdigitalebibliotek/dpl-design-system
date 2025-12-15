@@ -63,8 +63,9 @@
   border: 1px solid transparent;
   border-radius: $s-lg;
   background-color: $color__global-secondary;
-  color: $color__global-tertiary-2;
+  color: $color__global-black;
   cursor: pointer;
+
   transition:
     background-color 0.2s,
     color 0.2s,

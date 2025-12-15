@@ -67,7 +67,8 @@
 }
 
 .advanced-search-toggle__label {
-  @include typography($typo__lib-label--small);
+  @include typography($typo__lib-base);
+  line-height: normal;
   margin: 0;
 }
 
@@ -99,7 +100,7 @@
 }
 
 .advanced-search-facets__dialog-content .advanced-search-facet-group__header {
-  padding: $s-sm $s-lg;
+  padding: 12px $s-lg;
 }
 
 .advanced-search-facets__dialog-content .advanced-search-facet-group__item,
