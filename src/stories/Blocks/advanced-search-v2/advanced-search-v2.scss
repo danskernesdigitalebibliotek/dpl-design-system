@@ -23,13 +23,13 @@
   gap: $s-2xl;
 }
 
-.advanced-search-v2__suggests {
+.advanced-search-v2__filters {
   display: flex;
   flex-direction: column;
-  gap: $s-md;
+  gap: $s-lg;
 }
 
-.advanced-search-v2__add-suggest {
+.advanced-search-v2__add-filter {
   @include typography($typo__tags);
 
   display: inline-flex;
@@ -56,7 +56,7 @@
 .advanced-search-v2__action-buttons {
   display: flex;
   align-items: center;
-  gap: $s-md;
+  gap: $s-lg;
   flex-wrap: wrap;
 
   button {
@@ -85,11 +85,11 @@
 
 .advanced-search-v2__selects-grid {
   display: grid;
-  gap: $s-md;
+  gap: $s-lg;
   grid-template-columns: 1fr;
 
   @include media-query__medium {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

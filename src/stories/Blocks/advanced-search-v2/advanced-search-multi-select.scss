@@ -120,11 +120,15 @@
   outline: none;
 }
 
+.hui-multiselect__options > div {
+  padding: 8px 0;
+}
+
 .hui-multiselect__options__option {
   @include typography($typo__lib-base);
   border-top: none;
   text-align: left;
-  height: 40px;
+  height: 32px;
   outline: none;
   background-color: $color__global-primary;
   white-space: nowrap;
@@ -146,7 +150,7 @@
   &__label {
     height: 100%;
     width: 100%;
-    padding: $s-sm $s-md;
+    padding: 12px $s-md;
     display: flex;
     align-items: center;
     gap: $s-sm;
@@ -154,6 +158,8 @@
 
     .checkbox__text {
       @include typography($typo__lib-base);
+      padding: 0;
+      color: $color__global-black;
 
       &::first-letter {
         text-transform: uppercase;
