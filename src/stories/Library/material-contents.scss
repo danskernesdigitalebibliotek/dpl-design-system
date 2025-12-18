@@ -1,0 +1,120 @@
+.material-content {
+  display: flex;
+  flex-direction: column;
+  gap: $s-md;
+  @include typography($typo__body-small);
+}
+
+.material-content__heading {
+  @include typography($typo__h4);
+}
+.material-content__list {
+  border-top: 1px solid $color__global-tertiary-1;
+}
+
+.material-content__list--level-2,
+.material-content__list--level-3 {
+  border-top: none;
+}
+
+.material-content__item--level-1 {
+  border-bottom: 1px solid $color__global-tertiary-1;
+}
+
+.material-content__item--level-2 {
+  padding-left: $s-md;
+}
+
+.material-content__item--level-3 {
+  padding-left: $s-2xl;
+}
+
+.material-content__item-content {
+  display: flex;
+  flex-direction: column;
+  padding: $s-sm 0;
+  gap: $s-xs;
+}
+
+.material-content__summary {
+  display: flex;
+  align-items: flex-start;
+  padding: $s-sm 0;
+  gap: $s-xs;
+  cursor: pointer;
+  list-style: none;
+}
+
+.material-content__summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: $s-xs;
+  flex: 1;
+}
+
+.material-content__main-line {
+  display: flex;
+  align-items: center;
+  gap: $s-xs;
+}
+
+.material-content__secondary-line {
+  display: flex;
+}
+
+.material-content__summary::marker,
+.material-content__summary::-webkit-details-marker {
+  display: none;
+}
+
+.material-content__icon {
+  width: $s-md;
+  height: $s-md;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+details[open] .material-content__icon {
+  transform: rotate(180deg);
+}
+
+.material-content__title:not(:only-child) {
+  font-weight: bold;
+}
+
+.material-content__separator {
+  flex-shrink: 0;
+}
+
+.material-content__contributors {
+  @include typography($typo__small-caption);
+  color: $color__text-secondary-gray;
+}
+
+.material-content__raw {
+  @include typography($typo__body-large);
+  color: $color__global-black;
+  padding: $s-sm 0;
+}
+
+.material-content__show-more {
+  display: flex;
+  align-items: center;
+  gap: $s-xs;
+  margin-top: $s-md;
+}
+
+.material-content__show-more-text {
+  @include typography($typo__small-caption);
+}
+
+.material-content__show-more-icon {
+  width: $s-md;
+  height: $s-md;
+  transition: transform 0.2s ease;
+}
+
+.material-content__show-more--expanded .material-content__show-more-icon {
+  transform: rotate(180deg);
+}
