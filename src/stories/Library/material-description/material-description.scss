@@ -2,23 +2,23 @@
   max-width: 750px;
   padding: $hero-padding-small;
 
-  &__heading {
-    @include typography($typo__h4);
-    margin-bottom: $s-lg;
-  }
-
-  &__content {
-    @include typography($typo__body-large);
-    line-height: 160%;
-    margin-bottom: $s-lg;
-  }
-
   @include media-query__small {
     padding: $hero-padding-large-content;
   }
+}
 
-  // spacing between the description links
-  &__links > * + * {
-    margin-top: $s-md;
-  }
+.material-description__heading {
+  @include typography($typo__h4);
+  margin-bottom: $s-lg;
+}
+
+.material-description__content {
+  @include typography($typo__body-large);
+  line-height: 160%;
+  margin-bottom: $s-lg;
+}
+
+// spacing between the description links
+.material-description__links > * + * {
+  margin-top: $s-md;
 }
