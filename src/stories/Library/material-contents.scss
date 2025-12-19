@@ -93,7 +93,7 @@ details[open] .material-content__icon {
 }
 
 .material-content__raw {
-  @include typography($typo__body-large);
+  @include typography($typo__body-medium);
   color: $color__global-black;
   padding: $s-sm 0;
 }

@@ -67,10 +67,8 @@ const MaterialDescription: React.FC<MaterialDescriptionProps> = ({
 }) => {
   return (
     <section className="material-description">
-      <h2 className="text-header-h4 pb-16">Beskrivelse</h2>
-      <p className="text-body-large material-description__content">
-        {description}
-      </p>
+      <h2 className="material-description__heading">Beskrivelse</h2>
+      <p className="material-description__content">{description}</p>
       <div className="material-description__links mt-32">
         {horizontalTermLines.map((item, index) => (
           <HorizontalTermLine {...item} key={generateId(index)} />
