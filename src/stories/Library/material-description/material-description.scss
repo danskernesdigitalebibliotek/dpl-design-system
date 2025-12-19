@@ -8,6 +8,7 @@
 
   &__content {
     line-height: 160%;
+    margin-bottom: $s-lg;
   }
 
   @include media-query__small {
