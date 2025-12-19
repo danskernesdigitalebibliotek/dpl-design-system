@@ -2,11 +2,13 @@
   max-width: 750px;
   padding: $hero-padding-small;
 
-  > h2.text-header-h4 {
-    font-size: 24px;
+  &__heading {
+    @include typography($typo__h4);
+    margin-bottom: $s-lg;
   }
 
   &__content {
+    @include typography($typo__body-large);
     line-height: 160%;
     margin-bottom: $s-lg;
   }
