@@ -2,7 +2,10 @@ import React from "react";
 import MaterialContent from "./MaterialContent";
 import { MaterialContentsProps } from "./types";
 
-const MaterialContents: React.FC<MaterialContentsProps> = ({ contents }) => {
+const MaterialContents: React.FC<MaterialContentsProps> = ({
+  contents,
+  defaultOpen = false,
+}) => {
   if (!contents || contents.length === 0) {
     return null;
   }
@@ -10,7 +13,11 @@ const MaterialContents: React.FC<MaterialContentsProps> = ({ contents }) => {
   return (
     <>
       {contents.map((contentEntity, index) => (
-        <MaterialContent key={index} contentEntity={contentEntity} />
+        <MaterialContent
+          key={index}
+          contentEntity={contentEntity}
+          defaultOpen={defaultOpen}
+        />
       ))}
     </>
   );

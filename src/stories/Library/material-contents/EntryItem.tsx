@@ -7,10 +7,14 @@ import { ContentEntry } from "./types";
 
 interface EntryItemProps {
   entry: ContentEntry;
+  defaultOpen?: boolean;
 }
 
-const EntryItem: React.FC<EntryItemProps> = ({ entry }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const EntryItem: React.FC<EntryItemProps> = ({
+  entry,
+  defaultOpen = false,
+}) => {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
   const hasSublevels = entry.sublevel && entry.sublevel.length > 0;
 
   if (!hasSublevels) {
