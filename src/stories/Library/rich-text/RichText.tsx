@@ -81,11 +81,11 @@ export const RichTextEvent = () => (
   <div className="rich-text">
     <h2>Om udstillingen</h2>
     <p>
-      Deltagende kunstnere: Ei Arakawa, Mohamed Bourouissa, Cao Fei, Simon
-      Denny, Lara Favaretto, GCC, Guan Xiao, Shadi Habib Allah, Roger Hiorns,
-      Oliver Laric, Liz Magic Laser, Katja Novitskova, Laura Owens, Yuri
-      Pattison, Sondra Perry, Josephine Pryde, Nick Relph, Cameron Rowland, Hito
-      Steyerl, Martine Syms, Nora Turato.
+      Deltagende kunstnere: <a href="/">Ei Arakawa</a>, Mohamed Bourouissa, Cao
+      Fei, Simon Denny, Lara Favaretto, GCC, <strong>Guan Xiao</strong>, Shadi
+      Habib Allah, Roger Hiorns, Oliver Laric, Liz Magic Laser, Katja
+      Novitskova, Laura Owens, Yuri Pattison, Sondra Perry, Josephine Pryde,
+      Nick Relph, Cameron Rowland, Hito Steyerl, Martine Syms, Nora Turato.
     </p>
     <p>
       Post-Capital: Art and the Economics of the Digital Age er kurateret af

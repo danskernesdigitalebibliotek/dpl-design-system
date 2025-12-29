@@ -1,0 +1,112 @@
+.hero {
+  @include layout-container($layout__max-width--large, $s-xl);
+
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include media-query__medium {
+    padding-left: $s-2xl;
+    padding-right: $s-2xl;
+
+    border-bottom: 1px solid $color__global-tertiary-1;
+    flex-direction: row;
+  }
+}
+
+@include media-query__medium("max-width") {
+  .hero--no-image .hero__image {
+    display: none;
+  }
+}
+
+.hero__tag {
+  display: inline-block;
+}
+
+.hero__meta {
+  @include typography($typo__h5);
+}
+
+.hero__type {
+  color: $color__text-inactive;
+}
+
+.hero__title {
+  @include typography($typo__h1);
+  overflow-wrap: break-word;
+}
+
+.hero__image {
+  padding-bottom: $s-xl;
+
+  img {
+    aspect-ratio: 4/3;
+
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @include media-query__medium {
+    padding-top: $s-2xl;
+    padding-bottom: $s-2xl;
+    padding-right: $s-2xl;
+    max-width: 50%;
+    width: 100%;
+    border-right: 1px solid $color__global-tertiary-1;
+
+    + .hero__content {
+      padding-left: $s-2xl;
+    }
+  }
+}
+
+// Notice: This wrapper can either be a <div> or an <a>.
+.hero__content {
+  @include typography($typo__body-medium);
+
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+
+  padding-top: $s-xl;
+  padding-bottom: $s-lg;
+
+  @include media-query__medium {
+    padding-top: $s-2xl;
+    padding-bottom: $s-2xl;
+  }
+
+  > *:not(:last-child) {
+    margin-bottom: $s-md;
+
+    @include media-query__medium {
+      margin-bottom: $s-lg;
+    }
+  }
+}
+
+.hero__cta {
+  margin-top: auto;
+
+  @include media-query__medium {
+    display: inline-block;
+  }
+}
+
+.hero__items {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+
+  > dt {
+    color: $color__text-secondary-gray;
+  }
+
+  > dd > span {
+    display: block;
+  }
+}

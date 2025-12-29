@@ -57,6 +57,11 @@ $layout__edge-spacing: $s-md;
     $_spacing--large: $_spacing--large * -1;
   }
 
+  @if ($modifier == "small") {
+    $_spacing: $s-lg;
+    $_spacing--large: $s-2xl;
+  }
+
   margin-top: $_spacing;
 
   @include media-query__medium {
