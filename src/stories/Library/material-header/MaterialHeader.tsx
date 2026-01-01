@@ -54,8 +54,8 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
 }) => {
   return (
     <header className="border-bottom">
-      <div className="material-header hero-grid hero-grid--material">
-        <div className="material-header__cover hero-grid__visual">
+      <div className="material-header">
+        <div className="material-header__cover">
           <Cover
             src="images/book_cover_3_large.jpeg"
             size="xlarge"
@@ -64,7 +64,7 @@ const MaterialHeader: React.FC<MaterialHeaderProps> = ({
             shadow="small"
           />
         </div>
-        <div className="material-header__content hero-grid__content">
+        <div className="material-header__content">
           <ButtonFavourite />
           <MaterialHeaderText title={title} author={author} />
           <div className="material-header__availability-label">
