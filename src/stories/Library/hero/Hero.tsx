@@ -11,7 +11,7 @@ export type HeroProps = {
   date?: string;
   title: string;
   description?: string;
-  items?: Array<{ label: string; values: Array<string> }>;
+  items?: Array<{ label?: string; values: Array<string> }>;
   cta?: string;
   url?: string;
   tag?: string;

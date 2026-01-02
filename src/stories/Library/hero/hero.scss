@@ -37,7 +37,13 @@
 }
 
 .hero__image {
-  padding-bottom: $s-xl;
+  > .media-container {
+    height: auto;
+
+    .hero--no-image & {
+      height: 100%;
+    }
+  }
 
   img {
     aspect-ratio: 4/3;

@@ -28,8 +28,12 @@
 }
 
 .event-description__description {
-  @include typography($typo__body-large);
+  @include typography($typo__subtitle);
   @include block-spacing("small");
+
+  @include media-query__medium {
+    margin-top: $_block-vertical-spacing--large;
+  }
 }
 
 .event-description__links {

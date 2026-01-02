@@ -27,11 +27,10 @@ const defaultArgs = {
     },
     {
       label: "Sted",
-      values: [
-        "Café Mors Varme Hænder",
-        "Rentemestervej 76",
-        "2400 København NV",
-      ],
+      values: ["Rentemestervej 76", "2400 København NV"],
+    },
+    {
+      values: ["Café Mors Varme Hænder"],
     },
   ],
   cta: "Køb billet",
