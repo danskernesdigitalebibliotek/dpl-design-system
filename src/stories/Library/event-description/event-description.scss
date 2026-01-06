@@ -1,13 +1,6 @@
 .event-description {
-  padding: $hero-padding-small;
-  padding-top: $s-2xl;
-
-  @include media-query__small {
-    padding: $hero-padding-large;
-    display: grid;
-    column-gap: $s-xl;
-    grid-template-columns: repeat(2, 1fr);
-  }
+  @include layout-container($layout__max-width--medium);
+  @include block-spacing("small");
 }
 
 .event-description__title {
@@ -35,21 +28,16 @@
 }
 
 .event-description__description {
-  @include typography($typo__body-large);
+  @include typography($typo__subtitle);
+  @include block-spacing("small");
 
-  margin-bottom: $s-2xl;
-
-  @include media-query__small {
-    margin-bottom: $s-3xl;
+  @include media-query__medium {
+    margin-top: $_block-vertical-spacing--large;
   }
 }
 
 .event-description__links {
-  margin-bottom: $s-xl;
-
-  @include media-query__small {
-    margin-bottom: 0;
-  }
+  @include block-spacing("small");
 }
 
 .event-description__card {
