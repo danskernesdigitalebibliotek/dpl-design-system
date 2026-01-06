@@ -1,14 +1,14 @@
 @use "sass:color";
 
-.advanced-search-filter-group {
+.advanced-search-facet-group {
   border-top: $adv2-border;
   background-color: $color__global-white;
 }
 
-.advanced-search-filter-group__header {
+.advanced-search-facet-group__header {
   width: 100%;
   background-color: $color__global-primary;
-  padding: $s-sm $s-md;
+  padding: 12px $s-md;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,13 +25,13 @@
   }
 }
 
-.advanced-search-filter-group__header-content {
+.advanced-search-facet-group__header-content {
   display: flex;
   align-items: center;
   gap: $s-sm;
 }
 
-.advanced-search-filter-group__label {
+.advanced-search-facet-group__label {
   @include typography(
     $typo__body-small,
     (
@@ -47,7 +47,7 @@
   white-space: nowrap;
 }
 
-.advanced-search-filter-group__count-badge {
+.advanced-search-facet-group__count-badge {
   @include typography(
     $typo__body-small,
     (
@@ -68,7 +68,7 @@
   line-height: $s-lg;
 }
 
-.advanced-search-filter-group__chevron {
+.advanced-search-facet-group__chevron {
   width: $s-lg;
   height: $s-lg;
   transform: rotate(0deg);
@@ -80,28 +80,51 @@
   }
 }
 
-.advanced-search-filter-group__content {
+.advanced-search-facet-group__content {
   background-color: $color__global-white;
   padding: $s-sm 0;
 }
 
-.advanced-search-filter-group__item {
+.advanced-search-facet-group__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: $s-sm;
   padding: 0 $s-md;
+  height: 32px;
 
   &:hover {
     background-color: $color__global-secondary;
   }
 }
 
-.advanced-search-filter-group__item .checkbox__text::first-letter {
+.advanced-search-facet-group__item .checkbox__text {
+  @include typography($typo__lib-base);
+  color: $color__global-black;
+}
+
+.advanced-search-facet-group__item .checkbox__label {
+  padding: 6px 8px 6px 8px;
+  margin-left: -8px;
+}
+
+.advanced-search-facet-group__item .checkbox__input:focus + .checkbox__label {
+  outline: 0;
+}
+
+.advanced-search-facet-group__item
+  .checkbox__input:focus
+  + .checkbox__label
+  .checkbox__icon {
+  outline: 2px solid $color__global-black;
+  outline-offset: 2px;
+}
+
+.advanced-search-facet-group__item .checkbox__text::first-letter {
   text-transform: uppercase;
 }
 
-.advanced-search-filter-group__item-count {
+.advanced-search-facet-group__item-count {
   @include typography(
     $typo__body-small,
     (
@@ -117,12 +140,12 @@
   flex-shrink: 0;
 }
 
-.advanced-search-filter-group__footer {
+.advanced-search-facet-group__footer {
   background-color: $color__global-white;
   padding: 0 $s-md;
 }
 
-.advanced-search-filter-group__show-all {
+.advanced-search-facet-group__show-all {
   width: 100%;
   border-top: $adv2-border;
   border-left: none;
@@ -146,7 +169,7 @@
   }
 }
 
-.advanced-search-filter-group__show-all-icon {
+.advanced-search-facet-group__show-all-icon {
   width: $s-md;
   height: $s-md;
   flex-shrink: 0;

@@ -124,8 +124,7 @@
 @import "./src/stories/Library/recommendation/recommendation-skeleton";
 @import "./src/stories/Library/nav-teaser/nav-teaser";
 @import "./src/stories/Library/nav-grid/nav-grid";
-@import "./src/stories/Library/Heros/hero-grid/hero-grid";
-@import "./src/stories/Library/Heros/hero/hero";
+@import "src/stories/Library/hero/hero";
 @import "./src/stories/Library/tag/tag-list/tag-list";
 @import "./src/stories/Library/nav-spot/nav-spot";
 @import "./src/stories/Library/nav-spots/nav-spots";
@@ -171,12 +170,12 @@
 @import "./src/stories/Blocks/advanced-search-v2/advanced-search-v2.variables";
 @import "./src/stories/Blocks/advanced-search-v2/combobox";
 @import "./src/stories/Blocks/advanced-search-v2/advanced-search-v2";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-suggest";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-filter";
 @import "./src/stories/Blocks/advanced-search-v2/advanced-search-multi-select";
 @import "./src/stories/Blocks/advanced-search-v2/advanced-search-range-select";
 @import "./src/stories/Blocks/advanced-search-v2/advanced-search-summary";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-filters";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-filter-group";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-facets";
+@import "./src/stories/Blocks/advanced-search-v2/advanced-search-facet-group";
 @import "./src/stories/Blocks/article/article";
 @import "./src/stories/Blocks/page/page";
 @import "./src/stories/Blocks/event-page/event-page";

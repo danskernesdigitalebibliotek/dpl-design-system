@@ -8,7 +8,9 @@
 
 .image-credited__info {
   @include typography($typo__small-caption);
-  margin-top: $s-md;
+
+  color: $color__text-inactive;
+  margin-top: $s-sm;
   display: flex;
   justify-content: space-between;
 }
