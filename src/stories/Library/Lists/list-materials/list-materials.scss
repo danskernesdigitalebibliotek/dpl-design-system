@@ -110,7 +110,14 @@
 
 .list-materials__content-status {
   display: inline-flex;
-  gap: 8;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  & > .status-label {
+    &:nth-child(2) {
+      font-weight: $font__weight--bold;
+    }
+  }
 
   @include media-query__small {
     display: flex;
