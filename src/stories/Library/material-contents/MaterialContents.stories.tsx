@@ -26,4 +26,3 @@ export const WithRawContent = Template.bind({});
 WithRawContent.args = {
   contents: rawData,
 };
-
