@@ -43,5 +43,4 @@ export interface Content {
 
 export interface MaterialContentsProps {
   contents: Content[];
-  defaultOpen?: boolean;
 }

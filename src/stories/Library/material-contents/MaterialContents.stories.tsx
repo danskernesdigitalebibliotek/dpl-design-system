@@ -27,8 +27,3 @@ WithRawContent.args = {
   contents: rawData,
 };
 
-export const WithSublevelsOpen = Template.bind({});
-WithSublevelsOpen.args = {
-  contents: complexData,
-  defaultOpen: true,
-};

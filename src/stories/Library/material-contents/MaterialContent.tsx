@@ -15,13 +15,9 @@ const shouldShowAllButton = (contentType?: string | null): boolean => {
 
 interface MaterialContentProps {
   contentEntity: Content;
-  defaultOpen?: boolean;
 }
 
-const MaterialContent: React.FC<MaterialContentProps> = ({
-  contentEntity,
-  defaultOpen = false,
-}) => {
+const MaterialContent: React.FC<MaterialContentProps> = ({ contentEntity }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const hasShowAllFunctionality = shouldShowAllButton(contentEntity.type);
   if (!contentEntity.entries && !contentEntity.raw) {
@@ -47,11 +43,7 @@ const MaterialContent: React.FC<MaterialContentProps> = ({
             {contentEntity.entries
               .slice(0, entriesToShow)
               .map((entry, entryIndex) => (
-                <EntryItem
-                  key={entryIndex}
-                  entry={entry}
-                  defaultOpen={defaultOpen}
-                />
+                <EntryItem key={entryIndex} entry={entry} />
               ))}
           </ol>
 
