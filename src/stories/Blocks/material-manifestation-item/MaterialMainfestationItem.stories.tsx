@@ -1,5 +1,6 @@
 import { Meta, StoryFn } from "@storybook/react-webpack5";
 import { MaterialMainfestationItem } from "./MaterialMainfestationItem";
+import { complexData } from "../../Library/material-contents/materialContentsData";
 
 export default {
   title: "Blocks / Material Manifestation Item",
@@ -48,4 +49,10 @@ Closed.args = {
 export const Open = Template.bind({});
 Open.args = {
   defaultOpen: true,
+};
+
+export const WithContent = Template.bind({});
+WithContent.args = {
+  defaultOpen: true,
+  contents: complexData,
 };

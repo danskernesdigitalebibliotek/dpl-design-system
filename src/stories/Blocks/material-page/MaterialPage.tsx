@@ -8,6 +8,7 @@ import MaterialDescription from "../../Library/material-description/MaterialDesc
 import MaterialHeader from "../../Library/material-header/MaterialHeader";
 import { Review } from "../../Library/review/Review";
 import { MaterialMainfestationItem } from "../material-manifestation-item/MaterialMainfestationItem";
+import { Content } from "../../Library/material-contents/types";
 
 export interface MaterialPageProps {
   title: string;
@@ -16,6 +17,7 @@ export interface MaterialPageProps {
   ctaText?: string;
   description?: string;
   editionsDisclosureOpen?: boolean;
+  contents?: Content[];
 }
 
 const MaterialPage: React.FC<MaterialPageProps> = ({
@@ -25,6 +27,7 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
   ctaText,
   description,
   editionsDisclosureOpen = false,
+  contents,
 }) => {
   const amountOfRenders = [1, 2];
   return (
@@ -35,7 +38,7 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
         periodical={periodical}
         ctaText={ctaText}
       />
-      <MaterialDescription description={description} />
+      <MaterialDescription description={description} contents={contents} />
       <Disclosure
         headline="Udgaver (2)"
         icon="Various"
@@ -51,6 +54,7 @@ const MaterialPage: React.FC<MaterialPageProps> = ({
               year="2022"
               detailsData={fakeData as ListData}
               defaultOpen={editionsDisclosureOpen && index === 0}
+              contents={contents}
             />
           );
         })}
