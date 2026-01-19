@@ -92,6 +92,94 @@ const AdvancedSearchSummary: React.FC = () => {
                 </div>
               </li>
             </ul>
+            <div className="advanced-search-radio-group-wrapper">
+              <div className="advanced-search-radio-group" role="radiogroup">
+                <span
+                  role="radio"
+                  aria-checked="false"
+                  data-headlessui-state=""
+                >
+                  <div
+                    className="advanced-search-radio-group__label"
+                    data-headlessui-state=""
+                  >
+                    <span className="advanced-search-radio-group__input" />
+                    Online
+                  </div>
+                </span>
+                <span
+                  role="radio"
+                  aria-checked="true"
+                  data-headlessui-state="checked"
+                  data-checked=""
+                >
+                  <div
+                    className="advanced-search-radio-group__label"
+                    data-headlessui-state=""
+                  >
+                    <span className="advanced-search-radio-group__input advanced-search-radio-group__input--checked" />
+                    Fysisk
+                  </div>
+                </span>
+              </div>
+              <div className="advanced-search-radio-group" role="radiogroup">
+                <span
+                  role="radio"
+                  aria-checked="false"
+                  data-headlessui-state=""
+                >
+                  <div
+                    className="advanced-search-radio-group__label"
+                    data-headlessui-state=""
+                  >
+                    <span className="advanced-search-radio-group__input" />
+                    Fiktion
+                  </div>
+                </span>
+                <span
+                  role="radio"
+                  aria-checked="false"
+                  data-headlessui-state=""
+                >
+                  <div
+                    className="advanced-search-radio-group__label"
+                    data-headlessui-state=""
+                  >
+                    <span className="advanced-search-radio-group__input" />
+                    Non-fiktion
+                  </div>
+                </span>
+              </div>
+              <div className="advanced-search-radio-group">
+                <span
+                  role="radio"
+                  aria-checked="true"
+                  data-headlessui-state="checked"
+                  data-checked=""
+                >
+                  <div
+                    className="advanced-search-radio-group__label"
+                    data-headlessui-state=""
+                  >
+                    <span className="advanced-search-radio-group__input advanced-search-radio-group__input--checked" />
+                    Voksne
+                  </div>
+                </span>
+                <span
+                  role="radio"
+                  aria-checked="false"
+                  data-headlessui-state=""
+                >
+                  <div
+                    className="advanced-search-radio-group__label"
+                    data-headlessui-state=""
+                  >
+                    <span className="advanced-search-radio-group__input" />
+                    Børn
+                  </div>
+                </span>
+              </div>
+            </div>
             <ul className="advanced-search-facets__groups">
               <li className="advanced-search-facet-group">
                 <button
