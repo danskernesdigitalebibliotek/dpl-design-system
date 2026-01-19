@@ -2,20 +2,23 @@
   max-width: 750px;
   padding: $hero-padding-small;
 
-  > h2.text-header-h4 {
-    font-size: 24px;
-  }
-
-  &__content {
-    line-height: 160%;
-  }
-
   @include media-query__small {
     padding: $hero-padding-large-content;
   }
+}
 
-  // spacing between the description links
-  &__links > * + * {
-    margin-top: $s-md;
-  }
+.material-description__heading {
+  @include typography($typo__h4);
+  margin-bottom: $s-md;
+}
+
+.material-description__content {
+  @include typography($typo__body-large);
+  line-height: 160%;
+  margin-bottom: $s-md;
+}
+
+// spacing between the description links
+.material-description__links > * + * {
+  margin-top: $s-md;
 }

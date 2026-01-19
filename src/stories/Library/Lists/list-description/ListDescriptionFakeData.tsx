@@ -15,20 +15,6 @@ const fakeData: ListData = {
     type: "standard",
     layout: "column",
   },
-  Indhold: {
-    value: [
-      "Something to Do",
-      "Lie to Me",
-      "People Are People",
-      "It Doesn't Matter",
-      "Stories of Old",
-      "Somebody",
-      "Master and Servant",
-      "If You Want",
-      "Blasphemous Rumours",
-    ],
-    type: "list",
-  },
 };
 
 export default fakeData;

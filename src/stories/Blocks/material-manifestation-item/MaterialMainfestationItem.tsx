@@ -7,6 +7,8 @@ import ListDescription, {
 import Cover from "../../Library/cover/Cover";
 import { CopyLink } from "../../Library/copy-link/CopyLink";
 import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collection/ExpandMore.svg";
+import MaterialContents from "../../Library/material-contents/MaterialContents";
+import { Content } from "../../Library/material-contents/types";
 
 export type MaterialMainfestationItemProps = {
   title: string;
@@ -14,6 +16,7 @@ export type MaterialMainfestationItemProps = {
   year: string;
   detailsData: ListData;
   defaultOpen?: boolean;
+  contents?: Content[];
 };
 
 export const MaterialMainfestationItem = ({
@@ -22,6 +25,7 @@ export const MaterialMainfestationItem = ({
   year,
   detailsData,
   defaultOpen = false,
+  contents,
 }: MaterialMainfestationItemProps) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
@@ -61,6 +65,11 @@ export const MaterialMainfestationItem = ({
         {isOpen && (
           <>
             <ListDescription className="mt-24" data={detailsData} />
+            {contents && (
+              <div className="mt-24">
+                <MaterialContents contents={contents} />
+              </div>
+            )}
             <CopyLink label="Kopiér link til udgave" className="mt-24 mb-24" />
           </>
         )}
