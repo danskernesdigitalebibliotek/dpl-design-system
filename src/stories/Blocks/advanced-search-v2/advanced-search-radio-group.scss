@@ -6,7 +6,7 @@
   background-color: $color__global-white;
   padding: $s-md;
 
-  &__label {
+  .advanced-search-radio-group__label {
     @include typography($typo__lib-label--small);
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
     transition: all 0.3s ease;
   }
 
-  &__input {
+  .advanced-search-radio-group__input {
     position: relative;
     flex: 0 0 18px;
     width: 18px;
@@ -42,7 +42,7 @@
       transition: transform 0.3s ease;
     }
 
-    &--checked {
+    .advanced-search-radio-group__input--checked {
       background: $color__global-grey;
       border-color: $color__global-grey;
       animation: zoom-in-out 0.3s ease;
@@ -53,7 +53,8 @@
     }
   }
 
-  &__label:hover &__input {
+  .advanced-search-radio-group__label:hover
+    .advanced-search-radio-group__input {
     border-color: $color__global-grey;
   }
 }
