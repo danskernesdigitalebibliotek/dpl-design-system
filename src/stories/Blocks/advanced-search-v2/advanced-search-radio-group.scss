@@ -42,7 +42,7 @@
       transition: transform 0.3s ease;
     }
 
-    .advanced-search-radio-group__input--checked {
+    &--checked {
       background: $color__global-grey;
       border-color: $color__global-grey;
       animation: zoom-in-out 0.3s ease;
