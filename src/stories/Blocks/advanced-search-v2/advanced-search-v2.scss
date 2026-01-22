@@ -1,4 +1,4 @@
-.advanced-search-v2 {
+.search-v2 {
   @include layout-container($block-max-width__x-large);
 
   display: flex;
@@ -14,22 +14,41 @@
   }
 }
 
-.advanced-search-v2__title {
+.search-v2__header {
+  display: flex;
+  flex-direction: column;
+  gap: $s-sm;
+
+  @include media-query__medium {
+    gap: $s-md;
+  }
+}
+
+.search-v2__header__title {
   @include typography($typo__h2);
 }
 
-.advanced-search-v2__form {
+.search-v2__header__subtitle {
+  @include typography($typo__body-small);
+  color: $color__global-grey;
+
+  a {
+    @include link-tag;
+  }
+}
+
+.search-v2__form {
   display: grid;
   gap: $s-2xl;
 }
 
-.advanced-search-v2__filters {
+.search-v2__filters {
   display: flex;
   flex-direction: column;
   gap: $s-lg;
 }
 
-.advanced-search-v2__add-filter {
+.search-v2__add-filter {
   @include typography($typo__tags);
 
   display: inline-flex;
@@ -53,7 +72,7 @@
   }
 }
 
-.advanced-search-v2__action-buttons {
+.search-v2__action-buttons {
   display: flex;
   align-items: center;
   gap: $s-lg;
@@ -72,18 +91,18 @@
   }
 }
 
-.advanced-search-v2__selects-wrapper {
+.search-v2__selects-wrapper {
   display: flex;
   flex-direction: column;
   gap: $s-lg;
 }
 
-.advanced-search-v2__selects-wrapper__title {
+.search-v2__selects-wrapper__title {
   @include typography($typo__h5);
   color: $color__global-black;
 }
 
-.advanced-search-v2__selects-grid {
+.search-v2__selects-grid {
   display: grid;
   gap: $s-lg;
   grid-template-columns: 1fr;
@@ -93,7 +112,7 @@
   }
 }
 
-.advanced-search-v2__results {
+.search-v2__results {
   display: flex;
   flex-direction: column;
   gap: $s-lg;
@@ -103,7 +122,7 @@
   }
 }
 
-.advanced-search-v2__results .card-list-item {
+.search-v2__results .card-list-item {
   padding: $s-md;
 
   @include media-query__medium {
@@ -111,7 +130,7 @@
   }
 }
 
-.advanced-search-v2__results-top-bar {
+.search-v2__results-top-bar {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -124,7 +143,7 @@
   }
 }
 
-.advanced-search-v2__results-top-bar__left {
+.search-v2__results-top-bar__left {
   display: flex;
   align-items: baseline;
   gap: $s-md;
@@ -135,7 +154,7 @@
   }
 }
 
-.advanced-search-v2__results-top-bar__right {
+.search-v2__results-top-bar__right {
   display: flex;
   align-items: center;
   gap: $s-md;
@@ -147,11 +166,11 @@
   }
 }
 
-.advanced-search-v2__results-heading {
+.search-v2__results-heading {
   @include typography($typo__h4);
 }
 
-.advanced-search-v2__grid {
+.search-v2__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: $s-lg;
@@ -166,7 +185,7 @@
   }
 }
 
-.advanced-search-v2__search-index-select {
+.search-v2__search-index-select {
   height: 100%;
 
   button {
@@ -179,7 +198,7 @@
   }
 }
 
-.advanced-search-v2__multiselect-button {
+.search-v2__multiselect-button {
   height: 100%;
   display: flex;
   align-items: center;
@@ -187,7 +206,7 @@
   gap: $s-sm;
 }
 
-.advanced-search-v2__count-badge {
+.search-v2__count-badge {
   @include typography(
     $typo__body-small,
     (
@@ -208,24 +227,24 @@
   line-height: $s-lg;
 }
 
-.advanced-search-v2__sort-select {
+.search-v2__sort-select {
   display: flex;
   align-items: center;
   gap: $s-sm;
 }
 
-.advanced-search-v2__sort-select__label {
+.search-v2__sort-select__label {
   @include typography($typo__lib-label--small);
   color: $color__global-black;
 }
 
-.advanced-search-v2__sort-select__select-wrapper {
+.search-v2__sort-select__select-wrapper {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.advanced-search-v2__sort-select__select {
+.search-v2__sort-select__select {
   @include typography($typo__lib-label--small);
   border: none;
   padding-right: 6px;
@@ -238,7 +257,7 @@
   cursor: pointer;
 }
 
-.advanced-search-v2__dropdown__arrows {
+.search-v2__dropdown__arrows {
   position: absolute;
   right: -4px;
   pointer-events: none;
@@ -246,12 +265,12 @@
   height: 20px;
 }
 
-.advanced-search-v2__copy-link .text-small-caption {
+.search-v2__copy-link .text-small-caption {
   @include typography($typo__lib-label--small);
   font-weight: 500;
 }
 
-.advanced-search-v2__modify-filters-button {
+.search-v2__modify-filters-button {
   @include typography($typo__lib-label--small);
   display: flex;
   align-items: center;
