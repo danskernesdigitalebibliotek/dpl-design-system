@@ -17,11 +17,7 @@
 .search-v2__header {
   display: flex;
   flex-direction: column;
-  gap: $s-sm;
-
-  @include media-query__medium {
-    gap: $s-md;
-  }
+  gap: $s-md;
 }
 
 .search-v2__header__title {
