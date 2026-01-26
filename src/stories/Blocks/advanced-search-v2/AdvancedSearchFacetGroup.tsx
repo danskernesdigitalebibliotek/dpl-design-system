@@ -3,27 +3,27 @@ import { ReactComponent as ExpandMoreIcon } from "../../../public/icons/collecti
 
 const AdvancedSearchFacetGroup: React.FC<{ open?: boolean }> = ({ open }) => {
   return (
-    <li className="advanced-search-facet-group">
+    <li className="search-v2-facet-group">
       <button
         type="button"
-        className="advanced-search-facet-group__header"
+        className="search-v2-facet-group__header"
         aria-expanded={open ? "true" : "false"}
       >
-        <div className="advanced-search-facet-group__header-content">
-          <span className="advanced-search-facet-group__label">
+        <div className="search-v2-facet-group__header-content">
+          <span className="search-v2-facet-group__label">
             Fysisk / online
           </span>
         </div>
         <ExpandMoreIcon
-          className={`advanced-search-facet-group__chevron ${open ? "advanced-search-facet-group__chevron--expanded" : ""}`}
+          className={`search-v2-facet-group__chevron ${open ? "search-v2-facet-group__chevron--expanded" : ""}`}
         />
       </button>
       {open && (
         <ul
           id="filter-group-content-ACCESSTYPE"
-          className="advanced-search-facet-group__content"
+          className="search-v2-facet-group__content"
         >
-          <li className="advanced-search-facet-group__item">
+          <li className="search-v2-facet-group__item">
             <div className="checkbox">
               <input
                 id="filter-ACCESSTYPE-online"
@@ -56,12 +56,12 @@ const AdvancedSearchFacetGroup: React.FC<{ open?: boolean }> = ({ open }) => {
             </div>
             <span
               id="filter-ACCESSTYPE-online-count"
-              className="advanced-search-facet-group__item-count"
+              className="search-v2-facet-group__item-count"
             >
               3
             </span>
           </li>
-          <li className="advanced-search-facet-group__item">
+          <li className="search-v2-facet-group__item">
             <div className="checkbox">
               <input
                 id="filter-ACCESSTYPE-fysisk"
@@ -94,7 +94,7 @@ const AdvancedSearchFacetGroup: React.FC<{ open?: boolean }> = ({ open }) => {
             </div>
             <span
               id="filter-ACCESSTYPE-fysisk-count"
-              className="advanced-search-facet-group__item-count"
+              className="search-v2-facet-group__item-count"
             >
               2
             </span>
