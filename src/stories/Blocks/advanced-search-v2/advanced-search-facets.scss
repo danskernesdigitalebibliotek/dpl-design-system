@@ -23,13 +23,13 @@
   gap: $s-md;
 }
 
-.advanced-search-toggle {
+.search-toggle {
   display: flex;
   gap: $s-sm;
   align-items: flex-start;
 }
 
-.advanced-search-toggle__button {
+.search-toggle__button {
   width: $s-2xl;
   height: $s-lg;
   background-color: $color__global-tertiary-1;
@@ -45,7 +45,7 @@
   }
 }
 
-.advanced-search-toggle__slider {
+.search-toggle__slider {
   position: absolute;
   width: 20px; // Circle size for toggle slider
   height: 20px;
@@ -55,25 +55,25 @@
   left: $s-xs / 2;
   transition: transform 0.2s;
 
-  .advanced-search-toggle__button--checked & {
+  .search-toggle__button--checked & {
     transform: translateX(20px); // Slide distance matches slider size
   }
 }
 
-.advanced-search-toggle__content {
+.search-toggle__content {
   display: flex;
   flex-direction: column;
   flex: 1;
   min-width: 0;
 }
 
-.advanced-search-toggle__label {
+.search-toggle__label {
   @include typography($typo__lib-base);
   font-weight: 500;
   margin: 0;
 }
 
-.advanced-search-toggle__description {
+.search-toggle__description {
   @include typography($typo__lib-label--small);
   color: $color__text-secondary-gray;
   margin: 0;

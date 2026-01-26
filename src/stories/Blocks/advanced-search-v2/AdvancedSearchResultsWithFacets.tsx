@@ -43,48 +43,46 @@ const AdvancedSearchSummary: React.FC = () => {
           <div className="search-v2-facets__container">
             <ul className="search-v2-facets__toggles">
               <li>
-                <div className="advanced-search-toggle">
+                <div className="search-toggle">
                   <button
                     type="button"
                     role="switch"
                     aria-checked="false"
-                    className="advanced-search-toggle__button advanced-search-toggle__button--checked"
+                    className="search-toggle__button search-toggle__button--checked"
                     aria-label="På hylden"
                   >
-                    <span className="advanced-search-toggle__slider" />
+                    <span className="search-toggle__slider" />
                   </button>
                   <label
                     htmlFor="on-shelf"
-                    className="advanced-search-toggle__content cursor-pointer"
+                    className="search-toggle__content cursor-pointer"
                   >
-                    <span className="advanced-search-toggle__label">
-                      På hylden
-                    </span>
-                    <span className="advanced-search-toggle__description">
+                    <span className="search-toggle__label">På hylden</span>
+                    <span className="search-toggle__description">
                       Vis kun titler, som har eksemplarer hjemme på hylden.
                     </span>
                   </label>
                 </div>
               </li>
               <li>
-                <div className="advanced-search-toggle">
+                <div className="search-toggle">
                   <button
                     type="button"
                     role="switch"
                     aria-checked="false"
-                    className="advanced-search-toggle__button"
+                    className="search-toggle__button"
                     aria-label="Lån udenfor kvoten"
                   >
-                    <span className="advanced-search-toggle__slider" />
+                    <span className="search-toggle__slider" />
                   </button>
                   <label
                     htmlFor="only-extra-titles"
-                    className="advanced-search-toggle__content cursor-pointer"
+                    className="search-toggle__content cursor-pointer"
                   >
-                    <span className="advanced-search-toggle__label">
+                    <span className="search-toggle__label">
                       Lån udenfor kvoten
                     </span>
-                    <span className="advanced-search-toggle__description">
+                    <span className="search-toggle__description">
                       Vis kun digitale titler, der ikke tæller med i din
                       månedlige lånekvote og altid er tilgængelige.
                     </span>
@@ -289,9 +287,7 @@ const AdvancedSearchSummary: React.FC = () => {
                   aria-controls="filter-group-content-SPECIFICMATERIALTYPE"
                 >
                   <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">
-                      Format
-                    </span>
+                    <span className="search-v2-facet-group__label">Format</span>
                   </div>
                   <ExpandMoreIcon className="search-v2-facet-group__chevron" />
                 </button>
@@ -334,9 +330,7 @@ const AdvancedSearchSummary: React.FC = () => {
                   aria-controls="filter-group-content-SOURCE"
                 >
                   <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">
-                      Kilde
-                    </span>
+                    <span className="search-v2-facet-group__label">Kilde</span>
                   </div>
                   <ExpandMoreIcon className="search-v2-facet-group__chevron" />
                 </button>
@@ -364,9 +358,7 @@ const AdvancedSearchSummary: React.FC = () => {
                   aria-controls="filter-group-content-MAINLANGUAGE"
                 >
                   <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">
-                      Sprog
-                    </span>
+                    <span className="search-v2-facet-group__label">Sprog</span>
                   </div>
                   <ExpandMoreIcon className="search-v2-facet-group__chevron" />
                 </button>
@@ -379,9 +371,7 @@ const AdvancedSearchSummary: React.FC = () => {
                   aria-controls="filter-group-content-SUBJECT"
                 >
                   <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">
-                      Emne
-                    </span>
+                    <span className="search-v2-facet-group__label">Emne</span>
                   </div>
                   <ExpandMoreIcon className="search-v2-facet-group__chevron" />
                 </button>
@@ -414,10 +404,7 @@ const AdvancedSearchSummary: React.FC = () => {
               >
                 Din søgning har 2 resultater
               </h2>
-              <button
-                className="copy-link search-v2__copy-link"
-                type="button"
-              >
+              <button className="copy-link search-v2__copy-link" type="button">
                 <span className="link-tag text-small-caption">Kopier link</span>
                 <LinkIcon aria-hidden="true" />
               </button>
