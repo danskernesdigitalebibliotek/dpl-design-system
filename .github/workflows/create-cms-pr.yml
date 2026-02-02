@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Invoke external PR workflow
         id: invoke_external_pr_workflow
-        uses: fjogeleit/http-request-action@v1
+        uses: fjogeleit/http-request-action@v2
         with:
           url:  ${{ env.REQUEST_URL}}
           method: 'POST'
