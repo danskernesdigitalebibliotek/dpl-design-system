@@ -163,7 +163,8 @@
 }
 
 .search-v2__results-heading {
-  @include typography($typo__h4);
+  @include typography($typo__lib-base);
+  font-weight: 500;
 }
 
 .search-v2__grid {
