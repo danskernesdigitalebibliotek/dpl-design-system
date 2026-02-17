@@ -1,4 +1,4 @@
-.advanced-search-summary {
+.search-summary {
   padding: $s-md;
   background-color: $color__global-secondary;
   display: flex;
@@ -10,14 +10,14 @@
   }
 }
 
-.advanced-search-summary__items {
+.search-summary__items {
   display: flex;
   flex-wrap: wrap;
   gap: $s-sm $s-md;
   align-items: center;
 }
 
-.advanced-search-summary__item {
+.search-summary__item {
   @include typography(
     $typo__body-small,
     (
@@ -34,11 +34,11 @@
   white-space: nowrap;
 }
 
-.advanced-search-summary__label {
+.search-summary__label {
   color: $color__global-black;
 }
 
-.advanced-search-summary__value {
+.search-summary__value {
   font-weight: 500;
   color: $color__global-black;
 
@@ -47,7 +47,7 @@
   }
 }
 
-.advanced-search-summary__operator {
+.search-summary__operator {
   @include typography($typo__tags);
   font-weight: 500;
 
@@ -62,7 +62,7 @@
   flex-shrink: 0;
 }
 
-.advanced-search-summary__links {
+.search-summary__links {
   display: flex;
   gap: $s-md;
   margin-left: 0;
@@ -74,8 +74,8 @@
   }
 }
 
-.advanced-search-summary__edit-link,
-.advanced-search-summary__cql-link {
+.search-summary__edit-link,
+.search-summary__cql-link {
   @include typography(
     $typo__body-small,
     (

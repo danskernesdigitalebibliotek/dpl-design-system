@@ -1,21 +1,21 @@
 import { StoryFn, Meta } from "@storybook/react-webpack5";
-import AdvancedSearchPublicationYearSelect from "./AdvancedSearchPublicationYearSelect";
+import PublicationYearRangeSelect from "./PublicationYearRangeSelect";
 
 export default {
   title: "Blocks / Advanced Search v2 / Publication Year Select",
-  component: AdvancedSearchPublicationYearSelect,
+  component: PublicationYearRangeSelect,
   parameters: {
     layout: "fullscreen",
   },
-} as Meta<typeof AdvancedSearchPublicationYearSelect>;
+} as Meta<typeof PublicationYearRangeSelect>;
 
-const Template: StoryFn<typeof AdvancedSearchPublicationYearSelect> = ({
+const Template: StoryFn<typeof PublicationYearRangeSelect> = ({
   open,
 }: {
   open?: boolean;
 }) => (
   <div style={{ margin: "auto" }}>
-    <AdvancedSearchPublicationYearSelect open={open} />
+    <PublicationYearRangeSelect open={open} />
   </div>
 );
 

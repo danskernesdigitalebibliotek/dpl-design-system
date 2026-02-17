@@ -55,8 +55,8 @@
 .advanced-search-combobox-input {
   width: 100%;
   height: 100%;
-  border: $adv2-border;
-  padding: $default-padding;
+  border: 1px solid $color__global-tertiary-1;
+  padding: $s-sm $s-md;
   background-color: $color__global-white;
 }
 // Override for suggest input
@@ -64,7 +64,7 @@
   background-color: $color__global-primary;
 }
 .advanced-search-combobox-option {
-  padding: $default-padding;
+  padding: $s-sm $s-md;
   cursor: pointer;
   &.is-focus {
     background-color: $color__global-secondary;
@@ -77,5 +77,5 @@
   position: absolute;
   z-index: 100;
   background-color: $color__global-primary;
-  border: $adv2-border;
+  border: 1px solid $color__global-tertiary-1;
 }

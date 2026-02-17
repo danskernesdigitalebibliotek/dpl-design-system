@@ -1,24 +1,18 @@
 import React from "react";
 
-const AdvancedSearchPublicationYearSelect: React.FC<{ open?: boolean }> = ({
-  open = false,
-}) => {
+const AgeRangeSelect: React.FC<{ open?: boolean }> = ({ open = false }) => {
   return (
     <div className="range-select-wrapper">
-      <label className="range-select-wrapper__label">Year</label>
+      <label className="range-select-wrapper__label">Age</label>
       <div className="range-select" data-open="">
         <button
           className="range-select__button range-select__button--open"
           type="button"
-          aria-expanded={open ? "true" : "false"}
-          data-open=""
-          data-active=""
-          {...(open && { "aria-controls": "headlessui-popover-panel-_r_1q_" })}
         >
           <div className="range-select__button-label">
             Selected
             <span className="range-select__button-label__count-badge">
-              2015-2025
+              7-10 year olds
             </span>
           </div>
           <div className="range-select__button-arrow">
@@ -30,10 +24,13 @@ const AdvancedSearchPublicationYearSelect: React.FC<{ open?: boolean }> = ({
         </button>
         {open && (
           <div
-            id="headlessui-popover-panel-_r_1q_"
             className="range-select__popover-panel"
             data-open=""
-            style={{ "--button-width": "100%" } as React.CSSProperties}
+            style={
+              {
+                "--button-width": "100%",
+              } as React.CSSProperties
+            }
           >
             <div className="range-select__content">
               <div role="radiogroup">
@@ -44,7 +41,7 @@ const AdvancedSearchPublicationYearSelect: React.FC<{ open?: boolean }> = ({
                     aria-checked="false"
                   >
                     <div className="range-select__option-inner">
-                      <span>I år (2025)</span>
+                      <span>For 1-2-årige</span>
                       <span
                         className="range-select__option__bullet"
                         aria-hidden="true"
@@ -57,33 +54,7 @@ const AdvancedSearchPublicationYearSelect: React.FC<{ open?: boolean }> = ({
                     aria-checked="false"
                   >
                     <div className="range-select__option-inner">
-                      <span>Seneste 2 år</span>
-                      <span
-                        className="range-select__option__bullet"
-                        aria-hidden="true"
-                      />
-                    </div>
-                  </span>
-                  <span
-                    className="range-select__option"
-                    role="radio"
-                    aria-checked="false"
-                  >
-                    <div className="range-select__option-inner">
-                      <span>Seneste 3 år</span>
-                      <span
-                        className="range-select__option__bullet"
-                        aria-hidden="true"
-                      />
-                    </div>
-                  </span>
-                  <span
-                    className="range-select__option"
-                    role="radio"
-                    aria-checked="false"
-                  >
-                    <div className="range-select__option-inner">
-                      <span>Seneste 5 år</span>
+                      <span>For 3-6-årige</span>
                       <span
                         className="range-select__option__bullet"
                         aria-hidden="true"
@@ -97,9 +68,35 @@ const AdvancedSearchPublicationYearSelect: React.FC<{ open?: boolean }> = ({
                     data-checked=""
                   >
                     <div className="range-select__option-inner">
-                      <span>Seneste 10 år</span>
+                      <span>For 7-10-årige</span>
                       <span
                         className="range-select__option__bullet range-select__option__bullet--checked"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="range-select__option"
+                    role="radio"
+                    aria-checked="false"
+                  >
+                    <div className="range-select__option-inner">
+                      <span>For 11-13-årige</span>
+                      <span
+                        className="range-select__option__bullet"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="range-select__option"
+                    role="radio"
+                    aria-checked="false"
+                  >
+                    <div className="range-select__option-inner">
+                      <span>For 14-16-årige</span>
+                      <span
+                        className="range-select__option__bullet"
                         aria-hidden="true"
                       />
                     </div>
@@ -118,7 +115,7 @@ const AdvancedSearchPublicationYearSelect: React.FC<{ open?: boolean }> = ({
                     id="range-select-from"
                     className="range-select__input"
                     type="number"
-                    value="2015"
+                    value="7"
                   />
                 </div>
                 <div className="range-select__separator">—</div>
@@ -133,7 +130,7 @@ const AdvancedSearchPublicationYearSelect: React.FC<{ open?: boolean }> = ({
                     id="range-select-to"
                     className="range-select__input"
                     type="number"
-                    value="2025"
+                    value="10"
                   />
                 </div>
               </div>
@@ -150,4 +147,4 @@ const AdvancedSearchPublicationYearSelect: React.FC<{ open?: boolean }> = ({
   );
 };
 
-export default AdvancedSearchPublicationYearSelect;
+export default AgeRangeSelect;

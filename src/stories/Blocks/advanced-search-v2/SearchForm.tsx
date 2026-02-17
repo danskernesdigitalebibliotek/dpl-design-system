@@ -1,9 +1,9 @@
 import React from "react";
 
-const AdvancedSearchForm: React.FC = () => {
+const SearchForm: React.FC = () => {
   return (
-    <section className="search-v2__form">
-      <div className="search-v2__filters">
+    <section className="search__form">
+      <div className="search__filters">
         <div className="advanced-search-filter-wrapper">
           <div className="advanced-search-filter">
             <div className="select">
@@ -94,7 +94,7 @@ const AdvancedSearchForm: React.FC = () => {
             />
           </button>
         </div>
-        <button type="button" className="search-v2__add-filter">
+        <button type="button" className="search__add-filter">
           <img
             alt=""
             src="data:image/svg+xml,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3ccircle cx='12' cy='12' r='10' fill='black'/%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 7C11.4477 7 11 7.44772 11 8L11 11H8C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H11L11 16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16V13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H13V8C13 7.44772 12.5523 7 12 7Z' fill='white'/%3e %3c/svg%3e"
@@ -102,11 +102,9 @@ const AdvancedSearchForm: React.FC = () => {
           <span>Tilføj række</span>
         </button>
       </div>
-      <div className="search-v2__selects-wrapper">
-        <h2 className="search-v2__selects-wrapper__title">
-          Afgræns din søgning
-        </h2>
-        <div className="search-v2__selects-grid">
+      <div className="search__selects-wrapper">
+        <h2 className="search__selects-wrapper__title">Afgræns din søgning</h2>
+        <div className="search__selects-grid">
           <div className="hui-multiselect-wrapper">
             <label className="hui-multiselect-wrapper__label">
               Materialetype
@@ -226,7 +224,7 @@ const AdvancedSearchForm: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="search-v2__action-buttons">
+      <div className="search__action-buttons">
         <button
           data-cy="button"
           type="button"
@@ -237,7 +235,7 @@ const AdvancedSearchForm: React.FC = () => {
         <button
           data-cy="button"
           type="button"
-          className="btn-primary btn-outline btn-large  arrow__hover--right-small search-v2__reset-button"
+          className="btn-primary btn-outline btn-large  arrow__hover--right-small search__reset-button"
         >
           Nulstil
         </button>
@@ -246,4 +244,4 @@ const AdvancedSearchForm: React.FC = () => {
   );
 };
 
-export default AdvancedSearchForm;
+export default SearchForm;

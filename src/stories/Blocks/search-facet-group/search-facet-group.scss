@@ -1,11 +1,11 @@
 @use "sass:color";
 
-.search-v2-facet-group {
-  border-top: $adv2-border;
+.search-facet-group {
+  border-top: 1px solid $color__global-tertiary-1;
   background-color: $color__global-white;
 }
 
-.search-v2-facet-group__header {
+.search-facet-group__header {
   width: 100%;
   background-color: $color__global-primary;
   padding: 12px $s-md;
@@ -17,7 +17,7 @@
   border: none;
 
   &[aria-expanded="true"] {
-    border-bottom: $adv2-border;
+    border-bottom: 1px solid $color__global-tertiary-1;
   }
 
   &:hover {
@@ -25,13 +25,13 @@
   }
 }
 
-.search-v2-facet-group__header-content {
+.search-facet-group__header-content {
   display: flex;
   align-items: center;
   gap: $s-sm;
 }
 
-.search-v2-facet-group__label {
+.search-facet-group__label {
   @include typography(
     $typo__body-small,
     (
@@ -47,7 +47,7 @@
   white-space: nowrap;
 }
 
-.search-v2-facet-group__count-badge {
+.search-facet-group__count-badge {
   @include typography(
     $typo__body-small,
     (
@@ -68,7 +68,7 @@
   line-height: $s-lg;
 }
 
-.search-v2-facet-group__chevron {
+.search-facet-group__chevron {
   width: $s-lg;
   height: $s-lg;
   transform: rotate(0deg);
@@ -80,12 +80,12 @@
   }
 }
 
-.search-v2-facet-group__content {
+.search-facet-group__content {
   background-color: $color__global-white;
   padding: $s-sm 0;
 }
 
-.search-v2-facet-group__item {
+.search-facet-group__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,21 +98,21 @@
   }
 }
 
-.search-v2-facet-group__item .checkbox__text {
+.search-facet-group__item .checkbox__text {
   @include typography($typo__lib-base);
   color: $color__global-black;
 }
 
-.search-v2-facet-group__item .checkbox__label {
+.search-facet-group__item .checkbox__label {
   padding: 6px 8px 6px 8px;
   margin-left: -8px;
 }
 
-.search-v2-facet-group__item .checkbox__input:focus + .checkbox__label {
+.search-facet-group__item .checkbox__input:focus + .checkbox__label {
   outline: 0;
 }
 
-.search-v2-facet-group__item
+.search-facet-group__item
   .checkbox__input:focus
   + .checkbox__label
   .checkbox__icon {
@@ -120,11 +120,11 @@
   outline-offset: 2px;
 }
 
-.search-v2-facet-group__item .checkbox__text::first-letter {
+.search-facet-group__item .checkbox__text::first-letter {
   text-transform: uppercase;
 }
 
-.search-v2-facet-group__item-count {
+.search-facet-group__item-count {
   @include typography(
     $typo__body-small,
     (
@@ -140,14 +140,14 @@
   flex-shrink: 0;
 }
 
-.search-v2-facet-group__footer {
+.search-facet-group__footer {
   background-color: $color__global-white;
   padding: 0 $s-md;
 }
 
-.search-v2-facet-group__show-all {
+.search-facet-group__show-all {
   width: 100%;
-  border-top: $adv2-border;
+  border-top: 1px solid $color__global-tertiary-1;
   border-left: none;
   border-right: none;
   border-bottom: none;
@@ -169,7 +169,7 @@
   }
 }
 
-.search-v2-facet-group__show-all-icon {
+.search-facet-group__show-all-icon {
   width: $s-md;
   height: $s-md;
   flex-shrink: 0;

@@ -1,21 +1,21 @@
 import { StoryFn, Meta } from "@storybook/react-webpack5";
-import AdvancedSearchAgeSelect from "./AdvancedSearchAgeSelect";
+import AgeRangeSelect from "./AgeRangeSelect";
 
 export default {
   title: "Blocks / Advanced Search v2 / Age Select",
-  component: AdvancedSearchAgeSelect,
+  component: AgeRangeSelect,
   parameters: {
     layout: "fullscreen",
   },
-} as Meta<typeof AdvancedSearchAgeSelect>;
+} as Meta<typeof AgeRangeSelect>;
 
-const Template: StoryFn<typeof AdvancedSearchAgeSelect> = ({
+const Template: StoryFn<typeof AgeRangeSelect> = ({
   open,
 }: {
   open?: boolean;
 }) => (
   <div style={{ margin: "auto" }}>
-    <AdvancedSearchAgeSelect open={open} />
+    <AgeRangeSelect open={open} />
   </div>
 );
 

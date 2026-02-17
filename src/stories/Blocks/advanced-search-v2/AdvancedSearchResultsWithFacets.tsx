@@ -8,40 +8,38 @@ import { IconFavourite } from "../../Library/Icons/icon-favourite/IconFavourite"
 
 const AdvancedSearchSummary: React.FC = () => {
   return (
-    <div className="search-v2__results">
-      <div className="advanced-search-summary">
-        <div className="advanced-search-summary__items">
-          <div className="advanced-search-summary__item">
-            <span className="advanced-search-summary__label">
+    <div className="search__results">
+      <div className="search-summary">
+        <div className="search-summary__items">
+          <div className="search-summary__item">
+            <span className="search-summary__label">
               Søg efter bøger, film, musik og mere:
             </span>
-            <span className="advanced-search-summary__value">{`"Asdal"`}</span>
+            <span className="search-summary__value">{`"Asdal"`}</span>
           </div>
-          <div className="advanced-search-summary__operator">OG</div>
-          <div className="advanced-search-summary__item">
-            <span className="advanced-search-summary__label">
-              Udgivelsesår:
-            </span>
-            <span className="advanced-search-summary__value">2024-2025</span>
+          <div className="search-summary__operator">OG</div>
+          <div className="search-summary__item">
+            <span className="search-summary__label">Udgivelsesår:</span>
+            <span className="search-summary__value">2024-2025</span>
           </div>
         </div>
-        <div className="advanced-search-summary__links">
-          <button type="button" className="advanced-search-summary__edit-link">
+        <div className="search-summary__links">
+          <button type="button" className="search-summary__edit-link">
             Rediger søgning
           </button>
           <a
             href="https://staging.dplplat01.dpl.reload.dk/advanced-search?advancedSearchCql=%28term.default%3D%2522Asdal%2522%29%2520AND%2520%28%28publicationyear%2520within%2520%25222024%25202025%2522%29%29%2520AND%2520%28%28phrase.accesstype%3D%2522fysisk%2522%29%29"
             rel="noreferrer"
-            className="advanced-search-summary__cql-link"
+            className="search-summary__cql-link"
           >
             CQL-søgning
           </a>
         </div>
       </div>
-      <div className="search-v2__grid">
-        <aside className="search-v2-facets">
-          <div className="search-v2-facets__container">
-            <ul className="search-v2-facets__toggles">
+      <div className="search__grid">
+        <aside className="search-facets">
+          <div className="search-facets__container">
+            <ul className="search-facets__toggles">
               <li>
                 <div className="search-toggle">
                   <button
@@ -90,18 +88,18 @@ const AdvancedSearchSummary: React.FC = () => {
                 </div>
               </li>
             </ul>
-            <div className="advanced-search-radio-group-wrapper">
-              <div className="advanced-search-radio-group" role="radiogroup">
+            <div className="search-radio-group-wrapper">
+              <div className="search-radio-group" role="radiogroup">
                 <span
                   role="radio"
                   aria-checked="false"
                   data-headlessui-state=""
                 >
                   <div
-                    className="advanced-search-radio-group__label"
+                    className="search-radio-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="advanced-search-radio-group__input" />
+                    <span className="search-radio-group__input" />
                     Online
                   </div>
                 </span>
@@ -112,25 +110,25 @@ const AdvancedSearchSummary: React.FC = () => {
                   data-checked=""
                 >
                   <div
-                    className="advanced-search-radio-group__label"
+                    className="search-radio-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="advanced-search-radio-group__input advanced-search-radio-group__input--checked" />
+                    <span className="search-radio-group__input search-radio-group__input--checked" />
                     Fysisk
                   </div>
                 </span>
               </div>
-              <div className="advanced-search-radio-group" role="radiogroup">
+              <div className="search-radio-group" role="radiogroup">
                 <span
                   role="radio"
                   aria-checked="false"
                   data-headlessui-state=""
                 >
                   <div
-                    className="advanced-search-radio-group__label"
+                    className="search-radio-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="advanced-search-radio-group__input" />
+                    <span className="search-radio-group__input" />
                     Fiktion
                   </div>
                 </span>
@@ -140,15 +138,15 @@ const AdvancedSearchSummary: React.FC = () => {
                   data-headlessui-state=""
                 >
                   <div
-                    className="advanced-search-radio-group__label"
+                    className="search-radio-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="advanced-search-radio-group__input" />
+                    <span className="search-radio-group__input" />
                     Non-fiktion
                   </div>
                 </span>
               </div>
-              <div className="advanced-search-radio-group">
+              <div className="search-radio-group">
                 <span
                   role="radio"
                   aria-checked="true"
@@ -156,10 +154,10 @@ const AdvancedSearchSummary: React.FC = () => {
                   data-checked=""
                 >
                   <div
-                    className="advanced-search-radio-group__label"
+                    className="search-radio-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="advanced-search-radio-group__input advanced-search-radio-group__input--checked" />
+                    <span className="search-radio-group__input search-radio-group__input--checked" />
                     Voksne
                   </div>
                 </span>
@@ -169,38 +167,36 @@ const AdvancedSearchSummary: React.FC = () => {
                   data-headlessui-state=""
                 >
                   <div
-                    className="advanced-search-radio-group__label"
+                    className="search-radio-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="advanced-search-radio-group__input" />
+                    <span className="search-radio-group__input" />
                     Børn
                   </div>
                 </span>
               </div>
             </div>
-            <ul className="search-v2-facets__groups">
-              <li className="search-v2-facet-group">
+            <ul className="search-facets__groups">
+              <li className="search-facet-group">
                 <button
                   type="button"
-                  className="search-v2-facet-group__header"
+                  className="search-facet-group__header"
                   aria-expanded="true"
                   aria-controls="filter-group-content-ACCESSTYPE"
                 >
-                  <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">
+                  <div className="search-facet-group__header-content">
+                    <span className="search-facet-group__label">
                       Fysisk / online
                     </span>
-                    <span className="search-v2-facet-group__count-badge">
-                      1
-                    </span>
+                    <span className="search-facet-group__count-badge">1</span>
                   </div>
-                  <ExpandMoreIcon className="search-v2-facet-group__chevron search-v2-facet-group__chevron--expanded" />
+                  <ExpandMoreIcon className="search-facet-group__chevron search-facet-group__chevron--expanded" />
                 </button>
                 <ul
                   id="filter-group-content-ACCESSTYPE"
-                  className="search-v2-facet-group__content"
+                  className="search-facet-group__content"
                 >
-                  <li className="search-v2-facet-group__item">
+                  <li className="search-facet-group__item">
                     <div className="checkbox">
                       <input
                         id="filter-ACCESSTYPE-fysisk"
@@ -234,12 +230,12 @@ const AdvancedSearchSummary: React.FC = () => {
                     </div>
                     <span
                       id="filter-ACCESSTYPE-fysisk-count"
-                      className="search-v2-facet-group__item-count"
+                      className="search-facet-group__item-count"
                     >
                       2
                     </span>
                   </li>
-                  <li className="search-v2-facet-group__item">
+                  <li className="search-facet-group__item">
                     <div className="checkbox">
                       <input
                         id="filter-ACCESSTYPE-online"
@@ -272,158 +268,158 @@ const AdvancedSearchSummary: React.FC = () => {
                     </div>
                     <span
                       id="filter-ACCESSTYPE-online-count"
-                      className="search-v2-facet-group__item-count"
+                      className="search-facet-group__item-count"
                     >
                       1
                     </span>
                   </li>
                 </ul>
               </li>
-              <li className="search-v2-facet-group">
+              <li className="search-facet-group">
                 <button
                   type="button"
-                  className="search-v2-facet-group__header"
+                  className="search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-SPECIFICMATERIALTYPE"
                 >
-                  <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">Format</span>
+                  <div className="search-facet-group__header-content">
+                    <span className="search-facet-group__label">Format</span>
                   </div>
-                  <ExpandMoreIcon className="search-v2-facet-group__chevron" />
+                  <ExpandMoreIcon className="search-facet-group__chevron" />
                 </button>
               </li>
-              <li className="search-v2-facet-group">
+              <li className="search-facet-group">
                 <button
                   type="button"
-                  className="search-v2-facet-group__header"
+                  className="search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-CREATOR"
                 >
-                  <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">
+                  <div className="search-facet-group__header-content">
+                    <span className="search-facet-group__label">
                       Forfatter / ophav
                     </span>
                   </div>
-                  <ExpandMoreIcon className="search-v2-facet-group__chevron" />
+                  <ExpandMoreIcon className="search-facet-group__chevron" />
                 </button>
               </li>
-              <li className="search-v2-facet-group">
+              <li className="search-facet-group">
                 <button
                   type="button"
-                  className="search-v2-facet-group__header"
+                  className="search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-PUBLICATIONYEAR"
                 >
-                  <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">
+                  <div className="search-facet-group__header-content">
+                    <span className="search-facet-group__label">
                       Udgivelsesår
                     </span>
                   </div>
-                  <ExpandMoreIcon className="search-v2-facet-group__chevron" />
+                  <ExpandMoreIcon className="search-facet-group__chevron" />
                 </button>
               </li>
-              <li className="search-v2-facet-group">
+              <li className="search-facet-group">
                 <button
                   type="button"
-                  className="search-v2-facet-group__header"
+                  className="search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-SOURCE"
                 >
-                  <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">Kilde</span>
+                  <div className="search-facet-group__header-content">
+                    <span className="search-facet-group__label">Kilde</span>
                   </div>
-                  <ExpandMoreIcon className="search-v2-facet-group__chevron" />
+                  <ExpandMoreIcon className="search-facet-group__chevron" />
                 </button>
               </li>
-              <li className="search-v2-facet-group">
+              <li className="search-facet-group">
                 <button
                   type="button"
-                  className="search-v2-facet-group__header"
+                  className="search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-HOSTPUBLICATION"
                 >
-                  <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">
+                  <div className="search-facet-group__header-content">
+                    <span className="search-facet-group__label">
                       Værtspublikation
                     </span>
                   </div>
-                  <ExpandMoreIcon className="search-v2-facet-group__chevron" />
+                  <ExpandMoreIcon className="search-facet-group__chevron" />
                 </button>
               </li>
-              <li className="search-v2-facet-group">
+              <li className="search-facet-group">
                 <button
                   type="button"
-                  className="search-v2-facet-group__header"
+                  className="search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-MAINLANGUAGE"
                 >
-                  <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">Sprog</span>
+                  <div className="search-facet-group__header-content">
+                    <span className="search-facet-group__label">Sprog</span>
                   </div>
-                  <ExpandMoreIcon className="search-v2-facet-group__chevron" />
+                  <ExpandMoreIcon className="search-facet-group__chevron" />
                 </button>
               </li>
-              <li className="search-v2-facet-group">
+              <li className="search-facet-group">
                 <button
                   type="button"
-                  className="search-v2-facet-group__header"
+                  className="search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-SUBJECT"
                 >
-                  <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">Emne</span>
+                  <div className="search-facet-group__header-content">
+                    <span className="search-facet-group__label">Emne</span>
                   </div>
-                  <ExpandMoreIcon className="search-v2-facet-group__chevron" />
+                  <ExpandMoreIcon className="search-facet-group__chevron" />
                 </button>
               </li>
-              <li className="search-v2-facet-group">
+              <li className="search-facet-group">
                 <button
                   type="button"
-                  className="search-v2-facet-group__header"
+                  className="search-facet-group__header"
                   aria-expanded="false"
                   aria-controls="filter-group-content-PRIMARYTARGET"
                 >
-                  <div className="search-v2-facet-group__header-content">
-                    <span className="search-v2-facet-group__label">
+                  <div className="search-facet-group__header-content">
+                    <span className="search-facet-group__label">
                       Fagligt niveau
                     </span>
                   </div>
-                  <ExpandMoreIcon className="search-v2-facet-group__chevron" />
+                  <ExpandMoreIcon className="search-facet-group__chevron" />
                 </button>
               </li>
             </ul>
           </div>
         </aside>
         <section>
-          <div className="search-v2__results-top-bar">
-            <div className="search-v2__results-top-bar__left">
+          <div className="search__results-top-bar">
+            <div className="search__results-top-bar__left">
               <h2
-                className="search-v2__results-heading"
+                className="search__results-heading"
                 id="advanced-search-result"
                 aria-live="polite"
               >
                 Din søgning har 2 resultater
               </h2>
-              <button className="copy-link search-v2__copy-link" type="button">
+              <button className="copy-link search__copy-link" type="button">
                 <span className="link-tag text-small-caption">Kopier link</span>
                 <LinkIcon aria-hidden="true" />
               </button>
             </div>
-            <div className="search-v2__results-top-bar__right">
-              <button className="search-v2__modify-filters-button">
+            <div className="search__results-top-bar__right">
+              <button className="search__modify-filters-button">
                 <FilterIcon />
                 <span>Flere filtre</span>
               </button>
-              <div className="search-v2__sort-select">
+              <div className="search__sort-select">
                 <label
-                  className="search-v2__sort-select__label"
+                  className="search__sort-select__label"
                   htmlFor="advanced-sort-select"
                 >
                   Sorter efter
                 </label>
-                <div className="search-v2__sort-select__select-wrapper">
+                <div className="search__sort-select__select-wrapper">
                   <select
-                    className="search-v2__sort-select__select"
+                    className="search__sort-select__select"
                     id="advanced-sort-select"
                   >
                     <option value="relevance">Bedste match</option>
@@ -452,8 +448,8 @@ const AdvancedSearchSummary: React.FC = () => {
                       </option>
                     </optgroup>
                   </select>
-                  <div className="search-v2__dropdown__arrows">
-                    <ExpandMoreIcon className="search-v2__dropdown__arrow" />
+                  <div className="search__dropdown__arrows">
+                    <ExpandMoreIcon className="search__dropdown__arrow" />
                   </div>
                 </div>
               </div>

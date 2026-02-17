@@ -1,4 +1,4 @@
-.search-v2-facets {
+.search-facets {
   display: none;
   margin-bottom: auto;
 
@@ -7,15 +7,15 @@
   }
 }
 
-.search-v2-facets__container {
-  border: $adv2-border;
+.search-facets__container {
+  border: 1px solid $color__global-tertiary-1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   width: 100%;
 }
 
-.search-v2-facets__toggles {
+.search-facets__toggles {
   background-color: $color__global-white;
   padding: $s-xl $s-md;
   display: flex;
@@ -80,52 +80,52 @@
   white-space: pre-wrap;
 }
 
-.search-v2-facets__dialog-content {
+.search-facets__dialog-content {
   display: flex;
   flex-direction: column;
   gap: $s-lg;
 }
 
-.search-v2-facets__dialog-content .search-v2-facets {
+.search-facets__dialog-content .search-facets {
   display: block;
   margin: 0px calc(0px - $s-lg);
 }
 
-.search-v2-facets__dialog-content .search-v2-facets__container {
+.search-facets__dialog-content .search-facets__container {
   border-right: none;
   border-left: none;
 }
 
-.search-v2-facets__dialog-content .search-v2-facets__toggles {
+.search-facets__dialog-content .search-facets__toggles {
   padding: $s-lg;
 }
 
-.search-v2-facets__dialog-content .advanced-search-radio-group {
+.search-facets__dialog-content .search-radio-button-group {
   padding: $s-md $s-lg;
 }
 
-.search-v2-facets__dialog-content .search-v2-facet-group__header {
+.search-facets__dialog-content .search-facet-group__header {
   padding: 12px $s-lg;
 }
 
-.search-v2-facets__dialog-content .search-v2-facet-group__item,
-.search-v2-facets__dialog-content .search-v2-facet-group__footer {
+.search-facets__dialog-content .search-facet-group__item,
+.search-facets__dialog-content .search-facet-group__footer {
   padding: 0 $s-lg;
 }
 
-.search-v2-facets__dialog {
+.search-facets__dialog {
   height: calc(100% - 32px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.search-v2-facets__dialog-content .search-v2-facet-group__show-all {
+.search-facets__dialog-content .search-facet-group__show-all {
   padding: $s-sm 0 $s-md;
   line-break: auto;
 }
 
-.search-v2-facets__dialog__actions {
+.search-facets__dialog__actions {
   border-top: 1px solid $color__global-tertiary-1;
   display: flex;
   position: sticky;
@@ -135,12 +135,12 @@
   background-color: $color__global-primary;
 }
 
-.search-v2-facets__dialog__actions__button {
+.search-facets__dialog__actions__button {
   flex: 1;
   text-decoration: dashed;
 }
 
-.search-v2-facets__dialog-content__heading {
+.search-facets__dialog-content__heading {
   @include typography($typo__h5);
   margin: 0;
 }
