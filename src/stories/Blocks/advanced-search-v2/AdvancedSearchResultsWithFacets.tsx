@@ -88,18 +88,18 @@ const AdvancedSearchSummary: React.FC = () => {
                 </div>
               </li>
             </ul>
-            <div className="search-radio-group-wrapper">
-              <div className="search-radio-group" role="radiogroup">
+            <div className="search-radio-button-group-wrapper">
+              <div className="search-radio-button-group" role="radiogroup">
                 <span
                   role="radio"
                   aria-checked="false"
                   data-headlessui-state=""
                 >
                   <div
-                    className="search-radio-group__label"
+                    className="search-radio-button-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="search-radio-group__input" />
+                    <span className="search-radio-button-group__input" />
                     Online
                   </div>
                 </span>
@@ -110,25 +110,25 @@ const AdvancedSearchSummary: React.FC = () => {
                   data-checked=""
                 >
                   <div
-                    className="search-radio-group__label"
+                    className="search-radio-button-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="search-radio-group__input search-radio-group__input--checked" />
+                    <span className="search-radio-button-group__input search-radio-button-group__input--checked" />
                     Fysisk
                   </div>
                 </span>
               </div>
-              <div className="search-radio-group" role="radiogroup">
+              <div className="search-radio-button-group" role="radiogroup">
                 <span
                   role="radio"
                   aria-checked="false"
                   data-headlessui-state=""
                 >
                   <div
-                    className="search-radio-group__label"
+                    className="search-radio-button-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="search-radio-group__input" />
+                    <span className="search-radio-button-group__input" />
                     Fiktion
                   </div>
                 </span>
@@ -138,15 +138,15 @@ const AdvancedSearchSummary: React.FC = () => {
                   data-headlessui-state=""
                 >
                   <div
-                    className="search-radio-group__label"
+                    className="search-radio-button-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="search-radio-group__input" />
+                    <span className="search-radio-button-group__input" />
                     Non-fiktion
                   </div>
                 </span>
               </div>
-              <div className="search-radio-group">
+              <div className="search-radio-button-group">
                 <span
                   role="radio"
                   aria-checked="true"
@@ -154,10 +154,10 @@ const AdvancedSearchSummary: React.FC = () => {
                   data-checked=""
                 >
                   <div
-                    className="search-radio-group__label"
+                    className="search-radio-button-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="search-radio-group__input search-radio-group__input--checked" />
+                    <span className="search-radio-button-group__input search-radio-button-group__input--checked" />
                     Voksne
                   </div>
                 </span>
@@ -167,10 +167,10 @@ const AdvancedSearchSummary: React.FC = () => {
                   data-headlessui-state=""
                 >
                   <div
-                    className="search-radio-group__label"
+                    className="search-radio-button-group__label"
                     data-headlessui-state=""
                   >
-                    <span className="search-radio-group__input" />
+                    <span className="search-radio-button-group__input" />
                     Børn
                   </div>
                 </span>
