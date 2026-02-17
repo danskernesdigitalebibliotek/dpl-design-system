@@ -432,20 +432,12 @@ const AdvancedSearchSummary: React.FC = () => {
                       </option>
                     </optgroup>
                     <optgroup label="Forfatter / ophav">
-                      <option value="sort.creator.asc">
-                        Forfatter / ophav (A-Å)
-                      </option>
-                      <option value="sort.creator.desc">
-                        Forfatter / ophav (Å-A)
-                      </option>
+                      <option value="sort.creator.asc">A-Å</option>
+                      <option value="sort.creator.desc">Å-A</option>
                     </optgroup>
                     <optgroup label="Titel">
-                      <option value="sort.title.asc">
-                        Forfatter / ophav (A-Å)
-                      </option>
-                      <option value="sort.title.desc">
-                        Forfatter / ophav (Å-A)
-                      </option>
+                      <option value="sort.title.asc">A-Å</option>
+                      <option value="sort.title.desc">Å-A</option>
                     </optgroup>
                   </select>
                   <div className="search__dropdown__arrows">
