@@ -787,7 +787,7 @@ const Search: React.FC = () => {
                     <div className="card-list-item__meta">
                       <button
                         type="button"
-                        aria-label="tilføj Harry Pottcast &amp; Flammernes Pokal. 13 til huskelisten"
+                        aria-label="tilføj Harry Pottcast Flammernes Pokal. 13 til huskelisten"
                         className="button-favourite"
                       >
                         <IconFavourite />
@@ -796,7 +796,6 @@ const Search: React.FC = () => {
                     <h2
                       className="card-list-item__title text-header-h4 mb-4"
                       data-cy="card-list-item-title"
-                      lang="dan"
                       id="card-title-1"
                     >
                       <a
@@ -804,7 +803,7 @@ const Search: React.FC = () => {
                         rel="noreferrer"
                         tabIndex={0}
                       >
-                        Harry Pottcast &amp; Flammernes Pokal. 13
+                        Harry Pottcast Flammernes Pokal. 13
                       </a>
                     </h2>
                     <p
@@ -869,7 +868,7 @@ const Search: React.FC = () => {
                     <div className="card-list-item__meta">
                       <button
                         type="button"
-                        aria-label="tilføj Harry Pottcast &amp; Flammernes Pokal. 6 til huskelisten"
+                        aria-label="tilføj Harry Pottcast Flammernes Pokal. 6 til huskelisten"
                         className="button-favourite"
                       >
                         <IconFavourite />
@@ -878,7 +877,6 @@ const Search: React.FC = () => {
                     <h2
                       className="card-list-item__title text-header-h4 mb-4"
                       data-cy="card-list-item-title"
-                      lang="dan"
                       id="card-title-2"
                     >
                       <a
@@ -886,7 +884,7 @@ const Search: React.FC = () => {
                         rel="noreferrer"
                         tabIndex={0}
                       >
-                        Harry Pottcast &amp; Flammernes Pokal. 6
+                        Harry Pottcast Flammernes Pokal. 6
                       </a>
                     </h2>
                     <p
@@ -951,7 +949,7 @@ const Search: React.FC = () => {
                     <div className="card-list-item__meta">
                       <button
                         type="button"
-                        aria-label="tilføj Harry Pottcast &amp; Flammernes Pokal. 2 til huskelisten"
+                        aria-label="tilføj Harry Pottcast Flammernes Pokal. 2 til huskelisten"
                         className="button-favourite"
                       >
                         <IconFavourite />
@@ -960,7 +958,6 @@ const Search: React.FC = () => {
                     <h2
                       className="card-list-item__title text-header-h4 mb-4"
                       data-cy="card-list-item-title"
-                      lang="dan"
                       id="card-title-3"
                     >
                       <a
@@ -968,7 +965,7 @@ const Search: React.FC = () => {
                         rel="noreferrer"
                         tabIndex={0}
                       >
-                        Harry Pottcast &amp; Flammernes Pokal. 2
+                        Harry Pottcast Flammernes Pokal. 2
                       </a>
                     </h2>
                     <p
