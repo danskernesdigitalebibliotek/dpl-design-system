@@ -1,6 +1,6 @@
 import React from "react";
 
-const AdvancedSortSelect: React.FC = () => {
+const SearchSortSelect: React.FC = () => {
   return (
     <div className="search__sort-select">
       <label
@@ -42,4 +42,4 @@ const AdvancedSortSelect: React.FC = () => {
   );
 };
 
-export default AdvancedSortSelect;
+export default SearchSortSelect;

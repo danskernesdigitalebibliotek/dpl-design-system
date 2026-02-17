@@ -1,16 +1,14 @@
 import { StoryFn, Meta } from "@storybook/react-webpack5";
-import AdvancedSortSelect from "./AdvancedSortSelect";
+import SearchSortSelect from "./SearchSortSelect";
 
 export default {
   title: "Blocks / Advanced Search v2 / Sort Select",
-  component: AdvancedSortSelect,
+  component: SearchSortSelect,
   parameters: {
     layout: "fullscreen",
   },
-} as Meta<typeof AdvancedSortSelect>;
+} as Meta<typeof SearchSortSelect>;
 
-const Template: StoryFn<typeof AdvancedSortSelect> = () => (
-  <AdvancedSortSelect />
-);
+const Template: StoryFn<typeof SearchSortSelect> = () => <SearchSortSelect />;
 
 export const Default = Template.bind({});

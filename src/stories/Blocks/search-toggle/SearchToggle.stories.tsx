@@ -1,21 +1,21 @@
 import { StoryFn, Meta } from "@storybook/react-webpack5";
-import AdvancedSearchToggle from "./AdvancedSearchToggle";
+import SearchToggle from "./SearchToggle";
 
 export default {
   title: "Blocks / Advanced Search v2 / Toggle",
-  component: AdvancedSearchToggle,
+  component: SearchToggle,
   parameters: {
     layout: "fullscreen",
   },
-} as Meta<typeof AdvancedSearchToggle>;
+} as Meta<typeof SearchToggle>;
 
-const Template: StoryFn<typeof AdvancedSearchToggle> = ({
+const Template: StoryFn<typeof SearchToggle> = ({
   checked,
 }: {
   checked?: boolean;
 }) => (
   <div style={{ maxWidth: 500, margin: "auto", padding: "2rem" }}>
-    <AdvancedSearchToggle checked={checked} />
+    <SearchToggle checked={checked} />
   </div>
 );
 

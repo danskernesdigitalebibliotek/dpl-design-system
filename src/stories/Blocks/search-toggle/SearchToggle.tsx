@@ -1,6 +1,6 @@
 import React from "react";
 
-const AdvancedSearchToggle: React.FC<{ checked?: boolean }> = ({ checked }) => {
+const SearchToggle: React.FC<{ checked?: boolean }> = ({ checked }) => {
   return (
     <div className="search-toggle">
       <button
@@ -26,4 +26,4 @@ const AdvancedSearchToggle: React.FC<{ checked?: boolean }> = ({ checked }) => {
   );
 };
 
-export default AdvancedSearchToggle;
+export default SearchToggle;

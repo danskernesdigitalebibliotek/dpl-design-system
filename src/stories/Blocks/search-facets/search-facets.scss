@@ -23,63 +23,6 @@
   gap: $s-md;
 }
 
-.search-toggle {
-  display: flex;
-  gap: $s-sm;
-  align-items: flex-start;
-}
-
-.search-toggle__button {
-  width: $s-2xl;
-  height: $s-lg;
-  background-color: $color__global-tertiary-1;
-  border-radius: $s-lg;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  transition: background-color 0.2s;
-  flex-shrink: 0;
-
-  &--checked {
-    background-color: $color__signal-success;
-  }
-}
-
-.search-toggle__slider {
-  position: absolute;
-  width: 20px; // Circle size for toggle slider
-  height: 20px;
-  background-color: $color__global-white;
-  border-radius: 50%;
-  top: $s-xs / 2;
-  left: $s-xs / 2;
-  transition: transform 0.2s;
-
-  .search-toggle__button--checked & {
-    transform: translateX(20px); // Slide distance matches slider size
-  }
-}
-
-.search-toggle__content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-width: 0;
-}
-
-.search-toggle__label {
-  @include typography($typo__lib-base);
-  font-weight: 500;
-  margin: 0;
-}
-
-.search-toggle__description {
-  @include typography($typo__lib-label--small);
-  color: $color__text-secondary-gray;
-  margin: 0;
-  white-space: pre-wrap;
-}
-
 .search-facets__dialog-content {
   display: flex;
   flex-direction: column;

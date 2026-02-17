@@ -42,22 +42,22 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
                 .map(() => {
                   return (
                     <>
-                      <div className="advanced-search__clauses">
+                      <div className="search-filter__operators">
                         <button
-                          className="advanced-search__clause focus-styling"
-                          aria-label="og"
+                          type="button"
+                          className="search-filter__operator search-filter__operator--active"
                         >
                           OG
                         </button>
                         <button
-                          className="advanced-search__clause advanced-search__clause--grey focus-styling"
-                          aria-label="eller"
+                          type="button"
+                          className="search-filter__operator"
                         >
                           ELLER
                         </button>
                         <button
-                          className="advanced-search__clause advanced-search__clause--grey focus-styling"
-                          aria-label="ikke"
+                          type="button"
+                          className="search-filter__operator"
                         >
                           IKKE
                         </button>
@@ -76,7 +76,7 @@ export const AdvancedSearch: React.FC<AdvancedSearchProps> = ({
             </div>
             <InputPreview cqlPreviewText={cqlPreviewText} />
           </div>
-          <section className="advanced-search__filters">
+          <section className="search__filters">
             {Array(3)
               .fill(0)
               .map((item, index) => {
