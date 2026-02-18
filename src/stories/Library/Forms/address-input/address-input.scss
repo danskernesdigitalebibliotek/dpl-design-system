@@ -1,0 +1,73 @@
+.address-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $s-sm;
+}
+
+.address-input-wrapper__label {
+  @include typography($typo__lib-label);
+  color: $color__text-secondary-gray;
+}
+
+.address-input {
+  @include typography($typo__lib-input);
+  background-color: transparent;
+  border: 1px solid $color__global-tertiary-1;
+  height: 48px;
+  outline: none;
+  padding: $s-md;
+  width: 100%;
+
+  &::placeholder {
+    color: $color__global-tertiary-2;
+  }
+
+  &:focus {
+    border-color: $color__global-black;
+    background-color: white;
+  }
+}
+
+.address-input__combobox {
+  position: relative;
+}
+
+.address-input__combobox--focused input {
+  border-color: $color__global-black;
+  background-color: white;
+}
+
+.address-input__suggestions {
+  position: absolute;
+  border: 1px solid $color__global-black;
+  border-top: 0;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.address-input__suggestions__item {
+  @include typography($typo__lib-input);
+  background-color: #f5f4ef;
+  border-top: none;
+  padding: $s-md;
+  width: 100%;
+  text-align: left;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus,
+  &--highlighted {
+    background-color: $color__global-secondary;
+  }
+}
