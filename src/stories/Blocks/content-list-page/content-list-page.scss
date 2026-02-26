@@ -6,6 +6,10 @@
 .content-list-page__heading {
   @include layout-container($block-max-width__large);
   @include typography($typo__h2);
+
+  &--hide-visually {
+    @include hide-visually;
+  }
 }
 
 .content-list-page__subheading {
