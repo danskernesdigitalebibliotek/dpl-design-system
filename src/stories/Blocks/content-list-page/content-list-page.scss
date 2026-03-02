@@ -44,3 +44,8 @@
 .content-list-page--no-top-margin {
   margin-top: 0;
 }
+
+// Address field on branch list
+.content-list-page__filters .address-search-bar {
+  flex: 1;
+}
