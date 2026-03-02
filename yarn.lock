@@ -6702,17 +6702,17 @@ eslint-webpack-plugin@^3.1.1:
     normalize-path "^3.0.0"
     schema-utils "^4.0.0"
 
-eslint-webpack-plugin@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-webpack-plugin/-/eslint-webpack-plugin-5.0.2.tgz#e108f2b44962de8693f460d28042c78df9f9a1d3"
-  integrity sha512-cB7EO2o+4gPUzK6zxgegSet8uu/hHwzOiG+2976MHWiwWFj9mmPbTrzlW0InFl6hl89S1D9MPKK5F7vNFpZc4g==
+eslint-webpack-plugin@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-webpack-plugin/-/eslint-webpack-plugin-5.0.3.tgz#9a772cd0a4cd4a9063fc93eb356e33777aafe73e"
+  integrity sha512-P2Id4RMSMQMwMEuw3W9x3n2qDbKPeD+tehWMY3ENFsoSPKNZ9i3WTZEsFE7NeQIpNebhNEGw8qorvpLVq1rK1g==
   dependencies:
     "@types/eslint" "^9.6.1"
     flatted "^3.3.3"
     jest-worker "^29.7.0"
     micromatch "^4.0.8"
     normalize-path "^3.0.0"
-    schema-utils "^4.3.0"
+    schema-utils "^4.3.2"
 
 eslint@^8.3.0, eslint@^8.57.1:
   version "8.57.1"
@@ -11819,17 +11819,7 @@ schema-utils@^3.0.0, schema-utils@^3.1.1:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
-schema-utils@^4.0.0, schema-utils@^4.2.0, schema-utils@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-4.3.0.tgz#3b669f04f71ff2dfb5aba7ce2d5a9d79b35622c0"
-  integrity sha512-Gf9qqc58SpCA/xdziiHz35F4GNIWYWZrEshUc/G/r5BnLph6xpKuLeoJoQuj5WfBIx/eQLf+hmVPYHaxJu7V2g==
-  dependencies:
-    "@types/json-schema" "^7.0.9"
-    ajv "^8.9.0"
-    ajv-formats "^2.1.1"
-    ajv-keywords "^5.1.0"
-
-schema-utils@^4.3.3:
+schema-utils@^4.0.0, schema-utils@^4.2.0, schema-utils@^4.3.0, schema-utils@^4.3.2, schema-utils@^4.3.3:
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-4.3.3.tgz#5b1850912fa31df90716963d45d9121fdfc09f46"
   integrity sha512-eflK8wEtyOE6+hsaRVPxvUKYCpRgzLqDTb8krvAsRIwOGlHoSgYLgBXoubGgLd2fT41/OUYdb48v4k4WWHQurA==
