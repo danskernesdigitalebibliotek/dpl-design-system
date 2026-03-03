@@ -26,8 +26,8 @@ const DawaInput = (props: InputProps) => {
   const invalid = validation ? "true" : "false";
   return (
     <div
-      className={clsx("dawa-input", classNames, {
-        "dawa-input--invalid": !!validation,
+      className={clsx("address-input", classNames, {
+        "address-input--invalid": !!validation,
       })}
     >
       <Label id={id} className={labelClassName}>
@@ -42,12 +42,12 @@ const DawaInput = (props: InputProps) => {
         type={type}
       />
       {description && (
-        <div className="dawa-input__description" id={`description-${id}`}>
+        <div className="address-input__description" id={`description-${id}`}>
           {description}
         </div>
       )}
       {validation && (
-        <div id={`validation-${id}`} className="dawa-input__validation">
+        <div id={`validation-${id}`} className="address-input__validation">
           {validation}
         </div>
       )}

@@ -1,0 +1,30 @@
+.address-search-bar {
+  display: flex;
+  flex-direction: column;
+  gap: $s-md;
+}
+
+.address-search-bar__location-button {
+  @include typography($typo__lib-base);
+  display: flex;
+  align-items: center;
+  gap: $s-xs;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.address-search-bar__error-message {
+  @include typography($typo__small-caption);
+  background-color: $color__global-secondary;
+  padding: $s-md;
+  display: flex;
+  align-items: center;
+  gap: $s-sm;
+
+  img {
+    height: 24px;
+    width: 24px;
+    min-height: 24px;
+    min-width: 24px;
+  }
+}

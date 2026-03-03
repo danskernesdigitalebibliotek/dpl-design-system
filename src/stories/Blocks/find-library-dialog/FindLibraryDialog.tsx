@@ -6,19 +6,19 @@ function FindLibraryDialog() {
   return (
     <div className="find-library-dialog">
       <p className="find-library-dialog__title">Find dit nærmeste bibliotek</p>
-      <div className="find-library-dialog__location-group">
+      <div className="address-search-bar">
         <DawaInput
           id="address-input"
           label="Indtast din adresse"
           placeholder="Fx Torvegade 1, 1401 København K"
           type="text"
-          classNames="dawa-input"
+          classNames="address-input"
         />
-        <button className="find-library-dialog__location">
+        <button className="address-search-bar__location-button">
           <LocationSvg />
           <p>Find nærmeste bibliotek ud fra din lokation</p>
         </button>
-        <div className="find-library-dialog__error-message">
+        <div className="address-search-bar__error-message">
           <WarningSvg />
           <p>
             Årh nej. Der er sket en fejl i afstandsmåleren. Prøv at reloade

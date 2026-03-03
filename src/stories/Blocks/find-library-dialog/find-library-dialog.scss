@@ -8,21 +8,6 @@
   @include typography($typo__h3);
 }
 
-.find-library-dialog__location {
-  @include typography($typo__lib-base);
-  display: flex;
-  align-items: center;
-  gap: $s-xs;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.find-library-dialog__location-group {
-  display: flex;
-  flex-direction: column;
-  gap: $s-md;
-}
-
 .find-library-dialog__location-list {
   display: flex;
   flex-direction: column;
@@ -72,20 +57,4 @@
   @include typography($typo__body-medium);
   color: $color__text-primary-black;
   white-space: nowrap;
-}
-
-.find-library-dialog__error-message {
-  @include typography($typo__small-caption);
-  background-color: $color__global-secondary;
-  padding: $s-md;
-  display: flex;
-  align-items: center;
-  gap: $s-sm;
-
-  img {
-    height: 24px;
-    width: 24px;
-    min-height: 24px;
-    min-width: 24px;
-  }
 }
