@@ -37,5 +37,15 @@
         border-bottom: unset;
       }
     }
+
+    &--success {
+      color: $color__copy-success;
+      border-color: $color__copy-success;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 }
