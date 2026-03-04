@@ -1,4 +1,4 @@
-import { ReactComponent as LinkSvg } from "../../../../public/icons/collection/Link.svg";
+import { ReactComponent as LinkSvg } from "../../../../public/icons/collection/link.svg";
 import { ReactComponent as FacebookSvg } from "../../../../public/icons/social/icon-social-facebook.svg";
 
 export type ButtonShareProps = {
