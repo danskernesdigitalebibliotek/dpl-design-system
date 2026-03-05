@@ -1,16 +1,5 @@
-#### Link to issue
+# Do not open new pull requests here!
 
-Please add a link to the issue being addressed by this change.
+New pull requests should be created in dpl-web:
 
-#### Description
-
-Please include a short description of the suggested change and the reasoning behind the approach you have chosen.
-
-#### Screenshot of the result
-
-If your change affects the user interface you should include a screenshot of the result with the pull request.
-
-#### Additional comments or questions
-
-If you have any further comments or questions for the reviewer them please add them here.
-
+https://github.com/danskernesdigitalebibliotek/dpl-web
