@@ -50,8 +50,6 @@ const Template: StoryFn<typeof AdvancedSearchComp> = (
   args: AdvancedSearchProps,
 ) => <AdvancedSearchComp {...args} />;
 
-export const AdvancedSearch = Template.bind({});
-
 export const CqlSearch = Template.bind({});
 CqlSearch.args = {
   isCqlSearch: true,

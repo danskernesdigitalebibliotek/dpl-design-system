@@ -97,7 +97,6 @@
 @import "./src/stories/Library/Lists/fee-list/fee-list";
 @import "./src/stories/Library/instant-loan/instant-loan";
 @import "./src/stories/Library/scroll-lock-background/scroll-lock-background";
-@import "./src/stories/Library/multiselect/multiselect";
 @import "./src/stories/Library/input-with-dropdown/input-with-dropdown";
 @import "./src/stories/Library/button-box/button-box";
 @import "./src/stories/Library/links/arrow-link/arrow-link";
@@ -169,16 +168,16 @@
 @import "./src/stories/Blocks/status-userprofile/status-userprofile";
 @import "./src/stories/Blocks/material-manifestation-item/material-manifestation-item";
 @import "./src/stories/Blocks/advanced-search/advanced-search";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-v2.variables";
-@import "./src/stories/Blocks/advanced-search-v2/combobox";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-v2";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-filter";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-multi-select";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-range-select";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-summary";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-facets";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-facet-group";
-@import "./src/stories/Blocks/advanced-search-v2/advanced-search-radio-group";
+@import "./src/stories/Blocks/combobox-autosuggest/combobox";
+@import "./src/stories/Blocks/search/search";
+@import "./src/stories/Blocks/advanced-search-v2/search-filter";
+@import "./src/stories/Blocks/multi-select/multi-select";
+@import "./src/stories/Blocks/range-select/range-select";
+@import "./src/stories/Blocks/search-summary/search-summary";
+@import "./src/stories/Blocks/search-facets/search-facets";
+@import "./src/stories/Blocks/search-facet-group/search-facet-group";
+@import "./src/stories/Blocks/search-toggle/search-toggle";
+@import "./src/stories/Blocks/search-radio-button-group/search-radio-button-group";
 @import "./src/stories/Blocks/article/article";
 @import "./src/stories/Blocks/page/page";
 @import "./src/stories/Blocks/event-page/event-page";
@@ -192,6 +191,9 @@
 @import "./src/stories/Blocks/create-patron/create-patron";
 @import "./src/stories/Blocks/library-select/library-select";
 @import "./src/stories/Blocks/find-library-dialog/find-library-dialog";
+@import "./src/stories/Blocks/combobox-autosuggest/combobox";
+@import "./src/stories/Blocks/multi-select/multi-select";
+@import "./src/stories/Blocks/search-sort-select/search-sort-select";
 
 @import "./src/styles/scss/shared";
 @import "./src/styles/scss/internal";
