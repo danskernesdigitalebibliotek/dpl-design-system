@@ -10,11 +10,13 @@
     object-position: center;
   }
 
-  &--success {
+  &--success,
+  &--success .link-tag {
     color: $color__copy-success;
   }
 
-  img {
+  img,
+  svg {
     width: 14px;
     height: 14px;
   }
